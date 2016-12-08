@@ -1,0 +1,13 @@
+#!/bin/bash
+
+directory=$1
+
+if	[ -z "$directory" ]
+then
+	echo "Please enter directory name"
+	exit 0
+fi
+
+tar -zcvf ${directory}.tar.gz ${directory}
+
+

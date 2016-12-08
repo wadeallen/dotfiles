@@ -1,0 +1,30 @@
+{
+    "modes": [
+        1
+    ],
+    "prompt": false,
+    "abbreviation": {
+        "abbreviations": [
+            "#bal"
+        ],
+        "triggerInside": false,
+        "ignoreCase": false,
+        "wordChars": "[\\w]",
+        "backspace": true,
+        "immediate": true
+    },
+    "description": "Balance Sheet",
+    "type": "script",
+    "filter": {
+        "regex": null,
+        "isRecursive": false
+    },
+    "showInTrayMenu": false,
+    "omitTrigger": false,
+    "hotkey": {
+        "modifiers": [],
+        "hotKey": null
+    },
+    "store": {},
+    "usageCount": 1
+}

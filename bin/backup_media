@@ -1,0 +1,3 @@
+#!/bin/bash
+
+rsync -av --delete --exclude '.Trashes' --exclude 'lost+found' --exclude '.Trash-1000' --exclude '.fseventsd' --exclude '._.Trashes' /run/media/wadeallen/Allen_Storage/ /run/media/wadeallen/BACKUP/

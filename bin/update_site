@@ -1,0 +1,17 @@
+#!/usr/bin/env bash 
+
+DIRECTORY=$HOME/Dropbox/Pandoc/Pandoc_Bulletin
+
+cd $DIRECTORY
+## sed 's_\\texttt{\(.*@.*.*\)}_\1_g' Bulletin.txt > Bulletin2.txt
+## sed 's_\\texttt{\([0-9]*-[0-9]*-[0-9]*\)}_\1_g' Bulletin2.txt > Bulletin.txt
+wget -O Bulletin.txt https://docs.google.com/document/d/1pqVUPNIRVxPRoO-lqGPDlAuJ-qGCE5BT7qOT72u-EDQ/export?format=txt &&
+pandoc $DIRECTORY/Bulletin.txt -o index.html --template bulletin_site.html
+sed /'<h1'/d index.html | sed s:'<p></p>':' ':g > $HOME/Sites/church_site_2014/_includes/announcements.html
+rm index.html
+rm Bulletin.txt
+cd $HOME/Sites/church_site_2014
+rake
+sleep 10
+surf http://fbcmuncie.org/news
+

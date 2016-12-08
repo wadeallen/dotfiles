@@ -1,0 +1,16 @@
+#!/usr/bin/env bash 
+
+DIRECTORY=$HOME/Dropbox/Pandoc/Pandoc_Prayer_List/
+
+
+cd $DIRECTORY &&
+wget -O Prayer_List.txt https://docs.google.com/document/d/1w6z_D6MPedilpVZjoRfkwsbvXmsNSjrHKFDwasE5SeQ/export?format=txt &&
+# $HOME/Scripts/gdatacopier-2.1.2/gcp.py wadesallen@gmail.com:/docs/Pastoral_Care/Prayer_List* -p etcitrwggozcxogd $DIRECTORY -f txt &&
+perl -pi -e "s/’/'/g" Prayer_List.txt &&
+pandoc $DIRECTORY/Prayer_List.txt -o prayer_list.pdf --template prayer_list_template.tex &&
+rm $DIRECTORY/Prayer_List.txt &&
+pdflatex $DIRECTORY/prayer_list_print.tex &&
+rm $DIRECTORY/prayer_list_print.log &&
+rm $DIRECTORY/prayer_list_print.aux &&
+cp $DIRECTORY/prayer_list_print.pdf $HOME/Desktop/prayer_list_print.pdf 
+cp $DIRECTORY/prayer_list.pdf $HOME/Sites/church_site_2014/prayerlist.pdf

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+DATE=`date +%Y-%m-%d`
+
+touch $HOME/Desktop/$DATE.markdown &&
+vim $HOME/Desktop/$DATE.markdown

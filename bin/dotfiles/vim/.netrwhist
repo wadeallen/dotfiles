@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/wadeallen/Dropbox/Administration/Markdown_Files/Sermon_Work'
+let g:netrw_dirhist_2='/home/wadeallen/bin/dotfiles/pandoc/templates'
+let g:netrw_dirhist_3='/home/wadeallen/bin/dotfiles/pandoc'
+let g:netrw_dirhist_4='/home/wadeallen/bin/dotfiles/pandoc/templates'
+let g:netrw_dirhist_5='/home/wadeallen/Desktop/lester'
+let g:netrw_dirhist_6='/home/wadeallen/bin/dotfiles/vim/plugin'
+let g:netrw_dirhist_7='/home/wadeallen/Sites/church_site_2014/images'
+let g:netrw_dirhist_8='/home/wadeallen/bin/dotfiles/vim/ftdetect'
+let g:netrw_dirhist_9='/home/wadeallen/bin'

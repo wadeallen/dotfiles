@@ -1,0 +1,35 @@
+#!/usr/bin/env python3
+
+from os.path import expanduser
+import os
+home = expanduser("~")
+import datetime
+import csv
+import subprocess
+
+today = datetime.date.today()
+next_month = datetime.date.today() + datetime.timedelta(days=30)
+
+this_month = input('Is it already the next month? (y/n): ')
+if "n" in this_month:
+	# this defines the month variable
+	month = next_month.strftime('%m')
+	year = next_month.strftime('%Y')
+else:
+	month = today.strftime('%m')
+	year = today.strftime('%Y')
+
+with open(home + '/Dropbox/Ledger/monthly_bills.csv') as f:
+	transaction = csv.reader(f, delimiter='|', quotechar='|')
+	target = open (home+ '/Desktop/temp.txt', 'w')
+	for row in transaction:
+		date_value = year + "/" + month + "/" + row[0]
+		payee = row[1]
+		cat = row[2]
+		amount = row[3]
+		target.write (date_value + "  " + payee + "\n    " + cat.ljust(20) + amount.rjust(30) + "\n\n")
+	target.close
+
+print('Monthly Transactions copied to text file . . .')
+
+

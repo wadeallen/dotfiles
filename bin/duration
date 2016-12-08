@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+
+filename=$1
+
+if	[ -z "$filename" ]
+then
+	echo "Please enter a filename. The only arg is the filename"
+	exit 0
+fi
+
+duration=`exiftool -Duration $1 | awk '{ print $3 }'`
+bytes=`wc -c $1 | awk '{ print $1 }'`
+
+echo "duration: '${duration}' \nlength: ${bytes}\nvideo_url:" | xclip -selection c
+
+echo "duration: '$duration'"
+echo "length: $bytes"
+echo "copied to clipboard"

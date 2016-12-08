@@ -1,0 +1,36 @@
+#!/bin/bash
+
+service_hour=$1
+schedule_date=`/usr/local/bin/gdate -d 'sun -1 week' +"%B %d"`
+name=$2
+address1=$3
+address2=$4
+
+
+if	[ -z "$service_hour" ]
+then
+	echo "Enter early or late as ARG1, name as ARG2, address1 as ARG3, address2 as ARG4"
+	exit 0
+fi
+
+if	[ -z "$name" ]
+then
+	echo "Enter early or late as ARG1, name as ARG2, address1 as ARG3, address2 as ARG4"
+	exit 0
+fi
+
+if	[ -z "$address1" ]
+then
+	echo "Enter early or late as ARG1, name as ARG2, address1 as ARG3, address2 as ARG4"
+	exit 0
+fi
+
+if	[ -z "$address2" ]
+then
+	echo "Enter early or late as ARG1, name as ARG2, address1 as ARG3, address2 as ARG4"
+	exit 0
+fi
+
+
+cd ~/Dropbox/Nursery
+pandoc nursery_notice.md -o ~/Desktop/nursery_notice.pdf --template=nursery_notice.tex --variable=scheduledate:"${schedule_date}" --variable=servicehour:${service_hour} --variable=name:"${name}" --variable=address1:"${address1}" --variable=address2:"${address2}"

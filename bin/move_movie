@@ -1,0 +1,16 @@
+#!/bin/bash
+
+filename=$1
+
+if	[ -z "$filename" ]
+then
+	echo "Please enter file name"
+	exit 0
+fi
+
+
+fileroot=$(echo ${filename%.*})
+
+scp ${filename} $SHUTTLE:/home/wadeallen/Media/Media/Movies
+
+

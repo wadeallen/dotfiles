@@ -1,0 +1,9 @@
+#!/bin/bash
+
+templatedir="/home/wadeallen/.pandoc/templates"
+
+cd  ${templatedir} &&
+pdflatex marriage_license.tex &&
+mv marriage_license.pdf /home/wadeallen/Desktop/marriage_license.pdf &&
+rm marriage_license.log &&
+rm marriage_license.aux

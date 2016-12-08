@@ -1,0 +1,12 @@
+#!/bin/bash
+
+PASSAGE=`cat /home/wadeallen/Dropbox/books.txt | rofi -dmenu -i -p Scripture:\  $*`
+PASSAGE=${PASSAGE// /+}
+
+if [ -z "$PASSAGE" ]; then
+  exit
+else
+  surf "https://www.biblegateway.com/passage/?search=${PASSAGE}&version=NIV&interface=print"
+fi
+
+

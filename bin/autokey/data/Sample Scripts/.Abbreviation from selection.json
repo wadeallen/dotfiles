@@ -1,0 +1,26 @@
+{
+    "store": {},
+    "usageCount": 0,
+    "prompt": false,
+    "abbreviation": {
+        "triggerInside": false,
+        "wordChars": "[\\w]",
+        "backspace": true,
+        "ignoreCase": false,
+        "abbreviations": [],
+        "immediate": false
+    },
+    "showInTrayMenu": false,
+    "hotkey": {
+        "modifiers": [],
+        "hotKey": null
+    },
+    "description": "Abbreviation from selection",
+    "omitTrigger": false,
+    "type": "script",
+    "filter": {
+        "isRecursive": false,
+        "regex": null
+    },
+    "modes": []
+}

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash 
+
+for file in *.avi
+do
+  mv "${file}" "${file/S0/HIMYM_S0}"
+done
+

@@ -1,0 +1,45 @@
+{
+    "version": "0.90.4",
+    "configHotkey": {
+        "modifiers": [
+            "<super>"
+        ],
+        "hotKey": "k",
+        "enabled": true
+    },
+    "userCodeDir": "/home/wadeallen/Dropbox/AutoKey Scripts",
+    "settings": {
+        "windowDefaultSize": [
+            1366,
+            742
+        ],
+        "scriptGlobals": {},
+        "promptToSave": true,
+        "menuTakesFocus": false,
+        "interfaceType": "XRecord",
+        "enableQT4Workaround": false,
+        "serviceRunning": true,
+        "hPanePosition": 509,
+        "columnWidths": [
+            150,
+            50,
+            100
+        ],
+        "showToolbar": true,
+        "undoUsingBackspace": true,
+        "notificationIcon": "autokey-status",
+        "showTrayIcon": true,
+        "workAroundApps": ".*VirtualBox.*|krdc.Krdc",
+        "isFirstRun": true,
+        "sortByUsageCount": true
+    },
+    "toggleServiceHotkey": {
+        "modifiers": [
+            "<shift>",
+            "<super>"
+        ],
+        "hotKey": "k",
+        "enabled": true
+    },
+    "folders": []
+}

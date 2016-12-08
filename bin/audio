@@ -1,0 +1,22 @@
+#!/bin/bash
+
+filename=$1
+
+if	[ -z "$filename" ]
+then
+	echo "Please enter the file"
+	exit 0
+fi
+
+echo "Title of Sermon: "
+read sermon_title
+
+echo "Preacher: "
+read preacher
+
+echo "Description: "
+read description
+
+fileroot=$(echo ${filename%.*})
+
+ffmpeg -i ${filename} -i $HOME/Dropbox/Pictures/fbc_podcast_logo.png -b:a 192K -vn -metadata title="${sermon_title}" -metadata genre="Spoken Word" -metadata album="First Baptist Church Muncie" -metadata album_artist="${preacher}" -metadata date="2016" -metadata artist="${preacher}" -metadata comments="${description}" ${fileroot}.mp3 

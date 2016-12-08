@@ -1,0 +1,14 @@
+#!/bin/bash
+
+filename=$1
+
+if	[ -z "$filename" ]
+then
+	echo "Please enter the Childrens News file"
+	exit 0
+fi
+
+
+fileroot=$(echo ${filename%.*})
+
+pandoc $filename -o ${fileroot}.pdf --template=childrens_news.tex

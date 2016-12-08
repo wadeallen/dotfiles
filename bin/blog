@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+
+import argparse
+import datetime
+import shutil
+from os.path import expanduser
+parser = argparse.ArgumentParser()
+today = datetime.datetime.now().strftime("%Y-%m-%d")
+home = expanduser("~")
+
+
+# if there is not argument, then the script will default to today's date
+parser.add_argument("-f", "--filename", help="File name", default=today)
+
+args = parser.parse_args()
+
+# opens blog post and extracts the title from the Blog
+f = open(home + '/Dropbox/Drafts/' + args.filename + '.markdown')
+for line in f.readlines():
+	if 'title:' in line:
+		blog_title = line.strip('title: ')
+		title = blog_title.rstrip()
+		title_sliced = title.split()
+		slug = ("-".join(title_sliced).lower())
+f.close()
+
+#moves the blog post to the Jekyll site
+shutil.move(home + '/Dropbox/Drafts/' + args.filename + '.markdown', home + '/Sites/church_site_2014/blog/_posts/'+ args.filename + '-' + slug + '.markdown')
+#prints a confirmation message
+print( "Success! {}-{}.markdown moved to blog post folder".format(args.filename, slug))

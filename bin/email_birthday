@@ -1,0 +1,22 @@
+#!/usr/bin/env python 
+
+import webbrowser
+import sys
+import subprocess
+
+name = sys.argv[1]
+
+email_address = ''
+subject = 'Happy Birthday ' + name
+message = ('Hi ' + name + ' %0A%0A' \
+	'Christy and I would like to wish you a Happy Birthday! %0A%0A' \
+	'We hope you have a great day today.%0A%0A' \
+	'Wade and Christy')
+
+
+url = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + email_address + '&su=' + subject + '&body=' + message
+
+# webbrowser.open(url)
+
+subprocess.call(["surf", url])
+

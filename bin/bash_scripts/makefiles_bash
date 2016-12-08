@@ -1,0 +1,29 @@
+#!/usr/bin/env bash 
+
+DATE=$1
+START=0
+END=$(($2-1))
+i=$START
+
+if	[ -z "$DATE" ]
+then
+	echo "Please enter beginning date as arg1, number of weeks at arg2"
+	exit 0
+fi
+
+if	[ -z "$2" ]
+then
+	echo "Please enter beginning date as arg1, number of weeks at arg2"
+	exit 0
+fi
+
+## save $START, just in case if we need it later ##
+
+while [[ $i -le $END ]]
+do
+   touch $(/usr/local/bin/gdate -d "$DATE $i week" +"%Y-%m-%d").md
+   echo "% Title"  >> $(/usr/local/bin/gdate -d "$DATE $i week" +"%Y-%m-%d").md
+   echo "% Wade Allen"  >> $(/usr/local/bin/gdate -d "$DATE $i week" +"%Y-%m-%d").md
+   echo "% $(/usr/local/bin/gdate -d "$DATE $i week" +"%Y-%m-%d")  " >> $(/usr/local/bin/gdate -d "$DATE $i week" +"%Y-%m-%d").md
+   ((i = i + 1))
+done

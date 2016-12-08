@@ -1,0 +1,22 @@
+#!/usr/bin/env python 
+
+import todoist
+import config
+
+api = todoist.TodoistAPI(config.todoist_api)
+
+today = api.query('today')
+
+print ("Tasks for Today \n")
+
+if today[0]['data']:
+    for item in today[0]['data']:
+        # print ('- ' + (item['content']))
+                print ('- ' + (item['content']))
+else:
+    print ("Nothing to do!")
+
+print ("\n\n")
+
+
+# code to pull in id (str(item['id'])

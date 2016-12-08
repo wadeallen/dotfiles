@@ -1,0 +1,30 @@
+{
+    "filter": {
+        "isRecursive": false,
+        "regex": null
+    },
+    "prompt": false,
+    "description": "Sign In Sheets",
+    "type": "script",
+    "modes": [
+        1
+    ],
+    "hotkey": {
+        "modifiers": [],
+        "hotKey": null
+    },
+    "abbreviation": {
+        "abbreviations": [
+            "#nsign"
+        ],
+        "backspace": true,
+        "immediate": true,
+        "triggerInside": false,
+        "ignoreCase": false,
+        "wordChars": "[\\w]"
+    },
+    "omitTrigger": false,
+    "showInTrayMenu": false,
+    "store": {},
+    "usageCount": 0
+}

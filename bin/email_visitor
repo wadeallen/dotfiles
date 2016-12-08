@@ -1,0 +1,27 @@
+#!/usr/bin/env python 
+
+import webbrowser
+import datetime
+from dateutil import relativedelta
+import sys
+import subprocess
+
+today = datetime.date.today()
+format = "%B"
+
+next_month = today + relativedelta.relativedelta(months=1)
+n_month = next_month.strftime(format)
+
+email_address = 'magandaphotos@aol.com, Molly@teamworkql.org, kpetroviak@muncieymca.org'
+
+subject = 'Editing {} Visitor'.format(next_month.strftime(format))
+message = ('Hello Editing Team%0A%0A' \
+	'The {} newsletter is ready for edits.%0A%0AI have attached the PDF, but please make edits on the google document. If you have any additional articles, you can add them in. Let me know when you have finished editing and I we will get this out to the congregation. Again, thank you guys so much for helping out with this!%0A%0AThe google document is located at:%0A%0Ahttps://docs.google.com/document/d/1im1OZ0ol56PP9y0uyvq-2ih3W8G5tiHFdaioL-vTlso/edit?usp=sharing%0A%0AWade'.format(next_month.strftime(format)) \
+	)
+
+
+url = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + email_address + '&su=' + subject + '&body=' + message
+
+# webbrowser.open(url)
+
+subprocess.call(["surf", url])

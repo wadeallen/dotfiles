@@ -1,0 +1,35 @@
+#!/usr/bin/env python3
+
+from datetime import timedelta
+from datetime import datetime
+from os.path import expanduser
+import subprocess
+home = expanduser("~")
+
+name = input('Name: ')
+street_address = input ('Street Address: ')
+city_state_zip = input ('City, State, Zip: ')
+service_hour = input ('Early or Late Hour: ')
+
+day = datetime.now()
+last_sunday = day - timedelta(days=day.weekday()) + timedelta(days=6, weeks=-1)
+schedule_date = last_sunday.strftime("%B %d")
+#Explanation: timedelta(days=day.weekday()) is the offset between monday and day so adding 4 days and subtracting one week will get you last week's friday.
+
+name_sliced = name.split()
+full_name = ("-".join(name_sliced).lower())
+file = home + '/Dropbox/Nursery/nursery_notice.md'
+out_file = home + '/Desktop/nursery_notice_'  + full_name + '.pdf'
+
+subprocess.call([
+    "pandoc",
+    file,
+    "-o",
+    out_file,
+    '--template=nursery_notice.tex',
+    '--variable=servicehour:' + service_hour,
+    '--variable=scheduledate:' + schedule_date,
+    '--variable=name:' + name,
+    '--variable=address1:' + street_address,
+    '--variable=address2:' + city_state_zip
+    ])

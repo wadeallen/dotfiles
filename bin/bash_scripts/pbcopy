@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+DATE=`/usr/local/bin/gdate +'%B' -d 'next month'`
+THIRD_SUN=`/bin/date -v+1m -v1d -v0w -v-1w '+%a %d %b %Y'`
+
+
+echo -e "We will be printing the ${DATE} Visitor the last week of the month. If you have articles for the Visitor, please email them to me by ${THIRD_SUN}.\n\nThanks,\n\nWade"
+

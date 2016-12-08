@@ -1,0 +1,24 @@
+#!/usr/bin/env python 
+
+import argparse
+import subprocess
+import webbrowser
+import sys
+
+
+parser = argparse.ArgumentParser(description="script to email Lisa new member information")
+parser.add_argument('-n','--name', help='Input Name',required=True)
+args = parser.parse_args()
+
+name = args.name
+email_address = 'roseyearls@comcast.net'
+
+subject = 'New Member form(s) for {} '.format(name)
+message = ('Hi Lisa%0A%0A' \
+	'I have attached the new member form(s) for {}. Thanks for taking the time to enter or update the information in Fellowship One.%0A%0AHave a great week!%0A%0AWade'.format(name) \
+	)
+
+url = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + email_address + '&su=' + subject + '&body=' + message
+
+subprocess.call(["surf", url])
+

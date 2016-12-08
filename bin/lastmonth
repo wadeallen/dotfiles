@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ledger -f /Users/wade/Dropbox/Ledger/ledger.ledger -p "last month" budget Expenses 

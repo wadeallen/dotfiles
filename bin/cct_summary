@@ -1,0 +1,15 @@
+#!/bin/bash
+
+filename=$1
+
+if	[ -z "$filename" ]
+then
+	echo "Please enter the CCT Notes file"
+	exit 0
+fi
+
+
+fileroot=$(echo ${filename%.*})
+
+pandoc $filename -o ${fileroot}_CCT.pdf --template=meeting_summary.tex --variable=month:`date +%B` --variable=year:`date +%Y` --variable=monthdigit:`date +%m`
+cp ${fileroot}_CCT.pdf ~/Desktop/${fileroot}_CCT.pdf

@@ -1,0 +1,31 @@
+{
+    "prompt": false,
+    "omitTrigger": false,
+    "hotkey": {
+        "modifiers": [],
+        "hotKey": null
+    },
+    "sendMode": "kb",
+    "type": "phrase",
+    "matchCase": false,
+    "showInTrayMenu": false,
+    "modes": [
+        1
+    ],
+    "description": "Cell",
+    "filter": {
+        "isRecursive": false,
+        "regex": null
+    },
+    "abbreviation": {
+        "ignoreCase": false,
+        "wordChars": "[\\w]",
+        "immediate": true,
+        "abbreviations": [
+            "ccell"
+        ],
+        "backspace": true,
+        "triggerInside": false
+    },
+    "usageCount": 0
+}

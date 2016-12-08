@@ -1,0 +1,12 @@
+#!/bin/bash
+
+zip=$1
+
+if	[ -z "$zip" ]
+then
+	echo "Please enter zip name"
+	exit 0
+fi
+
+split -b 2000m ${zip} ${zip}-part- 
+

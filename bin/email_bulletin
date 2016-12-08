@@ -1,0 +1,27 @@
+#!/usr/bin/env python 
+
+import webbrowser
+from datetime import date
+from dateutil.relativedelta import relativedelta, SU
+import sys
+import subprocess
+
+
+format = "%B %d"
+today = date.today()
+sunday = today + relativedelta(weekday=SU(+1))
+
+email_address = 'magandaphotos@aol.com, Molly@teamworkql.org, kpetroviak@muncieymca.org'
+
+subject = 'Editing {} Bulletin'.format(sunday.strftime(format))
+message = ('Hello Editing Team%0A%0A' \
+        'The {} bulletin is ready for edits.%0A%0AI have attached the PDF, but please make edits on the google document. If you have any additional articles, you can add them in. Let me know when you have finished editing and I will get this printed Thursday at noon. Again, thank you guys so much for helping out with this!%0A%0AThe google document is located at:%0A%0Ahttps://docs.google.com/document/d/1pqVUPNIRVxPRoO-lqGPDlAuJ-qGCE5BT7qOT72u-EDQ/edit?usp=sharing%0A%0AWade'.format(sunday.strftime(format)) \
+	)
+
+
+url = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + email_address + '&su=' + subject + '&body=' + message
+
+# webbrowser.open(url)
+
+subprocess.call(["surf", url])
+

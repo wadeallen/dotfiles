@@ -1,0 +1,61 @@
+\documentclass[Letter, 12pt]{report}
+
+%manages margins
+\usepackage[margin=1in]{geometry}
+
+%to include links
+\usepackage{hyperref}
+
+% added tightlist
+\providecommand{\tightlist}{%
+    \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%for headings
+\usepackage{titlesec}
+
+% title not on separate page
+\let\endtitlepage\relax 
+
+\font\manual=manfnt
+\newcommand{\MF}{{\manual META}\-{\manual FONT}}
+
+%keeps the paragraphs from indenting and gives them a 10pt line in between them
+\setlength{\parindent}{0in}
+\setlength{\parskip}{10pt} 
+
+% % Pull out author and put into Latex Environment
+% \newcommand{\earlyreader}{$reader.early$ }
+% \newcommand{\latereader}{$reader.late$ }
+
+$if(title)$
+\title{$title$}
+$endif$
+\author{$for(author)$$author$$sep$ \and $endfor$}
+\date{$date$}
+
+% changes font to sans-serif
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}
+% insert date
+\textsc{Date}: $date$ \\
+% insert title if there is one
+$if(title)$
+\textsc{Title}: $title$ \\
+$else$
+\textsc{Title}: No Title Yet\\
+$endif$ 
+% insert Scripture if there is one
+$if(scripture)$
+\textsc{Scripture}: $scripture$ \\
+$else$
+\textsc{Scripture}: No Scripture Yet \\
+$endif$
+% insert summmary if there is one
+$if(summary)$
+$summary$
+$endif$
+
+
+\end{document}

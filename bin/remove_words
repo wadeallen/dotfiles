@@ -1,0 +1,21 @@
+#!/usr/bin/env bash 
+
+filetype=$1
+phrase=$2
+
+if	[ -z "$filetype" ]
+then
+	echo "Please enter filetype as first arg and phrase as second arg"
+	exit 0
+fi
+
+if	[ -z "$phrase" ]
+then
+	echo "Please enter filetype as first arg and phrase as second arg"
+	exit 0
+fi
+
+for f in *.$filetype; do
+    fnew=`echo $f | sed 's/'$phrase'//'`
+      mv $f $fnew
+    done

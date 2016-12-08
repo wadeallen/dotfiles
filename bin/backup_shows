@@ -1,0 +1,1 @@
+rsync -av --delete --exclude=.Trash* /media/wadeallen/Allen_Storage/ /media/wadeallen/BACKUP/

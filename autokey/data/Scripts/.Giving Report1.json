@@ -1,0 +1,30 @@
+{
+    "hotkey": {
+        "modifiers": [],
+        "hotKey": null
+    },
+    "filter": {
+        "regex": null,
+        "isRecursive": false
+    },
+    "showInTrayMenu": false,
+    "usageCount": 0,
+    "store": {},
+    "description": "Giving Report",
+    "abbreviation": {
+        "triggerInside": false,
+        "immediate": true,
+        "ignoreCase": false,
+        "abbreviations": [
+            "#giving"
+        ],
+        "backspace": true,
+        "wordChars": "[\\w]"
+    },
+    "omitTrigger": false,
+    "modes": [
+        1
+    ],
+    "prompt": false,
+    "type": "script"
+}

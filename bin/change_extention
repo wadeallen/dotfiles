@@ -1,0 +1,15 @@
+#!/usr/local/bin/python3
+
+import os
+import glob
+
+old_ext = input('Extention to change: ')
+new_ext = input('New extention type: ')
+
+glob('*.{}'.format(old_ext))
+for f in files:
+	base = os.path.splitext(f)[0]
+	os.rename(f, base + '.{}'.format(new_ext))
+
+
+

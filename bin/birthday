@@ -1,0 +1,26 @@
+#!/bin/bash
+
+month=$1
+
+if	[ -z "$month" ]
+then
+	echo "Please enter the month"
+	exit 0
+fi
+
+cd $HOME/Desktop/
+# sed -e s/textbox24/last/g $month.csv
+# sed -e s/Last_Name/first/g $month.csv
+# sed -e s/month_day/birthday/g $month.csv
+sed -i .bak -e s/textbox24/last/g $month.csv
+sed -i .bak -e s/Last_Name/first/g $month.csv
+sed -i .bak -e s/Month_Day/birthday/g $month.csv
+rm ${month}.csv.bak
+sed -e '/Prospect/d' $month.csv > ${month}.temp
+cut -d, -f3,4,18 < ${month}.temp > ${month}_birthdays.csv
+mv ${month}_birthdays.csv $HOME/Dropbox/Pandoc/Pandoc_Visitor/Birthdays/
+rm ${month}.temp
+rm ${month}.csv
+cd $HOME/Dropbox/Pandoc/Pandoc_Visitor/Birthdays/
+sed '1d' ${month}_birthdays.csv > ${month}.csv
+echo 'Birthday file has been created file in Pandoc_Visitor/Birthdays directory'

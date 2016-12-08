@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [[ -f $HOME/.dmenurc ]]; then
+      . $HOME/.dmenurc
+else
+          DMENU='dmenu -i'
+fi
+
+
+csvcut -C "Notes" google.csv | $DMENU -l 10 | tr , '\n' | sed 's/:::/\n/g' | uniq | grep -v -e '^$' | $DMENU -l 10 | xsel -i -b

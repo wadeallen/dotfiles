@@ -1,0 +1,70 @@
+require 'fileutils'
+require 'chronic'
+require 'date'
+
+desc "Create Print Version on Desktop"
+task :print do
+	Dir.glob('/Users/wadeallen/Dropbox/Administration/Markdown_Files/Funeral_Work/*.md') do |file|
+	name = File.basename(file, ".md")[0...10]
+	if name.start_with?("20")	
+		base = File.basename(file, ".md")
+		date = Chronic.parse(name).to_date
+		today = Time.now.to_date
+		if date >= today
+			sh "pandoc #{file} -o /Users/wadeallen/Desktop/#{base}.pdf --template booklet.tex" 
+			puts "------ Created Print version of #{base} ------"
+		end
+	end
+	end
+end
+
+desc "Create epub version of Funeral"
+task :epub do
+	Dir.glob('/Users/wadeallen/Dropbox/Administration/Markdown_Files/Funeral_Work/*.md') do |file|
+		name = File.basename(file, ".md")[0...10]
+		if name.start_with?("20")
+			base = File.basename(file, ".md")
+			date = Chronic.parse(name).to_date
+			today = Time.now.to_date
+			if date >= today
+				sh "pandoc #{file} -o /Users/wadeallen/Dropbox/Preaching/Funerals/#{base}.epub --epub-stylesheet=/Users/wadeallen/Dropbox/Pandoc/Pandoc_Sermon/epub.css --template sermon_epub.html" 
+				puts "------ Created epub version of #{base} ------"
+			end
+		end
+	end
+end
+
+desc "make kindle file of future funerals"
+task :kindle do
+	Dir.glob('/Users/wadeallen/Dropbox/Preaching/Funerals/*.epub') do |file|
+		name = File.basename(file, ".epub")[0...10]
+		date = Chronic.parse(name).to_date
+		today = Time.now.to_date
+		directory = File.dirname(file)
+		basename = File.basename(file, ".epub")
+		if date >= today
+			system "kindlegen #{file}"
+			system "sendKindle #{directory}/#{basename}.mobi"
+			system "rm #{directory}/#{basename}.epub"
+			system "rm #{directory}/#{basename}.mobi"
+		end
+	end
+end
+
+# desc "clean funeral files from Desktop"
+# task :clean do
+# 	Dir.glob('/Users/wadeallen/Desktop/*.epub') do |file|
+# 		name = File.basename(file, ".epub")[0...10]
+# 		date = Chronic.parse(name).to_date
+# 		sunday = Chronic.parse('sunday').to_date
+# 		directory = File.dirname(file)
+# 		basename = File.basename(file, ".epub")
+# 			FileUtils.remove "/Users/wadeallen/Desktop/#{basename}.mobi"
+# 			FileUtils.remove "/Users/wadeallen/Desktop/#{basename}.pdf"
+# 			FileUtils.remove "/Users/wadeallen/Desktop/#{basename}.epub"
+# 	end
+# end
+
+task :default => [:print, :epub]
+
+

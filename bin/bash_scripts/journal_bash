@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+DATE=`date +%Y-%m-%d`
+
+touch $HOME/Dropbox/Journal/$DATE.journal.markdown &&
+echo -e "Date: $DATE" > $HOME/Dropbox/Journal/$DATE.journal.markdown &&
+vim $HOME/Dropbox/Journal/$DATE.journal.markdown

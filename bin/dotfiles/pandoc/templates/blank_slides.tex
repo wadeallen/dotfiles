@@ -1,0 +1,92 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  This Beamer template was created by Cameron Bracken.
+%%  Anyone can freely use or modify it for any purpose
+%%  without attribution.
+%%
+%%  Last Modified: January 9, 2009
+%%
+
+\documentclass[aspectratio=169, 17pt]{beamer}
+
+% fonts
+\usepackage{bookman}
+
+\usepackage{graphicx} % for pictures
+
+% margin size
+\setbeamersize{text margin left=.5in}
+\setbeamersize{text margin right=.5in}
+
+% colors
+\setbeamercolor{normal text}{fg=white,bg=black}
+\setbeamercolor{title}{fg=white,bg=black}
+\setbeamercolor{frametitle}{fg=white,bg=black}
+
+
+% template settings
+\setbeamertemplate{navigation symbols}{} %hides navigation symbols
+\setbeamertemplate{frametitle}
+{
+	\vfill
+	\begin{center}
+      \Large\insertframetitle
+    \end{center}
+    \vfill
+}
+
+% font sizes
+\setbeamerfont{title}{size=\Huge,series=\bfseries}
+\setbeamerfont{author}{size=\Large}
+\setbeamerfont{block title}{size={},series=\bfseries}
+
+% custom environment
+
+\makeatletter
+\def\myrenewcommand{\@ifnextchar<{\beamer@myrenewcom}{\beamer@origrenewcommand}}
+\def\beamer@myrenewcom<>{\@star@or@long\beamer@myrenew@command}
+\def\beamer@myrenew@command#1{%
+  \expandafter\def\expandafter\beamer@name\expandafter{\csname @orig\string#1\endcsname}%
+  \expandafter\let\beamer@name=#1\relax%
+\@ifnextchar[{\beamer@@myrenewcom{#1}}{\beamer@myrenewcomnoopt
+{#1}{0}}}
+\def\beamer@@myrenewcom#1[#2]{\@ifnextchar[{\beamer@myrenewcomopt{#1}{#2}}{\beamer@myrenewcomnoopt{#1}{#2}}}
+\long\def\beamer@myrenewcomnoopt#1#2#3{%
+  \ifnum#2=0\relax%
+    \expandafter\def\expandafter#1\expandafter{\expandafter\beamer@sortzero\expandafter{\csname beamerx@\string#1\endcsname}}%
+  \else
+    \expandafter\def\expandafter#1\expandafter{\expandafter\beamer@sort\expandafter{\csname beamerx@\string#1\endcsname}{#2}}%
+  \fi%
+  \beamer@argscount=#2\relax%
+  \advance\beamer@argscount by 1\relax%
+  \expandafter\renewcommand\csname beamerx@\string#1\endcsname[\beamer@argscount]{#3}%
+}
+\long\def\beamer@myrenewcomopt#1#2[#3]#4{%
+  \expandafter\def\expandafter#1\expandafter{\expandafter\beamer@presort\expandafter{\csname beamerx@\string#1\endcsname}{#2}{#3}}%
+  \beamer@argscount=#2\relax%
+  \advance\beamer@argscount by 1\relax%
+  \expandafter\renewcommand\csname beamerx@\string#1\endcsname[\beamer@argscount]{#4}%
+}
+\makeatother
+
+\myrenewcommand<>{\emph}[1]{\\[20pt] \raggedleft\small\textsc{#1}}
+
+\newcommand<>{\scripture}[1]{{\only#2{\bfseries}#1}}
+
+% end custom commands
+
+\title{$title$}
+\date{}
+
+\begin{document}
+
+\begin{frame}
+ \titlepage
+\end{frame}
+
+$body$
+
+\begin{frame}
+\titlepage
+\end{frame}
+  
+\end{document}

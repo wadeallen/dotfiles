@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+
+import os
+import subprocess
+import shutil
+import datetime
+from os.path import expanduser
+
+
+today = datetime.date.today()
+sunday = today + datetime.timedelta( (6-today.weekday()) % 7 )
+home = expanduser("~")
+
+sermon_file = home + "/Dropbox/Administration/Markdown_Files/Sermon_Work/" + sunday.strftime('%Y-%m-%d') + "_sermon.md"
+slide_file = home + "/Dropbox/Administration/Markdown_Files/Sermon_Work/" + sunday.strftime('%Y-%m-%d') + "_slides.md"
+
+with open(sermon_file) as f_in, open(slide_file, "w") as f_out :
+    for row in f_in.readlines()[:4] :
+        f_out.write(row)
+
+with open(slide_file, "a") as myfile:
+    myfile.write("---\n\n# {#overview .step .first data-x=-4000 data-y=0 data-scale=10}\n\n![](images/file.jpg)\n\n")
+
+
+

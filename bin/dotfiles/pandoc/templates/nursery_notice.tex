@@ -1,0 +1,69 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[english]{babel}			% english
+\usepackage{graphicx}				% images
+\usepackage[hmargin=1in,vmargin=1in]{geometry}   %sets page margins
+\usepackage{amssymb,amsmath}		% math
+\usepackage{multicol}				% three-column layout
+\usepackage{url}					% clickable links
+\usepackage{marvosym}				% symbols
+\usepackage{wrapfig}				% wrapping text around figures
+\usepackage[T1]{fontenc}			% font encoding
+\usepackage{charter} 				% Charter font for main content
+\usepackage{blindtext}				% dummy text
+\usepackage{fix-cm}         % for large text sizes\
+
+
+\usepackage{textpos}
+\usepackage{parskip} %provides line breaks between paragraphs
+ 
+ 
+\begin{document}
+  
+\thispagestyle{empty}
+
+\begin{textblock*}{3in}(-.2in,-.25in)
+  \begin{minipage}{.5in}
+   \includegraphics[height=.5in]{/Users/wade/Dropbox/Nursery/visitor-logo}
+  \end{minipage}
+  \begin{minipage}{1.5in}
+  \noindent \bfseries \textsc{First Baptist Church} \\
+  \normalfont \textsc{Nursery Team}  \\
+  309 E. Adams Street \\
+  Muncie, Indiana 47305 \\
+  \end{minipage}
+\end{textblock*}
+
+
+\begin{textblock*}{3in}(4.5in,-.25in)
+    \fontsize{25}{20}\selectfont Oops! \\
+     \fontsize{12}{8}\textsc{We missed you on Sunday}
+\end{textblock*}
+
+
+\begin{textblock*}{3in}(.5in,1.25in)
+ \noindent \bfseries \textsc{$name$} \\
+ \normalfont $address1$ \\
+ $address2$ \\
+
+\end{textblock*}
+
+\vspace{64mm}
+
+\large
+
+\noindent Our records show that you were scheduled to be in the nursery on \\
+
+\textbf{$scheduledate$} during \textbf{$servicehour$} hour. \\
+
+\noindent $body$
+ 
+\noindent As always we appreciate your dedication to our children! 
+
+\vspace{20mm}
+
+\textsc{The Nursery Team} \\ % Company
+\small{E: cmassoth1110@yahoo.com | M: 765.744.1350} % Contact information
+ 
+\end{document}
+
+

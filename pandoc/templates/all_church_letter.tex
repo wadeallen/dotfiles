@@ -1,0 +1,66 @@
+\documentclass[10pt]{letter}
+
+\usepackage{graphicx}
+\usepackage{textpos}
+
+\usepackage{datatool}
+\DTLloaddb{names}{visitor.csv}
+
+
+\makeatletter
+\let\@texttop\relax
+\makeatother
+
+\usepackage[left=1in,top=2in,right=1in,bottom=1in,nohead,nofoot]{geometry}
+
+\usepackage{eso-pic}
+\newcommand\BackgroundPic{
+\put(0,0){
+\parbox[b][\paperheight]{\paperwidth}{%
+\vfill
+\centering
+\includegraphics[width=\paperwidth,height=\paperheight,
+keepaspectratio]{/home/wadeallen/Dropbox/stationary.pdf}%
+\vfill
+}}}
+
+\begin{document}
+
+\DTLforeach{names}
+{\name=HOUSEHOLD_household_name, \address=HOUSEHOLD_ADDRESS_address1, \addresstwo=HOUSEHOLD_ADDRESS_address2, \city=HOUSEHOLD_ADDRESS_city, \state=HOUSEHOLD_ADDRESS_state_province, \zip=HOUSEHOLD_ADDRESS_postal_code}{
+
+\AddToShipoutPicture*{\BackgroundPic}
+\begin{letter}{}
+
+  \begin{textblock*}{3in}(-.1in,.25in)
+   \noindent \bfseries \textsc{\name} \\
+   \normalfont \address \addresstwo \\
+   \city, \state \ \zip \\
+ \end{textblock*}
+
+
+% \opening{$first_name$,}
+\begingroup
+\fontsize{$font-size$pt}{$font-size$pt}\selectfont
+
+\vspace{10mm}
+
+
+\opening{Dear FBC Church Family,}
+
+$body$
+
+% \closing{May the Peace of Christ be with you!, \\
+\closing{$closing$, \\
+\vspace{5mm}
+% \fromsig{\includegraphics[scale=1]{/Users/wadeallen/Compile/Letters/Stationary/signature.png}
+ % } \\
+% \vspace{5mm}
+% \fromname{Matt and Heather Headley}
+\fromname{$from$}
+% \fromname{Dan Lemen, Church Treasurer}
+ }
+\endgroup
+\end{letter}
+}
+\end{document}

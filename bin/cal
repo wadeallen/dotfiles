@@ -1,0 +1,6 @@
+#!/bin/bash
+
+EVENT=$1
+
+gcalcli quick "$EVENT" --cal="wadesallen@gmail.com"
+

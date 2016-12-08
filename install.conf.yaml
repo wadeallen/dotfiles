@@ -1,0 +1,18 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/bin: bin
+    ~/.vim: vim
+    ~/.vimrc: vimrc
+    ~/.pandoc: pandoc
+    ~/.maid: maid
+    ~/.Xmodmap: Xmodmap
+    ~/.Xresources: Xresources
+    ~/.bashrc: bashrc
+    ~/.bash_aliases: bash_aliases
+    ~/.config/autokey: autokey
+    ~/.conkyrc: conkyrc

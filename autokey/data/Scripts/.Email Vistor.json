@@ -1,0 +1,30 @@
+{
+    "filter": {
+        "regex": null,
+        "isRecursive": false
+    },
+    "omitTrigger": false,
+    "prompt": false,
+    "hotkey": {
+        "modifiers": [],
+        "hotKey": null
+    },
+    "description": "Email Vistor",
+    "usageCount": 13,
+    "type": "script",
+    "showInTrayMenu": false,
+    "modes": [
+        1
+    ],
+    "abbreviation": {
+        "triggerInside": false,
+        "wordChars": "[\\w]",
+        "abbreviations": [
+            "emailvisitor"
+        ],
+        "immediate": true,
+        "ignoreCase": false,
+        "backspace": true
+    },
+    "store": {}
+}

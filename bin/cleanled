@@ -1,0 +1,18 @@
+#!/bin/bash
+
+ORIG=$HOME/Dropbox/Ledger/ledger.ledger
+NEW=$HOME/Dropbox/Ledger/copy_ledger.ledger
+CLEAN=$HOME/Dropbox/Ledger/clean_ledger.ledger
+HEADER=$HOME/Dropbox/Ledger/header.ledger
+
+# change '4,5d' to reflect the lines that contain include files
+sed '4,5d' $ORIG > $NEW
+ledger -f $NEW --sort d print > $CLEAN
+# change "NR<=6" to reflect the lines that are in the header (including the blank line before the first transation)
+awk 'NR<=6' $ORIG > $HEADER
+cat $HEADER $CLEAN > $ORIG
+rm $HEADER $CLEAN $NEW
+
+
+
+

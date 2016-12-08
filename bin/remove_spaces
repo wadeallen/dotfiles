@@ -1,0 +1,8 @@
+#!/usr/bin/env bash 
+
+
+find . -name "*.avi" -print | while read file
+do
+  mv "${file}" "${file// /_}"
+done
+

@@ -1,0 +1,9 @@
+#!/usr/bin/env bash 
+
+DIRECTORY=$HOME/Dropbox/Pandoc/Pandoc_Visitor
+
+cd $DIRECTORY
+wget -O Visitor.txt https://docs.google.com/document/d/1im1OZ0ol56PP9y0uyvq-2ih3W8G5tiHFdaioL-vTlso/export?format=txt
+pandoc $DIRECTORY/Visitor.txt -o Visitor_Merged.pdf --template visitor_merge
+mv Visitor_Merged.pdf $HOME/Desktop/
+rm Visitor.txt

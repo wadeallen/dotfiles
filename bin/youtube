@@ -1,0 +1,16 @@
+#!/bin/bash
+
+filename=$1
+
+if	[ -z "$filename" ]
+then
+	echo "Please enter the .MTS file"
+	exit 0
+fi
+
+
+fileroot=$(echo ${filename%.*})
+
+ffmpeg -i ${filename} -s 720x480  -strict -2 ${fileroot}.mp4
+
+

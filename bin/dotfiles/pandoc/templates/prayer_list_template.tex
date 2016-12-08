@@ -1,0 +1,80 @@
+\documentclass[14pt,letterpaper]{extarticle}
+
+% Define geometry (without using the geometry package)
+
+% Call packages we'll need
+\usepackage[english]{babel}			% english
+\usepackage{graphicx}				% images
+\usepackage[hmargin=1in,vmargin=.4in]{geometry}   %sets page margins
+\usepackage{amssymb,amsmath}		% math
+\usepackage{multicol}				% three-column layout
+\usepackage{url}					% clickable links
+\usepackage{marvosym}				% symbols
+\usepackage{wrapfig}				% wrapping text around figures
+\usepackage[T1]{fontenc}			% font encoding
+\usepackage{charter} 				% Charter font for main content
+\usepackage{blindtext}				% dummy text
+\usepackage{fix-cm}         % for large text sizes
+\usepackage{titlesec}       %allows formatting of titles
+\usepackage[pdfpagemode=FullScreen,colorlinks=false]{hyperref}	% links and pdf behaviour
+
+%%inline lists
+\usepackage{paralist}
+			
+%%for two columns
+\usepackage{multicol}	
+
+%%custom date
+\usepackage{datetime}		   
+
+%column spacing
+\setlength{\columnseprule}{1pt}
+\setlength{\columnsep}{30pt}      
+
+%%no indenting of paragraphs
+\setlength\parindent{0pt}    
+\setlength{\parskip}{10pt}      
+
+%%formatting of titles
+\titleformat{\section}[runin]{\normalfont\bfseries}{}{.5em}{}[: \ \ \ ]
+\titlespacing{\section}{\parindent}{1.5ex plus .1ex minus .2ex}{0pt}          
+              
+%%no page numbers
+\pagestyle{empty}           
+
+\begin{document}   
+  
+\newdateformat{prayerlistdate}{%
+\monthname[\THEMONTH] \THEDAY\, \THEYEAR}
+
+\begin{figure}[ht]
+{\begin{minipage}[t]{.5in}
+\vspace{0in}\includegraphics[height=.5in]{visitor-logo.pdf}
+\end{minipage}}
+{\begin{minipage}[t]{3in}
+\vspace{0in} \fontsize{20}{15}\selectfont Prayer List \\
+\fontsize{12}{9}\textsc{\prayerlistdate \today}
+\end{minipage}}
+\end{figure}      
+
+$body$
+
+\vspace{.5in}   
+
+
+\begin{table}[htbp]   
+  \centering
+  To activate the phone prayer chain, call \\ \ \\
+\begin{tabular}{|rl|}
+Shirley Pittenger & 765-282-0632 \\
+Pam Kistler & 765-284-0946\\
+\end{tabular}
+\end{table}        
+
+
+\end{document}   
+
+ 
+
+
+   

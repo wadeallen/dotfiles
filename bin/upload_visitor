@@ -1,0 +1,12 @@
+#!/bin/bash
+
+filename=$1
+
+if	[ -z "$filename" ]
+then
+	echo "Please enter the PDF file"
+	exit 0
+fi
+
+s3cmd put ${filename} s3://visitor.fbcmuncie.org/
+

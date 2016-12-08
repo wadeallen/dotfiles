@@ -1,0 +1,90 @@
+%%% Preamble
+\documentclass[paper=letter,fontsize=12pt,numbers=noenddot]{scrartcl}
+
+\usepackage[english]{babel}															% English language/hyphenation
+\usepackage[protrusion=true,expansion=true]{microtype}				% Better typography
+\usepackage{amsmath,amsfonts,amsthm}										% Math packages
+\usepackage[pdftex]{graphicx}														% Enable pdflatex
+%\usepackage{color,transparent}													% If you use color and/or transparency
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption}	% Custom captions under/above floats
+\usepackage{epstopdf}																	% Converts .eps to .pdf
+\usepackage{subfig}																		% Subfigures
+\usepackage{booktabs}																	% Nicer tables
+
+% for page numbers
+\usepackage{lastpage}
+
+
+%%% Advanced verbatim environment
+\usepackage{verbatim}
+\usepackage{fancyvrb}
+\DefineShortVerb{\|}								% delimiter to display inline verbatim text
+
+
+%%% Custom sectioning (sectsty package)
+\usepackage{sectsty}								% Custom sectioning (see below)
+\allsectionsfont{%									% Change font of al section commands
+	\usefont{OT1}{bch}{b}{n}%					% bch-b-n: CharterBT-Bold font
+%	\hspace{15pt}%									% Uncomment for indentation
+	}
+
+\sectionfont{%										% Change font of \section command
+	\usefont{OT1}{bch}{b}{n}%						% bch-b-n: CharterBT-Bold font
+	\huge\centering%										% centering
+	\vspace{15pt}%									% add space above heading
+	}
+
+\subsectionfont{%										% Change font of \section command
+	\usefont{OT1}{bch}{b}{n}%					% bch-b-n: CharterBT-Bold font
+	\sectionrule{0pt}{0pt}{-5pt}{0.8pt}%		% Horizontal rule below section
+	}
+
+
+%%% Custom headers/footers (fancyhdr package)
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead{}
+\fancyfoot[C]{}														% No page header
+\fancyfoot[R]{\thepage \ of \pageref{LastPage}}
+\fancyfoot[L]{Updated: $updated$}	
+\renewcommand{\headrulewidth}{0pt}				% Remove header underlines
+\renewcommand{\footrulewidth}{0pt}				% Remove footer underlines
+\setlength{\headheight}{13.6pt}
+
+
+%%% Title	
+\title{ \vspace{-1in} 	\usefont{OT1}{bch}{b}{n}
+		\huge \strut First Baptist Church Muncie \strut \\
+		\Large \bfseries \strut $title$ \strut
+}
+\author{ 									\usefont{OT1}{bch}{m}{n}
+        309 East Adams Street\\		\usefont{OT1}{bch}{m}{n}
+        Muncie, Indiana 47305\\	\usefont{OT1}{bch}{m}{n}
+        765-284-7749\\
+        \texttt{http://fbcmuncie.org}
+}
+\date{}
+
+% for pdf
+
+\usepackage[pdfauthor={Wade Allen},%
+        pdftitle={$title$},%
+        pdftex]{hyperref}
+
+% changes font to sans-serif
+
+\renewcommand{\familydefault}{\sfdefault}
+
+% changed section numbers to article and section
+
+\renewcommand \thesection{}
+\renewcommand \thesubsection{Article \Roman{subsection}.}
+\renewcommand \thesubsubsection{Section \Alph{subsubsection}.}
+
+%%% Begin document
+\begin{document}
+\maketitle
+
+$body$
+
+\end{document}

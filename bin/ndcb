@@ -1,0 +1,19 @@
+#!/usr/bin/env python3
+
+import datetime
+from os.path import expanduser
+import os
+import os.path
+import subprocess
+
+home = expanduser("~")
+today = datetime.datetime.now().strftime("%Y-%m-%d")
+filename =(home + '/Dropbox/Drafts/' + today + '.markdown')
+
+if os.path.isfile(filename):
+    subprocess.call(['vim', '-c', '9', filename])
+else:
+    target = open (filename, 'w')
+    target.write("---\ntitle: \ndate: {}\nlayout: article\n---\n \n ".format(today))
+    target.close()
+

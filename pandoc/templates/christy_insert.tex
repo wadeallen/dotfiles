@@ -1,0 +1,86 @@
+\documentclass[landscape,twocolumn,letterpaper,10pt]{article} % Font size (10pt, 11pt or 12pt)
+
+% more margin settings
+
+\setlength{\oddsidemargin}{0in}		% default=0in
+\setlength{\textwidth}{9in}		% default=9in
+
+\setlength{\columnsep}{2in}		% default=10pt
+\setlength{\columnseprule}{0pt}		% default=0pt (no line)
+
+\setlength{\textheight}{5.85in}		% default=5.15in
+\setlength{\topmargin}{.2in}		% default=0.20in
+\setlength{\headsep}{0in}		% default=0.35in
+
+\usepackage{marvosym} % Required for symbols in the colored box
+\usepackage{ifsym} % Required for symbols in the colored box
+
+\usepackage[usenames,dvipsnames]{xcolor} % Allows the definition of hex colors
+
+% Fonts and tweaks for XeLaTeX
+\usepackage{fontspec,xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont[Mapping=tex-text]{Hoefler Text} % Main document font
+\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans} % Font for your name at the top
+%\setmonofont[Scale=MatchLowercase]{Andale Mono}
+
+% Colors for links, text and headings
+\usepackage{hyperref}
+\definecolor{linkcolor}{HTML}{506266} % Blue-gray color for links
+\definecolor{shade}{HTML}{F5DD9D} % Peach color for the contact information box
+\definecolor{text1}{HTML}{2b2b2b} % Main document font color, off-black
+\definecolor{headings}{HTML}{701112} % Dark red color for headings
+% Other color palettes: shade=B9D7D9 and linkcolor=A40000; shade=D4D7FE and linkcolor=FF0080
+\definecolor{sign}{HTML}{0B0B61}
+
+\hypersetup{colorlinks,breaklinks, urlcolor=linkcolor, linkcolor=linkcolor} % Set up links and colors
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+% Headers and footers can be added with the \lhead{} \rhead{} \lfoot{} \rfoot{} commands
+% Example footer:
+
+\renewcommand{\headrulewidth}{0pt} % Get rid of the default rule in the header
+
+\usepackage{titlesec} % Allows creating custom \section's
+
+% Format of the section titles
+\titleformat{\section}{\color{headings}
+\scshape\Large\raggedright}{}{0em}{}[\color{black}\titlerule]
+
+\titlespacing{\section}{0pt}{0pt}{5pt} % Spacing around titles
+
+% Added by Wade
+\usepackage{parskip}
+\setlength{\parskip}{15pt plus5pt minus3pt}
+
+\begin{document}
+
+\color{text1} % Sets the default text color for the whole document
+
+
+\raggedright	
+
+\par{\color{sign}\centering{\scshape\LARGE $title$}
+
+\raggedright{\color{text1} $body$}
+
+
+
+{\color{sign}\fontspec[Variant = 2]{Zapfino} $author$}
+
+\vfill
+
+\pagebreak
+
+\par{\color{sign}\centering{\scshape\LARGE $title$}
+
+\raggedright{\color{text1} $body$}
+
+
+{\color{sign}\fontspec[Variant = 2]{Zapfino} $author$}
+
+\vfill
+
+\end{document}  

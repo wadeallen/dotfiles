@@ -1,0 +1,5 @@
+#!/bin/bash
+
+s3cmd sync s3://visitor.fbcmuncie.org/ $HOME/Backups/Visitor/
+s3cmd sync s3://audio.fbcmuncie.org/ $HOME/Backups/Sermon_MP3s/
+s3cmd sync /home/wadeallen/Dropbox/Administration/Markdown_Files/Sermon_Work/ s3://wade_sermons/

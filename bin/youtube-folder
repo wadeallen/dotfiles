@@ -1,0 +1,11 @@
+#!/bin/bash
+
+FILES=*.MTS
+
+for filename in $FILES
+do
+   fileroot=$(echo ${filename%.*})
+   ffmpeg -i ${filename} -s 720x480  -strict -2 ${fileroot}.mp4
+done
+
+

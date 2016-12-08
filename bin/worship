@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+
+from os.path import expanduser
+home = expanduser("~")
+
+title = input('Title of Sermon: ')
+date = input ('Date of Sermon: ')
+description = input ('Description of Sermon: ')
+
+# filler data for testing
+# title = "This is a Test Title"
+# date = "2013-11-01"
+# description = "On this third Sunday of Advent, we consider the value of patience. In a world that is not yet right, we are tempted to distrust God, to complain, to grumble. But just as God has been faithful in the past (Jesus' coming at Christmas), He will be faithful in the future (His Second Coming). As we live in between these two events, we must be patient."
+
+title_sliced = title.split()
+slug = ("-".join(title_sliced).lower())
+filename =(home + '/Sites/church_site_2014/worship/_posts/' + date + '-' + slug + '.markdown')
+
+target = open (filename, 'w')
+target.write("---\n")
+target.write("author: Wade Allen\n")
+target.write("title: {}\n".format(title))
+target.write("date: {}\n".format(date))
+target.write("layout: worship\n")
+target.write("---\n")
+target.write("\n")
+target.write(description)
+target.write("\n")
+print ('--------------------')
+print('Success!')
+print ("Sermon Title: {} for {} has been added".format(title, date))
+target.close()

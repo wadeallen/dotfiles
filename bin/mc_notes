@@ -1,0 +1,14 @@
+#!/bin/bash
+
+filename=$1
+
+if	[ -z "$filename" ]
+then
+	echo "Please enter the MC Notes file"
+	exit 0
+fi
+
+
+fileroot=$(echo ${filename%.*})
+
+pandoc $filename -o ${fileroot}_MC_Notes.pdf --template=mc_notes.tex --latex-engine=xelatex

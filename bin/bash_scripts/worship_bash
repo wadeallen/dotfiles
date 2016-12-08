@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+DATE=$1
+TITLE=$2
+SLUG=$(echo $2 | sed 's/ /-/g')
+
+if	[ $# -lt 2 ]
+then
+	echo "Enter a date [arg1] and a title [arg2] (the title must be in quotes)"
+	exit 0
+fi
+
+
+touch $HOME/church_jekyll/worship/_posts/$DATE-$SLUG.markdown &&
+echo -e "--- \nauthor: Wade Allen \ntitle: $2 \ndate: $DATE \nlayout: worship \n---" >> $HOME/church_jekyll/worship/_posts/$DATE-$SLUG.markdown &&
+sleep .5 &&
+vim $HOME/church_jekyll/worship/_posts/$DATE-$SLUG.markdown 
