@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CONFIG=${HOME}/.dotfiles/bin/commands
+CONFIG=${HOME}/dotfiles/bin/commands
 
 # Display the menu and get the selection
 SELECTION=`sed 's/\].*/]/' ${CONFIG} | tr -d '[]' | rofi -dmenu -p "Launch: " $*`

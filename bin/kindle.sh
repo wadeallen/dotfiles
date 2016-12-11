@@ -8,7 +8,7 @@
 ## Preferences
 # If true, send one version with pdf as-is, another with 'convert' subject
 # else, just send the pdf version
-SEND_PDF_BOTH_VERSIONS=false
+SEND_PDF_BOTH_VERSIONS=true
 
 # if true, sends file to @free.kindle.com instead of @kindle.com
 SEND_TO_FREE_MAIL=false
@@ -64,6 +64,19 @@ _send_mail() {
 # If mutt not found then exit
 command -v mutt >/dev/null 2>&1 || { echo >&2 "Mutt is required but it was not found. Please install it"; exit 1; }
 
+# TODO In order for this to work you need to add the hostname to your
+# list of trusted senders. However, I haven't found a way to print the whole
+# hostname (e.g. abc@x-laptop.localhost)
+host_name=$(hostname)
+echo "Don't forget to add $host_name to your list of approved e-mail address on Amazon"
+
 filename=$1
+# Neat, found on http://stackoverflow.com/a/965072
+extension="${filename##*.}"
+if [[ "$extension" -eq "pdf" ]] && [[ SEND_PDF_BOTH_VERSIONS ]]; then
+    _send_mail $1
+    _send_mail $1 "convert"
+    exit 0
+fi
 _send_mail $1
 exit 0

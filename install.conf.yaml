@@ -15,4 +15,4 @@
     ~/.bashrc: bashrc
     ~/.bash_aliases: bash_aliases
     ~/.config/autokey: autokey
-    ~/.conkyrc: conkyrc
+    ~/.config/conky/conky.conf: conky.conf

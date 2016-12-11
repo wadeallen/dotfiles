@@ -116,7 +116,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH="$PATH:$HOME/.dotfiles/bin:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/dotfiles/bin:$HOME/.gem/ruby/2.3.0/bin" # Add RVM to PATH for scripting
 export SHUTTLE="wadeallen@192.168.1.101"
 export IMAC="fbcmuncie@imac.local:~/Desktop/"
 
@@ -135,3 +135,6 @@ ps1_hostname() {
       echo "\[\e[0;37m\]@\[\e[1;30m\]$host "
    fi
 }
+
+
+

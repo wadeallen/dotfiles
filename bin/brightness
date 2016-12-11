@@ -1,0 +1,5 @@
+#!/bin/bash
+
+xbacklight -set 20
+
+
