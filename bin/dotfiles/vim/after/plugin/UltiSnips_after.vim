@@ -1,1 +1,0 @@
-/home/wadeallen/.vim/bundle/ultisnips/after/plugin/UltiSnips_after.vim

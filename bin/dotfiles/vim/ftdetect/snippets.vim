@@ -1,1 +1,0 @@
-/home/wadeallen/.vim/bundle/ultisnips/ftdetect/snippets.vim

@@ -1,7 +1,0 @@
-# ~/.tmuxinator/work.yml
-
-name: work
-
-windows:
-  - editor: vim
-  - bash: 
