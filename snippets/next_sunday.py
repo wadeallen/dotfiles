@@ -2,5 +2,6 @@ from datetime import date
 from dateutil.relativedelta import relativedelta, SU
 format = "%Y-%m-%d"
 today = date.today()
-date = today.strftime(format)
-keyboard.send_keys("American Eagle Statement " + date)
+sunday = today + relativedelta(weekday=SU(+1))
+date = sunday.strftime(format)
+print(date, end='')
