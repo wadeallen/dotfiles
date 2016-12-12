@@ -14,5 +14,5 @@
     ~/.Xresources: Xresources
     ~/.bashrc: bashrc
     ~/.bash_aliases: bash_aliases
-    ~/.config/autokey: autokey
+    ~/.config/hotstrings.json: hotstrings.json
     ~/.config/conky/conky.conf: conky.conf
