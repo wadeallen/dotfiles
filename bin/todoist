@@ -14,7 +14,5 @@ if today[0]['data']:
 else:
     print ("Nothing to do!")
 
-print ("\n\n")
-
 
 # code to pull in id (str(item['id'])
