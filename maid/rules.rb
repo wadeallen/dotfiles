@@ -49,7 +49,7 @@ Maid.rules do
   end
 
   rule 'move Yorktown Muncipal Utilities into folder' do
-    move(dir('~/Dropbox/Scans/Yorktown Muncipal Utilities*.pdf'), '~/Dropbox/Receipts/Housing/Utilities/Water')
+    move(dir('~/Dropbox/Scans/Yorktown Municipal Utilities*.pdf'), '~/Dropbox/Receipts/Housing/Utilities/Water')
   end
 
   rule 'move Maurices Statement into folder' do

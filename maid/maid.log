@@ -3054,3 +3054,126 @@ I, [2016-12-11T23:34:09.635277 #4200]  INFO -- Maid: Rule: move IU Health Statem
 I, [2016-12-11T23:34:09.635419 #4200]  INFO -- Maid: Rule: move MD Wise Statement into folder
 I, [2016-12-11T23:34:09.635555 #4200]  INFO -- Maid: Rule: move Vectren Bill into folder
 I, [2016-12-11T23:34:09.635692 #4200]  INFO -- Maid: Finished
+I, [2016-12-12T20:11:01.628878 #1546]  INFO -- Maid: v0.7.0
+I, [2016-12-12T20:11:01.629516 #1546]  INFO -- Maid: Started
+I, [2016-12-12T20:11:01.629589 #1546]  INFO -- Maid: Rule: move 2016 journal files into folder
+I, [2016-12-12T20:11:01.629789 #1546]  INFO -- Maid: move /home/wadeallen/Dropbox/Journal/2016-12-12.journal.markdown /home/wadeallen/Dropbox/Journal/2016
+I, [2016-12-12T20:11:01.629983 #1546]  INFO -- Maid: Rule: move reminder call sheets into folder
+I, [2016-12-12T20:11:01.630190 #1546]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/2016-12-11 Nursery Reminder Calls.pdf' '/home/wadeallen/Dropbox/Administration/Nursery/Reminder Calls'
+I, [2016-12-12T20:11:01.630353 #1546]  INFO -- Maid: Rule: move nursery sign in sheets into folder
+I, [2016-12-12T20:11:01.630502 #1546]  INFO -- Maid: Rule: move giving reports into folder
+I, [2016-12-12T20:11:01.630607 #1546]  INFO -- Maid: Rule: move benefit wallet receipts into folder
+I, [2016-12-12T20:11:01.630754 #1546]  INFO -- Maid: Rule: move church receipts into folder
+I, [2016-12-12T20:11:01.630872 #1546]  INFO -- Maid: Rule: move housing receipts into folder
+I, [2016-12-12T20:11:01.630969 #1546]  INFO -- Maid: Rule: move Comcast Bill into folder
+I, [2016-12-12T20:11:01.631054 #1546]  INFO -- Maid: Rule: move Kohls Statement into folder
+I, [2016-12-12T20:11:01.631143 #1546]  INFO -- Maid: Rule: move American Eagle Statement into folder
+I, [2016-12-12T20:11:01.631237 #1546]  INFO -- Maid: Rule: move Indiana Michigan Power Statement into folder
+I, [2016-12-12T20:11:01.631331 #1546]  INFO -- Maid: Rule: move School Receipts into folder
+I, [2016-12-12T20:11:01.631428 #1546]  INFO -- Maid: Rule: move Yorktown Muncipal Utilities into folder
+I, [2016-12-12T20:11:01.631520 #1546]  INFO -- Maid: Rule: move Maurices Statement into folder
+I, [2016-12-12T20:11:01.631612 #1546]  INFO -- Maid: Rule: move Target Statement into folder
+I, [2016-12-12T20:11:01.631699 #1546]  INFO -- Maid: Rule: move TJ Maxx Statement into folder
+I, [2016-12-12T20:11:01.631786 #1546]  INFO -- Maid: Rule: move ATT Statement into folder
+I, [2016-12-12T20:11:01.631864 #1546]  INFO -- Maid: Rule: move IU Health Statement into folder
+I, [2016-12-12T20:11:01.631953 #1546]  INFO -- Maid: Rule: move MD Wise Statement into folder
+I, [2016-12-12T20:11:01.632046 #1546]  INFO -- Maid: Rule: move Vectren Bill into folder
+I, [2016-12-12T20:11:01.632130 #1546]  INFO -- Maid: Finished
+I, [2016-12-12T20:11:57.314102 #1615]  INFO -- Maid: v0.7.0
+I, [2016-12-12T20:11:57.314170 #1615]  INFO -- Maid: Started
+I, [2016-12-12T20:11:57.314195 #1615]  INFO -- Maid: Rule: move 2016 journal files into folder
+I, [2016-12-12T20:11:57.314271 #1615]  INFO -- Maid: Rule: move reminder call sheets into folder
+I, [2016-12-12T20:11:57.314329 #1615]  INFO -- Maid: Rule: move nursery sign in sheets into folder
+I, [2016-12-12T20:11:57.314403 #1615]  INFO -- Maid: Rule: move giving reports into folder
+I, [2016-12-12T20:11:57.314453 #1615]  INFO -- Maid: Rule: move benefit wallet receipts into folder
+I, [2016-12-12T20:11:57.314500 #1615]  INFO -- Maid: Rule: move church receipts into folder
+I, [2016-12-12T20:11:57.314549 #1615]  INFO -- Maid: Rule: move housing receipts into folder
+I, [2016-12-12T20:11:57.314598 #1615]  INFO -- Maid: Rule: move Comcast Bill into folder
+I, [2016-12-12T20:11:57.314641 #1615]  INFO -- Maid: Rule: move Kohls Statement into folder
+I, [2016-12-12T20:11:57.314686 #1615]  INFO -- Maid: Rule: move American Eagle Statement into folder
+I, [2016-12-12T20:11:57.314732 #1615]  INFO -- Maid: Rule: move Indiana Michigan Power Statement into folder
+I, [2016-12-12T20:11:57.314779 #1615]  INFO -- Maid: Rule: move School Receipts into folder
+I, [2016-12-12T20:11:57.314850 #1615]  INFO -- Maid: Rule: move Yorktown Muncipal Utilities into folder
+I, [2016-12-12T20:11:57.314932 #1615]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/Yorktown Municipal Utilities 2016-12-12.pdf' /home/wadeallen/Dropbox/Receipts/Housing/Utilities/Water
+I, [2016-12-12T20:11:57.315047 #1615]  INFO -- Maid: Rule: move Maurices Statement into folder
+I, [2016-12-12T20:11:57.315103 #1615]  INFO -- Maid: Rule: move Target Statement into folder
+I, [2016-12-12T20:11:57.315151 #1615]  INFO -- Maid: Rule: move TJ Maxx Statement into folder
+I, [2016-12-12T20:11:57.315198 #1615]  INFO -- Maid: Rule: move ATT Statement into folder
+I, [2016-12-12T20:11:57.315244 #1615]  INFO -- Maid: Rule: move IU Health Statement into folder
+I, [2016-12-12T20:11:57.315293 #1615]  INFO -- Maid: Rule: move MD Wise Statement into folder
+I, [2016-12-12T20:11:57.315340 #1615]  INFO -- Maid: Rule: move Vectren Bill into folder
+I, [2016-12-12T20:11:57.315385 #1615]  INFO -- Maid: Finished
+I, [2016-12-12T20:13:26.521626 #2433]  INFO -- Maid: v0.7.0
+I, [2016-12-12T20:13:26.521695 #2433]  INFO -- Maid: Started
+I, [2016-12-12T20:13:26.521720 #2433]  INFO -- Maid: Rule: move 2016 journal files into folder
+I, [2016-12-12T20:13:26.521806 #2433]  INFO -- Maid: Rule: move reminder call sheets into folder
+I, [2016-12-12T20:13:26.521866 #2433]  INFO -- Maid: Rule: move nursery sign in sheets into folder
+I, [2016-12-12T20:13:26.521927 #2433]  INFO -- Maid: Rule: move giving reports into folder
+I, [2016-12-12T20:13:26.521977 #2433]  INFO -- Maid: Rule: move benefit wallet receipts into folder
+I, [2016-12-12T20:13:26.522024 #2433]  INFO -- Maid: Rule: move church receipts into folder
+I, [2016-12-12T20:13:26.522073 #2433]  INFO -- Maid: Rule: move housing receipts into folder
+I, [2016-12-12T20:13:26.522166 #2433]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/Wal Mart Housing Receipt 2016-12-08.pdf' '/home/wadeallen/Dropbox/Receipts/Housing/Misc Housing'
+I, [2016-12-12T20:13:26.522287 #2433]  INFO -- Maid: Rule: move Comcast Bill into folder
+I, [2016-12-12T20:13:26.522385 #2433]  INFO -- Maid: Rule: move Kohls Statement into folder
+I, [2016-12-12T20:13:26.522448 #2433]  INFO -- Maid: Rule: move American Eagle Statement into folder
+I, [2016-12-12T20:13:26.522499 #2433]  INFO -- Maid: Rule: move Indiana Michigan Power Statement into folder
+I, [2016-12-12T20:13:26.522551 #2433]  INFO -- Maid: Rule: move School Receipts into folder
+I, [2016-12-12T20:13:26.522602 #2433]  INFO -- Maid: Rule: move Yorktown Muncipal Utilities into folder
+I, [2016-12-12T20:13:26.522653 #2433]  INFO -- Maid: Rule: move Maurices Statement into folder
+I, [2016-12-12T20:13:26.522701 #2433]  INFO -- Maid: Rule: move Target Statement into folder
+I, [2016-12-12T20:13:26.522749 #2433]  INFO -- Maid: Rule: move TJ Maxx Statement into folder
+I, [2016-12-12T20:13:26.522796 #2433]  INFO -- Maid: Rule: move ATT Statement into folder
+I, [2016-12-12T20:13:26.522840 #2433]  INFO -- Maid: Rule: move IU Health Statement into folder
+I, [2016-12-12T20:13:26.522889 #2433]  INFO -- Maid: Rule: move MD Wise Statement into folder
+I, [2016-12-12T20:13:26.522937 #2433]  INFO -- Maid: Rule: move Vectren Bill into folder
+I, [2016-12-12T20:13:26.522983 #2433]  INFO -- Maid: Finished
+I, [2016-12-12T20:15:31.874934 #2673]  INFO -- Maid: v0.7.0
+I, [2016-12-12T20:15:31.875002 #2673]  INFO -- Maid: Started
+I, [2016-12-12T20:15:31.875027 #2673]  INFO -- Maid: Rule: move 2016 journal files into folder
+I, [2016-12-12T20:15:31.875107 #2673]  INFO -- Maid: Rule: move reminder call sheets into folder
+I, [2016-12-12T20:15:31.875164 #2673]  INFO -- Maid: Rule: move nursery sign in sheets into folder
+I, [2016-12-12T20:15:31.875214 #2673]  INFO -- Maid: Rule: move giving reports into folder
+I, [2016-12-12T20:15:31.875262 #2673]  INFO -- Maid: Rule: move benefit wallet receipts into folder
+I, [2016-12-12T20:15:31.875328 #2673]  INFO -- Maid: Rule: move church receipts into folder
+I, [2016-12-12T20:15:31.875411 #2673]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/Hobby Lobby Church Receipt 2016-12-09.pdf' /home/wadeallen/Dropbox/Receipts/Church/Current
+I, [2016-12-12T20:15:31.875527 #2673]  INFO -- Maid: Rule: move housing receipts into folder
+I, [2016-12-12T20:15:31.875639 #2673]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/Hobby Lobby Housing Receipt 2016-12-09.pdf' '/home/wadeallen/Dropbox/Receipts/Housing/Misc Housing'
+I, [2016-12-12T20:15:31.875723 #2673]  INFO -- Maid: Rule: move Comcast Bill into folder
+I, [2016-12-12T20:15:31.875843 #2673]  INFO -- Maid: Rule: move Kohls Statement into folder
+I, [2016-12-12T20:15:31.875896 #2673]  INFO -- Maid: Rule: move American Eagle Statement into folder
+I, [2016-12-12T20:15:31.875977 #2673]  INFO -- Maid: Rule: move Indiana Michigan Power Statement into folder
+I, [2016-12-12T20:15:31.876030 #2673]  INFO -- Maid: Rule: move School Receipts into folder
+I, [2016-12-12T20:15:31.876078 #2673]  INFO -- Maid: Rule: move Yorktown Muncipal Utilities into folder
+I, [2016-12-12T20:15:31.876124 #2673]  INFO -- Maid: Rule: move Maurices Statement into folder
+I, [2016-12-12T20:15:31.876169 #2673]  INFO -- Maid: Rule: move Target Statement into folder
+I, [2016-12-12T20:15:31.876215 #2673]  INFO -- Maid: Rule: move TJ Maxx Statement into folder
+I, [2016-12-12T20:15:31.876260 #2673]  INFO -- Maid: Rule: move ATT Statement into folder
+I, [2016-12-12T20:15:31.876303 #2673]  INFO -- Maid: Rule: move IU Health Statement into folder
+I, [2016-12-12T20:15:31.876350 #2673]  INFO -- Maid: Rule: move MD Wise Statement into folder
+I, [2016-12-12T20:15:31.876407 #2673]  INFO -- Maid: Rule: move Vectren Bill into folder
+I, [2016-12-12T20:15:31.876481 #2673]  INFO -- Maid: Finished
+I, [2016-12-12T20:18:11.784419 #3074]  INFO -- Maid: v0.7.0
+I, [2016-12-12T20:18:11.784487 #3074]  INFO -- Maid: Started
+I, [2016-12-12T20:18:11.784512 #3074]  INFO -- Maid: Rule: move 2016 journal files into folder
+I, [2016-12-12T20:18:11.784598 #3074]  INFO -- Maid: Rule: move reminder call sheets into folder
+I, [2016-12-12T20:18:11.784653 #3074]  INFO -- Maid: Rule: move nursery sign in sheets into folder
+I, [2016-12-12T20:18:11.784701 #3074]  INFO -- Maid: Rule: move giving reports into folder
+I, [2016-12-12T20:18:11.784747 #3074]  INFO -- Maid: Rule: move benefit wallet receipts into folder
+I, [2016-12-12T20:18:11.784791 #3074]  INFO -- Maid: Rule: move church receipts into folder
+I, [2016-12-12T20:18:11.784870 #3074]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/Panera Bread Church Receipt 2016-12-11.pdf' /home/wadeallen/Dropbox/Receipts/Church/Current
+I, [2016-12-12T20:18:11.784989 #3074]  INFO -- Maid: Rule: move housing receipts into folder
+I, [2016-12-12T20:18:11.785126 #3074]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/Sams Club Housing Receipt 2016-12-09.pdf' '/home/wadeallen/Dropbox/Receipts/Housing/Misc Housing'
+I, [2016-12-12T20:18:11.785213 #3074]  INFO -- Maid: Rule: move Comcast Bill into folder
+I, [2016-12-12T20:18:11.785274 #3074]  INFO -- Maid: Rule: move Kohls Statement into folder
+I, [2016-12-12T20:18:11.785322 #3074]  INFO -- Maid: Rule: move American Eagle Statement into folder
+I, [2016-12-12T20:18:11.785367 #3074]  INFO -- Maid: Rule: move Indiana Michigan Power Statement into folder
+I, [2016-12-12T20:18:11.785418 #3074]  INFO -- Maid: Rule: move School Receipts into folder
+I, [2016-12-12T20:18:11.785463 #3074]  INFO -- Maid: Rule: move Yorktown Muncipal Utilities into folder
+I, [2016-12-12T20:18:11.785509 #3074]  INFO -- Maid: Rule: move Maurices Statement into folder
+I, [2016-12-12T20:18:11.785553 #3074]  INFO -- Maid: Rule: move Target Statement into folder
+I, [2016-12-12T20:18:11.785597 #3074]  INFO -- Maid: Rule: move TJ Maxx Statement into folder
+I, [2016-12-12T20:18:11.785641 #3074]  INFO -- Maid: Rule: move ATT Statement into folder
+I, [2016-12-12T20:18:11.785685 #3074]  INFO -- Maid: Rule: move IU Health Statement into folder
+I, [2016-12-12T20:18:11.785730 #3074]  INFO -- Maid: Rule: move MD Wise Statement into folder
+I, [2016-12-12T20:18:11.785786 #3074]  INFO -- Maid: Rule: move Vectren Bill into folder
+I, [2016-12-12T20:18:11.785831 #3074]  INFO -- Maid: Finished
