@@ -5,7 +5,8 @@ import subprocess
 import sys, os
 from os.path import expanduser
 import smtplib
-import /home/wadeallen/bin/config
+sys.path.insert(0,"/home/wadeallen/bin")
+import config
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
@@ -36,7 +37,29 @@ def Convert_Kindle():
   subprocess.call("pandoc " + vim.current.buffer.name + " -o " + compile_path + output + " --epub-stylesheet=" + home + "/Dropbox/Pandoc/Pandoc_Sermon/epub.css --template sermon_epub.html", shell=True) 
   subprocess.call("kindlegen " + compile_path + output + " > " + home + "/Dropbox/Preaching/log.txt", shell=True)
   # Email to Kindle
-
+  fromaddr = config.username
+  toaddr  = config.kindle
+  msg = MIMEMultipart()
+  msg['From'] = fromaddr
+  msg['To'] = toaddr
+  msg['Subject'] = "Emailed " + output
+  body = "This is a scripted email to send file to kindle"
+  msg.attach(MIMEText(body, 'plain'))
+  body = output + " has been emailed to your Kindle"
+  msg.attach(MIMEText(body, 'plain'))
+  filename = (kindle_file)
+  attachment = open(compile_path + kindle_file, "rb")
+  part = MIMEBase('application', 'octet-stream')
+  part.set_payload((attachment).read())
+  encoders.encode_base64(part)
+  part.add_header('Content-Disposition', "attachment; filename= %s" % filename)
+  msg.attach(part)
+  server = smtplib.SMTP("smtp.gmail.com:587")
+  server.starttls()
+  server.login(config.username,config.password)
+  text = msg.as_string()
+  server.sendmail(fromaddr, toaddr, text)
+  server.quit()
   print (os.path.basename(vim.current.buffer.name) + " has been sent to your Kindle")
   return
 
