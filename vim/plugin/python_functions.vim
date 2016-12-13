@@ -2,8 +2,14 @@ function! DefPython()
 python << PYEND
 import vim
 import subprocess
-import os
+import sys, os
 from os.path import expanduser
+import smtplib
+import /home/wadeallen/bin/config
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
+from email import encoders
 
 home = expanduser("~")
 
@@ -23,11 +29,14 @@ def Scripture(version):
   vim.current.line = curline + '>(' + text + ' ' + version + ') ' + passage
 
 def Convert_Kindle():
+  # Convert file to epub
   output = os.path.splitext(os.path.basename(vim.current.buffer.name))[0]+'.epub'
+  # Convert to mobi
   kindle_file = os.path.splitext(os.path.basename(vim.current.buffer.name))[0]+'.mobi'
   subprocess.call("pandoc " + vim.current.buffer.name + " -o " + compile_path + output + " --epub-stylesheet=" + home + "/Dropbox/Pandoc/Pandoc_Sermon/epub.css --template sermon_epub.html", shell=True) 
   subprocess.call("kindlegen " + compile_path + output + " > " + home + "/Dropbox/Preaching/log.txt", shell=True)
-  subprocess.call(home + "/bin/kindle.sh " + compile_path + kindle_file + " > " + home + "/Dropbox/Preaching/log_sendKindle.txt", shell=True)
+  # Email to Kindle
+
   print (os.path.basename(vim.current.buffer.name) + " has been sent to your Kindle")
   return
 
