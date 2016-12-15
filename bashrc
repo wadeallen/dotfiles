@@ -118,7 +118,7 @@ fi
 
 export PATH="$PATH:$HOME/dotfiles/bin:$HOME/.gem/ruby/2.3.0/bin" # Add RVM to PATH for scripting
 export SHUTTLE="wadeallen@imac.local"
-export IMAC="fbcmuncie@imac.local:~/Desktop/"
+export IMAC="fbcmuncie@192.168.2.69:~/Desktop/"
 
 export PROMPT_COMMAND=__prompt_command
 export TERM=xterm-256color
