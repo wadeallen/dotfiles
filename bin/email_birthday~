@@ -18,5 +18,5 @@ url = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + email_address + '&su=' 
 
 # webbrowser.open(url)
 
-subprocess.call(["xdg-open", url])
+subprocess.call(["surf", url])
 

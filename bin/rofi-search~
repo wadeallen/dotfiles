@@ -5,7 +5,7 @@ PASSAGE=`echo ''| rofi -dmenu -i -p Search:\  $*`
 if [ -z "$PASSAGE" ]; then
   exit
 else
-  sr google -browser=midori $PASSAGE
+  sr google -browser=surf $PASSAGE
 fi
 
 

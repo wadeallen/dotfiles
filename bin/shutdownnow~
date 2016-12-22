@@ -1,0 +1,8 @@
+#!/bin/bash
+
+zenity --question --text="Are you sure, proceed to shutdown?"
+if [ $? = 0 ]; then
+  shutdown -h now
+else
+    exit
+fi
