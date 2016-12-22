@@ -1,6 +1,9 @@
 set nocompatible 
 syntax on
 
+set nobackup
+set nowritebackup
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
