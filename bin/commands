@@ -11,7 +11,7 @@
 [mileage] xdg-open https://docs.google.com/spreadsheets/d/1zzhGL1Uqc_uzDKjJu7BVHUuC5IqQsrXFCTJAsnwrDmk
 [prayer list] xdg-open https://docs.google.com/document/d/1w6z_D6MPedilpVZjoRfkwsbvXmsNSjrHKFDwasE5SeQ/edit
 [bulletin] xdg-open https://docs.google.com/document/d/1pqVUPNIRVxPRoO-lqGPDlAuJ-qGCE5BT7qOT72u-EDQ
-[lectionary] midori http://lectionary.library.vanderbilt.edu/
+[lectionary] xdg-open http://lectionary.library.vanderbilt.edu/
 [bible] /home/wadeallen/bin/bible
 [find] /home/wadeallen/bin/finder 
 [read] xdg-open https://read.amazon.com/

@@ -17,5 +17,5 @@ message = ('Hi Ella Mae %0A%0A Attached is the {} credit card statement. I put t
 
 url = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + email_address + '&su=' + subject + '&body=' + message
 
-subprocess.call(["surf", url])
+subprocess.call(["xdg-open", url])
 

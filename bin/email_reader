@@ -1,4 +1,4 @@
-#!/usr/bin/env python 
+#!/usr/bin/env python3
 
 import webbrowser
 from datetime import date
@@ -52,6 +52,6 @@ url = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + email_address + '&su=' 
 
 
 # webbrowser.open(url)
-subprocess.call(["surf", url])
+subprocess.call(["xdg-open", url])
 
 

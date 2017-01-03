@@ -1,0 +1,6 @@
+#!/bin/bash
+
+LAST_MONTH=`date --date='-1 month' +'%B_%Y'`
+
+gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=../${LAST_MONTH}_Credit_Card_Report.pdf *.pdf
+
