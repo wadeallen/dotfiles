@@ -7,7 +7,7 @@ MDFILES = FileList["*_sermon.md"]
 ARCHIVE = FileList["*_sermon.md", "*_slides.md"]
 OLD_PDFS = MDFILES.pathmap("#{Dir.home}/Drive/Worship_Arts_Team/Sermons/%n.pdf")
 PDFS = MDFILES.pathmap("#{Dir.home}/Drive/Worship_Arts_Team/Sermons/%n.pdf")
-EPUBS = MDFILES.pathmap("#{Dir.home}/Dropbox/Preaching/%n.epub")
+EPUBS = MDFILES.pathmap("#{Dir.home}/Next/Preaching/%n.epub")
 LIST_FILES = MDFILES.pathmap("%f")
 # JEKYLL = MDFILES.pathmap("#{Dir.home}/worship-planning/_posts/%n.md")
 
@@ -19,7 +19,7 @@ end
 
 EPUBS.zip(MDFILES).each do |target, source|
 	file target => [source] do
-		sh "pandoc #{source} -o #{target} --epub-stylesheet=#{Dir.home}/Dropbox/Pandoc/Pandoc_Sermon/epub.css --template sermon_epub.html"
+		sh "pandoc #{source} -o #{target} --epub-stylesheet=#{Dir.home}/Next/Pandoc/Pandoc_Sermon/epub.css --template sermon_epub.html"
 	end
 end
 
@@ -74,7 +74,7 @@ end
 
 desc "Delete old epub files"
 task :delete_epub do
-	Dir.glob(Dir.home + '/Dropbox/Preaching/*.epub') do |file|
+	Dir.glob(Dir.home + '/Next/Preaching/*.epub') do |file|
 		name = File.basename(file, ".epub")[0...10]
 		date = Chronic.parse(name).to_date
 		today = Time.now.to_date
@@ -87,7 +87,7 @@ end
 
 desc "Delete old mobi files"
 task :delete_mobi do
-	Dir.glob(Dir.home + '/Dropbox/Preaching/*.mobi') do |file|
+	Dir.glob(Dir.home + '/Next/Preaching/*.mobi') do |file|
 		name = File.basename(file, ".mobi")[0...10]
 		date = Chronic.parse(name).to_date
 		today = Time.now.to_date
@@ -101,7 +101,7 @@ end
 
 desc "make kindle file for next Sunday"
 task :kindle do
-	Dir.glob(Dir.home + '/Dropbox/Preaching/*.epub') do |file|
+	Dir.glob(Dir.home + '/Next/Preaching/*.epub') do |file|
 		name = File.basename(file, ".epub")[0...10]
 		date = Chronic.parse(name).to_date
 		sunday = Chronic.parse('sunday').to_date
@@ -117,8 +117,8 @@ end
 desc "make sermon planning sheet for Nicole"
 task :sermonplan do
 	system "python3 /Users/wadeallen/bin/update_sermons"
-	system "cd /Users/wadeallen/Dropbox/Sermon_Planning_LaTeX/ && pdflatex planning.tex"
-	FileUtils.mv "/Users/wadeallen/Dropbox/Sermon_Planning_LaTeX/planning.pdf", "/Users/wadeallen/Drive/Worship_Arts_Team/Plans/planning.pdf"
+	system "cd /Users/wadeallen/Next/Sermon_Planning_LaTeX/ && pdflatex planning.tex"
+	FileUtils.mv "/Users/wadeallen/Next/Sermon_Planning_LaTeX/planning.pdf", "/Users/wadeallen/Drive/Worship_Arts_Team/Plans/planning.pdf"
 end
 
 desc "update Web site with upcoming sermons"

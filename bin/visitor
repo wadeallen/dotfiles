@@ -3,7 +3,7 @@
 
 
 OS="`uname`"
-DIRECTORY=$HOME/Dropbox/Pandoc/Pandoc_Visitor
+DIRECTORY=$HOME/Next/Pandoc/Pandoc_Visitor
 
 case $OS in
 	Darwin*)

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIR=${HOME}/Dropbox
+DIR=${HOME}/Next
 FILE=`find ${DIR} ! -path "*.scriv*" | sed 's|'$DIR'/|./|' | rofi -dmenu -i -p Find:\  $*`
 
 if [ -z "$FILE" ]; then

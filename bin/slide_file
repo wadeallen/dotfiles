@@ -11,8 +11,8 @@ today = datetime.date.today()
 sunday = today + datetime.timedelta( (6-today.weekday()) % 7 )
 home = expanduser("~")
 
-sermon_file = home + "/Dropbox/Administration/Markdown_Files/Sermon_Work/" + sunday.strftime('%Y-%m-%d') + "_sermon.md"
-slide_file = home + "/Dropbox/Administration/Markdown_Files/Sermon_Work/" + sunday.strftime('%Y-%m-%d') + "_slides.md"
+sermon_file = home + "/Next/Administration/Markdown_Files/Sermon_Work/" + sunday.strftime('%Y-%m-%d') + "_sermon.md"
+slide_file = home + "/Next/Administration/Markdown_Files/Sermon_Work/" + sunday.strftime('%Y-%m-%d') + "_slides.md"
 
 with open(sermon_file) as f_in, open(slide_file, "w") as f_out :
     for row in f_in.readlines()[:4] :

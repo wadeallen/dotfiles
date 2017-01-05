@@ -1,6 +1,6 @@
 #!/usr/bin/env bash 
 
-DIRECTORY=$HOME/Dropbox/Pandoc/Pandoc_Insert/
+DIRECTORY=$HOME/Next/Pandoc/Pandoc_Insert/
 
 cd $DIRECTORY &&
 wget -O Insert.txt https://docs.google.com/document/d/1WW3XE9y0MW6J_EJKVvJXIu3GRE9uY0ieVorfxDJvy-Q/export?format=txt

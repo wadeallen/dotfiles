@@ -2,6 +2,6 @@
 
 FILE=$1
 
-/Users/wadeallen/bin/kindlegen ${FILE} > /Users/wadeallen/Dropbox/Preaching/log.txt
-/usr/local/bin/sendKindle ${FILE%.*}.mobi > /Users/wadeallen/Dropbox/Preaching/log_sendKindle.txt
+/Users/wadeallen/bin/kindlegen ${FILE} > /Users/wadeallen/Next/Preaching/log.txt
+/usr/local/bin/sendKindle ${FILE%.*}.mobi > /Users/wadeallen/Next/Preaching/log_sendKindle.txt
 echo 0

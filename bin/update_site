@@ -1,6 +1,6 @@
 #!/usr/bin/env bash 
 
-DIRECTORY=$HOME/Dropbox/Pandoc/Pandoc_Bulletin
+DIRECTORY=$HOME/Next/Pandoc/Pandoc_Bulletin
 
 cd $DIRECTORY
 ## sed 's_\\texttt{\(.*@.*.*\)}_\1_g' Bulletin.txt > Bulletin2.txt

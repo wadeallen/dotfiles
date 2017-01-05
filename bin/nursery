@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIRECTORY=$HOME/Dropbox/Administration/Nursery
+DIRECTORY=$HOME/Next/Administration/Nursery
 OS="`uname`"
 
 case $OS in

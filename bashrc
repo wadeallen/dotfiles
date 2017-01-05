@@ -116,9 +116,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH="$PATH:$HOME/dotfiles/bin:$HOME/.gem/ruby/2.2.5/bin:$HOME/.cabal/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/dotfiles/bin:$HOME/.cabal/bin:$HOME/ledger" # Add RVM to PATH for scripting
 export SHUTTLE="wadeallen@192.168.1.101"
-export IMAC="fbcmuncie@imac.local:~/Desktop/"
+export IMAC="fbcmuncie@192.168.2.69:~/Desktop/"
+
+export GEM_PATH=$HOME/.gem/ruby/2.2.0
 
 export PROMPT_COMMAND=__prompt_command
 export TERM=xterm-256color

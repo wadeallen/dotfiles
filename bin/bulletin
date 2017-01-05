@@ -1,7 +1,7 @@
 #!/bin/bash
 
-DIRECTORY=$HOME/Dropbox/Pandoc/Pandoc_Bulletin
-ARCHIVE=$HOME/Dropbox/Bulletin_Archives
+DIRECTORY=$HOME/Next/Pandoc/Pandoc_Bulletin
+ARCHIVE=$HOME/Next/Bulletin_Archives
 OS="`uname`"
 
 case $OS in

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-directory='/home/wadeallen/Dropbox/All_Church_Letter'
+directory='/home/wadeallen/Next/All_Church_Letter'
 
 cd ${directory}
 pandoc ${1} -o ~/Desktop/letter.pdf --template=all_church_letter.tex

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash 
 
-DIRECTORY=$HOME/Dropbox/Pandoc/Pandoc_Visitor
+DIRECTORY=$HOME/Next/Pandoc/Pandoc_Visitor
 
 cd $DIRECTORY
 wget -O Church_Letter.txt https://docs.google.com/document/d/1IrnEsufnRGngHTlfN4O8RaX_znYd0V6rfrccOhbeUbk/export?format=txt

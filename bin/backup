@@ -9,8 +9,8 @@ rsync -azv --delete  --exclude '*/.git' bin $SHUTTLE:~/Backups/
 echo "-------------"
 echo "Completed Scripts Backup"
 echo "-------------"
-rsync -azv --delete  Dropbox $SHUTTLE:~/Backups/
+rsync -azv --delete  Next $SHUTTLE:~/Backups/
 echo "-------------"
-echo "Completed Dropbox Backup"
+echo "Completed Next Backup"
 echo "-------------"
 

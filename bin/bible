@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PASSAGE=`cat /home/wadeallen/Dropbox/books.txt | rofi -dmenu -i -p Scripture:\  $*`
+PASSAGE=`cat /home/wadeallen/Next/books.txt | rofi -dmenu -i -p Scripture:\  $*`
 PASSAGE=${PASSAGE// /+}
 
 if [ -z "$PASSAGE" ]; then

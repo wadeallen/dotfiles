@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rsync -av --delete ~/Dropbox /run/media/wadeallen/WADE/
+rsync -av --delete ~/Next /run/media/wadeallen/WADE/
 rsync -av --delete ~/Backups /run/media/wadeallen/WADE/
 rsync -av --delete --exclude '*/.git' ~/bin /run/media/wadeallen/WADE/
 rsync -av --delete --exclude '~/Sites/church_site_2014/_site' --exclude '*/.git' ~/Sites /run/media/wadeallen/WADE/
