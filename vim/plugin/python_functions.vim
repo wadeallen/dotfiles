@@ -15,7 +15,7 @@ from email import encoders
 home = expanduser("~")
 
 curline = vim.current.line
-compile_path = home + '/Dropbox/Preaching/'
+compile_path = home + '/Next/Preaching/'
 desktop = home + '/Desktop/'  
 
 def python_input(message = 'input'):
@@ -34,8 +34,8 @@ def Convert_Kindle():
   output = os.path.splitext(os.path.basename(vim.current.buffer.name))[0]+'.epub'
   # Convert to mobi
   kindle_file = os.path.splitext(os.path.basename(vim.current.buffer.name))[0]+'.mobi'
-  subprocess.call("pandoc " + vim.current.buffer.name + " -o " + compile_path + output + " --epub-stylesheet=" + home + "/Dropbox/Pandoc/Pandoc_Sermon/epub.css --template sermon_epub.html", shell=True) 
-  subprocess.call("kindlegen " + compile_path + output + " > " + home + "/Dropbox/Preaching/log.txt", shell=True)
+  subprocess.call("pandoc " + vim.current.buffer.name + " -o " + compile_path + output + " --epub-stylesheet=" + home + "/Next/Pandoc/Pandoc_Sermon/epub.css --template sermon_epub.html", shell=True) 
+  subprocess.call("kindlegen " + compile_path + output + " > " + home + "/Next/Preaching/log.txt", shell=True)
   # Email to Kindle
   fromaddr = config.username
   toaddr  = config.kindle

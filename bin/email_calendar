@@ -56,7 +56,7 @@ with open("/home/wadeallen/Desktop/" + n_month + "-" + s_month + "-calendar.pdf"
 
 print ('Calendar Saved to Desktop')
 
-subprocess.call(["surf", url])
+subprocess.call(["xdg-open", url])
 
 
 

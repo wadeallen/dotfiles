@@ -116,7 +116,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH="$PATH:$HOME/dotfiles/bin:$HOME/.cabal/bin:$HOME/ledger" # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/dotfiles/bin:$HOME/.cabal/bin:$HOME/ledger:$HOME/wkhtmltox/bin" # Add RVM to PATH for scripting
 export SHUTTLE="wadeallen@192.168.1.101"
 export IMAC="fbcmuncie@192.168.2.69:~/Desktop/"
 

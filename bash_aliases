@@ -1,6 +1,6 @@
 alias sw='cd $HOME/Next/Administration/Markdown_Files/Sermon_Work/'
 alias site='cd $HOME/Sites/church_site_2014'
-alias cct='cd $HOME/Next/Administration/CCT_Summaries/2016'
+alias cct='cd $HOME/Next/Administration/CCT_Summaries/2017'
 alias ww='cd $HOME/Next/Administration/Markdown_Files/Wedding_Work/'
 alias fw='cd $HOME/Next/Administration/Markdown_Files/Funeral_Work/'
 alias mm='cd $HOME/Next/Administration/Markdown_Files'

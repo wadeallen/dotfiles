@@ -1,83 +1,83 @@
 
 Maid.rules do
 
-  rule 'move 2016 journal files into folder' do
-    move(dir('~/Dropbox/Journal/2016*.markdown'), '~/Dropbox/Journal/2016')
+  rule 'move 2017 journal files into folder' do
+    move(dir('~/Next/Journal/2017*.markdown'), '~/Next/Journal/2017')
   end
 
   rule 'move reminder call sheets into folder' do
-    move(dir('~/Dropbox/Scans/*Nursery Reminder Calls.pdf'), '~/Dropbox/Administration/Nursery/Reminder Calls')
+    move(dir('~/Next/Scans/*Nursery Reminder Calls.pdf'), '~/Next/Administration/Nursery/Reminder Calls')
   end
   
   rule 'move nursery sign in sheets into folder' do
-    move(dir('~/Dropbox/Scans/*Nursery Worker Sign In Sheet.pdf'), '/home/wadeallen/Dropbox/Administration/Nursery/Sign In Sheets')
+    move(dir('~/Next/Scans/*Nursery Worker Sign In Sheet.pdf'), '/home/wadeallen/Next/Administration/Nursery/Sign In Sheets')
   end
 
   rule 'move giving reports into folder' do
-    move(dir('~/Dropbox/Scans/*Giving Report.pdf'), '~/Dropbox/Administration/Giving Reports')
+    move(dir('~/Next/Scans/*Giving Report.pdf'), '~/Next/Administration/Giving Reports')
   end
 
   rule 'move benefit wallet receipts into folder' do
-    move(dir('~/Dropbox/Scans/Benefit Wallet*.pdf'), '~/Dropbox/Receipts/Medical/Benefit Wallet Receipts')
+    move(dir('~/Next/Scans/Benefit Wallet*.pdf'), '~/Next/Receipts/Medical/Benefit Wallet Receipts')
   end
 
   rule 'move church receipts into folder' do
-    move(dir('~/Dropbox/Scans/*Church Receipt*.pdf'), '~/Dropbox/Receipts/Church/Current')
+    move(dir('~/Next/Scans/*Church Receipt*.pdf'), '~/Next/Receipts/Church/Current')
   end
 
   rule 'move housing receipts into folder' do
-    move(dir('~/Dropbox/Scans/*Housing Receipt*.pdf'), '~/Dropbox/Receipts/Housing/Misc Housing')
+    move(dir('~/Next/Scans/*Housing Receipt*.pdf'), '~/Next/Receipts/Housing/Misc Housing')
   end
 
   rule 'move Comcast Bill into folder' do
-    move(dir('~/Desktop/Comcast Bill*.pdf'), '~/Dropbox/Receipts/Housing/Comcast')
+    move(dir('~/Desktop/Comcast Bill*.pdf'), '~/Next/Receipts/Housing/Comcast')
   end
 
   rule 'move Kohls Statement into folder' do
-    move(dir('~/Dropbox/Scans/Kohls Statement*.pdf'), '~/Dropbox/Statements/Kohls')
+    move(dir('~/Next/Scans/Kohls Statement*.pdf'), '~/Next/Statements/Kohls')
   end
 
   rule 'move American Eagle Statement into folder' do
-    move(dir('~/Dropbox/Scans/American Eagle Statement*.pdf'), '~/Dropbox/Statements/American Eagle')
+    move(dir('~/Next/Scans/American Eagle Statement*.pdf'), '~/Next/Statements/American Eagle')
   end
 
   rule 'move Indiana Michigan Power Statement into folder' do
-    move(dir('~/Desktop/I&MBill_*.pdf'), '~/Dropbox/Receipts/Housing/Utilities/Electric')
+    move(dir('~/Desktop/I&MBill_*.pdf'), '~/Next/Receipts/Housing/Utilities/Electric')
 
   rule 'move School Receipts into folder' do
-    move(dir('~/Dropbox/Scans/*School Receipt*.pdf'), '~/Dropbox/Receipts/School')
+    move(dir('~/Next/Scans/*School Receipt*.pdf'), '~/Next/Receipts/School')
   end
 
   rule 'move Yorktown Muncipal Utilities into folder' do
-    move(dir('~/Dropbox/Scans/Yorktown Municipal Utilities*.pdf'), '~/Dropbox/Receipts/Housing/Utilities/Water')
+    move(dir('~/Next/Scans/Yorktown Municipal Utilities*.pdf'), '~/Next/Receipts/Housing/Utilities/Water')
   end
 
   rule 'move Maurices Statement into folder' do
-    move(dir('~/Dropbox/Scans/Maurices*.pdf'), '~/Dropbox/Statements/Maurices')
+    move(dir('~/Next/Scans/Maurices*.pdf'), '~/Next/Statements/Maurices')
   end
   rule 'move Target Statement into folder' do
 
-    move(dir('~/Dropbox/Scans/Target Card*.pdf'), '~/Dropbox/Receipts/Target')
+    move(dir('~/Next/Scans/Target Card*.pdf'), '~/Next/Receipts/Target')
   end
 
   rule 'move TJ Maxx Statement into folder' do
-    move(dir('~/Dropbox/Scans/TJ Maxx Statement*.pdf'), '~/Dropbox/Receipts/TJ Maxx')
+    move(dir('~/Next/Scans/TJ Maxx Statement*.pdf'), '~/Next/Receipts/TJ Maxx')
   end
 
   rule 'move ATT Statement into folder' do
-    move(dir('~/Desktop/ATT_Bill_*.pdf'), '~/Dropbox/Receipts/Wireless Phone')
+    move(dir('~/Desktop/ATT_Bill_*.pdf'), '~/Next/Receipts/Wireless Phone')
   end
 
   rule 'move IU Health Statement into folder' do
-    move(dir('~/Dropbox/Scans/IU Health Insurance*.pdf'), '~/Dropbox/Receipts/Insurance/Health Insurance/IU Health Insurance')
+    move(dir('~/Next/Scans/IU Health Insurance*.pdf'), '~/Next/Receipts/Insurance/Health Insurance/IU Health Insurance')
   end
 
   rule 'move MD Wise Statement into folder' do
-    move(dir('~/Dropbox/Scans/MD Wise*.pdf'), '~/Dropbox/Receipts/Insurance/Health Insurance/MD Wise Wade Christy')
+    move(dir('~/Next/Scans/MD Wise*.pdf'), '~/Next/Receipts/Insurance/Health Insurance/MD Wise Wade Christy')
   end
 
   rule 'move Vectren Bill into folder' do
-    move(dir('~/Desktop/Vectren*.pdf'), '~/Dropbox/Receipts/Housing/Utilities/Gas')
+    move(dir('~/Desktop/Vectren*.pdf'), '~/Next/Receipts/Housing/Utilities/Gas')
   end
 
   end

@@ -1,4 +1,4 @@
-#!/usr/bin/env python 
+#!/usr/bin/env python3
 
 import webbrowser
 from datetime import date
@@ -36,5 +36,5 @@ pdf_name = '/home/wadeallen/Desktop/{}.pdf'.format(pdf_scripture)
 pdfkit.from_url(scrip_url, pdf_name)
 
 url = 'https://mail.google.com/mail/?view=cm&fs=1&to=&su=' + subject + '&body=' + message
-subprocess.call(["surf", url])
+subprocess.call(["xdg-open", url])
 
