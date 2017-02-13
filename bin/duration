@@ -11,7 +11,7 @@ fi
 duration=`exiftool -Duration $1 | awk '{ print $3 }'`
 bytes=`wc -c $1 | awk '{ print $1 }'`
 
-echo -e "duration: '${duration}' \nlength: ${bytes}\nvideo_url:" | xclip -selection c
+echo -e "category: video\nduration: '${duration}' \nlength: ${bytes}\nvideo_url:" | xclip -selection c
 
 echo -e "duration: '$duration'"
 echo -e "length: $bytes"

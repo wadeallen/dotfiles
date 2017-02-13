@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo Name of Category
+read category
+
+for f in *.markdown
+do
+  sed -i "5 i category: $category" $f
+done

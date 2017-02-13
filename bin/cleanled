@@ -5,11 +5,11 @@ NEW=$HOME/Next/Ledger/copy_ledger.ledger
 CLEAN=$HOME/Next/Ledger/clean_ledger.ledger
 HEADER=$HOME/Next/Ledger/header.ledger
 
-# change '4,5d' to reflect the lines that contain include files
-sed '4,5d' $ORIG > $NEW
+# change '4,6d' to reflect the lines that contain include files
+sed '4,6d' $ORIG > $NEW
 ledger -f $NEW --sort d print > $CLEAN
-# change "NR<=6" to reflect the lines that are in the header (including the blank line before the first transation)
-awk 'NR<=6' $ORIG > $HEADER
+# change "NR<=7" to reflect the lines that are in the header (including the blank line before the first transation)
+awk 'NR<=7' $ORIG > $HEADER
 cat $HEADER $CLEAN > $ORIG
 rm $HEADER $CLEAN $NEW
 

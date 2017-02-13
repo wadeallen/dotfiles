@@ -1,0 +1,27 @@
+#!/usr/bin/env python3
+
+import datetime
+from datetime import timedelta
+import os
+
+start_date = input("Please enter the start date in the format yyyy-mm-dd: ")
+year,month,day = start_date.split('-')
+d = datetime.date(int(year),int(month),int(day))
+# d = datetime.date(2013,1,5)
+
+delta = datetime.timedelta(days=7)
+e_date = input("Please enter the end date in the format yyyy-mm-dd: ")
+year,month,day = e_date.split('-')
+end_date = datetime.date(int(year),int(month),int(day))
+
+directory = '/home/wadeallen/Desktop/Sermon_Files/'
+if not os.path.exists(directory):
+    os.mkdir(directory)
+filename = directory + d.strftime("%Y-%m-%d") + '.md'
+
+while d <= end_date:
+    target = open (filename, 'w')
+    target.write("---\ntitle: \nauthor:  \ndate: {}\nscripture: \nsummary: \nlayout: worship \n---".format(d.strftime("%Y-%m-%d")))
+    target.close()
+    d += delta
+    filename = directory + d.strftime("%Y-%m-%d") + '.md'
