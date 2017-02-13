@@ -18,11 +18,10 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'vim-scripts/FuzzyFinder'
 Plugin 'vim-scripts/L9'
 Plugin 'ron89/thesaurus_query.vim'
 Plugin 'panozzaj/vim-autocorrect'
-
+Plugin 'vim-scripts/FuzzyFinder'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -237,3 +236,8 @@ if &term =~ '256color'
     " work properly when Vim is used inside tmux and GNU screen.
     set t_ut=
 endif
+
+" To format HTML files
+let g:html_indent_script1 = "inc" 
+let g:html_indent_style1 = "inc" 
+let g:html_indent_inctags = "html,body,head"

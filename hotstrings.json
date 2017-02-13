@@ -8,6 +8,7 @@
     "#att": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/att.py"],
     "#target": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/target.py"],
     "#maurices": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/maurices.py"],
+    "#cp": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/childrens_place.py"],
     "#tjmaxx": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/tj_maxx.py"],
     "#vectren": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/vectren.py"],
     "#ymu": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/yorktown_muncipal.py"],

@@ -35,6 +35,10 @@ alias add='todoist_add.py -t'
 #ssh
 alias pi='ssh wadesallen@192.168.2.88'
 
+# for new church site
+alias 17='cd $HOME/Sites/2017_Church'
+
+
 
 
 

@@ -1,9 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/home/wadeallen/dotfiles/bin/dotfiles/maid'
-let g:netrw_dirhist_2='/home/wadeallen/dotfiles/vim/spell'
-let g:netrw_dirhist_3='/home/wadeallen/Sites/slideshow/images'
-let g:netrw_dirhist_4='/home/wadeallen/dotfiles/autokey/data/Phrases'
-let g:netrw_dirhist_5='/home/wadeallen/dotfiles/snippets'
-let g:netrw_dirhist_6='/home/wadeallen/.config/freeplane/1.5.x/scripts/lib'
-let g:netrw_dirhist_7='/home/wadeallen/.config/freeplane/1.5.x/scripts/lib/pm'
+let g:netrw_dirhist_cnt =0
