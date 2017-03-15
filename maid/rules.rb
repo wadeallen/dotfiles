@@ -56,12 +56,19 @@ Maid.rules do
     move(dir('~/Next/Scans/Maurices*.pdf'), '~/Next/Statements/Maurices')
   end
   rule 'move Target Statement into folder' do
-
     move(dir('~/Next/Scans/Target Card*.pdf'), '~/Next/Receipts/Target')
   end
 
   rule 'move TJ Maxx Statement into folder' do
     move(dir('~/Next/Scans/TJ Maxx Statement*.pdf'), '~/Next/Receipts/TJ Maxx')
+  end
+
+  rule 'move Victoria Secret Statement into folder' do
+    move(dir('~/Next/Scans/Victoria Secret Statement*.pdf'), '~/Next/Receipts/Victoria Secret')
+  end
+
+  rule 'move Childrens Place Statement into folder' do
+    move(dir('~/Next/Scans/Childrens Place Statement*.pdf'), '~/Next/Receipts/Childrens Place')
   end
 
   rule 'move ATT Statement into folder' do

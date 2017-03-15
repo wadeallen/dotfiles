@@ -1,26 +1,23 @@
 #!/bin/bash
 
-month=$1
+file=$1
+month=`date +"%B" --date="+1 month"`
 
 if	[ -z "$month" ]
 then
-	echo "Please enter the month"
+	echo "Please enter the file"
 	exit 0
 fi
 
 cd $HOME/Desktop/
-# sed -e s/textbox24/last/g $month.csv
-# sed -e s/Last_Name/first/g $month.csv
-# sed -e s/month_day/birthday/g $month.csv
-sed -i .bak -e s/textbox24/last/g $month.csv
-sed -i .bak -e s/Last_Name/first/g $month.csv
-sed -i .bak -e s/Month_Day/birthday/g $month.csv
-rm ${month}.csv.bak
-sed -e '/Prospect/d' $month.csv > ${month}.temp
-cut -d, -f3,4,18 < ${month}.temp > ${month}_birthdays.csv
-mv ${month}_birthdays.csv $HOME/Next/Pandoc/Pandoc_Visitor/Birthdays/
-rm ${month}.temp
-rm ${month}.csv
-cd $HOME/Next/Pandoc/Pandoc_Visitor/Birthdays/
-sed '1d' ${month}_birthdays.csv > ${month}.csv
+# sed -i .bak -e s/textbox24/last/g $month.csv
+# sed -i .bak -e s/Last_Name/first/g $month.csv
+# sed -i .bak -e s/Month_Day/birthday/g $month.csv
+# rm ${month}.csv.bak
+# sed -e '/Prospect/d' $month.csv > ${month}.temp
+# cut -d, -f3,4,18 < ${month}.temp > ${month}_birthdays.csv
+# mv ${month}_birthdays.csv $HOME/Next/Pandoc/Pandoc_Visitor/Birthdays/
+# rm ${month}.temp
+# rm ${month}.csv
+cat ${file} | sed 's/.....$//' | sort -t'/' -n -k2 > $HOME/Next/Pandoc/Pandoc_Visitor/Birthdays/${month}_birthdays.csv
 echo 'Birthday file has been created file in Pandoc_Visitor/Birthdays directory'

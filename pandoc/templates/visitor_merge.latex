@@ -7,7 +7,7 @@
 \begin{document}
 
 \DTLforeach{names}
-{\name=HOUSEHOLD_household_name, \address=HOUSEHOLD_ADDRESS_address1, \addresstwo=HOUSEHOLD_ADDRESS_address2, \city=HOUSEHOLD_ADDRESS_city, \state=HOUSEHOLD_ADDRESS_state_province, \zip=HOUSEHOLD_ADDRESS_postal_code}{
+{\name=Name, \address=Street, \city=City, \state=State, \zip=Zip}{
   
 \thispagestyle{plain}
 
@@ -26,10 +26,10 @@
 
 \input{includes/right_logos.tex}
 
-  {
+{
   \begin{textblock*}{3in}(.5in,1.25in)
   \noindent \bfseries \textsc{\name} \\
-  \normalfont \address \addresstwo \\
+  \normalfont \address \\
   \city, \state \ \zip \\
 \end{textblock*}
 }

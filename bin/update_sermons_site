@@ -8,7 +8,7 @@ import dateutil.parser
 
 home = expanduser("~")
 
-worship_sermons_path = (home + '/Sites/church_site_2014/worship/_posts/*.markdown')
+worship_sermons_path = (home + '/Sites/2017_Church/_worship/*.md')
 worship_posts = glob.glob(worship_sermons_path)
 
 for post in worship_posts:
@@ -26,7 +26,7 @@ for name in files:
 	description = post['summary']
 	title_sliced = title.split()
 	slug = ("-".join(title_sliced).lower())
-	filename =(home + '/Sites/church_site_2014/worship/_posts/' + date + '-' + slug + '.markdown')
+	filename =(home + '/Sites/2017_Church/_worship/' + date + '-' + slug + '.md')
 
 	target = open (filename, 'w')
 	target.write("---\n")
@@ -34,7 +34,6 @@ for name in files:
 	target.write("title: {}\n".format(title))
 	target.write("scripture: {}\n".format(scripture))
 	target.write("date: {}\n".format(date))
-	target.write("layout: worship\n")
 	target.write("---\n")
 	target.write("\n")
 	target.write(description)

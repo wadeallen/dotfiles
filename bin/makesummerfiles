@@ -21,7 +21,7 @@ filename = directory + d.strftime("%Y-%m-%d") + '.md'
 
 while d <= end_date:
     target = open (filename, 'w')
-    target.write("---\ntitle: \nauthor:  \ndate: {}\nscripture: \nsummary: \nlayout: worship \n---".format(d.strftime("%Y-%m-%d")))
+    target.write("---\ntitle: \nauthor:  \ndate: {}\nscripture: \nsummary: \nreader: no \n---".format(d.strftime("%Y-%m-%d")))
     target.close()
     d += delta
     filename = directory + d.strftime("%Y-%m-%d") + '.md'

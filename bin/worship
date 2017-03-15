@@ -14,7 +14,7 @@ description = input ('Description of Sermon: ')
 
 title_sliced = title.split()
 slug = ("-".join(title_sliced).lower())
-filename =(home + '/Sites/church_site_2014/worship/_posts/' + date + '-' + slug + '.markdown')
+filename =(home + '/Sites/2017_Church/_worship/' + date + '-' + slug + '.md')
 
 target = open (filename, 'w')
 target.write("---\n")

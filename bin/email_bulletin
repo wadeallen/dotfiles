@@ -11,7 +11,7 @@ format = "%B %d"
 today = date.today()
 sunday = today + relativedelta(weekday=SU(+1))
 
-email_address = 'magandaphotos@aol.com, Molly@teamworkql.org, kpetroviak@muncieymca.org'
+email_address = 'magandaphotos@aol.com, flodder@comcast.net, kpetroviak@muncieymca.org'
 
 subject = 'Editing {} Bulletin'.format(sunday.strftime(format))
 message = ('Hello Editing Team%0A%0A' \

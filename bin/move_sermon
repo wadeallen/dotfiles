@@ -1,4 +1,4 @@
 #! /bin/bash
 
-mv $1 /home/wadeallen/Sites/church_site_2014/video/_posts/
+mv $1 /home/wadeallen/Sites/2017_Church/_posts/
 

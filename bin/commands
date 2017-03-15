@@ -1,4 +1,4 @@
-[terminal] mate-terminal
+[terminal] gnome-terminal
 [internet] xdg-open http://google.com
 [firefox browser] firefox
 [calendar] xdg-open http://calendar.google.com
@@ -6,7 +6,6 @@
 [todo] xdg-open http://todoist.com
 [gimp] gimp
 [sms] xdg-open https://app.mysms.com/#compose
-[database] xdg-open https://portal.fellowshipone.com/home.aspx
 [gathering] xdg-open https://docs.google.com/spreadsheets/d/1GXm78GK_nEKgrY8hIc96UQsPotpN52ZisOT3-GhQNJs/edit
 [mileage] xdg-open https://docs.google.com/spreadsheets/d/1zzhGL1Uqc_uzDKjJu7BVHUuC5IqQsrXFCTJAsnwrDmk
 [prayer list] xdg-open https://docs.google.com/document/d/1w6z_D6MPedilpVZjoRfkwsbvXmsNSjrHKFDwasE5SeQ/edit
@@ -26,3 +25,7 @@
 [minimal browser] /usr/bin/min
 [calculator] /usr/bin/galculator
 [dictation] xdg-open https://docs.google.com/document/d/15CeLpSL9NspxSXe20409zAv0jdH7UjieYuu7F3uHDTY/edit
+[housing] xdg-open https://docs.google.com/spreadsheets/d/1TNOCm2BZipNGLMXx5koYXirFF-X_Osnff3TN-D6FqhU/edit
+[insert] xdg-open https://docs.google.com/document/d/1WW3XE9y0MW6J_EJKVvJXIu3GRE9uY0ieVorfxDJvy-Q/edit
+[people] xdg-open https://people.planningcenteronline.com/people
+[visitor] xdg-open https://docs.google.com/document/d/1im1OZ0ol56PP9y0uyvq-2ih3W8G5tiHFdaioL-vTlso/edit

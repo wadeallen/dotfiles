@@ -5,6 +5,8 @@ import os
 import os.path
 import glob
 from os.path import expanduser
+import datetime
+from dateutil import parser
 
 home = expanduser("~")
 
@@ -21,14 +23,22 @@ for name in files:
 
     # If an error is produced, comment out lines 24-42 and uncomment line 23 and run the script. This should give you an idea as to the error
     # print (post['date'])
+    if type(post['date']) is datetime.date:
+        postdate = post['date']
+    else:
+        postdate = parser.parse(post['date'])
 
     target.write('\\begin{minipage}[c]{\\textwidth} \n\n')
     target.write('\\vspace{1cm} \n\n')
-    target.write('\question{' + post['date'] + '}\n\n')
+    target.write('\question{' + postdate.strftime('%B %d, %Y') + '}\n\n')
     if post['title']:
         target.write('\\textsc{Title}: ' + post['title'] + '\n\n')
     else:
         target.write('\\textsc{Title}: No Title Yet \n\n ')
+    if post['author']:
+        target.write('\\textsc{Speaker}: ' + post['author'] + '\n\n')
+    else:
+        target.write('\\textsc{Speaker}: No Speaker Scheduled \n\n')
     if post['scripture']:
         target.write('\\textsc{Scripture}: ' + post['scripture'] + '\n\n')
     else:

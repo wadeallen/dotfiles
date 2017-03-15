@@ -1,5 +1,5 @@
 alias sw='cd $HOME/Next/Administration/Markdown_Files/Sermon_Work/'
-alias site='cd $HOME/Sites/church_site_2014'
+alias site='cd $HOME/Sites/2017_Church'
 alias cct='cd $HOME/Next/Administration/CCT_Summaries/2017'
 alias ww='cd $HOME/Next/Administration/Markdown_Files/Wedding_Work/'
 alias fw='cd $HOME/Next/Administration/Markdown_Files/Funeral_Work/'
@@ -12,8 +12,8 @@ alias jd='cd $HOME/Next/Administration/Job_Descriptions'
 alias dl='/usr/bin/youtube-dl'
 
 # Sermon Media Prep
-alias ow='cd $HOME/Sites/church_site_2014/worship/_posts/'
-alias ov='cd $HOME/Sites/church_site_2014/video/_posts/'
+alias ow='cd $HOME/Sites/2017_Church/_worship/'
+alias ov='cd $HOME/Sites/2017_Church/_posts'
 
 # Ledger
 alias led='ledger -f $HOME/Next/Ledger/ledger.ledger'
@@ -37,6 +37,7 @@ alias pi='ssh wadesallen@192.168.2.88'
 
 # for new church site
 alias 17='cd $HOME/Sites/2017_Church'
+alias news='cd /home/wadeallen/Sites/2017_Church/_news'
 
 
 
