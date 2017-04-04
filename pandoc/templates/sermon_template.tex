@@ -45,6 +45,8 @@
 
 $if(title)$
 \title{$title$}
+$else$
+\title{No Title Yet}
 $endif$
 \author{$for(author)$$author$$sep$ \and $endfor$}
 \date{$date$}
@@ -54,11 +56,13 @@ $endif$
 \renewcommand{\familydefault}{\sfdefault}
 
 \begin{document}
-$if(title)$
 \maketitle
+$if(scripture)$
 \textsc{Scripture}: $scripture$ \\
+$endif$
+$if(summary)$
 $summary$
-$endif$ 
+$endif$
 
 \pagebreak
 

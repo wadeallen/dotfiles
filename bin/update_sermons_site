@@ -5,6 +5,7 @@ import frontmatter
 import os
 import glob
 import dateutil.parser
+import datetime
 
 home = expanduser("~")
 
@@ -18,24 +19,37 @@ path = (home + '/Next/Administration/Markdown_Files/Sermon_Work/[0-9][0-9][0-9][
 files = glob.glob(path)
 
 for name in files:
-	post = frontmatter.load(name)
-	scripture = post['scripture'] 
-	title = post['title'] 
-	speaker = post['author']
-	date = dateutil.parser.parse(post['date']).strftime('%Y-%m-%d')
-	description = post['summary']
-	title_sliced = title.split()
-	slug = ("-".join(title_sliced).lower())
-	filename =(home + '/Sites/2017_Church/_worship/' + date + '-' + slug + '.md')
+    post = frontmatter.load(name)
+    if type(post['date']) is datetime.date:
+        date = post['date'].strftime('%Y-%m-%d')
+    else:
+        date = dateutil.parser.parse(post['date']).strftime('%Y-%m-%d')
+    if post['scripture']:
+        scripture = post['scripture'] 
+    else:
+        scripture = "No Scripture Chosen Yet"
+    if post['title']:
+        title = post['title'] 
+    else:
+        title = "No title yet"
+    speaker = post['author']
+	# date = dateutil.parser.parse(post['date']).strftime('%Y-%m-%d')
+    if post['summary']:
+        description = post['summary']
+    else:
+        description = "No description yet"
+    title_sliced = title.split()
+    slug = ("-".join(title_sliced).lower())
+    filename =(home + '/Sites/2017_Church/_worship/' + date + '-' + slug + '.md')
 
-	target = open (filename, 'w')
-	target.write("---\n")
-	target.write("author: {}\n".format(speaker))
-	target.write("title: {}\n".format(title))
-	target.write("scripture: {}\n".format(scripture))
-	target.write("date: {}\n".format(date))
-	target.write("---\n")
-	target.write("\n")
-	target.write(description)
-	target.write("\n")
-	target.close()
+    target = open (filename, 'w')
+    target.write("---\n")
+    target.write("author: {}\n".format(speaker))
+    target.write("title: {}\n".format(title))
+    target.write("scripture: {}\n".format(scripture))
+    target.write("date: {}\n".format(date))
+    target.write("---\n")
+    target.write("\n")
+    target.write(description)
+    target.write("\n")
+    target.close()

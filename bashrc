@@ -118,7 +118,7 @@ fi
 
 export PATH="$PATH:$HOME/dotfiles/bin:$HOME/.cabal/bin:$HOME/ledger:$HOME/wkhtmltox/bin:$HOME/platform-tools"
 export SHUTTLE="wadeallen@192.168.1.101"
-export IMAC="fbcmuncie@192.168.2.6:~/Desktop/"
+export IMAC="fbcmuncie@192.168.2.9:~/Desktop/"
 
 export GEM_PATH=$HOME/.gem/ruby/2.2.0
 

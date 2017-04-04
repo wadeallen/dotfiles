@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+
+from datetime import date
+from dateutil.relativedelta import relativedelta, SU
+import urltools
+import sys
+import frontmatter
+import glob
+import pdfkit
+import subprocess
+import os
+
+
+format = "%A, %B %d"
+path_format = "%Y-%m-%d"
+today = date.today()
+
+path = ('/home/wadeallen/Sites/2017_Church/_news/*.md')
+files = glob.glob(path)
+for name in files:
+    post = frontmatter.load(name)
+    if post.get('expire') != None:
+        expire = post['expire']
+        if expire < today:
+            os.remove(name)
+            print(name + " removed")
+
+
