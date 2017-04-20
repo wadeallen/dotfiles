@@ -1,31 +1,31 @@
 [terminal] gnome-terminal
-[internet] xdg-open http://google.com
+[internet] gio open http://google.com
 [firefox browser] firefox
-[calendar] xdg-open http://calendar.google.com
-[gmail] xdg-open http://gmail.com 
-[todo] xdg-open http://todoist.com
+[calendar] gio open http://calendar.google.com
+[gmail] gio open http://gmail.com 
+[todo] gio open http://todoist.com
 [gimp] gimp
-[sms] xdg-open https://app.mysms.com/#compose
-[gathering] xdg-open https://docs.google.com/spreadsheets/d/1GXm78GK_nEKgrY8hIc96UQsPotpN52ZisOT3-GhQNJs/edit
-[mileage] xdg-open https://docs.google.com/spreadsheets/d/1zzhGL1Uqc_uzDKjJu7BVHUuC5IqQsrXFCTJAsnwrDmk
-[prayer list] xdg-open https://docs.google.com/document/d/1w6z_D6MPedilpVZjoRfkwsbvXmsNSjrHKFDwasE5SeQ/edit
-[bulletin] xdg-open https://docs.google.com/document/d/1pqVUPNIRVxPRoO-lqGPDlAuJ-qGCE5BT7qOT72u-EDQ
-[lectionary] xdg-open http://lectionary.library.vanderbilt.edu/
+[sms] gio open https://app.mysms.com/#compose
+[gathering] gio open https://docs.google.com/spreadsheets/d/1GXm78GK_nEKgrY8hIc96UQsPotpN52ZisOT3-GhQNJs/edit
+[mileage] gio open https://docs.google.com/spreadsheets/d/1zzhGL1Uqc_uzDKjJu7BVHUuC5IqQsrXFCTJAsnwrDmk
+[prayer list] gio open https://docs.google.com/document/d/1w6z_D6MPedilpVZjoRfkwsbvXmsNSjrHKFDwasE5SeQ/edit
+[bulletin] gio open https://docs.google.com/document/d/1pqVUPNIRVxPRoO-lqGPDlAuJ-qGCE5BT7qOT72u-EDQ
+[lectionary] gio open http://lectionary.library.vanderbilt.edu/
 [bible] /home/wadeallen/bin/bible
 [find] /home/wadeallen/bin/finder 
-[read] xdg-open https://read.amazon.com/
-[planning center] xdg-open https://www.planningcenteronline.com/dashboard/0
-[chase] xdg-open https://www.chase.com/
-[credit card report] xdg-open https://docs.google.com/spreadsheets/d/1yZaYvvKZG_zbZa36Ipdt8DTpu0flT7l3Jm8JhLJ4f3o/
-[sermons] xdg-open /home/wadeallen/Next/Sermons
-[slideshow] xdg-open http://wadeallen.github.io/slideshow/#/overview
+[read] gio open https://read.amazon.com/
+[planning center] gio open https://www.planningcenteronline.com/dashboard/0
+[chase] gio open https://www.chase.com/
+[credit card report] gio open https://docs.google.com/spreadsheets/d/1yZaYvvKZG_zbZa36Ipdt8DTpu0flT7l3Jm8JhLJ4f3o/
+[sermons] gio open /home/wadeallen/Next/Sermons
+[slideshow] gio open http://wadeallen.github.io/slideshow/#/overview
 [shutdown] /home/wadeallen/bin/shutdownnow
 [search] /home/wadeallen/bin/rofi-search
-[sabbatical] xdg-open https://docs.google.com/spreadsheets/d/12Z6_RjpNSoVmslFH6edHBaYj6itevzOX3r7K2W7IKow/edit#gid=0
+[sabbatical] gio open https://docs.google.com/spreadsheets/d/12Z6_RjpNSoVmslFH6edHBaYj6itevzOX3r7K2W7IKow/edit#gid=0
 [minimal browser] /usr/bin/min
 [calculator] /usr/bin/galculator
-[dictation] xdg-open https://docs.google.com/document/d/15CeLpSL9NspxSXe20409zAv0jdH7UjieYuu7F3uHDTY/edit
-[housing] xdg-open https://docs.google.com/spreadsheets/d/1TNOCm2BZipNGLMXx5koYXirFF-X_Osnff3TN-D6FqhU/edit
-[insert] xdg-open https://docs.google.com/document/d/1WW3XE9y0MW6J_EJKVvJXIu3GRE9uY0ieVorfxDJvy-Q/edit
-[people] xdg-open https://people.planningcenteronline.com/people
-[visitor] xdg-open https://docs.google.com/document/d/1im1OZ0ol56PP9y0uyvq-2ih3W8G5tiHFdaioL-vTlso/edit
+[dictation] gio open https://docs.google.com/document/d/15CeLpSL9NspxSXe20409zAv0jdH7UjieYuu7F3uHDTY/edit
+[housing] gio open https://docs.google.com/spreadsheets/d/1TNOCm2BZipNGLMXx5koYXirFF-X_Osnff3TN-D6FqhU/edit
+[insert] gio open https://docs.google.com/document/d/1WW3XE9y0MW6J_EJKVvJXIu3GRE9uY0ieVorfxDJvy-Q/edit
+[people] gio open https://people.planningcenteronline.com/people
+[visitor] gio open https://docs.google.com/document/d/1im1OZ0ol56PP9y0uyvq-2ih3W8G5tiHFdaioL-vTlso/edit

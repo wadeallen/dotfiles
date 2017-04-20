@@ -1,0 +1,10 @@
+#!/bin/bash
+
+rclone sync $HOME/Next/Administration/ s3:wade-admin
+rclone sync $HOME/Next/Ledger/ s3:wade-ledger
+rclone sync $HOME/bin/ s3:wade-scripts
+rclone sync $HOME/Next/Receipts/ s3:wade-receipts
+rclone sync $HOME/Next/Study/ s3:wade-study
+rclone sync $HOME/Next/Tax_Documents/ s3:wade-taxes
+rclone sync $HOME/Next/Statements/ s3:wade-statements
+

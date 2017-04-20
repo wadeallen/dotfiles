@@ -6,5 +6,5 @@ FILE=`find ${DIR} ! -path "*.scriv*" | sed 's|'$DIR'/|./|' | rofi -dmenu -i -p F
 if [ -z "$FILE" ]; then
   exit
 else
-  xdg-open "${DIR}/${FILE}"
+ gio open "${DIR}/${FILE}"
 fi

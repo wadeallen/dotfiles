@@ -3,8 +3,10 @@
 import frontmatter
 import os
 import glob
+import datetime
 from datetime import date 
 from dateutil.relativedelta import relativedelta 
+from dateutil import parser
 
 
 today = date.today() 
@@ -19,7 +21,13 @@ files = glob.glob(path)
 files = sorted(files)
 
 for name in files:
-	post = frontmatter.load(name)
-	print ('- ' + post['date'][:-6] + ' - ' + post['title'] + ' (' + post['scripture'] + ')')
+    post = frontmatter.load(name)
+    if type(post['date']) is datetime.date:
+        postdate = post['date']
+    else:
+        postdate = parser.parse(post['date'])
+
+    print ('- ' + postdate.strftime('%B %d, %Y')[:-6] + ' - ' + post['title'] + ' (' + post['scripture'] + ')')
+
 
 
