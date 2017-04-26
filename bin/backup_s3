@@ -7,4 +7,7 @@ rclone sync $HOME/Next/Receipts/ s3:wade-receipts
 rclone sync $HOME/Next/Study/ s3:wade-study
 rclone sync $HOME/Next/Tax_Documents/ s3:wade-taxes
 rclone sync $HOME/Next/Statements/ s3:wade-statements
-
+rclone sync $HOME/Next/Journal/ s3:wade-journal
+rclone sync $HOME/Next/Archive/ s3:wade-archive
+rclone sync $HOME/Next/Sabbatical_2017/ s3:wade-sabbatical
+rclone sync $HOME/Next/Sabbatical_2017/ gdrive:Sabbatical

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rclone sync gdrive:Scans/ $HOME/Next/Scans/
+
