@@ -2,6 +2,6 @@
 
 DATE=`date +%Y-%m-%d`
 
-touch $HOME/Next/Journal/$DATE.journal.markdown &&
-echo -e "Date: $DATE" > $HOME/Next/Journal/$DATE.journal.markdown &&
-vim $HOME/Next/Journal/$DATE.journal.markdown
+touch $HOME/Dropbox/Journal/$DATE.journal.markdown &&
+echo -e "Date: $DATE" > $HOME/Dropbox/Journal/$DATE.journal.markdown &&
+vim $HOME/Dropbox/Journal/$DATE.journal.markdown

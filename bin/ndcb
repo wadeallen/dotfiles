@@ -8,7 +8,7 @@ import subprocess
 
 home = expanduser("~")
 today = datetime.datetime.now().strftime("%Y-%m-%d")
-filename =(home + '/Next/Drafts/' + today + '.markdown')
+filename =(home + '/Dropbox/Drafts/' + today + '.markdown')
 
 if os.path.isfile(filename):
     subprocess.call(['vim', '-c', '9', filename])

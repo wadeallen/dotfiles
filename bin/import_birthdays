@@ -3,7 +3,7 @@
 require 'csv'
 
 
-File.open("/Users/wade/Next/Pandoc/Pandoc_Visitor/Birthdays/July_birthdays.csv").read.split("\n").each do |line|
+File.open("/Users/wade/Dropbox/Pandoc/Pandoc_Visitor/Birthdays/July_birthdays.csv").read.split("\n").each do |line|
   last, first, birthday = line.split(",")
   puts "#{first} #{last} Birthday ^#{birthday} *yearly !3"
 end

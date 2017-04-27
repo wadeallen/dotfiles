@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ledger -f /Users/wade/Next/Ledger/ledger.ledger -p "this month" budget Envelopes 
+ledger -f /Users/wade/Dropbox/Ledger/ledger.ledger -p "this month" budget Envelopes 

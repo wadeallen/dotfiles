@@ -1,6 +1,6 @@
 #!/bin/bash
 
-directory='/home/wadeallen/Next/Administration/Certificates/Baby_Dedication'
+directory='/home/wadeallen/Dropbox/Administration/Certificates/Baby_Dedication'
 
 cd ${directory}
 pandoc information.md -o ~/Desktop/baby_dedication.pdf --latex-engine=xelatex --template=baby_dedication.tex

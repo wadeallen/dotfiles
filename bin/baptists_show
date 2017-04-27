@@ -13,12 +13,12 @@ sunday = today + datetime.timedelta( (6-today.weekday()) % 7 )
 # next_sunday = sunday.strftime('%Y-%m-%d')
 next_sunday = "2015-03-19"
 
-sermon_directory = home + "/Next/Administration/Markdown_Files/Sermon_Work/"
+sermon_directory = home + "/Dropbox/Administration/Markdown_Files/Sermon_Work/"
 date = input ('Date (format YYYY-MM-DD) default 2015-03-19: ')
 if date == "":
 	date = next_sunday
 
-slide_directory = home + "/Next/Pandoc/Pandoc_Impress/"
+slide_directory = home + "/Dropbox/Pandoc/Pandoc_Impress/"
 shutil.copyfile(sermon_directory + date + "_slides.md", slide_directory + date + "_slides.md")
 filename = slide_directory + date + "_slides.md"
 template = 'impress-template.html'

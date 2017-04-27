@@ -6,7 +6,7 @@ TIME=`date +%b-%d-%y`            # This Command will add date in Backup File Nam
 FILENAME=receipts-$TIME.tar.gz    # Here i define Backup file name format.
 SRCDIR=Receipts # Location of Important Data Directory (Source of backup)
 DESDIR=$HOME/Desktop            # Destination of backup file.
-cd $HOME/Next
+cd $HOME/Dropbox
 tar -cpzf $DESDIR/$FILENAME $SRCDIR/
 # s3cmd sync $DESDIR/$FILENAME s3://wade-crucial-backups/
 #END!

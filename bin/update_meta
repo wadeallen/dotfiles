@@ -15,13 +15,13 @@ format = '%Y-%m-%d'
 target_date = today + relativedelta(weekday=SU(+1))
 sunday = target_date.strftime(format)
 
-path = (home + '/Next/Administration/Markdown_Files/Sermon_Work/{}_sermon.md'.format(sunday))
+path = (home + '/Dropbox/Administration/Markdown_Files/Sermon_Work/{}_sermon.md'.format(sunday))
 
 files = glob.glob(path)
  
 for name in files:
 	post = frontmatter.load(name)
-	target = open (home + '/Next/Pandoc/Pandoc_Bulletin/meta.tex', 'w')
+	target = open (home + '/Dropbox/Pandoc/Pandoc_Bulletin/meta.tex', 'w')
 	target.write ('\def\sundaydate{' + post['date'] + '}\n\def\sermontitle{' + post['title'] + '}\n\def\scripture{' + post['scripture'] + '}\n\input{../numbers}\n')
 	target.close()
 

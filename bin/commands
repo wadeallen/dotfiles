@@ -17,7 +17,7 @@
 [planning center] gio open https://www.planningcenteronline.com/dashboard/0
 [chase] gio open https://www.chase.com/
 [credit card report] gio open https://docs.google.com/spreadsheets/d/1yZaYvvKZG_zbZa36Ipdt8DTpu0flT7l3Jm8JhLJ4f3o/
-[sermons] gio open /home/wadeallen/Next/Sermons
+[sermons] gio open /home/wadeallen/Dropbox/Sermons
 [slideshow] gio open http://wadeallen.github.io/slideshow/#/overview
 [shutdown] /home/wadeallen/bin/shutdownnow
 [search] /home/wadeallen/bin/rofi-search

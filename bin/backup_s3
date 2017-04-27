@@ -1,13 +1,13 @@
 #!/bin/bash
 
-rclone sync $HOME/Next/Administration/ s3:wade-admin
-rclone sync $HOME/Next/Ledger/ s3:wade-ledger
+rclone sync $HOME/Dropbox/Administration/ s3:wade-admin
+rclone sync $HOME/Dropbox/Ledger/ s3:wade-ledger
 rclone sync $HOME/bin/ s3:wade-scripts
-rclone sync $HOME/Next/Receipts/ s3:wade-receipts
-rclone sync $HOME/Next/Study/ s3:wade-study
-rclone sync $HOME/Next/Tax_Documents/ s3:wade-taxes
-rclone sync $HOME/Next/Statements/ s3:wade-statements
-rclone sync $HOME/Next/Journal/ s3:wade-journal
-rclone sync $HOME/Next/Archive/ s3:wade-archive
-rclone sync $HOME/Next/Sabbatical_2017/ s3:wade-sabbatical
-rclone sync $HOME/Next/Sabbatical_2017/ gdrive:Sabbatical
+rclone sync $HOME/Dropbox/Receipts/ s3:wade-receipts
+rclone sync $HOME/Dropbox/Study/ s3:wade-study
+rclone sync $HOME/Dropbox/Tax_Documents/ s3:wade-taxes
+rclone sync $HOME/Dropbox/Statements/ s3:wade-statements
+rclone sync $HOME/Dropbox/Journal/ s3:wade-journal
+rclone sync $HOME/Dropbox/Archive/ s3:wade-archive
+rclone sync $HOME/Dropbox/Sabbatical_2017/ s3:wade-sabbatical
+rclone sync $HOME/Dropbox/Sabbatical_2017/ gdrive:Sabbatical

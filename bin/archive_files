@@ -38,7 +38,7 @@ def delete_old(path,extension):
 archive()
 
 # Deletes Old Files
-delete_old(home + '/Next/Sermons','pdf')
-delete_old(home + '/Next/Preaching','epub')
-delete_old(home + '/Next/Preaching','mobi')
+delete_old(home + '/Dropbox/Sermons','pdf')
+delete_old(home + '/Dropbox/Preaching','epub')
+delete_old(home + '/Dropbox/Preaching','mobi')
 

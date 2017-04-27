@@ -18,7 +18,7 @@ schedule_date = last_sunday.strftime("%B %d")
 
 name_sliced = name.split()
 full_name = ("-".join(name_sliced).lower())
-file = home + '/Next/Nursery/nursery_notice.md'
+file = home + '/Dropbox/Nursery/nursery_notice.md'
 out_file = home + '/Desktop/nursery_notice_'  + full_name + '.pdf'
 
 subprocess.call([

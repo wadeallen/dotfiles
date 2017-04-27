@@ -1,6 +1,6 @@
 #!/usr/bin/env bash 
 
-DIRECTORY=$HOME/Next/Pandoc/Pandoc_Prayer_List/
+DIRECTORY=$HOME/Dropbox/Pandoc/Pandoc_Prayer_List/
 
 
 cd $DIRECTORY &&

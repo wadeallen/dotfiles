@@ -15,7 +15,7 @@ worship_posts = glob.glob(worship_sermons_path)
 for post in worship_posts:
 	os.remove(post)
 
-path = (home + '/Next/Administration/Markdown_Files/Sermon_Work/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9]*sermon.md')
+path = (home + '/Dropbox/Administration/Markdown_Files/Sermon_Work/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9]*sermon.md')
 files = glob.glob(path)
 
 for name in files:
