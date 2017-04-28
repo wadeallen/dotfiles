@@ -15,4 +15,3 @@
     ~/.bashrc: bashrc
     ~/.bash_aliases: bash_aliases
     ~/.config/hotstrings.json: hotstrings.json
-    ~/.conky/wade/conky.conf: conky.conf

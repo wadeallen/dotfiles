@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# zenity --question --text="Are you sure, proceed to shutdown?"
-# if [ $? = 0 ]; then
-  # shutdown -h now
-# else
-    # exit
-# fi
+zenity --question --text="Are you sure, proceed to shutdown?"
+if [ $? = 0 ]; then
+  shutdown -h now
+else
+    exit
+fi
 
-gnome-session-quit --power-off
+# gnome-session-quit --power-off
 

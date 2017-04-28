@@ -1,5 +1,5 @@
 function! DefPython()
-python << PYEND
+python3 << PYEND
 import vim
 import subprocess
 import sys, os
