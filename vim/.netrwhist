@@ -1,11 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/wadeallen/Sites/2017_Church/_people'
-let g:netrw_dirhist_2='/home/wadeallen/Sites/2017_Church/_posts'
-let g:netrw_dirhist_3='/home/wadeallen/Sites/2017_Church/_worship'
-let g:netrw_dirhist_4='/home/wadeallen/Sites/2017_Church/_visitors'
-let g:netrw_dirhist_5='/home/wadeallen/Sites/2017_Church/_worship'
-let g:netrw_dirhist_6='/home/wadeallen/dotfiles/pandoc/templates'
-let g:netrw_dirhist_7='/home/wadeallen/dotfiles/pandoc'
-let g:netrw_dirhist_8='/home/wadeallen/dotfiles/pandoc/templates'
-let g:netrw_dirhist_9='/home/wadeallen/dotfiles/snippets'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/wadeallen/bin'

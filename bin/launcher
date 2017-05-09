@@ -1,9 +1,15 @@
 #!/bin/bash
 
+if [ -f $HOME/.dmenurc ]; then
+  . $HOME/.dmenurc
+else
+  DMENU='dmenu -i'
+fi
+
 CONFIG=${HOME}/dotfiles/bin/commands
 
 # Display the menu and get the selection
-SELECTION=`sed 's/\].*/]/' ${CONFIG} | tr -d '[]' | rofi -dmenu -p "Launch: " $*`
+SELECTION=`sed 's/\].*/]/' ${CONFIG} | tr -d '[]' | ${DMENU} -p "Launch: " $*`
 
 # ...and put them back in, escaped with a backslash.
 # Get the text associated with the selection.

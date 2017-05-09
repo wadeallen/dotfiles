@@ -1,12 +1,18 @@
 #!/bin/bash
 
-PASSAGE=`cat /home/wadeallen/Dropbox/books.txt | rofi -dmenu -i -p Scripture:\  $*`
+if [ -f $HOME/.dmenurc ]; then
+  . $HOME/.dmenurc
+else
+  DMENU='dmenu -i'
+fi
+
+PASSAGE=`cat /home/wadeallen/Dropbox/books.txt | $DMENU -p Scripture:\  $*`
 PASSAGE=${PASSAGE// /+}
 
 if [ -z "$PASSAGE" ]; then
   exit
 else
-  xdg-open "https://www.biblegateway.com/passage/?search=${PASSAGE}&version=NIV&interface=print"
+  gio open "https://www.biblegateway.com/passage/?search=${PASSAGE}&version=NIV&interface=print"
 fi
 
 

@@ -179,9 +179,9 @@ let g:vim_markdown_folding_disabled = 1
 
 "Fuzzy Finder Files
 nnoremap <leader>bin  :FufFile $HOME/bin/<cr>
-nnoremap <leader>cct  :FufFile $HOME/Next/Administration/CCT_Summaries/2016/<cr>
-nnoremap <leader>sw  :FufFile $HOME/Next/Administration/Markdown_Files/Sermon_Work/<cr>
-nnoremap <leader>not :FufFile $HOME/Next/Notes/<cr>
+nnoremap <leader>cct  :FufFile $HOME/Dropbox/Administration/CCT_Summaries/2016/<cr>
+nnoremap <leader>sw  :FufFile $HOME/Dropbox/Administration/Markdown_Files/Sermon_Work/<cr>
+nnoremap <leader>not :FufFile $HOME/Dropbox/Notes/<cr>
 
 
 "Always open vimrc in side window

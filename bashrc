@@ -116,11 +116,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH="$PATH:$HOME/dotfiles/bin:$HOME/.cabal/bin:$HOME/ledger:$HOME/wkhtmltox/bin:$HOME/platform-tools"
+export PATH="$PATH:$HOME/dotfiles/bin:$HOME/.cabal/bin:$HOME/ledger:$HOME/wkhtmltox/bin:$HOME/platform-tools:$CABALDIR/bin"
 export SHUTTLE="wadeallen@192.168.1.101"
-export IMAC="fbcmuncie@192.168.2.9:~/Desktop/"
-
-export GEM_PATH=$HOME/.gem/ruby/2.2.0
+export IMAC="fbcmuncie@192.168.2.19:~/Desktop/"
 
 export PROMPT_COMMAND=__prompt_command
 export TERM=xterm-256color
