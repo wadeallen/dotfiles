@@ -24,3 +24,5 @@
 [insert] gio open https://docs.google.com/document/d/1WW3XE9y0MW6J_EJKVvJXIu3GRE9uY0ieVorfxDJvy-Q/edit
 [people] gio open https://people.planningcenteronline.com/people
 [visitor] gio open https://docs.google.com/document/d/1im1OZ0ol56PP9y0uyvq-2ih3W8G5tiHFdaioL-vTlso/edit
+[keepass] /usr/bin/keepass
+[scans] nautilus /home/wadeallen/Dropbox/Scans

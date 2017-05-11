@@ -116,7 +116,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH="$PATH:$HOME/dotfiles/bin:$HOME/.cabal/bin:$HOME/ledger:$HOME/wkhtmltox/bin:$HOME/platform-tools:$CABALDIR/bin"
+export PATH="$PATH:$HOME/dotfiles/bin:$HOME/ledger:$HOME/wkhtmltox/bin"
 export SHUTTLE="wadeallen@192.168.1.101"
 export IMAC="fbcmuncie@192.168.2.19:~/Desktop/"
 

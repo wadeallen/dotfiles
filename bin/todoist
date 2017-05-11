@@ -7,8 +7,6 @@ api = todoist.TodoistAPI(config.todoist_api)
 
 today = api.query('today')
 
-print (" ")
-
 if today[0]['data']:
     for item in today[0]['data']:
         # print ('- ' + (item['content']))
