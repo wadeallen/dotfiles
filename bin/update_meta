@@ -6,6 +6,8 @@ import glob
 from datetime import date 
 from dateutil.relativedelta import relativedelta, SU
 from os.path import expanduser
+import datetime
+from dateutil import parser
 
 home = expanduser("~")
 
@@ -20,8 +22,12 @@ path = (home + '/Dropbox/Administration/Markdown_Files/Sermon_Work/{}_sermon.md'
 files = glob.glob(path)
  
 for name in files:
-	post = frontmatter.load(name)
-	target = open (home + '/Dropbox/Pandoc/Pandoc_Bulletin/meta.tex', 'w')
-	target.write ('\def\sundaydate{' + post['date'] + '}\n\def\sermontitle{' + post['title'] + '}\n\def\scripture{' + post['scripture'] + '}\n\input{../numbers}\n')
-	target.close()
+    post = frontmatter.load(name)
+    if type(post['date']) is datetime.date:
+        postdate = post['date']
+    else:
+        postdate = parser.parse(post['date'])
+    target = open (home + '/Dropbox/Pandoc/Pandoc_Bulletin/meta.tex', 'w')
+    target.write ('\def\sundaydate{' + postdate.strftime('%b %d, %Y') + '}\n\def\sermontitle{' + post['title'] + '}\n\def\scripture{' + post['scripture'] + '}\n\input{../numbers}\n')
+    target.close()
 
