@@ -2,7 +2,7 @@
 [internet] gio open http://google.com
 [firefox browser] firefox
 [calendar] gio open http://calendar.google.com
-[gmail] gio open http://gmail.com 
+[gmail] /usr/bin/gnome-gmail
 [todo] gio open http://todoist.com
 [gimp] gimp
 [sms] gio open https://app.mysms.com/#compose
@@ -24,5 +24,5 @@
 [insert] gio open https://docs.google.com/document/d/1WW3XE9y0MW6J_EJKVvJXIu3GRE9uY0ieVorfxDJvy-Q/edit
 [people] gio open https://people.planningcenteronline.com/people
 [visitor] gio open https://docs.google.com/document/d/1im1OZ0ol56PP9y0uyvq-2ih3W8G5tiHFdaioL-vTlso/edit
-[keepass] /usr/bin/keepass
+[keepass] /usr/bin/keepass2
 [scans] nautilus /home/wadeallen/Dropbox/Scans
