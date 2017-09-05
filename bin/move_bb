@@ -11,6 +11,6 @@ fi
 
 fileroot=$(echo ${filename%.*})
 
-scp ${filename} $SHUTTLE:/home/wadeallen/Media/Media/TV/Big_Bang_Theory
+scp ${filename} pi@192.168.1.128:/media/pi/storage/TV/Big_Bang_Theory/
 
 
