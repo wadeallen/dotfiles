@@ -1,0 +1,37 @@
+#!/usr/bin/env python3
+
+from datetime import date
+from dateutil.relativedelta import relativedelta, MO
+import glob
+import frontmatter
+import sys
+import pyperclip
+import subprocess
+
+format = "%B %d"
+path_format = "%Y-%m-%d"
+today = date.today()
+target_date = today + relativedelta(weekday=MO(-1))
+monday = target_date.strftime(path_format)
+monday_long = target_date.strftime(format)
+
+path = ('/home/wadeallen/Sites/2017_Church/_posts/{}-*.markdown'.format(monday))
+files = glob.glob(path)
+
+for file in files:
+    f = open(file, 'r')
+    lines = f.read()
+    f.close()
+
+blog_text= lines.split("\n",11)[11]
+
+
+# for name in files:
+# 	post = frontmatter.load(name)
+# 	scripture = (post['scripture'])
+
+pyperclip.copy(blog_text)
+print ('Copied Blog from {} to clipboard'.format(monday_long))
+
+
+

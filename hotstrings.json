@@ -18,6 +18,7 @@
     "visitordeadline": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/visitor_deadline.py"],
     "#giving": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/giving_report.py"],
     "#comcast": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/comcast.py"],
+    "#thrivent": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/thrivent.py"],
     "#housing": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/housing.py"],
     "#mdwise": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/mdwise.py"],
     "#kohls": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/kohls.py"],

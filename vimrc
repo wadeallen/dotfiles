@@ -201,9 +201,8 @@ let g:UltiSnipsJumpBackwardTrigger="s-<tab>"
 nnoremap <LocalLeader>th :ThesaurusQueryReplaceCurrentWord<CR>
 vnoremap <LocalLeader>th y:Thesaurus <C-r>"<CR>
 
-"call AutoCorrect
+"Auto correct
 nnoremap <leader>a :call AutoCorrect()<CR>
-autocmd filetype mail call AutoCorrect()
 
 " Show syntax highlighting groups for word under cursor
 nmap <C-S-P> :call <SID>SynStack()<CR>

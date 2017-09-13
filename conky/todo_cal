@@ -1,15 +1,7 @@
-
-# **********************************************************************
-# "CPU Panel (8-core)" theme for Conky by Tony George (teejee2008@gmail.com)
-#
-# Webpage: http://teejeetech.blogspot.in/
-# **********************************************************************
-
-
 background yes
 double_buffer yes
 
-alignment top_right
+alignment top_left
 
 border_width 1
 cpu_avg_samples 2

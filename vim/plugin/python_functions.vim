@@ -71,7 +71,7 @@ call DefPython()
 " command! ESV py3 Scripture("ESV")
 " command! KJV py3 Scripture("KJV")
 " command! Bi py3 Scripture("NIV")
-command! Kindle py Convert_Kindle()
-command! Backup py Print_Backup()
+command! Kindle py3 Convert_Kindle()
+command! Backup py3 Print_Backup()
 
 

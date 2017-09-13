@@ -117,8 +117,8 @@ if ! shopt -oq posix; then
 fi
 
 export PATH="$PATH:$HOME/dotfiles/bin:$HOME/ledger:$HOME/wkhtmltox/bin"
-export SHUTTLE="wadeallen@192.168.1.101"
-export IMAC="fbcmuncie@192.168.2.19:~/Desktop/"
+export PI="pi@192.168.1.128"
+export IMAC="fbcmuncie@192.168.2.44:~/Desktop/"
 
 export PROMPT_COMMAND=__prompt_command
 export TERM=xterm-256color
@@ -135,7 +135,6 @@ ps1_hostname() {
       echo "\[\e[0;37m\]@\[\e[1;30m\]$host "
    fi
 }
-
 
 
 export PATH="$HOME/.rbenv/bin:$PATH"

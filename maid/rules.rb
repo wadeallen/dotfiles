@@ -5,6 +5,10 @@ Maid.rules do
     move(dir('~/Dropbox/Journal/2017*.markdown'), '~/Dropbox/Journal/2017')
   end
 
+  rule 'move Thrivent Credit Unioninto folder' do
+    move(dir('~/Dropbox/Scans/Thrivent Credit Union*.pdf'), '/home/wadeallen/Dropbox/Statements/Thrivent Credit Union')
+  end
+
   rule 'move reminder call sheets into folder' do
     move(dir('~/Dropbox/Scans/*Nursery Reminder Calls.pdf'), '~/Dropbox/Administration/Nursery/Reminder Calls')
   end

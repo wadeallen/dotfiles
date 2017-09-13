@@ -1,0 +1,33 @@
+# set to yes if you want Conky to be forked in the background
+background yes
+alignment top_right
+gap_x 100
+
+# Create own window instead of using desktop (required in nautilus)
+own_window yes
+own_window_type override
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+# Use double buffering (reduces flicker, may not work for everyone)
+double_buffer yes
+
+# fiddle with window
+use_spacer right
+use_xft yes
+
+xftfont Droid Sans:size=10
+color0 white
+color1 EAEAEA
+color2 FFA300
+color3 grey
+
+TEXT
+
+${color2}TODO ${color0}
+
+${execi 60 python3 ~/bin/todoist}
+
+${color2}CALENDAR ${color0}
+
+${execi 60 sh ~/bin/list_calendar}
