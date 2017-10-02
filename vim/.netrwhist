@@ -1,9 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/home/wadeallen/dotfiles/vim/syntax'
-let g:netrw_dirhist_2='/home/wadeallen/Desktop/thesis_2/Examples'
-let g:netrw_dirhist_3='/home/wadeallen/Desktop/thesis_2/Chapters'
-let g:netrw_dirhist_4='/home/wadeallen/dotfiles/pandoc/templates'
-let g:netrw_dirhist_5='/home/wadeallen/Dropbox/Study/Book Notes'
-let g:netrw_dirhist_6='/home/wadeallen/Dropbox/Study/Book_Notes'
-let g:netrw_dirhist_7='/home/wadeallen/bin'
+let g:netrw_dirhist_cnt =0

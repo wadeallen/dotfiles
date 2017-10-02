@@ -122,6 +122,7 @@ export IMAC="fbcmuncie@192.168.2.44:~/Desktop/"
 
 export PROMPT_COMMAND=__prompt_command
 export TERM=xterm-256color
+export PASSWORD=urbaoardvstjxnjz
 
 __prompt_command() {
    code=$?

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+killall conky 
+sleep 5
+conky -c /home/wadeallen/dotfiles/conky/mate_conky &
+exit 0

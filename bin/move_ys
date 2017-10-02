@@ -11,6 +11,6 @@ fi
 
 fileroot=$(echo ${filename%.*})
 
-scp ${filename} pi@192.168.1.128:/home/pi/TV/Big_Bang_Theory/
+scp ${filename} pi@192.168.1.128:/home/pi/TV/Young_Sheldon/
 
 

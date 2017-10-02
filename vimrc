@@ -38,6 +38,7 @@ set smartcase
 set backspace=indent,eol,start
 set autoindent
 set nostartofline
+
 set laststatus=2
 set confirm
 set visualbell
@@ -200,6 +201,7 @@ let g:UltiSnipsJumpBackwardTrigger="s-<tab>"
 "for thesaurus plugin
 nnoremap <LocalLeader>th :ThesaurusQueryReplaceCurrentWord<CR>
 vnoremap <LocalLeader>th y:Thesaurus <C-r>"<CR>
+let g:tq_enabled_backends=["thesaurus_com","openoffice_en","mthesaur_txt"]
 
 "Auto correct
 nnoremap <leader>a :call AutoCorrect()<CR>
@@ -240,3 +242,6 @@ endif
 let g:html_indent_script1 = "inc" 
 let g:html_indent_style1 = "inc" 
 let g:html_indent_inctags = "html,body,head"
+
+" for Mutt setup
+setlocal fo+=aw

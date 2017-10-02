@@ -7,6 +7,7 @@ alias mm='cd $HOME/Dropbox/Administration/Markdown_Files'
 alias desk='cd $HOME/Desktop'
 alias ss='cd $HOME/Sites/slideshow'
 alias jd='cd $HOME/Dropbox/Administration/Job_Descriptions'
+alias bn='cd $HOME/Dropbox/Study/Book_Notes'
 
 # Youtube Downloader
 alias dl='/usr/bin/youtube-dl'

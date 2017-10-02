@@ -1,0 +1,34 @@
+#!/bin/bash
+
+filename=$1
+BEG=$(date -u -d "$2" "+%s")
+CUT=$(date -u -d "$3" "+%s")
+
+if	[ -z "$filename" ]
+then
+	echo "Please enter file name as first variable, beginning time (00:00:00) as second variable and ending time (00:00:00) as final variable"
+	exit 0
+fi
+
+if	[ -z "$BEG" ]
+then
+	echo "Don't forget the beginning time ..."
+	exit 0
+fi
+
+if	[ -z "$CUT" ]
+then
+	echo "Don't forget the cut time ..."
+	exit 0
+fi
+
+DIFF=$((CUT-BEG))
+DIFF_SEC=$(date -u -d "0 ${DIFF} seconds" "+%H:%M:%S")
+
+# echo $seconds
+
+fileroot=$(echo ${filename%.*})
+
+ffmpeg -ss ${2} -i ${filename} -t ${DIFF_SEC} -c copy ${fileroot}_cut.mp3
+
+

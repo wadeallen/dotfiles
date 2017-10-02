@@ -19,18 +19,18 @@ path = ('/home/wadeallen/Sites/2017_Church/_posts/{}-*.markdown'.format(monday))
 files = glob.glob(path)
 
 for file in files:
-    f = open(file, 'r')
-    lines = f.read()
-    f.close()
+    f = open(file, 'r').read()
+    blog = f.split('\n',9)[9]
+    pyperclip.copy(blog)
 
-blog_text= lines.split("\n",11)[11]
+# blog_text= lines
 
 
 # for name in files:
 # 	post = frontmatter.load(name)
 # 	scripture = (post['scripture'])
 
-pyperclip.copy(blog_text)
+# pyperclip.copy(lines)
 print ('Copied Blog from {} to clipboard'.format(monday_long))
 
 

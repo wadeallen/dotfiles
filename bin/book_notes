@@ -11,6 +11,6 @@ fi
 
 fileroot=$(echo ${filename%.*})
 
-pandoc ${filename} -o ~/Desktop/${fileroot}.pdf --template=book_review.tex --bibliography=books.bib --filter pandoc-citeproc
+pandoc ${filename} -o ~/Desktop/${fileroot}.pdf --template book_review.tex --bibliography books.bib --filter pandoc-citeproc --csl apa.csl
 
 
