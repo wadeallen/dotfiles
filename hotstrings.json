@@ -19,6 +19,7 @@
     "#giving": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/giving_report.py"],
     "#comcast": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/comcast.py"],
     "#thrivent": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/thrivent.py"],
+    "#forum": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/forum_credit_union.py"],
     "#housing": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/housing.py"],
     "#mdwise": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/mdwise.py"],
     "#kohls": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/kohls.py"],
