@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for file in *.WebRip.ReEnc-DeeJayAhmed.*; do
+    mv "$file" "${file/WebRip.ReEnc-DeeJayAhmed./}"
+done

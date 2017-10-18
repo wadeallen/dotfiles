@@ -11,7 +11,7 @@ function! IsReply()
         :%s/^.\+\ze\n\(>*$\)\@!/\0 /e
         :%s/^>*\zs\s\+$//e
         :1
-        :put! =\"\n\n\"
+        :put! =\"\n\n- Wade\n\n\"
         :1
     endif
 endfunction
