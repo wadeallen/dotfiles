@@ -11,6 +11,6 @@ fi
 
 fileroot=$(echo ${filename%.*})
 
-scp ${filename} $SHUTTLE:/home/wadeallen/Media/Media/Movies
+scp ${filename} $SHUTTLE:/home/pi/Movies
 
 
