@@ -1,4 +1,4 @@
-[terminal] mate-terminal
+[terminal] gnome-terminal
 [internet] xdg-open http://google.com
 [firefox browser] firefox
 [calendar] xdg-open http://calendar.google.com
@@ -23,6 +23,6 @@
 [insert] xdg-open https://docs.google.com/document/d/1WW3XE9y0MW6J_EJKVvJXIu3GRE9uY0ieVorfxDJvy-Q/edit
 [people] xdg-open https://people.planningcenteronline.com/people
 [visitor] xdg-open https://docs.google.com/document/d/1im1OZ0ol56PP9y0uyvq-2ih3W8G5tiHFdaioL-vTlso/edit
-[keepass] /usr/bin/keepass2
+[keepass] /usr/bin/keepassx
 [scans] xdg-open /home/wadeallen/Dropbox/Scans
 [find] dmenu_extended_run

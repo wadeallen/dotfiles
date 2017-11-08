@@ -12,7 +12,7 @@ PASSAGE=${PASSAGE// /+}
 if [ -z "$PASSAGE" ]; then
   exit
 else
-  gio open "https://www.biblegateway.com/passage/?search=${PASSAGE}&version=NIV&interface=print"
+  xdg-open "https://www.biblegateway.com/passage/?search=${PASSAGE}&version=NIV&interface=print"
 fi
 
 

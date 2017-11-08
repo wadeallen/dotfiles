@@ -5,8 +5,11 @@ gap_x 100
 
 # Create own window instead of using desktop (required in nautilus)
 own_window yes
-own_window_type override
-own_window_transparent yes
+# own_window_type override
+own_window_type dock
+# own_window_transparent yes
+own_window_argb_visual yes    
+own_window_argb_value 0
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 
 # Use double buffering (reduces flicker, may not work for everyone)
@@ -16,10 +19,10 @@ double_buffer yes
 use_spacer right
 use_xft yes
 
-xftfont Droid Sans:size=10
+xftfont Droid Sans:size=11
 color0 white
 color1 EAEAEA
-color2 FFA300
+color2 E95420
 color3 grey
 
 TEXT

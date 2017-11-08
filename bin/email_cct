@@ -5,26 +5,33 @@ from datetime import date
 from dateutil.relativedelta import relativedelta, TU
 import urltools
 import subprocess
+import pyperclip
 import sys
 
 format = "%A, %B %d"
 today = date.today()
 target_date = today + relativedelta(weekday=TU(+1))
 tuesday = target_date.strftime(format)
-email_address = 'cct@fbcmuncie.org'
+# email_address = 'cct@fbcmuncie.org'
 
-subject = 'CCT Meeting on ' + tuesday
-message = ('Hello Team %0A%0A' \
-	'I wanted to remind you that our next CCT meeting is ' + tuesday + ' at 7:00 PM in the church office. %0A%0A' \
-	'Please fill out the monthly report at: %0A%0A' \
-	'http://fbcmuncie.wufoo.com/forms/cct-church-coordination-team-monthly-reports/ %0A%0A' \
-        'Please have your report filled out by Friday. This helps everyone have time to read the reports before the meeting %0A%0A' \
-	'Have a great week, %0A%0A' \
-	'Wade')
+# subject = 'CCT Meeting on ' + tuesday
+# message = ('Hello Team %0A%0A' \
+# 	'I wanted to remind you that our next CCT meeting is ' + tuesday + ' at 7:00 PM in the church office. %0A%0A' \
+# 	'Please fill out the monthly report at: %0A%0A' \
+#         'https://docs.google.com/forms/d/e/1FAIpQLSd5ELDHUJVoon0NIzWngq9L8hwJYYAWQggL5WReXXmHmE05CA/viewform?usp=sf_link%0A%0A' \
+#         'Please have your report filled out by Friday. This helps everyone have time to read the reports before the meeting %0A%0A' \
+# 	'Have a great week, %0A%0A' \
+# 	'Wade')
 
 
-url = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + email_address + '&su=' + subject + '&body=' + message
+# url = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + email_address + '&su=' + subject + '&body=' + message
 
-# webbrowser.open(url)
-subprocess.call(["xdg-open", url])
+# # webbrowser.open(url)
+# subprocess.call(["xdg-open", url])
+
+text = "Hello everyone\n\nI wanted to remind you that our next CCT meeting is " + tuesday + " at 7:00 PM in the church office.\n\nPlease have your report filled out by Friday.\n\nThis helps everyone have time to read the reports before the meeting."
+
+pyperclip.copy(text)
+subprocess.call(["xdg-open", "https://docs.google.com/forms/d/16acc75u48ETY3txAYEj04E7pUZlMvU6oB7D0fHezMjM/edit"])
+
 

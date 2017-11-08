@@ -9,6 +9,10 @@ Maid.rules do
     move(dir('~/Dropbox/Scans/Thrivent Credit Union*.pdf'), '/home/wadeallen/Dropbox/Statements/Thrivent Credit Union')
   end
 
+  rule 'move Ball State Credit Union into folder' do
+    move(dir('~/Dropbox/Scans/Ball State Credit Union*.pdf'), '/home/wadeallen/Dropbox/Receipts/Ball State Credit Union')
+  end
+
   rule 'move Forum Credit Union into folder' do
     move(dir('~/Dropbox/Scans/Forum Credit Union*.pdf'), '/home/wadeallen/Dropbox/Statements/Forum Credit Union')
   end
