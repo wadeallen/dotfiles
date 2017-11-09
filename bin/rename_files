@@ -1,5 +1,5 @@
 #!/bin/bash
 
-for file in *.WebRip.ReEnc-DeeJayAhmed.*; do
-    mv "$file" "${file/WebRip.ReEnc-DeeJayAhmed./}"
+for file in *.Web-DL.720p.5.1.x265.HEVC-Qman\[UTR\].*; do
+    mv "$file" "${file/.Web-DL.720p.5.1.x265.HEVC-Qman\[UTR\]/}"
 done

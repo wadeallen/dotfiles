@@ -29,6 +29,6 @@ DIFF_SEC=$(date -u -d "0 ${DIFF} seconds" "+%H:%M:%S")
 
 fileroot=$(echo ${filename%.*})
 
-ffmpeg -ss ${2} -i ${filename} -t ${DIFF_SEC} -c copy ${fileroot}_cut.m2ts
+ffmpeg -ss ${2} -i ${filename} -t ${DIFF_SEC} -c copy ${fileroot}_cut.mp4
 
 
