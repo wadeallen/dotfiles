@@ -1,4 +1,4 @@
 #!/bin/bash
 
-ffmpeg -i "concat:00000.MTS|00001.MTS" -c copy output.m2ts
+ffmpeg -i "concat:00005.MTS|00006.MTS" -c copy output.m2ts
 

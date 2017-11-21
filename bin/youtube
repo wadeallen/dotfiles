@@ -11,6 +11,6 @@ fi
 
 fileroot=$(echo ${filename%.*})
 
-ffmpeg -i ${filename} -s 720x480  -strict -2 ${fileroot}.mp4
+ffmpeg -i ${filename} -s 1080X720  -strict -2 ${fileroot}.mp4
 
 

@@ -40,6 +40,11 @@ alias pi='ssh wadesallen@192.168.2.32'
 alias 17='cd $HOME/Sites/2017_Church && git pull'
 alias news='cd /home/wadeallen/Sites/2017_Church/_news'
 
+# for todolists
+alias baptism='$HOME/bin/todoist_baptism.py'
+alias dedication='$HOME/bin/todoist_baby.py'
+alias funeral='$HOME/bin/todoist_funeral.py'
+
 
 
 

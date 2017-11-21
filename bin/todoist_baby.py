@@ -25,11 +25,10 @@ item = api.items.add('Notify Clif and Dana ' + baby_name + ' dedication ' + date
 # make baby dedication certificate
 certificate_date = date + datetime.timedelta(days=-4)
 item = api.items.add('Make ' + baby_name + ' dedication certificate ' + date.strftime('%Y-%m-%d'), project_id, date_string=certificate_date.strftime('%Y-%m-%d'))
-api.commit()
 
 # make baby dedication certificate
 pc_date = date + datetime.timedelta(days=-15)
-item = api.items.add('Add ' + baby_name + ' dedication in Planning Center' + date.strftime('%Y-%m-%d'), project_id, date_string=pc_date.strftime('%Y-%m-%d'))
+item = api.items.add('Add ' + baby_name + ' dedication in Planning Center ' + date.strftime('%Y-%m-%d'), project_id, date_string=pc_date.strftime('%Y-%m-%d'))
 api.commit()
 
 print ('Tasks Added:', baby_name + ' Dedication added for', date.strftime('%B %d, %Y'))

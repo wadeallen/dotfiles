@@ -1,0 +1,19 @@
+#!/bin/bash
+
+filename=$1
+
+if	[ -z "$filename" ]
+then
+	echo "Please include the file as the first argument"
+	exit 0
+fi
+
+
+# echo $seconds
+
+fileroot=$(echo ${filename%.*})
+
+HandBrakeCLI -Z "H.264 MKV 480p30" -i ${filename} -o ~/Desktop/${fileroot}.480.mkv
+
+# echo ${fileroot}.480.mkv
+

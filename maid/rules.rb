@@ -13,6 +13,10 @@ Maid.rules do
     move(dir('~/Dropbox/Scans/Ball State Credit Union*.pdf'), '/home/wadeallen/Dropbox/Receipts/Ball State Credit Union')
   end
 
+  rule 'move Hooser Healthwise into folder' do
+    move(dir('~/Dropbox/Scans/Levi Hoosier Healthwise*.pdf'), '/home/wadeallen/Dropbox/Receipts/Insurance/Health Insurance/Hoosier Healthwise')
+  end
+
   rule 'move Forum Credit Union into folder' do
     move(dir('~/Dropbox/Scans/Forum Credit Union*.pdf'), '/home/wadeallen/Dropbox/Statements/Forum Credit Union')
   end
@@ -89,6 +93,10 @@ Maid.rules do
 
   rule 'move IU Health Statement into folder' do
     move(dir('~/Dropbox/Scans/IU Health Insurance*.pdf'), '~/Dropbox/Receipts/Insurance/Health Insurance/IU Health Insurance')
+  end
+
+  rule 'move CareSource Statement into folder' do
+    move(dir('~/Dropbox/Scans/CareSource*.pdf'), '~/Dropbox/Receipts/Insurance/CareSource')
   end
 
   rule 'move MD Wise Statement into folder' do

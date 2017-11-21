@@ -43,4 +43,9 @@ certificate_date = date + datetime.timedelta(days=-4)
 item = api.items.add('Make ' + name + ' baptism certificate', project_id, date_string=certificate_date.strftime('%Y-%m-%d'))
 api.commit()
 
+# add baptism date to database
+database_date = date + datetime.timedelta(days=+1)
+item = api.items.add('Add ' + name + ' baptism information to database', project_id, date_string=database_date.strftime('%Y-%m-%d'))
+api.commit()
+
 print ('Baptism Added:',name,date.strftime('%B %d, %Y'))
