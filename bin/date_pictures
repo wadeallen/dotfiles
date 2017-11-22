@@ -1,0 +1,17 @@
+#!/bin/bash
+
+year=$1
+month=$2
+
+if	[ -z "$year" ]
+then
+  echo "enter year as first variable (YYYY). This script will date the pictures for June 5 on the given year. If you want to add a month, enter month as second variable in two digits (i.e. 06)"
+	exit 0
+fi
+
+if	[ -z "$month" ]
+then
+  month="06"
+fi
+
+exiftool "-AllDates=${year}:${month}:05 12:00:00" -if '$filetype eq "JPEG"' .

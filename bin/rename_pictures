@@ -1,0 +1,13 @@
+#!/bin/bash
+
+name=$1
+
+if	[ -z "$name" ]
+then
+  echo "enter name as first arugment"
+	exit 0
+fi
+
+
+ls | cat -n | while read n f; do mv "$f" "${name}-Photos-$n.jpg"; done
+
