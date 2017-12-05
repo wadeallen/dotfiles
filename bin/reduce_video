@@ -1,5 +1,7 @@
 #!/bin/bash
 
+SUNDAY=$(date +'%Y-%m-%d')
+
 filename=$1
 
 if	[ -z "$filename" ]
@@ -8,12 +10,13 @@ then
 	exit 0
 fi
 
+echo $SUNDAY
 
 # echo $seconds
 
 fileroot=$(echo ${filename%.*})
 
-HandBrakeCLI -Z "H.264 MKV 480p30" -i ${filename} -o ~/Desktop/${fileroot}.480.mkv
+HandBrakeCLI -Z "H.264 MKV 720p30" -i ${filename} -o ~/Desktop/${SUNDAY}.720.mkv
 
-# echo ${fileroot}.480.mkv
+# # echo ${fileroot}.480.mkv
 

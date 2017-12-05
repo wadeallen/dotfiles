@@ -1,16 +1,21 @@
 #!/bin/bash
 
+SUNDAY=$(date +'%Y-%m-%d')
+
 filename=$1
 
 if	[ -z "$filename" ]
 then
-	echo "Please enter the .MTS file"
+	echo "Please include the file as the first argument"
 	exit 0
 fi
 
+echo $SUNDAY
+
+# echo $seconds
 
 fileroot=$(echo ${filename%.*})
 
-ffmpeg -i ${filename} -s 1080X720  -strict -2 ${fileroot}.mp4
+HandBrakeCLI -Z "H.264 MKV 720p30" -i ${filename} -o ~/Desktop/${SUNDAY}.720.mkv
 
-
+# # echo ${fileroot}.480.mkv

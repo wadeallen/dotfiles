@@ -4,23 +4,30 @@ with open('/home/wadeallen/Dropbox/Pandoc/Pandoc_Visitor/visitor.csv') as f:
     text = f.readlines()
     size = len(text)
 
+# This line counts the number of people in the visitor.csv file
 total_count = size -1
-mixed_zip = input('How many out of town Visitors? ')
-muncie_zip = (int(total_count) - int(mixed_zip))
-b2_postage = (int(mixed_zip) * 0.184)
-b5_postage = (int(muncie_zip) * 0.133)
-e5_total = b2_postage + b5_postage
-total_weight = int(total_count) * .01
-total_postage = str(round(e5_total, 2))
+# Then it asks how many out of town visitors are in the box
+mixed_zip = int(input('How many out of town Visitors? '))
+muncie_zip = total_count - mixed_zip
+# Calculates the postage for out of town Visitors (change the number if the rates change)
+b2_postage = mixed_zip * 0.184
+# Calculates the postage for in town Visitors (change the number if the rates change)
+b5_postage = muncie_zip * 0.133
 
-print('Total Visitors = ' + str(total_count))
-print('B2 number of pieces = ' + str(mixed_zip))
-print('B5 number of pieces = ' + str(muncie_zip))
-print('B2 total postage = ' + str(b2_postage))
-print('B5 total postage = ' + str(b5_postage))
-print('Part E total = ' + str(e5_total))
-print('Total Postage = ' + total_postage)
-print('Total Weight = ' + str(total_weight))
+partB_total = b2_postage + b5_postage
+total_weight = total_count * .01
+total_postage = round(partB_total, 2)
+
+print('-' * 20)
+print('Back Side of Paper')
+print('B2 number of pieces = {0}, Total Postage = {1}'.format(mixed_zip, b2_postage))
+print('B5 number of pieces = {0}, Total Postage = {1}'.format(muncie_zip, b5_postage))
+print('Part B total = {0}'.format(partB_total))
+print('-' * 20)
+print('Front Side of Paper')
+print('Total Postage = {0}'.format(total_postage))
+print('Total Weight = {0}'.format(total_weight))
+print('Total Pieces = {0}'.format(total_count))
 
 
 
