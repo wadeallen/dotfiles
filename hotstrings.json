@@ -34,6 +34,7 @@
     "lsun": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/last_sunday.py"],
     "lthu": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/last_thursday.py"],
     "lwed": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/last_wednesday.py"],
+    ",nm": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/next_month.py"],
     "#pl": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/profit_loss.py"],
     "#bal": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/balance_sheet.py"],
     "#nremind": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/reminder_calls.py"],
