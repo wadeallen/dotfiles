@@ -1,6 +1,7 @@
 #!/bin/bash
 
 filename=$1
+sunday=$(date +'%Y-%m-%d')
 
 if	[ -z "$filename" ]
 then
@@ -19,4 +20,4 @@ read description
 
 fileroot=$(echo ${filename%.*})
 
-ffmpeg -i ${filename} -i $HOME/Dropbox/Pictures/fbc_podcast_logo.png -b:a 192k -vn -metadata title="${sermon_title}" -metadata genre="Spoken Word" -metadata album="First Baptist Church Muncie" -metadata album_artist="${preacher}" -metadata date="2017" -metadata artist="${preacher}" -metadata comments="${description}" ${fileroot}.mp3 
+ffmpeg -i ${filename} -i $HOME/Dropbox/Pictures/fbc_podcast_logo.png -b:a 192k -vn -metadata title="${sermon_title}" -metadata genre="Spoken Word" -metadata album="First Baptist Church Muncie" -metadata album_artist="${preacher}" -metadata date="2017" -metadata artist="${preacher}" -metadata comments="${description}" ${sunday}.mp3 
