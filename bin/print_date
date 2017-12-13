@@ -1,5 +1,0 @@
-#!/bin/bash
-
-DATE=`date`
-
-echo "Hello, this is a test that prints ${DATE} and will also print this text"
