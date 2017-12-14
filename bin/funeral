@@ -18,10 +18,11 @@ from titlecase import titlecase
 
 home = expanduser("~")
 name = input("Name of Deceased: ")
+name = titlecase(name)
 date = input("Date of Funeral: ")
 gender = input("Gender (m or f): ")
 church = input("Is the funeral at the church? (y/n): ")
-full_name = titlecase(name)
+full_name = name
 first_name = name.split()[0].capitalize()
 
 if gender[0] in "Mm":
@@ -85,9 +86,9 @@ def grab_section(file):
 	    lines = lines.replace("{first_name}", first_name)
 	    lines = lines.replace("{he}", he)
 	    lines = lines.replace("{his}", his)
+	    lines = lines.replace("{him}", him)
 	    lines = lines.replace("{His}", his.capitalize())
 	    lines = lines.replace("{He}", he.capitalize())
-	    lines = lines.replace("{His}", his.capitalize())
 	    target.write(lines)
 
 filename =(home + '/Dropbox/Administration/Markdown_Files/Funeral_Work/' + date + "_" + slug + '.md')
@@ -106,7 +107,4 @@ else:
 	grab_section("graveside.md")
 	target.close()
 	subprocess.call(['vim', '-c', '3', filename])
-
-
-
 
