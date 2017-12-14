@@ -1,0 +1,112 @@
+#!/usr/bin/env python3
+
+from datetime import date
+from datetime import time
+from datetime import datetime
+from dateutil import parser
+from os.path import expanduser
+import os
+import os.path
+import subprocess
+import todoist
+import sys
+import json
+import datetime
+import config
+import time
+from titlecase import titlecase
+
+home = expanduser("~")
+name = input("Name of Deceased: ")
+date = input("Date of Funeral: ")
+gender = input("Gender (m or f): ")
+church = input("Is the funeral at the church? (y/n): ")
+full_name = titlecase(name)
+first_name = name.split()[0].capitalize()
+
+if gender[0] in "Mm":
+    gender = "masculine"
+else:
+    gender = "feminine"
+
+if gender == "masculine":
+	his = "his"
+	he = "he"
+	him = "him"
+else:
+	his = "her"
+	he = "she"
+	him = "her"
+
+date = parser.parse(date)
+name_sliced = name.split()
+slug = ("_".join(name_sliced))
+
+today = parser.parse(time.strftime("%m %d %Y"))
+# add to funeral project
+project_id = '162548698'
+
+# Now Add tasks to Todoist
+
+api = todoist.TodoistAPI(config.todoist_api)
+
+# sets the notify church about death
+notify_date = today
+item = api.items.add('email congregation about ' + name + ' death and funeral arrangements', project_id, date_string=notify_date.strftime('%Y-%m-%d'))
+
+# meet with family
+item = api.items.add('Set up meeting with ' + name + ' family', project_id, date_string=notify_date.strftime('%Y-%m-%d'))
+
+# mark deceased in database
+item = api.items.add('mark ' + name + ' deceased in database', project_id, date_string=notify_date.strftime('%Y-%m-%d'))
+
+# print backup copy of funeral
+print_backup = date + datetime.timedelta(days=-1)
+item = api.items.add('print backup copy of funeral sermon for ' + name + ' funeral', project_id, date_string=print_backup.strftime('%Y-%m-%d'))
+
+if church in ['true', '1', 't', 'y', 'yes', 'yeah', 'yup', 'certainly', 'uh-huh']:
+    # check and add to church calendar
+    item = api.items.add('check calendar and add funeral for ' + name + ' to calendar', project_id, date_string=notify_date.strftime('%Y-%m-%d'))
+    # line up sound tech
+    item = api.items.add('line up sound tech for ' + name + ' funeral', project_id, date_string=notify_date.strftime('%Y-%m-%d'))
+    # notify Adam
+    item = api.items.add('notify Adam or Clif about moving sounds equipment for ' + name + ' funeral', project_id, date_string=notify_date.strftime('%Y-%m-%d'))
+
+api.commit()
+
+# Function to Grab lines of text from various subfiles and do replacements
+
+date = date.strftime('%Y-%m-%d')
+
+def grab_section(file):
+	with open(home + "/Dropbox/Templates/Funeral/" + file) as f:
+	    lines = f.read()
+	    lines = lines.replace("{full_name}", full_name)
+	    lines = lines.replace("{first_name}", first_name)
+	    lines = lines.replace("{he}", he)
+	    lines = lines.replace("{his}", his)
+	    lines = lines.replace("{His}", his.capitalize())
+	    lines = lines.replace("{He}", he.capitalize())
+	    lines = lines.replace("{His}", his.capitalize())
+	    target.write(lines)
+
+filename =(home + '/Dropbox/Administration/Markdown_Files/Funeral_Work/' + date + "_" + slug + '.md')
+
+if os.path.isfile(filename):
+	subprocess.call(['vim', '-c', '3', filename])
+else:
+	target = open (filename, 'w')
+	target.write("% {} Funeral\n".format(name))
+	target.write("% Wade Allen\n")
+	target.write("% {}\n\n".format(date))
+	grab_section("welcome.md")
+	grab_section("songs.md")
+	grab_section("bio.md")
+	grab_section("faith.md")
+	grab_section("graveside.md")
+	target.close()
+	subprocess.call(['vim', '-c', '3', filename])
+
+
+
+

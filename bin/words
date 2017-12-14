@@ -1,25 +1,10 @@
 #!/usr/bin/env python3
 
-from textblob import Word
-# import inflect
-# p = inflect.engine()
+import inflect
+p = inflect.engine()
 
-animal = input("What kind of animal did you see? ")
-animal_count = int(input("How many did you see? "))
+noun = input("Noun: ")
+verb = input("Verb: ")
+number = int(input("Number of {}: ".format(p.plural(noun))))
 
-w = Word(animal)
-
-# noun = input("Please give me a noun: ")k
-# verb = input("Please give me a verb: ")
-# food = input("Please give me a food: ")
-
-# # Get all parts of speech at https://pypi.python.org/pypi/inflect
-
-# verb_pp = p.present_participle(verb)
-# a_noun = p.a(noun)
-
-# # print("One day " + a_noun + " went to the store. While the " + noun + " was at the store, the " + noun + " started to " + verb + ". The " + noun + " was " + verb_pp + " to a " + food + " stand.")
-
-# print("One day {0} went to the store. While the {1} was at the store, the {1} started to {2}. The {1} was {3} to a {4} stand.".format(a_noun, noun, verb, verb_pp, food))
-
-print("I saw", animal_count, w.pluralize())
+print("There {0} {1} {2}. It is difficult to feed {1} {2} if you do not have an income. The {1} {2} {0} {3} very fast in the field.".format(p.plural_verb("was", number), p.number_to_words(number), p.plural_noun(noun,number), p.present_participle(verb)))

@@ -43,7 +43,6 @@ alias news='cd /home/wadeallen/Sites/2017_Church/_news'
 # for todolists
 alias baptism='$HOME/bin/todoist_baptism.py'
 alias dedication='$HOME/bin/todoist_baby.py'
-alias funeral='$HOME/bin/todoist_funeral.py'
 
 
 
