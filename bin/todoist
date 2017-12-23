@@ -2,17 +2,47 @@
 
 import todoist
 import config
+from datetime import datetime, timedelta
 
 api = todoist.TodoistAPI(config.todoist_api)
 
-today = api.query('today')
+def get_today_tasks():
+    tasks_today = []
 
-if today[0]['data']:
-    for item in today[0]['data']:
-        # print ('- ' + (item['content']))
-                print ('- ' + (item['content']))
-else:
-    print ("Nothing to do!")
+    # get items from todoist
+    api.sync()
+    items = api.state['items']
+
+    # Get "today", only keep Day XX Mon, which Todoist uses
+    today = datetime.utcnow() + timedelta(hours=20)
+    today = today.strftime("%a %d %b %Y")
+
+    print(today)
+
+    # NB: item['due_date_utc'] is unicode; we cast to str for this comparison
+    # slicing :10 gives us the relevant parts
+    for item in items:
+        if (str(item['due_date_utc'])[:15] == today):
+        	if item['checked'] == 0:
+        		tasks_today.append(item)
+
+    # for item in items:
+    # 	print(item['content'],item['due_date_utc'])
+
+    return tasks_today
+
+def print_today_tasks():
+    tasks = get_today_tasks()
+
+    if tasks == []:
+    	print("Nothing to do!")
+
+    for task in tasks:
+        print(task['content'])
+
+print_today_tasks()
 
 
-# code to pull in id (str(item['id'])
+
+
+

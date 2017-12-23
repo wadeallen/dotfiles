@@ -27,3 +27,5 @@
 [keepass] /usr/bin/keepassx
 [scans] xdg-open /home/wadeallen/Dropbox/Scans
 [find] dmenu_extended_run
+[common prayer] xdg-open http://commonprayer.net/
+
