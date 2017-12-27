@@ -44,12 +44,31 @@ stories = glob.glob(path)
 stories =  sorted(stories)
 
 # Sort out Stories for Website
+website_dir = '/home/wadeallen/Dropbox/Stories/news/'
+os.system('rm ' + website_dir + '*.md')
 for story in stories:
 	post = frontmatter.load(story)
 	if 'website' in post['publications']:
 		title = post['title']
 		slug = format_slug(title)
-		print(title, slug + '.md')
+		filename = website_dir + slug + '.md'
+		target = open (filename, 'w')
+		target.write("---\n")
+		target.write("title: {}\n".format(title))
+		target.write("weight: {}\n".format(post['weight']))
+		target.write("---\n")
+		target.write("\n")
+		target.write(post.content)
+		target.close()
+
+
+
+# for story in stories:
+# 	post = frontmatter.load(story)
+# 	if 'website' in post['publications']:
+# 		title = post['title']
+# 		slug = format_slug(title)
+# 		os.system('cp ' + story + ' news/' + slug + '.md')  
 
 # for story in stories:
 # 	post = frontmatter.load(story)

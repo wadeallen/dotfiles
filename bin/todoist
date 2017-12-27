@@ -17,8 +17,6 @@ def get_today_tasks():
     today = datetime.utcnow() + timedelta(hours=20)
     today = today.strftime("%a %d %b %Y")
 
-    print(today)
-
     # NB: item['due_date_utc'] is unicode; we cast to str for this comparison
     # slicing :10 gives us the relevant parts
     for item in items:
