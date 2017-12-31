@@ -8,6 +8,7 @@ then
 	exit 0
 fi
 
+wget -O cct.csv https://docs.google.com/spreadsheets/d/1kh_tGFIdmzwqxuNObYjfC3hiUduSKwS60-768Z1BKoo/export?format=csv &&
 
 fileroot=$(echo ${filename%.*})
 

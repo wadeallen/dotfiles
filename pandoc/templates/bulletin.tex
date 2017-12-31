@@ -14,6 +14,8 @@ letterpaper,
 % added to float pictures and put border around them
 %package for spreadsheet data
 \usepackage{csvsimple}
+%package for sorting out data from csv
+\usepackage{datatool}
 % added to float pictures and put border around them
 \usepackage{float}
 \floatstyle{boxed}
@@ -82,6 +84,9 @@ letterpaper,
 
 \renewcommand{\familydefault}{\sfdefault}
 
+% Load CCT information from csv file
+\DTLloaddb{cct}{cct.csv}
+
 \begin{document}
 
 \begin{titlepage}
@@ -138,13 +143,14 @@ $body$
 \end{tabular}
 
 \section{Church Coordination Team}
+
 \begin{tabular}{@{}ll}
-\textsc{Moderator} Molly Flodder & \textsc{Treasurer} Dan Lemen\\
-\textsc{Clerk} Patty Russell & \textsc{Worship} Adam Fink\\
-\textsc{Care} Barbara Campbell & \textsc{Adult} Julie Davis \\
-\textsc{Children} Colleen Massoth & \textsc{Youth} Melanie Graham \\
-\textsc{Property} Joe Songer & \textsc{Outreach} Wes Russell \\
-\textsc{At-Large} Bill Eidson & \textsc{At-Large} Ray Conley \\
+\textsc{Moderator} \DTLfetch{cct}{Position}{Moderator}{Name} & \textsc{Treasurer} \DTLfetch{cct}{Position}{Treasurer}{Name} \\
+\textsc{Clerk} \DTLfetch{cct}{Position}{Clerk}{Name} & \textsc{Worship} \DTLfetch{cct}{Position}{Worship}{Name} \\
+\textsc{Care} \DTLfetch{cct}{Position}{Care}{Name} & \textsc{Adult} \DTLfetch{cct}{Position}{Adult}{Name} \\
+\textsc{Children} \DTLfetch{cct}{Position}{Children}{Name} & \textsc{Youth} \DTLfetch{cct}{Position}{Youth}{Name} \\
+\textsc{Property} \DTLfetch{cct}{Position}{Property}{Name} & \textsc{Outreach} \DTLfetch{cct}{Position}{Outreach}{Name} \\
+\textsc{At-Large} \DTLfetch{cct}{Position}{At-Large-Early}{Name} & \textsc{At-Large} \DTLfetch{cct}{Position}{At-Large-Late}{Name} \\
 \end{tabular}
 
 \medskip

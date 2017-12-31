@@ -9,7 +9,7 @@ name = sys.argv[1]
 email_address = ''
 subject = 'Happy Birthday ' + name
 message = ('Hi ' + name + ' %0A%0A' \
-	'Christy and I would like to wish you a Happy Birthday! %0A%0A' \
+	'Christy and I would like to wish you a happy birthday! %0A%0A' \
 	'We hope you have a great day today.%0A%0A' \
 	'Wade and Christy')
 
