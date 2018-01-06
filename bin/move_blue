@@ -8,9 +8,9 @@
 # 	exit 0
 # fi
 
-for filename in ./The.Big*.mkv; do
+for filename in ./*.mkv; do
   fileroot=$(echo ${filename%.*})
-  scp ${filename} pi@192.168.1.128:/home/pi/TV/Big_Bang_Theory/
+  scp ${filename} pi@192.168.1.128:/home/pi/TV/Blue_Bloods/
 done
 
 

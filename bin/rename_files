@@ -5,8 +5,8 @@
 # done
 
 
-for file in *HDTV*; do
-    mv "$file" "${file/.HDTV.x264-SVA/}"
+for file in *hdtv*; do
+    mv "$file" "${file/.hdtv-lol/}"
 done
 
 # Seinfeld.S06E01.720p.WebRip.ReEnc-DeeJayAhmed.mkv
