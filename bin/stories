@@ -19,7 +19,11 @@ def format_slug(text):
 	return slug
 
 # move to directory in Dropbox to do the work
-os.chdir('/home/wadeallen/Dropbox/Stories')
+stories_dir = '/home/wadeallen/Dropbox/Stories/'
+os.chdir(stories_dir)
+
+# delete old files
+os.system('rm ' + stories_dir + '*.md')
 
 # file downloaded from Google Docs and stored as local text file
 # it is worth noting that the Google Doc must be shared with an editable link
@@ -44,7 +48,7 @@ stories = glob.glob(path)
 stories =  sorted(stories)
 
 # Sort out Stories for Website
-website_dir = '/home/wadeallen/Dropbox/Stories/news/'
+website_dir = '/home/wadeallen/Sites/2017_Church/_news/'
 os.system('rm ' + website_dir + '*.md')
 for story in stories:
 	post = frontmatter.load(story)
@@ -58,22 +62,36 @@ for story in stories:
 		target.write("weight: {}\n".format(post['weight']))
 		target.write("---\n")
 		target.write("\n")
+		# replaces content of print with website version of file
+		post.content = re.sub(r'\[print:(.*?)\]*\[website:(.*?)\]', r'\2', post.content.rstrip())
 		target.write(post.content)
 		target.close()
 
+# Create LaTeX file for Bulletin
+bulletin_path = '/home/wadeallen/Dropbox/Pandoc/Pandoc_Bulletin/'
+os.system('rm ' + bulletin_path + 'articles.txt')
+for story in stories:
+	post = frontmatter.load(story)
+	if 'bulletin' in post['publications']:
+		title = post['title']
+		with open(bulletin_path + "articles.txt", "a") as bulletin_file:
+			bulletin_file.write('\\vfill\n\n')
+			bulletin_file.write('## ' + title + '\n\n')
+			post.content = re.sub(r'\[print:(.*?)\]\[website:(.*?)\]', r'\1', post.content.rstrip())
+			bulletin_file.write(post.content + '\n\n')
 
-
-# for story in stories:
-# 	post = frontmatter.load(story)
-# 	if 'website' in post['publications']:
-# 		title = post['title']
-# 		slug = format_slug(title)
-# 		os.system('cp ' + story + ' news/' + slug + '.md')  
-
-# for story in stories:
-# 	post = frontmatter.load(story)
-# 	if 'visitor' in post['publications']:
-# 		print(post['title'], sep='\n')
+# Create file for Visitor
+visitor_path = '/home/wadeallen/Dropbox/Pandoc/Pandoc_Visitor/'
+os.system('rm ' + visitor_path + 'articles.txt')
+for story in stories:
+	post = frontmatter.load(story)
+	if 'visitor' in post['publications']:
+		title = post['title']
+		with open(visitor_path + "articles.txt", "a") as bulletin_file:
+			bulletin_file.write('\n\n')
+			bulletin_file.write('# ' + title + '\n\n')
+			post.content = re.sub(r'\[print:(.*?)\]\[website:(.*?)\]', r'\1', post.content.rstrip())
+			bulletin_file.write(post.content + '\n\n')
 
 
 
