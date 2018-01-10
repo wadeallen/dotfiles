@@ -63,7 +63,7 @@ for story in stories:
 		target.write("---\n")
 		target.write("\n")
 		# replaces content of print with website version of file
-		post.content = re.sub(r'\[print:(.*?)\]*\[website:(.*?)\]', r'\2', post.content.rstrip())
+		post.content = re.sub(r'\{\{print:(.*?)\}\}*\{\{website:(.*?)\}\}', r'\2', post.content.rstrip())
 		target.write(post.content)
 		target.close()
 
@@ -77,7 +77,7 @@ for story in stories:
 		with open(bulletin_path + "articles.txt", "a") as bulletin_file:
 			bulletin_file.write('\\vfill\n\n')
 			bulletin_file.write('## ' + title + '\n\n')
-			post.content = re.sub(r'\[print:(.*?)\]\[website:(.*?)\]', r'\1', post.content.rstrip())
+			post.content = re.sub(r'\{\{print:(.*?)\}\}*\{\{website:(.*?)\}\}', r'\1', post.content.rstrip())
 			bulletin_file.write(post.content + '\n\n')
 
 # Create file for Visitor

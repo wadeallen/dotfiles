@@ -1,8 +1,8 @@
 
 Maid.rules do
 
-  rule 'move 2017 journal files into folder' do
-    move(dir('~/Dropbox/Journal/2017*.markdown'), '~/Dropbox/Journal/2017')
+  rule 'move 2018 journal files into folder' do
+    move(dir('~/Dropbox/Journal/2018*.markdown'), '~/Dropbox/Journal/2018')
   end
 
   rule 'move Thrivent Credit Union into folder' do

@@ -1,13 +1,16 @@
 #!/usr/bin/env bash 
 
 DIRECTORY=$HOME/Dropbox/Pandoc/Pandoc_Prayer_List/
+YEAR=$(date -d 'sun' +'%Y')
+MONTH=$(date -d 'sun' +'%m')
+DAY=$(date -d 'sun' +'%d')
 
 
 cd $DIRECTORY &&
 wget -O Prayer_List.txt https://docs.google.com/document/d/1w6z_D6MPedilpVZjoRfkwsbvXmsNSjrHKFDwasE5SeQ/export?format=txt &&
 # $HOME/Scripts/gdatacopier-2.1.2/gcp.py wadesallen@gmail.com:/docs/Pastoral_Care/Prayer_List* -p etcitrwggozcxogd $DIRECTORY -f txt &&
 perl -pi -e "s/’/'/g" Prayer_List.txt &&
-pandoc $DIRECTORY/Prayer_List.txt -o prayer_list.pdf --template prayer_list_template.tex &&
+pandoc $DIRECTORY/Prayer_List.txt -o prayer_list.pdf --template prayer_list_template.tex -V year:$YEAR -V month:$MONTH -V day:$DAY &&
 rm $DIRECTORY/Prayer_List.txt &&
 pdflatex $DIRECTORY/prayer_list_print.tex &&
 rm $DIRECTORY/prayer_list_print.log &&

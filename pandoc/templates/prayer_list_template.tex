@@ -42,8 +42,11 @@
 %%no page numbers
 \pagestyle{empty}           
 
+%% get Sunday's date
+\newcommand{\mydate}{\formatdate{$day$}{$month$}{$year$}}
+
 \begin{document}   
-  
+
 \newdateformat{prayerlistdate}{%
 \monthname[\THEMONTH] \THEDAY\, \THEYEAR}
 
@@ -53,7 +56,7 @@
 \end{minipage}}
 {\begin{minipage}[t]{3in}
 \vspace{0in} \fontsize{20}{15}\selectfont Prayer List \\
-\fontsize{12}{9}\textsc{\prayerlistdate \today}
+  \fontsize{12}{9}\textsc{\prayerlistdate \mydate }
 \end{minipage}}
 \end{figure}      
 
