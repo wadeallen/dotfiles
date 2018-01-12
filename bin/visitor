@@ -16,6 +16,7 @@ esac
 
 cd $DIRECTORY
 # wget -O Visitor.txt https://docs.google.com/document/d/1im1OZ0ol56PP9y0uyvq-2ih3W8G5tiHFdaioL-vTlso/export?format=txt
+python3 $HOME/bin/stories
 pandoc $DIRECTORY/articles.txt -o Visitor.pdf --template visitor
 mv Visitor.pdf $HOME/Desktop/visitor_${NEXT_MONTH}.pdf
 # rm Visitor.txt

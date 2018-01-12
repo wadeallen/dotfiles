@@ -92,13 +92,19 @@ for story in stories:
 	post = frontmatter.load(story)
 	if 'visitor' in post['publications']:
 		title = post['title']
+		# makes all of the titles titlecase
 		title = titlecase(title)
+		# for these articles, the print section is used and the website section is taken out
 		content = re.sub(r'\{\{print:(.*?)\}\}*\{\{website:(.*?)\}\}', r'\1', post.content.rstrip())
+		# forms a sublist that includes title[0], content[1], weight[2]
 		article = [title, content, post['weight']]
+		# builds the article list with a sublist of each article
 		article_list.append(article)
 
+# sorts articles by weight[2]
 article_list.sort(key=lambda x: int(x[2]))
 
+# interates through each article (sorted by weight) and places them in the articles.txt file to be compiled by the visitor script
 for article in article_list:
 	with open(visitor_path + "articles.txt", "a") as bulletin_file:
 			bulletin_file.write('\n\n')
