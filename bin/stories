@@ -5,6 +5,8 @@ import os
 import glob
 import wget
 import re
+from titlecase import titlecase
+import operator 
 
 # surpresses the download message of files
 def bar_none(current, total, width=80):                                                                                                                                                         
@@ -54,6 +56,7 @@ for story in stories:
 	post = frontmatter.load(story)
 	if 'website' in post['publications']:
 		title = post['title']
+		title = titlecase(title)
 		slug = format_slug(title)
 		filename = website_dir + slug + '.md'
 		target = open (filename, 'w')
@@ -74,8 +77,9 @@ for story in stories:
 	post = frontmatter.load(story)
 	if 'bulletin' in post['publications']:
 		title = post['title']
+		title = titlecase(title)
 		with open(bulletin_path + "articles.txt", "a") as bulletin_file:
-			bulletin_file.write('\\vfill\n\n')
+			bulletin_file.write('\\vspace{\\fill}\n\n')
 			bulletin_file.write('## ' + title + '\n\n')
 			post.content = re.sub(r'\{\{print:(.*?)\}\}*\{\{website:(.*?)\}\}', r'\1', post.content.rstrip())
 			bulletin_file.write(post.content + '\n\n')
@@ -83,15 +87,22 @@ for story in stories:
 # Create file for Visitor
 visitor_path = '/home/wadeallen/Dropbox/Pandoc/Pandoc_Visitor/'
 os.system('rm ' + visitor_path + 'articles.txt')
+article_list = []
 for story in stories:
 	post = frontmatter.load(story)
 	if 'visitor' in post['publications']:
 		title = post['title']
-		with open(visitor_path + "articles.txt", "a") as bulletin_file:
-			bulletin_file.write('\n\n')
-			bulletin_file.write('# ' + title + '\n\n')
-			post.content = re.sub(r'\[print:(.*?)\]\[website:(.*?)\]', r'\1', post.content.rstrip())
-			bulletin_file.write(post.content + '\n\n')
+		title = titlecase(title)
+		content = re.sub(r'\{\{print:(.*?)\}\}*\{\{website:(.*?)\}\}', r'\1', post.content.rstrip())
+		article = [title, content, post['weight']]
+		article_list.append(article)
 
+article_list.sort(key=lambda x: int(x[2]))
+
+for article in article_list:
+	with open(visitor_path + "articles.txt", "a") as bulletin_file:
+			bulletin_file.write('\n\n')
+			bulletin_file.write('# ' + article[0] + '\n\n')
+			bulletin_file.write(article[1] + '\n\n')
 
 

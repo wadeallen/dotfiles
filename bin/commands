@@ -8,7 +8,6 @@
 [gathering] xdg-open https://docs.google.com/spreadsheets/d/1GXm78GK_nEKgrY8hIc96UQsPotpN52ZisOT3-GhQNJs/edit
 [mileage] xdg-open https://docs.google.com/spreadsheets/d/1zzhGL1Uqc_uzDKjJu7BVHUuC5IqQsrXFCTJAsnwrDmk
 [prayer list] xdg-open https://docs.google.com/document/d/1w6z_D6MPedilpVZjoRfkwsbvXmsNSjrHKFDwasE5SeQ/edit 
-[bulletin] xdg-open https://docs.google.com/document/d/1pqVUPNIRVxPRoO-lqGPDlAuJ-qGCE5BT7qOT72u-EDQ
 [lectionary] xdg-open http://lectionary.library.vanderbilt.edu/
 [bible] /home/wadeallen/bin/bible
 [read] xdg-open https://read.amazon.com/
@@ -29,3 +28,4 @@
 [find] dmenu_extended_run
 [common prayer] xdg-open http://commonprayer.net/
 [stories] xdg-open https://docs.google.com/document/d/1gKLaR2rWaPUAiBeqDUqhrrEDuw0g11Q9N2mp4GcFSLc/edit
+[bulletin] /usr/bin/subl /home/wadeallen/Dropbox/Pandoc/Pandoc_Bulletin/includes/optional.tex
