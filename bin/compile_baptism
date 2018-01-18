@@ -3,5 +3,5 @@
 directory='/home/wadeallen/Dropbox/Administration/Certificates/Baptism'
 
 cd ${directory}
-pandoc information.md -o ~/Desktop/baptism.pdf --latex-engine=xelatex --template=baptism.tex
+pandoc information.md -o ~/Desktop/baptism.pdf --pdf-engine=xelatex --template=baptism.tex
 echo "Baptism Certificate Compiled on Desktop"

@@ -17,7 +17,8 @@ case $OS in
 		;;
 esac
 
-cd $DIRECTORY
+cd $DIRECTORY &&
+python3 /home/wadeallen/bin/stories &&
 # wget -O Bulletin.txt https://docs.google.com/document/d/1pqVUPNIRVxPRoO-lqGPDlAuJ-qGCE5BT7qOT72u-EDQ/export?format=txt &&
 # wget -O Nursery_Volunteers.csv https://docs.google.com/spreadsheets/d/1OUqqFVGzVJwzf4-YOLL05WrKJKTQNIgULMjTKeNRgiY/export?format=csv &&
 wget -O cct.csv https://docs.google.com/spreadsheets/d/1kh_tGFIdmzwqxuNObYjfC3hiUduSKwS60-768Z1BKoo/export?format=csv &&
@@ -29,7 +30,6 @@ wget -O cct.csv https://docs.google.com/spreadsheets/d/1kh_tGFIdmzwqxuNObYjfC3hi
 # sed -n '1pw3p' Nursery_Volunteers.csv > next_week.csv
 # pandoc $DIRECTORY/Bulletin.txt -o $HOME/Desktop/bulletin_$SUNDAY.pdf --template bulletin.tex &&
 pandoc $DIRECTORY/articles.txt -o $HOME/Desktop/bulletin_$SUNDAY.pdf --template bulletin.tex &&
-python3 /home/wadeallen/bin/stories &&
 # mv $DIRECTORY/Bulletin.txt $ARCHIVE/Bulletin_$SUNDAY.txt
 cp $HOME/Desktop/bulletin_$SUNDAY.pdf $ARCHIVE/
 # rm $DIRECTORY/Nursery_Volunteers.csv

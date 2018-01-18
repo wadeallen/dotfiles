@@ -1,0 +1,13 @@
+#!/bin/bash
+
+for filename in ./blue.bloods.*.mkv; do
+  scp ${filename} pi@192.168.1.128:/home/pi/TV/Blue_Bloods/
+done
+
+for filename in ./The.Big.Bang.*.mkv; do
+  scp ${filename} pi@192.168.1.128:/home/pi/TV/Big_Bang_Theory/
+done
+
+for filename in ./Young.Sheldon.*.mkv; do
+  scp ${filename} pi@192.168.1.128:/home/pi/TV/Young_Sheldon/
+done

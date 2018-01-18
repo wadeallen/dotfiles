@@ -28,9 +28,13 @@ keepaspectratio]{/home/wadeallen/Dropbox/stationary.pdf}%
 
 \begin{document}
 \AddToShipoutPicture*{\BackgroundPic}
-\begin{letter}{}
+\begin{letter}
+{$organization$\\
+$address$\\[\baselineskip]
+{\bfseries Subject: $subject$}
+}
 
-\opening{$first_name$,}
+\opening{$salutation$,}
 % \opening{To Whom It May Concern:}
 
 $body$
@@ -66,7 +70,7 @@ $body$
 
 {
  \begin{textblock*}{3in}(.5in,1.75in)
- \noindent \bfseries \textsc{$full_name$} \\
+ \noindent \bfseries \textsc{$name$} \\
  \normalfont $address$
  \end{textblock*}
 }

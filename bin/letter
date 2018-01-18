@@ -4,6 +4,7 @@ import glob
 import os
 from datetime import date
 import subprocess
+import frontmatter
 
 def template_choice():
     template = input('What is the format of the letter? (st=stationary sa=stationary with address n=no stationary) ')
@@ -13,62 +14,8 @@ def template_choice():
     elif "st" in template:
         letter_template = 'letter_stationary.tex'
     else:
-        letter_template = 'letter.tex'
-
-if glob.glob('/home/wadeallen/Desktop/letter*.md'):
-    filepath = glob.glob('/home/wadeallen/Desktop/letter*.md')
-    file_md = filepath[0]
-    file_pdf = file_md.rsplit( ".", 1 )[ 0 ] + '.pdf'
-    infile = open(file_md, 'r')
-    firstLine = infile.readline().rstrip('\n').lstrip('% ')
-    address = infile.readline().rstrip('\n').lstrip('% ')
-    if "To Whom" in firstLine:
-        first_name = "To Whom It May Concern"
-        full_name = "To Whom It May Concern"
-    else:
-        first_name_sliced = firstLine.rsplit(' ', 1)[0]
-        first_name = 'Dear ' + first_name_sliced
-        full_name = firstLine
-
-    template_choice()
-        
-    subprocess.call([
-    "pandoc",
-    filepath[0],
-    "-o",
-    file_pdf,
-    '--template=' + letter_template,
-    '--variable=first_name:' + first_name,
-    '--variable=address:' + address,
-    '--variable=full_name:' + firstLine
-    ])
-    print('The letter has been recompiled with the edits . . .')
-else:
-    date = date.today().strftime("%Y-%m-%d")
-    recipient_name = input('Name of Recipient (leave blank for generic greeting): ')
-    default = 'To Whom It May Concern'
-    if not recipient_name:
-        recipient_name = default
-        first_name = default
-        slug = 'to-whom-it-may-concern'
-    else:
-        recipient_first = recipient_name.rsplit(' ', 1)[0]
-        recipient_split = recipient_name.split()
-        first_name = 'Dear ' + recipient_first
-        slug = ("-".join(recipient_split).lower())
-
-    address = input('Address (enter in format street \\ city, state zip):')
-    
-    filename =('/home/wadeallen/Desktop/letter-' + date + '-' + slug + '.md')
-    target = open (filename, 'w')
-    target.write("% {}\n% {}\n% {}\n\n\n".format(recipient_name, address, date))
-    target.close()
-
-    subprocess.call(['vim', '-c', '5', filename])
-
-    template_choice()
-
-    # subprocess.call(['vim', '-c', '5', filename])
+    	letter_template = 'letter.tex'
+    	
     out_file = ('/home/wadeallen/Desktop/letter-' + date + '-' + slug + '.pdf')
 
     subprocess.call([
@@ -77,9 +24,54 @@ else:
     "-o",
     out_file,
     '--template=' + letter_template,
-    '--variable=first_name:' + first_name,
+    '--variable=salutation:' + salutation,
     '--variable=address:' + address,
-    '--variable=full_name:' + recipient_name
+    '--variable=organization:' + organization,
+    '--variable=subject:' + subject,
+    '--variable=name:' + name
     ])
 
-    print('Success! You have written a letter to {}'.format(recipient_name))
+if glob.glob('/home/wadeallen/Desktop/letter*.md'):
+    filepath = glob.glob('/home/wadeallen/Desktop/letter*.md')
+    file_md = filepath[0]
+    file_pdf = file_md.rsplit( ".", 1 )[ 0 ] + '.pdf'
+    post = frontmatter.load(file_md)
+    infile = open(file_md, 'r')
+    salutation = post['salutation']
+    subject = post['subject']
+    name = post['name']
+    address = post['address']
+    organization = post['organization']
+    date = post['date'].strftime("%Y-%m-%d")
+    name_split = name.split()
+    organization_split = organization.split()
+    slug = ("-".join(name_split).lower()) + '-' + ("-".join(organization_split).lower())
+    filename =('/home/wadeallen/Desktop/letter-' + date + '-' + slug + '.md')
+
+    template_choice()
+
+else:
+    date = date.today().strftime("%Y-%m-%d")
+    name = input('Name of recipient (leave blank for generic greeting): ')
+    if name == '':
+    	name = 'To Whom It May Concern'
+    salutation = input('Salutation (leave blank for generic greeting): ')
+    if salutation == '':
+    	salutation = 'To Whom It May Concern'
+    name_split = name.split()
+    organization = input('Name of Organization: ')
+    if organization == '':
+    	organization = name   
+    address = input('Address (enter in format street \\\ city, state zip):')
+    subject = input('Subject (leave blank for no subject): ')  
+    organization_split = organization.split()
+    slug = ("-".join(name_split).lower()) + '-' + ("-".join(organization_split).lower())
+
+    filename =('/home/wadeallen/Desktop/letter-' + date + '-' + slug + '.md')
+    target = open (filename, 'w')
+    target.write("---\nname: {}\nsalutation: {}\norganization: {}\naddress: {}\nsubject: {}\ndate: {}\n---\n\n\n".format(name, salutation, organization, address, subject, date))
+    target.close()
+
+    subprocess.call(['vim', '-c', '5', filename])
+
+    template_choice()
