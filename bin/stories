@@ -106,9 +106,12 @@ article_list.sort(key=lambda x: int(x[2]))
 
 # interates through each article (sorted by weight) and places them in the articles.txt file to be compiled by the visitor script
 for article in article_list:
-	with open(visitor_path + "articles.txt", "a") as bulletin_file:
-			bulletin_file.write('\n\n')
-			bulletin_file.write('# ' + article[0] + '\n\n')
-			bulletin_file.write(article[1] + '\n\n')
+	with open(visitor_path + "articles.txt", "a") as visitor_file:
+			visitor_file.write('\n\n')
+			visitor_file.write('# ' + article[0] + '\n\n')
+			visitor_file.write(article[1] + '\n\n')
+
+with open(visitor_path + "articles.txt", "a") as visitor_file:
+	visitor_file.write('\n\input{includes/birthdays.tex}\n')
 
 

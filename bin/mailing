@@ -10,9 +10,9 @@ total_count = size -1
 mixed_zip = int(input('How many out of town Visitors? '))
 muncie_zip = total_count - mixed_zip
 # Calculates the postage for out of town Visitors (change the number if the rates change)
-b2_postage = mixed_zip * 0.184
+b2_postage = mixed_zip * 0.185
 # Calculates the postage for in town Visitors (change the number if the rates change)
-b5_postage = muncie_zip * 0.133
+b5_postage = muncie_zip * 0.141
 
 partB_total = b2_postage + b5_postage
 total_weight = total_count * .01

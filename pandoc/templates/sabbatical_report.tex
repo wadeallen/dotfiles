@@ -19,10 +19,13 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[twoside]{article}
+\documentclass[twoside, 12pt]{article}
 
 \usepackage{tabu}
 \usepackage{longtable}
+\usepackage{spreadtab}
+\usepackage{tabularx}
+\usepackage{numprint}
 
 \usepackage{blindtext} % Package to generate dummy text throughout this template 
 
@@ -121,22 +124,7 @@ $body$
 Name of Church: $church$ \\
 Grant Number: $number$ \\
 
-\begin{longtabu} to \linewidth {lX[2]lXl}
-
-\rowfont\bfseries Clergy Expenses & Total Grant Budget &  & Actual & Grant Balance \\ \hline 
-\endhead
-
-\\ \hline
-\multicolumn{5}{r}{There is more to come} \\
-\endfoot
-
-Travel & & & & \\
-Airfare & & & & \\
-Personal Car Mileage & & & & \\
-
-\\ \hline
-\endlastfoot
-\end{longtabu}
+\input{/home/wadeallen/Dropbox/Sabbatical_2017/Final_Reports/financials.tex}
 
 
 \end{document}

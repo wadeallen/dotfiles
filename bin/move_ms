@@ -2,15 +2,10 @@
 
 filename=$1
 
-if	[ -z "$filename" ]
-then
-	echo "Please enter file name"
-	exit 0
-fi
-
-
 fileroot=$(echo ${filename%.*})
 
-scp ${filename} pi@192.168.1.128:/home/pi/TV/Madam_Secretary/
 
-
+for filename in ./madam.s*.mkv; do
+  fileroot=$(echo ${filename%.*})
+  scp ${filename} pi@192.168.1.128:/home/pi/TV/Madam_Secretary/
+done
