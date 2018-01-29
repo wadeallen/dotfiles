@@ -20,4 +20,4 @@ python3 $HOME/bin/stories
 pandoc $DIRECTORY/articles.txt -o Visitor.pdf --template visitor
 mv Visitor.pdf $HOME/Desktop/visitor_${NEXT_MONTH}.pdf
 # rm Visitor.txt
-rm articles.txt
+# rm articles.txt

@@ -243,4 +243,6 @@ let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc" 
 let g:html_indent_inctags = "html,body,head"
 
+" set journal filetype
+au BufNewFile,BufRead *.journal.markdown setf journal
 

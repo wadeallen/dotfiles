@@ -17,12 +17,12 @@ monday = monday.strftime(path_format)
 tuesday = today + relativedelta(weekday=TU(-1))
 tuesday = tuesday.strftime(path_format)
 
-
 path = ('/home/wadeallen/Sites/2017_Church/_posts/{}-*.markdown'.format(monday))
-if os.path.isfile(path):
+
+if glob.glob(path):
 	files = glob.glob(path)
 	day = monday
-else:# pyperclip.copy(lines)
+else:
 	path = ('/home/wadeallen/Sites/2017_Church/_posts/{}-*.markdown'.format(tuesday))
 	files = glob.glob(path)
 	day = tuesday

@@ -12,7 +12,7 @@ format = "%B"
 next_month = today + relativedelta.relativedelta(months=1)
 n_month = next_month.strftime(format)
 
-email_address = 'magandaphotos@aol.com, kpetroviak@muncieymca.org, jdd613@gmail.com, flodder@comcast.net'
+email_address = 'magandaphotos@gmail.com, kpetroviak@muncieymca.org, jdd613@gmail.com, flodder@comcast.net'
 
 subject = 'Editing {} Visitor'.format(next_month.strftime(format))
 message = ('Hello Editing Team%0A%0A' \

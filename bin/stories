@@ -94,10 +94,15 @@ for story in stories:
 		title = post['title']
 		# makes all of the titles titlecase
 		title = titlecase(title)
+		if post.get('picture') != None:
+			picture = post.get('picture')
+		else:
+			picture = 'no picture'
 		# for these articles, the print section is used and the website section is taken out
 		content = re.sub(r'\{\{print:(.*?)\}\}*\{\{website:(.*?)\}\}', r'\1', post.content.rstrip())
+		content = content.replace(r"\n", r"\n\n")
 		# forms a sublist that includes title[0], content[1], weight[2]
-		article = [title, content, post['weight']]
+		article = [title, content, post['weight'], picture]
 		# builds the article list with a sublist of each article
 		article_list.append(article)
 
@@ -109,6 +114,10 @@ for article in article_list:
 	with open(visitor_path + "articles.txt", "a") as visitor_file:
 			visitor_file.write('\n\n')
 			visitor_file.write('# ' + article[0] + '\n\n')
+			if article[3] != 'no picture':
+				visitor_file.write('\\begin{wrapfigure}{r}{3cm}\n')
+				visitor_file.write('\includegraphics[width=3cm]{people/' + article[3] + '}\n')
+				visitor_file.write('\end{wrapfigure}\n\n')
 			visitor_file.write(article[1] + '\n\n')
 
 with open(visitor_path + "articles.txt", "a") as visitor_file:
