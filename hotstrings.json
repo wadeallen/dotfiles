@@ -39,6 +39,7 @@
     "#bal": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/balance_sheet.py"],
     "#nremind": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/reminder_calls.py"],
     "#nsign": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/sign_in_sheets.py"],
-    ",sun": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/next_sunday.py"]
+    ",sun": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/next_sunday.py"],
+    ",ns": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/new_story.py"]
 }
 
