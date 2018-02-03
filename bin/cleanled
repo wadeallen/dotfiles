@@ -5,11 +5,11 @@ NEW=$HOME/Dropbox/Ledger/copy_ledger.ledger
 CLEAN=$HOME/Dropbox/Ledger/clean_ledger.ledger
 HEADER=$HOME/Dropbox/Ledger/header.ledger
 
-# change '4,6d' to reflect the lines that contain include files
-sed '4,6d' $ORIG > $NEW
+# change '4,7d' to reflect the lines that contain yearly include files
+sed '4,7d' $ORIG > $NEW
 ledger -f $NEW --sort d print > $CLEAN
-# change "NR<=7" to reflect the lines that are in the header (including the blank line before the first transation)
-awk 'NR<=7' $ORIG > $HEADER
+# change "NR<=8" to reflect the lines that are in the header (including the blank line before the first transation)
+awk 'NR<=8' $ORIG > $HEADER
 cat $HEADER $CLEAN > $ORIG
 rm $HEADER $CLEAN $NEW
 

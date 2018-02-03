@@ -116,7 +116,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH="$PATH:$HOME/dotfiles/bin:$HOME/ledger:$HOME/wkhtmltox/bin"
+export PATH="$PATH:$HOME/dotfiles/bin:$HOME/ledger:$HOME/wkhtmltox/bin:$HOME/.gem/ruby/2.5.0/bin"
 export PI="pi@192.168.1.128"
 export IMAC="fbcmuncie@192.168.2.44:~/Desktop/"
 
@@ -138,8 +138,8 @@ ps1_hostname() {
 }
 
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+# export PATH="$HOME/.gem/ruby/2.5.0/bin"
+# eval "$(rbenv init -)"
+# export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
-export PATH="$HOME/.cabal-sandbox/bin:$PATH"
+# export PATH="$HOME/.cabal-sandbox/bin:$PATH"
