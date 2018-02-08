@@ -30,3 +30,4 @@
 [stories] xdg-open https://docs.google.com/document/d/1gKLaR2rWaPUAiBeqDUqhrrEDuw0g11Q9N2mp4GcFSLc/edit
 [bulletin] /usr/bin/subl3 /home/wadeallen/Dropbox/Pandoc/Pandoc_Bulletin/includes/optional.tex
 [desktop] xdg-open /home/wadeallen/Desktop
+[freeplane] /home/wadeallen/freeplane-1.6.13/freeplane.sh
