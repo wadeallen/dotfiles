@@ -14,3 +14,4 @@
     ~/.bashrc: bashrc
     ~/.bash_aliases: bash_aliases
     ~/.config/hotstrings.json: hotstrings.json
+    ~/.config/i3/config: i3config

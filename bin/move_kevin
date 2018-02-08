@@ -11,6 +11,7 @@ fi
 
 fileroot=$(echo ${filename%.*})
 
-scp ${filename} pi@192.168.1.128:/home/pi/TV/Kevin_Can_Wait/
-
-
+for filename in ./kevin.can*.mkv; do
+  fileroot=$(echo ${filename%.*})
+  scp ${filename} pi@192.168.1.128:/home/pi/TV/Kevin_Can_Wait//
+done

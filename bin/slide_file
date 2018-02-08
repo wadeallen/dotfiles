@@ -5,10 +5,12 @@ import subprocess
 import shutil
 import datetime
 from os.path import expanduser
+from dateutil.relativedelta import relativedelta, SU
 
 
 today = datetime.date.today()
-sunday = today + datetime.timedelta( (6-today.weekday()) % 7 )
+# sunday = today + datetime.timedelta( (6-today.weekday()) % 7 )
+sunday = today + relativedelta(weekday=SU(+1))
 home = expanduser("~")
 
 sermon_file = home + "/Dropbox/Administration/Markdown_Files/Sermon_Work/" + sunday.strftime('%Y-%m-%d') + "_sermon.md"

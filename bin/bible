@@ -7,12 +7,13 @@ else
 fi
 
 PASSAGE=`cat /home/wadeallen/Dropbox/books.txt | $DMENU -p Scripture:\  $*`
-PASSAGE=${PASSAGE// /+}
+PASSAGE_REF=${PASSAGE// /+}
 
 if [ -z "$PASSAGE" ]; then
   exit
 else
-  xdg-open "https://www.biblegateway.com/passage/?search=${PASSAGE}&version=NIV&interface=print"
+  i3-msg workspace 10:"${PASSAGE}" &
+  chromium --new-window "https://www.biblegateway.com/passage/?search=${PASSAGE_REF}&version=NIV&interface=print"
 fi
 
-
+# notify-send ${PASSAGE_REF} "${PASSAGE}" --icon=dialog-information
