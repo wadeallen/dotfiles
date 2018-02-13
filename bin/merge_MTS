@@ -1,4 +1,4 @@
 #!/bin/bash
 
-ffmpeg -i "concat:00005.MTS|00006.MTS" -c copy output.m2ts
+ffmpeg -i "concat:MVI_0019.MP4|MVI_0020.MP4" -c copy merged_output.MP4
 

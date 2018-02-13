@@ -12,8 +12,8 @@ PASSAGE_REF=${PASSAGE// /+}
 if [ -z "$PASSAGE" ]; then
   exit
 else
-  i3-msg workspace 10:"${PASSAGE}" &
-  chromium --new-window "https://www.biblegateway.com/passage/?search=${PASSAGE_REF}&version=NIV&interface=print"
+  # i3-msg workspace "${PASSAGE}" &
+  xdg-open "https://www.biblegateway.com/passage/?search=${PASSAGE_REF}&version=NIV&interface=print"
 fi
 
 # notify-send ${PASSAGE_REF} "${PASSAGE}" --icon=dialog-information

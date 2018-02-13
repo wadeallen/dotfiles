@@ -1,0 +1,4 @@
+#!/bin/bash
+
+i3-msg workspace 9:Todo &
+chromium --new-window http://todoist.com

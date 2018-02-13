@@ -3,7 +3,7 @@
 [firefox browser] firefox
 [calendar] /home/wadeallen/bin/open_calendar
 [gmail] /home/wadeallen/bin/open_gmail
-[todo] xdg-open http://todoist.com
+[todo] /home/wadeallen/bin/open_todoist
 [sms] /home/wadeallen/bin/open_sms
 [gathering] xdg-open https://docs.google.com/spreadsheets/d/1GXm78GK_nEKgrY8hIc96UQsPotpN52ZisOT3-GhQNJs/edit
 [mileage] xdg-open https://docs.google.com/spreadsheets/d/1zzhGL1Uqc_uzDKjJu7BVHUuC5IqQsrXFCTJAsnwrDmk
