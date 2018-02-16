@@ -1,10 +1,11 @@
-[terminal] mate-terminal
+[calculator] /usr/bin/gnome-calculator
+[terminal] /usr/bin/konsole
 [internet] xdg-open http://google.com
 [firefox browser] firefox
-[calendar] /home/wadeallen/bin/open_calendar
-[gmail] /home/wadeallen/bin/open_gmail
-[todo] /home/wadeallen/bin/open_todoist
-[sms] /home/wadeallen/bin/open_sms
+[calendar] xdg-open https://calendar.google.com/
+[gmail] xdg-open http://gmail.com
+[todo] xdg-open http://todoist.com
+[sms] xdg-open https://app.mysms.com
 [gathering] xdg-open https://docs.google.com/spreadsheets/d/1GXm78GK_nEKgrY8hIc96UQsPotpN52ZisOT3-GhQNJs/edit
 [mileage] xdg-open https://docs.google.com/spreadsheets/d/1zzhGL1Uqc_uzDKjJu7BVHUuC5IqQsrXFCTJAsnwrDmk
 [prayer list] xdg-open https://docs.google.com/document/d/1w6z_D6MPedilpVZjoRfkwsbvXmsNSjrHKFDwasE5SeQ/edit 
@@ -13,7 +14,7 @@
 [read] xdg-open https://read.amazon.com/
 [planning center] xdg-open https://www.planningcenteronline.com/dashboard/0
 [chase] xdg-open https://www.chase.com/
-[windows] thunar smb://wadeallen-pc/staff_desktop/
+[windows] dolphin smb://wadeallen-pc/staff_desktop/
 [credit card report] xdg-open https://docs.google.com/spreadsheets/d/1yZaYvvKZG_zbZa36Ipdt8DTpu0flT7l3Jm8JhLJ4f3o/
 [sermons] xdg-open /home/wadeallen/Dropbox/Sermons
 [slideshow] xdg-open http://wadeallen.github.io/slideshow/#/overview
@@ -23,11 +24,11 @@
 [insert] xdg-open https://docs.google.com/document/d/1WW3XE9y0MW6J_EJKVvJXIu3GRE9uY0ieVorfxDJvy-Q/edit
 [people] xdg-open https://people.planningcenteronline.com/people
 [visitor] xdg-open https://docs.google.com/document/d/1im1OZ0ol56PP9y0uyvq-2ih3W8G5tiHFdaioL-vTlso/edit
-[keepass] /usr/bin/keepassx2
+[keepass] /usr/bin/keepassx
 [scans] xdg-open /home/wadeallen/Dropbox/Scans
 [find] /home/wadeallen/bin/dmenu_extended_run
 [common prayer] xdg-open http://commonprayer.net/
 [stories] xdg-open https://docs.google.com/document/d/1gKLaR2rWaPUAiBeqDUqhrrEDuw0g11Q9N2mp4GcFSLc/edit
-[bulletin] /usr/bin/subl3 /home/wadeallen/Dropbox/Pandoc/Pandoc_Bulletin/includes/optional.tex
+[bulletin] /usr/bin/subl /home/wadeallen/Dropbox/Pandoc/Pandoc_Bulletin/includes/optional.tex
 [desktop] xdg-open /home/wadeallen/Desktop
 [freeplane] /home/wadeallen/freeplane-1.6.13/freeplane.sh

@@ -16,7 +16,7 @@
     "#meeting": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/cct_review.py"],
     "#visitor": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/email_visitor.py"],
     "#patty": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/email_patty.py"],
-    "visitordeadline": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/visitor_deadline.py"],
+    "visitordeadline": ["run-replace", "sh", "-c", "/home/wadeallen/bin/visitor_deadline"],
     "#giving": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/giving_report.py"],
     "#comcast": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/comcast.py"],
     "#thrivent": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/thrivent.py"],
