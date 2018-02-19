@@ -1,4 +1,3 @@
-[calculator] /usr/bin/gnome-calculator
 [terminal] /usr/bin/konsole
 [internet] xdg-open http://google.com
 [firefox browser] firefox
@@ -14,7 +13,7 @@
 [read] xdg-open https://read.amazon.com/
 [planning center] xdg-open https://www.planningcenteronline.com/dashboard/0
 [chase] xdg-open https://www.chase.com/
-[windows] dolphin smb://wadeallen-pc/staff_desktop/
+[windows] dolphin --split /home/wadeallen/Desktop smb://wadeallen-pc/staff_desktop/
 [credit card report] xdg-open https://docs.google.com/spreadsheets/d/1yZaYvvKZG_zbZa36Ipdt8DTpu0flT7l3Jm8JhLJ4f3o/
 [sermons] xdg-open /home/wadeallen/Dropbox/Sermons
 [slideshow] xdg-open http://wadeallen.github.io/slideshow/#/overview
@@ -25,10 +24,11 @@
 [people] xdg-open https://people.planningcenteronline.com/people
 [visitor] xdg-open https://docs.google.com/document/d/1im1OZ0ol56PP9y0uyvq-2ih3W8G5tiHFdaioL-vTlso/edit
 [keepass] /usr/bin/keepassx
-[scans] xdg-open /home/wadeallen/Dropbox/Scans
+[scans] dolphin /home/wadeallen/Dropbox/Scans 
 [find] /home/wadeallen/bin/dmenu_extended_run
 [common prayer] xdg-open http://commonprayer.net/
 [stories] xdg-open https://docs.google.com/document/d/1gKLaR2rWaPUAiBeqDUqhrrEDuw0g11Q9N2mp4GcFSLc/edit
 [bulletin] /usr/bin/subl /home/wadeallen/Dropbox/Pandoc/Pandoc_Bulletin/includes/optional.tex
 [desktop] xdg-open /home/wadeallen/Desktop
 [freeplane] /home/wadeallen/freeplane-1.6.13/freeplane.sh
+[downloads] xdg-open /home/wadeallen/Downloads

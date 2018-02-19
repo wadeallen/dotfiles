@@ -5,6 +5,10 @@ Maid.rules do
     move(dir('~/Dropbox/Journal/2018*.markdown'), '~/Dropbox/Journal/2018')
   end
 
+  rule 'move Benefit Wallet files into folder' do
+    move(dir('~/Dropbox/Scans/Benefit Wallet Receipt*.pdf'), '/home/wadeallen/Dropbox/Receipts/Medical/Benefit_Wallet')
+  end
+
   rule 'move Thrivent Credit Union into folder' do
     move(dir('~/Dropbox/Scans/Thrivent Credit Union*.pdf'), '/home/wadeallen/Dropbox/Statements/Thrivent Credit Union')
   end

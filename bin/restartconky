@@ -2,5 +2,5 @@
 
 killall conky 
 sleep 5
-conky -c /home/wadeallen/dotfiles/conky/mate_conky &
+conky -b -c /home/wadeallen/dotfiles/conky/conky-wade.conkyrc &
 exit 0

@@ -1,6 +1,6 @@
 #!/bin/bash
 
 
-for filename in ./dcs.legends*.mkv; do
+for filename in ./DCs.Legends.of.Tomorrow*.mkv; do
   scp ${filename} pi@192.168.1.128:/home/pi/TV/Legends/
 done

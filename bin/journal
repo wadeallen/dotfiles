@@ -13,9 +13,9 @@ today = date.today().strftime("%Y-%m-%d")
 filename =(home + '/Dropbox/Journal/' + today + '.journal.markdown')
 
 if os.path.isfile(filename):
-	subprocess.call(['vim', '-c', '3', filename])
+	subprocess.call(['vim', '-c', 'call AutoCorrect()',  filename])
 else:
 	target = open (filename, 'w')
 	target.write("Date: {}\n\n\n".format(today))
 	target.close()
-	subprocess.call(['vim', '-c', '3', filename])
+	subprocess.call(['vim', '-c', 'call AutoCorrect()', filename])
