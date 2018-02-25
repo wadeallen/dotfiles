@@ -16,7 +16,7 @@
 [windows] dolphin --split /home/wadeallen/Desktop smb://wadeallen-pc/staff_desktop/
 [credit card report] xdg-open https://docs.google.com/spreadsheets/d/1yZaYvvKZG_zbZa36Ipdt8DTpu0flT7l3Jm8JhLJ4f3o/
 [sermons] xdg-open /home/wadeallen/Dropbox/Sermons
-[slideshow] xdg-open http://wadeallen.github.io/slideshow/#/overview
+[slideshow] google-chrome http://wadeallen.github.io/slideshow/#/overview
 [shutdown] /home/wadeallen/bin/shutdownnow
 [sabbatical] xdg-open https://docs.google.com/spreadsheets/d/12Z6_RjpNSoVmslFH6edHBaYj6itevzOX3r7K2W7IKow/edit#gid=0
 [housing] xdg-open https://docs.google.com/spreadsheets/d/1Y0QWYW8P_cFDFcaVKSWr46YX0WJkb2tWUUiYUbEUZDg/edit  
@@ -30,5 +30,5 @@
 [stories] xdg-open https://docs.google.com/document/d/1gKLaR2rWaPUAiBeqDUqhrrEDuw0g11Q9N2mp4GcFSLc/edit
 [bulletin] /usr/bin/subl /home/wadeallen/Dropbox/Pandoc/Pandoc_Bulletin/includes/optional.tex
 [desktop] xdg-open /home/wadeallen/Desktop
-[freeplane] /home/wadeallen/freeplane-1.6.13/freeplane.sh
+[freeplane] /usr/bin/freeplane
 [downloads] xdg-open /home/wadeallen/Downloads

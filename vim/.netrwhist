@@ -1,8 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/home/wadeallen/.config/i3'
 let g:netrw_dirhist_2='/home/wadeallen/Sites/2017_Church/_includes'
 let g:netrw_dirhist_3='/home/wadeallen/bin'
 let g:netrw_dirhist_4='/home/wadeallen/dotfiles/snippets'
 let g:netrw_dirhist_5='/home/wadeallen/dotfiles'
 let g:netrw_dirhist_6='/home/wadeallen/bin'
+let g:netrw_dirhist_7='/home/wadeallen/dotfiles/conky'
