@@ -1,5 +1,5 @@
 #!/bin/bash
 
-# ffmpeg -i "concat:MVI_0024.MP4|MVI_0025.MP4" -c copy merged_output.MP4
+ffmpeg -i "concat:MVI_0029.MP4|MVI_0030.MP4" -c copy merged_output.MP4
 
-ffmpeg -i <(for f in ./*.MP4; do echo "file '$PWD/$f'"; done) -c copy merged_output.MP4
+# ffmpeg -i <(for f in *.MP4; do echo "$f"; done) -c copy merged_output.MP4
