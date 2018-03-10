@@ -1,5 +1,6 @@
 alias sw='cd $HOME/Dropbox/Administration/Markdown_Files/Sermon_Work/'
 alias site='cd $HOME/Sites/2017_Church'
+alias newsite='cd $HOME/Sites/2018_Church'
 alias cct='cd $HOME/Dropbox/Administration/CCT_Summaries/2018'
 alias ww='cd $HOME/Dropbox/Administration/Markdown_Files/Wedding_Work/'
 alias fw='cd $HOME/Dropbox/Administration/Markdown_Files/Funeral_Work/'

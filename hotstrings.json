@@ -4,7 +4,7 @@
     "-=" : ["replace", "- Wade"],
     "ddate": ["run-replace", "sh", "-c", "date +%F"],
     "pidate": ["run-replace", "sh", "-c", "/home/wadeallen/bin/choose_calendar.sh"],
-    "#church": ["run-replace", "sh", "-c", "echo Church Receipt `date +%F`.pdf"],
+    "#church": ["run-replace", "sh", "-c", "echo Church Receipt `date +%F`"],
     "#ae": ["run-replace", "sh", "-c", "echo American Eagle Statement `date +%F`.pdf"],
     "#att": ["run-replace", "sh", "-c", "echo ATT_Bill_`date +%F`.pdf"],
     "#target": ["run-replace", "sh", "-c", "echo Target Card `date +%F`.pdf"],

@@ -1,13 +1,50 @@
 #!/bin/bash
 
-for filename in ./blue.bloods.*.mkv; do
-  scp ${filename} pi@192.168.1.128:/home/pi/TV/Blue_Bloods/
-done
+cd $HOME/Downloads 
 
-for filename in ./The.Big.Bang.*.mkv; do
-  scp ${filename} pi@192.168.1.128:/home/pi/TV/Big_Bang_Theory/
-done
+# Move Blue Bloods to Plex Folder
 
-for filename in ./Young.Sheldon.*.mkv; do
-  scp ${filename} pi@192.168.1.128:/home/pi/TV/Young_Sheldon/
-done
+if [ -e ./blue.bloods.*.mkv ]
+then
+  for filename in ./blue.bloods.*.mkv; do
+    scp ${filename} pi@192.168.1.128:/home/pi/TV/Blue_Bloods/
+  done
+fi
+
+# Move Big Bang to Plex Folder
+
+if [ -e ./The.Big.Bang.*.mkv ]
+then
+  for filename in ./The.Big.Bang.*.mkv; do
+    scp ${filename} pi@192.168.1.128:/home/pi/TV/Big_Bang_Theory/
+  done
+fi
+
+# Move Young Sheldon to Plex Folder
+
+if [ -e ./Young.Sheldon.*.mkv ]
+then
+  for filename in ./Young.Sheldon.*.mkv; do
+    scp ${filename} pi@192.168.1.128:/home/pi/TV/Young_Sheldon/
+  done
+fi
+
+# Move Kevin Can Wait to Plex Folder
+
+if [ -e ./Kevin.Can.*.mkv ]
+then
+  for filename in ./Kevin.Can.*.mkv; do
+    scp ${filename} pi@192.168.1.128:/home/pi/TV/Kevin_Can_Wait/
+  done
+fi
+
+# Move Legends of Tomorrow to Plex Folder
+
+if [ -e ./DCs.Legends.of.Tomorrow*.mkv ]
+then
+  for filename in ./DCs.Legends.of.Tomorrow*.mkv; do
+    scp ${filename} pi@192.168.1.128:/home/pi/TV/Legends/
+  done
+fi
+
+
