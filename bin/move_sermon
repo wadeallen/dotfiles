@@ -1,8 +1,16 @@
 #!/bin/bash
 
+FILENAME=$1
 DATE=`date +"%Y-%m-%d"`
 
 cd /home/wadeallen/Sites/2017_Church/_worship
-mv ${DATE}-*.md /home/wadeallen/Sites/2017_Church/_posts/
+
+
+if	[ -z "$FILENAME" ]
+then
+  mv ${DATE}-*.md /home/wadeallen/Sites/2017_Church/_posts/
+else
+  mv ${FILENAME}-*.md /home/wadeallen/Sites/2017_Church/_posts/
+fi
 
 cd /home/wadeallen/Sites/2017_Church/_posts
