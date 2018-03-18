@@ -18,7 +18,7 @@ subject = 'CCT Meeting on ' + tuesday
 message = ('Hello Team %0A%0A' \
 	'I wanted to remind you that our next CCT meeting is ' + tuesday + ' at 7:00 PM in the church office. %0A%0A' \
 	'Please fill out the monthly report by replying to all with the following information: %0A%0A' \
-        'Area:' \
+        'Area:%0A%0A' \
         'Describe how you sense God moving your area of focus:%0A%0A' \
         'Describe how you sense God moving in our church:%0A%0A' \
         'Past: What has happened that needs to be shared?%0A%0A' \

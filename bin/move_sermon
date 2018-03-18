@@ -1,0 +1,8 @@
+#!/bin/bash
+
+DATE=`date +"%Y-%m-%d"`
+
+cd /home/wadeallen/Sites/2017_Church/_worship
+mv ${DATE}-*.md /home/wadeallen/Sites/2017_Church/_posts/
+
+cd /home/wadeallen/Sites/2017_Church/_posts
