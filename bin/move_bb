@@ -1,0 +1,5 @@
+#!/bin/bash
+
+  for filename in ./The.Big.Bang.*.mkv; do
+    scp ${filename} pi@192.168.1.128:/home/pi/TV/Big_Bang_Theory/
+  done

@@ -2,11 +2,11 @@
 
 from os.path import expanduser
 import os
-home = expanduser("~")
 import datetime
 import csv
 import subprocess
 
+home = expanduser("~")
 today = datetime.date.today()
 next_month = datetime.date.today() + datetime.timedelta(days=30)
 

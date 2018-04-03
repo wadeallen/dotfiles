@@ -1,8 +1,8 @@
 " ftplugin/mail.vim
-setl tw=72
-setl fo=watqc
-setl nojs
-setl nosmartindent
+" setl tw=72
+setl fo+=w
+" setl nojs
+" setl nosmartindent
 
 " add two blank lines if already content
 function! IsReply()
@@ -21,4 +21,5 @@ augroup mail_filetype
     autocmd! VimEnter /tmp/mutt* :call IsReply()
     autocmd VimEnter /tmp/mutt* :exe 'startinsert'
     autocmd VimEnter /tmp/mutt* :call AutoCorrect()
+    autocmd VimLeave /tmp/mutt* !/home/wadeallen/bin/email-process %
 augroup END

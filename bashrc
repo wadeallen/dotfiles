@@ -145,3 +145,5 @@ ps1_hostname() {
 # export PATH="$HOME/.cabal-sandbox/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+

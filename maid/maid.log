@@ -11766,3 +11766,528 @@ I, [2018-03-13T14:55:07.113154 #2267]  INFO -- Maid: Rule: move CareSource State
 I, [2018-03-13T14:55:07.113204 #2267]  INFO -- Maid: Rule: move MD Wise Statement into folder
 I, [2018-03-13T14:55:07.113274 #2267]  INFO -- Maid: Rule: move Vectren Bill into folder
 I, [2018-03-13T14:55:07.113329 #2267]  INFO -- Maid: Finished
+I, [2018-03-19T16:38:15.276080 #12933]  INFO -- Maid: v0.7.0
+I, [2018-03-19T16:38:15.276486 #12933]  INFO -- Maid: Started
+I, [2018-03-19T16:38:15.276548 #12933]  INFO -- Maid: Rule: move 2018 journal files into folder
+I, [2018-03-19T16:38:15.276683 #12933]  INFO -- Maid: move /home/wadeallen/Dropbox/Journal/2018-03-14.journal.markdown /home/wadeallen/Dropbox/Journal/2018
+I, [2018-03-19T16:38:15.276840 #12933]  INFO -- Maid: move /home/wadeallen/Dropbox/Journal/2018-03-15.journal.markdown /home/wadeallen/Dropbox/Journal/2018
+I, [2018-03-19T16:38:15.276916 #12933]  INFO -- Maid: move /home/wadeallen/Dropbox/Journal/2018-03-16.journal.markdown /home/wadeallen/Dropbox/Journal/2018
+I, [2018-03-19T16:38:15.277010 #12933]  INFO -- Maid: move /home/wadeallen/Dropbox/Journal/2018-03-17.journal.markdown /home/wadeallen/Dropbox/Journal/2018
+I, [2018-03-19T16:38:15.277080 #12933]  INFO -- Maid: move /home/wadeallen/Dropbox/Journal/2018-03-18.journal.markdown /home/wadeallen/Dropbox/Journal/2018
+I, [2018-03-19T16:38:15.277149 #12933]  INFO -- Maid: move /home/wadeallen/Dropbox/Journal/2018-03-19.journal.markdown /home/wadeallen/Dropbox/Journal/2018
+I, [2018-03-19T16:38:15.277212 #12933]  INFO -- Maid: Rule: move Benefit Wallet files into folder
+I, [2018-03-19T16:38:15.277313 #12933]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/Benefit Wallet Receipt 2018-03-14 Meijer.pdf' /home/wadeallen/Dropbox/Receipts/Medical/Benefit_Wallet
+I, [2018-03-19T16:38:15.277414 #12933]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/Benefit Wallet Receipt 2018-03-19 meijer.pdf' /home/wadeallen/Dropbox/Receipts/Medical/Benefit_Wallet
+I, [2018-03-19T16:38:15.277508 #12933]  INFO -- Maid: Rule: move Thrivent Credit Union into folder
+I, [2018-03-19T16:38:15.277592 #12933]  INFO -- Maid: Rule: move Ball State Credit Union into folder
+I, [2018-03-19T16:38:15.277650 #12933]  INFO -- Maid: Rule: move Hooser Healthwise into folder
+I, [2018-03-19T16:38:15.277706 #12933]  INFO -- Maid: Rule: move Forum Credit Union into folder
+I, [2018-03-19T16:38:15.277760 #12933]  INFO -- Maid: Rule: move reminder call sheets into folder
+I, [2018-03-19T16:38:15.277815 #12933]  INFO -- Maid: Rule: move nursery sign in sheets into folder
+I, [2018-03-19T16:38:15.277869 #12933]  INFO -- Maid: Rule: move giving reports into folder
+I, [2018-03-19T16:38:15.277994 #12933]  INFO -- Maid: Rule: move benefit wallet receipts into folder
+W, [2018-03-19T16:38:15.278071 #12933]  WARN -- Maid: skipping move because '/home/wadeallen/Dropbox/Receipts/Medical/Benefit Wallet Receipts' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2018-03-19T16:38:15.278095 #12933]  INFO -- Maid: Rule: move church receipts into folder
+I, [2018-03-19T16:38:15.278154 #12933]  INFO -- Maid: Rule: move housing receipts into folder
+I, [2018-03-19T16:38:15.278209 #12933]  INFO -- Maid: Rule: move Comcast Bill into folder
+I, [2018-03-19T16:38:15.278261 #12933]  INFO -- Maid: Rule: move Kohls Statement into folder
+I, [2018-03-19T16:38:15.278364 #12933]  INFO -- Maid: Rule: move American Eagle Statement into folder
+I, [2018-03-19T16:38:15.278419 #12933]  INFO -- Maid: Rule: move Indiana Michigan Power Statement into folder
+I, [2018-03-19T16:38:15.278480 #12933]  INFO -- Maid: Rule: move School Receipts into folder
+I, [2018-03-19T16:38:15.278535 #12933]  INFO -- Maid: Rule: move Yorktown Muncipal Utilities into folder
+I, [2018-03-19T16:38:15.278587 #12933]  INFO -- Maid: Rule: move Maurices Statement into folder
+I, [2018-03-19T16:38:15.278639 #12933]  INFO -- Maid: Rule: move Target Statement into folder
+I, [2018-03-19T16:38:15.278690 #12933]  INFO -- Maid: Rule: move TJ Maxx Statement into folder
+I, [2018-03-19T16:38:15.278742 #12933]  INFO -- Maid: Rule: move Victoria Secret Statement into folder
+I, [2018-03-19T16:38:15.278795 #12933]  INFO -- Maid: Rule: move Childrens Place Statement into folder
+I, [2018-03-19T16:38:15.278848 #12933]  INFO -- Maid: Rule: move ATT Statement into folder
+I, [2018-03-19T16:38:15.278897 #12933]  INFO -- Maid: Rule: move IU Health Statement into folder
+I, [2018-03-19T16:38:15.278951 #12933]  INFO -- Maid: Rule: move CareSource Statement into folder
+I, [2018-03-19T16:38:15.279003 #12933]  INFO -- Maid: Rule: move MD Wise Statement into folder
+I, [2018-03-19T16:38:15.279055 #12933]  INFO -- Maid: Rule: move Vectren Bill into folder
+I, [2018-03-19T16:38:15.279108 #12933]  INFO -- Maid: Finished
+I, [2018-03-19T16:38:50.992264 #13082]  INFO -- Maid: v0.7.0
+I, [2018-03-19T16:38:50.992345 #13082]  INFO -- Maid: Started
+I, [2018-03-19T16:38:50.992383 #13082]  INFO -- Maid: Rule: move 2018 journal files into folder
+I, [2018-03-19T16:38:50.992499 #13082]  INFO -- Maid: Rule: move Benefit Wallet files into folder
+I, [2018-03-19T16:38:50.992570 #13082]  INFO -- Maid: Rule: move Thrivent Credit Union into folder
+I, [2018-03-19T16:38:50.992638 #13082]  INFO -- Maid: Rule: move Ball State Credit Union into folder
+I, [2018-03-19T16:38:50.992703 #13082]  INFO -- Maid: Rule: move Hooser Healthwise into folder
+I, [2018-03-19T16:38:50.992786 #13082]  INFO -- Maid: Rule: move Forum Credit Union into folder
+I, [2018-03-19T16:38:50.992850 #13082]  INFO -- Maid: Rule: move reminder call sheets into folder
+I, [2018-03-19T16:38:50.992915 #13082]  INFO -- Maid: Rule: move nursery sign in sheets into folder
+I, [2018-03-19T16:38:50.992978 #13082]  INFO -- Maid: Rule: move giving reports into folder
+I, [2018-03-19T16:38:50.993068 #13082]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/2018-03-11 Giving Report.pdf' '/home/wadeallen/Dropbox/Administration/Giving Reports'
+I, [2018-03-19T16:38:50.993194 #13082]  INFO -- Maid: Rule: move benefit wallet receipts into folder
+W, [2018-03-19T16:38:50.993301 #13082]  WARN -- Maid: skipping move because '/home/wadeallen/Dropbox/Receipts/Medical/Benefit Wallet Receipts' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2018-03-19T16:38:50.993338 #13082]  INFO -- Maid: Rule: move church receipts into folder
+I, [2018-03-19T16:38:50.993420 #13082]  INFO -- Maid: Rule: move housing receipts into folder
+I, [2018-03-19T16:38:50.993500 #13082]  INFO -- Maid: Rule: move Comcast Bill into folder
+I, [2018-03-19T16:38:50.993576 #13082]  INFO -- Maid: Rule: move Kohls Statement into folder
+I, [2018-03-19T16:38:50.993651 #13082]  INFO -- Maid: Rule: move American Eagle Statement into folder
+I, [2018-03-19T16:38:50.993728 #13082]  INFO -- Maid: Rule: move Indiana Michigan Power Statement into folder
+I, [2018-03-19T16:38:50.993825 #13082]  INFO -- Maid: Rule: move School Receipts into folder
+I, [2018-03-19T16:38:50.993925 #13082]  INFO -- Maid: Rule: move Yorktown Muncipal Utilities into folder
+I, [2018-03-19T16:38:50.994008 #13082]  INFO -- Maid: Rule: move Maurices Statement into folder
+I, [2018-03-19T16:38:50.994081 #13082]  INFO -- Maid: Rule: move Target Statement into folder
+I, [2018-03-19T16:38:50.994151 #13082]  INFO -- Maid: Rule: move TJ Maxx Statement into folder
+I, [2018-03-19T16:38:50.994286 #13082]  INFO -- Maid: Rule: move Victoria Secret Statement into folder
+I, [2018-03-19T16:38:50.994361 #13082]  INFO -- Maid: Rule: move Childrens Place Statement into folder
+I, [2018-03-19T16:38:50.994433 #13082]  INFO -- Maid: Rule: move ATT Statement into folder
+I, [2018-03-19T16:38:50.994506 #13082]  INFO -- Maid: Rule: move IU Health Statement into folder
+I, [2018-03-19T16:38:50.994579 #13082]  INFO -- Maid: Rule: move CareSource Statement into folder
+I, [2018-03-19T16:38:50.994688 #13082]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/CareSource Health Insurance 2018-03-19.pdf' /home/wadeallen/Dropbox/Receipts/Insurance/CareSource
+I, [2018-03-19T16:38:50.994817 #13082]  INFO -- Maid: Rule: move MD Wise Statement into folder
+I, [2018-03-19T16:38:50.994898 #13082]  INFO -- Maid: Rule: move Vectren Bill into folder
+I, [2018-03-19T16:38:50.994973 #13082]  INFO -- Maid: Finished
+I, [2018-03-21T14:18:16.343767 #1387]  INFO -- Maid: v0.7.0
+I, [2018-03-21T14:18:16.344019 #1387]  INFO -- Maid: Started
+I, [2018-03-21T14:18:16.344050 #1387]  INFO -- Maid: Rule: move 2018 journal files into folder
+I, [2018-03-21T14:18:16.344167 #1387]  INFO -- Maid: move /home/wadeallen/Dropbox/Journal/2018-03-21.journal.markdown /home/wadeallen/Dropbox/Journal/2018
+I, [2018-03-21T14:18:16.344296 #1387]  INFO -- Maid: Rule: move Benefit Wallet files into folder
+I, [2018-03-21T14:18:16.344405 #1387]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/Benefit Wallet Receipt 2018-03-21 IU Health.pdf' /home/wadeallen/Dropbox/Receipts/Medical/Benefit_Wallet
+I, [2018-03-21T14:18:16.344501 #1387]  INFO -- Maid: Rule: move Thrivent Credit Union into folder
+I, [2018-03-21T14:18:16.344601 #1387]  INFO -- Maid: Rule: move Ball State Credit Union into folder
+I, [2018-03-21T14:18:16.344662 #1387]  INFO -- Maid: Rule: move Hooser Healthwise into folder
+I, [2018-03-21T14:18:16.344720 #1387]  INFO -- Maid: Rule: move Forum Credit Union into folder
+I, [2018-03-21T14:18:16.344774 #1387]  INFO -- Maid: Rule: move reminder call sheets into folder
+I, [2018-03-21T14:18:16.344831 #1387]  INFO -- Maid: Rule: move nursery sign in sheets into folder
+I, [2018-03-21T14:18:16.344887 #1387]  INFO -- Maid: Rule: move giving reports into folder
+I, [2018-03-21T14:18:16.344942 #1387]  INFO -- Maid: Rule: move benefit wallet receipts into folder
+W, [2018-03-21T14:18:16.345018 #1387]  WARN -- Maid: skipping move because '/home/wadeallen/Dropbox/Receipts/Medical/Benefit Wallet Receipts' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2018-03-21T14:18:16.345042 #1387]  INFO -- Maid: Rule: move church receipts into folder
+I, [2018-03-21T14:18:16.345114 #1387]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/Amazon Church Receipt 2018-03-20.pdf' /home/wadeallen/Dropbox/Receipts/Church/Current
+I, [2018-03-21T14:18:16.345201 #1387]  INFO -- Maid: Rule: move housing receipts into folder
+I, [2018-03-21T14:18:16.345284 #1387]  INFO -- Maid: Rule: move Comcast Bill into folder
+I, [2018-03-21T14:18:16.345340 #1387]  INFO -- Maid: Rule: move Kohls Statement into folder
+I, [2018-03-21T14:18:16.345394 #1387]  INFO -- Maid: Rule: move American Eagle Statement into folder
+I, [2018-03-21T14:18:16.345447 #1387]  INFO -- Maid: Rule: move Indiana Michigan Power Statement into folder
+I, [2018-03-21T14:18:16.345510 #1387]  INFO -- Maid: Rule: move School Receipts into folder
+I, [2018-03-21T14:18:16.345607 #1387]  INFO -- Maid: Rule: move Yorktown Muncipal Utilities into folder
+I, [2018-03-21T14:18:16.345665 #1387]  INFO -- Maid: Rule: move Maurices Statement into folder
+I, [2018-03-21T14:18:16.345717 #1387]  INFO -- Maid: Rule: move Target Statement into folder
+I, [2018-03-21T14:18:16.345826 #1387]  INFO -- Maid: Rule: move TJ Maxx Statement into folder
+I, [2018-03-21T14:18:16.345905 #1387]  INFO -- Maid: Rule: move Victoria Secret Statement into folder
+I, [2018-03-21T14:18:16.345978 #1387]  INFO -- Maid: Rule: move Childrens Place Statement into folder
+I, [2018-03-21T14:18:16.346058 #1387]  INFO -- Maid: Rule: move ATT Statement into folder
+I, [2018-03-21T14:18:16.346144 #1387]  INFO -- Maid: Rule: move IU Health Statement into folder
+I, [2018-03-21T14:18:16.346234 #1387]  INFO -- Maid: Rule: move CareSource Statement into folder
+I, [2018-03-21T14:18:16.346307 #1387]  INFO -- Maid: Rule: move MD Wise Statement into folder
+I, [2018-03-21T14:18:16.346382 #1387]  INFO -- Maid: Rule: move Vectren Bill into folder
+I, [2018-03-21T14:18:16.346457 #1387]  INFO -- Maid: Finished
+I, [2018-03-21T14:20:34.231768 #1877]  INFO -- Maid: v0.7.0
+I, [2018-03-21T14:20:34.231836 #1877]  INFO -- Maid: Started
+I, [2018-03-21T14:20:34.231893 #1877]  INFO -- Maid: Rule: move 2018 journal files into folder
+I, [2018-03-21T14:20:34.232000 #1877]  INFO -- Maid: Rule: move Benefit Wallet files into folder
+I, [2018-03-21T14:20:34.232104 #1877]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/Benefit Wallet Receipt 2018-03-21 Lifetime.pdf' /home/wadeallen/Dropbox/Receipts/Medical/Benefit_Wallet
+I, [2018-03-21T14:20:34.232291 #1877]  INFO -- Maid: Rule: move Thrivent Credit Union into folder
+I, [2018-03-21T14:20:34.232361 #1877]  INFO -- Maid: Rule: move Ball State Credit Union into folder
+I, [2018-03-21T14:20:34.232417 #1877]  INFO -- Maid: Rule: move Hooser Healthwise into folder
+I, [2018-03-21T14:20:34.232472 #1877]  INFO -- Maid: Rule: move Forum Credit Union into folder
+I, [2018-03-21T14:20:34.232524 #1877]  INFO -- Maid: Rule: move reminder call sheets into folder
+I, [2018-03-21T14:20:34.232579 #1877]  INFO -- Maid: Rule: move nursery sign in sheets into folder
+I, [2018-03-21T14:20:34.232635 #1877]  INFO -- Maid: Rule: move giving reports into folder
+I, [2018-03-21T14:20:34.232699 #1877]  INFO -- Maid: Rule: move benefit wallet receipts into folder
+W, [2018-03-21T14:20:34.232766 #1877]  WARN -- Maid: skipping move because '/home/wadeallen/Dropbox/Receipts/Medical/Benefit Wallet Receipts' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2018-03-21T14:20:34.232789 #1877]  INFO -- Maid: Rule: move church receipts into folder
+I, [2018-03-21T14:20:34.232862 #1877]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/Mancinos Church Receipt 2018-03-18.pdf' /home/wadeallen/Dropbox/Receipts/Church/Current
+I, [2018-03-21T14:20:34.233010 #1877]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/Sunshine Cafe Church Receipt 2018-03-20.pdf' /home/wadeallen/Dropbox/Receipts/Church/Current
+I, [2018-03-21T14:20:34.233121 #1877]  INFO -- Maid: Rule: move housing receipts into folder
+I, [2018-03-21T14:20:34.233207 #1877]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/Brooklawn Services Housing Receipt 2018-03-21.pdf' '/home/wadeallen/Dropbox/Receipts/Housing/Misc Housing'
+I, [2018-03-21T14:20:34.233313 #1877]  INFO -- Maid: Rule: move Comcast Bill into folder
+I, [2018-03-21T14:20:34.233375 #1877]  INFO -- Maid: Rule: move Kohls Statement into folder
+I, [2018-03-21T14:20:34.233426 #1877]  INFO -- Maid: Rule: move American Eagle Statement into folder
+I, [2018-03-21T14:20:34.233517 #1877]  INFO -- Maid: Rule: move Indiana Michigan Power Statement into folder
+I, [2018-03-21T14:20:34.233580 #1877]  INFO -- Maid: Rule: move School Receipts into folder
+I, [2018-03-21T14:20:34.233630 #1877]  INFO -- Maid: Rule: move Yorktown Muncipal Utilities into folder
+I, [2018-03-21T14:20:34.233680 #1877]  INFO -- Maid: Rule: move Maurices Statement into folder
+I, [2018-03-21T14:20:34.233729 #1877]  INFO -- Maid: Rule: move Target Statement into folder
+I, [2018-03-21T14:20:34.233795 #1877]  INFO -- Maid: Rule: move TJ Maxx Statement into folder
+I, [2018-03-21T14:20:34.233855 #1877]  INFO -- Maid: Rule: move Victoria Secret Statement into folder
+I, [2018-03-21T14:20:34.233905 #1877]  INFO -- Maid: Rule: move Childrens Place Statement into folder
+I, [2018-03-21T14:20:34.233953 #1877]  INFO -- Maid: Rule: move ATT Statement into folder
+I, [2018-03-21T14:20:34.234003 #1877]  INFO -- Maid: Rule: move IU Health Statement into folder
+I, [2018-03-21T14:20:34.234053 #1877]  INFO -- Maid: Rule: move CareSource Statement into folder
+I, [2018-03-21T14:20:34.234102 #1877]  INFO -- Maid: Rule: move MD Wise Statement into folder
+I, [2018-03-21T14:20:34.234150 #1877]  INFO -- Maid: Rule: move Vectren Bill into folder
+I, [2018-03-21T14:20:34.234203 #1877]  INFO -- Maid: Finished
+I, [2018-03-28T12:46:19.445523 #3281]  INFO -- Maid: v0.7.0
+I, [2018-03-28T12:46:19.446056 #3281]  INFO -- Maid: Started
+I, [2018-03-28T12:46:19.446141 #3281]  INFO -- Maid: Rule: move 2018 journal files into folder
+I, [2018-03-28T12:46:19.446286 #3281]  INFO -- Maid: move /home/wadeallen/Dropbox/Journal/2018-03-22.journal.markdown /home/wadeallen/Dropbox/Journal/2018
+I, [2018-03-28T12:46:19.446425 #3281]  INFO -- Maid: move /home/wadeallen/Dropbox/Journal/2018-03-23.journal.markdown /home/wadeallen/Dropbox/Journal/2018
+I, [2018-03-28T12:46:19.446527 #3281]  INFO -- Maid: Rule: move Benefit Wallet files into folder
+I, [2018-03-28T12:46:19.446627 #3281]  INFO -- Maid: Rule: move Thrivent Credit Union into folder
+I, [2018-03-28T12:46:19.446713 #3281]  INFO -- Maid: Rule: move Ball State Credit Union into folder
+I, [2018-03-28T12:46:19.446795 #3281]  INFO -- Maid: Rule: move Hooser Healthwise into folder
+I, [2018-03-28T12:46:19.446855 #3281]  INFO -- Maid: Rule: move Forum Credit Union into folder
+I, [2018-03-28T12:46:19.446939 #3281]  INFO -- Maid: Rule: move reminder call sheets into folder
+I, [2018-03-28T12:46:19.447018 #3281]  INFO -- Maid: Rule: move nursery sign in sheets into folder
+I, [2018-03-28T12:46:19.447093 #3281]  INFO -- Maid: Rule: move giving reports into folder
+I, [2018-03-28T12:46:19.447151 #3281]  INFO -- Maid: Rule: move benefit wallet receipts into folder
+W, [2018-03-28T12:46:19.447268 #3281]  WARN -- Maid: skipping move because '/home/wadeallen/Dropbox/Receipts/Medical/Benefit Wallet Receipts' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2018-03-28T12:46:19.447305 #3281]  INFO -- Maid: Rule: move church receipts into folder
+I, [2018-03-28T12:46:19.447409 #3281]  INFO -- Maid: Rule: move housing receipts into folder
+I, [2018-03-28T12:46:19.447520 #3281]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/Pottery Barn Housing Receipt 2018-03-16.pdf' '/home/wadeallen/Dropbox/Receipts/Housing/Misc Housing'
+I, [2018-03-28T12:46:19.447673 #3281]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/Pottery Barn Housing Receipt 2018-03-22.pdf' '/home/wadeallen/Dropbox/Receipts/Housing/Misc Housing'
+I, [2018-03-28T12:46:19.447767 #3281]  INFO -- Maid: Rule: move Comcast Bill into folder
+I, [2018-03-28T12:46:19.447855 #3281]  INFO -- Maid: Rule: move Kohls Statement into folder
+I, [2018-03-28T12:46:19.447936 #3281]  INFO -- Maid: Rule: move American Eagle Statement into folder
+I, [2018-03-28T12:46:19.448046 #3281]  INFO -- Maid: Rule: move Indiana Michigan Power Statement into folder
+I, [2018-03-28T12:46:19.448143 #3281]  INFO -- Maid: Rule: move School Receipts into folder
+I, [2018-03-28T12:46:19.448222 #3281]  INFO -- Maid: Rule: move Yorktown Muncipal Utilities into folder
+I, [2018-03-28T12:46:19.448297 #3281]  INFO -- Maid: Rule: move Maurices Statement into folder
+I, [2018-03-28T12:46:19.448369 #3281]  INFO -- Maid: Rule: move Target Statement into folder
+I, [2018-03-28T12:46:19.448445 #3281]  INFO -- Maid: Rule: move TJ Maxx Statement into folder
+I, [2018-03-28T12:46:19.448517 #3281]  INFO -- Maid: Rule: move Victoria Secret Statement into folder
+I, [2018-03-28T12:46:19.448589 #3281]  INFO -- Maid: Rule: move Childrens Place Statement into folder
+I, [2018-03-28T12:46:19.448753 #3281]  INFO -- Maid: Rule: move ATT Statement into folder
+I, [2018-03-28T12:46:19.448838 #3281]  INFO -- Maid: Rule: move IU Health Statement into folder
+I, [2018-03-28T12:46:19.448916 #3281]  INFO -- Maid: Rule: move CareSource Statement into folder
+I, [2018-03-28T12:46:19.448992 #3281]  INFO -- Maid: Rule: move MD Wise Statement into folder
+I, [2018-03-28T12:46:19.449069 #3281]  INFO -- Maid: Rule: move Vectren Bill into folder
+I, [2018-03-28T12:46:19.449188 #3281]  INFO -- Maid: move '/home/wadeallen/Desktop/Vectren Bill 2018-03-28.pdf' /home/wadeallen/Dropbox/Receipts/Housing/Utilities/Gas
+I, [2018-03-28T12:46:19.449407 #3281]  INFO -- Maid: Finished
+I, [2018-03-28T12:47:33.944982 #3465]  INFO -- Maid: v0.7.0
+I, [2018-03-28T12:47:33.945071 #3465]  INFO -- Maid: Started
+I, [2018-03-28T12:47:33.945107 #3465]  INFO -- Maid: Rule: move 2018 journal files into folder
+I, [2018-03-28T12:47:33.945210 #3465]  INFO -- Maid: Rule: move Benefit Wallet files into folder
+I, [2018-03-28T12:47:33.945279 #3465]  INFO -- Maid: Rule: move Thrivent Credit Union into folder
+I, [2018-03-28T12:47:33.945351 #3465]  INFO -- Maid: Rule: move Ball State Credit Union into folder
+I, [2018-03-28T12:47:33.945421 #3465]  INFO -- Maid: Rule: move Hooser Healthwise into folder
+I, [2018-03-28T12:47:33.945491 #3465]  INFO -- Maid: Rule: move Forum Credit Union into folder
+I, [2018-03-28T12:47:33.945560 #3465]  INFO -- Maid: Rule: move reminder call sheets into folder
+I, [2018-03-28T12:47:33.945616 #3465]  INFO -- Maid: Rule: move nursery sign in sheets into folder
+I, [2018-03-28T12:47:33.945670 #3465]  INFO -- Maid: Rule: move giving reports into folder
+I, [2018-03-28T12:47:33.945724 #3465]  INFO -- Maid: Rule: move benefit wallet receipts into folder
+W, [2018-03-28T12:47:33.945794 #3465]  WARN -- Maid: skipping move because '/home/wadeallen/Dropbox/Receipts/Medical/Benefit Wallet Receipts' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2018-03-28T12:47:33.945819 #3465]  INFO -- Maid: Rule: move church receipts into folder
+I, [2018-03-28T12:47:33.945873 #3465]  INFO -- Maid: Rule: move housing receipts into folder
+I, [2018-03-28T12:47:33.945927 #3465]  INFO -- Maid: Rule: move Comcast Bill into folder
+I, [2018-03-28T12:47:33.946009 #3465]  INFO -- Maid: move '/home/wadeallen/Desktop/Comcast Bill 2018-03-28.pdf' /home/wadeallen/Dropbox/Receipts/Housing/Comcast
+I, [2018-03-28T12:47:33.946122 #3465]  INFO -- Maid: Rule: move Kohls Statement into folder
+I, [2018-03-28T12:47:33.946206 #3465]  INFO -- Maid: Rule: move American Eagle Statement into folder
+I, [2018-03-28T12:47:33.946289 #3465]  INFO -- Maid: Rule: move Indiana Michigan Power Statement into folder
+I, [2018-03-28T12:47:33.946384 #3465]  INFO -- Maid: Rule: move School Receipts into folder
+I, [2018-03-28T12:47:33.946466 #3465]  INFO -- Maid: Rule: move Yorktown Muncipal Utilities into folder
+I, [2018-03-28T12:47:33.946583 #3465]  INFO -- Maid: Rule: move Maurices Statement into folder
+I, [2018-03-28T12:47:33.946664 #3465]  INFO -- Maid: Rule: move Target Statement into folder
+I, [2018-03-28T12:47:33.946741 #3465]  INFO -- Maid: Rule: move TJ Maxx Statement into folder
+I, [2018-03-28T12:47:33.946815 #3465]  INFO -- Maid: Rule: move Victoria Secret Statement into folder
+I, [2018-03-28T12:47:33.946888 #3465]  INFO -- Maid: Rule: move Childrens Place Statement into folder
+I, [2018-03-28T12:47:33.946961 #3465]  INFO -- Maid: Rule: move ATT Statement into folder
+I, [2018-03-28T12:47:33.947031 #3465]  INFO -- Maid: Rule: move IU Health Statement into folder
+I, [2018-03-28T12:47:33.947105 #3465]  INFO -- Maid: Rule: move CareSource Statement into folder
+I, [2018-03-28T12:47:33.947178 #3465]  INFO -- Maid: Rule: move MD Wise Statement into folder
+I, [2018-03-28T12:47:33.947252 #3465]  INFO -- Maid: Rule: move Vectren Bill into folder
+I, [2018-03-28T12:47:33.947325 #3465]  INFO -- Maid: Finished
+I, [2018-03-30T11:07:57.761293 #7396]  INFO -- Maid: v0.7.0
+I, [2018-03-30T11:07:57.761704 #7396]  INFO -- Maid: Started
+I, [2018-03-30T11:07:57.761779 #7396]  INFO -- Maid: Rule: move 2018 journal files into folder
+I, [2018-03-30T11:07:57.761915 #7396]  INFO -- Maid: move /home/wadeallen/Dropbox/Journal/2018-03-30.journal.markdown /home/wadeallen/Dropbox/Journal/2018
+I, [2018-03-30T11:07:57.762052 #7396]  INFO -- Maid: Rule: move Benefit Wallet files into folder
+I, [2018-03-30T11:07:57.762139 #7396]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/Benefit Wallet Receipt 2018-03-30 Lifetime.pdf' /home/wadeallen/Dropbox/Receipts/Medical/Benefit_Wallet
+I, [2018-03-30T11:07:57.762221 #7396]  INFO -- Maid: Rule: move Thrivent Credit Union into folder
+I, [2018-03-30T11:07:57.762306 #7396]  INFO -- Maid: Rule: move Ball State Credit Union into folder
+I, [2018-03-30T11:07:57.762364 #7396]  INFO -- Maid: Rule: move Hooser Healthwise into folder
+I, [2018-03-30T11:07:57.762420 #7396]  INFO -- Maid: Rule: move Forum Credit Union into folder
+I, [2018-03-30T11:07:57.762472 #7396]  INFO -- Maid: Rule: move reminder call sheets into folder
+I, [2018-03-30T11:07:57.762527 #7396]  INFO -- Maid: Rule: move nursery sign in sheets into folder
+I, [2018-03-30T11:07:57.762580 #7396]  INFO -- Maid: Rule: move giving reports into folder
+I, [2018-03-30T11:07:57.762664 #7396]  INFO -- Maid: Rule: move benefit wallet receipts into folder
+W, [2018-03-30T11:07:57.762744 #7396]  WARN -- Maid: skipping move because '/home/wadeallen/Dropbox/Receipts/Medical/Benefit Wallet Receipts' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2018-03-30T11:07:57.762769 #7396]  INFO -- Maid: Rule: move church receipts into folder
+I, [2018-03-30T11:07:57.762837 #7396]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/Apple Church Receipt 2018-03-30.pdf' /home/wadeallen/Dropbox/Receipts/Church/Current
+I, [2018-03-30T11:07:57.762961 #7396]  INFO -- Maid: Rule: move housing receipts into folder
+I, [2018-03-30T11:07:57.763059 #7396]  INFO -- Maid: Rule: move Comcast Bill into folder
+I, [2018-03-30T11:07:57.763117 #7396]  INFO -- Maid: Rule: move Kohls Statement into folder
+I, [2018-03-30T11:07:57.763169 #7396]  INFO -- Maid: Rule: move American Eagle Statement into folder
+I, [2018-03-30T11:07:57.763242 #7396]  INFO -- Maid: Rule: move Indiana Michigan Power Statement into folder
+I, [2018-03-30T11:07:57.763357 #7396]  INFO -- Maid: Rule: move School Receipts into folder
+I, [2018-03-30T11:07:57.763488 #7396]  INFO -- Maid: Rule: move Yorktown Muncipal Utilities into folder
+I, [2018-03-30T11:07:57.763579 #7396]  INFO -- Maid: Rule: move Maurices Statement into folder
+I, [2018-03-30T11:07:57.763690 #7396]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/Maurices Statement 2018-03-30.pdf' /home/wadeallen/Dropbox/Statements/Maurices
+I, [2018-03-30T11:07:57.763818 #7396]  INFO -- Maid: Rule: move Target Statement into folder
+I, [2018-03-30T11:07:57.763896 #7396]  INFO -- Maid: Rule: move TJ Maxx Statement into folder
+I, [2018-03-30T11:07:57.763950 #7396]  INFO -- Maid: Rule: move Victoria Secret Statement into folder
+I, [2018-03-30T11:07:57.764001 #7396]  INFO -- Maid: Rule: move Childrens Place Statement into folder
+I, [2018-03-30T11:07:57.764051 #7396]  INFO -- Maid: Rule: move ATT Statement into folder
+I, [2018-03-30T11:07:57.764104 #7396]  INFO -- Maid: Rule: move IU Health Statement into folder
+I, [2018-03-30T11:07:57.764155 #7396]  INFO -- Maid: Rule: move CareSource Statement into folder
+I, [2018-03-30T11:07:57.764204 #7396]  INFO -- Maid: Rule: move MD Wise Statement into folder
+I, [2018-03-30T11:07:57.764254 #7396]  INFO -- Maid: Rule: move Vectren Bill into folder
+I, [2018-03-30T11:07:57.764308 #7396]  INFO -- Maid: Finished
+I, [2018-03-30T17:22:27.163154 #1358]  INFO -- Maid: v0.7.0
+I, [2018-03-30T17:22:27.163411 #1358]  INFO -- Maid: Started
+I, [2018-03-30T17:22:27.163443 #1358]  INFO -- Maid: Rule: move 2018 journal files into folder
+I, [2018-03-30T17:22:27.163789 #1358]  INFO -- Maid: Rule: move Benefit Wallet files into folder
+I, [2018-03-30T17:22:27.163865 #1358]  INFO -- Maid: Rule: move Thrivent Credit Union into folder
+I, [2018-03-30T17:22:27.164117 #1358]  INFO -- Maid: Rule: move Ball State Credit Union into folder
+I, [2018-03-30T17:22:27.164229 #1358]  INFO -- Maid: Rule: move Hooser Healthwise into folder
+I, [2018-03-30T17:22:27.164620 #1358]  INFO -- Maid: Rule: move Forum Credit Union into folder
+I, [2018-03-30T17:22:27.164715 #1358]  INFO -- Maid: Rule: move reminder call sheets into folder
+I, [2018-03-30T17:22:27.164958 #1358]  INFO -- Maid: Rule: move nursery sign in sheets into folder
+I, [2018-03-30T17:22:27.165070 #1358]  INFO -- Maid: Rule: move giving reports into folder
+I, [2018-03-30T17:22:27.165136 #1358]  INFO -- Maid: Rule: move benefit wallet receipts into folder
+W, [2018-03-30T17:22:27.165217 #1358]  WARN -- Maid: skipping move because '/home/wadeallen/Dropbox/Receipts/Medical/Benefit Wallet Receipts' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2018-03-30T17:22:27.165242 #1358]  INFO -- Maid: Rule: move church receipts into folder
+I, [2018-03-30T17:22:27.165309 #1358]  INFO -- Maid: Rule: move housing receipts into folder
+I, [2018-03-30T17:22:27.165587 #1358]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/Overhead Door Housing Receipt 2018-03-30.pdf' '/home/wadeallen/Dropbox/Receipts/Housing/Misc Housing'
+I, [2018-03-30T17:22:27.165909 #1358]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/Zionsville Shop Housing Receipt 2018-03-30.pdf' '/home/wadeallen/Dropbox/Receipts/Housing/Misc Housing'
+I, [2018-03-30T17:22:27.165995 #1358]  INFO -- Maid: Rule: move Comcast Bill into folder
+I, [2018-03-30T17:22:27.166069 #1358]  INFO -- Maid: Rule: move Kohls Statement into folder
+I, [2018-03-30T17:22:27.166131 #1358]  INFO -- Maid: Rule: move American Eagle Statement into folder
+I, [2018-03-30T17:22:27.166298 #1358]  INFO -- Maid: Rule: move Indiana Michigan Power Statement into folder
+I, [2018-03-30T17:22:27.166560 #1358]  INFO -- Maid: Rule: move School Receipts into folder
+I, [2018-03-30T17:22:27.166647 #1358]  INFO -- Maid: Rule: move Yorktown Muncipal Utilities into folder
+I, [2018-03-30T17:22:27.166707 #1358]  INFO -- Maid: Rule: move Maurices Statement into folder
+I, [2018-03-30T17:22:27.166764 #1358]  INFO -- Maid: Rule: move Target Statement into folder
+I, [2018-03-30T17:22:27.166824 #1358]  INFO -- Maid: Rule: move TJ Maxx Statement into folder
+I, [2018-03-30T17:22:27.166893 #1358]  INFO -- Maid: Rule: move Victoria Secret Statement into folder
+I, [2018-03-30T17:22:27.166950 #1358]  INFO -- Maid: Rule: move Childrens Place Statement into folder
+I, [2018-03-30T17:22:27.167006 #1358]  INFO -- Maid: Rule: move ATT Statement into folder
+I, [2018-03-30T17:22:27.167057 #1358]  INFO -- Maid: Rule: move IU Health Statement into folder
+I, [2018-03-30T17:22:27.167143 #1358]  INFO -- Maid: Rule: move CareSource Statement into folder
+I, [2018-03-30T17:22:27.167221 #1358]  INFO -- Maid: Rule: move MD Wise Statement into folder
+I, [2018-03-30T17:22:27.167300 #1358]  INFO -- Maid: Rule: move Vectren Bill into folder
+I, [2018-03-30T17:22:27.167389 #1358]  INFO -- Maid: Finished
+I, [2018-03-30T17:23:07.569901 #1474]  INFO -- Maid: v0.7.0
+I, [2018-03-30T17:23:07.569977 #1474]  INFO -- Maid: Started
+I, [2018-03-30T17:23:07.570005 #1474]  INFO -- Maid: Rule: move 2018 journal files into folder
+I, [2018-03-30T17:23:07.570128 #1474]  INFO -- Maid: Rule: move Benefit Wallet files into folder
+I, [2018-03-30T17:23:07.570300 #1474]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/Benefit Wallet Receipt 2018-03-30 CVS.pdf' /home/wadeallen/Dropbox/Receipts/Medical/Benefit_Wallet
+I, [2018-03-30T17:23:07.572273 #1474]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/Benefit Wallet Receipt 2018-03-30 Williams.pdf' /home/wadeallen/Dropbox/Receipts/Medical/Benefit_Wallet
+I, [2018-03-30T17:23:07.572549 #1474]  INFO -- Maid: Rule: move Thrivent Credit Union into folder
+I, [2018-03-30T17:23:07.572659 #1474]  INFO -- Maid: Rule: move Ball State Credit Union into folder
+I, [2018-03-30T17:23:07.572757 #1474]  INFO -- Maid: Rule: move Hooser Healthwise into folder
+I, [2018-03-30T17:23:07.572858 #1474]  INFO -- Maid: Rule: move Forum Credit Union into folder
+I, [2018-03-30T17:23:07.572955 #1474]  INFO -- Maid: Rule: move reminder call sheets into folder
+I, [2018-03-30T17:23:07.573053 #1474]  INFO -- Maid: Rule: move nursery sign in sheets into folder
+I, [2018-03-30T17:23:07.573150 #1474]  INFO -- Maid: Rule: move giving reports into folder
+I, [2018-03-30T17:23:07.573297 #1474]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/2018-03-18 Giving Report.pdf' '/home/wadeallen/Dropbox/Administration/Giving Reports'
+I, [2018-03-30T17:23:07.573808 #1474]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/2018-03-25 Giving Report.pdf' '/home/wadeallen/Dropbox/Administration/Giving Reports'
+I, [2018-03-30T17:23:07.574175 #1474]  INFO -- Maid: Rule: move benefit wallet receipts into folder
+W, [2018-03-30T17:23:07.574324 #1474]  WARN -- Maid: skipping move because '/home/wadeallen/Dropbox/Receipts/Medical/Benefit Wallet Receipts' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2018-03-30T17:23:07.574365 #1474]  INFO -- Maid: Rule: move church receipts into folder
+I, [2018-03-30T17:23:07.574453 #1474]  INFO -- Maid: Rule: move housing receipts into folder
+I, [2018-03-30T17:23:07.574544 #1474]  INFO -- Maid: Rule: move Comcast Bill into folder
+I, [2018-03-30T17:23:07.574626 #1474]  INFO -- Maid: Rule: move Kohls Statement into folder
+I, [2018-03-30T17:23:07.574703 #1474]  INFO -- Maid: Rule: move American Eagle Statement into folder
+I, [2018-03-30T17:23:07.574824 #1474]  INFO -- Maid: Rule: move Indiana Michigan Power Statement into folder
+I, [2018-03-30T17:23:07.574940 #1474]  INFO -- Maid: Rule: move School Receipts into folder
+I, [2018-03-30T17:23:07.575039 #1474]  INFO -- Maid: Rule: move Yorktown Muncipal Utilities into folder
+I, [2018-03-30T17:23:07.575130 #1474]  INFO -- Maid: Rule: move Maurices Statement into folder
+I, [2018-03-30T17:23:07.575224 #1474]  INFO -- Maid: Rule: move Target Statement into folder
+I, [2018-03-30T17:23:07.575320 #1474]  INFO -- Maid: Rule: move TJ Maxx Statement into folder
+I, [2018-03-30T17:23:07.575414 #1474]  INFO -- Maid: Rule: move Victoria Secret Statement into folder
+I, [2018-03-30T17:23:07.575508 #1474]  INFO -- Maid: Rule: move Childrens Place Statement into folder
+I, [2018-03-30T17:23:07.575597 #1474]  INFO -- Maid: Rule: move ATT Statement into folder
+I, [2018-03-30T17:23:07.575693 #1474]  INFO -- Maid: Rule: move IU Health Statement into folder
+I, [2018-03-30T17:23:07.575778 #1474]  INFO -- Maid: Rule: move CareSource Statement into folder
+I, [2018-03-30T17:23:07.575866 #1474]  INFO -- Maid: Rule: move MD Wise Statement into folder
+I, [2018-03-30T17:23:07.575953 #1474]  INFO -- Maid: Rule: move Vectren Bill into folder
+I, [2018-03-30T17:23:07.576038 #1474]  INFO -- Maid: Finished
+I, [2018-03-30T17:23:33.667418 #1528]  INFO -- Maid: v0.7.0
+I, [2018-03-30T17:23:33.667484 #1528]  INFO -- Maid: Started
+I, [2018-03-30T17:23:33.667539 #1528]  INFO -- Maid: Rule: move 2018 journal files into folder
+I, [2018-03-30T17:23:33.667643 #1528]  INFO -- Maid: Rule: move Benefit Wallet files into folder
+I, [2018-03-30T17:23:33.667715 #1528]  INFO -- Maid: Rule: move Thrivent Credit Union into folder
+I, [2018-03-30T17:23:33.667790 #1528]  INFO -- Maid: Rule: move Ball State Credit Union into folder
+I, [2018-03-30T17:23:33.667861 #1528]  INFO -- Maid: Rule: move Hooser Healthwise into folder
+I, [2018-03-30T17:23:33.667933 #1528]  INFO -- Maid: Rule: move Forum Credit Union into folder
+I, [2018-03-30T17:23:33.668005 #1528]  INFO -- Maid: Rule: move reminder call sheets into folder
+I, [2018-03-30T17:23:33.668080 #1528]  INFO -- Maid: Rule: move nursery sign in sheets into folder
+I, [2018-03-30T17:23:33.668138 #1528]  INFO -- Maid: Rule: move giving reports into folder
+I, [2018-03-30T17:23:33.668195 #1528]  INFO -- Maid: Rule: move benefit wallet receipts into folder
+W, [2018-03-30T17:23:33.668267 #1528]  WARN -- Maid: skipping move because '/home/wadeallen/Dropbox/Receipts/Medical/Benefit Wallet Receipts' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2018-03-30T17:23:33.668292 #1528]  INFO -- Maid: Rule: move church receipts into folder
+I, [2018-03-30T17:23:33.668349 #1528]  INFO -- Maid: Rule: move housing receipts into folder
+I, [2018-03-30T17:23:33.668407 #1528]  INFO -- Maid: Rule: move Comcast Bill into folder
+I, [2018-03-30T17:23:33.668459 #1528]  INFO -- Maid: Rule: move Kohls Statement into folder
+I, [2018-03-30T17:23:33.668512 #1528]  INFO -- Maid: Rule: move American Eagle Statement into folder
+I, [2018-03-30T17:23:33.668566 #1528]  INFO -- Maid: Rule: move Indiana Michigan Power Statement into folder
+I, [2018-03-30T17:23:33.668624 #1528]  INFO -- Maid: Rule: move School Receipts into folder
+I, [2018-03-30T17:23:33.668682 #1528]  INFO -- Maid: Rule: move Yorktown Muncipal Utilities into folder
+I, [2018-03-30T17:23:33.668737 #1528]  INFO -- Maid: Rule: move Maurices Statement into folder
+I, [2018-03-30T17:23:33.668830 #1528]  INFO -- Maid: Rule: move Target Statement into folder
+I, [2018-03-30T17:23:33.668884 #1528]  INFO -- Maid: Rule: move TJ Maxx Statement into folder
+I, [2018-03-30T17:23:33.668937 #1528]  INFO -- Maid: Rule: move Victoria Secret Statement into folder
+I, [2018-03-30T17:23:33.668991 #1528]  INFO -- Maid: Rule: move Childrens Place Statement into folder
+I, [2018-03-30T17:23:33.669044 #1528]  INFO -- Maid: Rule: move ATT Statement into folder
+I, [2018-03-30T17:23:33.669093 #1528]  INFO -- Maid: Rule: move IU Health Statement into folder
+I, [2018-03-30T17:23:33.669147 #1528]  INFO -- Maid: Rule: move CareSource Statement into folder
+I, [2018-03-30T17:23:33.669225 #1528]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/CareSource Health Insurance 2018-03-07.pdf' /home/wadeallen/Dropbox/Receipts/Insurance/CareSource
+I, [2018-03-30T17:23:33.671087 #1528]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/CareSource Health Insurance 2018-03-14.pdf' /home/wadeallen/Dropbox/Receipts/Insurance/CareSource
+I, [2018-03-30T17:23:33.671195 #1528]  INFO -- Maid: Rule: move MD Wise Statement into folder
+I, [2018-03-30T17:23:33.671288 #1528]  INFO -- Maid: Rule: move Vectren Bill into folder
+I, [2018-03-30T17:23:33.671372 #1528]  INFO -- Maid: Finished
+I, [2018-03-30T17:25:13.708446 #2009]  INFO -- Maid: v0.7.0
+I, [2018-03-30T17:25:13.708514 #2009]  INFO -- Maid: Started
+I, [2018-03-30T17:25:13.708550 #2009]  INFO -- Maid: Rule: move 2018 journal files into folder
+I, [2018-03-30T17:25:13.708696 #2009]  INFO -- Maid: Rule: move Benefit Wallet files into folder
+I, [2018-03-30T17:25:13.708765 #2009]  INFO -- Maid: Rule: move Thrivent Credit Union into folder
+I, [2018-03-30T17:25:13.708827 #2009]  INFO -- Maid: Rule: move Ball State Credit Union into folder
+I, [2018-03-30T17:25:13.708890 #2009]  INFO -- Maid: Rule: move Hooser Healthwise into folder
+I, [2018-03-30T17:25:13.708952 #2009]  INFO -- Maid: Rule: move Forum Credit Union into folder
+I, [2018-03-30T17:25:13.709014 #2009]  INFO -- Maid: Rule: move reminder call sheets into folder
+I, [2018-03-30T17:25:13.709076 #2009]  INFO -- Maid: Rule: move nursery sign in sheets into folder
+I, [2018-03-30T17:25:13.709137 #2009]  INFO -- Maid: Rule: move giving reports into folder
+I, [2018-03-30T17:25:13.709197 #2009]  INFO -- Maid: Rule: move benefit wallet receipts into folder
+W, [2018-03-30T17:25:13.709279 #2009]  WARN -- Maid: skipping move because '/home/wadeallen/Dropbox/Receipts/Medical/Benefit Wallet Receipts' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2018-03-30T17:25:13.709305 #2009]  INFO -- Maid: Rule: move church receipts into folder
+I, [2018-03-30T17:25:13.709373 #2009]  INFO -- Maid: Rule: move housing receipts into folder
+I, [2018-03-30T17:25:13.709433 #2009]  INFO -- Maid: Rule: move Comcast Bill into folder
+I, [2018-03-30T17:25:13.709493 #2009]  INFO -- Maid: Rule: move Kohls Statement into folder
+I, [2018-03-30T17:25:13.709570 #2009]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/Kohls Statement 2018-03-30.pdf' /home/wadeallen/Dropbox/Statements/Kohls
+I, [2018-03-30T17:25:13.709697 #2009]  INFO -- Maid: Rule: move American Eagle Statement into folder
+I, [2018-03-30T17:25:13.709781 #2009]  INFO -- Maid: Rule: move Indiana Michigan Power Statement into folder
+I, [2018-03-30T17:25:13.709878 #2009]  INFO -- Maid: Rule: move School Receipts into folder
+I, [2018-03-30T17:25:13.709958 #2009]  INFO -- Maid: Rule: move Yorktown Muncipal Utilities into folder
+I, [2018-03-30T17:25:13.710063 #2009]  INFO -- Maid: Rule: move Maurices Statement into folder
+I, [2018-03-30T17:25:13.710214 #2009]  INFO -- Maid: Rule: move Target Statement into folder
+I, [2018-03-30T17:25:13.710303 #2009]  INFO -- Maid: Rule: move TJ Maxx Statement into folder
+I, [2018-03-30T17:25:13.710386 #2009]  INFO -- Maid: Rule: move Victoria Secret Statement into folder
+I, [2018-03-30T17:25:13.710468 #2009]  INFO -- Maid: Rule: move Childrens Place Statement into folder
+I, [2018-03-30T17:25:13.710550 #2009]  INFO -- Maid: Rule: move ATT Statement into folder
+I, [2018-03-30T17:25:13.710630 #2009]  INFO -- Maid: Rule: move IU Health Statement into folder
+I, [2018-03-30T17:25:13.710712 #2009]  INFO -- Maid: Rule: move CareSource Statement into folder
+I, [2018-03-30T17:25:13.710791 #2009]  INFO -- Maid: Rule: move MD Wise Statement into folder
+I, [2018-03-30T17:25:13.710874 #2009]  INFO -- Maid: Rule: move Vectren Bill into folder
+I, [2018-03-30T17:25:13.710960 #2009]  INFO -- Maid: Finished
+I, [2018-04-03T10:22:52.366153 #9420]  INFO -- Maid: v0.7.0
+I, [2018-04-03T10:22:52.366455 #9420]  INFO -- Maid: Started
+I, [2018-04-03T10:22:52.366517 #9420]  INFO -- Maid: Rule: move 2018 journal files into folder
+I, [2018-04-03T10:22:52.366659 #9420]  INFO -- Maid: move /home/wadeallen/Dropbox/Journal/2018-04-01.journal.markdown /home/wadeallen/Dropbox/Journal/2018
+I, [2018-04-03T10:22:52.366799 #9420]  INFO -- Maid: move /home/wadeallen/Dropbox/Journal/2018-04-02.journal.markdown /home/wadeallen/Dropbox/Journal/2018
+I, [2018-04-03T10:22:52.366898 #9420]  INFO -- Maid: Rule: move Benefit Wallet files into folder
+I, [2018-04-03T10:22:52.366993 #9420]  INFO -- Maid: Rule: move Thrivent Credit Union into folder
+I, [2018-04-03T10:22:52.367083 #9420]  INFO -- Maid: Rule: move Ball State Credit Union into folder
+I, [2018-04-03T10:22:52.367179 #9420]  INFO -- Maid: Rule: move Hooser Healthwise into folder
+I, [2018-04-03T10:22:52.367294 #9420]  INFO -- Maid: Rule: move Forum Credit Union into folder
+I, [2018-04-03T10:22:52.367401 #9420]  INFO -- Maid: Rule: move reminder call sheets into folder
+I, [2018-04-03T10:22:52.367512 #9420]  INFO -- Maid: Rule: move nursery sign in sheets into folder
+I, [2018-04-03T10:22:52.367609 #9420]  INFO -- Maid: Rule: move giving reports into folder
+I, [2018-04-03T10:22:52.367691 #9420]  INFO -- Maid: Rule: move benefit wallet receipts into folder
+W, [2018-04-03T10:22:52.367806 #9420]  WARN -- Maid: skipping move because '/home/wadeallen/Dropbox/Receipts/Medical/Benefit Wallet Receipts' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2018-04-03T10:22:52.367867 #9420]  INFO -- Maid: Rule: move church receipts into folder
+I, [2018-04-03T10:22:52.367998 #9420]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/Amazon Web Services Church Receipt 2018-04-03.pdf' /home/wadeallen/Dropbox/Receipts/Church/Current
+I, [2018-04-03T10:22:52.368158 #9420]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/Staples Church Receipt 2018-04-03.pdf' /home/wadeallen/Dropbox/Receipts/Church/Current
+I, [2018-04-03T10:22:52.368266 #9420]  INFO -- Maid: Rule: move housing receipts into folder
+I, [2018-04-03T10:22:52.368370 #9420]  INFO -- Maid: Rule: move Comcast Bill into folder
+I, [2018-04-03T10:22:52.368457 #9420]  INFO -- Maid: Rule: move Kohls Statement into folder
+I, [2018-04-03T10:22:52.368541 #9420]  INFO -- Maid: Rule: move American Eagle Statement into folder
+I, [2018-04-03T10:22:52.368628 #9420]  INFO -- Maid: Rule: move Indiana Michigan Power Statement into folder
+I, [2018-04-03T10:22:52.368775 #9420]  INFO -- Maid: Rule: move School Receipts into folder
+I, [2018-04-03T10:22:52.368851 #9420]  INFO -- Maid: Rule: move Yorktown Muncipal Utilities into folder
+I, [2018-04-03T10:22:52.368921 #9420]  INFO -- Maid: Rule: move Maurices Statement into folder
+I, [2018-04-03T10:22:52.369000 #9420]  INFO -- Maid: Rule: move Target Statement into folder
+I, [2018-04-03T10:22:52.369077 #9420]  INFO -- Maid: Rule: move TJ Maxx Statement into folder
+I, [2018-04-03T10:22:52.369157 #9420]  INFO -- Maid: Rule: move Victoria Secret Statement into folder
+I, [2018-04-03T10:22:52.369242 #9420]  INFO -- Maid: Rule: move Childrens Place Statement into folder
+I, [2018-04-03T10:22:52.369325 #9420]  INFO -- Maid: Rule: move ATT Statement into folder
+I, [2018-04-03T10:22:52.369408 #9420]  INFO -- Maid: Rule: move IU Health Statement into folder
+I, [2018-04-03T10:22:52.369492 #9420]  INFO -- Maid: Rule: move CareSource Statement into folder
+I, [2018-04-03T10:22:52.369577 #9420]  INFO -- Maid: Rule: move MD Wise Statement into folder
+I, [2018-04-03T10:22:52.369663 #9420]  INFO -- Maid: Rule: move Vectren Bill into folder
+I, [2018-04-03T10:22:52.369749 #9420]  INFO -- Maid: Finished
+I, [2018-04-03T10:40:31.234714 #10264]  INFO -- Maid: v0.7.0
+I, [2018-04-03T10:40:31.234792 #10264]  INFO -- Maid: Started
+I, [2018-04-03T10:40:31.234821 #10264]  INFO -- Maid: Rule: move 2018 journal files into folder
+I, [2018-04-03T10:40:31.234923 #10264]  INFO -- Maid: Rule: move Benefit Wallet files into folder
+I, [2018-04-03T10:40:31.234995 #10264]  INFO -- Maid: Rule: move Thrivent Credit Union into folder
+I, [2018-04-03T10:40:31.235070 #10264]  INFO -- Maid: Rule: move Ball State Credit Union into folder
+I, [2018-04-03T10:40:31.235142 #10264]  INFO -- Maid: Rule: move Hooser Healthwise into folder
+I, [2018-04-03T10:40:31.235239 #10264]  INFO -- Maid: Rule: move Forum Credit Union into folder
+I, [2018-04-03T10:40:31.235363 #10264]  INFO -- Maid: Rule: move reminder call sheets into folder
+I, [2018-04-03T10:40:31.235435 #10264]  INFO -- Maid: Rule: move nursery sign in sheets into folder
+I, [2018-04-03T10:40:31.235496 #10264]  INFO -- Maid: Rule: move giving reports into folder
+I, [2018-04-03T10:40:31.235556 #10264]  INFO -- Maid: Rule: move benefit wallet receipts into folder
+W, [2018-04-03T10:40:31.235628 #10264]  WARN -- Maid: skipping move because '/home/wadeallen/Dropbox/Receipts/Medical/Benefit Wallet Receipts' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2018-04-03T10:40:31.235653 #10264]  INFO -- Maid: Rule: move church receipts into folder
+I, [2018-04-03T10:40:31.235743 #10264]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/IU Health Payments Church Receipt 2018-04-03.pdf' /home/wadeallen/Dropbox/Receipts/Church/Current
+I, [2018-04-03T10:40:31.235853 #10264]  INFO -- Maid: Rule: move housing receipts into folder
+I, [2018-04-03T10:40:31.235939 #10264]  INFO -- Maid: Rule: move Comcast Bill into folder
+I, [2018-04-03T10:40:31.235993 #10264]  INFO -- Maid: Rule: move Kohls Statement into folder
+I, [2018-04-03T10:40:31.236047 #10264]  INFO -- Maid: Rule: move American Eagle Statement into folder
+I, [2018-04-03T10:40:31.236122 #10264]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/American Eagle Statement 2018-04-03.pdf' '/home/wadeallen/Dropbox/Statements/American Eagle'
+I, [2018-04-03T10:40:31.236201 #10264]  INFO -- Maid: Rule: move Indiana Michigan Power Statement into folder
+I, [2018-04-03T10:40:31.236280 #10264]  INFO -- Maid: Rule: move School Receipts into folder
+I, [2018-04-03T10:40:31.236338 #10264]  INFO -- Maid: Rule: move Yorktown Muncipal Utilities into folder
+I, [2018-04-03T10:40:31.236392 #10264]  INFO -- Maid: Rule: move Maurices Statement into folder
+I, [2018-04-03T10:40:31.236485 #10264]  INFO -- Maid: Rule: move Target Statement into folder
+I, [2018-04-03T10:40:31.236555 #10264]  INFO -- Maid: Rule: move TJ Maxx Statement into folder
+I, [2018-04-03T10:40:31.236610 #10264]  INFO -- Maid: Rule: move Victoria Secret Statement into folder
+I, [2018-04-03T10:40:31.236663 #10264]  INFO -- Maid: Rule: move Childrens Place Statement into folder
+I, [2018-04-03T10:40:31.236715 #10264]  INFO -- Maid: Rule: move ATT Statement into folder
+I, [2018-04-03T10:40:31.236764 #10264]  INFO -- Maid: Rule: move IU Health Statement into folder
+I, [2018-04-03T10:40:31.236817 #10264]  INFO -- Maid: Rule: move CareSource Statement into folder
+I, [2018-04-03T10:40:31.236870 #10264]  INFO -- Maid: Rule: move MD Wise Statement into folder
+I, [2018-04-03T10:40:31.236929 #10264]  INFO -- Maid: Rule: move Vectren Bill into folder
+I, [2018-04-03T10:40:31.236982 #10264]  INFO -- Maid: Finished
+I, [2018-04-03T10:40:59.970222 #10319]  INFO -- Maid: v0.7.0
+I, [2018-04-03T10:40:59.970287 #10319]  INFO -- Maid: Started
+I, [2018-04-03T10:40:59.970323 #10319]  INFO -- Maid: Rule: move 2018 journal files into folder
+I, [2018-04-03T10:40:59.970445 #10319]  INFO -- Maid: Rule: move Benefit Wallet files into folder
+I, [2018-04-03T10:40:59.970525 #10319]  INFO -- Maid: Rule: move Thrivent Credit Union into folder
+I, [2018-04-03T10:40:59.970592 #10319]  INFO -- Maid: Rule: move Ball State Credit Union into folder
+I, [2018-04-03T10:40:59.970656 #10319]  INFO -- Maid: Rule: move Hooser Healthwise into folder
+I, [2018-04-03T10:40:59.970730 #10319]  INFO -- Maid: Rule: move Forum Credit Union into folder
+I, [2018-04-03T10:40:59.970802 #10319]  INFO -- Maid: Rule: move reminder call sheets into folder
+I, [2018-04-03T10:40:59.970878 #10319]  INFO -- Maid: Rule: move nursery sign in sheets into folder
+I, [2018-04-03T10:40:59.970936 #10319]  INFO -- Maid: Rule: move giving reports into folder
+I, [2018-04-03T10:40:59.970993 #10319]  INFO -- Maid: Rule: move benefit wallet receipts into folder
+W, [2018-04-03T10:40:59.971065 #10319]  WARN -- Maid: skipping move because '/home/wadeallen/Dropbox/Receipts/Medical/Benefit Wallet Receipts' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2018-04-03T10:40:59.971090 #10319]  INFO -- Maid: Rule: move church receipts into folder
+I, [2018-04-03T10:40:59.971165 #10319]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/Sunshine Cafe Church Receipt 2018-04-03.pdf' /home/wadeallen/Dropbox/Receipts/Church/Current
+I, [2018-04-03T10:40:59.971275 #10319]  INFO -- Maid: Rule: move housing receipts into folder
+I, [2018-04-03T10:40:59.971402 #10319]  INFO -- Maid: Rule: move Comcast Bill into folder
+I, [2018-04-03T10:40:59.971459 #10319]  INFO -- Maid: Rule: move Kohls Statement into folder
+I, [2018-04-03T10:40:59.971513 #10319]  INFO -- Maid: Rule: move American Eagle Statement into folder
+I, [2018-04-03T10:40:59.971566 #10319]  INFO -- Maid: Rule: move Indiana Michigan Power Statement into folder
+I, [2018-04-03T10:40:59.971639 #10319]  INFO -- Maid: Rule: move School Receipts into folder
+I, [2018-04-03T10:40:59.971696 #10319]  INFO -- Maid: Rule: move Yorktown Muncipal Utilities into folder
+I, [2018-04-03T10:40:59.971750 #10319]  INFO -- Maid: Rule: move Maurices Statement into folder
+I, [2018-04-03T10:40:59.971802 #10319]  INFO -- Maid: Rule: move Target Statement into folder
+I, [2018-04-03T10:40:59.971854 #10319]  INFO -- Maid: Rule: move TJ Maxx Statement into folder
+I, [2018-04-03T10:40:59.971948 #10319]  INFO -- Maid: Rule: move Victoria Secret Statement into folder
+I, [2018-04-03T10:40:59.972003 #10319]  INFO -- Maid: Rule: move Childrens Place Statement into folder
+I, [2018-04-03T10:40:59.972054 #10319]  INFO -- Maid: Rule: move ATT Statement into folder
+I, [2018-04-03T10:40:59.972104 #10319]  INFO -- Maid: Rule: move IU Health Statement into folder
+I, [2018-04-03T10:40:59.972157 #10319]  INFO -- Maid: Rule: move CareSource Statement into folder
+I, [2018-04-03T10:40:59.972236 #10319]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/CareSource Health Insurance 2018-04-03.pdf' /home/wadeallen/Dropbox/Receipts/Insurance/CareSource
+I, [2018-04-03T10:40:59.972331 #10319]  INFO -- Maid: Rule: move MD Wise Statement into folder
+I, [2018-04-03T10:40:59.972415 #10319]  INFO -- Maid: Rule: move Vectren Bill into folder
+I, [2018-04-03T10:40:59.972471 #10319]  INFO -- Maid: Finished
+I, [2018-04-03T10:41:15.258055 #10361]  INFO -- Maid: v0.7.0
+I, [2018-04-03T10:41:15.258131 #10361]  INFO -- Maid: Started
+I, [2018-04-03T10:41:15.258159 #10361]  INFO -- Maid: Rule: move 2018 journal files into folder
+I, [2018-04-03T10:41:15.258286 #10361]  INFO -- Maid: Rule: move Benefit Wallet files into folder
+I, [2018-04-03T10:41:15.258355 #10361]  INFO -- Maid: Rule: move Thrivent Credit Union into folder
+I, [2018-04-03T10:41:15.258462 #10361]  INFO -- Maid: move '/home/wadeallen/Dropbox/Scans/Thrivent Credit Union 2018-04-03.pdf' '/home/wadeallen/Dropbox/Statements/Thrivent Credit Union'
+I, [2018-04-03T10:41:15.258592 #10361]  INFO -- Maid: Rule: move Ball State Credit Union into folder
+I, [2018-04-03T10:41:15.258669 #10361]  INFO -- Maid: Rule: move Hooser Healthwise into folder
+I, [2018-04-03T10:41:15.258725 #10361]  INFO -- Maid: Rule: move Forum Credit Union into folder
+I, [2018-04-03T10:41:15.258777 #10361]  INFO -- Maid: Rule: move reminder call sheets into folder
+I, [2018-04-03T10:41:15.258830 #10361]  INFO -- Maid: Rule: move nursery sign in sheets into folder
+I, [2018-04-03T10:41:15.258881 #10361]  INFO -- Maid: Rule: move giving reports into folder
+I, [2018-04-03T10:41:15.258934 #10361]  INFO -- Maid: Rule: move benefit wallet receipts into folder
+W, [2018-04-03T10:41:15.259000 #10361]  WARN -- Maid: skipping move because '/home/wadeallen/Dropbox/Receipts/Medical/Benefit Wallet Receipts' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2018-04-03T10:41:15.259024 #10361]  INFO -- Maid: Rule: move church receipts into folder
+I, [2018-04-03T10:41:15.259075 #10361]  INFO -- Maid: Rule: move housing receipts into folder
+I, [2018-04-03T10:41:15.259126 #10361]  INFO -- Maid: Rule: move Comcast Bill into folder
+I, [2018-04-03T10:41:15.259178 #10361]  INFO -- Maid: Rule: move Kohls Statement into folder
+I, [2018-04-03T10:41:15.259229 #10361]  INFO -- Maid: Rule: move American Eagle Statement into folder
+I, [2018-04-03T10:41:15.259279 #10361]  INFO -- Maid: Rule: move Indiana Michigan Power Statement into folder
+I, [2018-04-03T10:41:15.259383 #10361]  INFO -- Maid: Rule: move School Receipts into folder
+I, [2018-04-03T10:41:15.259442 #10361]  INFO -- Maid: Rule: move Yorktown Muncipal Utilities into folder
+I, [2018-04-03T10:41:15.259522 #10361]  INFO -- Maid: Rule: move Maurices Statement into folder
+I, [2018-04-03T10:41:15.259589 #10361]  INFO -- Maid: Rule: move Target Statement into folder
+I, [2018-04-03T10:41:15.259640 #10361]  INFO -- Maid: Rule: move TJ Maxx Statement into folder
+I, [2018-04-03T10:41:15.259691 #10361]  INFO -- Maid: Rule: move Victoria Secret Statement into folder
+I, [2018-04-03T10:41:15.259753 #10361]  INFO -- Maid: Rule: move Childrens Place Statement into folder
+I, [2018-04-03T10:41:15.259804 #10361]  INFO -- Maid: Rule: move ATT Statement into folder
+I, [2018-04-03T10:41:15.259855 #10361]  INFO -- Maid: Rule: move IU Health Statement into folder
+I, [2018-04-03T10:41:15.259905 #10361]  INFO -- Maid: Rule: move CareSource Statement into folder
+I, [2018-04-03T10:41:15.259955 #10361]  INFO -- Maid: Rule: move MD Wise Statement into folder
+I, [2018-04-03T10:41:15.260006 #10361]  INFO -- Maid: Rule: move Vectren Bill into folder
+I, [2018-04-03T10:41:15.260057 #10361]  INFO -- Maid: Finished

@@ -228,8 +228,8 @@ augroup SENTENCES
       augroup END
 
 " for mutt
-autocmd BufNewFile,BufRead /tmp/mutt* set noautoindent filetype=mail
-autocmd BufNewFile,BufRead ~/tmp/mutt* set noautoindent filetype=mail
+" autocmd BufNewFile,BufRead /tmp/mutt* set noautoindent filetype=mail
+" autocmd BufNewFile,BufRead ~/tmp/mutt* set noautoindent filetype=mail
 
 "to fix background problem
 if &term =~ '256color'
