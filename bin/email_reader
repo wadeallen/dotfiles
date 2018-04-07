@@ -44,9 +44,9 @@ else:
 	format_scripture = scripture.replace(' ','+')
 	scripture_replaced = scripture.replace(' ','-')
 	pdf_scripture = scripture_replaced.replace(':', '-')
-	scrip_url = 'https://www.biblegateway.com/passage/?search=' + format_scripture + '&version=NIV&interface=print'
-	pdf_name = '/home/wadeallen/Desktop/{}.pdf'.format(pdf_scripture)
-	pdfkit.from_url(scrip_url, pdf_name)
+	# scrip_url = 'https://www.biblegateway.com/passage/?search=' + format_scripture + '&version=NIV&interface=print'
+	# pdf_name = '/home/wadeallen/Desktop/{}.pdf'.format(pdf_scripture)
+	# pdfkit.from_url(scrip_url, pdf_name)
 
 url = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + email_address + '&su=' + subject + '&body=' + message
 
