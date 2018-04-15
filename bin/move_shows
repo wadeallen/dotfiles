@@ -47,4 +47,12 @@ then
   done
 fi
 
+# Move Veep to Plex Folder
+
+if [ -e ./Veep.*.mkv ]
+then
+  for filename in ./Veep.*.mkv; do
+    scp ${filename} pi@192.168.1.128:/home/pi/TV/Veep/
+  done
+fi
 
