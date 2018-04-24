@@ -43,10 +43,10 @@ own_window_title = 'ArchMerge Top Conky',
 
 minimum_width = 200, 
 minimum_height = 200,
-maximum_width = 400,
+maximum_width = 600,
 
-gap_x = 40,--## left | right
-gap_y = 30,--## up | down
+gap_x = 100,--## left | right
+gap_y = 100,--## up | down
 
 alignment = 'top_right',
 --######################  End Window Settings  ###
