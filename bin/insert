@@ -6,4 +6,4 @@ cd $DIRECTORY &&
 wget -O Insert.txt https://docs.google.com/document/d/1WW3XE9y0MW6J_EJKVvJXIu3GRE9uY0ieVorfxDJvy-Q/export?format=txt
 pandoc $DIRECTORY/Insert.txt -o Insert.pdf --template insert.tex &&
 rm $DIRECTORY/Insert.txt &&
-cp $DIRECTORY/Insert.pdf $HOME/Desktop/
+cp $DIRECTORY/Insert.pdf $HOME/Dropbox/Print/
