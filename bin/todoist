@@ -25,7 +25,7 @@ def get_today_tasks():
         		tasks_today.append(item)
 
     # for item in items:
-    # 	print(item['content'],item['due_date_utc'])
+    	# print(item['content'],item['due_date_utc'])
 
     return tasks_today
 
@@ -39,3 +39,4 @@ def print_today_tasks():
         print(task['content'])
 
 print_today_tasks()
+
