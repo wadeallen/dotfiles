@@ -152,7 +152,7 @@ ${color0} ${execi 300 LANG=${template9} LC_TIME=${template9} date +"%B"}${font}$
 ${hr}${color}${voffset 4}
 ${font Roboto:pixelsize=13}TODO List: 
 ${voffset 2}
-${color0}${execi 60 python3 ~/bin/todoist}
+${color0}${execi 60 ssh -q wadeallen@167.99.147.6 "python3 ~/bin/todoist"}
 ${hr}${color}${voffset 4}
 ${font Roboto:pixelsize=13}CALENDAR:
 ${color0}${execi 60 sh ~/bin/list_calendar}
