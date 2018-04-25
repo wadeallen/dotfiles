@@ -20,7 +20,7 @@ def get_today_tasks():
     # NB: item['due_date_utc'] is unicode; we cast to str for this comparison
     # slicing :10 gives us the relevant parts
     for item in items:
-        if (str(item['date_string'])[:15] == today):
+        if (str(item['due_date_utc'])[:15] == today):
         	if item['checked'] == 0:
         		tasks_today.append(item)
 
