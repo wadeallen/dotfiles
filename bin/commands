@@ -24,11 +24,12 @@
 [people] xdg-open https://people.planningcenteronline.com/people
 [visitor] xdg-open https://docs.google.com/document/d/1im1OZ0ol56PP9y0uyvq-2ih3W8G5tiHFdaioL-vTlso/edit
 [keepass] /usr/bin/keepassx
-[scans] dolphin /home/wadeallen/Dropbox/Scans 
+[scans] xdg-open /home/wadeallen/Dropbox/Scans 
 [find] /home/wadeallen/bin/dmenu_extended_run
 [common prayer] xdg-open http://commonprayer.net/
 [stories] xdg-open https://docs.google.com/document/d/1gKLaR2rWaPUAiBeqDUqhrrEDuw0g11Q9N2mp4GcFSLc/edit
-[bulletin] /usr/bin/subl /home/wadeallen/Dropbox/Pandoc/Pandoc_Bulletin/includes/optional.tex
+[bulletin] /snap/bin/atom /home/wadeallen/Dropbox/Pandoc/Pandoc_Bulletin/includes/optional.tex
 [desktop] xdg-open /home/wadeallen/Desktop
 [freeplane] /usr/bin/freeplane
 [downloads] xdg-open /home/wadeallen/Downloads
+[remote] rdesktop church.wadeallen.me -u Staff -p fbc309 -g 80%
