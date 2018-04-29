@@ -18,7 +18,7 @@ begin_date = beg.strftime(date_format)
 end_date = last_day_month(end)
 
 
-print ('Saving Calendar to Dropbox folder print_calendar...')
+print ('Saving Calendar to Dropbox folder ...')
 
 url = 'https://www.google.com/calendar/printable?dates={0}%2F{1}&pgsz=letter&ctz=America%2FNew_York&wkst=1&hl=en&mode=AGENDA&secid=BVlLMgjSIrHevrIwLmhBaf_yY-Q&src=ZmJjbXVuY2llLm9yZ19uc201Y2liaGo1dW1lazJzNDQxNDlicmZxb0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZmJjbXVuY2llLm9yZ19vYW1hZmNibm5zZGwzNTYyODhiZDdoa2E4NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&prsd={0}&pred={1}&pfs=NORMAL&po=PORTRAIT&psd=false&pset=true&psa=false&psr=false&psdec=false&pbw=true&pjs=false&rand=1366741702395'.format(begin_date, end_date)
 

@@ -30,7 +30,8 @@ else:
 for file in files:
     f = open(file, 'r').read()
     blog = f.split('\n',9)[9]
-    pyperclip.copy(blog)
+    with open('/home/wadeallen/Dropbox/Textbits/blog-body.txt','w') as f:
+        print(blog, file=f)
 
 print ('Copied Blog from {} to clipboard'.format(day))
 
