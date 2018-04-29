@@ -47,6 +47,7 @@ alias dedication='$HOME/bin/todoist_baby.py'
 
 # update system
 alias update='sudo pacman -Syu'
+alias sa='cd $HOME/Dropbox/Sermon_Audio'
 
 
 
