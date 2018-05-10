@@ -139,15 +139,4 @@ ps1_hostname() {
 }
 
 
-# export PATH="$HOME/.gem/ruby/2.5.0/bin"
-# eval "$(rbenv init -)"
-# export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
-# export PATH="$HOME/.cabal-sandbox/bin:$PATH"
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
