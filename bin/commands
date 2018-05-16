@@ -26,7 +26,7 @@
 [find] /home/wadeallen/bin/dmenu_extended_run
 [common prayer] xdg-open http://commonprayer.net/
 [stories] xdg-open https://docs.google.com/document/d/1gKLaR2rWaPUAiBeqDUqhrrEDuw0g11Q9N2mp4GcFSLc/edit
-[bulletin] subl /home/wadeallen/Dropbox/Pandoc/Pandoc_Bulletin/includes/optional.tex
+[bulletin] atom /home/wadeallen/Dropbox/Pandoc/Pandoc_Bulletin/includes/optional.tex
 [desktop] xdg-open /home/wadeallen/Desktop
 [downloads] xdg-open /home/wadeallen/Downloads
 [remote] rdesktop church.wadeallen.me -u Staff -p fbc309 -g 80%
