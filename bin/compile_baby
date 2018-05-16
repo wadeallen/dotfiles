@@ -3,5 +3,5 @@
 directory='/home/wadeallen/Dropbox/Administration/Certificates/Baby_Dedication'
 
 cd ${directory}
-pandoc information.md -o ~/Desktop/baby_dedication.pdf --latex-engine=xelatex --template=baby_dedication.tex
-echo "Dedication Certificate Compiled on Desktop"
+pandoc information.md -o ~/Dropbox/Print/baby_dedication.pdf --latex-engine=xelatex --template=baby_dedication.tex
+echo "Dedication Certificate Compiled in Print Folder"

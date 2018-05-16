@@ -62,7 +62,7 @@ Maid.rules do
   end
 
   rule 'move Indiana Michigan Power Statement into folder' do
-    move(dir('~/Desktop/I&MBill_*.pdf'), '~/Dropbox/Receipts/Housing/Utilities/Electric')
+    move(dir('~/Dropbox/Scans/I&MBill_*.pdf'), '~/Dropbox/Receipts/Housing/Utilities/Electric')
 
   rule 'move School Receipts into folder' do
     move(dir('~/Dropbox/Scans/*School Receipt*.pdf'), '~/Dropbox/Receipts/School')
@@ -108,7 +108,7 @@ Maid.rules do
   end
 
   rule 'move Vectren Bill into folder' do
-    move(dir('~/Desktop/Vectren*.pdf'), '~/Dropbox/Receipts/Housing/Utilities/Gas')
+    move(dir('~/Dropbox/Scans/Vectren*.pdf'), '~/Dropbox/Receipts/Housing/Utilities/Gas')
   end
 
   end

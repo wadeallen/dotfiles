@@ -140,3 +140,5 @@ ps1_hostname() {
 
 
 
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"

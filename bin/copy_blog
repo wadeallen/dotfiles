@@ -33,7 +33,7 @@ for file in files:
     with open('/home/wadeallen/Dropbox/Textbits/blog-body.txt','w') as f:
         print(blog, file=f)
 
-print ('Copied Blog from {} to clipboard'.format(day))
+print ('Copied Blog from {} to blog-body file'.format(day))
 
 
 
