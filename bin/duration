@@ -11,8 +11,9 @@ fi
 duration=`exiftool -Duration $1 | awk '{ print $3 }'`
 bytes=`wc -c $1 | awk '{ print $1 }'`
 
-echo "layout: sermon\ncategory: video\nduration: '${duration}' \nlength: ${bytes}\nvideo_url:" > /tmp/duration
+echo "layout: sermon\ncategory: video\nduration: '${duration}' \nlength: ${bytes}\nvideo_url:" > ~/Dropbox/Textbits/duration.txt
 
-echo "duration: '$duration'"
-echo "length: $bytes"
-echo "copied to clipboard"
+# echo "duration: '$duration'"
+# echo "length: $bytes"
+# echo "copied to clipboard"
+echo "copied duration data to Dropbox/Textbits/duration.txt file"

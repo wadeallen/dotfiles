@@ -13,7 +13,7 @@ pastMonth = lastMonth.strftime("%B")
 
 email_address = 'ellamae@fbcmuncie.org'
 subject = 'Credit Card Report for {}'.format(pastMonth)
-message = ('Hi Ella Mae %0A%0A Attached is the {} credit card statement. I put the summary sheet in your box. The attached copy has all of the receipts included. %0A%0AWade'.format(pastMonth))
+message = ('Hi Ella Mae %0A%0AAttached is the {} credit card statement. I put the summary sheet in your box. The attached copy has all of the receipts included. %0A%0AWade'.format(pastMonth))
 
 url = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + email_address + '&su=' + subject + '&body=' + message
 

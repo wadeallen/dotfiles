@@ -16,6 +16,7 @@ alias dl='/usr/bin/youtube-dl'
 # Sermon Media Prep
 alias ow='cd $HOME/Sites/2017_Church/_worship/'
 alias ov='cd $HOME/Sites/2017_Church/_posts'
+alias aud='cd $HOME/Dropbox/Sermon_Audio'
 
 # Ledger
 alias led='ledger -f $HOME/Dropbox/Ledger/ledger.ledger'
@@ -48,6 +49,7 @@ alias dedication='$HOME/bin/todoist_baby.py'
 # update system
 alias update='sudo pacman -Syu'
 alias sa='cd $HOME/Dropbox/Sermon_Audio'
+
 
 
 
