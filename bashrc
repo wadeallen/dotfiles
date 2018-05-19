@@ -117,7 +117,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH="$PATH:$HOME/dotfiles/bin:$HOME/ledger:$HOME/wkhtmltox/bin:$HOME/.gem/ruby/2.5.0/bin"
+export PATH="$PATH:$HOME/dotfiles/bin:$HOME/ledger:$HOME/wkhtmltox/bin:$HOME/.gem/ruby/2.5.0/bin:$HOME/.rbenv/shims"
 export PI="pi@192.168.1.128"
 export IMAC="fbcmuncie@192.168.2.44:~/Desktop/"
 
