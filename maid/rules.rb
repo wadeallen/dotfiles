@@ -75,8 +75,13 @@ Maid.rules do
   rule 'move Maurices Statement into folder' do
     move(dir('~/Dropbox/Scans/Maurices*.pdf'), '~/Dropbox/Statements/Maurices')
   end
+
   rule 'move Target Statement into folder' do
     move(dir('~/Dropbox/Scans/Target Card*.pdf'), '~/Dropbox/Receipts/Target')
+  end
+
+  rule 'move New York and Company Statement into folder' do
+    move(dir('~/Dropbox/Scans/New York and Company*.pdf'), '~/Dropbox/Receipts/New York and Company')
   end
 
   rule 'move TJ Maxx Statement into folder' do
