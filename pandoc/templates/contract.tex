@@ -1,183 +1,329 @@
-\documentclass[parskip=half]{scrreprt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Contract
+% LaTeX Template
+% Version 1.0 (December 8 2014)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Brandon Fryslie
+% With extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Note:
+% If you are using Apple OS X, go into structure.tex and uncomment the font
+% specifications for OS X and comment out the default specifications - this will
+% drastically increase how good the document looks. You will now need to
+% compile with XeLaTeX.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage[margin=2cm]{geometry}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[ngerman]{babel}
-\usepackage{lmodern}
-\usepackage[juratotoc]{scrjura}
-\usepackage{color}
+\documentclass[usletter,12pt]{article} % The default font size is 12pt on A4 paper, change to 'usletter' for US Letter paper and adjust margins in structure.tex
 
-\makeatletter 
-\renewcommand*{\parformat}{% 
-  \global\hangindent 2em 
-  \makebox[2em][l]{(\thepar)\hfill}%
-}  
-\makeatother
-\renewcommand*{\parformatseparation}{}
+
+\setlength{\parindent}{0mm} % Don't indent paragraphs
+
+\setlength{\parskip}{2.5mm} % Whitespace between paragraphs
+
+%----------------------------------------------------------------------------------------
+%	PAGE LAYOUT SPECIFICATIONS
+%----------------------------------------------------------------------------------------
+
+\usepackage{geometry} % Required to modify the page layout
+
+\setlength{\textwidth}{16cm} % Width of the text on the page
+\setlength{\textheight}{24.5cm} % Height of the text on the page
+
+\setlength{\oddsidemargin}{0cm} % Width of the margin - negative to move text left, positive to move it right
+
+% Uncomment for offset margins if the 'twoside' document class option is used
+%\setlength{\evensidemargin}{-0.75cm} 
+%\setlength{\oddsidemargin}{0.75cm}
+
+\setlength{\topmargin}{-1.25cm} % Reduce the top margin
+
+%----------------------------------------------------------------------------------------
+%	FONT SPECIFICATIONS
+%----------------------------------------------------------------------------------------
+
+% If you are running Apple OS X, uncomment the next 4 lines and comment/delete the block below, you will now need to compile with XeLaTeX but your document will look much better
+
+%\usepackage[cm-default]{fontspec}
+%\usepackage{xunicode}
+
+%\setsansfont[Mapping=tex-text,Scale=1.1]{Gill Sans}
+%\setmainfont[Mapping=tex-text,Scale=1.0]{Hoefler Text}
+
+%-------------------------------------------
+
+\usepackage[utf8]{inputenc} % Required for including letters with accents
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+
+\usepackage{avant} % Use the Avantgarde font for headings
+\usepackage{mathptmx} % Use the Adobe Times Roman as the default text font together with math symbols from the Sym­bol, Chancery and Com­puter Modern fonts
+
+%----------------------------------------------------------------------------------------
+%	SECTION TITLE SPECIFICATIONS
+%----------------------------------------------------------------------------------------
+
+\usepackage{titlesec} % Required for modifying section titles
+
+\titleformat{\section} % Customize the \section{} section title
+{\sffamily\large\bfseries} % Title font customizations
+{\thesection} % Section number
+{16pt} % Whitespace between the number and title
+{\large} % Title font size
+\titlespacing*{\section}{0mm}{7mm}{0mm} % Left, top and bottom spacing around the title
+
+\titleformat{\subsection} % Customize the \subsection{} section title
+{\sffamily\normalsize\bfseries} % Title font customizations
+{\thesubsection} % Subsection number
+{16pt} % Whitespace between the number and title
+{\normalsize} % Title font size
+\titlespacing*{\subsection}{0mm}{5mm}{0mm} % Left, top and bottom spacing around the title
+%----------------------------------------------------------------------------------------
+%	DYNAMIC CONTRACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+% Your name and company name
+\newcommand{\YourName}{[Your name]}
+\newcommand{\CompanyName}{[Company name]}
+
+% Your address
+\newcommand{\AddressLineOne}{[Address]}
+\newcommand{\AddressLineTwo}{[Address]}
+
+% Your email address
+\newcommand{\YourEmail}{[Your email]}
+
+% The client's name
+\newcommand{\ClientName}{[Client name]}
+
+% The delivery date for specifications and completion date for the project
+\newcommand{\DeliveryDate}{[date]}
+\newcommand{\CompletionDate}{[date]}
+
+% The hourly rate
+\newcommand{\HourlyRate}{\$25}
+
+% Payee's information
+\newcommand{\PayeeName}{[Payee Name]}
+\newcommand{\PaymentAddressLineOne}{[Adress]}
+\newcommand{\PaymentAddressLineTwo}{[Adress]}
+\newcommand{\PaymentAddressLineThree}{[Adress]}
+
+%----------------------------------------------------------------------------------------
 
 \begin{document}
-\addchap{Kaufvertrag}
 
-zwischen
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
 
-\textcolor{blue}{<Name, Adresse>}, nachfolgend «Verkäufer»,
+\begin{titlepage}
 
-und
+\vspace*{\fill} % Add whitespace above to center the title page content
 
-\textcolor{blue}{<Name, Adresse>}, nachfolgend «Käufer».
+\begin{center}
 
+{\LARGE Proposal for \ClientName~Website}\\ [1.5cm]
 
+Submitted: \today
 
-\begin{contract}
-\Clause{title={Pflichten des Verkäufers}}
+\end{center}
 
-\SubClause{title={Kaufgegenstand}}
+\CompanyName\\
 
-Der Verkäufer verkauft dem Käufer \textcolor{blue}{<genaue Umschreibung des Kaufgegenstands mit den vom Käufer gewünschten Eigenschaften; Angabe spezieller Verwendungszwecke; Bestimmung der geschuldeten Verpackung und der zusätzlichen Leistungen des Verkäufers>}.
+\YourName\\
 
-\parnumberfalse
-[Bsp.: Der Verkäufer verkauft dem Käufer den im Anhang \textcolor{blue}{<Zahl>} umschriebenen Kaufgegenstand.]
-\parnumbertrue
+\AddressLineOne
 
-\SubClause{title={Erfüllungsort und Gefahrtragung}}
+\AddressLineTwo
 
-Der Kaufgegenstand ist franko und zollfrei zur Niederlassung des Käufers in \textcolor{blue}{<Ort, Adresse>} zu liefern.
+\YourEmail
 
-Der Verkäufer trägt die Gefahr des zufälligen Untergangs oder der zufälligen Verschlechterung des Kaufgegenstands, bis er am Erfüllungsort dem Käufer übergeben wird oder dieser mit der Annahme in Verzug ist.
+\vspace*{\fill} % Add whitespace below to center the title page content
 
-\parnumberfalse
-[Bsp.: Der Kaufgegenstand ist dem Transportunternehmen \textcolor{blue}{<Name>} an \textcolor{blue}{<Adresse, Ort>} zu übergeben.
+\end{titlepage}
 
-Die Verkäufer trägt die Gefahr des zufälligen Untergangs oder der zufälligen Verschlechterung des Kaufgegenstands, bis dieser am Erfüllungsort dem Transportunternehmen übergeben wird oder dieses mit der Annahme in Verzug ist.]
-\parnumbertrue
+%----------------------------------------------------------------------------------------
+%	OBJECTIVE SECTION
+%----------------------------------------------------------------------------------------
 
-\SubClause{title={Lieferzeit bzw. -termin}}
+\section{Objective}
 
-Die Lieferung hat am/bis zum \textcolor{blue}{<Datum>} zu erfolgen.
+\YourName~(hereafter referred to as the Designer) is engaging \ClientName~(hereafter referred to as the Client) as an independent contractor. The Designer will develop and furnish an online website (hereafter referred to as the Website) for the Client. The Website will be installed on hosting provided by the Client. The Client hereby authorizes the Designer to access this account for the purposes of the Website. The Client will pay for all hosting and other services such as advertising.
 
-Wird der Liefertermin überschritten, so kann der Käufer dem Verkäufer eine Nachfrist von mindestens \textcolor{blue}{<Zahl>} Tagen setzen und nach deren unbenutztem Ablauf entweder innert \textcolor{blue}{<Zahl>} Tagen den Rücktritt vom Vertrag erklären und Schadenersatz (positives oder negatives Vertragsinteresse) oder weiterhin Lieferung verlangen.
+%----------------------------------------------------------------------------------------
+%	DELIVERABLES SECTION
+%----------------------------------------------------------------------------------------
 
-\parnumberfalse
-[Bsp.: Die Lieferung hat genau am \textcolor{blue}{<Datum>}/spätestens bis zum \textcolor{blue}{<Datum>} zu erfolgen.
+\section{Deliverables}
 
-Wird der Liefertermin überschritten, so hat der Verkäufer an Stelle der Lieferung eine Konventionalstrafe in der Höhe von CHF \textcolor{blue}{<Zahl>} zu bezahlen und den die Konventionalstrafe übersteigenden Schaden des Käufers (positives oder negatives Vertragsinteresse) zu ersetzen.]
-\parnumbertrue
+The Designer agrees to deliver to the Client a website consisting of the following pages:
 
+Home Page\\
+Menu Page\\
+Store Locater \& Info Page\\
+FAQs Page\\
+Customer Input Page\\
+Find Us on the Web Page
 
+More detailed specifications have been supplied to the Designer by the Client by an email delivered to \YourEmail~on \DeliveryDate. Specifications for deliverables can be changed subject to approval of the Designer's estimate by the Client. Any work outside the scope of the website outlined in the previously mentioned documents and limited maintenance of that website is subject to a separate contract.
 
-\Clause{title={Pflichten des Käufers}}
+%----------------------------------------------------------------------------------------
+%	SCHEDULE SECTION
+%----------------------------------------------------------------------------------------
 
-\SubClause{title={Kaufpreis und Sicherheit}}
+\section{Schedule}
 
-Der Käufer hat den Kaufpreis von CHF \textcolor{blue}{<Zahl>} bis zum \textcolor{blue}{<Datum>} auf das Konto Nr.~\textcolor{blue}{<Zahl>} der Z-Bank in \textcolor{blue}{<Postleitzahl, Ort>} zu überweisen.
+The Website will be completed by no later than \CompletionDate.
 
-Das Eigentum am gelieferten Kaufgegenstand verbleibt bis zur Bezahlung des Kaufpreises beim Verkäufer. Kommt der Käufer mit der Zahlung des Kaufpreises in Verzug, so ist der Verkäufer berechtigt, den Eigentumsvorbehalt auf Kosten des Käufers im Eigentumsvorbehaltsregister eintragen zu lassen.
+An additional ``Maintenance Period'' of two weeks after the initial deadline, ending on April 6, 2012, shall also be governed by this contract.
 
-Der Käufer hat bis spätestens am \textcolor{blue}{<Datum>} eine bedingungslose und unbefristete Bankgarantie über die Bezahlung von CHF \textcolor{blue}{<Zahl>} einer schweizerischen Grossbank oder einer Kantonalbank beizubringen \textcolor{blue}{<evt. andere Sicherheiten, z.B. Bürgschaft usw.>}.
+During the Maintenance Period, the Designer will be responsible for making additional requested changes to the website.
 
-\parnumberfalse[Bsp.:
-Der Käufer hat den Kaufpreis von CHF \textcolor{blue}{<Zahl>} dem Verkäufer Zug um Zug gegen Übergabe des Kaufgegenstandes am Erfüllungsort in bar zu bezahlen.]
-\parnumbertrue
+The Maintenance Period includes updates to the Website, including updating links, text, images, pages, or other content as specified by the Client. The Designer will provide an additional invoice for any work completed during this period.
 
-Ist der Käufer mit einer Zahlungspflicht in Verzug, so hat er Verzugszinsen von \textcolor{blue}{<Zahl>}\% und Schadenersatz zu bezahlen.
+%----------------------------------------------------------------------------------------
+%	TERMS AND CONDITIONS SECTION
+%----------------------------------------------------------------------------------------
 
-Ist der Käufer mit der Zahlung des Kaufpreises oder der Leistung einer Sicherheit in Verzug, so kann der Verkäufer dem Käufer eine Nachfrist von \textcolor{blue}{<Zahl>} Tagen setzen und nach deren unbenutztem Ablauf entweder innert \textcolor{blue}{<Zahl>} Tagen den Rücktritt vom Vertrag erklären und Schadenersatz (positives oder negatives Vertragsinteresse) oder weiterhin die Zahlung des Kaufpreises oder die Leistung der Sicherheit verlangen.
+\section{Terms and Conditions}
 
-\SubClause{title={Annahme}}
+\subsection{Rate}
 
-Der Käufer hat den Kaufgegenstand am Liefertag/während der Lieferfrist am Erfüllungsort anzunehmen/abzuholen.
+The Client agrees to pay the Designer \HourlyRate~per hour (hereafter referred to as the Rate).
 
-Ist der Käufer mit der Annahme des Kaufgegenstandes in Verzug, so kann der Verkäufer dem Käufer eine Nachfrist von \textcolor{blue}{<Zahl>} Tagen setzen und nach deren unbenutztem Ablauf entweder innert \textcolor{blue}{<Zahl>} Tagen den Rücktritt vom Vertrag erklären und Schadenersatz (positives oder negatives Vertragsinteresse) oder weiterhin die Annahme verlangen.
+%------------------------------------------------
 
-\parnumberfalse[Bsp.:
-Der Käufer hat den Kaufgegenstand spätestens bis zum \textcolor{blue}{<Datum>} am Erfüllungsort anzunehmen/abzuholen. Unterlässt er dies, so kann der Verkäufer entweder innert \textcolor{blue}{<Zahl>} Tagen den Rücktritt vom Vertrag erklären und Schadenersatz (positives oder negatives Vertragsinteresse) oder weiterhin die Annahme verlangen.]
-\parnumbertrue
+\subsection{Payment}
 
+The Client agrees to pay the Designer the Rate based on an invoice drafted by the Designer subject to prior approval of an estimate by the Client for the work that was performed.
 
+All payments are due within 15 days of billing. Late payments will be charged a 1.5\% compounded monthly late fee. Should a payment be late, the Designer reserves the right to freeze all work until accounts are settled. Payments will be made via Check to:
 
-\Clause{title={Haftung des Verkäufers für Vertragswidrigkeiten der Lieferung}}
+\PayeeName \\
+\PaymentAddressLineOne \\
+\PaymentAddressLineTwo \\
+\PaymentAddressLineThree
 
-\SubClause{title={Ansprüche des Käufers}}
+%------------------------------------------------
 
-Hat der Verkäufer vertragswidrige Ware geliefert, so kann der Käufer vom Verkäufer zunächst nur verlangen, dass er die Vertragswidrigkeit nach seiner Wahl durch Nachbesserung oder Ersatzlieferung kostenlos und ohne unverhältnismässige Unannehmlichkeiten für den Käufer behebt. Der Käufer kann dem Verkäufer dazu eine angemessene Frist von mindestens \textcolor{blue}{<Zahl>} Tagen setzen. Hat der Verkäufer die Vertragswidrigkeit innert dieser Frist nicht behoben, so kann der Käufer Minderung oder, wenn ihm das Behalten der Lieferung unzumutbar ist, Wandelung verlangen.
+\subsection{Ownership}
 
-\parnumberfalse
-[Bsp. 1: Hat der Verkäufer vertragswidrige Ware geliefert, so kann der Käufer nach seiner Wahl die kostenlose Nacherfüllung durch Ersatzlieferung oder Nachbesserung am Ort verlangen, wo sich die Lieferung gewöhnlich befindet. Die vom Käufer verlangte Nacherfüllung kann der Verkäufer verweigern, wenn er nachweist, dass sie unmöglich oder unverhältnismässig ist. Der Käufer kann dem Verkäufer zur Nacherfüllung eine angemessene Frist von mindestens \textcolor{blue}{<Zahl>} Tagen setzen. Wird die Nacherfüllung innert dieser Frist nicht erbracht, so kann der Käufer nach seiner Wahl zudem Minderung oder Wandelung verlangen. Die Wandelung ist jedoch bei unerheblichen Mängeln ausgeschlossen.]
+The Client and Designer unconditionally guarantee that any elements of text, graphics, photos, designs, trademarks, or other artwork furnished to the Designer by the Client for inclusion in web pages are owned by the Client, or that the Client has permission from the rightful owner to use each of these elements. In the event of any claim or suit arising from the use of such elements provided by the Client for use by the Designer, the Client agrees to hold harmless, protect, and defend the Designer.
 
-[Bsp. 2: Die Haftung des Verkäufers für Vertragswidrigkeiten der Lieferung wird ausgeschlossen. Dieser Ausschluss gilt nicht, soweit der Verkäufer dem Käufer gewisse Eigenschaften des Kaufgegenstands ausdrücklich zugesichert oder arglistig verschwiegen hat.]
-\parnumbertrue
+The Designer will provide a Website to the Client in the form of source, rendered and asset files. These files become the exclusive property of the Client upon acceptance of delivery, however these files are partially based on a non-exclusive code base created and maintained by the Designer and in some cases existing code was used to help create the deliverables. Such code and other underlying technologies do NOT become the property of the Client, only the Websites(s). In addition, the Websites(s) may depend on code, objects (COMs), and other third party utilities that are the property of their respective owners. No rights to these dependencies is expressed or implied. Additional licensing may be required with third party assets.
 
-\SubClause{title={Verwirkung}}
+%------------------------------------------------
 
-Ansprüche aus bei einer übungsgemässen Untersuchung erkennbaren Vertragswidrigkeiten sind verwirkt, wenn diese der Käufer dem Verkäufer nicht innert \textcolor{blue}{<Zahl>} Tagen nach Übergabe der Lieferung am Erfüllungsort \textcolor{blue}{<ev. Bestimmungsort>} angezeigt hat.
+\subsection{Point of Contact \& Training}
 
-Ansprüche aus anderen Vertragswidrigkeiten sind verwirkt, wenn diese der Käufer dem Verkäufer nicht \textcolor{blue}{<Zahl>} Tage nach ihrer Entdeckung, spätestens jedoch \textcolor{blue}{<Zahl>} Jahre nach Übergabe der Lieferung am Erfüllungsort angezeigt hat.
+The Designer will require one point of contact during the Contract for clarifying requirements for design, key features, usability and maintenance issues. The Designer requires this person be available to answer questions arising from the project within 24 hrs on workdays (subject to reasonable exceptions), and to have authority to make design and related decisions on the system.
 
-\parnumberfalse
-[Bsp. 1: Ansprüche aus Vertragswidrigkeiten sind verwirkt, wenn diese der Käufer dem Verkäufer nicht \textcolor{blue}{<Zahl>} Tage nach ihrer Entdeckung, spätestens jedoch \textcolor{blue}{<Zahl>} Monate/Jahre nach der Übergabe der Lieferung am Erfüllungsort angezeigt hat.]
+%------------------------------------------------
 
-[Bsp. 2: Ansprüche aus Vertragswidrigkeiten sind verwirkt, wenn diese der Käufer dem Verkäufer nicht spätestens \textcolor{blue}{<Zahl>} Monate/Jahre nach der Übergabe der Lieferung am Erfüllungsort schriftlich angezeigt hat.]
-\parnumbertrue
+\subsection{Project Communication}
 
-\SubClause{title={Verjährung}}
+The Designer will communicate with the Client by email. Any approval through email by the Point of Contact will be considered official written approval.
 
-Die Gewährleistungsansprüche verjähren \textcolor{blue}{<Zahl>} Jahr(e) nach Übergabe der Lieferung am Erfüllungsort.
+%------------------------------------------------
 
-\parnumberfalse
-[Bsp.: Gewährleistungsansprüche verjähren \textcolor{blue}{<Zahl>} Monate seit Eintreffen der Mängelanzeige.]
-\parnumbertrue
+\subsection{Response Time}
 
+Within the duration of this Contract the Designer will make every effort to reply to inquiries within 1 business day except where The Client has been previously notified of a period of limited availability.
 
+Changes to the website during the initial work period and during the two week Maintenance Period shall be completed within 2 business days of the Designer acknowledging the request. The Designer reserves the right to request additional time to complete the work subject to approval by the Client.
 
-\Clause{title={Schadenersatzpflicht des Verkäufers und Versicherung}}
+%------------------------------------------------
 
-Schadenersatzansprüche des Käufers werden auf insgesamt CHF \textcolor{blue}{<Zahl>} beschränkt.
+\subsection{Hosting}
 
-\parnumberfalse
-[Bsp. 1: Die Haftung des Verkäufers für indirekte Schäden oder Folgeschäden, wie entgangener Gewinn, wird im gesetzlich zulässigen Umfang abbedungen.]
+The Designer does not provide Hosting services beyond temporary internal development environments. The Client is responsible for choosing, paying for, and maintaining any required Hosting solutions and associated services. As a courtesy, The Designer may offer suggestions, however, the Designer is NOT responsible for down time, poor performance, or loss of data caused by the Hosting Provider. Additionally, The Designer is not responsible for any bug caused by changes on the Host after the Acceptance of this Contract, including but not limited to updates to operating system, compile systems, code libraries and languages, or any changes resulting from security violations.
 
-[Bsp. 2: Schadenersatzansprüche des Käufers werden im gesetzlich zulässigen Umfang abbedungen.]
-\parnumbertrue
+%------------------------------------------------
 
-Der Verkäufer verpflichtet sich, eine (Betriebs-)Haftpflichtversicherung abzuschliessen und während \textcolor{blue}{<Zahl>} Jahren nach Vertragsschluss aufrechtzuerhalten, die sämtliche Personen- und Sachschäden (und Folgeschäden daraus) von mindestens CHF \textcolor{blue}{<Zahl>} pro Schadensfall und übrige Schäden (reine Vermögensschäden) von mindestens CHF \textcolor{blue}{<Zahl>} pro Schadensfall deckt. Der Verkäufer verpflichtet sich, dem Käufer auf dessen Verlangen einen entsprechenden Versicherungsnachweis zu übergeben.
+\subsection{Backups}
 
+The Designer maintains internal backups of active project code and design files. This backup system is not intended as a solution for The Client, rather as a code archive through the duration of this Contract. While the the Designer's backup system is fully redundant, it is not guaranteed and does not support any content produced by the Client. The Client is solely responsible for the Backup and Restoration of the Websites(s) and any associated data.
 
+%------------------------------------------------
 
-\Clause{title={Schriftform}}
+\subsection{Security}
 
-Dieser Vertrag tritt mit der Unterzeichnung durch beide Parteien in Kraft. Er umfasst den Vertragstext und die darin erwähnten Anhänge. Vertragsänderungen und -ergänzungen sind nur in Schriftform und bei Unterzeichnung durch beide Vertragsparteien gültig.
+Although the Designer makes every effort to provide secure Websites(s), due to the nature of rapidly advancing technology, the Designer can in no way guaranty that the Websites(s) will not be subject security breaches. The Designer recommends the use of strong passwords and the observance of standard security practices. In order to minimize the chances of security violations, systems should be updated often. The Client is solely responsible for tracking software updates. Any updates during the life of or after the expiration of the Contract can be negotiated as an addendum to this Contract or as an additional Contract.
 
-Mitteilungen, die sich auf diesen Vertrag und seine Abwicklung beziehen, sind in deutscher Sprache zu verfassen und schriftlich oder in einer Form zu übermitteln, welche den Nachweis durch Text ermöglicht, wie namentlich Telex, Telefax und E-Mail.
+%------------------------------------------------
 
+\subsection{Limited Liability}
 
+The Client alone shall be responsible for: (a) the accuracy and adequacy of information and data furnished for processing; (b) any use made by the Client of the output of the Software or any reliance thereon; and (c) obtaining the required licenses and respect copyright for any and all third part assets including but not limited to fonts, media, and software. The Client shall also be responsible for the continued operation and maintenance of the computer equipment and third party software used with the Websites(s), and shall comply with all operational, environmental and maintenance recommendations and requirements of the applicable licensors, vendors and manufacturers.
 
-\Clause{title={Salvatorische Klausel}}
+The Client agrees that any liability of the Designer relating to this agreement and the services performed shall be limited to the amount of fees actually received by the Designer, from the Client under this agreement regarding the services in question. In no event shall the Designer be liable for any special, incidental, indirect, cover, consequential, exemplary or punitive damages; any damages based on injury to person or property; or any lost sales, profits or data, even if the Client is told that any such damages may occur.
 
-Sollten Bestimmungen dieses Vertrages ganz oder teilweise rechtsunwirksam sein oder werden, so wird dadurch die Gültigkeit der übrigen Bestimmungen nicht berührt. Die Parteien verpflichten sich, unwirksame Bestimmungen so zu ersetzen, dass ihr wirtschaftlicher Zweck soweit zulässig gewahrt wird.
+%------------------------------------------------
 
+\subsection{Credit}
 
+The Designer retains the right to use the Client within its roster of clients. A link to the The Client website/application website may be placed on the the Designer's web site as part of his business portfolio.
 
-\Clause{title={Anwendbares Recht}}
+%------------------------------------------------
 
-Dieser Vertrag untersteht schweizerischem Recht, unter Ausschluss des Übereinkommens der Vereinten Nationen über Verträge über den Internationalen Warenkauf.
+\subsection{Review, Expiration or Cancellation}
 
+This Contract is valid for the calendar year of in which it was signed, upon which point it expires. Upon expiration, both parties may review and amend the Contract and decide whether or not to renew. This Contract may be terminated by either party with a full 30 day written notice. All payments will be due and all work will be submitted upon the termination of Contract.
 
+%----------------------------------------------------------------------------------------
+%	SOLE AGREEMENT SECTION
+%----------------------------------------------------------------------------------------
 
-\Clause{title={Mediationsklausel und Gerichtsstand}}
+\section{Sole Agreement}
 
-Sollte es im Zusammenhang mit diesem Vertrag oder dessen Gültigkeit zu Streitigkeiten kommen, beabsichtigen die Parteien, zunächst eine Mediation nach den jeweils gültigen Regeln der \textcolor{blue}{<Name der Organisation>} einzuleiten, und ordentliche Klagen erst zu erheben, wenn in der Mediation keine gütliche Einigung gefunden werden konnte.
+The agreement contained in this ``Website Design Contract'' constitutes the sole agreement between the Designer and the Client regarding the website [Website name]. Any additional work not specified in this contract must be authorized by a written change order. All prices specified in this contract will be honored for two weeks after the specified deadline of the website completion date. Continued services after that time will require a new agreement.
 
-Ausschließlicher Gerichtsstand ist \textcolor{blue}{<Ortsangabe>}.
+%----------------------------------------------------------------------------------------
+%	ACCEPTANCE SECTION
+%----------------------------------------------------------------------------------------
 
-\end{contract}
+\newpage % Put signatures on a separate page
 
-\vspace{50pt} 
-\noindent\rule{7cm}{.4pt}\hfill\rule{7cm}{.4pt}\par 
-\noindent Datum, Ort \hfill Unterschrift Verkäufer
+\section{Acceptance}
 
-\vspace{50pt} 
-\noindent\rule{7cm}{.4pt}\hfill\rule{7cm}{.4pt}\par 
-\noindent Datum, Ort \hfill Unterschrift Käufer
+Any change to this contract shall be subject to mutual written agreement of the parties.
+
+The undersigned agrees to the terms of this agreement on behalf of his or her organization or business as of the date written below:
+
+%------------------------------------------------
+
+\subsection*{The Client} % Suppress section numbering with the *
+
+\ClientName \\
+
+\begin{tabular}{lp{10pt}l}
+Signature: && \hspace{0.5cm} \makebox[3in]{\hrulefill} \\ \\[3pt]
+Print Name: && \hspace{0.5cm} \makebox[3in]{\hrulefill} \\ \\[3pt]
+Title: && \hspace{0.5cm} \makebox[3in]{\hrulefill} \\ \\[3pt]
+Date: && \hspace{0.5cm} \today
+\end{tabular}
+
+%------------------------------------------------
+
+\subsection*{The Designer} % Suppress section numbering with the *
+
+\YourName \\
+
+\begin{tabular}{ l p{10pt} l }
+Signature: && \hspace{0.5cm} \makebox[3in]{\hrulefill} \\ \\[3pt]
+Print Name: && \hspace{0.5cm} \makebox[3in]{\hrulefill} \\ \\[3pt]
+Title: && \hspace{0.5cm} \makebox[3in]{\hrulefill} \\ \\[3pt]
+Date: && \hspace{0.5cm} \today
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
 
 \end{document}
