@@ -10,7 +10,7 @@ import re
 
 home = expanduser("~")
 
-worship_sermons_path = (home + '/Sites/2017_Church/_worship/*.md')
+worship_sermons_path = (home + '/Dropbox/Sites/fbcmuncie_2018/_worship/*.md')
 worship_posts = glob.glob(worship_sermons_path)
 
 for post in worship_posts:
@@ -44,7 +44,7 @@ for name in files:
     slug = slug.replace("?", "")
     slug = slug.replace("'", "")
     slug = re.sub("[\(\[].*?[\)\]]", "", slug)
-    filename =(home + '/Sites/2017_Church/_worship/' + date + '-' + slug + '.md')
+    filename =(home + '/Dropbox/Sites/fbcmuncie_2018/_worship/' + date + '-' + slug + '.md')
     filename = filename.replace("-.", ".")
     filename = filename.replace("--", "-")
 

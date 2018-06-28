@@ -16,8 +16,8 @@
    \includegraphics[height=.5in]{visitor-logo}
   \end{minipage}
   \begin{minipage}{1.5in}
-  \noindent \bfseries \textsc{First Baptist Church} \\
-  \normalfont 309 E. Adams Street \\
+  \noindent \footnotesize \bfseries \textsc{First Baptist Church} \\
+  \footnotesize \mdseries 309 E. Adams Street \\
   Muncie, Indiana 47305 \\
   Phone: 765-284-7749
   \end{minipage}
@@ -28,8 +28,8 @@
 
 {
   \begin{textblock*}{3in}(.5in,1.25in)
-  \noindent \bfseries \textsc{\name} \\
-  \normalfont \address \\
+  \noindent \small \bfseries \textsc{\name} \\
+  \small \mdseries \address \\
   \city, \state \ \zip \\
 \end{textblock*}
 }

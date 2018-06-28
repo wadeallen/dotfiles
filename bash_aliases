@@ -1,6 +1,4 @@
 alias sw='cd $HOME/Dropbox/Administration/Markdown_Files/Sermon_Work/'
-alias site='cd $HOME/Sites/2017_Church'
-alias newsite='cd $HOME/Sites/2018_Church'
 alias cct='cd $HOME/Dropbox/Administration/CCT_Summaries/2018'
 alias ww='cd $HOME/Dropbox/Administration/Markdown_Files/Wedding_Work/'
 alias fw='cd $HOME/Dropbox/Administration/Markdown_Files/Funeral_Work/'
@@ -40,7 +38,7 @@ alias pi='ssh wadesallen@192.168.2.32'
 
 # for new church site
 alias 17='cd $HOME/Sites/2017_Church && git pull'
-alias 18='cd $HOME/Dropbox/Sites/fbcmuncie_2018'
+alias site='cd $HOME/Dropbox/Sites/fbcmuncie_2018'
 
 # for todolists
 alias baptism='$HOME/bin/todoist_baptism.py'

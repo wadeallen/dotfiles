@@ -50,7 +50,7 @@ stories = glob.glob(path)
 stories =  sorted(stories)
 
 # Sort out Stories for Website
-website_dir = '/home/wadeallen/Sites/2017_Church/_news/'
+website_dir = '/home/wadeallen/Dropbox/Sites/fbcmuncie_2018/_news/'
 os.system('rm ' + website_dir + '*.md')
 for story in stories:
 	post = frontmatter.load(story)
