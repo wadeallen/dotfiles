@@ -33,6 +33,10 @@ Maid.rules do
     move(dir('~/Dropbox/Scans/*Nursery Worker Sign In Sheet.pdf'), '/home/wadeallen/Dropbox/Administration/Nursery/Sign In Sheets')
   end
 
+  rule 'move Macys Statement into folder' do
+    move(dir('~/Dropbox/Scans/Macys Statement*.pdf'), '~/Dropbox/Statements/Macys')
+  end
+
   rule 'move giving reports into folder' do
     move(dir('~/Dropbox/Scans/*Giving Report.pdf'), '~/Dropbox/Administration/Giving Reports')
   end

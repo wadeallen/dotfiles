@@ -170,6 +170,9 @@ nnoremap <leader>nt G"=strftime("%Y/%m/%d")<CR>PA<Space><Space>
 nmap <leader>cc 0gcw
 nmap <leader>" 0/:<Return>Wi"<Esc>$a"
 
+"insert duration file
+nnoremap <leader>dur :r ~/Dropbox/Textbits/duration.txt<cr>
+
 "toggle tab completion key
 "inoremap <tab> <c-r>=Smart_TabComplete()<CR>
 "
@@ -178,12 +181,8 @@ nmap <leader>" 0/:<Return>Wi"<Esc>$a"
 let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_folding_disabled = 1
 
-"Fuzzy Finder Files
-nnoremap <leader>bin  :FufFile $HOME/bin/<cr>
-nnoremap <leader>cct  :FufFile $HOME/Dropbox/Administration/CCT_Summaries/2016/<cr>
+" Fuzzy Finder Files
 nnoremap <leader>sw  :FufFile $HOME/Dropbox/Administration/Markdown_Files/Sermon_Work/<cr>
-nnoremap <leader>not :FufFile $HOME/Dropbox/Notes/<cr>
-
 
 "Always open vimrc in side window
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
