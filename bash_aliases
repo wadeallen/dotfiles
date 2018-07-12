@@ -12,8 +12,8 @@ alias bn='cd $HOME/Dropbox/Study/Book_Notes'
 alias dl='/usr/bin/youtube-dl'
 
 # Sermon Media Prep
-alias ow='cd $HOME/Sites/2017_Church/_worship/'
-alias ov='cd $HOME/Sites/2017_Church/_posts'
+alias ow='cd $HOME/Dropbox/Sites/fbcmuncie_2018/_worship/'
+alias ov='cd $HOME/Dropbox/Sites/fbcmuncie_2018/_posts'
 alias aud='cd $HOME/Dropbox/Sermon_Audio'
 
 # Ledger
@@ -36,8 +36,6 @@ alias add='todoist_add.py -t'
 #ssh
 alias pi='ssh wadesallen@192.168.2.32'
 
-# for new church site
-alias 17='cd $HOME/Sites/2017_Church && git pull'
 alias site='cd $HOME/Dropbox/Sites/fbcmuncie_2018'
 
 # for todolists

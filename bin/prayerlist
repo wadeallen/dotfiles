@@ -16,4 +16,4 @@ pdflatex $DIRECTORY/prayer_list_print.tex &&
 rm $DIRECTORY/prayer_list_print.log &&
 rm $DIRECTORY/prayer_list_print.aux &&
 cp $DIRECTORY/prayer_list_print.pdf $HOME/Dropbox/Print/prayer_list_print.pdf 
-cp $DIRECTORY/prayer_list.pdf $HOME/Sites/2017_Church/prayerlist.pdf
+cp $DIRECTORY/prayer_list.pdf $HOME/Dropbox/Sites/fbcmuncie_2018/prayerlist.pdf
