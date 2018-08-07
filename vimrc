@@ -188,6 +188,9 @@ nnoremap <leader>sw  :FufFile $HOME/Dropbox/Administration/Markdown_Files/Sermon
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
+"Change Translation to NIV
+nnoremap <leader>re :Replace<CR>
+
 "Snippets
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
