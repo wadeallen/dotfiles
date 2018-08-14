@@ -1,0 +1,21 @@
+#!/bin/bash
+
+filename=$1
+sunday=$(date +'%Y-%m-%d')
+year=$(date +'%Y')
+
+if	[ -z "$filename" ]
+then
+	echo "Please enter the file"
+	exit 0
+fi
+
+sermon_title=$(cat ~/Dropbox/Textbits/title.txt)
+preacher=$(cat ~/Dropbox/Textbits/preacher.txt)
+description=$(cat ~/Dropbox/Textbits/summary.txt)
+playlist=$(cat ~/Dropbox/Textbits/playlist.txt)
+
+fileroot=$(echo ${filename%.*})
+
+/usr/bin/youtube-upload --title="$sermon_title" --description="$description" --tags="$preacher, sermon, $playlist" --playlist="$playlist" $filename
+
