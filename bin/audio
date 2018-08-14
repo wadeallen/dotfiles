@@ -11,15 +11,27 @@ then
 	exit 0
 fi
 
-echo "Title of Sermon: "
-read sermon_title
+# echo "Title of Sermon: "
+# read sermon_title
+sermon_title=$(cat ~/Dropbox/Textbits/title.txt)
 
-echo "Preacher: "
-read preacher
+# echo "Preacher: "
+# read preacher
+preacher=$(cat ~/Dropbox/Textbits/preacher.txt)
 
-echo "Description: "
-read description
+# echo "Description: "
+# read description
+description=$(cat ~/Dropbox/Textbits/summary.txt)
 
 fileroot=$(echo ${filename%.*})
 
 ffmpeg -i ${filename} -i $HOME/Dropbox/Pictures/fbc_podcast_logo.png -b:a 192k -vn -metadata title="${sermon_title}" -metadata genre="Spoken Word" -metadata album="First Baptist Church Muncie" -metadata album_artist="${preacher}" -metadata date="${date}" -metadata artist="${preacher}" -metadata comments="${description}" $HOME/Dropbox/Sermon_Audio/${sunday}.mp3 
+
+mp3_filename=/home/wadeallen/Dropbox/Sermon_Audio/$sunday.mp3
+
+duration=`exiftool -Duration $mp3_filename | awk '{ print $3 }'`
+bytes=`wc -c $mp3_filename | awk '{ print $1 }'`
+
+echo -e "layout: sermon\ncategory: video\nduration: '${duration}' \nlength: ${bytes}\nvideo_url: " > ~/Dropbox/Textbits/duration.txt
+
+echo "copied duration data to Dropbox/Textbits/duration.txt file"
