@@ -10,12 +10,15 @@ then
 	exit 0
 fi
 
-sermon_title=$(cat ~/Dropbox/Textbits/title.txt)
-preacher=$(cat ~/Dropbox/Textbits/preacher.txt)
-description=$(cat ~/Dropbox/Textbits/summary.txt)
+source read_yaml
+create_variables /home/wadeallen/Dropbox/Textbits/video-data.txt
+
+# sermon_title=$(cat ~/Dropbox/Textbits/title.txt)
+# preacher=$(cat ~/Dropbox/Textbits/preacher.txt)
+# description=$(cat ~/Dropbox/Textbits/summary.txt)
 playlist=$(cat ~/Dropbox/Textbits/playlist.txt)
 
-fileroot=$(echo ${filename%.*})
+# fileroot=$(echo ${filename%.*})
 
-/usr/bin/youtube-upload --title="$sermon_title" --description="$description" --tags="$preacher, sermon, $playlist" --playlist="$playlist" $filename
+/usr/bin/youtube-upload --title="$title" --description="$summary" --tags="$author, sermon, $playlist, $scripture" --playlist="$playlist" $filename
 

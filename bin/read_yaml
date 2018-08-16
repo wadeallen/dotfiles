@@ -48,5 +48,3 @@ function create_variables() {
     eval "$(parse_yaml "$yaml_file")"
 }
 
-create_variables $1
-echo $title
