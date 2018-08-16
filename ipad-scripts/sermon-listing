@@ -1,0 +1,18 @@
+#! /bin/bash
+
+day=$1
+
+if  [ -z "$day" ]; then
+  sunday=`date -d"Sunday" +%Y-%m-%d`
+else
+  sunday=`date "$day" -d "Next Sunday" +%Y-%m-%d`
+fi
+
+source ~/bin/read_yaml
+create_variables ~/Dropbox/Administration/Markdown_Files/Sermon_Work/${sunday}*.md
+echo $title
+
+
+
+
+
