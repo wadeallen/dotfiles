@@ -5,12 +5,22 @@ day=$1
 if  [ -z "$day" ]; then
   sunday=`date -d"Sunday" +%Y-%m-%d`
 else
-  sunday=`date "$day" -d "Next Sunday" +%Y-%m-%d`
+  sunday=`date -d"$day" +%Y-%m-%d`
 fi
 
-source ~/bin/read_yaml
-create_variables ~/Dropbox/Administration/Markdown_Files/Sermon_Work/${sunday}*.md
-echo $title
+dayName=`date -d"$sunday" +%a | tr '[:lower:]' '[:upper:]'`
+if [ $dayName = "SUN" ] ; then
+  sunday_date=$sunday
+  source ~/bin/read_yaml
+  create_variables ~/Dropbox/Administration/Markdown_Files/Sermon_Work/${sunday_date}*.md
+  echo $title
+  echo $scripture
+else
+  echo Please enter a Sunday
+fi
+
+
+
 
 
 
