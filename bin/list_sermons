@@ -1,0 +1,3 @@
+#! /bin/bash
+
+ls ~/Dropbox/Administration/Markdown_Files/Sermon_Work/*_sermon.md
