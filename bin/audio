@@ -13,18 +13,10 @@ fi
 
 source read_yaml
 create_variables /home/wadeallen/Dropbox/Textbits/video-data.txt
-<<<<<<< HEAD
-echo $summary
-
-fileroot=$(echo ${filename%.*})
-
-ffmpeg -i ${filename} -i $HOME/Dropbox/Pictures/fbc_podcast_logo.png -b:a 192k -vn -metadata title="$title" -metadata genre="Spoken Word" -metadata album="First Baptist Church Muncie" -metadata album_artist="$author" -metadata date="${date}" -metadata artist="$author" -metadata comments="$summary" $HOME/Dropbox/Sermon_Audio/${sunday}.mp3 
-=======
 
 fileroot=$(echo ${filename%.*})
 
 ffmpeg -i ${filename} -i $HOME/Dropbox/Pictures/fbc_podcast_logo.png -b:a 192k -vn -metadata title="${title}" -metadata genre="Spoken Word" -metadata album="First Baptist Church Muncie" -metadata album_artist="${author}" -metadata date="${date}" -metadata artist="${author}" -metadata comments="${summary}" $HOME/Dropbox/Sermon_Audio/${sunday}.mp3 
->>>>>>> 52346e570f81d7d8f513c4610a1a542e8efeb7ed
 
 mp3_filename=/home/wadeallen/Dropbox/Sermon_Audio/$sunday.mp3
 
