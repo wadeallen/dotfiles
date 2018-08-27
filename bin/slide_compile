@@ -11,7 +11,7 @@ home = expanduser("~")
 
 today = datetime.date.today()
 # sunday = today + datetime.timedelta( (6-today.weekday()) % 7 )
-sunday = today + relativedelta(weekday=SU(+2))
+sunday = today + relativedelta(weekday=SU(+1))
 date = sunday.strftime('%Y-%m-%d')
 
 sermon_directory = home + "/Dropbox/Administration/Markdown_Files/Sermon_Work/"

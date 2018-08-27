@@ -170,6 +170,9 @@ nnoremap <leader>nt G"=strftime("%Y/%m/%d")<CR>PA<Space><Space>
 nmap <leader>cc 0gcw
 nmap <leader>" 0/:<Return>Wi"<Esc>$a"
 
+"Add bullet at beginning of line
+nmap <leader>- :s/^/- /<Return>
+
 "insert duration file
 nnoremap <leader>dur :r ~/Dropbox/Textbits/duration.txt<cr>
 
