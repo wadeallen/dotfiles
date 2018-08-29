@@ -20,5 +20,5 @@ playlist=$(cat ~/Dropbox/Textbits/playlist.txt)
 
 # fileroot=$(echo ${filename%.*})
 
-/usr/bin/youtube-upload --title="$title" --description="$summary" --tags="$author, sermon, $playlist, $scripture" --playlist="$playlist" $filename
+/usr/bin/youtube-upload --title="$title" --description="$summary" --tags="$author, sermon, $playlist, $scripture" --playlist="$playlist" --client-secrets=/home/wadeallen/client_secret.json $filename
 
