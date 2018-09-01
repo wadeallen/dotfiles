@@ -1,4 +1,5 @@
 #!/bin/bash
+
 w=$(date -d"$1" +%w)
 diff=$(( (7-$w)%7 ))
 date -d"+$diff day $1" +%F
