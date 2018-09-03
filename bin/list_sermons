@@ -1,3 +1,8 @@
 #! /bin/bash
 
-ls ~/Dropbox/Administration/Markdown_Files/Sermon_Work/*_sermon.md
+sunday=$1
+
+source read_yaml
+create_variables /home/wadeallen/Dropbox/Administration/Markdown_Files/Sermon_Work/${sunday}*
+
+echo $title
