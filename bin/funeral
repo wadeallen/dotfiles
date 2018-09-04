@@ -75,8 +75,8 @@ item = api.items.add('Set up meeting with ' + name + ' family', project_id, date
 item = api.items.add('mark ' + name + ' deceased in database', project_id, date_string=notify_date)
 
 # # print backup copy of funeral
-print_backup = date + datetime.timedelta(days=-1)
-item = api.items.add('print backup copy of funeral sermon for ' + name + ' funeral', project_id, date_string=print_backup)
+# print_backup = date + datetime.timedelta(days=-1)
+# item = api.items.add('print backup copy of funeral sermon for ' + name + ' funeral', project_id, date_string=print_backup)
 
 # if church in ['true', '1', 't', 'y', 'yes', 'yeah', 'yup', 'certainly', 'uh-huh']:
 #     # check and add to church calendar
