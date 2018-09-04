@@ -26,17 +26,6 @@ for name in files:
         postdate = post['date']
     else:
         postdate = parser.parse(post['date'])
-    # target = open (home + '/Dropbox/Textbits/scripture.txt', 'w')
-    # target.write (post['scripture'])
-    # target.close()
-
-    # target = open (home + '/Dropbox/Textbits/title.txt', 'w')
-    # target.write (post['title'])
-    # target.close()
-
-    # target = open (home + '/Dropbox/Textbits/summary.txt', 'w')
-    # target.write (post['summary'])
-    # target.close()
 
     target = open (home + '/Dropbox/Textbits/video-data.txt', 'w')
     target.write ('---\n')
