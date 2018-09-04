@@ -1,10 +1,12 @@
 #! /bin/bash
 
-# sunday=$1
+sunday=$1
 
-# source read_yaml
-# create_variables /home/wadeallen/Dropbox/Administration/Markdown_Files/Sermon_Work/${sunday}*
+source ~/bin/read_yaml
+create_variables /home/wadeallen/Dropbox/Administration/Markdown_Files/Sermon_Work/${sunday}*
 
-# echo $title
+echo "Title: $title"
+echo "Date: $date"
+echo "Scripture: $scripture"
+echo "Reader: $reader"
 
-echo test

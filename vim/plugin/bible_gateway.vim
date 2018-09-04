@@ -9,9 +9,6 @@ endfunction
 function ReplaceBible(...)
   let line = getline('.')
   let passage = matchstr(line, ">\(\\zs\\w.*\\zeESV\)") 
-  " let passage = matchstr(line, ">\(.*ESV\)") 
-  " let translation = exists('a:1') ? a:1 : "NIV"
-  " let scripture = exists('a:2') && a:2 != "" ? a:2 : input("Scripture: ")
   let scripture = passage
   let translation = "NIV"
   let command = '/home/wadeallen/.rbenv/shims/scripture "' . scripture . '", ' . translation
