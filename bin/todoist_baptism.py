@@ -3,21 +3,24 @@
 import sys
 import json
 import todoist
-from dateutil import parser
 import time
 import datetime
 import config
-import webbrowser
 import sys
 import subprocess
 import urltools
+import argparse
 
-name = input("Name of person: ")
-date = input("Date of Baptism: ")
+parser = argparse.ArgumentParser(description='Set up Baptism Template')
+parser.add_argument('-n','--name', nargs='*', help='Name',  required=True)
+parser.add_argument('-d','--date', default="today", help='Date of Baptism')
+args = vars(parser.parse_args())
 
-date = parser.parse(date)
 
-today = parser.parse(time.strftime("%m %d %Y"))
+name = ' '.join(args['name'])
+date = args['date']
+today = datetime.date.today()
+
 project_id = '155477514'
 
 # Now Add tasks to Todoist
@@ -29,32 +32,32 @@ pc_date = today
 item = api.items.add('Add ' + name + ' baptism to planning center', project_id, date_string=pc_date.strftime('%Y-%m-%d'))
 
 # contact Larry about filling baptistry
-fill_date = date + datetime.timedelta(days=-6)
+fill_date = datetime.datetime.strptime(date, '%Y-%m-%d') 
+fill_date = fill_date + datetime.timedelta(days=-6)
 item = api.items.add('Contact Larry to fill baptistry for ' + name + ' baptism', project_id, date_string=fill_date.strftime('%Y-%m-%d'))
 api.commit()
 
 # double check baptistry
-check_date = date + datetime.timedelta(days=-1)
+check_date = datetime.datetime.strptime(date, '%Y-%m-%d') 
+check_date = check_date + datetime.timedelta(days=-1)
 item = api.items.add('Make sure baptistry is filled for ' + name + ' baptism', project_id, date_string=check_date.strftime('%Y-%m-%d'))
 api.commit()
 
-# make baby baptism certificate
-certificate_date = date + datetime.timedelta(days=-4)
+# make baptism certificate
+certificate_date = datetime.datetime.strptime(date, '%Y-%m-%d') 
+certificate_date = certificate_date + datetime.timedelta(days=-4)
 item = api.items.add('Make ' + name + ' baptism certificate', project_id, date_string=certificate_date.strftime('%Y-%m-%d'))
 api.commit()
 
 # add baptism date to database
-database_date = date + datetime.timedelta(days=+1)
+database_date = datetime.datetime.strptime(date, '%Y-%m-%d') 
+database_date = database_date + datetime.timedelta(days=+1)
 item = api.items.add('Add ' + name + ' baptism information to database', project_id, date_string=database_date.strftime('%Y-%m-%d'))
 api.commit()
 
-print ('Baptism Added:',name,date.strftime('%B %d, %Y'))
-
-
-email_address = 'clif@fbcmuncie.org'
-subject = 'Baptism on {}'.format(date.strftime('%B %d, %Y'))
-message = ('Hi Clif%0A%0AI just wanted you to know that {} is going to be baptized on {}. I have added it to planning center.%0A%0AWade'.format(name, date.strftime('%B %d, %Y')))
-url = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + email_address + '&su=' + subject + '&body=' + message
-
-subprocess.call(["xdg-open", url])
+# email_address = 'clif@fbcmuncie.org'
+# subject = 'Baptism on {}'.format(date.strftime('%B %d, %Y'))
+# message = ('Hi Clif%0A%0AI just wanted you to know that {} is going to be baptized on {}. I have added it to planning center.%0A%0AWade'.format(name, date.strftime('%B %d, %Y')))
+# url = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + email_address + '&su=' + subject + '&body=' + message
+# subprocess.call(["xdg-open", url])
 
