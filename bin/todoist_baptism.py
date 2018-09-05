@@ -15,7 +15,6 @@ parser.add_argument('-n','--name', nargs='*', help='Name',  required=True)
 parser.add_argument('-d','--date', default="today", help='Date of Baptism')
 args = vars(parser.parse_args())
 
-
 name = ' '.join(args['name'])
 date = args['date']
 today = datetime.date.today()

@@ -4,10 +4,10 @@ import datetime
 
 date = '2018-09-05'
 
-def set_date (name_var, time_var):
-    name_var = datetime.datetime.strptime(date, '%Y-%m-%d') 
-    name_var = name_var + datetime.timedelta(days=time_var)
+def set_date(number):
+    new_date = datetime.datetime.strptime(date, '%Y-%m-%d') 
+    new_date = new_date + datetime.timedelta(days=number)
+    return new_date
 
-set_date(test_variable, -10)
-
-print(test_variable)
+test = set_date(1)
+print(test)

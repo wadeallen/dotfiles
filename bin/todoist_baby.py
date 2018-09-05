@@ -3,16 +3,19 @@
 import sys
 import json
 import todoist
-from dateutil import parser
 import time
 import datetime
 import config
+import argparse
 
+parser = argparse.ArgumentParser(description='Set up Baby Dedication Template')
+parser.add_argument('-n','--name', nargs='*', help='Name',  required=True)
+parser.add_argument('-d','--date', default="today", help='Date of Baptism')
+args = vars(parser.parse_args())
 
-baby_name = input("Name of Baby: ")
-date = input("Date of Dedication: ")
-
-date = parser.parse(date)
+name = ' '.join(args['name'])
+date = args['date']
+today = datetime.date.today()
 
 project_id = '155478376'
 
@@ -20,15 +23,14 @@ api = todoist.TodoistAPI(config.todoist_api)
 
 # sets the notify date
 notify_date = date + datetime.timedelta(days=-6)
-item = api.items.add('Notify Clif and Dana ' + baby_name + ' dedication ' + date.strftime('%Y-%m-%d'), project_id, date_string=notify_date.strftime('%Y-%m-%d'))
+item = api.items.add('Notify Clif and Dana ' + name + ' dedication ' + date.strftime('%Y-%m-%d'), project_id, date_string=notify_date.strftime('%Y-%m-%d'))
 
 # make baby dedication certificate
 certificate_date = date + datetime.timedelta(days=-4)
-item = api.items.add('Make ' + baby_name + ' dedication certificate ' + date.strftime('%Y-%m-%d'), project_id, date_string=certificate_date.strftime('%Y-%m-%d'))
+item = api.items.add('Make ' + name + ' dedication certificate ' + date.strftime('%Y-%m-%d'), project_id, date_string=certificate_date.strftime('%Y-%m-%d'))
 
 # make baby dedication certificate
 pc_date = date + datetime.timedelta(days=-15)
-item = api.items.add('Add ' + baby_name + ' dedication in Planning Center ' + date.strftime('%Y-%m-%d'), project_id, date_string=pc_date.strftime('%Y-%m-%d'))
+item = api.items.add('Add ' + name + ' dedication in Planning Center ' + date.strftime('%Y-%m-%d'), project_id, date_string=pc_date.strftime('%Y-%m-%d'))
 api.commit()
 
-print ('Tasks Added:', baby_name + ' Dedication added for', date.strftime('%B %d, %Y'))
