@@ -52,7 +52,7 @@ item = api.items.add('Contact Larry to fill baptistry for ' + name + ' baptism',
 check_date = set_date(-1)
 item = api.items.add('Make sure baptistry is filled for ' + name + ' baptism', project_id, date_string=check_date.strftime('%Y-%m-%d'))
 
-make baptism certificate
+# make baptism certificate
 certificate_date = set_date(-4)
 item = api.items.add('Make ' + name + ' baptism certificate', project_id, date_string=certificate_date.strftime('%Y-%m-%d'))
 
