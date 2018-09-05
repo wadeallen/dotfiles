@@ -59,7 +59,7 @@ item = api.items.add('Make ' + name + ' baptism certificate', project_id, date_s
 # add baptism date to database
 database_date = set_date(+1)
 item = api.items.add('Add ' + name + ' baptism information to database', project_id, date_string=database_date.strftime('%Y-%m-%d'))
-# api.commit()
+api.commit()
 
 baptism_date = datetime.datetime.strptime(date, '%Y-%m-%d') 
 day = baptism_date.strftime('%d')
