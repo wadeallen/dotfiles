@@ -74,5 +74,5 @@ else:
     target.write("---\n")
     target.close()
 
-os.system('pandoc ' + filename + ' -o ~/Dropbox/Print/baptism.pdf --latex-engine=xelatex --template=baptism.tex')
+os.system('pandoc ' + filename + ' -o ~/Dropbox/Print/' + date + '_' + slug + '.pdf --latex-engine=xelatex --template=baptism.tex')
 
