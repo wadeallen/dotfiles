@@ -55,9 +55,4 @@ database_date = database_date + datetime.timedelta(days=+1)
 item = api.items.add('Add ' + name + ' baptism information to database', project_id, date_string=database_date.strftime('%Y-%m-%d'))
 api.commit()
 
-# email_address = 'clif@fbcmuncie.org'
-# subject = 'Baptism on {}'.format(date.strftime('%B %d, %Y'))
-# message = ('Hi Clif%0A%0AI just wanted you to know that {} is going to be baptized on {}. I have added it to planning center.%0A%0AWade'.format(name, date.strftime('%B %d, %Y')))
-# url = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + email_address + '&su=' + subject + '&body=' + message
-# subprocess.call(["xdg-open", url])
 
