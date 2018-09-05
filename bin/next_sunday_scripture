@@ -1,0 +1,11 @@
+#!/bin/bash
+
+sunday=$(date -dsunday +%Y-%m-%d)
+
+source ~/bin/functions
+source ~/bin/read_yaml
+
+create_variables /home/wadeallen/Dropbox/Administration/Markdown_Files/Sermon_Work/${sunday}*
+echo $scripture
+
+

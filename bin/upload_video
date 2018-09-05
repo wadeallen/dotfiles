@@ -13,12 +13,7 @@ fi
 source read_yaml
 create_variables /home/wadeallen/Dropbox/Textbits/video-data.txt
 
-# sermon_title=$(cat ~/Dropbox/Textbits/title.txt)
-# preacher=$(cat ~/Dropbox/Textbits/preacher.txt)
-# description=$(cat ~/Dropbox/Textbits/summary.txt)
 playlist=$(cat ~/Dropbox/Textbits/playlist.txt)
-
-# fileroot=$(echo ${filename%.*})
 
 /usr/bin/youtube-upload --title="$title" --description="$summary" --tags="$author, sermon, $playlist, $scripture" --playlist="$playlist" --client-secrets=/home/wadeallen/client_secret.json $filename
 

@@ -3,7 +3,7 @@
 from datetime import date
 from datetime import time
 from datetime import datetime
-from dateutil import parser
+import datetime
 from os.path import expanduser
 import os
 import os.path
@@ -11,17 +11,31 @@ import subprocess
 import todoist
 import sys
 import json
+import argparse
 import datetime
 import config
 import time
 from titlecase import titlecase
 
 home = expanduser("~")
-name = input("Name of Deceased: ")
+
+parser = argparse.ArgumentParser(description='Set up Funeral Template')
+parser.add_argument('-n','--name', nargs='*', help='Name of Deceased',  required=True)
+parser.add_argument('-d','--date', default="today", help='Date of Funeral')
+parser.add_argument('-g', '--gender', default="male", help='Gender')
+parser.add_argument('-c', '--church', default="yes", help='Is the funeral at the church?')
+args = vars(parser.parse_args())
+
+name = ' '.join(args['name'])
+# name = input("Name of Deceased: ")
 name = titlecase(name)
-date = input("Date of Funeral: ")
-gender = input("Gender (m or f): ")
-church = input("Is the funeral at the church? (y/n): ")
+date = args['date']
+today = datetime.date.today()
+# date = input("Date of Funeral: ")
+gender = args['gender']
+# gender = input("Gender (m or f): ")
+church = args['church']
+# church = input("Is the funeral at the church? (y/n): ")
 full_name = name
 first_name = name.split()[0].capitalize()
 
@@ -39,31 +53,32 @@ else:
 	he = "she"
 	him = "her"
 
-date = parser.parse(date)
 name_sliced = name.split()
 slug = ("_".join(name_sliced))
 
-today = parser.parse(time.strftime("%m %d %Y"))
+today = today.strftime('%Y-%m-%d')
 # add to funeral project
 project_id = '162548698'
 
 # Now Add tasks to Todoist
 
-# api = todoist.TodoistAPI(config.todoist_api)
+api = todoist.TodoistAPI(config.todoist_api)
 
 # # sets the notify church about death
-# notify_date = today
-# item = api.items.add('email congregation about ' + name + ' death and funeral arrangements', project_id, date_string=notify_date.strftime('%Y-%m-%d'))
+notify_date = today
+item = api.items.add('email congregation about ' + name + ' death and funeral arrangements', project_id, date_string=notify_date)
 
 # # meet with family
-# item = api.items.add('Set up meeting with ' + name + ' family', project_id, date_string=notify_date.strftime('%Y-%m-%d'))
+item = api.items.add('Set up meeting with ' + name + ' family', project_id, date_string=notify_date)
 
 # # mark deceased in database
-# item = api.items.add('mark ' + name + ' deceased in database', project_id, date_string=notify_date.strftime('%Y-%m-%d'))
+item = api.items.add('mark ' + name + ' deceased in database', project_id, date_string=notify_date)
 
 # # print backup copy of funeral
-# print_backup = date + datetime.timedelta(days=-1)
-# item = api.items.add('print backup copy of funeral sermon for ' + name + ' funeral', project_id, date_string=print_backup.strftime('%Y-%m-%d'))
+# print_backup = datetime.strptime(date, '%Y-%m-%d') + datetime.timedelta(days=-1)
+print_backup = datetime.datetime.strptime(date, '%Y-%m-%d') 
+print(print_backup)
+# item = api.items.add('print backup copy of funeral sermon for ' + name + ' funeral', project_id, date_string=print_backup)
 
 # if church in ['true', '1', 't', 'y', 'yes', 'yeah', 'yup', 'certainly', 'uh-huh']:
 #     # check and add to church calendar
@@ -73,11 +88,11 @@ project_id = '162548698'
 #     # notify Adam
 #     item = api.items.add('notify Adam or Clif about moving sounds equipment for ' + name + ' funeral', project_id, date_string=notify_date.strftime('%Y-%m-%d'))
 
-# api.commit()
+api.commit()
 
 # Function to Grab lines of text from various subfiles and do replacements
 
-date = date.strftime('%Y-%m-%d')
+# date = date.strftime('%Y-%m-%d')
 
 def grab_section(file):
 	with open(home + "/Dropbox/Templates/Funeral/" + file) as f:
@@ -106,5 +121,5 @@ else:
 	grab_section("faith.md")
 	grab_section("graveside.md")
 	target.close()
-	subprocess.call(['vim', '-c', '3', filename])
+	# subprocess.call(['vim', '-c', '3', filename])
 
