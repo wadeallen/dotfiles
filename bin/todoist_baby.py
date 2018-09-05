@@ -17,20 +17,25 @@ name = ' '.join(args['name'])
 date = args['date']
 today = datetime.date.today()
 
+def set_date(number):
+    new_date = datetime.datetime.strptime(date, '%Y-%m-%d') 
+    new_date = new_date + datetime.timedelta(days=number)
+    return new_date
+
 project_id = '155478376'
 
 api = todoist.TodoistAPI(config.todoist_api)
 
 # sets the notify date
-notify_date = date + datetime.timedelta(days=-6)
+notify_date = set_date(-6)
 item = api.items.add('Notify Clif and Dana ' + name + ' dedication ' + date.strftime('%Y-%m-%d'), project_id, date_string=notify_date.strftime('%Y-%m-%d'))
 
 # make baby dedication certificate
-certificate_date = date + datetime.timedelta(days=-4)
+certificate_date = set_date(-4)
 item = api.items.add('Make ' + name + ' dedication certificate ' + date.strftime('%Y-%m-%d'), project_id, date_string=certificate_date.strftime('%Y-%m-%d'))
 
 # make baby dedication certificate
-pc_date = date + datetime.timedelta(days=-15)
+pc_date = set_date(-15)
 item = api.items.add('Add ' + name + ' dedication in Planning Center ' + date.strftime('%Y-%m-%d'), project_id, date_string=pc_date.strftime('%Y-%m-%d'))
 api.commit()
 

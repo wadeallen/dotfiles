@@ -19,6 +19,11 @@ name = ' '.join(args['name'])
 date = args['date']
 today = datetime.date.today()
 
+def set_date(number):
+    new_date = datetime.datetime.strptime(date, '%Y-%m-%d') 
+    new_date = new_date + datetime.timedelta(days=number)
+    return new_date
+
 project_id = '155477514'
 
 # Now Add tasks to Todoist
@@ -30,26 +35,22 @@ pc_date = today
 item = api.items.add('Add ' + name + ' baptism to planning center', project_id, date_string=pc_date.strftime('%Y-%m-%d'))
 
 # contact Larry about filling baptistry
-fill_date = datetime.datetime.strptime(date, '%Y-%m-%d') 
-fill_date = fill_date + datetime.timedelta(days=-6)
+fill_date = set_date(-6)
 item = api.items.add('Contact Larry to fill baptistry for ' + name + ' baptism', project_id, date_string=fill_date.strftime('%Y-%m-%d'))
 api.commit()
 
 # double check baptistry
-check_date = datetime.datetime.strptime(date, '%Y-%m-%d') 
-check_date = check_date + datetime.timedelta(days=-1)
+check_date = set_date(-1)
 item = api.items.add('Make sure baptistry is filled for ' + name + ' baptism', project_id, date_string=check_date.strftime('%Y-%m-%d'))
 api.commit()
 
 # make baptism certificate
-certificate_date = datetime.datetime.strptime(date, '%Y-%m-%d') 
-certificate_date = certificate_date + datetime.timedelta(days=-4)
+certificate_date = set_date(-4)
 item = api.items.add('Make ' + name + ' baptism certificate', project_id, date_string=certificate_date.strftime('%Y-%m-%d'))
 api.commit()
 
 # add baptism date to database
-database_date = datetime.datetime.strptime(date, '%Y-%m-%d') 
-database_date = database_date + datetime.timedelta(days=+1)
+database_date = set_date(+1)
 item = api.items.add('Add ' + name + ' baptism information to database', project_id, date_string=database_date.strftime('%Y-%m-%d'))
 api.commit()
 
