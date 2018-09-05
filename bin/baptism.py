@@ -1,13 +1,8 @@
 #!/usr/bin/env python3
 
-import sys
-import json
 import todoist
-import time
 import datetime
 import config
-import sys
-import subprocess
 import argparse
 
 parser = argparse.ArgumentParser(description='Set up Baptism Template')
@@ -37,17 +32,14 @@ item = api.items.add('Add ' + name + ' baptism to planning center', project_id, 
 # contact Larry about filling baptistry
 fill_date = set_date(-6)
 item = api.items.add('Contact Larry to fill baptistry for ' + name + ' baptism', project_id, date_string=fill_date.strftime('%Y-%m-%d'))
-api.commit()
 
 # double check baptistry
 check_date = set_date(-1)
 item = api.items.add('Make sure baptistry is filled for ' + name + ' baptism', project_id, date_string=check_date.strftime('%Y-%m-%d'))
-api.commit()
 
 # make baptism certificate
 certificate_date = set_date(-4)
 item = api.items.add('Make ' + name + ' baptism certificate', project_id, date_string=certificate_date.strftime('%Y-%m-%d'))
-api.commit()
 
 # add baptism date to database
 database_date = set_date(+1)
