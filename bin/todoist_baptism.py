@@ -8,7 +8,6 @@ import datetime
 import config
 import sys
 import subprocess
-import urltools
 import argparse
 
 parser = argparse.ArgumentParser(description='Set up Baptism Template')
