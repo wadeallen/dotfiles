@@ -1,10 +1,7 @@
 [terminal] /usr/bin/termite
-[internet] xdg-open http://google.com
-[firefox browser] firefox
 [calendar] xdg-open https://calendar.google.com/
 [gmail] xdg-open http://gmail.com
 [todo] xdg-open http://todoist.com
-[sms] xdg-open https://app.mysms.com
 [gathering] xdg-open https://docs.google.com/spreadsheets/d/1GXm78GK_nEKgrY8hIc96UQsPotpN52ZisOT3-GhQNJs/edit
 [mileage] xdg-open https://docs.google.com/spreadsheets/d/1zzhGL1Uqc_uzDKjJu7BVHUuC5IqQsrXFCTJAsnwrDmk
 [prayer list] xdg-open https://docs.google.com/document/d/1w6z_D6MPedilpVZjoRfkwsbvXmsNSjrHKFDwasE5SeQ/edit 
@@ -17,7 +14,6 @@
 [sermons] xdg-open /home/wadeallen/Dropbox/Sermons
 [slideshow] xdg-open http://wadeallen.github.io/slideshow/#/overview
 [shutdown] /home/wadeallen/bin/shutdownnow
-[sabbatical] xdg-open https://docs.google.com/spreadsheets/d/12Z6_RjpNSoVmslFH6edHBaYj6itevzOX3r7K2W7IKow/edit#gid=0
 [housing] xdg-open https://docs.google.com/spreadsheets/d/1Y0QWYW8P_cFDFcaVKSWr46YX0WJkb2tWUUiYUbEUZDg/edit  
 [insert] xdg-open https://docs.google.com/document/d/1WW3XE9y0MW6J_EJKVvJXIu3GRE9uY0ieVorfxDJvy-Q/edit
 [people] xdg-open https://people.planningcenteronline.com/people
@@ -27,7 +23,5 @@
 [common prayer] xdg-open http://commonprayer.net/
 [stories] xdg-open https://docs.google.com/document/d/1gKLaR2rWaPUAiBeqDUqhrrEDuw0g11Q9N2mp4GcFSLc/edit
 [bulletin] subl /home/wadeallen/Dropbox/Pandoc/Pandoc_Bulletin/includes/optional.tex
-[desktop] xdg-open /home/wadeallen/Desktop
-[downloads] xdg-open /home/wadeallen/Downloads
 [remote] rdesktop 10.1.10.165 -u Staff -p fbc309 -g 80%
 [print] xdg-open /home/wadeallen/Dropbox/Print
