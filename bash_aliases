@@ -5,16 +5,12 @@ alias fw='cd $HOME/Dropbox/Administration/Markdown_Files/Funeral_Work/'
 alias mm='cd $HOME/Dropbox/Administration/Markdown_Files'
 alias desk='cd $HOME/Desktop'
 alias ss='cd $HOME/Sites/slideshow'
-alias jd='cd $HOME/Dropbox/Administration/Job_Descriptions'
-alias bn='cd $HOME/Dropbox/Study/Book_Notes'
-
-# Youtube Downloader
-alias dl='/usr/bin/youtube-dl'
 
 # Sermon Media Prep
 alias ow='cd $HOME/Dropbox/Sites/fbcmuncie_2018/_worship/'
 alias ov='cd $HOME/Dropbox/Sites/fbcmuncie_2018/_posts'
 alias aud='cd $HOME/Dropbox/Sermon_Audio'
+alias sa='cd $HOME/Dropbox/Sermon_Audio'
 
 # Ledger
 alias led='ledger -f $HOME/Dropbox/Ledger/ledger.ledger'
@@ -34,17 +30,10 @@ alias clean='maid clean -f'
 alias add='todoist_add.py -t'
 
 #ssh
-alias pi='ssh wadesallen@192.168.2.32'
-
 alias site='cd $HOME/Dropbox/Sites/fbcmuncie_2018'
-
-# for todolists
-alias baptism='$HOME/bin/todoist_baptism.py'
-alias dedication='$HOME/bin/todoist_baby.py'
 
 # update system
 alias update='sudo pacman -Syu'
-alias sa='cd $HOME/Dropbox/Sermon_Audio'
 
 
 
