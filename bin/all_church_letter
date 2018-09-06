@@ -1,9 +1,0 @@
-#!/usr/bin/env bash 
-
-DIRECTORY=$HOME/Dropbox/Pandoc/Pandoc_Visitor
-
-cd $DIRECTORY
-wget -O Church_Letter.txt https://docs.google.com/document/d/1IrnEsufnRGngHTlfN4O8RaX_znYd0V6rfrccOhbeUbk/export?format=txt
-pandoc Church_Letter.txt -o all_church_letter.pdf --template all_church_letter.tex
-mv all_church_letter.pdf ~/Desktop/
-rm Church_Letter.txt
