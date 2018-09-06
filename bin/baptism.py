@@ -7,7 +7,6 @@ import argparse
 from os.path import expanduser
 import os
 import os.path
-from datetime import datetime as dt
 
 def suffix(d):
     return 'th' if 11<=d<=13 else {1:'st',2:'nd',3:'rd'}.get(d%10, 'th')
