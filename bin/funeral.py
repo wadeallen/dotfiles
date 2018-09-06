@@ -4,10 +4,7 @@ import datetime
 from os.path import expanduser
 import os
 import os.path
-import subprocess
 import todoist
-import sys
-import json
 import argparse
 import config
 from titlecase import titlecase

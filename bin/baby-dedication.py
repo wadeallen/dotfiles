@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 
-import sys
-import json
 import todoist
-import time
 import datetime
 import config
 import argparse
