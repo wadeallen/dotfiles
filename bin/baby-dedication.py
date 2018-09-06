@@ -25,6 +25,9 @@ name = ' '.join(args['name'])
 date = args['date']
 today = datetime.date.today()
 
+name_sliced = name.split()
+slug = ("_".join(name_sliced))
+
 def set_date(number):
     new_date = datetime.datetime.strptime(date, '%Y-%m-%d') 
     new_date = new_date + datetime.timedelta(days=number)
