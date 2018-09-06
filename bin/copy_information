@@ -1,4 +1,0 @@
-#!/bin/bash
-
-cat ~/Dropbox/Textbits/title.txt | xclip -selection clipboard &&
-cat ~/Dropbox/Textbits/summary.txt | xclip -selection clipboard

@@ -1,4 +1,0 @@
-#!/bin/bash
-
-rclone sync gdrive:Scans/ $HOME/Dropbox/Scans/
-

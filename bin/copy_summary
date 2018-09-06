@@ -1,7 +1,0 @@
-#!/bin/bash
-
-DIR=${HOME}/Dropbox/Textbits
-
-cat ${DIR}/summary.txt | xclip
-
-

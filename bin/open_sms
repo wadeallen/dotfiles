@@ -1,4 +1,0 @@
-#!/bin/bash
-
-i3-msg workspace 9:SMS &
-chromium --new-window https://app.mysms.com/#compose

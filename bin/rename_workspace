@@ -1,9 +1,0 @@
-#! /bin/bash
-#
-# Script to prompt to rename the current workspace.
-#
-# Cadged from
-#  https://faq.i3wm.org/question/3936/how-can-i-change-the-position-of-i3-input-prompt/
-#
-NEWNAME="`zenity --entry --text 'Rename workspace to: '`"
-i3-msg "rename workspace to \"${NEWNAME}\""

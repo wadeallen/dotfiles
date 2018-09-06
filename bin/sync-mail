@@ -1,4 +1,0 @@
-#!/bin/bash
-
-mbsync gmail &&
-notify-send "Email has synced"
