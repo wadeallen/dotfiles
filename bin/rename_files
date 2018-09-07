@@ -5,8 +5,8 @@
 # done
 
 
-for file in *hdtv*; do
-    mv "$file" "${file/.hdtv-lol/}"
+for file in *Timeless*; do
+    mv "$file" "${file/\[ettv\]/}"
 done
 
 # Seinfeld.S06E01.720p.WebRip.ReEnc-DeeJayAhmed.mkv
