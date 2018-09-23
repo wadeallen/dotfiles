@@ -1,4 +1,4 @@
-[terminal] /usr/bin/termite
+[terminal] /usr/bin/mate-terminal
 [calendar] xdg-open https://calendar.google.com/
 [gmail] xdg-open http://gmail.com
 [todo] xdg-open http://todoist.com
