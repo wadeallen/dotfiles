@@ -1,6 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/wadeallen/bin'
 let g:netrw_dirhist_2='/home/wadeallen/dotfiles/bin'
 let g:netrw_dirhist_3='/home/wadeallen/dotfiles'
+<<<<<<< HEAD
 let g:netrw_dirhist_4='/home/wadeallen/dotfiles/vim/plugin'
+=======
+let g:netrw_dirhist_4='/home/wadeallen/bin'
+let g:netrw_dirhist_5='/home/wadeallen/dotfiles/bin'
+let g:netrw_dirhist_6='/home/wadeallen/dotfiles'
+>>>>>>> 3e68632ee66562d2b3fc40fb3a0ec58b5d820954
