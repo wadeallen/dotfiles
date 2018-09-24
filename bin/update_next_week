@@ -31,6 +31,6 @@ for name in files:
     # target.write ('\def\sundaydate{' + postdate.strftime('%b %d, %Y') + '}\n\def\sermontitle{' + post['title'] + '}\n\def\scripture{' + post['scripture'] + '}\n\input{../numbers}\n')
     target.write('\subsection{Next Week in Worship}\n')
     target.write('\label{nextweekworship}\n\n')
-    target.write('Next Sunday, ' + postdate.strftime('%B %d') + ', we will be studying, \n\n \\textbf{' + post['title'] + '} \n \\textbf{' + post['scripture'] + '} \n\n We hope you will take a few minutes in the coming week to read the scripture and prepare for worship.\n')
+    target.write('Next Sunday, ' + postdate.strftime('%B %d') + ', we will be studying, \n\n \\textbf{' + post['title'] + '} \n (\\textbf{' + post['scripture'] + '}) \n\n We hope you will take a few minutes in the coming week to read the scripture and prepare for worship.\n')
     target.close()
 
