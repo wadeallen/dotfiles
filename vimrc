@@ -21,7 +21,6 @@ Plugin 'honza/vim-snippets'
 Plugin 'vim-scripts/L9'
 Plugin 'ron89/thesaurus_query.vim'
 Plugin 'panozzaj/vim-autocorrect'
-Plugin 'vim-scripts/FuzzyFinder'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -183,9 +182,6 @@ nnoremap <leader>dur :r ~/Dropbox/Textbits/duration.txt<cr>
 " Vim Markdown settings
 let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_folding_disabled = 1
-
-" Fuzzy Finder Files
-nnoremap <leader>sw  :FufFile $HOME/Dropbox/Administration/Markdown_Files/Sermon_Work/<cr>
 
 "Always open vimrc in side window
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
