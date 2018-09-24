@@ -4,4 +4,4 @@ date=`date +"%Y-%m-%d"`
 directory=$HOME'/Desktop'/${date}'_late' 
 
 mkdir ${directory} 
-cp -v -a /run/media/wadeallen/CANON/DCIM/*/*.MP4 ${directory}/
+cp -v -a /media/wadeallen/CANON/DCIM/*/*.MP4 ${directory}/
