@@ -4,6 +4,8 @@ import argparse
 import datetime
 import shutil
 from os.path import expanduser
+import re
+
 parser = argparse.ArgumentParser()
 today = datetime.datetime.now().strftime("%Y-%m-%d")
 home = expanduser("~")
@@ -22,6 +24,9 @@ for line in f.readlines():
 		title = blog_title.rstrip()
 		title_sliced = title.split()
 		slug = ("-".join(title_sliced).lower())
+		slug = slug.replace("?", "")
+		slug = slug.replace("'", "")
+		slug = re.sub("[\(\[].*?[\)\]]", "", slug)
 f.close()
 
 #moves the blog post to the Jekyll site
