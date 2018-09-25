@@ -22,6 +22,7 @@ python3 /home/wadeallen/bin/stories &&
 # wget -O Bulletin.txt https://docs.google.com/document/d/1pqVUPNIRVxPRoO-lqGPDlAuJ-qGCE5BT7qOT72u-EDQ/export?format=txt &&
 # wget -O Nursery_Volunteers.csv https://docs.google.com/spreadsheets/d/1OUqqFVGzVJwzf4-YOLL05WrKJKTQNIgULMjTKeNRgiY/export?format=csv &&
 wget -O cct.csv https://docs.google.com/spreadsheets/d/1kh_tGFIdmzwqxuNObYjfC3hiUduSKwS60-768Z1BKoo/export?format=csv &&
+wget -O numbers.csv https://docs.google.com/spreadsheets/d/14TpbSCb71nw9jSrQetPEq1Yi8RvvRcukfnpBwJ4lcJg/export?format=csv &&
 # sed -n '1p' Nursery_Volunteers.csv > this_week.csv &&
 # sed -n /$NUR_THIS_WEEK/p Nursery_Volunteers.csv >> this_week.csv &&
 # sed -n '1p' Nursery_Volunteers.csv > next_week.csv &&
