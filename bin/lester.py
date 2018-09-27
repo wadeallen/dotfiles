@@ -12,7 +12,7 @@ for name in files:
 	os.system('pandoc "{}" -o "{}.pdf" --template=lester.tex'.format(name,base))
 	print ('Converted {} ----> pdf'.format(base))
 
-pdf_files = glob.glob('*.pdf')
+pdf_files = sorted(glob.glob('*.pdf'))
 merger = PdfFileMerger()
 
 for filename in pdf_files:

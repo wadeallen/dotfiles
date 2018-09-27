@@ -1,3 +1,4 @@
+[numbers] xdg-open https://docs.google.com/spreadsheets/d/14TpbSCb71nw9jSrQetPEq1Yi8RvvRcukfnpBwJ4lcJg/edit
 [terminal] /usr/bin/mate-terminal
 [calendar] xdg-open https://calendar.google.com/
 [gmail] xdg-open http://gmail.com
