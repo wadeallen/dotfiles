@@ -5,7 +5,7 @@
 %%% Date: February 2011
 
 %%% Preamble
-\documentclass[paper=letter, fontsize=12pt]{scrartcl}	% Article class of KOMA-script with 11pt font and a4 format
+\documentclass[paper=letter, fontsize=14pt]{scrartcl}	% Article class of KOMA-script with 11pt font and a4 format
 
 \usepackage{longtable}
 
@@ -50,8 +50,6 @@
 \usepackage{fancyhdr}
 \pagestyle{fancyplain}
 \fancyhead{}														% No page header
-\fancyfoot[C]{\thepage}										% Pagenumbering at center of footer 
-\fancyfoot[R]{\small \texttt{$title$}}	% You can remove/edit this line 
 \renewcommand{\headrulewidth}{0pt}				% Remove header underlines
 \renewcommand{\footrulewidth}{0pt}				% Remove footer underlines
 \setlength{\headheight}{13.6pt}
@@ -75,6 +73,7 @@
 %%% Begin document
 \begin{document}
 \maketitle
+\thispagestyle{empty}
 
 $body$
 
