@@ -247,3 +247,6 @@ let g:html_indent_inctags = "html,body,head"
 " set journal filetype
 au BufNewFile,BufRead *.journal.markdown setf journal
 
+" adding support for FZF
+set rtp+=~/.fzf
+nmap <leader>sw :FZF /home/wadeallen/Dropbox/Administration/Markdown_Files/Sermon_Work<Return>
