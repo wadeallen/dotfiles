@@ -18,7 +18,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'vim-scripts/L9'
+" Plugin 'vim-scripts/L9'
 Plugin 'ron89/thesaurus_query.vim'
 Plugin 'panozzaj/vim-autocorrect'
 
