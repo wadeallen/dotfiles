@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /run/media/wadeallen/files/
+cd ~/Downloads
 mv */*.mkv .
 rm -rf ./*/
 
