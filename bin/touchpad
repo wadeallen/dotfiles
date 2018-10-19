@@ -1,6 +1,5 @@
 #!/bin/bash
 
 xinput disable "SynPS/2 Synaptics TouchPad"
-# xinput --set-prop "TPPS/2 IBM TrackPoint" "libinput Accel Speed" -.7
-# xinput --set-prop "TPPS/2 IBM TrackPoint" "libinput Natural Scrolling Enabled" 1
-xinput --set-prop "TPPS/2 IBM TrackPoint" "Device Accel Constant Deceleration" .7
+xinput --set-prop "TPPS/2 IBM TrackPoint" "libinput Accel Speed" -.7
+xinput --set-prop "TPPS/2 IBM TrackPoint" "libinput Natural Scrolling Enabled" 1
