@@ -25,6 +25,14 @@ Maid.rules do
     move(dir('~/Dropbox/Scans/Forum Credit Union*.pdf'), '/home/wadeallen/Dropbox/Statements/Forum Credit Union')
   end
 
+  rule 'move Teachers Credit Union into folder' do
+    move(dir('~/Dropbox/Scans/Teachers Credit Union*.pdf'), '/home/wadeallen/Dropbox/Statements/Teachers Credit Union')
+  end
+
+  rule 'move Three Rivers Credit Union into folder' do
+    move(dir('~/Dropbox/Scans/Three Rivers Credit Union*.pdf'), '/home/wadeallen/Dropbox/Statements/Three Rivers Credit Union')
+  end
+
   rule 'move reminder call sheets into folder' do
     move(dir('~/Dropbox/Scans/*Nursery Reminder Calls.pdf'), '~/Dropbox/Administration/Nursery/Reminder Calls')
   end
