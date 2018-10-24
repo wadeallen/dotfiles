@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sunday=$(date -d'sunday+7 days' +'%A, %B %d')
+printf "$sunday"
+
+
