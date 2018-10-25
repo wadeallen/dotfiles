@@ -9,6 +9,8 @@ if [ ! -d "$directory" ]; then
   echo "$directory has been created" 
 fi
 
+echo "-----"
+
 # copy video files from SD card to desktop directory
 if mountpoint -q /media/CANON
 then
@@ -17,6 +19,8 @@ then
 else
   echo "SD Card is not inserted/mounted. Please insert card and rerun script"
 fi
+
+echo "-----"
 
 # change to worship directory and move files to posts directory
 worship_dir='/home/wadeallen/Dropbox/Sites/fbcmuncie_2018/_worship'
@@ -29,13 +33,22 @@ else
   echo "The worship file for ${date} does not exist or has already been moved"
 fi
 
+echo "-----"
+echo "Check Video Files to make sure that you do not want to remove particular segments ..."
+printf "Press any key to continue or 'CTRL+C' to exit : "
+(tty_state=$(stty -g)
+stty -icanon
+LC_ALL=C dd bs=1 count=1 >/dev/null 2>&1
+stty "$tty_state"
+) </dev/tty
+
 # change back to desktop directory and check to see if there is more than one file
 cd $directory
-if [ $(ls -l $directory/*.mp4 | wc -l) == 1 ]
+if [ $(ls -l $directory/*.MP4 | wc -l) == 1 ]
 then
   echo "only 1 file"
 else
-  echo "more than one file"
+  mkvmerge -o ${date}.mkv 001.MP4 \+ 002.MP4
 fi
 
 
