@@ -1,0 +1,53 @@
+#! /bin/bash
+
+# grab today's date in 2018-10-24 format
+date=`date +"%Y-%m-%d"`
+# make desktop directory for video files desktop directory
+directory=$HOME'/Desktop'/${date}'_late' 
+if [ ! -d "$directory" ]; then
+  mkdir ${directory} 
+  echo "$directory has been created" 
+fi
+
+# copy video files from SD card to desktop directory
+if mountpoint -q /media/CANON
+then
+  cp -v -a /media/wadeallen/CANON/DCIM/*/*.MP4 ${directory}/
+  echo "Files copied into $directory"
+else
+  echo "SD Card is not inserted/mounted. Please insert card and rerun script"
+fi
+
+# change to worship directory and move files to posts directory
+worship_dir='/home/wadeallen/Dropbox/Sites/fbcmuncie_2018/_worship'
+cd $worship_dir
+if [ -f $worship_dir/${date}-*.md ]
+then
+  mv ${date}-*.md /home/wadeallen/Dropbox/Sites/fbcmuncie_2018/_posts/
+  echo "Worship file has been moved to posts directory"
+else
+  echo "The worship file for ${date} does not exist or has already been moved"
+fi
+
+# change back to desktop directory and check to see if there is more than one file
+cd $directory
+if [ $(ls -l $directory/*.mp4 | wc -l) == 1 ]
+then
+  echo "only 1 file"
+else
+  echo "more than one file"
+fi
+
+
+# if more than one file, merge them into one file
+
+# convert sermon into mp3 and upload to Amazon S3, also create file duration.txt file
+
+# upload video file t youtube
+
+
+
+# change to post directory
+# cd /home/wadeallen/Dropbox/Sites/fbcmuncie_2018/_posts
+
+
