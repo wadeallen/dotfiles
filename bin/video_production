@@ -47,15 +47,16 @@ cd $directory
 ls | cat -n | while read n f; do mv "$f" `printf "%04d.MP4" $n`; done
 if [ $(ls -l $directory/*.MP4 | wc -l) == 1 ]
 then
-  echo "only 1 file"
+  mkvmerge -o ${date}.mkv 0001.MP4
+  rm 0001.MP4
 else
-  mkvmerge -o ${date}.mkv 001.MP4 \+ 002.MP4
+  mkvmerge -o ${date}.mkv 0001.MP4 \+ 0002.MP4
+  rm 0001.MP4 0002.MP4
 fi
 
 
-# if more than one file, merge them into one file
-
 # convert sermon into mp3 and upload to Amazon S3, also create file duration.txt file
+~/bin/audio ${date}.mkv 
 
 # upload video file t youtube
 
