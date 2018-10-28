@@ -55,14 +55,16 @@ else
 fi
 
 
-# convert sermon into mp3 and upload to Amazon S3, also create file duration.txt file
+# convert sermon into mp3, also create file duration.txt file
 ~/bin/audio ${date}.mkv 
 
 # upload video file t youtube
 
-
+# upload audio file to amazon
 
 # change to post directory
-# cd /home/wadeallen/Dropbox/Sites/fbcmuncie_2018/_posts
+cd /home/wadeallen/Dropbox/Sites/fbcmuncie_2018/_posts
+
+
 
 
