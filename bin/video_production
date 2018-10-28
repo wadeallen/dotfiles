@@ -12,7 +12,7 @@ fi
 echo "-----"
 
 # copy video files from SD card to desktop directory
-if mountpoint -q /media/CANON
+if mountpoint -q /media/wadeallen/CANON
 then
   cp -v -a /media/wadeallen/CANON/DCIM/*/*.MP4 ${directory}/
   echo "Files copied into $directory"
@@ -44,6 +44,7 @@ stty "$tty_state"
 
 # change back to desktop directory and check to see if there is more than one file
 cd $directory
+ls | cat -n | while read n f; do mv "$f" `printf "%04d.MP4" $n`; done
 if [ $(ls -l $directory/*.MP4 | wc -l) == 1 ]
 then
   echo "only 1 file"

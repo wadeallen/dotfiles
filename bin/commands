@@ -19,10 +19,10 @@
 [insert] xdg-open https://docs.google.com/document/d/1WW3XE9y0MW6J_EJKVvJXIu3GRE9uY0ieVorfxDJvy-Q/edit
 [people] xdg-open https://people.planningcenteronline.com/people
 [visitor] xdg-open https://docs.google.com/document/d/1im1OZ0ol56PP9y0uyvq-2ih3W8G5tiHFdaioL-vTlso/edit
-[scans] caja /home/wadeallen/Dropbox/Scans 
+[scans] caja /home/wadeallen/Dropbox/Scans/
 [find] /home/wadeallen/bin/dmenu_extended_run
 [common prayer] xdg-open http://commonprayer.net/
 [stories] xdg-open https://docs.google.com/document/d/1gKLaR2rWaPUAiBeqDUqhrrEDuw0g11Q9N2mp4GcFSLc/edit
 [bulletin] subl /home/wadeallen/Dropbox/Pandoc/Pandoc_Bulletin/includes/optional.tex
 [remote] rdesktop 10.1.10.165 -u Staff -p fbc309 -g 80%
-[print] caja /home/wadeallen/Dropbox/Print
+[print] caja /home/wadeallen/Dropbox/Print/
