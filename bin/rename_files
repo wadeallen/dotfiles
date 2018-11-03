@@ -1,12 +1,8 @@
 #!/bin/bash
 
-# for file in *.Web-DL.1080p.5.1.x265.HEVC-Qman\[UTR\].*; do
-#     mv "$file" "${file/.Web-DL.1080p.5.1.x265.HEVC-Qman\[UTR\]/}"
-# done
-
-
-for file in *Timeless*; do
-    mv "$file" "${file/\[ettv\]/}"
+for file in Everybody*; do
+    mv "$file" "${file/.WEB-DL.AAC2.0.H.264-BS/}"
 done
+
 
 # Seinfeld.S06E01.720p.WebRip.ReEnc-DeeJayAhmed.mkv
