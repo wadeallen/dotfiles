@@ -59,11 +59,16 @@ fi
 ~/bin/audio ${date}.mkv 
 
 # upload video file t youtube
+~/bin/upload_video ${date}.mkv
 
 # upload audio file to amazon
+cd /home/wadeallen/Dropbox/Sermon_Audio
+upload ${date}.mp3
 
 # change to post directory
 cd /home/wadeallen/Dropbox/Sites/fbcmuncie_2018/_posts
+sed "/date: ${date}/r /home/wadeallen/Dropbox/Textbits/duration.txt" ${date}*.md > test.md
+
 
 
 
