@@ -250,3 +250,6 @@ au BufNewFile,BufRead *.journal.markdown setf journal
 " adding support for FZF
 set rtp+=~/.fzf
 nmap <leader>sw :FZF /home/wadeallen/Dropbox/Administration/Markdown_Files/Sermon_Work<Return>
+
+" open prayer list
+nmap <leader>pray :e /home/wadeallen/Dropbox/Administration/Markdown_Files/Prayer_Requests.md<Return>

@@ -1,5 +1,5 @@
 #!/bin/bash
 
-xbacklight -set 20
-
+# xbacklight -set 20
+xrandr --output LVDS-1 --brightness .9
 
