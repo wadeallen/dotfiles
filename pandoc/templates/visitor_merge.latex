@@ -46,8 +46,8 @@
 $body$
 
 % The next two lines need to be commented out if we have an odd number of pages
-% \newpage
-% \textcolor{white}{test}
+\newpage
+\textcolor{white}{test}
 
 \pagebreak
 
