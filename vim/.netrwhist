@@ -8,4 +8,8 @@ let g:netrw_dirhist_5='/home/wadeallen/dotfiles/bin'
 let g:netrw_dirhist_6='/home/wadeallen/dotfiles'
 let g:netrw_dirhist_7='/home/wadeallen/Dropbox/Sites/fbcmuncie_2018/_visitors'
 let g:netrw_dirhist_8='/home/wadeallen/dotfiles/bin/youtube-upload'
+<<<<<<< HEAD
 let g:netrw_dirhist_9='/home/wadeallen/.homeassistant'
+=======
+let g:netrw_dirhist_9='/home/wadeallen/bin'
+>>>>>>> 7318b1d6238ef0cf2a2f58e787022682ccc1ab19
