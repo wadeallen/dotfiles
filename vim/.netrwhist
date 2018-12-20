@@ -1,15 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/wadeallen/bin'
-let g:netrw_dirhist_2='/home/wadeallen/dotfiles/bin'
-let g:netrw_dirhist_3='/home/wadeallen/dotfiles'
-let g:netrw_dirhist_4='/home/wadeallen/bin'
-let g:netrw_dirhist_5='/home/wadeallen/dotfiles/bin'
-let g:netrw_dirhist_6='/home/wadeallen/dotfiles'
-let g:netrw_dirhist_7='/home/wadeallen/Dropbox/Sites/fbcmuncie_2018/_visitors'
-let g:netrw_dirhist_8='/home/wadeallen/dotfiles/bin/youtube-upload'
-<<<<<<< HEAD
-let g:netrw_dirhist_9='/home/wadeallen/.homeassistant'
-=======
-let g:netrw_dirhist_9='/home/wadeallen/bin'
->>>>>>> 7318b1d6238ef0cf2a2f58e787022682ccc1ab19
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/etc'
+let g:netrw_dirhist_2='/home/wadeallen/dotfiles/bin/bash_scripts'

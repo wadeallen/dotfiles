@@ -1,1 +1,12 @@
-ssh wadeallen@church.wadeallen.me
+#!/usr/bin/env bash
+
+ssid=$(iwgetid -r)
+
+if [[ $ssid == fbcmuncie ]];
+then
+    ssh wadeallen@10.1.10.32
+else
+    ssh wadeallen@church.wadeallen.me
+fi
+    
+

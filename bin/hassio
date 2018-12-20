@@ -1,1 +1,1 @@
-ssh root@wade-home.duckdns.org
+ssh -t root@wade-home.duckdns.org 'cd /config && exec bash -l'
