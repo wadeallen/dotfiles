@@ -92,6 +92,10 @@ Maid.rules do
     move(dir('~/Dropbox/Scans/Target Card*.pdf'), '~/Dropbox/Receipts/Target')
   end
 
+  rule 'move Anna Vanderbilt Health Insurance Statement into folder' do
+    move(dir('~/Dropbox/Scans/Anna Vanderbilt Health Insurance*.pdf'), '~/Dropbox/Anna/Anna_Vanderbilt')
+  end
+
   rule 'move New York and Company Statement into folder' do
     move(dir('~/Dropbox/Scans/New York and Company*.pdf'), '~/Dropbox/Receipts/New York and Company')
   end

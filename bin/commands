@@ -26,5 +26,5 @@
 [bulletin] subl /home/wadeallen/Dropbox/Pandoc/Pandoc_Bulletin/includes/optional.tex
 [remote-local] rdesktop 10.1.10.165 -u Staff -p fbc309 -g 80%
 [remote-outside] rdesktop church.wadeallen.me -u Staff -p fbc309 -g 80%
-[print] xdg-open /home/wadeallen/Dropbox/Print/
+[print] caja /home/wadeallen/Dropbox/Print/
 [gifts] xdg-open https://docs.google.com/spreadsheets/d/1w891t-8NNkWATuDIH4wxwWTpfj_nk4T-gJ538_PXjto/edit
