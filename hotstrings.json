@@ -25,6 +25,8 @@
     "#thrivent": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/thrivent.py"],
     "#van": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/anna_vanderbilt.py"],
     "#forum": ["run-replace", "sh", "-c", "echo Forum Credit Union `date +%F`"],
+    "#dcar": ["run-replace", "sh", "-c", "echo Teachers Credit Union `date +%F`"],
+    "#acar": ["run-replace", "sh", "-c", "echo Evansville Teachers Credit Union `date +%F`"],
     "#tcu": ["run-replace", "sh", "-c", "echo Teachers Credit Union `date +%F`"],
     "#trcu": ["run-replace", "sh", "-c", "echo Three Rivers Credit Union `date +%F`"],
     "#bscu": ["run-replace", "sh", "-c", "echo Ball State Credit Union Statement `date +%F`"],
