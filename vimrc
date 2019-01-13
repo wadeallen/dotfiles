@@ -53,7 +53,7 @@ set wrap
 set linebreak
 "------------------------------------------------------------
 "Colorscheme settings
-colorscheme badwolf
+" colorscheme badwolf
 hi clear SpellBad
 hi SpellBad cterm=underline
 set nolist  " list disables linebreak

@@ -9,13 +9,16 @@ import os.path
 import subprocess
 
 home = expanduser("~")
-today = date.today().strftime("%Y-%m-%d")
-filename =(home + '/Dropbox/Journal/' + today + '.journal.markdown')
+now = datetime.now()
+day = now.strftime("%Y-%m-%d")
+time = now.strftime("%-I:%M %p")
+weekday = now.strftime("%A")
+filename =(home + '/Dropbox/Journal/' + day + '.journal.markdown')
 
 if os.path.isfile(filename):
 	subprocess.call(['vim', '+3', '-c', 'call AutoCorrect()',  filename])
 else:
 	target = open (filename, 'w')
-	target.write("Date: {}\n\n\n".format(today))
+	target.write("Date: {}\nTime: {}\nWeekday: {}\n\n\n".format(day, time, weekday))
 	target.close()
-	subprocess.call(['vim', '+3', '-c', 'call AutoCorrect()', filename])
+	subprocess.call(['vim', '+4', '-c', 'call AutoCorrect()', filename])

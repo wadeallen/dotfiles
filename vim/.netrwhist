@@ -1,26 +1,6 @@
 let g:netrw_dirhistmax  =10
-<<<<<<< HEAD
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/home/wadeallen/dotfiles/pandoc/templates'
-let g:netrw_dirhist_2='/home/wadeallen/Dropbox/Sites/fbcmuncie_2018/_visitors'
-let g:netrw_dirhist_3='/home/wadeallen/dotfiles'
-let g:netrw_dirhist_4='/home/wadeallen/dotfiles/snippets'
-let g:netrw_dirhist_5='/home/wadeallen/dotfiles/maid'
-let g:netrw_dirhist_6='/home/wadeallen/Sites/slideshow/images'
-let g:netrw_dirhist_7='/home/wadeallen/dotfiles/bin'
-=======
-<<<<<<< HEAD
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/home/wadeallen/dotfiles/pandoc/templates'
-let g:netrw_dirhist_2='/home/wadeallen/dotfiles/bin/youtube-upload'
-=======
-<<<<<<< HEAD
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/etc'
-let g:netrw_dirhist_2='/home/wadeallen/dotfiles/bin/bash_scripts'
-=======
-let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/home/wadeallen/dotfiles/pandoc/templates'
->>>>>>> ca8469549f9805d8c90cc5c25bbd2dbed3cd902b
->>>>>>> d6f428a152b1a56ebceb98c1bb7d50de5b9c3151
->>>>>>> 7af4925fdf2eb2d0b4518f4c7cebf5f5ecb6d94d
+let g:netrw_dirhist_2='/home/wadeallen/.config/fish/functions'
+let g:netrw_dirhist_3='/home/wadeallen/dotfiles/vim'
+let g:netrw_dirhist_4='/home/wadeallen/dotfiles/vim/syntax'
