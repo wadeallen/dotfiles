@@ -1,0 +1,5 @@
+#!/bin/bash
+
+  for filename in ./*.mp4; do
+    scp ${filename} pi@192.168.1.128:/home/pi/TV/Max_Ruby/
+  done
