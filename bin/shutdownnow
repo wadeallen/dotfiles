@@ -7,5 +7,4 @@ else
     exit
 fi
 
-# gnome-session-quit --power-off
 
