@@ -32,8 +32,6 @@ alias add='todoist_add.py -t'
 #ssh
 alias site='cd $HOME/Dropbox/Sites/fbcmuncie_2018'
 
-# update system
-alias update='sudo pacman -Syu'
 
 
 

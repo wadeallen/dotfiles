@@ -24,6 +24,6 @@ for line in f.readlines():
 f.close()
 
 #moves the blog post to the Jekyll site
-shutil.move(home + '/Dropbox/Drafts/' + args.filename + '.markdown', home +'/Sites/discerning_church_2015/_posts/'+ args.filename + '-' + slug + '.markdown')
+shutil.move(home + '/Dropbox/Drafts/' + args.filename + '.markdown', home +'/Sites/dc_2019/_posts/'+ args.filename + '-' + slug + '.markdown')
 #prints a confirmation message
 print( "Success! {}-{}.markdown moved to Discerning Church post folder".format(args.filename, slug))

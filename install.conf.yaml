@@ -10,6 +10,5 @@
     ~/.vimrc: vimrc
     ~/.pandoc: pandoc
     ~/.maid: maid
-    ~/.bashrc: bashrc
     ~/.bash_aliases: bash_aliases
     ~/.config/hotstrings.json: hotstrings.json

@@ -1,8 +1,8 @@
 
 Maid.rules do
 
-  rule 'move 2018 journal files into folder' do
-    move(dir('~/Dropbox/Journal/2018*.markdown'), '~/Dropbox/Journal/2018')
+  rule 'move 2019 journal files into folder' do
+    move(dir('~/Dropbox/Journal/2019*.markdown'), '~/Dropbox/Journal/2019')
   end
 
   rule 'move Benefit Wallet files into folder' do
@@ -23,6 +23,14 @@ Maid.rules do
 
   rule 'move Forum Credit Union into folder' do
     move(dir('~/Dropbox/Scans/Forum Credit Union*.pdf'), '/home/wadeallen/Dropbox/Statements/Forum Credit Union')
+  end
+
+  rule 'move Teachers Credit Union into folder' do
+    move(dir('~/Dropbox/Scans/Teachers Credit Union*.pdf'), '/home/wadeallen/Dropbox/Statements/Teachers Credit Union')
+  end
+
+  rule 'move Evansville Teachers Credit Union into folder' do
+    move(dir('~/Dropbox/Scans/Evansville Teachers Credit Union*.pdf'), '/home/wadeallen/Dropbox/Statements/Evansville Teachers Credit Union')
   end
 
   rule 'move Teachers Credit Union into folder' do
@@ -90,6 +98,10 @@ Maid.rules do
 
   rule 'move Target Statement into folder' do
     move(dir('~/Dropbox/Scans/Target Card*.pdf'), '~/Dropbox/Receipts/Target')
+  end
+
+  rule 'move Anna Vanderbilt Health Insurance Statement into folder' do
+    move(dir('~/Dropbox/Scans/Anna Vanderbilt Health Insurance*.pdf'), '~/Dropbox/Anna/Anna_Vanderbilt')
   end
 
   rule 'move New York and Company Statement into folder' do

@@ -7,15 +7,34 @@ from os.path import expanduser
 import os
 import os.path
 import subprocess
+from urllib.request import urlopen
+
+def internet_on():
+   try:
+    response = urlopen('https://www.google.com/', timeout=10)
+    return True
+   except: 
+    return False
 
 home = expanduser("~")
-today = date.today().strftime("%Y-%m-%d")
-filename =(home + '/Dropbox/Journal/' + today + '.journal.markdown')
+
+if internet_on():
+	temp = out = subprocess.check_output("weather kmie --headers=temperature -q --imperial", shell=True)
+	temperature = (temp.decode("utf-8"))
+else:
+	temperature = "No Temp Available\n"
+
+now = datetime.now()
+day = now.strftime("%Y-%m-%d")
+time = now.strftime("%-I:%M %p")
+weekday = now.strftime("%A")
+filename =(home + '/Dropbox/Journal/' + day + '.journal.markdown')
+
 
 if os.path.isfile(filename):
-	subprocess.call(['vim', '+3', '-c', 'call AutoCorrect()',  filename])
+	subprocess.call(['vim', '+6', '-c', 'call AutoCorrect()',  filename])
 else:
 	target = open (filename, 'w')
-	target.write("Date: {}\n\n\n".format(today))
+	target.write("Date: {}\nTime: {}\n{}Weekday: {}\n\n\n".format(day, time,temperature,weekday))
 	target.close()
-	subprocess.call(['vim', '+3', '-c', 'call AutoCorrect()', filename])
+	subprocess.call(['vim', '+6', '-c', 'call AutoCorrect()', filename])
