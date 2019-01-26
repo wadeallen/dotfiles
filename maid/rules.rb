@@ -1,8 +1,8 @@
 
 Maid.rules do
 
-  rule 'move 2018 journal files into folder' do
-    move(dir('~/Dropbox/Journal/2018*.markdown'), '~/Dropbox/Journal/2018')
+  rule 'move 2019 journal files into folder' do
+    move(dir('~/Dropbox/Journal/2019*.markdown'), '~/Dropbox/Journal/2019')
   end
 
   rule 'move Benefit Wallet files into folder' do

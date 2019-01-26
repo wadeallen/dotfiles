@@ -14,6 +14,6 @@ if os.path.isfile(filename):
     subprocess.call(['vim', '-c', '9', filename])
 else:
     target = open (filename, 'w')
-    target.write("---\ntitle: \ndate: {}\nlayout: article\n---\n \n ".format(today))
+    target.write("---\ntitle: \ndate: {}\nlayout: post\n---\n \n ".format(today))
     target.close()
 
