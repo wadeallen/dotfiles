@@ -49,9 +49,32 @@ if [ $(ls -l $directory/*.MP4 | wc -l) == 1 ]
 then
   mkvmerge -o ${date}.mkv 0001.MP4
   rm 0001.MP4
-else
+elif [ $(ls -l $directory/*.MP4 | wc -l) == 2 ]
+then
   mkvmerge -o ${date}.mkv 0001.MP4 \+ 0002.MP4
   rm 0001.MP4 0002.MP4
+elif [ $(ls -l $directory/*.MP4 | wc -l) == 3 ]
+then
+  mkvmerge -o ${date}.mkv 0001.MP4 \+ 0002.MP4 \+ 0003.MP4
+  rm 0001.MP4 0002.MP4 0003.MP4
+elif [ $(ls -l $directory/*.MP4 | wc -l) == 4 ]
+then
+  mkvmerge -o ${date}.mkv 0001.MP4 \+ 0002.MP4 \+ 0003.MP4 \+ 0004.MP4
+  rm 0001.MP4 0002.MP4 0003.MP4 0004.MP4
+elif [ $(ls -l $directory/*.MP4 | wc -l) == 5 ]
+then
+  mkvmerge -o ${date}.mkv 0001.MP4 \+ 0002.MP4 \+ 0003.MP4 \+ 0004.MP4 \+ 0005.MP4
+  rm 0001.MP4 0002.MP4 0003.MP4 0004.MP4 0005.MP4
+elif [ $(ls -l $directory/*.MP4 | wc -l) == 6 ]
+then
+  mkvmerge -o ${date}.mkv 0001.MP4 \+ 0002.MP4 \+ 0003.MP4 \+ 0004.MP4 \+ 0005.MP4 \+ 0006.MP4
+  rm 0001.MP4 0002.MP4 0003.MP4 0004.MP4 0005.MP4 0006.MP4
+elif [ $(ls -l $directory/*.MP4 | wc -l) == 7 ]
+then
+  mkvmerge -o ${date}.mkv 0001.MP4 \+ 0002.MP4 \+ 0003.MP4 \+ 0004.MP4 \+ 0005.MP4 \+ 0006.MP4 \+ 0007.MP4
+  rm 0001.MP4 0002.MP4 0003.MP4 0004.MP4 0005.MP4 0006.MP4 0007.MP4
+else
+  echo "Too many files, need to adjust script"
 fi
 
 # convert sermon into mp3, also create file duration.txt file
