@@ -1,0 +1,26 @@
+abbr sw  'cd $HOME/Dropbox/Administration/Markdown_Files/Sermon_Work/'
+abbr cct  'cd $HOME/Dropbox/Administration/CCT_Summaries/2018'
+abbr ww  'cd $HOME/Dropbox/Administration/Markdown_Files/Wedding_Work/'
+abbr fw  'cd $HOME/Dropbox/Administration/Markdown_Files/Funeral_Work/'
+abbr mm  'cd $HOME/Dropbox/Administration/Markdown_Files'
+abbr desk  'cd $HOME/Desktop'
+abbr ss  'cd $HOME/Sites/slideshow'
+abbr ow  'cd $HOME/Dropbox/Sites/fbcmuncie_2018/_worship/'
+abbr ov  'cd $HOME/Dropbox/Sites/fbcmuncie_2018/_posts'
+abbr aud  'cd $HOME/Dropbox/Sermon_Audio'
+abbr sa  'cd $HOME/Dropbox/Sermon_Audio'
+abbr led  'ledger -f $HOME/Dropbox/Ledger/ledger.ledger'
+abbr oled  'vim $HOME/Dropbox/Ledger/ledger.ledger'
+abbr bank  'ledger -f $HOME/Dropbox/Ledger/ledger.ledger cleared bank'
+abbr checking  'ledger -f $HOME/Dropbox/Ledger/ledger.ledger cleared checking'
+abbr pray  'vim $HOME/Dropbox/Administration/Markdown_Files/Prayer_Requests.md'
+abbr speed  'speedtest-cli'
+abbr xclip  'xclip -selection c'
+abbr clean  'maid clean -f'
+abbr add  'todoist_add.py -t'
+abbr site  'cd $HOME/Dropbox/Sites/fbcmuncie_2018'
+
+
+
+
+

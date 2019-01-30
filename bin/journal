@@ -19,10 +19,11 @@ def internet_on():
 home = expanduser("~")
 
 if internet_on():
-	temp = out = subprocess.check_output("weather kmie --headers=temperature -q --imperial", shell=True)
+	temp = out = subprocess.check_output("ansiweather", shell=True)
 	temperature = (temp.decode("utf-8"))
+	temperature = temperature.replace(' Weather in', 'Weather:')
 else:
-	temperature = "No Temp Available\n"
+	temperature = "No Weather Infomation\n"
 
 now = datetime.now()
 day = now.strftime("%Y-%m-%d")
