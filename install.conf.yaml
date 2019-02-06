@@ -12,3 +12,4 @@
     ~/.maid: maid
     ~/.bash_aliases: bash_aliases
     ~/.config/hotstrings.json: hotstrings.json
+    ~/.dmenurc : dmenurc
