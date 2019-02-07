@@ -11,7 +11,7 @@ today = datetime.datetime.now().strftime("%Y-%m-%d")
 filename =(home + '/Dropbox/Drafts/' + today + '.markdown')
 
 if os.path.isfile(filename):
-    subprocess.call(['vim', '-c', '9', filename])
+    subprocess.call(['vim', '+6', '-c', 'call AutoCorrect()',  filename])
 else:
     target = open (filename, 'w')
     target.write("---\ntitle: \ndate: {}\nlayout: post\n---\n \n ".format(today))
