@@ -18,14 +18,14 @@ year = str(year[0])
 
 home = expanduser("~")
 
-path = (home + '/Dropbox/Administration/Markdown_Files/Sermon_Work/' + year + '/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9]*[!slides].md')
+path = (home + '/Documents/Administration/Markdown_Files/Sermon_Work/' + year + '/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9]*[!slides].md')
 
 files = glob.glob(path)
 files = sorted(files)
 
-filename =(home + '/Dropbox/Sermon_Planning_LaTeX/' + year + '.tex')
+filename =(home + '/Documents/Sermon_Planning_LaTeX/' + year + '.tex')
 target = open (filename, 'w')
-target.write('\input{' + home + '/Dropbox/Sermon_Planning_LaTeX/past_preamble.tex}\n\n')
+target.write('\input{' + home + '/Documents/Sermon_Planning_LaTeX/past_preamble.tex}\n\n')
 target.write('\\name{Sermon Schedule}\n\n')
 
 target.write('\\begin{rSection}{' + year + '}\n\n')

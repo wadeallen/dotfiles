@@ -7,16 +7,17 @@ import glob
 import dateutil.parser
 import datetime
 import re
+import config
 
 home = expanduser("~")
 
-worship_sermons_path = (home + '/Dropbox/Sites/fbcmuncie_2018/_worship/*.md')
+worship_sermons_path = (home + '/Sites/fbcmuncie_2018/_worship/*.md')
 worship_posts = glob.glob(worship_sermons_path)
 
 for post in worship_posts:
 	os.remove(post)
 
-path = (home + '/Dropbox/Administration/Markdown_Files/Sermon_Work/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9]*sermon.md')
+path = (home + config.sermon_path + '/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9]*sermon.md')
 files = glob.glob(path)
 
 for name in files:
@@ -44,7 +45,7 @@ for name in files:
     slug = slug.replace("?", "")
     slug = slug.replace("'", "")
     slug = re.sub("[\(\[].*?[\)\]]", "", slug)
-    filename =(home + '/Dropbox/Sites/fbcmuncie_2018/_worship/' + date + '-' + slug + '.md')
+    filename =(home + '/Sites/fbcmuncie_2018/_worship/' + date + '-' + slug + '.md')
     filename = filename.replace("-.", ".")
     filename = filename.replace("--", "-")
 

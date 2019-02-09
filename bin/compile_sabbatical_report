@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIRECTORY=$HOME/Dropbox/Sabbatical_2017/Final_Reports/
+DIRECTORY=$HOME/Documents/Sabbatical_2017/Final_Reports/
 
 cd $DIRECTORY &&
 # python3 /home/wadeallen/bin/stories &&

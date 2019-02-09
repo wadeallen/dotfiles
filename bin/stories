@@ -20,8 +20,8 @@ def format_slug(text):
 	slug = re.sub("[\(\[].*?[\)\]]", "", slug)
 	return slug
 
-# move to directory in Dropbox to do the work
-stories_dir = '/home/wadeallen/Dropbox/Stories/'
+# move to directory in Documents to do the work
+stories_dir = '/home/wadeallen/Documents/Stories/'
 os.chdir(stories_dir)
 
 # delete old files
@@ -50,7 +50,7 @@ stories = glob.glob(path)
 stories =  sorted(stories)
 
 # Sort out Stories for Website
-website_dir = '/home/wadeallen/Dropbox/Sites/fbcmuncie_2018/_news/'
+website_dir = '/home/wadeallen/Documents/Sites/fbcmuncie_2018/_news/'
 os.system('rm ' + website_dir + '*.md')
 for story in stories:
 	post = frontmatter.load(story)
@@ -71,7 +71,7 @@ for story in stories:
 		target.close()
 
 # Create LaTeX file for Bulletin
-bulletin_path = '/home/wadeallen/Dropbox/Pandoc/Pandoc_Bulletin/'
+bulletin_path = '/home/wadeallen/Documents/Pandoc/Pandoc_Bulletin/'
 os.system('rm ' + bulletin_path + 'articles.txt')
 for story in stories:
 	post = frontmatter.load(story)
@@ -85,7 +85,7 @@ for story in stories:
 			bulletin_file.write(post.content + '\n\n')
 
 # Create file for Visitor
-visitor_path = '/home/wadeallen/Dropbox/Pandoc/Pandoc_Visitor/'
+visitor_path = '/home/wadeallen/Documents/Pandoc/Pandoc_Visitor/'
 os.system('rm ' + visitor_path + 'articles.txt')
 article_list = []
 for story in stories:

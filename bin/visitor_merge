@@ -1,9 +1,9 @@
 #!/usr/bin/env bash 
 
-DIRECTORY=$HOME/Dropbox/Pandoc/Pandoc_Visitor
+DIRECTORY=$HOME/Documents/Pandoc/Pandoc_Visitor
 
 cd $DIRECTORY
 python3 /home/wadeallen/bin/stories
 # wget -O Visitor.txt https://docs.google.com/document/d/1im1OZ0ol56PP9y0uyvq-2ih3W8G5tiHFdaioL-vTlso/export?format=txt
 pandoc $DIRECTORY/articles.txt -o Visitor_Merged.pdf --template visitor_merge
-mv Visitor_Merged.pdf $HOME/Dropbox/Print/
+mv Visitor_Merged.pdf $HOME/Documents/Print/

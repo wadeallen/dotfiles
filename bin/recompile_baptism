@@ -3,5 +3,5 @@ filename=$1
 
 fileroot=$(echo ${filename%.*})
 
-pandoc ${filename} -o ~/Dropbox/Print/${fileroot}.pdf --latex-engine=xelatex --template=baptism.tex
+pandoc ${filename} -o ~/Documents/Print/${fileroot}.pdf --latex-engine=xelatex --template=baptism.tex
 echo "Baptism Certificate Recompiled in Print Folder"

@@ -32,5 +32,5 @@ then
 fi
 
 
-cd ~/Dropbox/Nursery
+cd ~/Documents/Nursery
 pandoc nursery_notice.md -o ~/Desktop/nursery_notice.pdf --template=nursery_notice.tex --variable=scheduledate:"${schedule_date}" --variable=servicehour:${service_hour} --variable=name:"${name}" --variable=address1:"${address1}" --variable=address2:"${address2}"

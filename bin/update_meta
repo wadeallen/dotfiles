@@ -8,6 +8,7 @@ from dateutil.relativedelta import relativedelta, SU
 from os.path import expanduser
 import datetime
 from dateutil import parser
+import config
 
 home = expanduser("~")
 
@@ -17,7 +18,7 @@ format = '%Y-%m-%d'
 target_date = today + relativedelta(weekday=SU(+1))
 sunday = target_date.strftime(format)
 
-path = (home + '/Dropbox/Administration/Markdown_Files/Sermon_Work/{}_sermon.md'.format(sunday))
+path = (home + config.sermon_path + '/{}_sermon.md'.format(sunday))
 
 files = glob.glob(path)
  
@@ -27,7 +28,7 @@ for name in files:
         postdate = post['date']
     else:
         postdate = parser.parse(post['date'])
-    target = open (home + '/Dropbox/Pandoc/Pandoc_Bulletin/meta.tex', 'w')
+    target = open (home + '/Documents/Pandoc/Pandoc_Bulletin/meta.tex', 'w')
     target.write ('\def\sundaydate{' + postdate.strftime('%b %d, %Y') + '}\n\def\sermontitle{' + post['title'] + '}\n\def\scripture{' + post['scripture'] + '}\n\input{../numbers}\n')
     target.close()
 

@@ -11,9 +11,9 @@ then
 fi
 
 source read_yaml
-create_variables /home/wadeallen/Dropbox/Textbits/video-data.txt
+create_variables /home/wadeallen/Documents/Textbits/video-data.txt
 
-playlist=$(cat ~/Dropbox/Textbits/playlist.txt)
+playlist=$(cat ~/Documents/Textbits/playlist.txt)
 
-/home/wadeallen/bin/youtube-upload/bin/youtube-upload --title="$title" --description="$summary" --tags="$author, sermon, $playlist, $scripture" --playlist="$playlist" --client-secrets=/home/wadeallen/Dropbox/youtube-upload/client_secret.json $filename
+/home/wadeallen/bin/youtube-upload/bin/youtube-upload --title="$title" --description="$summary" --tags="$author, sermon, $playlist, $scripture" --playlist="$playlist" --client-secrets=/home/wadeallen/Documents/youtube-upload/client_secret.json $filename
 
