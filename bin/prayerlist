@@ -1,6 +1,6 @@
 #!/usr/bin/env bash 
 
-DIRECTORY=$HOME/Dropbox/Pandoc/Pandoc_Prayer_List/
+DIRECTORY=$HOME/Documents/Pandoc/Pandoc_Prayer_List/
 YEAR=$(date -d 'sun' +'%Y')
 MONTH=$(date -d 'sun' +'%m')
 DAY=$(date -d 'sun' +'%d')
@@ -15,5 +15,5 @@ rm $DIRECTORY/Prayer_List.txt &&
 pdflatex $DIRECTORY/prayer_list_print.tex &&
 rm $DIRECTORY/prayer_list_print.log &&
 rm $DIRECTORY/prayer_list_print.aux &&
-cp $DIRECTORY/prayer_list_print.pdf $HOME/Dropbox/Print/prayer_list_print.pdf 
-cp $DIRECTORY/prayer_list.pdf $HOME/Dropbox/Sites/fbcmuncie_2018/prayerlist.pdf
+cp $DIRECTORY/prayer_list_print.pdf $HOME/Documents/Print/prayer_list_print.pdf 
+cp $DIRECTORY/prayer_list.pdf $HOME/Documents/Sites/fbcmuncie_2018/prayerlist.pdf

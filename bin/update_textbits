@@ -8,6 +8,7 @@ from dateutil.relativedelta import relativedelta, SU
 from os.path import expanduser
 import datetime
 from dateutil import parser
+import config
 
 home = expanduser("~")
 
@@ -16,7 +17,7 @@ format = '%Y-%m-%d'
 target_date = today + relativedelta(weekday=SU(+1))
 sunday = target_date.strftime(format)
 
-path = (home + '/Dropbox/Administration/Markdown_Files/Sermon_Work/{}_sermon.md'.format(sunday))
+path = (home + config.sermon_path + '/{}_sermon.md'.format(sunday))
 
 files = glob.glob(path)
  
@@ -27,7 +28,7 @@ for name in files:
     else:
         postdate = parser.parse(post['date'])
 
-    target = open (home + '/Dropbox/Textbits/video-data.txt', 'w')
+    target = open (home + '/Documents/Textbits/video-data.txt', 'w')
     target.write ('---\n')
     target.write ('title: ' + post['title'] + '\n')
     target.write ('author: ' + post['author'] + '\n')

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIR=/home/wadeallen/Dropbox/Administration/Nursery
+DIR=/home/wadeallen/Documents/Administration/Nursery
 
 echo "You need to make sure you have updated nursery_team CSV file in ${DIR}"
 

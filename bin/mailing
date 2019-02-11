@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-with open('/home/wadeallen/Dropbox/Pandoc/Pandoc_Visitor/visitor.csv') as f:
+with open('/home/wadeallen/Documents/Pandoc/Pandoc_Visitor/visitor.csv') as f:
     text = f.readlines()
     size = len(text)
 

@@ -23,7 +23,11 @@ fi
 echo "-----"
 
 # change to worship directory and move files to posts directory
+<<<<<<< HEAD
 worship_dir=$HOME'/Documents/Sites/fbcmuncie_2018/_worship'
+=======
+worship_dir='/home/wadeallen/Documents/Sites/fbcmuncie_2018/_worship'
+>>>>>>> 2059182c67005cf8d62a5057dec68a51b0964f37
 cd $worship_dir
 if [ -f $worship_dir/${date}-*.md ]
 then
@@ -83,7 +87,11 @@ echo "-----"
 echo "mp3 file compiled"
 
 # upload audio file to amazon
+<<<<<<< HEAD
 cd /home/wadeallen/Music/Sermon_Audio
+=======
+cd /home/wadeallen/Documents/Sermon_Audio
+>>>>>>> 2059182c67005cf8d62a5057dec68a51b0964f37
 upload ${date}.mp3
 echo "-----"
 echo "Uploaded audio file to Amazon"

@@ -3,14 +3,14 @@
 FILENAME=$1
 DATE=`date +"%Y-%m-%d"`
 
-cd /home/wadeallen/Dropbox/Sites/fbcmuncie_2018/_worship
+cd /home/wadeallen/Documents/Sites/fbcmuncie_2018/_worship
 
 
 if	[ -z "$FILENAME" ]
 then
-  mv ${DATE}-*.md /home/wadeallen/Dropbox/Sites/fbcmuncie_2018/_posts/
+  mv ${DATE}-*.md /home/wadeallen/Documents/Sites/fbcmuncie_2018/_posts/
 else
-  mv ${FILENAME}-*.md /home/wadeallen/Dropbox/Sites/fbcmuncie_2018/_posts/
+  mv ${FILENAME}-*.md /home/wadeallen/Documents/Sites/fbcmuncie_2018/_posts/
 fi
 
-cd /home/wadeallen/Dropbox/Sites/fbcmuncie_2018/_posts
+cd /home/wadeallen/Documents/Sites/fbcmuncie_2018/_posts
