@@ -23,11 +23,11 @@ fi
 echo "-----"
 
 # change to worship directory and move files to posts directory
-worship_dir='/home/wadeallen/Dropbox/Sites/fbcmuncie_2018/_worship'
+worship_dir=$HOME'/Documents/Sites/fbcmuncie_2018/_worship'
 cd $worship_dir
 if [ -f $worship_dir/${date}-*.md ]
 then
-  mv ${date}-*.md /home/wadeallen/Dropbox/Sites/fbcmuncie_2018/_posts/
+  mv ${date}-*.md /home/wadeallen/Documents/Sites/fbcmuncie_2018/_posts/
   echo "Worship file has been moved to posts directory"
 else
   echo "The worship file for ${date} does not exist or has already been moved"
@@ -83,7 +83,7 @@ echo "-----"
 echo "mp3 file compiled"
 
 # upload audio file to amazon
-cd /home/wadeallen/Dropbox/Sermon_Audio
+cd /home/wadeallen/Music/Sermon_Audio
 upload ${date}.mp3
 echo "-----"
 echo "Uploaded audio file to Amazon"
