@@ -32,5 +32,5 @@ wget -O numbers.csv https://docs.google.com/spreadsheets/d/14TpbSCb71nw9jSrQetPE
 # pandoc $DIRECTORY/Bulletin.txt -o $HOME/Desktop/bulletin_$SUNDAY.pdf --template bulletin.tex &&
 pandoc $DIRECTORY/articles.txt -o $HOME/Documents/Print/bulletin_$SUNDAY.pdf --template bulletin.tex &&
 # mv $DIRECTORY/Bulletin.txt $ARCHIVE/Bulletin_$SUNDAY.txt
-cp $HOME/Documents/Print/bulletin_$SUNDAY.pdf $ARCHIVE/
+cp $HOME/Print/bulletin_$SUNDAY.pdf $ARCHIVE/
 # rm $DIRECTORY/Nursery_Volunteers.csv
