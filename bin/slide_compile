@@ -14,7 +14,7 @@ today = datetime.date.today()
 sunday = today + relativedelta(weekday=SU(+1))
 date = sunday.strftime('%Y-%m-%d')
 
-sermon_directory = home + "/Documents/Sermon_Work/"
+sermon_directory = home + "/Documents/Administration/Markdown_Files/Sermon_Work/"
 
 slide_directory = home + "/Documents/Pandoc/Pandoc_Impress/"
 shutil.copyfile(sermon_directory + date + "_slides.md", slide_directory + date + "_slides.md")
