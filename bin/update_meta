@@ -18,7 +18,7 @@ format = '%Y-%m-%d'
 target_date = today + relativedelta(weekday=SU(+1))
 sunday = target_date.strftime(format)
 
-path = (home + config.sermon_path + '/{}_sermon.md'.format(sunday))
+path = (config.sermon_path + '/{}_sermon.md'.format(sunday))
 
 files = glob.glob(path)
  

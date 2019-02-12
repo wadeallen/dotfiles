@@ -7,10 +7,11 @@ import glob
 from os.path import expanduser
 import datetime
 from dateutil import parser
+import config
 
 home = expanduser("~")
 
-path = (home + '/Documents/Administration/Markdown_Files/Sermon_Work/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9]*[!slides].md')
+path = (config.sermon_path + '/Documents/Administration/Markdown_Files/Sermon_Work/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9]*[!slides].md')
 
 files = glob.glob(path)
 files = sorted(files)

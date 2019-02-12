@@ -25,7 +25,7 @@ url = 'https://www.google.com/calendar/printable?dates={0}%2F{1}&pgsz=letter&ctz
 
 r = requests.get(url)
 
-with open("/home/wadeallen/Print/calendar.pdf", "wb") as code:
+with open("/home/wadeallen/Documents/Print/calendar.pdf", "wb") as code:
     code.write(r.content)
 
 print ('Calendar Saved to Print Folder')
