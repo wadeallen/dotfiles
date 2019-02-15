@@ -2,7 +2,7 @@
 
 monday=$(date -dlast-monday +%Y-%m-%d)
 tuesday=$(date -dlast-tuesday +%Y-%m-%d)
-search_dir='/home/wadeallen/Documents/Sites/fbcmuncie_2018/_posts'
+search_dir='/home/wadeallen/Sites/fbcmuncie_2018/_posts'
 
 if [ $(find "$search_dir" -name "${monday}*") ]; then 
  sed 1,9d ${search_dir}/${monday}* 

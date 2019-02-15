@@ -16,4 +16,5 @@ else:
     target = open (filename, 'w')
     target.write("---\ntitle: \ndate: {}\nlayout: post\n---\n \n ".format(today))
     target.close()
+    subprocess.call(['vim', '+6', '-c', 'call AutoCorrect()',  filename])
 

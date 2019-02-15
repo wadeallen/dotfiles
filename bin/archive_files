@@ -41,4 +41,4 @@ archive()
 delete_old(home + '/Documents/Sermons','pdf')
 delete_old(home + '/Documents/Preaching','epub')
 delete_old(home + '/Documents/Preaching','mobi')
-
+delete_old(home + '/Editing','pdf')
