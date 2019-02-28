@@ -253,3 +253,4 @@ nmap <leader>sw :FZF /home/wadeallen/Dropbox/Administration/Markdown_Files/Sermo
 
 " open prayer list
 nmap <leader>pray :e /home/wadeallen/Dropbox/Administration/Markdown_Files/Prayer_Requests.md<Return>
+

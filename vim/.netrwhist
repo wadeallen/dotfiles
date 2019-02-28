@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/wadeallen/.config/gconf/desktop'
-let g:netrw_dirhist_2='/home/wadeallen/.config/gconf/desktop/gnome'
-let g:netrw_dirhist_3='/home/wadeallen/.config/gconf/desktop/gnome/background'
+let g:netrw_dirhist_1='/home/wadeallen/Sites/fbcmuncie_2018'
+let g:netrw_dirhist_2='/mnt/msata/dotfiles/compton'
+let g:netrw_dirhist_3='/mnt/msata/dotfiles'

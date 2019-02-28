@@ -8,7 +8,7 @@
 [prayer list] xdg-open https://docs.google.com/document/d/1w6z_D6MPedilpVZjoRfkwsbvXmsNSjrHKFDwasE5SeQ/edit 
 [lectionary] xdg-open http://lectionary.library.vanderbilt.edu/
 [bible] /home/wadeallen/bin/bible
-[read] xdg-open https://read.amazon.com/
+[read] i3-msg workspace 3  Read, exec midori https://read.amazon.com
 [planning center] xdg-open https://www.planningcenteronline.com/dashboard/0
 [chase] xdg-open https://www.chase.com/
 [credit card report] xdg-open https://docs.google.com/spreadsheets/d/1yZaYvvKZG_zbZa36Ipdt8DTpu0flT7l3Jm8JhLJ4f3o/
@@ -22,6 +22,7 @@
 [scans] xdg-open /home/wadeallen/Scans/
 [find] /home/wadeallen/bin/dmenu_extended_run
 [common prayer] xdg-open http://commonprayer.net/
+[lights] xdg-open https://wade-home.duckdns.org/lovelace/0
 [stories] xdg-open https://docs.google.com/document/d/1gKLaR2rWaPUAiBeqDUqhrrEDuw0g11Q9N2mp4GcFSLc/edit
 [bulletin] subl /home/wadeallen/Documents/Pandoc/Pandoc_Bulletin/includes/optional.tex
 [remote-local] rdesktop 10.1.10.165 -u Staff -p fbc309 -g 80%

@@ -12,7 +12,7 @@ today = datetime.date.today()
 sunday = today + datetime.timedelta( (6-today.weekday()) % 7 )
 next_sunday = sunday.strftime('%Y-%m-%d')
 
-sermon_directory = home + "/Documents/Administration/Markdown_Files/Sermon_Work/"
+sermon_directory = home + "/Documents/Sermon_Work/"
 date = input ('Date of Sermon (format YYYY-MM-DD) default is next Sunday: ')
 if date == "":
 	date = next_sunday

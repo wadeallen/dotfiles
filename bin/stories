@@ -116,8 +116,8 @@ for article in article_list:
 			visitor_file.write('# ' + article[0] + '\n\n')
 			# if the article has a picture: name then it will place the latex code to generate that picture, if not, it will do nothing.
 			if article[3] != 'no picture':
-				visitor_file.write('\\begin{wrapfigure}{r}{4cm}\n')
-				visitor_file.write('\includegraphics[width=4cm]{people/' + article[3] + '}\n')
+				visitor_file.write('\\begin{wrapfigure}{r}{3cm}\n')
+				visitor_file.write('\includegraphics[width=3cm]{people/' + article[3] + '}\n')
 				visitor_file.write('\end{wrapfigure}\n\n')
 			visitor_file.write(article[1] + '\n\n')
 

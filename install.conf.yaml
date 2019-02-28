@@ -14,3 +14,5 @@
     ~/.config/hotstrings.json: hotstrings.json
     ~/.dmenurc : dmenurc
     ~/.fonts : fonts
+    ~/.config/i3/config : i3/i3config
+    ~/.config/i3status/config : i3/i3status
