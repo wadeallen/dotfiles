@@ -1,7 +1,7 @@
 function Bible(...)
   let translation = exists('a:1') ? a:1 : "NIV"
   let scripture = exists('a:2') && a:2 != "" ? a:2 : input("Scripture: ")
-  let command = '/usr/bin/scripture "' . scripture . '", ' . translation
+  let command = '/home/wadeallen/bin/scripture "' . scripture . '", ' . translation
   let text = '>('. scripture . ' ' . translation . ') ' . system(command)
   put = text
 endfunction
@@ -11,7 +11,7 @@ function ReplaceBible(...)
   let passage = matchstr(line, ">\(\\zs\\w.*\\zeESV\)") 
   let scripture = passage
   let translation = "NIV"
-  let command = '/usr/bin/scripture "' . scripture . '", ' . translation
+  let command = '/home/wadeallen/bin/scripture "' . scripture . '", ' . translation
   let text = '>('. scripture . translation . ') ' . system(command)
   " put = getreg('s')
   put = text
