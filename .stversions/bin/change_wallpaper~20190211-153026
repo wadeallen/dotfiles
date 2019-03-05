@@ -1,6 +1,0 @@
-#!/bin/bash
-
-DIR="/home/wadeallen/Documents/Apps/Desktoppr"
-PIC=$(ls $DIR | shuf -n1)
-CMPL=$DIR/$PIC
-dconf write /org/mate/desktop/background/picture-filename "'$CMPL'"
