@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TOKEN="65wDhiGbTOJ7FVO4Jw8qSvZnxRthRxzT"  # The API v2 OAuth token
+TOKEN="KN1ZQ4OWvleMqGGEs5Sl0oESdoutAX6o"  # The API v2 OAuth token
 ACCOUNT_ID="22667"        # Replace with your account ID
 ZONE_ID="wadeallen.me"  # The zone ID is the name of the zone (or domain)
 RECORD_ID="7765630"       # Replace with the Record ID

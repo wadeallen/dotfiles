@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+image=$1
+directory=$HOME/Documents/Sites/fbcmuncie_2018/images/sermon/
+
+mogrify -resize 420 -path ${directory} ${image}
+
+echo "Date of Sermon (YYYY-MM-DD): "
+read sermon_date
+
+mv ${directory}${image} ${directory}${sermon_date}.jpg
+
+echo "-------sermon image on site------"

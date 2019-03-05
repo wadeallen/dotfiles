@@ -1,0 +1,13 @@
+#!/bin/bash
+
+monday=$(date -dlast-monday +%Y-%m-%d)
+tuesday=$(date -dlast-tuesday +%Y-%m-%d)
+search_dir='/home/wadeallen/Documents/Sites/fbcmuncie_2018/_posts'
+
+if [ $(find "$search_dir" -name "${monday}*") ]; then 
+ sed 1,9d ${search_dir}/${monday}* 
+elif [ $(find "$search_dir" -name "${tuesday}*") ]; then 
+ sed 1,9d ${search_dir}/${tuesday}* 
+  else
+    echo "no blog found"
+  fi

@@ -1,0 +1,53 @@
+#!/usr/bin/env python3
+
+import frontmatter
+import os
+import os.path
+import glob
+from os.path import expanduser
+import datetime
+from dateutil import parser
+
+home = expanduser("~")
+
+path = (home + '/Documents/Administration/Markdown_Files/Sermon_Work/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9]*[!slides].md')
+
+files = glob.glob(path)
+files = sorted(files)
+
+filename =(home + '/Documents/Sermon_Planning_LaTeX/planning.tex')
+target = open (filename, 'w')
+target.write('\input{' + home + '/Documents/Sermon_Planning_LaTeX/preamble.tex}\n\n')
+for name in files:
+    post = frontmatter.load(name)
+
+    # If an error is produced, comment out lines 24-42 and uncomment line 23 and run the script. This should give you an idea as to the error
+    # print (post['date'])
+    if type(post['date']) is datetime.date:
+        postdate = post['date']
+    else:
+        postdate = parser.parse(post['date'])
+
+    target.write('\\begin{minipage}[c]{\\textwidth} \n\n')
+    target.write('\\vspace{1cm} \n\n')
+    target.write('\question{' + postdate.strftime('%B %d, %Y') + '}\n\n')
+    if post['title']:
+        target.write('\\textsc{Title}: ' + post['title'] + '\n\n')
+    else:
+        target.write('\\textsc{Title}: No Title Yet \n\n ')
+    if post['author']:
+        target.write('\\textsc{Speaker}: ' + post['author'] + '\n\n')
+    else:
+        target.write('\\textsc{Speaker}: No Speaker Scheduled \n\n')
+    if post['scripture']:
+        target.write('\\textsc{Scripture}: ' + post['scripture'] + '\n\n')
+    else:
+        target.write('\\textsc{Scripture}: No Scripture Yet \n\n')
+    if post['summary']:
+        target.write('\\textsc{Summary}: ' + post['summary'] + '\n\n')
+    else:
+        target.write('\\textsc{Summary}: No summary Yet \n\n')
+    target.write('\\end{minipage} \n\n')
+
+target.write('\input{' + home + '/Documents/Sermon_Planning_LaTeX/postamble.tex}')
+target.close()

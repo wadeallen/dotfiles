@@ -1,7 +1,0 @@
-#!/bin/bash
-
-date=`date +"%Y-%m-%d"`
-
-cd /home/wadeallen/Documents/Sites/fbcmuncie_2018/_posts
-sed -i "/date: ${date}/r /home/wadeallen/Documents/Textbits/duration.txt" ${date}*.md
-

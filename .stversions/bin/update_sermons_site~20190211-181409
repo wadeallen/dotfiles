@@ -1,0 +1,62 @@
+#!/usr/bin/env python3
+
+from os.path import expanduser
+import frontmatter
+import os
+import glob
+import dateutil.parser
+import datetime
+import re
+import ~/bin/config
+
+home = expanduser("~")
+
+worship_sermons_path = (home + '/Sites/fbcmuncie_2018/_worship/*.md')
+worship_posts = glob.glob(worship_sermons_path)
+
+for post in worship_posts:
+	os.remove(post)
+
+path = (home + config.sermon_path + '/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9]*sermon.md')
+files = glob.glob(path)
+
+for name in files:
+    post = frontmatter.load(name)
+    if type(post['date']) is datetime.date:
+        date = post['date'].strftime('%Y-%m-%d')
+    else:
+        date = dateutil.parser.parse(post['date']).strftime('%Y-%m-%d')
+    if post['scripture']:
+        scripture = post['scripture'] 
+    else:
+        scripture = "No Scripture Chosen Yet"
+    if post['title']:
+        title = post['title'] 
+    else:
+        title = "No title yet"
+    speaker = post['author']
+	# date = dateutil.parser.parse(post['date']).strftime('%Y-%m-%d')
+    if post['summary']:
+        description = post['summary']
+    else:
+        description = "No description yet"
+    title_sliced = title.split()
+    slug = ("-".join(title_sliced).lower())
+    slug = slug.replace("?", "")
+    slug = slug.replace("'", "")
+    slug = re.sub("[\(\[].*?[\)\]]", "", slug)
+    filename =(home + '/Sites/fbcmuncie_2018/_worship/' + date + '-' + slug + '.md')
+    filename = filename.replace("-.", ".")
+    filename = filename.replace("--", "-")
+
+    target = open (filename, 'w')
+    target.write("---\n")
+    target.write("author: {}\n".format(speaker))
+    target.write("title: {}\n".format(title))
+    target.write("scripture: {}\n".format(scripture))
+    target.write("date: {}\n".format(date))
+    target.write("---\n")
+    target.write("\n")
+    target.write(description)
+    target.write("\n")
+    target.close()

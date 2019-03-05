@@ -266,10 +266,9 @@ gaps outer 0
 bindsym Control+space exec --no-startup-id /home/wadeallen/bin/launcher
 bindsym Control+$alt+i workspace $ws2, exec /usr/bin/firefox
 bindsym Control+$alt+t workspace $ws1, exec i3-sensible-terminal
-bindsym F2 workspace $ws4, exec nautilus
+bindsym F5 workspace $ws4, exec nautilus
 bindsym F8 exec --no-startup-id /home/wadeallen/bin/slide_compile
 bindsym F4 exec --no-startup-id /home/wadeallen/bin/change_wallpaper
 
 # Start on Boot in Workspaces
-exec i3-msg 'workspace $ws2;exec firefox'
 exec i3-msg 'workspace $ws1;exec i3-sensible-terminal'

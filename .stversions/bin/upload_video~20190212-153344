@@ -1,0 +1,19 @@
+#!/bin/bash
+
+filename=$1
+sunday=$(date +'%Y-%m-%d')
+year=$(date +'%Y')
+
+if	[ -z "$filename" ]
+then
+	echo "Please enter the file"
+	exit 0
+fi
+
+source read_yaml
+create_variables /home/wadeallen/Documents/Textbits/video-data.txt
+
+playlist=$(cat ~/Documents/Textbits/playlist.txt)
+
+/usr/bin/youtube-upload --title="$title" --description="$summary" --tags="$author, sermon, $playlist, $scripture" --playlist="$playlist" --client-secrets=/home/wadeallen/Documents/youtube-upload/client_secret.json $filename
+

@@ -1,6 +1,0 @@
-#!/bin/bash
-
-rsync -av --delete ~/Documents /media/wadeallen/Backup/
-rsync -av --delete ~/dotfiles /media/wadeallen/Backup/
-rsync -av --delete ~/Downloads /media/wadeallen/Backup/
-rsync -av --delete --exclude '*/.git' ~/Sites /media/wadeallen/Backup/

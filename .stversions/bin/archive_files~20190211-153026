@@ -1,0 +1,44 @@
+#!/usr/bin/env python3
+
+from glob import glob
+import os
+from datetime import datetime, date
+from dateutil.relativedelta import relativedelta, SU
+
+home = os.getenv('HOME')
+format = '%Y-%m-%d'
+today = date.today()
+today_string = today.strftime(format)
+target_date = today + relativedelta(weekday=SU(+1))
+sunday = target_date.strftime(format)
+
+def archive():
+    files = glob('????-??-??_s*.md')
+    for f in files:
+        base = f.split('.')[0]
+        date = base[:10]
+        year_dir = base[:4]
+        if not os.path.exists(year_dir):
+            os.makedirs(year_dir)
+        if date < today_string:
+            os.rename(f,year_dir + '/' + f)
+            print (f,'moved to',year_dir,'directory')
+
+def delete_old(path,extension):
+    location = path
+    files = glob('{}/*.{}'.format(location,extension))
+    for f in files:
+        base=os.path.basename(f)
+        date = base[:10]
+        if date < today_string:
+            os.remove(f)
+            print (f,'deleted')
+
+# Archives Old Sermon files into folder
+archive()
+
+# Deletes Old Files
+delete_old(home + '/Documents/Sermons','pdf')
+delete_old(home + '/Documents/Preaching','epub')
+delete_old(home + '/Documents/Preaching','mobi')
+

@@ -1,0 +1,35 @@
+#!/usr/bin/env python3
+
+import os
+import subprocess
+import shutil
+import datetime
+
+from os.path import expanduser
+home = expanduser("~")
+
+today = datetime.date.today()
+sunday = today + datetime.timedelta( (6-today.weekday()) % 7 )
+next_sunday = sunday.strftime('%Y-%m-%d')
+
+sermon_directory = home + "/Documents/Administration/Markdown_Files/Sermon_Work/"
+date = input ('Date of Sermon (format YYYY-MM-DD) default is next Sunday: ')
+if date == "":
+	date = next_sunday
+
+slide_directory = home + "/Documents/Pandoc/Pandoc_Impress/"
+shutil.copyfile(sermon_directory + date + "_slides.md", slide_directory + date + "_slides.md")
+filename = slide_directory + date + "_slides.md"
+template = 'impress-template.html'
+out_file = home + "/Sites/slideshow/index.html"
+subprocess.call([
+  "pandoc",
+  filename,
+  "--template=" + template,
+  "-s",
+  "-t",
+  "html5",
+  "--section-divs",
+  "-o",
+  out_file
+])
