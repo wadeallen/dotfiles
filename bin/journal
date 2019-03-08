@@ -33,9 +33,9 @@ filename =(home + '/Documents/Journal/' + day + '.journal.markdown')
 
 
 if os.path.isfile(filename):
-	subprocess.call(['vim', '+6', '-c', 'call AutoCorrect()',  filename])
+	subprocess.call(['nvim', '+6', '-c', 'call AutoCorrect()',  filename])
 else:
 	target = open (filename, 'w')
 	target.write("Date: {}\nTime: {}\nWeekday: {}\n\n\n".format(day, time,weekday))
 	target.close()
-	subprocess.call(['vim', '+6', '-c', 'call AutoCorrect()', filename])
+	subprocess.call(['nvim', '+6', '-c', 'call AutoCorrect()', filename])
