@@ -1,0 +1,7 @@
+#!/bin/bash
+
+unison -ui text /home/wadeallen/Pictures/ ssh://church.wadeallen.me//home/wadeallen/Pictures/
+
+unison -ui text /home/wadeallen/Sites/ ssh://church.wadeallen.me//home/wadeallen/Sites/
+
+unison -ui text /home/wadeallen/dotfiles/ ssh://church.wadeallen.me//home/wadeallen/dotfiles/

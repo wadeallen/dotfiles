@@ -12,13 +12,10 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
-" Plugin 'vim-pandoc/vim-pandoc'
-" Plugin 'vim-pandoc/vim-pandoc-syntax' 
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-" Plugin 'vim-scripts/L9'
 Plugin 'ron89/thesaurus_query.vim'
 Plugin 'panozzaj/vim-autocorrect'
 
@@ -175,10 +172,6 @@ nmap <leader>- :s/^/- /<Return>
 "insert duration file
 nnoremap <leader>dur :r ~/Dropbox/Textbits/duration.txt<cr>
 
-"toggle tab completion key
-"inoremap <tab> <c-r>=Smart_TabComplete()<CR>
-"
-
 " Vim Markdown settings
 let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_folding_disabled = 1
@@ -247,10 +240,4 @@ let g:html_indent_inctags = "html,body,head"
 " set journal filetype
 au BufNewFile,BufRead *.journal.markdown setf journal
 
-" adding support for FZF
-set rtp+=~/.fzf
-nmap <leader>sw :FZF /home/wadeallen/Dropbox/Administration/Markdown_Files/Sermon_Work<Return>
-
-" open prayer list
-nmap <leader>pray :e /home/wadeallen/Dropbox/Administration/Markdown_Files/Prayer_Requests.md<Return>
 

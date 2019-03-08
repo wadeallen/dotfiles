@@ -20,6 +20,7 @@
 [people] xdg-open https://people.planningcenteronline.com/people
 [visitor] xdg-open https://docs.google.com/document/d/1im1OZ0ol56PP9y0uyvq-2ih3W8G5tiHFdaioL-vTlso/edit
 [scans] xdg-open /home/wadeallen/Scans/
+[downloads] xdg-open /home/wadeallen/Downloads/
 [find] /home/wadeallen/bin/dmenu_extended_run
 [common prayer] xdg-open http://commonprayer.net/
 [lights] xdg-open https://wade-home.duckdns.org/lovelace/0

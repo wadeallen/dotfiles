@@ -67,5 +67,5 @@ else:
     target.write("---\n")
     target.close()
 
-os.system('pandoc ' + filename + ' -o ~/Documents/Print/' + date + '_' + slug + '.pdf --latex-engine=xelatex --template=baby_dedication.tex')
+os.system('pandoc ' + filename + ' -o ~/Print/' + date + '_' + slug + '.pdf --pdf-engine=xelatex --template=baby_dedication.tex')
 
