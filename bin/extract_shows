@@ -1,13 +1,13 @@
 #!/bin/bash
 
-cd ~/Downloads
+cd ~/Downloads/Shows
 mv */*.mkv .
 rm -rf ./*/
 
 for f in *.mkv
 do
   if [[ $f == *x264* ]]; then
-    mv "$f" "${f/.x264/}"
+    mv "$f" "${f/.WEB-DL.AAC2.0.H.264-BS/}"
   fi
 done
 
