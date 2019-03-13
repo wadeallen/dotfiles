@@ -1,10 +1,10 @@
 #!/bin/bash
 
-rsync -av --delete ~/Documents /run/media/wadeallen/Backup/
-rsync -av --delete ~/dotfiles /run/media/wadeallen/Backup/
-rsync -av --delete ~/Downloads /run/media/wadeallen/Backup/
-rsync -av --delete ~/Music /run/media/wadeallen/Backup/
-rsync -av --delete ~/Pictures /run/media/wadeallen/Backup/
-rsync -av --delete ~/Videos /run/media/wadeallen/Backup/
-rsync -av --delete --exclude '*/.git' ~/Sites /run/media/wadeallen/Backup/
+rsync -aLv --delete ~/Documents /run/media/wadeallen/Backup/
+rsync -aLv --delete ~/dotfiles /run/media/wadeallen/Backup/
+rsync -aLv --delete ~/Downloads /run/media/wadeallen/Backup/
+rsync -aLv --delete ~/Music /run/media/wadeallen/Backup/
+rsync -aLv --delete ~/Pictures /run/media/wadeallen/Backup/
+rsync -aLv --delete ~/Videos /run/media/wadeallen/Backup/
+rsync -aLv --delete --exclude '*/.git' ~/Sites /run/media/wadeallen/Backup/
 
