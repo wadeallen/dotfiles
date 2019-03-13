@@ -9,10 +9,10 @@ today = datetime.datetime.now().strftime("%Y-%m-%d")
 filename =(home + '/Documents/Drafts/' + today + '.markdown')
 
 if isfile(filename):
-  subprocess.call(['vim', '-c', '9', filename])
+  subprocess.call(['nvim', '-c', '9', filename])
 else:	
     target = open (filename, 'w')
     target.write("---\nauthor: Wade Allen\ntitle: \ndate: {}\ncategory: blog\nlayout: blog\ncomments: yes\n---\n \n ".format(today))
     target.close()
 
-subprocess.call(['vim', '-c', '9', filename])
+subprocess.call(['nvim', '-c', '9', filename])
