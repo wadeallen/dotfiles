@@ -1,0 +1,10 @@
+#! /bin/sh
+ 
+SOURCE="/home/wadeallen/"
+TARGET="/run/media/wadeallen/Drobo/wade-backups/"
+ 
+## Backup
+rdiff-backup --print-statistics $SOURCE $TARGET
+ 
+## Remove old data
+rdiff-backup --remove-older-than 1M --force --print-statistics $TARGET

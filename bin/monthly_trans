@@ -21,7 +21,7 @@ else:
 
 with open(home + '/Documents/Ledger/monthly_bills.csv') as f:
 	transaction = csv.reader(f, delimiter='|', quotechar='|')
-	target = open (home+ '/Desktop/temp.txt', 'w')
+	target = open (home+ '/temp.txt', 'w')
 	for row in transaction:
 		date_value = year + "/" + month + "/" + row[0]
 		payee = row[1]

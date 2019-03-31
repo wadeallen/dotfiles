@@ -30,4 +30,3 @@
 [print] xdg-open /home/wadeallen/Print/
 [gifts] xdg-open https://docs.google.com/spreadsheets/d/1w891t-8NNkWATuDIH4wxwWTpfj_nk4T-gJ538_PXjto/edit
 [blog ideas] subl /home/wadeallen/Documents/Notes/Blog_Ideas.txt
-[editing] xdg-open /home/wadeallen/Editing/

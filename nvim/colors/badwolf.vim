@@ -251,7 +251,7 @@ call s:HL('Special', 'plain')
 
 " Comments are slightly brighter than folds, to make 'headers' easier to see.
 call s:HL('Comment',        'gravel')
-call s:HL('Todo',           'snow', 'bg', 'bold')
+call s:HL('Todo',           'taffy', 'bg', 'bold')
 call s:HL('SpecialComment', 'snow', 'bg', 'bold')
 
 " Strings are a nice, pale straw color.  Nothing too fancy.
@@ -596,12 +596,22 @@ call s:HL('mailQuoted5', 'lime', '', 'none')
 " }}}
 " Markdown {{{
 
+"Added by Wade
+call s:HL('mkdBlockquote', 'dirtyblonde', '', 'none')
+call s:HL('htmlBold', 'tardis', '', 'bold')
+call s:HL('htmlItalic', 'dress', '', 'bold')
+call s:HL('htmlH1', 'orange', '', 'bold')
+call s:HL('htmlH2', 'lime', '', 'bold')
+call s:HL('pandocBlockQuote', 'orange', '', 'none')
+call s:HL('pandocStrong', 'tardis', '', 'none')
+
+
 call s:HL('markdownHeadingRule', 'lightgravel', '', 'bold')
 call s:HL('markdownHeadingDelimiter', 'lightgravel', '', 'bold')
 call s:HL('markdownOrderedListMarker', 'lightgravel', '', 'bold')
 call s:HL('markdownListMarker', 'lightgravel', '', 'bold')
 call s:HL('markdownItalic', 'snow', '', 'bold')
-call s:HL('markdownBold', 'snow', '', 'bold')
+call s:HL('markdownBold', 'lightgravel', '', 'bold')
 call s:HL('markdownH1', 'orange', '', 'bold')
 call s:HL('markdownH2', 'lime', '', 'bold')
 call s:HL('markdownH3', 'lime', '', 'none')

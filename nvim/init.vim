@@ -1,90 +1,97 @@
-syntax on
+" Wade Allen nvim config file
 
-"install plugins
 call plug#begin('~/.config/nvim/plugged')
+Plug 'tpope/vim-surround'
+Plug 'junegunn/goyo.vim'
+Plug 'PotatoesMaster/i3-vim-syntax'
+Plug 'tpope/vim-commentary'
 Plug 'ron89/thesaurus_query.vim'
 Plug 'panozzaj/vim-autocorrect'
 Plug 'vim-pandoc/vim-pandoc-syntax'
-Plug 'tpope/vim-commentary'
-Plug 'reedes/vim-wordy'
-Plug 'ledger/vim-ledger'
-Plug 'jiangmiao/auto-pairs'
 Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+Plug 'ledger/vim-ledger'
 call plug#end()
 
-"custom plugins
-source $HOME/.config/nvim/custom/python_functions.vim
-source $HOME/.config/nvim/custom/bible_gateway.vim
+set bg=light
+set go=a
+set mouse=a
+set nohlsearch
+set clipboard=unnamedplus
 
-set number
-set wrap
-set linebreak
+" Some basics:
+	nnoremap c "_c
+	set nocompatible
+	filetype plugin on
+	syntax on
+	set encoding=utf-8
+	set number relativenumber
+
+" Enable autocompletion:
+	set wildmode=longest,list,full
+
+" Disables automatic commenting on newline:
+	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" Goyo plugin makes text more readable when writing prose:
+	map <leader>f :Goyo \| set bg=light \| set linebreak<CR>
+
+" Spell-check set to <leader>o, 'o' for 'orthography':
+	map <leader>o :setlocal spell! spelllang=en_us<CR>
 
 "spell check in markdown files only
-autocmd BufRead,BufNewFile *.md,*.markdown setlocal spell spelllang=en_us
+    	autocmd BufRead,BufNewFile *.md,*.markdown setlocal spell spelllang=en_us
 
-"make clipboard work
-set clipboard+=unnamedplus
+" set spell check
+	hi clear SpellBad
+	hi SpellBad cterm=underline
 
-"this will add new line without insert mode
-nmap <S-Enter> O<Esc>j
-nmap <CR> o<Esc>k
+" set color scheme
+colorscheme badwolf
 
-"for Ledger program
-au BufNewFile,BufRead *.ldg,*.ledger setf ledger 
-nmap <leader>2 010li<Space>*<Esc>
-nnoremap <leader>d "=strftime("%Y/%m/%d")<CR>PA<Space><Space>
-nnoremap <leader>nt G"=strftime("%Y/%m/%d")<CR>PA<Space><Space>
+" Splits open at the bottom and right, which is non-retarded, unlike vim defaults.
+	set splitbelow splitright
 
-"------------------------------------------------------------
-"adding shortcut to make verse slide
-nmap <leader>ms 0di(o<Esc>P0i*<Esc>A*<Esc>k0xxxo<Esc>jj
-"------------------------------------------------------------
-"added line to copy summary and verse
-"noremap <leader>cs 0lvi"y
-noremap <leader>cv 0lv$y
-"------------------------------------------------------------
+" Shortcutting split navigation, saving a keypress:
+	map <C-h> <C-w>h
+	map <C-j> <C-w>j
+	map <C-k> <C-w>k
+	map <C-l> <C-w>l
 
-"map keys for easy exit
-inoremap jj <Esc>
-noremap qq :wq<CR>
+" Replace all is aliased to S.
+	nnoremap S :%s//g<Left><Left>
 
-"setup markdown files
-autocmd BufNewFile,BufFilePre,BufRead *.md,*.markdown set filetype=markdown.pandoc
+" Compile document, be it groff/LaTeX/markdown/etc.
+	map <leader>c :w! \| !compiler <c-r>%<CR>
 
-"call autocorrect on markdown files
-autocmd filetype pandoc.markdown call AutoCorrect()
+" Open corresponding .pdf/.html or preview
+	map <leader>p :!opout <c-r>%<CR><CR>
 
-" Auto Capitalize Sentences
-augroup SENTENCES
-      au!
-        autocmd InsertCharPre * if search('\v(%^|[.!?]\_s+|\_^\-\s|\_^title\:\s|\n\n)%#', 'bcnw') != 0 | let v:char = toupper(v:char) | endif
-      augroup END
+"setup markdown files and tex files
+	autocmd BufNewFile,BufFilePre,BufRead *.md,*.markdown set filetype=markdown.pandoc
+	autocmd BufRead,BufNewFile *.tex set filetype=tex
 
-"for thesaurus plugin
-nnoremap <LocalLeader>th :ThesaurusQueryReplaceCurrentWord<CR>
-vnoremap <LocalLeader>th y:Thesaurus <C-r>"<CR>
-let g:tq_enabled_backends=["thesaurus_com","openoffice_en","mthesaur_txt"]
+" Copy selected text to system clipboard (requires gvim/nvim/vim-x11 installed):
+	vnoremap <C-c> "+y
+	map <C-p> "+P
 
-set wrap linebreak nolist
-" nnoremap j gj
-" vnoremap j gj
-" onoremap j gj
-" nnoremap k gk
-" vnoremap k gk
-" onoremap k gk
-" nnoremap 0 g0
-" nnoremap $ g$
+" Enable Goyo by default for mutt writting
+	" Goyo's width will be the line limit in mutt.
+	autocmd BufRead,BufNewFile /tmp/neomutt* let g:goyo_width=80
+	autocmd BufRead,BufNewFile /tmp/neomutt* :Goyo \| set bg=light
 
-"set up dictionary
-" set dictionary+=/home/wadeallen/Downloads/hunspell-en_US-2018.04.16/en_US.dic
-" set complete+=k
+" Automatically deletes all trailing whitespace on save.
+	autocmd BufWritePre * %s/\s\+$//e
 
-"spell
-hi clear SpellBad
-hi SpellBad cterm=underline
+" When shortcut files are updated, renew bash and ranger configs with new material:
+	autocmd BufWritePost ~/.config/bmdirs,~/.config/bmfiles !shortcuts
 
+" Run xrdb whenever Xdefaults or Xresources are updated.
+	autocmd BufWritePost *Xresources,*Xdefaults !xrdb %
+
+" Navigating with guides
+	inoremap <leader><leader> <Esc>/<++><Enter>"_c4l
+	vnoremap <leader><leader> <Esc>/<++><Enter>"_c4l
+	map <leader><leader> <Esc>/<++><Enter>"_c4l
 
 
 "I am adding the following content to display word count in status bar
@@ -119,14 +126,40 @@ set statusline+=%=      " separator from left to right justified
 set statusline+=\ %{strftime('%a\ %b\ %e\ %I:%M\ %p')},
 set statusline+=\ %{WordCount()}\ words,
 set statusline+=\ %l/%L\ lines,\ %P " percentage through the file
-"------------------------------------------------------------
-"
+
+
+"custom plugins
+source $HOME/.config/nvim/custom/python_functions.vim
+source $HOME/.config/nvim/custom/bible_gateway.vim
+
+"for thesaurus plugin
+nnoremap <LocalLeader>th :ThesaurusQueryReplaceCurrentWord<CR>
+vnoremap <LocalLeader>th y:Thesaurus <C-r>"<CR>
+let g:tq_enabled_backends=["thesaurus_com","openoffice_en","mthesaur_txt"]
+
+" Auto Capitalize Sentences
+augroup SENTENCES
+      au!
+        autocmd InsertCharPre * if search('\v(%^|[.!?]\_s+|\_^\-\s|\_^title\:\s|\n\n)%#', 'bcnw') != 0 | let v:char = toupper(v:char) | endif
+      augroup END
+
+" Abbreviations
 abbrev i I
 abbrev hhs Holy Spirit
 abbrev jesus Jesus
+abbrev paul Paul
+abbrev peter Peter
+abbrev john John
 
-" autopairs
-let g:AutoPairsMapCR=0
+"for Ledger program
+au BufNewFile,BufRead *.ldg,*.ledger setf ledger
+nmap <leader>2 010li<Space>*<Esc>
+nnoremap <leader>d "=strftime("%Y/%m/%d")<CR>PA<Space><Space>
+nnoremap <leader>nt G"=strftime("%Y/%m/%d")<CR>PA<Space><Space>
+
+"this will add new line without insert mode
+nmap <S-Enter> O<Esc>j
+nmap <CR> o<Esc>k
 
 "Ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"

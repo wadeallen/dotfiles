@@ -16,7 +16,7 @@ home = expanduser("~")
 
 curline = vim.current.line
 compile_path = home + '/Documents/Preaching/'
-desktop = home + '/Documents/Print/'  
+desktop = home + '/Documents/Print/'
 
 def python_input(message = 'input'):
   vim.command('call inputsave()')
@@ -29,7 +29,7 @@ def Convert_Kindle():
   output = os.path.splitext(os.path.basename(vim.current.buffer.name))[0]+'.epub'
   # Convert to mobi
   kindle_file = os.path.splitext(os.path.basename(vim.current.buffer.name))[0]+'.mobi'
-  subprocess.call("pandoc " + vim.current.buffer.name + " -o " + compile_path + output + " --css=" + home + "/Documents/Pandoc/Pandoc_Sermon/epub.css --template sermon_epub.html", shell=True) 
+  subprocess.call("pandoc " + vim.current.buffer.name + " -o " + compile_path + output + " --css=" + home + "/Documents/Pandoc/Pandoc_Sermon/epub.css --template sermon_epub.html", shell=True)
   subprocess.call("kindlegen " + compile_path + output + " > " + home + "/Documents/Preaching/log.txt", shell=True)
   # Email to Kindle
   fromaddr = config.username
