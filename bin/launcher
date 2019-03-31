@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# if [ -f $HOME/.dmenurc ]; then
-#   . $HOME/.dmenurc
-# else
+if [ -f $HOME/.dmenurc ]; then
+  . $HOME/.dmenurc
+else
   DMENU='dmenu -i'
-# fi
+fi
 
 CONFIG=${HOME}/dotfiles/bin/commands
 

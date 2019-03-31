@@ -604,7 +604,7 @@ call s:HL('htmlH1', 'orange', '', 'bold')
 call s:HL('htmlH2', 'lime', '', 'bold')
 call s:HL('pandocBlockQuote', 'orange', '', 'none')
 call s:HL('pandocStrong', 'tardis', '', 'none')
-
+call s:HL('pandocEmphasis', 'lime', '', 'none')
 
 call s:HL('markdownHeadingRule', 'lightgravel', '', 'bold')
 call s:HL('markdownHeadingDelimiter', 'lightgravel', '', 'bold')
