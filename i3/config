@@ -31,11 +31,12 @@ for_window [instance="dropdown_tmuxdd"] border pixel 3
 for_window [instance="dropdown_dropdowncalc"] border pixel 2
 for_window [instance="dropdown_*"] move position center
 
+
 # #---Starting External Scripts---# #
 # mpd startup
 exec --no-startup-id mpd
 # nextcloud startup
-exec --no-startup-id nextcloud
+# exec --no-startup-id nextcloud
 # Setting the background:
 exec --no-startup-id setbg
 # Starts dunst for notifications:
@@ -58,10 +59,12 @@ exec --no-startup-id ~/bin/hotstrings
 exec --no-startup-id ~/bin/startconky
 # Start Syncthing
 exec --no-startup-id syncthing
+# Start Clipmenud
+exec --no-startup-id clipmenud
 
 
 bar {
-	font pango:mono 16
+	font pango:mono 18
 	status_command i3blocks
 	position top
 	mode dock
@@ -96,7 +99,7 @@ bindsym $mod+q			[con_id="__focused__" instance="^(?!dropdown_).*$"] kill
 bindsym $mod+Shift+q		[con_id="__focused__" instance="^(?!dropdown_).*$"] kill
 
 bindsym $mod+w			exec $term -e nmtui
-bindsym $mod+Shift+w		exec --no-startup-id $BROWSER
+bindsym $mod+Shift+w		exec --no-startup-id $BROWSER; workspace $ws2
 
 # bindsym $mod+e			exec $term -e neomutt && pkill -RTMIN+12 i3blocks
 bindsym $mod+Shift+e		exec --no-startup-id tutorialvids
@@ -142,8 +145,9 @@ bindsym $mod+Shift+f		mode "$freeze" ;; exec --no-startup-id notify-send "<b>Dis
 bindsym $mod+g			workspace prev
 bindsym $mod+Shift+g		exec --no-startup-id gimp; workspace $ws5
 
-bindsym $mod+h			focus left
-bindsym $mod+Shift+h		move left 30
+# bindsym $mod+h			focus left
+# bindsym $mod+Shift+h		move left 30
+bindsym $mod+Shift+h	        exec --no-startup-id clipmenu
 
 bindsym $mod+j			focus down
 bindsym $mod+Shift+j		move down 30
@@ -253,6 +257,7 @@ bindsym $mod+F5		exec --no-startup-id $netrefresh
 # bindsym $mod+F6		exec --no-startup-id torwrap
 # bindsym $mod+F7		exec --no-startup-id td-toggle
 # bindsym $mod+F8		exec --no-startup-id ~/.config/mutt/etc/mailsync.sh
+bindsym F8              exec --no-startup-id ~/bin/slide_compile
 bindsym $mod+F9		exec --no-startup-id dmenumount
 bindsym $mod+F10	exec --no-startup-id dmenuumount
 bindsym $mod+F11	exec --no-startup-id ducksearch
@@ -379,3 +384,8 @@ bindsym XF86MonBrightnessUp	exec --no-startup-id xbacklight -inc 15
 
 # Wade Custom Binding
 bindsym F4			exec --no-startup-id change_wallpaper
+bindsym control+space           exec --no-startup-id launcher
+
+# Assign Firefox
+for_window [class="Firefox"] move workspace $ws2
+for_window [class="Zathura"] move workspace $ws5

@@ -10,12 +10,15 @@ Plug 'panozzaj/vim-autocorrect'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'SirVer/ultisnips'
 Plug 'ledger/vim-ledger'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 set bg=light
 set go=a
 set mouse=a
 set nohlsearch
+set linebreak
 set clipboard=unnamedplus
 
 " Some basics:
@@ -51,28 +54,12 @@ colorscheme badwolf
 " Splits open at the bottom and right, which is non-retarded, unlike vim defaults.
 	set splitbelow splitright
 
-" Shortcutting split navigation, saving a keypress:
-	map <C-h> <C-w>h
-	map <C-j> <C-w>j
-	map <C-k> <C-w>k
-	map <C-l> <C-w>l
-
 " Replace all is aliased to S.
 	nnoremap S :%s//g<Left><Left>
-
-" Compile document, be it groff/LaTeX/markdown/etc.
-	map <leader>c :w! \| !compiler <c-r>%<CR>
-
-" Open corresponding .pdf/.html or preview
-	map <leader>p :!opout <c-r>%<CR><CR>
 
 "setup markdown files and tex files
 	autocmd BufNewFile,BufFilePre,BufRead *.md,*.markdown set filetype=markdown.pandoc
 	autocmd BufRead,BufNewFile *.tex set filetype=tex
-
-" Copy selected text to system clipboard (requires gvim/nvim/vim-x11 installed):
-	vnoremap <C-c> "+y
-	map <C-p> "+P
 
 " Enable Goyo by default for mutt writting
 	" Goyo's width will be the line limit in mutt.
@@ -168,3 +155,4 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsSnippetsDir=$HOME."/.config/nvim/Snippets"
 let g:UltiSnipsSnippetDirectories = ['Snippets']
 let g:UltiSnipsEditSplit="vertical"
+
