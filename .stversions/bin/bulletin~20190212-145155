@@ -36,6 +36,3 @@ pandoc $DIRECTORY/articles.txt -o $HOME/Print/${SUNDAY}_bulletin.pdf --template 
 cp $HOME/Print/${SUNDAY}_bulletin.pdf $ARCHIVE/
 cp $HOME/Print/${SUNDAY}_bulletin.pdf $EDITING/
 # rm $DIRECTORY/Nursery_Volunteers.csv
-
-cd $EDITING
-push

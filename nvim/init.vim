@@ -48,6 +48,9 @@ set clipboard=unnamedplus
 	hi clear SpellBad
 	hi SpellBad cterm=underline
 
+" autosave document
+        autocmd TextChanged,TextChangedI <buffer> silent write
+
 " set color scheme
 colorscheme badwolf
 
@@ -74,6 +77,9 @@ colorscheme badwolf
 
 " Run xrdb whenever Xdefaults or Xresources are updated.
 	autocmd BufWritePost *Xresources,*Xdefaults !xrdb %
+
+"adding shortcut to make verse slide
+        nmap <leader>ms 0di(o<Esc>P0i*<Esc>A*<Esc>k0xxxo<Esc>jj
 
 " Navigating with guides
 	inoremap <leader><leader> <Esc>/<++><Enter>"_c4l
