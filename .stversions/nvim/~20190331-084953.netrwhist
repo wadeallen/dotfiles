@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/etc/cups'
-let g:netrw_dirhist_2='/mnt/msata/dotfiles/nvim'
-let g:netrw_dirhist_3='/mnt/msata/dotfiles/nvim/plugged'
-let g:netrw_dirhist_4='/mnt/msata/dotfiles/nvim/plugged/vim-pandoc-syntax'
-let g:netrw_dirhist_5='/mnt/msata/dotfiles/nvim/plugged/vim-pandoc-syntax/syntax'

@@ -1,5 +1,0 @@
-#! /bin/bash
-
-month=`date +"%B" --date="+1 month"`
-
-echo $month

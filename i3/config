@@ -57,8 +57,6 @@ exec --no-startup-id ~/bin/touchpad
 exec --no-startup-id ~/bin/hotstrings
 # Start Conky
 exec --no-startup-id ~/.scripts/wade/startconky
-# Start Syncthing
-exec --no-startup-id syncthing
 # Start Clipmenud
 exec --no-startup-id clipmenud
 

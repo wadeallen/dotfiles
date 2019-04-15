@@ -1,8 +1,0 @@
-#!/bin/bash
-
-for file in friends*; do
-    mv "$file" "${file/.bluray.x264-mrs.sujaidr/}"
-done
-
-
-# Seinfeld.S06E01.720p.WebRip.ReEnc-DeeJayAhmed.mkv
