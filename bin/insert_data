@@ -3,5 +3,5 @@
 date=`date +"%Y-%m-%d"`
 
 cd /home/wadeallen/Sites/fbcmuncie_2018/_posts
-sed -i "/date: ${date}/r /home/wadeallen/Documents/Textbits/duration.txt" ${date}*.md
+sed -i "/date: ${date}/r /home/wadeallen/Dropbox/Textbits/duration.txt" ${date}*.md
 

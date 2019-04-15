@@ -19,7 +19,7 @@ else:
 	month = today.strftime('%m')
 	year = today.strftime('%Y')
 
-with open(home + '/Documents/Ledger/monthly_bills.csv') as f:
+with open(home + '/Dropbox/Ledger/monthly_bills.csv') as f:
 	transaction = csv.reader(f, delimiter='|', quotechar='|')
 	target = open (home+ '/temp.txt', 'w')
 	for row in transaction:

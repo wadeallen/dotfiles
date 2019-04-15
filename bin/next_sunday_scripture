@@ -5,7 +5,7 @@ sunday=$(date -dsunday +%Y-%m-%d)
 source ~/bin/functions
 source ~/bin/read_yaml
 
-create_variables /home/wadeallen/Documents/Sermon_Work/${sunday}*
+create_variables /home/wadeallen/Dropbox/Sermon_Work/${sunday}*
 printf "$scripture"
 
 

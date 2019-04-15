@@ -16,8 +16,8 @@ cd $HOME/Desktop/
 # rm ${month}.csv.bak
 # sed -e '/Prospect/d' $month.csv > ${month}.temp
 # cut -d, -f3,4,18 < ${month}.temp > ${month}_birthdays.csv
-# mv ${month}_birthdays.csv $HOME/Documents/Pandoc/Pandoc_Visitor/Birthdays/
+# mv ${month}_birthdays.csv $HOME/Dropbox/Pandoc/Pandoc_Visitor/Birthdays/
 # rm ${month}.temp
 # rm ${month}.csv
-cat ${file} | sed 's/.....$//' | sort -t'/' -n -k2 > $HOME/Documents/Pandoc/Pandoc_Visitor/Birthdays/${month}_birthdays.csv
+cat ${file} | sed 's/.....$//' | sort -t'/' -n -k2 > $HOME/Dropbox/Pandoc/Pandoc_Visitor/Birthdays/${month}_birthdays.csv
 echo 'Birthday file has been created file in Pandoc_Visitor/Birthdays directory'

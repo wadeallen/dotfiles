@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIRECTORY=$HOME/Documents/Mentorships
+DIRECTORY=$HOME/Dropbox/Mentorships
 
 cd $DIRECTORY
 wget -O mentorship.txt https://docs.google.com/document/d/14YuGIWWcXYuoqGNZQBonBlN5OjMqrgv5wiAjja47_M0/export?format=txt &&

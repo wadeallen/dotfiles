@@ -6,8 +6,8 @@
 TIME=`date +%b-%d-%y`            # This Command will add date in Backup File Name.
 FILENAME=sermons-$TIME.tar.gz    # Here i define Backup file name format.
 SRCDIR=Sermon_Work # Location of Important Data Directory (Source of backup)
-DESDIR=$HOME/Documents/Backups/Crucial_Backups        # Destination of backup file.
-cd $HOME/Documents  #change directory to make backup
+DESDIR=$HOME/Dropbox/Backups/Crucial_Backups        # Destination of backup file.
+cd $HOME/Dropbox  #change directory to make backup
 tar -cpzf $DESDIR/$FILENAME $SRCDIR/    #tar backup files
 s3cmd sync $DESDIR/$FILENAME s3://wade-crucial-backups/ #upload to S3
 #END!

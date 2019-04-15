@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rsync -aLv --delete ~/Documents /run/media/wadeallen/Backup/
+rsync -aLv --delete ~/Dropbox /run/media/wadeallen/Backup/
 rsync -aLv --delete ~/dotfiles /run/media/wadeallen/Backup/
 rsync -aLv --delete ~/Downloads /run/media/wadeallen/Backup/
 rsync -aLv --delete ~/Music /run/media/wadeallen/Backup/

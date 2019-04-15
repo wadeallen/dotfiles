@@ -1,0 +1,16 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/bin: bin
+    ~/.vim: vim
+    ~/.vimrc: vimrc
+    ~/.pandoc: pandoc
+    ~/.maid: maid
+    ~/.config/hotstrings.json: hotstrings.json
+    ~/.dmenurc : dmenurc
+    ~/.fonts : fonts
+    ~/.config/nvim : nvim

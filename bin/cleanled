@@ -1,9 +1,9 @@
 #!/bin/bash
 
-ORIG=$HOME/Documents/Ledger/ledger.ledger
-NEW=$HOME/Documents/Ledger/copy_ledger.ledger
-CLEAN=$HOME/Documents/Ledger/clean_ledger.ledger
-HEADER=$HOME/Documents/Ledger/header.ledger
+ORIG=$HOME/Dropbox/Ledger/ledger.ledger
+NEW=$HOME/Dropbox/Ledger/copy_ledger.ledger
+CLEAN=$HOME/Dropbox/Ledger/clean_ledger.ledger
+HEADER=$HOME/Dropbox/Ledger/header.ledger
 
 # change '4,7d' to reflect the lines that contain yearly include files
 sed '4,7d' $ORIG > $NEW

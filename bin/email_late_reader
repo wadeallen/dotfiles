@@ -19,7 +19,7 @@ target_date = today + relativedelta(weekday=SU(+1))
 sunday = target_date.strftime(path_format)
 sunday_long = target_date.strftime(format)
 
-path = ('/home/wadeallen/Documents/Administration/Markdown_Files/Sermon_Work/{}_sermon.md'.format(sunday))
+path = ('/home/wadeallen/Dropbox/Administration/Markdown_Files/Sermon_Work/{}_sermon.md'.format(sunday))
 files = glob.glob(path)
 for name in files:
 	post = frontmatter.load(name)

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-DIRECTORY=$HOME/Documents/Pandoc/Pandoc_Bulletin
-ARCHIVE=$HOME/Documents/Bulletin_Archives
+DIRECTORY=$HOME/Dropbox/Pandoc/Pandoc_Bulletin
+ARCHIVE=$HOME/Dropbox/Bulletin_Archives
 EDITING=$HOME/Editing
 OS="`uname`"
 

@@ -59,7 +59,7 @@ def convert_files(filetype,args,output_path):
             return
 
 def task_kindle():
-    location = home +'/Documents/Preaching'
+    location = home +'/Dropbox/Preaching'
     files = glob('{}/*.epub'.format(location))
     for f in files:
         base=os.path.basename(f)
@@ -72,8 +72,8 @@ def task_kindle():
 def task_planning():
         return {
                 'actions': ['python3 ' + home + '/bin/update_sermons', 
-                        'cd ' + home + '/Documents/Sermon_Planning_LaTeX/ && pdflatex planning.tex > log.txt',
-                        'cp ' + home + '/Documents/Sermon_Planning_LaTeX/planning.pdf ' + home + '/Drive/Worship_Arts_Team/Plans/'
+                        'cd ' + home + '/Dropbox/Sermon_Planning_LaTeX/ && pdflatex planning.tex > log.txt',
+                        'cp ' + home + '/Dropbox/Sermon_Planning_LaTeX/planning.pdf ' + home + '/Drive/Worship_Arts_Team/Plans/'
                         ]
         }
 
@@ -86,12 +86,12 @@ def task_pdf():
     yield convert_files('pdf','--template sermon_template.tex', home +'/Drive/Worship_Arts_Team/Sermons/')
 
 def task_epub():
-    yield convert_files('epub','--epub-stylesheet=' + home + '/Documents/Pandoc/Pandoc_Sermon/epub.css --template sermon_epub.html', home + '/Documents/Preaching/')
+    yield convert_files('epub','--epub-stylesheet=' + home + '/Dropbox/Pandoc/Pandoc_Sermon/epub.css --template sermon_epub.html', home + '/Dropbox/Preaching/')
 
 def task_delete():
     yield delete_old(home + '/Drive/Worship_Arts_Team/Sermons','pdf','Sermons')
-    yield delete_old(home + '/Documents/Preaching','epub','Epub (Preaching)')
-    yield delete_old(home + '/Documents/Preaching','mobi','Mobi (Preaching)')
+    yield delete_old(home + '/Dropbox/Preaching','epub','Epub (Preaching)')
+    yield delete_old(home + '/Dropbox/Preaching','mobi','Mobi (Preaching)')
 
 def task_meta():
     return {

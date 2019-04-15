@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for file in Everybody*; do
+    mv "$file" "${file/.WEB-DL.AAC2.0.H.264/}"
+done
+
+

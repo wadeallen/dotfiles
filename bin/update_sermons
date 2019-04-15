@@ -16,9 +16,9 @@ path = (config.sermon_path + '/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9]*[!slides].m
 files = glob.glob(path)
 files = sorted(files)
 
-filename =(home + '/Documents/Sermon_Planning_LaTeX/planning.tex')
+filename =(home + '/Dropbox/Sermon_Planning_LaTeX/planning.tex')
 target = open (filename, 'w')
-target.write('\input{' + home + '/Documents/Sermon_Planning_LaTeX/preamble.tex}\n\n')
+target.write('\input{' + home + '/Dropbox/Sermon_Planning_LaTeX/preamble.tex}\n\n')
 for name in files:
     post = frontmatter.load(name)
 
@@ -50,5 +50,5 @@ for name in files:
         target.write('\\textsc{Summary}: No summary Yet \n\n')
     target.write('\\end{minipage} \n\n')
 
-target.write('\input{' + home + '/Documents/Sermon_Planning_LaTeX/postamble.tex}')
+target.write('\input{' + home + '/Dropbox/Sermon_Planning_LaTeX/postamble.tex}')
 target.close()

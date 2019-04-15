@@ -53,7 +53,7 @@ day = custom_strftime('{S}', dedication_date)
 month = dedication_date.strftime('%B')
 year = dedication_date.strftime('%Y')
 
-filename =(home + '/Documents/Administration/Certificates/Baby_Dedication/Dedications/' + date + "_" + slug + '.md')
+filename =(home + '/Dropbox/Administration/Certificates/Baby_Dedication/Dedications/' + date + "_" + slug + '.md')
 
 if os.path.isfile(filename):
 	print("File already exists")

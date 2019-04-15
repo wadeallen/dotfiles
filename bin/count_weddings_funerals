@@ -1,8 +1,8 @@
 #!/bin/bash
 
-FCOUNT=`ls /home/wadeallen/Documents/Administration/Markdown_Files/Funeral_Work | wc -l`
+FCOUNT=`ls /home/wadeallen/Dropbox/Administration/Markdown_Files/Funeral_Work | wc -l`
 
-WCOUNT=`ls /home/wadeallen/Documents/Administration/Markdown_Files/Wedding_Work | wc -l`
+WCOUNT=`ls /home/wadeallen/Dropbox/Administration/Markdown_Files/Wedding_Work | wc -l`
 
 echo -e "Funerals: ${FCOUNT} \nWeddings: ${WCOUNT}"
 

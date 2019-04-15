@@ -29,7 +29,7 @@ now = datetime.now()
 day = now.strftime("%Y-%m-%d")
 time = now.strftime("%-I:%M %p")
 weekday = now.strftime("%A")
-filename =(home + '/Documents/Journal/' + day + '.journal.markdown')
+filename =(home + '/Dropbox/Journal/' + day + '.journal.markdown')
 
 
 if os.path.isfile(filename):

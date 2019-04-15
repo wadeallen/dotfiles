@@ -1,0 +1,19 @@
+#!/bin/bash
+
+cd ~/Downloads
+mv */*.mkv .
+rm -rf ./*/
+
+for f in *.mkv
+do
+  if [[ $f == *x264* ]]; then
+    mv "$f" "${f/.x264/}"
+  fi
+done
+
+for f in *.mkv
+do
+  suffix=${f##*[0-9]}
+  mv $f ${f/${suffix}/.mkv}
+done
+

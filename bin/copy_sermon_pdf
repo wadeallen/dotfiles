@@ -2,4 +2,4 @@
 
 NOW=`date +'%Y-%m-%d'`
 
-cp ~/Documents/Sermons/${NOW}_sermon.pdf ~/Print/
+cp ~/Dropbox/Sermons/${NOW}_sermon.pdf ~/Print/

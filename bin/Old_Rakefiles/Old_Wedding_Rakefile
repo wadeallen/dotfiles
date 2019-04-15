@@ -4,7 +4,7 @@ require 'date'
 
 desc "Create Print Version on Desktop"
 task :print do
-	Dir.glob('/Users/wadeallen/Documents/Administration/Markdown_Files/Wedding_Work/*.md') do |file|
+	Dir.glob('/Users/wadeallen/Dropbox/Administration/Markdown_Files/Wedding_Work/*.md') do |file|
 		name = File.basename(file, ".md")[0...10]
 		base = File.basename(file, ".md")
 		date = Chronic.parse(name).to_date
@@ -18,13 +18,13 @@ end
 
 desc "Create epub version of Wedding"
 task :epub do
-	Dir.glob('/Users/wadeallen/Documents/Administration/Markdown_Files/Wedding_Work/*.md') do |file|
+	Dir.glob('/Users/wadeallen/Dropbox/Administration/Markdown_Files/Wedding_Work/*.md') do |file|
 		name = File.basename(file, ".md")[0...10]
 		base = File.basename(file, ".md")
 		date = Chronic.parse(name).to_date
 		today = Time.now.to_date
 			if date >= today
-				sh "pandoc #{file} -o /Users/wadeallen/Documents/Preaching/Weddings/#{base}.epub --epub-stylesheet=/Users/wadeallen/Documents/Pandoc/Pandoc_Sermon/epub.css --template sermon_epub.html" 
+				sh "pandoc #{file} -o /Users/wadeallen/Dropbox/Preaching/Weddings/#{base}.epub --epub-stylesheet=/Users/wadeallen/Dropbox/Pandoc/Pandoc_Sermon/epub.css --template sermon_epub.html" 
 				puts "------ Created epub version of #{base} ------"
 			end
 	end
@@ -32,7 +32,7 @@ end
 
 desc "Create Kindle version of Wedding"
 task :kindle do
-	Dir.glob('/Users/wadeallen/Documents/Preaching/Weddings/*.epub') do |file|
+	Dir.glob('/Users/wadeallen/Dropbox/Preaching/Weddings/*.epub') do |file|
 		name = File.basename(file, ".epub")[0...10]
 		date = Chronic.parse(name).to_date
 		directory = File.dirname(file)

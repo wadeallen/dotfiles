@@ -1,6 +1,6 @@
 #!/usr/bin/env bash 
 
-DIRECTORY=$HOME/Documents/Pandoc/Pandoc_Prayer_List/
+DIRECTORY=$HOME/Dropbox/Pandoc/Pandoc_Prayer_List/
 YEAR=$(date -d 'sun' +'%Y')
 MONTH=$(date -d 'sun' +'%m')
 DAY=$(date -d 'sun' +'%d')

@@ -87,7 +87,7 @@ api.commit()
 
 
 def grab_section(file):
-	with open(home + "/Documents/Templates/Funeral/" + file) as f:
+	with open(home + "/Dropbox/Templates/Funeral/" + file) as f:
 	    lines = f.read()
 	    lines = lines.replace("{full_name}", full_name)
 	    lines = lines.replace("{first_name}", first_name)
@@ -98,7 +98,7 @@ def grab_section(file):
 	    lines = lines.replace("{He}", he.capitalize())
 	    target.write(lines)
 
-filename =(home + '/Documents/Administration/Markdown_Files/Funeral_Work/' + date + "_" + slug + '.md')
+filename =(home + '/Dropbox/Administration/Markdown_Files/Funeral_Work/' + date + "_" + slug + '.md')
 
 if os.path.isfile(filename):
 	print("File already exists")
