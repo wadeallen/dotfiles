@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/home/wadeallen/Sites/fbcmuncie_2018'
 let g:netrw_dirhist_2='/mnt/msata/dotfiles/compton'
 let g:netrw_dirhist_3='/mnt/msata/dotfiles'
@@ -7,3 +7,4 @@ let g:netrw_dirhist_4='/media/msata/dotfiles/bin'
 let g:netrw_dirhist_5='/media/msata/dotfiles/vim/plugin'
 let g:netrw_dirhist_6='/media/msata/dotfiles/vim/bundle/thesaurus_query.vim'
 let g:netrw_dirhist_7='/media/msata/dotfiles/vim/bundle/thesaurus_query.vim/plugin'
+let g:netrw_dirhist_8='/home/wadeallen/dotfiles/pandoc/templates'
