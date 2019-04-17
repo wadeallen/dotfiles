@@ -8129,3 +8129,119 @@ I, [2019-04-15T14:05:02.685080 #7274]  INFO -- Maid: Rule: move CareSource State
 I, [2019-04-15T14:05:02.685130 #7274]  INFO -- Maid: Rule: move MD Wise Statement into folder
 I, [2019-04-15T14:05:02.685181 #7274]  INFO -- Maid: Rule: move Vectren Bill into folder
 I, [2019-04-15T14:05:02.685233 #7274]  INFO -- Maid: Finished
+I, [2019-04-17T13:43:19.419671 #11645]  INFO -- Maid: v0.7.0
+I, [2019-04-17T13:43:19.420083 #11645]  INFO -- Maid: Started
+I, [2019-04-17T13:43:19.420111 #11645]  INFO -- Maid: Rule: move 2019 journal files into folder
+W, [2019-04-17T13:43:19.420182 #11645]  WARN -- Maid: skipping move because /home/wadeallen/Documents/Journal/2019 is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.420205 #11645]  INFO -- Maid: Rule: move Benefit Wallet files into folder
+W, [2019-04-17T13:43:19.420293 #11645]  WARN -- Maid: skipping move because /home/wadeallen/Documents/Receipts/Medical/Benefit_Wallet is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.420315 #11645]  INFO -- Maid: Rule: move Thrivent Credit Union into folder
+W, [2019-04-17T13:43:19.420377 #11645]  WARN -- Maid: skipping move because '/home/wadeallen/Documents/Statements/Thrivent Credit Union' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.420398 #11645]  INFO -- Maid: Rule: move Ball State Credit Union into folder
+W, [2019-04-17T13:43:19.420476 #11645]  WARN -- Maid: skipping move because '/home/wadeallen/Documents/Receipts/Ball State Credit Union' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.420500 #11645]  INFO -- Maid: Rule: move Hooser Healthwise into folder
+W, [2019-04-17T13:43:19.420571 #11645]  WARN -- Maid: skipping move because '/home/wadeallen/Documents/Receipts/Insurance/Health Insurance/Hoosier Healthwise' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.420592 #11645]  INFO -- Maid: Rule: move Forum Credit Union into folder
+W, [2019-04-17T13:43:19.420648 #11645]  WARN -- Maid: skipping move because '/home/wadeallen/Documents/Statements/Forum Credit Union' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.420668 #11645]  INFO -- Maid: Rule: move Teachers Credit Union into folder
+W, [2019-04-17T13:43:19.420722 #11645]  WARN -- Maid: skipping move because '/home/wadeallen/Documents/Statements/Teachers Credit Union' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.420743 #11645]  INFO -- Maid: Rule: move Evansville Teachers Credit Union into folder
+W, [2019-04-17T13:43:19.420798 #11645]  WARN -- Maid: skipping move because '/home/wadeallen/Documents/Statements/Evansville Teachers Credit Union' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.420819 #11645]  INFO -- Maid: Rule: move Teachers Credit Union into folder
+W, [2019-04-17T13:43:19.420873 #11645]  WARN -- Maid: skipping move because '/home/wadeallen/Documents/Statements/Teachers Credit Union' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.420893 #11645]  INFO -- Maid: Rule: move Three Rivers Credit Union into folder
+W, [2019-04-17T13:43:19.420947 #11645]  WARN -- Maid: skipping move because '/home/wadeallen/Documents/Statements/Three Rivers Credit Union' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.420968 #11645]  INFO -- Maid: Rule: move reminder call sheets into folder
+W, [2019-04-17T13:43:19.421046 #11645]  WARN -- Maid: skipping move because '/home/wadeallen/Documents/Administration/Nursery/Reminder Calls' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.421076 #11645]  INFO -- Maid: Rule: move nursery sign in sheets into folder
+W, [2019-04-17T13:43:19.421135 #11645]  WARN -- Maid: skipping move because '/home/wadeallen/Documents/Administration/Nursery/Sign In Sheets' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.421155 #11645]  INFO -- Maid: Rule: move Macys Statement into folder
+W, [2019-04-17T13:43:19.421204 #11645]  WARN -- Maid: skipping move because /home/wadeallen/Documents/Statements/Macys is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.421224 #11645]  INFO -- Maid: Rule: move giving reports into folder
+W, [2019-04-17T13:43:19.421280 #11645]  WARN -- Maid: skipping move because '/home/wadeallen/Documents/Administration/Giving Reports' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.421299 #11645]  INFO -- Maid: Rule: move benefit wallet receipts into folder
+W, [2019-04-17T13:43:19.421353 #11645]  WARN -- Maid: skipping move because '/home/wadeallen/Documents/Receipts/Medical/Benefit Wallet Receipts' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.421373 #11645]  INFO -- Maid: Rule: move church receipts into folder
+W, [2019-04-17T13:43:19.421428 #11645]  WARN -- Maid: skipping move because /home/wadeallen/Documents/Receipts/Church/Current is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.421448 #11645]  INFO -- Maid: Rule: move housing receipts into folder
+W, [2019-04-17T13:43:19.421527 #11645]  WARN -- Maid: skipping move because '/home/wadeallen/Documents/Receipts/Housing/Misc Housing' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.421547 #11645]  INFO -- Maid: Rule: move Comcast Bill into folder
+W, [2019-04-17T13:43:19.421597 #11645]  WARN -- Maid: skipping move because /home/wadeallen/Documents/Receipts/Housing/Comcast is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.421617 #11645]  INFO -- Maid: Rule: move Kohls Statement into folder
+W, [2019-04-17T13:43:19.421665 #11645]  WARN -- Maid: skipping move because /home/wadeallen/Documents/Statements/Kohls is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.421685 #11645]  INFO -- Maid: Rule: move American Eagle Statement into folder
+W, [2019-04-17T13:43:19.421758 #11645]  WARN -- Maid: skipping move because '/home/wadeallen/Documents/Statements/American Eagle' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.421778 #11645]  INFO -- Maid: Rule: move Indiana Michigan Power Statement into folder
+W, [2019-04-17T13:43:19.421827 #11645]  WARN -- Maid: skipping move because /home/wadeallen/Documents/Receipts/Housing/Utilities/Electric is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.421855 #11645]  INFO -- Maid: Rule: move School Receipts into folder
+W, [2019-04-17T13:43:19.421907 #11645]  WARN -- Maid: skipping move because /home/wadeallen/Documents/Receipts/School is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.421927 #11645]  INFO -- Maid: Rule: move Yorktown Muncipal Utilities into folder
+W, [2019-04-17T13:43:19.421977 #11645]  WARN -- Maid: skipping move because /home/wadeallen/Documents/Receipts/Housing/Utilities/Water is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.421997 #11645]  INFO -- Maid: Rule: move Maurices Statement into folder
+W, [2019-04-17T13:43:19.422045 #11645]  WARN -- Maid: skipping move because /home/wadeallen/Documents/Statements/Maurices is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.422065 #11645]  INFO -- Maid: Rule: move Target Statement into folder
+W, [2019-04-17T13:43:19.422142 #11645]  WARN -- Maid: skipping move because /home/wadeallen/Documents/Receipts/Target is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.422168 #11645]  INFO -- Maid: Rule: move Anna Vanderbilt Health Insurance Statement into folder
+W, [2019-04-17T13:43:19.422221 #11645]  WARN -- Maid: skipping move because /home/wadeallen/Documents/Anna/Anna_Vanderbilt is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.422241 #11645]  INFO -- Maid: Rule: move New York and Company Statement into folder
+W, [2019-04-17T13:43:19.422295 #11645]  WARN -- Maid: skipping move because '/home/wadeallen/Documents/Receipts/New York and Company' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.422315 #11645]  INFO -- Maid: Rule: move TJ Maxx Statement into folder
+W, [2019-04-17T13:43:19.422367 #11645]  WARN -- Maid: skipping move because '/home/wadeallen/Documents/Receipts/TJ Maxx' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.422387 #11645]  INFO -- Maid: Rule: move Victoria Secret Statement into folder
+W, [2019-04-17T13:43:19.422441 #11645]  WARN -- Maid: skipping move because '/home/wadeallen/Documents/Receipts/Victoria Secret' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.422474 #11645]  INFO -- Maid: Rule: move Childrens Place Statement into folder
+W, [2019-04-17T13:43:19.422531 #11645]  WARN -- Maid: skipping move because '/home/wadeallen/Documents/Receipts/Childrens Place' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.422551 #11645]  INFO -- Maid: Rule: move ATT Statement into folder
+W, [2019-04-17T13:43:19.422603 #11645]  WARN -- Maid: skipping move because '/home/wadeallen/Documents/Receipts/Wireless Phone' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.422623 #11645]  INFO -- Maid: Rule: move IU Health Statement into folder
+W, [2019-04-17T13:43:19.422677 #11645]  WARN -- Maid: skipping move because '/home/wadeallen/Documents/Receipts/Insurance/Health Insurance/IU Health Insurance' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.422719 #11645]  INFO -- Maid: Rule: move CareSource Statement into folder
+W, [2019-04-17T13:43:19.422772 #11645]  WARN -- Maid: skipping move because /home/wadeallen/Documents/Receipts/Insurance/CareSource is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.422792 #11645]  INFO -- Maid: Rule: move MD Wise Statement into folder
+W, [2019-04-17T13:43:19.422845 #11645]  WARN -- Maid: skipping move because '/home/wadeallen/Documents/Receipts/Insurance/Health Insurance/MD Wise Wade Christy' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.422865 #11645]  INFO -- Maid: Rule: move Vectren Bill into folder
+W, [2019-04-17T13:43:19.422915 #11645]  WARN -- Maid: skipping move because /home/wadeallen/Documents/Receipts/Housing/Utilities/Gas is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:43:19.422935 #11645]  INFO -- Maid: Finished
+I, [2019-04-17T13:44:04.717157 #11720]  INFO -- Maid: v0.7.0
+I, [2019-04-17T13:44:04.717213 #11720]  INFO -- Maid: Started
+I, [2019-04-17T13:44:04.717237 #11720]  INFO -- Maid: Rule: move 2019 journal files into folder
+I, [2019-04-17T13:44:04.717339 #11720]  INFO -- Maid: move /home/wadeallen/Dropbox/Journal/2019-04-17.journal.markdown /home/wadeallen/Dropbox/Journal/2019
+I, [2019-04-17T13:44:04.717454 #11720]  INFO -- Maid: Rule: move Benefit Wallet files into folder
+I, [2019-04-17T13:44:04.717592 #11720]  INFO -- Maid: Rule: move Thrivent Credit Union into folder
+I, [2019-04-17T13:44:04.717680 #11720]  INFO -- Maid: Rule: move Ball State Credit Union into folder
+I, [2019-04-17T13:44:04.717765 #11720]  INFO -- Maid: Rule: move Hooser Healthwise into folder
+I, [2019-04-17T13:44:04.717850 #11720]  INFO -- Maid: Rule: move Forum Credit Union into folder
+I, [2019-04-17T13:44:04.717930 #11720]  INFO -- Maid: Rule: move Teachers Credit Union into folder
+I, [2019-04-17T13:44:04.718027 #11720]  INFO -- Maid: Rule: move Evansville Teachers Credit Union into folder
+I, [2019-04-17T13:44:04.718136 #11720]  INFO -- Maid: Rule: move Teachers Credit Union into folder
+I, [2019-04-17T13:44:04.718222 #11720]  INFO -- Maid: Rule: move Three Rivers Credit Union into folder
+I, [2019-04-17T13:44:04.718317 #11720]  INFO -- Maid: Rule: move reminder call sheets into folder
+I, [2019-04-17T13:44:04.718411 #11720]  INFO -- Maid: Rule: move nursery sign in sheets into folder
+I, [2019-04-17T13:44:04.718517 #11720]  INFO -- Maid: Rule: move Macys Statement into folder
+I, [2019-04-17T13:44:04.718601 #11720]  INFO -- Maid: Rule: move giving reports into folder
+I, [2019-04-17T13:44:04.718690 #11720]  INFO -- Maid: Rule: move benefit wallet receipts into folder
+W, [2019-04-17T13:44:04.718800 #11720]  WARN -- Maid: skipping move because '/home/wadeallen/Dropbox/Receipts/Medical/Benefit Wallet Receipts' is not a directory (use 'mkdir' to create first, or use 'rename')
+I, [2019-04-17T13:44:04.718835 #11720]  INFO -- Maid: Rule: move church receipts into folder
+I, [2019-04-17T13:44:04.718994 #11720]  INFO -- Maid: move '/home/wadeallen/Scans/Amazon Revelation Church Receipt 2019-04-17.pdf' /home/wadeallen/Dropbox/Receipts/Church/Current
+I, [2019-04-17T13:44:04.719167 #11720]  INFO -- Maid: move '/home/wadeallen/Scans/Business Cards Church Receipt 2019-04-17.pdf' /home/wadeallen/Dropbox/Receipts/Church/Current
+I, [2019-04-17T13:44:04.719328 #11720]  INFO -- Maid: move '/home/wadeallen/Scans/By Hand and Fork Church Receipt 2019-04-16.pdf' /home/wadeallen/Dropbox/Receipts/Church/Current
+I, [2019-04-17T13:44:04.719471 #11720]  INFO -- Maid: Rule: move housing receipts into folder
+I, [2019-04-17T13:44:04.719573 #11720]  INFO -- Maid: Rule: move Comcast Bill into folder
+I, [2019-04-17T13:44:04.719659 #11720]  INFO -- Maid: Rule: move Kohls Statement into folder
+I, [2019-04-17T13:44:04.719768 #11720]  INFO -- Maid: Rule: move American Eagle Statement into folder
+I, [2019-04-17T13:44:04.719849 #11720]  INFO -- Maid: Rule: move Indiana Michigan Power Statement into folder
+I, [2019-04-17T13:44:04.719940 #11720]  INFO -- Maid: Rule: move School Receipts into folder
+I, [2019-04-17T13:44:04.720030 #11720]  INFO -- Maid: Rule: move Yorktown Muncipal Utilities into folder
+I, [2019-04-17T13:44:04.720114 #11720]  INFO -- Maid: Rule: move Maurices Statement into folder
+I, [2019-04-17T13:44:04.720196 #11720]  INFO -- Maid: Rule: move Target Statement into folder
+I, [2019-04-17T13:44:04.720322 #11720]  INFO -- Maid: Rule: move Anna Vanderbilt Health Insurance Statement into folder
+I, [2019-04-17T13:44:04.720405 #11720]  INFO -- Maid: Rule: move New York and Company Statement into folder
+I, [2019-04-17T13:44:04.720512 #11720]  INFO -- Maid: Rule: move TJ Maxx Statement into folder
+I, [2019-04-17T13:44:04.720596 #11720]  INFO -- Maid: Rule: move Victoria Secret Statement into folder
+I, [2019-04-17T13:44:04.720696 #11720]  INFO -- Maid: Rule: move Childrens Place Statement into folder
+I, [2019-04-17T13:44:04.720788 #11720]  INFO -- Maid: Rule: move ATT Statement into folder
+I, [2019-04-17T13:44:04.720873 #11720]  INFO -- Maid: Rule: move IU Health Statement into folder
+I, [2019-04-17T13:44:04.720956 #11720]  INFO -- Maid: Rule: move CareSource Statement into folder
+I, [2019-04-17T13:44:04.721037 #11720]  INFO -- Maid: Rule: move MD Wise Statement into folder
+I, [2019-04-17T13:44:04.721170 #11720]  INFO -- Maid: Rule: move Vectren Bill into folder
+I, [2019-04-17T13:44:04.721257 #11720]  INFO -- Maid: Finished
