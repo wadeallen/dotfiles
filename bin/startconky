@@ -1,7 +1,4 @@
 #!/bin/bash
 sleep 10
-# conky -c /home/wadeallen/dotfiles/conky/this_month &
-# conky -c /home/wadeallen/dotfiles/conky/next_month &
-# conky -b -c /home/wadeallen/dotfiles/conky/mate_conky &
-conky -b -c /home/wadeallen/dotfiles/conky/conky-desktop.conkyrc &
+conky -b -c /home/wadeallen/dotfiles/conky/conky-wade.conkyrc &
 exit

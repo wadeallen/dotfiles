@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
-import todoist
+from todoist.api import TodoistAPI
 import config
 from datetime import datetime, timedelta
 
-api = todoist.TodoistAPI(config.todoist_api)
+api = TodoistAPI(config.todoist_api)
 
 def get_today_tasks():
     tasks_today = []
@@ -19,13 +19,18 @@ def get_today_tasks():
 
     # NB: item['due_date_utc'] is unicode; we cast to str for this comparison
     # slicing :10 gives us the relevant parts
-    for item in items:
-        if (str(item['due_date_utc'])[:15] == today):
-        	if item['checked'] == 0:
-        		tasks_today.append(item)
+    # for item in items:
+    #     if (str(item['due.date'])[:15] == today):
+    #     	if item['checked'] == 0:
+    #     		tasks_today.append(item)
 
     # for item in items:
     	# print(item['content'],item['due_date_utc'])
+    for item in items:
+        if item['due'] is not None:
+            if item['due']['date'] == today:
+                if item['checked'] == 0:
+                    tasks_today.append(item)
 
     return tasks_today
 
