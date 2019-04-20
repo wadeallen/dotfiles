@@ -1,11 +1,11 @@
 [numbers] xdg-open https://docs.google.com/spreadsheets/d/14TpbSCb71nw9jSrQetPEq1Yi8RvvRcukfnpBwJ4lcJg/edit
-[terminal] /usr/bin/mate-terminal
+[terminal] gnome-terminal
 [calendar] xdg-open https://calendar.google.com/
 [gmail] xdg-open http://gmail.com
 [todo] xdg-open http://todoist.com
 [gathering] xdg-open https://docs.google.com/spreadsheets/d/1GXm78GK_nEKgrY8hIc96UQsPotpN52ZisOT3-GhQNJs/edit
 [mileage] xdg-open https://docs.google.com/spreadsheets/d/1zzhGL1Uqc_uzDKjJu7BVHUuC5IqQsrXFCTJAsnwrDmk
-[prayer list] xdg-open https://docs.google.com/document/d/1w6z_D6MPedilpVZjoRfkwsbvXmsNSjrHKFDwasE5SeQ/edit 
+[prayer list] xdg-open https://docs.google.com/document/d/1w6z_D6MPedilpVZjoRfkwsbvXmsNSjrHKFDwasE5SeQ/edit
 [lectionary] xdg-open http://lectionary.library.vanderbilt.edu/
 [bible] /home/wadeallen/bin/bible
 [read] i3-msg workspace 3  Read, exec midori https://read.amazon.com
