@@ -49,10 +49,13 @@ set clipboard=unnamedplus
 	hi SpellBad cterm=underline
 
 " autosave document
-        autocmd TextChanged,TextChangedI <buffer> silent write
+        " autocmd TextChanged,TextChangedI <buffer> silent write
 
 " set color scheme
 colorscheme badwolf
+hi Normal ctermbg=none
+hi NonText ctermbg=none
+hi LineNr ctermbg=none
 
 " Splits open at the bottom and right, which is non-retarded, unlike vim defaults.
 	set splitbelow splitright
