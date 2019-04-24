@@ -16,7 +16,7 @@ date = args['date']
 
 api = todoist.TodoistAPI(config.todoist_api)
 
-item = api.items.add(task, 121306684, date_string=date)
+item = api.items.add(task, date_string=date)
 api.commit()
 
 print (task,'added', date)
