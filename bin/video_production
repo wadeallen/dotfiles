@@ -3,18 +3,18 @@
 # grab today's date in 2018-10-24 format
 date=`date +"%Y-%m-%d"`
 # make desktop directory for video files desktop directory
-directory=$HOME'/Desktop'/${date}'_late' 
+directory=$HOME'/Desktop'/${date}'_late'
 if [ ! -d "$directory" ]; then
-  mkdir ${directory} 
-  echo "$directory has been created" 
+  mkdir ${directory}
+  echo "$directory has been created"
 fi
 
 echo "-----"
 
 # copy video files from SD card to desktop directory
-if mountpoint -q /run/media/wadeallen/CANON
+if mountpoint -q /media/wadeallen/CANON
 then
-  cp -v -a /run/media/wadeallen/CANON/DCIM/*/*.MP4 ${directory}/
+  cp -v -a /media/wadeallen/CANON/DCIM/*/*.MP4 ${directory}/
   echo "Files copied into $directory"
 else
   echo "SD Card is not inserted/mounted. Please insert card and rerun script"
@@ -78,7 +78,7 @@ else
 fi
 
 # convert sermon into mp3, also create file duration.txt file
-~/bin/audio ${date}.mkv 
+~/bin/audio ${date}.mkv
 echo "-----"
 echo "mp3 file compiled"
 

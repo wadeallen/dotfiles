@@ -15,5 +15,5 @@ create_variables /home/wadeallen/Dropbox/Textbits/video-data.txt
 
 playlist=$(cat ~/Dropbox/Textbits/playlist.txt)
 
-/usr/bin/youtube-upload --title="$title" --description="$summary" --tags="$author, sermon, $playlist, $scripture" --playlist="$playlist" --client-secrets=/home/wadeallen/client_secret.json $filename
+/usr/local/bin/youtube-upload --title="$title" --description="$summary" --tags="$author, sermon, $playlist, $scripture" --playlist="$playlist" --client-secrets=/home/wadeallen/client_secret.json $filename
 
