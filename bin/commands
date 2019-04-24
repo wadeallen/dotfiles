@@ -8,7 +8,7 @@
 [prayer list] xdg-open https://docs.google.com/document/d/1w6z_D6MPedilpVZjoRfkwsbvXmsNSjrHKFDwasE5SeQ/edit
 [lectionary] xdg-open http://lectionary.library.vanderbilt.edu/
 [bible] /home/wadeallen/bin/bible
-[read] i3-msg workspace 3  Read, exec midori https://read.amazon.com
+[read] firefox https://read.amazon.com
 [planning center] xdg-open https://www.planningcenteronline.com/dashboard/0
 [chase] xdg-open https://www.chase.com/
 [credit card report] xdg-open https://docs.google.com/spreadsheets/d/1yZaYvvKZG_zbZa36Ipdt8DTpu0flT7l3Jm8JhLJ4f3o/
