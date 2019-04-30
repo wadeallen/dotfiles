@@ -49,13 +49,13 @@ name_sliced = name.split()
 slug = ("_".join(name_sliced))
 
 def set_date(number):
-    new_date = datetime.datetime.strptime(date, '%Y-%m-%d') 
+    new_date = datetime.datetime.strptime(date, '%Y-%m-%d')
     new_date = new_date + datetime.timedelta(days=number)
     return new_date
 
 today = today.strftime('%Y-%m-%d')
 # add to funeral project
-project_id = '162548698'
+project_id=project_id = '162548698'
 
 # Now Add tasks to Todoist
 
@@ -63,23 +63,23 @@ api = todoist.TodoistAPI(config.todoist_api)
 
 # # sets the notify church about death
 notify_date = today
-item = api.items.add('email congregation about ' + name + ' death and funeral arrangements', project_id, date_string=notify_date)
+item = api.items.add('email congregation about ' + name + ' death and funeral arrangements', project_id=project_id, date_string=notify_date)
 
 # # meet with family
-item = api.items.add('Set up meeting with ' + name + ' family', project_id, date_string=notify_date)
+item = api.items.add('Set up meeting with ' + name + ' family', project_id=project_id, date_string=notify_date)
 
 # # mark deceased in database
-item = api.items.add('mark ' + name + ' deceased in database', project_id, date_string=notify_date)
+item = api.items.add('mark ' + name + ' deceased in database', project_id=project_id, date_string=notify_date)
 
 # # print backup copy of funeral
 print_backup = set_date(-1)
-item = api.items.add('print backup copy of funeral sermon for ' + name + ' funeral', project_id, date_string=print_backup.strftime('%Y-%m-%d'))
+item = api.items.add('print backup copy of funeral sermon for ' + name + ' funeral', project_id=project_id, date_string=print_backup.strftime('%Y-%m-%d'))
 
 if church in ['true', '1', 't', 'y', 'yes', 'yeah', 'yup', 'certainly', 'uh-huh']:
     # check and add to church calendar
-    item = api.items.add('check calendar and add funeral for ' + name + ' to calendar', project_id, date_string=notify_date)
+    item = api.items.add('check calendar and add funeral for ' + name + ' to calendar', project_id=project_id, date_string=notify_date)
 #     # line up sound tech
-    item = api.items.add('line up sound tech for ' + name + ' funeral', project_id, date_string=notify_date)
+    item = api.items.add('line up sound tech for ' + name + ' funeral', project_id=project_id, date_string=notify_date)
 
 api.commit()
 

@@ -45,6 +45,7 @@
     ",nm": ["run-replace", "sh", "-c", "date -dnext-month +%Y-%m-"],
     "#pl": ["run-replace", "sh", "-c", "echo `date +%Y-%m`_Profit_Loss"],
     "#bal": ["run-replace", "sh", "-c", "echo `date +%Y-%m`_Balance_Sheet"],
+    "#pay": ["run-replace", "sh", "-c", "echo `date +%Y-%m`_Paystub"],
     ",sun": ["run-replace", "sh", "-c", "date -dnext-sunday +%F"],
     "#bw": ["run-replace", "sh", "-c", "echo Benefit Wallet Receipt `date +%F`"],
     ",ns": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/new_story.py"]

@@ -15,7 +15,7 @@ def get_today_tasks():
 
     # Get "today", only keep Day XX Mon, which Todoist uses
     # today = datetime.utcnow() + timedelta(hours=20)
-    today = datetime.utcnow()
+    today = datetime.now()
     # today = today.strftime("%a %d %b %Y")
     today = today.strftime("%Y-%m-%d")
 

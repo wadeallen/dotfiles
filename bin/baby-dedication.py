@@ -29,25 +29,25 @@ name_sliced = name.split()
 slug = ("_".join(name_sliced))
 
 def set_date(number):
-    new_date = datetime.datetime.strptime(date, '%Y-%m-%d') 
+    new_date = datetime.datetime.strptime(date, '%Y-%m-%d')
     new_date = new_date + datetime.timedelta(days=number)
     return new_date
 
-project_id = '155478376'
+project_id=project_id = '155478376'
 
 api = todoist.TodoistAPI(config.todoist_api)
 
 # make baby dedication certificate
 certificate_date = set_date(-4)
-item = api.items.add('Print ' + name + ' dedication certificate ' + date, project_id, date_string=certificate_date.strftime('%Y-%m-%d'))
+item = api.items.add('Print ' + name + ' dedication certificate ' + date, project_id=project_id, date_string=certificate_date.strftime('%Y-%m-%d'))
 
 # make baby dedication certificate
 pc_date = set_date(-15)
-item = api.items.add('Add ' + name + ' dedication in Planning Center ' + date, project_id, date_string=pc_date.strftime('%Y-%m-%d'))
+item = api.items.add('Add ' + name + ' dedication in Planning Center ' + date, project_id=project_id, date_string=pc_date.strftime('%Y-%m-%d'))
 api.commit()
 
 # Compile baby dedication certificate
-dedication_date = datetime.datetime.strptime(date, '%Y-%m-%d') 
+dedication_date = datetime.datetime.strptime(date, '%Y-%m-%d')
 day = dedication_date.strftime('%d')
 day = custom_strftime('{S}', dedication_date)
 month = dedication_date.strftime('%B')

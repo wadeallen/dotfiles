@@ -1,6 +1,13 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =4
+<<<<<<< HEAD
 let g:netrw_dirhist_1='/home/wadeallen/Dropbox'
 let g:netrw_dirhist_2='/home/wadeallen/Dropbox/Center for Congregations Grant'
 let g:netrw_dirhist_3='/home/wadeallen/Dropbox'
 let g:netrw_dirhist_4='/home/wadeallen'
+=======
+let g:netrw_dirhist_1='/mnt/msata/dotfiles/nvim/plugged/vim-pandoc-syntax/autoload/pandoc/syntax'
+let g:netrw_dirhist_2='/home/wadeallen/.mozilla/firefox/larbs.default'
+let g:netrw_dirhist_3='/home/wadeallen/.config/getkeys'
+let g:netrw_dirhist_4='/home/wadeallen/dotfiles/nvim/spell'
+>>>>>>> 475223c9b1823b638c76dd638ea8428ac5c91268
