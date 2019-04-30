@@ -6,11 +6,11 @@ import glob
 import wget
 import re
 from titlecase import titlecase
-import operator 
+import operator
 
 # surpresses the download message of files
-def bar_none(current, total, width=80):                                                                                                                                                         
-    return ''; 
+def bar_none(current, total, width=80):
+    return '';
 
 def format_slug(text):
 	title_sliced = text.split()
@@ -33,7 +33,7 @@ file_name = "stories.txt"
 url = 'https://docs.google.com/document/d/1gKLaR2rWaPUAiBeqDUqhrrEDuw0g11Q9N2mp4GcFSLc/export?format=txt'
 wget.download(url, file_name, bar = bar_none)
 
-# The file is then split into multiple files 
+# The file is then split into multiple files
 # Be sure to have a file split at the beginning of the document
 files = open(file_name,'r').read().split('*****')
 names = ['story-'+ str(num) + '.md' for num in range(len(files))]
@@ -73,16 +73,29 @@ for story in stories:
 # Create LaTeX file for Bulletin
 bulletin_path = '/home/wadeallen/Dropbox/Pandoc/Pandoc_Bulletin/'
 os.system('rm ' + bulletin_path + 'articles.txt')
+article_list = []
 for story in stories:
 	post = frontmatter.load(story)
 	if 'bulletin' in post['publications']:
 		title = post['title']
 		title = titlecase(title)
-		with open(bulletin_path + "articles.txt", "a") as bulletin_file:
-			bulletin_file.write('\\vspace{\\fill}\n\n')
-			bulletin_file.write('## ' + title + '\n\n')
-			post.content = re.sub(r'\{\{print:(.*?)\}\}*\{\{website:(.*?)\}\}', r'\1', post.content.rstrip())
-			bulletin_file.write(post.content + '\n\n')
+		content = re.sub(r'\{\{print:(.*?)\}\}*\{\{website:(.*?)\}\}', r'\1', post.content.rstrip())
+		content = content.replace(r"\n", r"\n\n")
+		# forms a sublist that includes title[0], content[1], weight[2]
+		article = [title, content, post['weight']]
+		# builds the article list with a sublist of each article
+		article_list.append(article)
+
+# sorts articles by weight[2]
+article_list.sort(key=lambda x: int(x[2]))
+
+# interates through each article (sorted by weight) and places them in the articles.txt file to be compiled by the visitor script
+for article in article_list:
+	with open(bulletin_path + "articles.txt", "a") as bulletin_file:
+		bulletin_file.write('\n\n')
+		bulletin_file.write('## ' + article[0] + '\n\n')
+		bulletin_file.write(article[1] + '\n\n')
+		bulletin_file.write('\\vspace{\\fill}')
 
 # Create file for Visitor
 visitor_path = '/home/wadeallen/Dropbox/Pandoc/Pandoc_Visitor/'
