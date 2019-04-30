@@ -1,18 +1,7 @@
-#!/usr/bin/env bash 
+#!/usr/bin/env bash
 
-
-OS="`uname`"
 DIRECTORY=$HOME/Dropbox/Pandoc/Pandoc_Visitor
-
-case $OS in
-	Darwin*)
-NEXT_MONTH=$(/usr/local/bin/gdate -d '1 month' +'%Y-%m')
-		;;
-	Linux*)
 NEXT_MONTH=$(date -d '1 month' +'%Y-%m')
-		;;
-esac
-
 
 cd $DIRECTORY
 # wget -O Visitor.txt https://docs.google.com/document/d/1im1OZ0ol56PP9y0uyvq-2ih3W8G5tiHFdaioL-vTlso/export?format=txt
