@@ -13,6 +13,10 @@ Maid.rules do
     move(dir('~/Scans/Thrivent Credit Union*.pdf'), '/home/wadeallen/Dropbox/Statements/Thrivent Credit Union')
   end
 
+  rule 'move Paystubs into folder' do
+    move(dir('~/Scans/*Paystub.pdf'), '/home/wadeallen/Dropbox/Paystubs')
+  end
+
   rule 'move Ball State Credit Union into folder' do
     move(dir('~/Scans/Ball State Credit Union*.pdf'), '/home/wadeallen/Dropbox/Receipts/Ball State Credit Union')
   end
@@ -44,7 +48,7 @@ Maid.rules do
   rule 'move reminder call sheets into folder' do
     move(dir('~/Scans/*Nursery Reminder Calls.pdf'), '~/Dropbox/Administration/Nursery/Reminder Calls')
   end
-  
+
   rule 'move nursery sign in sheets into folder' do
     move(dir('~/Scans/*Nursery Worker Sign In Sheet.pdf'), '/home/wadeallen/Dropbox/Administration/Nursery/Sign In Sheets')
   end

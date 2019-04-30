@@ -25,11 +25,11 @@ name_sliced = name.split()
 slug = ("_".join(name_sliced))
 
 def set_date(number):
-    new_date = datetime.datetime.strptime(date, '%Y-%m-%d') 
+    new_date = datetime.datetime.strptime(date, '%Y-%m-%d')
     new_date = new_date + datetime.timedelta(days=number)
     return new_date
 
-project_id = '2196468619'
+project_id=project_id = '2196468619'
 
 # Now Add tasks to Todoist
 
@@ -37,15 +37,15 @@ api = todoist.TodoistAPI(config.todoist_api)
 
 # add name to text file
 pc_date = today
-item = api.items.add('Add ' + name + ' as preacher in text file for '+ date, project_id, date_string=pc_date.strftime('%Y-%m-%d'))
+item = api.items.add('Add ' + name + ' as preacher in text file for '+ date, project_id=project_id, date_string=pc_date.strftime('%Y-%m-%d'))
 
 # run bio in bulletin
 fill_date = set_date(-6)
-item = api.items.add('Run Bio for ' + name + ' in bulletin for this week', project_id, date_string=fill_date.strftime('%Y-%m-%d'))
+item = api.items.add('Run Bio for ' + name + ' in bulletin for this week', project_id=project_id, date_string=fill_date.strftime('%Y-%m-%d'))
 
 # request check if outside guest
 if outside in ['true', '1', 't', 'y', 'yes', 'yeah', 'yup', 'certainly', 'uh-huh']:
     check_date = set_date(-10)
-    item = api.items.add('Request check for ' + name + ' preaching on ' + date, project_id, date_string=check_date.strftime('%Y-%m-%d'))
+    item = api.items.add('Request check for ' + name + ' preaching on ' + date, project_id=project_id, date_string=check_date.strftime('%Y-%m-%d'))
 
 api.commit()

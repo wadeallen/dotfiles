@@ -29,11 +29,11 @@ name_sliced = name.split()
 slug = ("_".join(name_sliced))
 
 def set_date(number):
-    new_date = datetime.datetime.strptime(date, '%Y-%m-%d') 
+    new_date = datetime.datetime.strptime(date, '%Y-%m-%d')
     new_date = new_date + datetime.timedelta(days=number)
     return new_date
 
-project_id = '155477514'
+project_id=project_id = '155477514'
 
 # Now Add tasks to Todoist
 
@@ -41,26 +41,26 @@ api = todoist.TodoistAPI(config.todoist_api)
 
 # add to planning center
 pc_date = today
-item = api.items.add('Add ' + name + ' baptism to planning center', project_id, date_string=pc_date.strftime('%Y-%m-%d'))
+item = api.items.add('Add ' + name + ' baptism to planning center', project_id=project_id, date_string=pc_date.strftime('%Y-%m-%d'))
 
 # contact Larry about filling baptistry
 fill_date = set_date(-6)
-item = api.items.add('Contact Larry to fill baptistry for ' + name + ' baptism', project_id, date_string=fill_date.strftime('%Y-%m-%d'))
+item = api.items.add('Contact Larry to fill baptistry for ' + name + ' baptism', project_id=project_id, date_string=fill_date.strftime('%Y-%m-%d'))
 
 # double check baptistry
 check_date = set_date(-1)
-item = api.items.add('Make sure baptistry is filled for ' + name + ' baptism', project_id, date_string=check_date.strftime('%Y-%m-%d'))
+item = api.items.add('Make sure baptistry is filled for ' + name + ' baptism', project_id=project_id, date_string=check_date.strftime('%Y-%m-%d'))
 
 # make baptism certificate
 certificate_date = set_date(-4)
-item = api.items.add('Make ' + name + ' baptism certificate', project_id, date_string=certificate_date.strftime('%Y-%m-%d'))
+item = api.items.add('Make ' + name + ' baptism certificate', project_id=project_id, date_string=certificate_date.strftime('%Y-%m-%d'))
 
 # add baptism date to database
 database_date = set_date(+1)
-item = api.items.add('Add ' + name + ' baptism information to database', project_id, date_string=database_date.strftime('%Y-%m-%d'))
+item = api.items.add('Add ' + name + ' baptism information to database', project_id=project_id, date_string=database_date.strftime('%Y-%m-%d'))
 api.commit()
 
-baptism_date = datetime.datetime.strptime(date, '%Y-%m-%d') 
+baptism_date = datetime.datetime.strptime(date, '%Y-%m-%d')
 day = baptism_date.strftime('%d')
 day = custom_strftime('{S}', baptism_date)
 month = baptism_date.strftime('%B')
