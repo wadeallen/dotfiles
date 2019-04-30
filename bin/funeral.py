@@ -98,7 +98,7 @@ def grab_section(file):
 	    lines = lines.replace("{He}", he.capitalize())
 	    target.write(lines)
 
-filename =(home + '/Dropbox/Administration/Markdown_Files/Funeral_Work/' + date + "_" + slug + '.md')
+filename =(home + '/Dropbox/Funeral_Work/' + date + "_" + slug + '.md')
 
 if os.path.isfile(filename):
 	print("File already exists")
