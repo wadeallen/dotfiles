@@ -44,7 +44,7 @@ fill_date = set_date(-6)
 item = api.items.add('Run Bio for ' + name + ' in bulletin for this week', project_id=project_id, date_string=fill_date.strftime('%Y-%m-%d'))
 
 # request check if outside guest
-if outside in ['true', '1', 't', 'y', 'yes', 'yeah', 'yup', 'certainly', 'uh-huh']:
+if outside in ['true', '1', 't', 'y', 'Yes', 'yes', 'yeah', 'yup', 'certainly', 'uh-huh']:
     check_date = set_date(-10)
     item = api.items.add('Request check for ' + name + ' preaching on ' + date, project_id=project_id, date_string=check_date.strftime('%Y-%m-%d'))
 
