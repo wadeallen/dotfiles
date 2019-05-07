@@ -1,13 +1,22 @@
 #!/bin/bash
 
-FCOUNT=`ls /home/wadeallen/Dropbox/Funeral_Work | wc -l`
-WCOUNT=`ls /home/wadeallen/Dropbox/Wedding_Work | wc -l`
+FUNERAL='/home/wadeallen/Dropbox/Funeral_Work'
+WEDDING='/home/wadeallen/Dropbox/Wedding_Work'
 
+START=2008
+END=$(date +'%Y')
 
 for year in {2008..2019}
 do
-	echo $year
+	NWED=`find $WEDDING -type f -name "${year}*" | wc -l`
+	NFUN=`find $FUNERAL -type f -name "${year}*" | wc -l`
+	echo -e "$year:\tWeddings: $NWED\tFunerals: $NFUN"
 done
 
-echo -e "Total Funerals: ${FCOUNT} \nTotal Weddings: ${WCOUNT}"
+echo "************"
+TWED=`ls $WEDDING | wc -l`
+TFUN=`ls $FUNERAL | wc -l`
+echo -e "Total:\tWeddings: ${TWED}\tFunerals: ${TFUN}"
 
+echo $BEG_YEAR
+echo $THIS_YEAR
