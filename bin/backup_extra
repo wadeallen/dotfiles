@@ -1,0 +1,6 @@
+#!/bin/bash
+
+rsync -aLv --delete ~/Dropbox /media/wadeallen/Extra_Storage/
+rsync -aLv --delete ~/dotfiles /media/wadeallen/Extra_Storage/
+rsync -aLv --delete ~/Downloads /media/wadeallen/Extra_Storage/
+
