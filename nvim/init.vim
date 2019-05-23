@@ -12,6 +12,7 @@ Plug 'SirVer/ultisnips'
 Plug 'ledger/vim-ledger'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'thaerkh/vim-workspace'
 call plug#end()
 
 set bg=light
@@ -20,6 +21,9 @@ set mouse=a
 set nohlsearch
 set linebreak
 set clipboard=unnamedplus
+
+" autosave
+let g:workspace_autosave_always = 1
 
 " Some basics:
 	nnoremap c "_c
@@ -152,6 +156,10 @@ au BufNewFile,BufRead *.ldg,*.ledger setf ledger
 nmap <leader>2 010li<Space>*<Esc>
 nnoremap <leader>d "=strftime("%Y/%m/%d")<CR>PA<Space><Space>
 nnoremap <leader>nt G"=strftime("%Y/%m/%d")<CR>PA<Space><Space>
+
+"for editing sermons files
+nnoremap 99 i---<Esc>
+noremap <leader>cv 0lv$y
 
 "this will add new line without insert mode
 nmap <S-Enter> O<Esc>j
