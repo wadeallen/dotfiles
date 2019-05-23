@@ -13,7 +13,7 @@ def internet_on():
    try:
     response = urlopen('https://www.google.com/', timeout=10)
     return True
-   except: 
+   except:
     return False
 
 home = expanduser("~")
