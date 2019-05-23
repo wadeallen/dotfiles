@@ -3,8 +3,8 @@
 #u
 #Created on 2017-01-05
 #START
-TIME=`date +%b-%d-%y`            # This Command will add date in Backup File Name.
-FILENAME=sermons-$TIME.tar.gz    # Here i define Backup file name format.
+TIME=`date +%Y-%m-%d`            # This Command will add date in Backup File Name.
+FILENAME=$TIME-sermons.tar.gz    # Here i define Backup file name format.
 SRCDIR=Sermon_Work # Location of Important Data Directory (Source of backup)
 DESDIR=$HOME/Dropbox/Backups/Crucial_Backups        # Destination of backup file.
 cd $HOME/Dropbox  #change directory to make backup
