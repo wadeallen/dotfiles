@@ -21,6 +21,7 @@ command! Bi call Bible("NIV")
 command! NIV call Bible("NIV")
 command! ESV call Bible("ESV")
 command! KJV call Bible("KJV")
+command! NTE call Bible("NTE")
 
 command! Replace call ReplaceBible("NIV")
 
