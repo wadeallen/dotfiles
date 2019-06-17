@@ -27,11 +27,11 @@ for name in files:
     else:
         date = dateutil.parser.parse(post['date']).strftime('%Y-%m-%d')
     if post['scripture']:
-        scripture = post['scripture'] 
+        scripture = post['scripture']
     else:
         scripture = "No Scripture Chosen Yet"
     if post['title']:
-        title = post['title'] 
+        title = post['title']
     else:
         title = "No title yet"
     speaker = post['author']
@@ -44,6 +44,7 @@ for name in files:
     slug = ("-".join(title_sliced).lower())
     slug = slug.replace("?", "")
     slug = slug.replace("'", "")
+    slug = slug.replace(":", "")
     slug = re.sub("[\(\[].*?[\)\]]", "", slug)
     filename =(home + '/Sites/fbcmuncie_2018/_worship/' + date + '-' + slug + '.md')
     filename = filename.replace("-.", ".")
