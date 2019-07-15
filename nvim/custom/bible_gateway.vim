@@ -17,7 +17,6 @@ function ReplaceBible(...)
   put = text
 endfunction
 
-command! Bi call Bible("NIV")
 command! NIV call Bible("NIV")
 command! ESV call Bible("ESV")
 command! KJV call Bible("KJV")

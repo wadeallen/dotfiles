@@ -130,7 +130,7 @@ set statusline+=\ %l/%L\ lines,\ %P " percentage through the file
 
 "custom plugins
 source $HOME/.config/nvim/custom/python_functions.vim
-source $HOME/.config/nvim/custom/bible_gateway.vim
+source $HOME/.config/nvim/custom/bible.vim
 
 "for thesaurus plugin
 nnoremap <LocalLeader>th :ThesaurusQueryReplaceCurrentWord<CR>
