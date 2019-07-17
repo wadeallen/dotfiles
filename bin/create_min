@@ -13,7 +13,7 @@ home = expanduser("~")
 
 name = input('Name of the ministry: ')
 area_question = 'Name of primary ministry area: '
-area_options = ['Children', 'Youth', 'Adult', 'Property', 'Outreach', 'Member Care', 'Worship']
+area_options = ['None', 'Children', 'Youth', 'Adult', 'Property', 'Outreach', 'Member Care', 'Worship']
 
 area = pick(area_options, area_question)
 area = area[0]

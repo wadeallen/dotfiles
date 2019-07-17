@@ -135,7 +135,7 @@ source $HOME/.config/nvim/custom/bible.vim
 "for thesaurus plugin
 nnoremap <LocalLeader>th :ThesaurusQueryReplaceCurrentWord<CR>
 vnoremap <LocalLeader>th y:Thesaurus <C-r>"<CR>
-let g:tq_enabled_backends=["thesaurus_com","openoffice_en","mthesaur_txt"]
+let tq_enabled_backends=["thesaurus_com", "openoffice_en", "datamuse_com", "mthesaur_txt"]
 
 " Auto Capitalize Sentences
 augroup SENTENCES

@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/wadeallen/Dropbox/Sites/fbc-wiki/docs/official_docs'
 let g:netrw_dirhist_2='/home/wadeallen/Dropbox/Textbits'
 let g:netrw_dirhist_3='/home/wadeallen/bibles/NTE'
+let g:netrw_dirhist_4='/home/wadeallen/Templates'
+let g:netrw_dirhist_5='/home/wadeallen/Dropbox/Sites/fbc-wiki/_ministries'
+let g:netrw_dirhist_6='/home/wadeallen/Templates'
