@@ -10,4 +10,5 @@ command! NIV call Bible("NIV")
 command! ESV call Bible("ESV")
 command! MSG call Bible("MSG")
 command! NLT call Bible("NLT")
+command! NTE call Bible("NTE")
 

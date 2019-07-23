@@ -1,32 +1,52 @@
-\documentclass[letterpaper,14pt]{extarticle}
-\usepackage{geometry}
-\usepackage{mathptmx}
-\usepackage{anyfontsize}
-\usepackage{t1enc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Diaz Essay
+% LaTeX Template
+% Version 2.0 (13/1/19)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Authors:
+% Vel (vel@LaTeXTemplates.com)
+% Nicolas Diaz (nsdiaz@uc.cl)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage{hyperref}
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+
+\documentclass[12pt]{diazessay} % Font size (can be 10pt, 11pt or 12pt)
+
 \def\tightlist{}
+\usepackage{hyperref}
 
-\setlength{\parindent}{0em}
-\setlength{\parskip}{2em}
 
-\usepackage{titlesec}
+\usepackage{amssymb}
+\usepackage{mathabx}
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
 
-\titleformat{\section}
-{\normalfont\Large\bfseries}{\thesection}{1em}{}
-\titleformat{\subsection}
-{\normalfont\Huge\bfseries}{*}{.5em}{}
-\titleformat{\subsubsection}
-{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
-\titleformat{\paragraph}[runin]
-{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
-\titleformat{\subparagraph}[runin]
-{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+\title{\textbf{$title$} \\ {\Large\itshape $begin_month$}} % Title and subtitle
+
+\author{\textbf{First Baptist Church} \\ \textit{$area$}} % Author and institution
+
+\date{\today} % Date, use \date{} for no date
+
+%----------------------------------------------------------------------------------------
 
 \begin{document}
 
-{\fontsize{30}{40}\selectfont {$title$}}
+\maketitle % Print the title section
 
-{\Large $body$}
+
+{$body$}
+
+
 
 \end{document}
