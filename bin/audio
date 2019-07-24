@@ -23,6 +23,6 @@ mp3_filename=/home/wadeallen/Music/Sermon_Audio/$sunday.mp3
 duration=`exiftool -Duration $mp3_filename | awk '{ print $3 }'`
 bytes=`wc -c $mp3_filename | awk '{ print $1 }'`
 
-echo -e "layout: sermon\ncategory: video\nduration: '${duration}' \nlength: ${bytes}\nvideo_url: " > ~/Dropbox/Textbits/duration.txt
+echo -e "layout: sermon\ncategory: video\nduration: '${duration}' \nlength: ${bytes}\nvimeo: " > ~/Dropbox/Textbits/duration.txt
 
 echo "copied duration data to Dropbox/Textbits/duration.txt file"

@@ -12,5 +12,4 @@
     ~/.fonts : fonts
     ~/.config/nvim : nvim
     ~/.dmenurc : dmenurc
-    ~/.config/xfce4/terminal/terminalrc : terminalrc
 

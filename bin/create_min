@@ -19,7 +19,7 @@ area = pick(area_options, area_question)
 area = area[0]
 
 month_question = 'What month do we need to begin to prepare for this ministry? '
-month_options = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+month_options = ['None', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
 month = pick(month_options, month_question)
 month = month[0]
