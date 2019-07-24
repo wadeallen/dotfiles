@@ -1,0 +1,6 @@
+#!/bin/bash
+
+date=`date +"%Y-%m-%d"`
+
+cd /home/wadeallen/Sites/fbcmuncie_2018/_posts
+sed -i "s/vimeo:/$(cat /home/wadeallen/Dropbox/Textbits/vimeo.txt)/" ${date}*.md 
