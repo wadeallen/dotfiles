@@ -3,7 +3,6 @@
 import vimeo
 import config
 import frontmatter
-import os
 import glob
 from datetime import date 
 from dateutil.relativedelta import relativedelta, SU
@@ -11,10 +10,12 @@ from os.path import expanduser
 import datetime
 from dateutil import parser
 
+
+
 client = vimeo.VimeoClient(
-  token='cf325f4e2b635c27fde7af4494fbe5c5',
-  key='414383b639d7ceb2dd40ad0b0a79a3507fec87b7',
-  secret='Ilol4n1waOmEeEuRH0np/qVEwxXK0QeWoY7nCJWxHuk6k5xnSCeMKY5YqZ18Ru0/JqRoeqHfdPVXA0Ekakku3HOFF7Wq42o0B9Tej8y2jslvW1tXbEAP0FAvGAGCc+iz'
+  token=config.vim_token,
+  key=config.vim_key,
+  secret=config.vim_secret
 )
 
 home = expanduser("~")
@@ -39,6 +40,7 @@ for name in files:
     description = post['summary']
 
 file_name = '/home/wadeallen/Downloads/sample.mp4'
+
 uri = client.upload(file_name, data={
   'name': title,
   'description': description
