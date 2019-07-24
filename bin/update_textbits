@@ -30,10 +30,10 @@ for name in files:
 
     target = open (home + '/Dropbox/Textbits/video-data.txt', 'w')
     target.write ('---\n')
-    target.write ('title: ' + post['title'] + '\n')
-    target.write ('author: ' + post['author'] + '\n')
-    target.write ('scripture: ' + post['scripture'] + '\n')
-    target.write ('summary: ' + post['summary'] + '\n')
+    target.write ('title: "' + post['title'] + '"\n')
+    target.write ('author: "' + post['author'] + '"\n')
+    target.write ('scripture: "' + post['scripture'] + '"\n')
+    target.write ('summary: "' + post['summary'] + '"\n')
     target.write ('---\n')
     target.close ()
 

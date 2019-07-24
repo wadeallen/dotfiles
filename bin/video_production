@@ -78,7 +78,9 @@ else
 fi
 
 # convert video using handbrake and place on desktop
-
+HandBrakeCLI --preset "H.264 MKV 1080p30" -i ${date}.mkv -o ${date}-upload.mkv
+echo "-----"
+echo "file compressed with Handbrake"
 
 # convert sermon into mp3, also create file duration.txt file
 ~/bin/audio ${date}.mkv
