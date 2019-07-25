@@ -88,15 +88,16 @@ echo "-----"
 echo "mp3 file compiled"
 
 # upload audio file to amazon
-# cd /home/wadeallen/Music/Sermon_Audio
-# upload ${date}.mp3
-# echo "-----"
-# echo "Uploaded audio file to Amazon"
+cd /home/wadeallen/Music/Sermon_Audio
+upload ${date}.mp3
+echo "-----"
+echo "Uploaded audio file to Amazon"
 
 # change to post directory
-# ~/bin/insert_data
-# echo "-----"
-# echo "Updated Sermon file with metadata"
+~/bin/insert_data
+echo "-----"
+echo "Updated Sermon file with metadata"
+
 
 # upload video file t youtube
 # cd $directory
@@ -104,3 +105,18 @@ echo "mp3 file compiled"
 # echo "-----"
 # echo "File upload to youtube complete"
 
+# upload video file to vimeo
+cd $directory
+~/bin/upload_vimeo ${date}-upload.mkv
+echo "-----"
+echo "File upload to vimeo complete"
+
+# update sermon file with vimeo data
+~/bin/insert_vimeo
+echo "-----"
+echo "Vimeo data added to file"
+
+echo "-----"
+echo "-----"
+echo "-----"
+echo "Process Complete!"

@@ -9,8 +9,7 @@ from dateutil.relativedelta import relativedelta, SU
 from os.path import expanduser
 import datetime
 from dateutil import parser
-
-
+import sys
 
 client = vimeo.VimeoClient(
   token=config.vim_token,
@@ -39,7 +38,7 @@ for name in files:
     title = post['title']
     description = post['summary']
 
-file_name = '/home/wadeallen/Downloads/sample.mp4'
+file_name = sys.argv[1]
 
 uri = client.upload(file_name, data={
   'name': title,
