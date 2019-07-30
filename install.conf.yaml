@@ -12,4 +12,5 @@
     ~/.fonts : fonts
     ~/.config/nvim : nvim
     ~/.dmenurc : dmenurc
+    ~/.enscript : enscript
 
