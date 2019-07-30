@@ -1,10 +1,10 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 import vimeo
 import config
 import frontmatter
 import glob
-from datetime import date 
+from datetime import date
 from dateutil.relativedelta import relativedelta, SU
 from os.path import expanduser
 import datetime
@@ -19,7 +19,7 @@ client = vimeo.VimeoClient(
 
 home = expanduser("~")
 
-today = date.today() 
+today = date.today()
 format = '%Y-%m-%d'
 target_date = today + relativedelta(weekday=SU(+1))
 sunday = target_date.strftime(format)
@@ -45,7 +45,7 @@ uri = client.upload(file_name, data={
   'description': description
 })
 
-print (f'Your video URI is: {uri}')
+print ('Your video URI is: {}'.format(uri))
 
 target = open (home + '/Dropbox/Textbits/vimeo.txt', 'w')
 target.write ('vimeo: ' + uri[8:100])
