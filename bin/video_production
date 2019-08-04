@@ -79,8 +79,8 @@ fi
 
 # convert video using handbrake and place on desktop
 HandBrakeCLI --preset "H.264 MKV 1080p30" -i ${date}.mkv -o ${date}-upload.mkv
-echo "-----"
-echo "file compressed with Handbrake"
+# echo "-----"
+# echo "file compressed with Handbrake"
 
 # convert sermon into mp3, also create file duration.txt file
 ~/bin/audio ${date}.mkv
@@ -98,6 +98,12 @@ echo "Uploaded audio file to Amazon"
 echo "-----"
 echo "Updated Sermon file with metadata"
 
+# move file to Dropbox upload folder
+mv ${date}-upload.mkv ~/Dropbox/Uploads/
+
+echo "-----"
+echo "File will be uploaded to Vimeo"
+
 
 # upload video file t youtube
 # cd $directory
@@ -106,15 +112,15 @@ echo "Updated Sermon file with metadata"
 # echo "File upload to youtube complete"
 
 # upload video file to vimeo
-cd $directory
-~/bin/upload_vimeo ${date}-upload.mkv
-echo "-----"
-echo "File upload to vimeo complete"
+# cd $directory
+# ~/bin/upload_vimeo ${date}-upload.mkv
+# echo "-----"
+# echo "File upload to vimeo complete"
 
-# update sermon file with vimeo data
-~/bin/insert_vimeo
-echo "-----"
-echo "Vimeo data added to file"
+# # update sermon file with vimeo data
+# ~/bin/insert_vimeo
+# echo "-----"
+# echo "Vimeo data added to file"
 
-echo "-----"
-echo "Process Complete!"
+# echo "-----"
+# echo "Process Complete!"
