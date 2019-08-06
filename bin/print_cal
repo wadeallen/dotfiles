@@ -4,7 +4,7 @@ NOW=`date +'%Y-%m-%dT%H:%M'`
 FIRST=$(date -d "`date +%y%m01`" +%Y-%m-%dT%H:%M)
 LAST=$(date -d "`date +%Y%m01` +6  month" +%Y-%m-%dT%H:%M)
 
-gcalcli --nocolor agenda	 $NOW $LAST --nocolor --cal="Church Calendar|Building" > calendar.txt
+gcalcli --nocolor --cal="Church Calendar|Building" agenda $NOW $LAST  > calendar.txt
 enscript --media=Letter --title 'First Baptist Church Muncie Calendar' --fancy-header=calendar --header="First Baptist Church Muncie Calendar" --footer="Updated: %W||Page $% of $=" -p calendar.ps calendar.txt
 ps2pdf calendar.ps ~/Print/calendar.pdf
 rm calendar*
