@@ -99,10 +99,11 @@ echo "-----"
 echo "Updated Sermon file with metadata"
 
 # move file to Dropbox upload folder
+cd $directory
 mv ${date}-upload.mkv ~/Dropbox/Uploads/
 
-echo "-----"
-echo "File will be uploaded to Vimeo"
+# echo "-----"
+# echo "File will be uploaded to Vimeo"
 
 
 # upload video file t youtube
