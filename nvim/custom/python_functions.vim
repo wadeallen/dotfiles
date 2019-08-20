@@ -29,7 +29,7 @@ def Convert_Kindle():
   output = os.path.splitext(os.path.basename(vim.current.buffer.name))[0]+'.epub'
   # Convert to mobi
   kindle_file = os.path.splitext(os.path.basename(vim.current.buffer.name))[0]+'.mobi'
-  subprocess.call("pandoc " + vim.current.buffer.name + " -o " + compile_path + output + " --css=" + home + "/Dropbox/Pandoc/Pandoc_Sermon/epub.css --template sermon_epub.html", shell=True)
+  subprocess.call("pandoc " + vim.current.buffer.name + " -o " + compile_path + output + " --css=" + home + "/Dropbox/Pandoc/Pandoc_Sermon/epub.css --template sermon_epub.html --filter=abbrevs.py", shell=True)
   subprocess.call("kindlegen " + compile_path + output + " > " + home + "/Dropbox/Preaching/log.txt", shell=True)
   # Email to Kindle
   fromaddr = config.username
