@@ -1,7 +1,6 @@
 #!/bin/bash
 
-cd ~/Downloads/Shows
-mv */*.mkv .
+mv */*.avi .
 rm -rf ./*/
 
 

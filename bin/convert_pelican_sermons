@@ -1,0 +1,54 @@
+#!/usr/bin/env python3
+
+import frontmatter
+import glob
+import dateutil.parser
+import datetime
+from slugify import slugify
+
+# Function to check key 
+def checkKey(dict, key):
+	if key in dict.keys():
+		key = dict[key]
+		return key
+	else:
+		key = f"No {key} chosen"
+		return key
+
+current_sermons_path = ('/home/wadeallen/Sites/fbcmuncie_2018/_posts/2019*.md')
+pelican_sermons_path = ('/home/wadeallen/Sites/2019_Church/content/sermons/')
+sermon_posts = glob.glob(current_sermons_path)
+
+for sermon in sermon_posts:
+	    post = frontmatter.load(sermon)
+	    title = checkKey(post, 'title')
+	    date = checkKey(post, 'date')
+	    if type(date) is datetime.date:
+	        date = date.strftime('%Y-%m-%d')
+	    else:
+	        date = dateutil.parser.parse(date).strftime('%Y-%m-%d')
+	    scripture = checkKey(post, 'scripture')
+	    speaker = checkKey(post, 'author')
+	    vimeo = checkKey(post, 'vimeo')
+	    slug = slugify(title)
+	    description = post
+
+	    target = open (pelican_sermons_path + date + '-' + slug + '.md', 'w')
+	    target.write('---\n')
+	    target.write(f'author: {speaker}\n')
+	    target.write(f'title: {title}\n')
+	    target.write(f'scripture: {scripture}\n')
+	    target.write(f'date: {date}\n')
+	    if 'vimeo' in post.keys():
+	    	target.write(f'vimeo: {vimeo}\n')
+	    target.write('---\n')
+	    target.write('\n')
+	    target.write(f'{description}')
+	    target.write("\n")
+	    target.close()
+
+
+
+
+
+

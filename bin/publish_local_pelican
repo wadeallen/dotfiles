@@ -1,0 +1,6 @@
+#!/bin/bash
+
+pelican /home/wadeallen/Sites/2019_Church/content -o /home/wadeallen/Sites/2019_Church/output -s /home/wadeallen/Sites/2019_Church/pelicanconf.py &
+sudo cp -r /home/wadeallen/Sites/2019_Church/output/* /usr/share/nginx/html/
+
+
