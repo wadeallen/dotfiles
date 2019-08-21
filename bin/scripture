@@ -82,23 +82,27 @@ parser.add_argument('-p', '--passage', nargs='*', help='passage of scripture')
 parser.add_argument('-v', '--version', default="NIV", help='Translation')
 args = vars(parser.parse_args())
 
+ref = ' '.join(args['passage'])
 passage = ' '.join(args['passage'])
 version = args['version']
 passage = niv.extract(passage)
-book = passage[0][0]
-chapter = passage[0][1]
-verse = passage[0][2]
-end_chapter = passage[0][3]
-end_verse = passage[0][4]
-verse_range = list(range(verse, end_verse +1 ))
-reference = niv.reference_to_string(book, chapter, verse, end_chapter, end_verse)
+if passage == []:
+	print(f"{ref} does not exist")
+else:
+	book = passage[0][0]
+	chapter = passage[0][1]
+	verse = passage[0][2]
+	end_chapter = passage[0][3]
+	end_verse = passage[0][4]
+	verse_range = list(range(verse, end_verse +1 ))
+	reference = niv.reference_to_string(book, chapter, verse, end_chapter, end_verse)
 
-path = '/home/wadeallen/bibles/' + version + '/' + version + '.xml'
+	path = '/home/wadeallen/bibles/' + version + '/' + version + '.xml'
 
-tree = ET.parse(path)
-root = tree.getroot()
+	tree = ET.parse(path)
+	root = tree.getroot()
 
-print('>({} {}) '.format(reference, version), end='')
-for number in verse_range:
-	for verse in root.findall('./b[@n="{}"]/c[@n="{}"]/v[@n="{}"]'.format(book,chapter,number)):
-		print(verse.text, end=' ')
+	print(f'>({reference} {version}) ', end='')
+	for number in verse_range:
+		for verse in root.findall(f'./b[@n="{book}"]/c[@n="{chapter}"]/v[@n="{number}"]'):
+			print(verse.text, end=' ')

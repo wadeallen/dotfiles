@@ -4,6 +4,7 @@ function Bible(...)
   let command = '/home/wadeallen/bin/scripture -p ' . scripture . ' -v ' . translation
   let text = system(command)
   put = text
+  
 endfunction
 
 command! NIV call Bible("NIV")
