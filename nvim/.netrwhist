@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/home/wadeallen/Dropbox/Fish'
 let g:netrw_dirhist_2='/home/wadeallen/dotfiles/pandoc/templates'
 let g:netrw_dirhist_3='/home/wadeallen/.virtualenvs'
@@ -8,3 +8,4 @@ let g:netrw_dirhist_5='/home/wadeallen/Dropbox/Sites/2019_Church/output'
 let g:netrw_dirhist_6='/home/wadeallen/Dropbox/Sites/2019_Church/content/sermons'
 let g:netrw_dirhist_7='/home/wadeallen/bin'
 let g:netrw_dirhist_8='/home/wadeallen/dotfiles/nvim/custom'
+let g:netrw_dirhist_9='/home/wadeallen/dotfiles/bin'
