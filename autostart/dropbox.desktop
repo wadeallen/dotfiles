@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Exec=/home/wadeallen/bin/dropbox.py start
+Hidden=false
+X-GNOME-Autostart-enabled=true
+Name=dropbox
+Comment=start dropbox client

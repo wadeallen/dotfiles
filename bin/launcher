@@ -1,15 +1,16 @@
 #!/bin/bash
 
-if [ -f $HOME/.dmenurc ]; then
-  . $HOME/.dmenurc
-else
-  DMENU='dmenu -i'
-fi
+# if [ -f $HOME/.dmenurc ]; then
+#   . $HOME/.dmenurc
+# else
+#   DMENU='dmenu -i'
+# fi
+LAUNCHER='bemenu -i'
 
 CONFIG=${HOME}/dotfiles/bin/commands
 
 # Display the menu and get the selection
-SELECTION=`sed 's/\].*/]/' ${CONFIG} | tr -d '[]' | ${DMENU} -p "Launch: " $*`
+SELECTION=`sed 's/\].*/]/' ${CONFIG} | tr -d '[]' | ${LAUNCHER} -p "Launch: " $*`
 
 # ...and put them back in, escaped with a backslash.
 # Get the text associated with the selection.
