@@ -10,7 +10,6 @@ CONFIG=${HOME}/dotfiles/bin/commands
 
 # Display the menu and get the selection
 SELECTION=`sed 's/\].*/]/' ${CONFIG} | tr -d '[]' | ${DMENU} -p "Launch: " $*`
-
 # ...and put them back in, escaped with a backslash.
 # Get the text associated with the selection.
 COMMAND=`grep "\[${SELECTION}\]" ${CONFIG} | sed "s/\[${SELECTION}\] //"`

@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+
+from zenipy import calendar
+from datetime import datetime
+import pyperclip
+
+result = calendar(title="Choose Date",text="Which date do you want?")
+year = result[0]
+month = result[1]
+day = result[2]
+date_string = datetime(year, month, day)
+string = date_string.strftime("%Y-%m-%d")
+
