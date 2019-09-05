@@ -1,0 +1,48 @@
+#!/usr/bin/env python3
+
+from bs4 import BeautifulSoup
+import requests
+import re
+import collections
+
+page_link = 'https://www.biblegateway.com/passage/?search=Revelation+6&version=NTE&interface=print'
+
+page_response = requests.get(page_link, timeout=5)
+
+page_content = BeautifulSoup(page_response.content, "html.parser")
+
+# reference = page_content.find("meta",  property="al:ios:url")
+book = page_content.title.string.split("NTE")[0].strip()
+short_reference = page_content.find("meta",  property="al:ios:url")["content"].split("/")[3]
+short_book = short_reference.split(".")[0]
+chapter = short_reference.split(".")[1]
+
+# print(f"book is {book} and chapter is {chapter}. Short reference is {short_reference} and short book is {short_book}")
+print(f"\"{book}\": {{ \n   \"{chapter}\" : {{")
+
+verses = {}
+
+for p in page_content.find_all('p'):
+    passage = p.find_all('span', class_='text')
+
+    for v in passage:
+        number = v.attrs['class'][1].split('-')[2]
+        if len(v.contents) is 2:
+            text = v.contents[1]
+            text = text.replace('–', '--')
+            text = text.replace('‘', '\\"')
+            text = text.replace('’', '\\"')
+            if number != '1':
+                print('\",\n', end='')
+            print(f'      \"{number}\": \"{text}', end='')
+        else:
+            text = v.contents[0]
+            text = text.replace('–', '--')
+            text = text.replace('‘', '\\"')
+            text = text.replace('’', '\\"')
+            print(f'{text}', end='')
+print('\"\n     },')
+        
+
+
+
