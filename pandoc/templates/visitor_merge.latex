@@ -8,7 +8,7 @@
 
 \DTLforeach{names}
 {\name=Name, \address=Street, \city=City, \state=State, \zip=Zip}{
-  
+
 \thispagestyle{plain}
 
 \begin{textblock*}{3in}(-.2in,-.25in)
@@ -45,7 +45,7 @@
 
 $body$
 
-% The next two lines need to be commented out if we have an even number of pages
+% The next two lines need to be commented out if we have an odd number of pages
 % \newpage
 % \textcolor{white}{test}
 
@@ -56,4 +56,4 @@ $body$
 
 }
 
-\end{document} 
+\end{document}
