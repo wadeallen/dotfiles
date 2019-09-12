@@ -4,8 +4,12 @@ from bs4 import BeautifulSoup
 import requests
 import re
 import collections
+import sys
 
-page_link = 'https://www.biblegateway.com/passage/?search=Revelation+6&version=NTE&interface=print'
+scripture = sys.argv[1]
+scripture = scripture.replace(' ', '+')
+
+page_link = f'https://www.biblegateway.com/passage/?search={scripture}&version=NTE&interface=print'
 
 page_response = requests.get(page_link, timeout=5)
 
@@ -22,6 +26,16 @@ print(f"\"{book}\": {{ \n   \"{chapter}\" : {{")
 
 verses = {}
 
+def clean_text(text):
+    text = text.replace('–', '--')
+    text = text.replace('‘', '\\"')
+    text = text.replace('’', '\\"')
+    # finds possesive nouns and replaces " with '
+    text = re.sub(r'(\w+)\\+\"+s', r"\1's", text)
+    text = re.sub(r'(\w+)\\+\"+t', r"\1't", text)
+    return text
+
+
 for p in page_content.find_all('p'):
     passage = p.find_all('span', class_='text')
 
@@ -29,17 +43,13 @@ for p in page_content.find_all('p'):
         number = v.attrs['class'][1].split('-')[2]
         if len(v.contents) is 2:
             text = v.contents[1]
-            text = text.replace('–', '--')
-            text = text.replace('‘', '\\"')
-            text = text.replace('’', '\\"')
+            text = clean_text(text)
             if number != '1':
                 print('\",\n', end='')
             print(f'      \"{number}\": \"{text}', end='')
         else:
             text = v.contents[0]
-            text = text.replace('–', '--')
-            text = text.replace('‘', '\\"')
-            text = text.replace('’', '\\"')
+            text = clean_text(text)
             print(f'{text}', end='')
 print('\"\n     },')
         

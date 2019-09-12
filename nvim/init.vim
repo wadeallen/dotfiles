@@ -158,7 +158,7 @@ nnoremap <leader>d "=strftime("%Y/%m/%d")<CR>PA<Space><Space>
 nnoremap <leader>nt G"=strftime("%Y/%m/%d")<CR>PA<Space><Space>
 
 "for editing sermons files
-nnoremap 99 i---<Esc>
+noremap 99 i---<Esc>
 noremap <leader>cv 0lv$y
 
 "this will add new line without insert mode
@@ -172,4 +172,6 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsSnippetsDir=$HOME."/.config/nvim/Snippets"
 let g:UltiSnipsSnippetDirectories = ['Snippets']
 let g:UltiSnipsEditSplit="vertical"
+
+"Surround plugin italic and bold words
 
