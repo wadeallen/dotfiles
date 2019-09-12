@@ -20,32 +20,32 @@
 
 %%inline lists
 \usepackage{paralist}
-			
+
 %%for two columns
-\usepackage{multicol}	
+\usepackage{multicol}
 
 %%custom date
-\usepackage{datetime}		   
+\usepackage{datetime}
 
 %column spacing
 \setlength{\columnseprule}{1pt}
-\setlength{\columnsep}{30pt}      
+\setlength{\columnsep}{30pt}
 
 %%no indenting of paragraphs
-\setlength\parindent{0pt}    
-\setlength{\parskip}{10pt}      
+\setlength\parindent{0pt}
+\setlength{\parskip}{10pt}
 
 %%formatting of titles
 \titleformat{\section}[runin]{\normalfont\bfseries}{}{.5em}{}[: \ \ \ ]
-\titlespacing{\section}{\parindent}{1.5ex plus .1ex minus .2ex}{0pt}          
-              
+\titlespacing{\section}{\parindent}{1.5ex plus .1ex minus .2ex}{0pt}
+
 %%no page numbers
-\pagestyle{empty}           
+\pagestyle{empty}
 
 %% get Sunday's date
 \newcommand{\mydate}{\formatdate{$day$}{$month$}{$year$}}
 
-\begin{document}   
+\begin{document}
 
 \newdateformat{prayerlistdate}{%
 \monthname[\THEMONTH] \THEDAY\, \THEYEAR}
@@ -58,26 +58,26 @@
 \vspace{0in} \fontsize{20}{15}\selectfont Prayer List \\
   \fontsize{12}{9}\textsc{\prayerlistdate \mydate }
 \end{minipage}}
-\end{figure}      
+\end{figure}
 
 $body$
 
-\vspace{.5in}   
+\vspace{.5in}
 
 
-\begin{table}[htbp]   
+\begin{table}[htbp]
   \centering
   To activate the phone prayer chain, call \\ \ \\
 \begin{tabular}{|rl|}
 Shirley Pittenger & 765-282-0632 \\
 Pam Kistler & 765-284-0946\\
 \end{tabular}
-\end{table}        
+\end{table}
 
 
-\end{document}   
-
- 
+\end{document}
 
 
-   
+
+
+

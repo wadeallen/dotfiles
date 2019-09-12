@@ -8,6 +8,12 @@ letterpaper,
 
 \usepackage{hyperref}
 
+% to format date
+\usepackage{datetime}
+\def\parsecommitdate#1-#2-#3 \endparse{%
+  \date{\formatdate{#3}{#2}{#1}}%
+}
+
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
 \usepackage{mathptmx}

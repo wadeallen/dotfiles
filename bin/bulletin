@@ -3,32 +3,24 @@
 DIRECTORY=$HOME/Dropbox/Pandoc/Pandoc_Bulletin
 ARCHIVE=$HOME/Dropbox/Bulletin_Archives
 EDITING=$HOME/Editing
-OS="`uname`"
 
-case $OS in
-	Darwin*)
-		SUNDAY=$(/usr/local/bin/gdate -d 'sun' +'%Y-%m-%d')
-		NUR_THIS_WEEK=$(/usr/local/bin/gdate -d 'sun' +'%Y-%m-%d')
-		NUR_NEXT_WEEK=$(/usr/local/bin/gdate -d 'sun 1 week' +'%Y-%m-%d')
-		;;
-	Linux*)
-		SUNDAY=$(date -d 'sun' +'%Y-%m-%d')
-		NUR_THIS_WEEK=$(date -d 'sun' +'%Y-%m-%d')
-		NUR_NEXT_WEEK=$(date -d 'sun 1 week' +'%Y-%m-%d')
-		;;
-esac
+SUNDAY=$(date -d 'sun' +'%Y-%m-%d')
+THIS_WEEK=$(date -d 'sun' +'%Y-%m-%d')
+NEXT_WEEK=$(date -d 'sun 1 week' +'%Y-%m-%d')
 
 cd $DIRECTORY &&
 python3 /home/wadeallen/bin/stories &&
-# wget -O Bulletin.txt https://docs.google.com/document/d/1pqVUPNIRVxPRoO-lqGPDlAuJ-qGCE5BT7qOT72u-EDQ/export?format=txt &&
+wget -O /home/wadeallen/Sites/fbcmuncie_2018/_data/youth.csv https://docs.google.com/spreadsheets/d/17jwnIWmA9zBxBMzG27ISV32_8x3O6ckNQ09XDcKdwCg/export?format=csv
 # wget -O Nursery_Volunteers.csv https://docs.google.com/spreadsheets/d/1OUqqFVGzVJwzf4-YOLL05WrKJKTQNIgULMjTKeNRgiY/export?format=csv &&
-wget -O cct.csv https://docs.google.com/spreadsheets/d/1kh_tGFIdmzwqxuNObYjfC3hiUduSKwS60-768Z1BKoo/export?format=csv &&
-wget -O numbers.csv https://docs.google.com/spreadsheets/d/14TpbSCb71nw9jSrQetPEq1Yi8RvvRcukfnpBwJ4lcJg/export?format=csv &&
-# sed -n '1p' Nursery_Volunteers.csv > this_week.csv &&
-# sed -n /$NUR_THIS_WEEK/p Nursery_Volunteers.csv >> this_week.csv &&
+# wget -O cct.csv https://docs.google.com/spreadsheets/d/1kh_tGFIdmzwqxuNObYjfC3hiUduSKwS60-768Z1BKoo/export?format=csv &&
+# wget -O numbers.csv https://docs.google.com/spreadsheets/d/14TpbSCb71nw9jSrQetPEq1Yi8RvvRcukfnpBwJ4lcJg/export?format=csv &&
+# sed -n '1p' youth.csv > thisweek.csv &&
+# sed -n /$THIS_WEEK/p youth.csv >> thisweek.csv &&
+# sed -n '1p' youth.csv > nextweek.csv &&
+# sed -n /$NEXT_WEEK/p youth.csv >> nextweek.csv &&
 # sed -n '1p' Nursery_Volunteers.csv > next_week.csv &&
 # sed -n /$NUR_NEXT_WEEK/p Nursery_Volunteers.csv >> next_week.csv &&
-# sed -n '1p;2p' Nursery_Volunteers.csv > this_week.csv
+# sed -n '1p;2p' youth.csv > this_week.csv
 # sed -n '1pw3p' Nursery_Volunteers.csv > next_week.csv
 # pandoc $DIRECTORY/Bulletin.txt -o $HOME/Desktop/bulletin_$SUNDAY.pdf --template bulletin.tex &&
 pandoc $DIRECTORY/articles.txt -o $HOME/Print/${SUNDAY}_bulletin.pdf --template bulletin.tex &&

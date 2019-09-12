@@ -3,7 +3,7 @@
 import frontmatter
 import os
 import glob
-from datetime import date 
+from datetime import date
 from dateutil.relativedelta import relativedelta, SU
 from os.path import expanduser
 import datetime
@@ -13,7 +13,7 @@ import config
 home = expanduser("~")
 
 
-today = date.today() 
+today = date.today()
 format = '%Y-%m-%d'
 target_date = today + relativedelta(weekday=SU(+2))
 sunday = target_date.strftime(format)
@@ -21,7 +21,7 @@ sunday = target_date.strftime(format)
 path = (config.sermon_path + '/{}_sermon.md'.format(sunday))
 
 files = glob.glob(path)
- 
+
 for name in files:
     post = frontmatter.load(name)
     if type(post['date']) is datetime.date:
