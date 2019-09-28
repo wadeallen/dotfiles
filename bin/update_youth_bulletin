@@ -25,17 +25,20 @@ def announcement(sunday):
     if sunday[1] == 'yes':
         return f'is Fellowship of the Fifth.\nTime: {sunday[2]}\nDescription: {sunday[3]}'
     # sunday school and no afternoon event
-    elif sunday[4] == 'yes' and sunday[6] == 'no':
-        return f'Sunday school will be led by {sunday[5]}.'
+    elif sunday[4] == 'yes' and sunday[7] == 'no':
+        return f'Sunday school will be led by {sunday[6]}.'
     # sunday school and home group
-    elif sunday[4] == 'yes' and sunday[6] == 'yes':
-        return f'Sunday school will be led by {sunday[5]}. We will also meet at the home of {sunday[7]}, \\textbf{{{sunday[8]}}}.'
+    elif sunday[4] == 'yes' and sunday[7] == 'yes':
+        return f'Sunday school will be led by {sunday[6]}. We will also meet at the home of {sunday[8]}, \\textbf{{{sunday[9]}}}.'
+    # check if not fifth sunday and no sunday school and has service description
+    elif sunday[1] == 'no' and sunday[4] == 'no' and sunday[5]:
+        return f'there is no Sunday School. {sunday[5]}'
     # check if not fifth sunday and no sunday school
     elif sunday[1] == 'no' and sunday[4] == 'no':
         return f'there is no Sunday School.'
     # afternoon event and no Sunday school
-    elif sunday[4] == 'yes' and sunday[6] == 'yes':
-        return f'we will meet at the home of {sunday[7]}, \\textbf{{{sunday[8]}}}.'
+    elif sunday[4] == 'yes' and sunday[7] == 'yes':
+        return f'we will meet at the home of {sunday[7]}, \\textbf{{{sunday[9]}}}.'
 
 text_this_sunday = f'This week, \\textbf{{{sunday_date(1)[1]}}}, {announcement(thisweek)} '
 text_next_sunday = f'Next week, \\textbf{{{sunday_date(2)[1]}}}, {announcement(nextweek)} '
