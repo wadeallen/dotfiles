@@ -1,0 +1,50 @@
+#!/usr/bin/env python3
+
+import os
+from datetime import date
+from dateutil.relativedelta import relativedelta, SU
+import datetime
+from dateutil import parser
+import csv
+import urllib
+import pyperclip
+
+os.system("wget -O youth.csv https://docs.google.com/spreadsheets/d/17jwnIWmA9zBxBMzG27ISV32_8x3O6ckNQ09XDcKdwCg/export?format=csv")
+
+def sunday_date(week):
+    today = date.today()
+    d = date.today() + relativedelta(weekday=SU(+week))
+    fd = d.strftime('%Y-%m-%d')
+    fw = d.strftime('%b %d')
+    return [fd,fw]
+
+with open('youth.csv') as csvfile:
+    readCSV = csv.reader(csvfile, delimiter=',')
+    for row in readCSV:
+        if row[0] == sunday_date(1)[0]:
+            thisweek = row
+        if row[0] == sunday_date(2)[0]:
+            nextweek = row
+
+def announcement(sunday):
+    # fifth sunday event
+    if sunday[1] == 'yes':
+        return f'is Fellowship of the Fifth.\nTime: {sunday[2]}. {sunday[3]}'
+    # sunday school and no afternoon event
+    elif sunday[4] == 'yes' and sunday[6] == 'no':
+        return f'Sunday school will be led by {sunday[5]}.'
+    # sunday school and home group 
+    elif sunday[4] == 'yes' and sunday[6] == 'yes':
+        return f'Sunday school will be led by {sunday[5]}. We will also meet at the home of {sunday[7]}, {sunday[8]}.'
+    # check if not fifth sunday and no sunday school
+    elif sunday[1] == 'no' and sunday[4] == 'no':
+        return f'there is no Sunday School.'
+    # afternoon event and no Sunday school
+    elif sunday[4] == 'yes' and sunday[6] == 'yes':
+        return f'we will meet at the home of {sunday[7]}, {sunday[8]}.'
+
+text_this_sunday = f'This week, {sunday_date(1)[1]}, {announcement(thisweek)} '
+text_next_sunday = f'Next week, {sunday_date(2)[1]}, {announcement(nextweek)} '
+
+pyperclip.copy(f"Hello everyone. I just wanted to send you a quick email to remind you what is going on with the youth the next two weeks.\n\n{text_this_sunday}\n\n{text_next_sunday}\n\nLet me know if you have any questions.\n\nChristy")
+print("Text is copied to the clipboard. Just open your email program and paste.")

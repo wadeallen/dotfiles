@@ -146,10 +146,10 @@ class Text:
             or (end_chapter and end_verse > book[3][end_chapter-1])
             or (chapter == end_chapter and end_verse < verse))):
             raise InvalidReferenceException()
-        
+
         if not verse:
             return (book[0], chapter, 1, chapter, book[3][chapter-1])
-        if not end_verse: 
+        if not end_verse:
             if end_chapter and end_chapter != chapter:
                 end_verse = book[3][end_chapter-1]
             else:
@@ -224,7 +224,7 @@ class niv(Text):
         '2pet': ('2 Peter', '2Pet', '(?:2|II)(?:\s)?Pet(?:er)?', [21, 22, 18]),
         '1john': ('1 John', '1John', '(?:(?:1|I)(?:\s)?)John', [10, 29, 24, 21, 21]),
         '2john': ('2 John', '2John', '(?:(?:2|II)(?:\s)?)John', [13]),
-        '3john': ('3 John', '3John', '(?:(?:3|III)(?:\s)?)John', [14]),
+        '3john': ('3 John', '3John', '(?:(?:3|III)(?:\s)?)John', [15]),
         'jude': ('Jude', 'Jude', 'Jude', [25]),
         'rev': ('Revelation', 'Rev', 'Rev(?:elation)?(?:\sof Jesus Christ)?', [20, 29, 22, 11, 14, 17, 17, 13, 21, 11, 19, 17, 18, 20, 8, 21, 18, 24, 21, 15, 27, 21]),
     }

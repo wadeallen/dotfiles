@@ -15,7 +15,7 @@ def template_choice():
         letter_template = 'letter_stationary.tex'
     else:
     	letter_template = 'letter.tex'
-    	
+
     out_file = ('/home/wadeallen/Desktop/letter-' + date + '-' + slug + '.pdf')
 
     subprocess.call([
@@ -61,9 +61,9 @@ else:
     name_split = name.split()
     organization = input('Name of Organization: ')
     if organization == '':
-    	organization = name   
+    	organization = name
     address = input('Address (enter in format street \\\ city, state zip):')
-    subject = input('Subject (leave blank for no subject): ')  
+    subject = input('Subject (leave blank for no subject): ')
     organization_split = organization.split()
     slug = ("-".join(name_split).lower()) + '-' + ("-".join(organization_split).lower())
 
@@ -72,6 +72,6 @@ else:
     target.write("---\nname: {}\nsalutation: {}\norganization: {}\naddress: {}\nsubject: {}\ndate: {}\n---\n\n\n".format(name, salutation, organization, address, subject, date))
     target.close()
 
-    subprocess.call(['vim', '-c', '5', filename])
+    subprocess.call(['nvim', '-c', '5', filename])
 
     template_choice()

@@ -3,7 +3,6 @@
 from bs4 import BeautifulSoup
 import requests
 import re
-import collections
 import sys
 
 scripture = sys.argv[1]

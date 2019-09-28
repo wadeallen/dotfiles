@@ -1,71 +1,44 @@
 #!/usr/bin/env python3
 
-import os
 from datetime import date
 from dateutil.relativedelta import relativedelta, SU
-import datetime
 from dateutil import parser
 import csv
 
-
-
-today = date.today()
-format = '%Y-%m-%d'
-
-this_sunday = today + relativedelta(weekday=SU(+1))
-this_sunday = this_sunday.strftime(format)
-
-next_sunday = today + relativedelta(weekday=SU(+2))
-next_sunday = next_sunday.strftime(format)
+def sunday_date(week):
+    date.today()
+    d = date.today() + relativedelta(weekday=SU(+week))
+    fd = d.strftime('%Y-%m-%d')
+    fw = d.strftime('%b %d')
+    return [fd,fw]
 
 with open('/home/wadeallen/Sites/fbcmuncie_2018/_data/youth.csv') as csvfile:
     readCSV = csv.reader(csvfile, delimiter=',')
     for row in readCSV:
-        if row[0] == this_sunday:
+        if row[0] == sunday_date(1)[0]:
             thisweek = row
-            thissun = datetime.datetime.strptime(thisweek[0], '%Y-%m-%d')
-            thissun = thissun.strftime('%b %d')
-        if row[0] == next_sunday:
+        if row[0] == sunday_date(2)[0]:
             nextweek = row
-            nextsun = datetime.datetime.strptime(nextweek[0], '%Y-%m-%d')
-            nextsun = nextsun.strftime('%b %d')
 
-# fifth sunday event
-if thisweek[1] == 'yes':
-    announcement = f'is Fellowship of the Fifth.\nTime: {thisweek[2]}\nDescription: {row[3]}'
-# sunday school and no afternoon event
-elif thisweek[4] == 'yes' and thisweek[6] == 'no':
-    announcement = f'Sunday school will be led by {thisweek[5]}.'
-# sunday school and home group 
-elif thisweek[4] == 'yes' and thisweek[6] == 'yes':
-    announcement = f'Sunday school will be led by {thisweek[5]}. We will also meet at the home of {thisweek[7]}, \\textbf{{{thisweek[8]}}}.'
-# check if not fifth sunday and no sunday school
-elif thisweek[1] == 'no' and thisweek[4] == 'no':
-    announcement = f'there is no Sunday School.'
-# afternoon event and no Sunday school
-elif thisweek[4] == 'yes' and thisweek[6] == 'yes':
-    announcement = f'we will meet at the home of {thisweek[7]}, \\textbf{{{thisweek[8]}}}.'
+def announcement(sunday):
+    # fifth sunday event
+    if sunday[1] == 'yes':
+        return f'is Fellowship of the Fifth.\nTime: {sunday[2]}\nDescription: {sunday[3]}'
+    # sunday school and no afternoon event
+    elif sunday[4] == 'yes' and sunday[6] == 'no':
+        return f'Sunday school will be led by {sunday[5]}.'
+    # sunday school and home group
+    elif sunday[4] == 'yes' and sunday[6] == 'yes':
+        return f'Sunday school will be led by {sunday[5]}. We will also meet at the home of {sunday[7]}, \\textbf{{{sunday[8]}}}.'
+    # check if not fifth sunday and no sunday school
+    elif sunday[1] == 'no' and sunday[4] == 'no':
+        return f'there is no Sunday School.'
+    # afternoon event and no Sunday school
+    elif sunday[4] == 'yes' and sunday[6] == 'yes':
+        return f'we will meet at the home of {sunday[7]}, \\textbf{{{sunday[8]}}}.'
 
-
-# fifth sunday event
-if nextweek[1] == 'yes':
-    n_announce = f'is Fellowship of the Fifth.\nTime: {nextweek[2]}\nDescription: {row[3]}'
-# sunday school and no afternoon event
-elif nextweek[4] == 'yes' and nextweek[6] == 'no':
-    n_announce = f'Sunday school will be led by {nextweek[5]}.'
-# sunday school and home group 
-elif nextweek[4] == 'yes' and nextweek[6] == 'yes':
-    n_announce = f'Sunday school will be led by {nextweek[5]}. We will also meet at the home of {nextweek[7]}, \\textbf{{{nextweek[8]}}}.'
-# check if not fifth sunday and no sunday school
-elif nextweek[1] == 'no' and nextweek[4] == 'no':
-    n_announce = f'there is no Sunday School.'
-# afternoon event and no Sunday school
-elif nextweek[4] == 'yes' and nextweek[6] == 'yes':
-    n_announce = f'we will meet at the home of {nextweek[7]}, \\textbf{{{nextweek[8]}}}.'
-
-text_this_sunday = f'This week, \\textbf{{{thissun}}}, {announcement} '
-text_next_sunday = f'Next week, \\textbf{{{nextsun}}}, {n_announce} '
-
+text_this_sunday = f'This week, \\textbf{{{sunday_date(1)[1]}}}, {announcement(thisweek)} '
+text_next_sunday = f'Next week, \\textbf{{{sunday_date(2)[1]}}}, {announcement(nextweek)} '
 
 target = open ('/home/wadeallen/Dropbox/Pandoc/Pandoc_Bulletin/includes/youth.tex', 'w')
 # target.write ('\def\sundaydate{' + postdate.strftime('%b %d, %Y') + '}\n\def\sermontitle{' + post['title'] + '}\n\def\scripture{' + post['scripture'] + '}\n\input{../numbers}\n')
