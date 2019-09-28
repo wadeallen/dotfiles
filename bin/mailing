@@ -1,14 +1,21 @@
 #!/usr/bin/env python3
 
-with open('/home/wadeallen/Dropbox/Pandoc/Pandoc_Visitor/visitor.csv') as f:
-    text = f.readlines()
-    size = len(text)
+from re import search
 
-# This line counts the number of people in the visitor.csv file
-total_count = size -1
-# Then it asks how many out of town visitors are in the box
-mixed_zip = int(input('How many out of town Visitors? '))
-muncie_zip = total_count - mixed_zip
+with open('/home/wadeallen/Dropbox/Pandoc/Pandoc_Visitor/visitor.csv') as f:
+    # reads the file line by line
+    text = f.readlines()
+    # counts the total number of lines in the file and subtracts the header
+    total_count = len(text) -1
+    # counts lines in the file that include the 473 zip code
+    muncie_zip = 0
+    for line in text:
+        if search('473[0-9][0-9]', line):
+            muncie_zip = muncie_zip +1
+
+# Subtracts the Muncie zips from the Total to give us the mixed zip
+mixed_zip = total_count - muncie_zip
+
 # Calculates the postage for out of town Visitors (change the number if the rates change)
 b2_postage = mixed_zip * 0.184
 # Calculates the postage for in town Visitors (change the number if the rates change)
@@ -20,14 +27,14 @@ total_postage = round(partB_total, 2)
 
 print('-' * 20)
 print('Back Side of Paper')
-print('B2 number of pieces = {0}, Total Postage = {1}'.format(mixed_zip, b2_postage))
-print('B5 number of pieces = {0}, Total Postage = {1}'.format(muncie_zip, b5_postage))
-print('Part B total = {0}'.format(partB_total))
+print(f'B2 number of pieces = {mixed_zip}, Total Postage = {b2_postage}')
+print(f'B5 number of pieces = {muncie_zip}, Total Postage = {b5_postage}')
+print(f'Part B total = {partB_total}')
 print('-' * 20)
 print('Front Side of Paper')
-print('Total Postage = {0}'.format(total_postage))
-print('Total Weight = {0}'.format(total_weight))
-print('Total Pieces = {0}'.format(total_count))
+print(f'Total Postage = {total_postage}')
+print(f'Total Weight = {total_weight}')
+print(f'Total Pieces = {total_count}')
 
 
 
