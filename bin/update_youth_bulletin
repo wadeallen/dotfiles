@@ -49,5 +49,6 @@ target.write('\subsection{Youth Ministry Update}\n')
 target.write('\label{youthministryudpate}\n\n')
 target.write(text_this_sunday)
 target.write(text_next_sunday)
+target.write('\n\n\\vspace{\\fill}')
 target.close()
 

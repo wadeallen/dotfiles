@@ -2,8 +2,6 @@
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-surround'
-Plug 'junegunn/goyo.vim'
-Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'tpope/vim-commentary'
 Plug 'ron89/thesaurus_query.vim'
 Plug 'panozzaj/vim-autocorrect'
@@ -39,21 +37,12 @@ let g:workspace_autosave_always = 1
 " Disables automatic commenting on newline:
 	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" Goyo plugin makes text more readable when writing prose:
-	map <leader>f :Goyo \| set bg=light \| set linebreak<CR>
-
-" Spell-check set to <leader>o, 'o' for 'orthography':
-	map <leader>o :setlocal spell! spelllang=en_us<CR>
-
 "spell check in markdown files only
     	autocmd BufRead,BufNewFile *.md,*.markdown setlocal spell spelllang=en_us
 
 " set spell check
 	hi clear SpellBad
 	hi SpellBad cterm=underline
-
-" autosave document
-        " autocmd TextChanged,TextChangedI <buffer> silent write
 
 " set color scheme
 colorscheme badwolf
@@ -71,27 +60,11 @@ hi LineNr ctermbg=none
 	autocmd BufNewFile,BufFilePre,BufRead *.md,*.markdown set filetype=markdown.pandoc
 	autocmd BufRead,BufNewFile *.tex set filetype=tex
 
-" Enable Goyo by default for mutt writting
-	" Goyo's width will be the line limit in mutt.
-	autocmd BufRead,BufNewFile /tmp/neomutt* let g:goyo_width=80
-	autocmd BufRead,BufNewFile /tmp/neomutt* :Goyo \| set bg=light
-
 " Automatically deletes all trailing whitespace on save.
 	autocmd BufWritePre * %s/\s\+$//e
 
-" When shortcut files are updated, renew bash and ranger configs with new material:
-	autocmd BufWritePost ~/.config/bmdirs,~/.config/bmfiles !shortcuts
-
-" Run xrdb whenever Xdefaults or Xresources are updated.
-	autocmd BufWritePost *Xresources,*Xdefaults !xrdb %
-
 "adding shortcut to make verse slide
         nmap <leader>ms 0di(o<Esc>P0i*<Esc>A*<Esc>k0xxxo<Esc>jj
-
-" Navigating with guides
-	inoremap <leader><leader> <Esc>/<++><Enter>"_c4l
-	vnoremap <leader><leader> <Esc>/<++><Enter>"_c4l
-	map <leader><leader> <Esc>/<++><Enter>"_c4l
 
 
 "I am adding the following content to display word count in status bar
@@ -173,5 +146,4 @@ let g:UltiSnipsSnippetsDir=$HOME."/.config/nvim/Snippets"
 let g:UltiSnipsSnippetDirectories = ['Snippets']
 let g:UltiSnipsEditSplit="vertical"
 
-"Surround plugin italic and bold words
 
