@@ -13,8 +13,8 @@ python3 /home/wadeallen/bin/stories &&
 wget -O /home/wadeallen/Sites/fbcmuncie_2018/_data/youth.csv https://docs.google.com/spreadsheets/d/17jwnIWmA9zBxBMzG27ISV32_8x3O6ckNQ09XDcKdwCg/export?format=csv &&
 python3 /home/wadeallen/bin/update_youth_bulletin &&
 # wget -O Nursery_Volunteers.csv https://docs.google.com/spreadsheets/d/1OUqqFVGzVJwzf4-YOLL05WrKJKTQNIgULMjTKeNRgiY/export?format=csv &&
-# wget -O cct.csv https://docs.google.com/spreadsheets/d/1kh_tGFIdmzwqxuNObYjfC3hiUduSKwS60-768Z1BKoo/export?format=csv &&
-# wget -O numbers.csv https://docs.google.com/spreadsheets/d/14TpbSCb71nw9jSrQetPEq1Yi8RvvRcukfnpBwJ4lcJg/export?format=csv &&
+wget -O cct.csv https://docs.google.com/spreadsheets/d/1kh_tGFIdmzwqxuNObYjfC3hiUduSKwS60-768Z1BKoo/export?format=csv &&
+wget -O numbers.csv https://docs.google.com/spreadsheets/d/14TpbSCb71nw9jSrQetPEq1Yi8RvvRcukfnpBwJ4lcJg/export?format=csv &&
 # sed -n '1p' youth.csv > thisweek.csv &&
 # sed -n /$THIS_WEEK/p youth.csv >> thisweek.csv &&
 # sed -n '1p' youth.csv > nextweek.csv &&
