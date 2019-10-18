@@ -1,6 +1,8 @@
 %%% Preamble
 \documentclass[paper=letter,fontsize=12pt,numbers=noenddot]{scrartcl}
 
+\usepackage[margin=1in]{geometry}
+
 \usepackage[english]{babel}															% English language/hyphenation
 \usepackage[protrusion=true,expansion=true]{microtype}				% Better typography
 \usepackage{amsmath,amsfonts,amsthm}										% Math packages
@@ -49,13 +51,13 @@
 \fancyhead{}
 \fancyfoot[C]{}														% No page header
 \fancyfoot[R]{\thepage \ of \pageref{LastPage}}
-\fancyfoot[L]{Updated: $updated$}	
+\fancyfoot[L]{Updated: $updated$}
 \renewcommand{\headrulewidth}{0pt}				% Remove header underlines
 \renewcommand{\footrulewidth}{0pt}				% Remove footer underlines
 \setlength{\headheight}{13.6pt}
 
 
-%%% Title	
+%%% Title
 \title{ \vspace{-1in} 	\usefont{OT1}{bch}{b}{n}
 		\huge \strut First Baptist Church Muncie \strut \\
 		\Large \bfseries \strut $title$ \strut
@@ -64,7 +66,7 @@
         309 East Adams Street\\		\usefont{OT1}{bch}{m}{n}
         Muncie, Indiana 47305\\	\usefont{OT1}{bch}{m}{n}
         765-284-7749\\
-        \texttt{http://fbcmuncie.org}
+        \texttt{https://fbcmuncie.org}
 }
 \date{}
 

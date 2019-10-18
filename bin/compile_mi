@@ -1,0 +1,7 @@
+#!/bin/bash
+
+DIRECTORY=$HOME/Desktop
+
+cd $DIRECTORY &&
+wget -O $DIRECTORY/abc-mi.md https://docs.google.com/document/d/1I5y8zENHVYNaDL6eWtIS1TLbet7_tznPilVZNvH67oE/export?format=txt
+pandoc $DIRECTORY/abc-mi.md -o abc-mi.pdf --pdf-engine=xelatex --template=abc-mi-responses.tex

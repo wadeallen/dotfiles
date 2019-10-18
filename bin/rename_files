@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for file in The.Big*; do
+for file in Young.*; do
     mv "$file" "${file/.WEB-DL.x264.AAC/}"
 done
 
