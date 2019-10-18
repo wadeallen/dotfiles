@@ -26,7 +26,7 @@
 [common prayer] xdg-open http://commonprayer.net/
 [lights] xdg-open https://wade-home.duckdns.org/lovelace/0
 [stories] xdg-open https://docs.google.com/document/d/1gKLaR2rWaPUAiBeqDUqhrrEDuw0g11Q9N2mp4GcFSLc/edit
-[bulletin] subl3 /home/wadeallen/Dropbox/Pandoc/Pandoc_Bulletin/includes/optional.tex
+[bulletin] subl /home/wadeallen/Dropbox/Pandoc/Pandoc_Bulletin/includes/optional.tex
 [print] xdg-open /home/wadeallen/Print/
 [gifts] xdg-open https://docs.google.com/spreadsheets/d/1w891t-8NNkWATuDIH4wxwWTpfj_nk4T-gJ538_PXjto/edit
 [blog ideas] subl /home/wadeallen/Dropbox/Notes/Blog_Ideas.txt
