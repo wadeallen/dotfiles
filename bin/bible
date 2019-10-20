@@ -13,7 +13,8 @@ if [ -z "$PASSAGE" ]; then
   exit
 else
   # i3-msg workspace "${PASSAGE}" &
-  xdg-open "https://www.biblegateway.com/passage/?search=${PASSAGE_REF}&version=NIV&interface=print"
+  # xdg-open "https://www.biblegateway.com/passage/?search=${PASSAGE_REF}&version=NIV&interface=print"
+    xdg-open "https://www.esv.org/${PASSAGE_REF}"
   # xdg-open "https://netbible.org/bible/${PASSAGE_REF}"
 fi
 

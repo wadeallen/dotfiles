@@ -8,9 +8,9 @@
     ~/bin: bin
     ~/.pandoc: pandoc
     ~/.maid: maid
-    # ~/.config/hotstrings.json: hotstrings.json
+    ~/.config/hotstrings.json: hotstrings.json
     ~/.fonts : fonts
     ~/.config/nvim : nvim
-    # ~/.dmenurc : dmenurc
+    ~/.dmenurc : dmenurc
     ~/.enscript : enscript
 

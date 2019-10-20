@@ -4,6 +4,7 @@ SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d
 SETUVAR _fish_abbr_2019:cd\x20/home/wadeallen/Sites/2019_Church/
+SETUVAR _fish_abbr_2020:cd\x20\x24HOME/Sites/fbcmuncie_2020
 SETUVAR _fish_abbr_add:todoist_add\x2epy\x20\x2dt
 SETUVAR _fish_abbr_aud:cd\x20\x24HOME/Dropbox/Sermon_Audio
 SETUVAR _fish_abbr_bank:ledger\x20\x2df\x20\x24HOME/Dropbox/Ledger/ledger\x2eledger\x20cleared\x20bank
@@ -13,6 +14,7 @@ SETUVAR _fish_abbr_clean:maid\x20clean\x20\x2df
 SETUVAR _fish_abbr_desk:cd\x20\x24HOME/Desktop
 SETUVAR _fish_abbr_dr:\x24HOME/bin/dropbox\x2epy\x20status
 SETUVAR _fish_abbr_fw:cd\x20\x24HOME/Dropbox/Funeral_Work/
+SETUVAR _fish_abbr_hu:cd\x20\x24HOME/Sites/hugo_fbcmuncie
 SETUVAR _fish_abbr_led:ledger\x20\x2df\x20\x24HOME/Dropbox/Ledger/ledger\x2eledger
 SETUVAR _fish_abbr_min:cd\x20\x24HOME/Sites/fbc\x2dwiki/_ministries
 SETUVAR _fish_abbr_oled:nvim\x20\x24HOME/Dropbox/Ledger/ledger\x2eledger
@@ -27,6 +29,7 @@ SETUVAR _fish_abbr_site:cd\x20\x24HOME/Sites/fbcmuncie_2018
 SETUVAR _fish_abbr_speed:speedtest\x2dcli
 SETUVAR _fish_abbr_ss:cd\x20\x24HOME/Sites/slideshow
 SETUVAR _fish_abbr_sw:cd\x20\x24HOME/Dropbox/Sermon_Work/
+SETUVAR _fish_abbr_uncleared:ledger\x20\x2df\x20\x24HOME/Dropbox/Ledger/ledger\x2eledger\x20register\x20\x2d\x2duncleared
 SETUVAR _fish_abbr_update:sudo\x20pacman\x20\x2dSyu
 SETUVAR _fish_abbr_vim:nvim
 SETUVAR _fish_abbr_wiki:cd\x20\x24HOME/Sites/fbc\x2dwiki
