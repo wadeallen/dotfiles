@@ -1,0 +1,707 @@
+%!PS-Adobe-3.0
+%%BoundingBox: 18 36 594 756
+%%Title: First Baptist Church Muncie Calendar
+%%Creator: GNU Enscript 1.6.5.90
+%%CreationDate: Mon Oct 21 11:58:31 2019
+%%Orientation: Portrait
+%%Pages: (atend)
+%%DocumentMedia: Letter 612 792 0 () ()
+%%DocumentNeededResources: (atend)
+%%EndComments
+%%BeginProlog
+%%BeginResource: procset Enscript-Prolog 1.6.5 90
+%
+% Procedures.
+%
+
+/_S {	% save current state
+  /_s save def
+} def
+/_R {	% restore from saved state
+  _s restore
+} def
+
+/S {	% showpage protecting gstate
+  gsave
+  showpage
+  grestore
+} bind def
+
+/MF {	% fontname newfontname -> -	make a new encoded font
+  /newfontname exch def
+  /fontname exch def
+
+  /fontdict fontname findfont def
+  /newfont fontdict maxlength dict def
+
+  fontdict {
+    exch
+    dup /FID eq {
+      % skip FID pair
+      pop pop
+    } {
+      % copy to the new font dictionary
+      exch newfont 3 1 roll put
+    } ifelse
+  } forall
+
+  newfont /FontName newfontname put
+
+  % insert only valid encoding vectors
+  encoding_vector length 256 eq {
+    newfont /Encoding encoding_vector put
+  } if
+
+  newfontname newfont definefont pop
+} def
+
+/MF_PS { % fontname newfontname -> -	make a new font preserving its enc
+  /newfontname exch def
+  /fontname exch def
+
+  /fontdict fontname findfont def
+  /newfont fontdict maxlength dict def
+
+  fontdict {
+    exch
+    dup /FID eq {
+      % skip FID pair
+      pop pop
+    } {
+      % copy to the new font dictionary
+      exch newfont 3 1 roll put
+    } ifelse
+  } forall
+
+  newfont /FontName newfontname put
+
+  newfontname newfont definefont pop
+} def
+
+/SF { % fontname width height -> -	set a new font
+  /height exch def
+  /width exch def
+
+  findfont
+  [width 0 0 height 0 0] makefont setfont
+} def
+
+/SUF { % fontname width height -> -	set a new user font
+  /height exch def
+  /width exch def
+
+  /F-gs-user-font MF
+  /F-gs-user-font width height SF
+} def
+
+/SUF_PS { % fontname width height -> -	set a new user font preserving its enc
+  /height exch def
+  /width exch def
+
+  /F-gs-user-font MF_PS
+  /F-gs-user-font width height SF
+} def
+
+/M {moveto} bind def
+/s {show} bind def
+
+/Box {	% x y w h -> -			define box path
+  /d_h exch def /d_w exch def /d_y exch def /d_x exch def
+  d_x d_y  moveto
+  d_w 0 rlineto
+  0 d_h rlineto
+  d_w neg 0 rlineto
+  closepath
+} def
+
+/bgs {	% x y height blskip gray str -> -	show string with bg color
+  /str exch def
+  /gray exch def
+  /blskip exch def
+  /height exch def
+  /y exch def
+  /x exch def
+
+  gsave
+    x y blskip sub str stringwidth pop height Box
+    gray setgray
+    fill
+  grestore
+  x y M str s
+} def
+
+/bgcs { % x y height blskip red green blue str -> -  show string with bg color
+  /str exch def
+  /blue exch def
+  /green exch def
+  /red exch def
+  /blskip exch def
+  /height exch def
+  /y exch def
+  /x exch def
+
+  gsave
+    x y blskip sub str stringwidth pop height Box
+    red green blue setrgbcolor
+    fill
+  grestore
+  x y M str s
+} def
+
+% Highlight bars.
+/highlight_bars {	% nlines lineheight output_y_margin gray -> -
+  gsave
+    setgray
+    /ymarg exch def
+    /lineheight exch def
+    /nlines exch def
+
+    % This 2 is just a magic number to sync highlight lines to text.
+    0 d_header_y ymarg sub 2 sub translate
+
+    /cw d_output_w cols div def
+    /nrows d_output_h ymarg 2 mul sub lineheight div cvi def
+
+    % for each column
+    0 1 cols 1 sub {
+      cw mul /xp exch def
+
+      % for each rows
+      0 1 nrows 1 sub {
+        /rn exch def
+        rn lineheight mul neg /yp exch def
+        rn nlines idiv 2 mod 0 eq {
+	  % Draw highlight bar.  4 is just a magic indentation.
+	  xp 4 add yp cw 8 sub lineheight neg Box fill
+	} if
+      } for
+    } for
+
+  grestore
+} def
+
+% Line highlight bar.
+/line_highlight {	% x y width height gray -> -
+  gsave
+    /gray exch def
+    Box gray setgray fill
+  grestore
+} def
+
+% Column separator lines.
+/column_lines {
+  gsave
+    .1 setlinewidth
+    0 d_footer_h translate
+    /cw d_output_w cols div def
+    1 1 cols 1 sub {
+      cw mul 0 moveto
+      0 d_output_h rlineto stroke
+    } for
+  grestore
+} def
+
+% Column borders.
+/column_borders {
+  gsave
+    .1 setlinewidth
+    0 d_footer_h moveto
+    0 d_output_h rlineto
+    d_output_w 0 rlineto
+    0 d_output_h neg rlineto
+    closepath stroke
+  grestore
+} def
+
+% Do the actual underlay drawing
+/draw_underlay {
+  ul_style 0 eq {
+    ul_str true charpath stroke
+  } {
+    ul_str show
+  } ifelse
+} def
+
+% Underlay
+/underlay {	% - -> -
+  gsave
+    0 d_page_h translate
+    d_page_h neg d_page_w atan rotate
+
+    ul_gray setgray
+    ul_font setfont
+    /dw d_page_h dup mul d_page_w dup mul add sqrt def
+    ul_str stringwidth pop dw exch sub 2 div ul_h_ptsize -2 div moveto
+    draw_underlay
+  grestore
+} def
+
+/user_underlay {	% - -> -
+  gsave
+    ul_x ul_y translate
+    ul_angle rotate
+    ul_gray setgray
+    ul_font setfont
+    0 0 ul_h_ptsize 2 div sub moveto
+    draw_underlay
+  grestore
+} def
+
+% Page prefeed
+/page_prefeed {		% bool -> -
+  statusdict /prefeed known {
+    statusdict exch /prefeed exch put
+  } {
+    pop
+  } ifelse
+} def
+
+% Wrapped line markers
+/wrapped_line_mark {	% x y charwith charheight type -> -
+  /type exch def
+  /h exch def
+  /w exch def
+  /y exch def
+  /x exch def
+
+  type 2 eq {
+    % Black boxes (like TeX does)
+    gsave
+      0 setlinewidth
+      x w 4 div add y M
+      0 h rlineto w 2 div 0 rlineto 0 h neg rlineto
+      closepath fill
+    grestore
+  } {
+    type 3 eq {
+      % Small arrows
+      gsave
+        .2 setlinewidth
+        x w 2 div add y h 2 div add M
+        w 4 div 0 rlineto
+        x w 4 div add y lineto stroke
+
+        x w 4 div add w 8 div add y h 4 div add M
+        x w 4 div add y lineto
+	w 4 div h 8 div rlineto stroke
+      grestore
+    } {
+      % do nothing
+    } ifelse
+  } ifelse
+} def
+
+% EPSF import.
+
+/BeginEPSF {
+  /b4_Inc_state save def    		% Save state for cleanup
+  /dict_count countdictstack def	% Count objects on dict stack
+  /op_count count 1 sub def		% Count objects on operand stack
+  userdict begin
+  /showpage { } def
+  0 setgray 0 setlinecap
+  1 setlinewidth 0 setlinejoin
+  10 setmiterlimit [ ] 0 setdash newpath
+  /languagelevel where {
+    pop languagelevel
+    1 ne {
+      false setstrokeadjust false setoverprint
+    } if
+  } if
+} bind def
+
+/EndEPSF {
+  count op_count sub { pos } repeat	% Clean up stacks
+  countdictstack dict_count sub { end } repeat
+  b4_Inc_state restore
+} bind def
+
+% Check PostScript language level.
+/languagelevel where {
+  pop /gs_languagelevel languagelevel def
+} {
+  /gs_languagelevel 1 def
+} ifelse
+%%EndResource
+%%BeginResource: procset Enscript-Encoding-88591 1.6.5 90
+/encoding_vector [
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/space        	/exclam       	/quotedbl     	/numbersign   	
+/dollar       	/percent      	/ampersand    	/quoteright   	
+/parenleft    	/parenright   	/asterisk     	/plus         	
+/comma        	/hyphen       	/period       	/slash        	
+/zero         	/one          	/two          	/three        	
+/four         	/five         	/six          	/seven        	
+/eight        	/nine         	/colon        	/semicolon    	
+/less         	/equal        	/greater      	/question     	
+/at           	/A            	/B            	/C            	
+/D            	/E            	/F            	/G            	
+/H            	/I            	/J            	/K            	
+/L            	/M            	/N            	/O            	
+/P            	/Q            	/R            	/S            	
+/T            	/U            	/V            	/W            	
+/X            	/Y            	/Z            	/bracketleft  	
+/backslash    	/bracketright 	/asciicircum  	/underscore   	
+/quoteleft    	/a            	/b            	/c            	
+/d            	/e            	/f            	/g            	
+/h            	/i            	/j            	/k            	
+/l            	/m            	/n            	/o            	
+/p            	/q            	/r            	/s            	
+/t            	/u            	/v            	/w            	
+/x            	/y            	/z            	/braceleft    	
+/bar          	/braceright   	/tilde        	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/space        	/exclamdown   	/cent         	/sterling     	
+/currency     	/yen          	/brokenbar    	/section      	
+/dieresis     	/copyright    	/ordfeminine  	/guillemotleft	
+/logicalnot   	/hyphen       	/registered   	/macron       	
+/degree       	/plusminus    	/twosuperior  	/threesuperior	
+/acute        	/mu           	/paragraph    	/bullet       	
+/cedilla      	/onesuperior  	/ordmasculine 	/guillemotright	
+/onequarter   	/onehalf      	/threequarters	/questiondown 	
+/Agrave       	/Aacute       	/Acircumflex  	/Atilde       	
+/Adieresis    	/Aring        	/AE           	/Ccedilla     	
+/Egrave       	/Eacute       	/Ecircumflex  	/Edieresis    	
+/Igrave       	/Iacute       	/Icircumflex  	/Idieresis    	
+/Eth          	/Ntilde       	/Ograve       	/Oacute       	
+/Ocircumflex  	/Otilde       	/Odieresis    	/multiply     	
+/Oslash       	/Ugrave       	/Uacute       	/Ucircumflex  	
+/Udieresis    	/Yacute       	/Thorn        	/germandbls   	
+/agrave       	/aacute       	/acircumflex  	/atilde       	
+/adieresis    	/aring        	/ae           	/ccedilla     	
+/egrave       	/eacute       	/ecircumflex  	/edieresis    	
+/igrave       	/iacute       	/icircumflex  	/idieresis    	
+/eth          	/ntilde       	/ograve       	/oacute       	
+/ocircumflex  	/otilde       	/odieresis    	/divide       	
+/oslash       	/ugrave       	/uacute       	/ucircumflex  	
+/udieresis    	/yacute       	/thorn        	/ydieresis    	
+] def
+%%EndResource
+%%EndProlog
+%%BeginSetup
+%%IncludeResource: font Courier-Bold
+%%IncludeResource: font Courier
+/HFpt_w 10 def
+/HFpt_h 10 def
+/Courier-Bold /HF-gs-font MF
+/HF /HF-gs-font findfont [HFpt_w 0 0 HFpt_h 0 0] makefont def
+/Courier /F-gs-font MF
+/F-gs-font 10 10 SF
+/#copies 1 def
+% Pagedevice definitions:
+gs_languagelevel 1 gt {
+  <<
+    /PageSize [612 792] 
+  >> setpagedevice
+} if
+%%BeginResource: procset Enscript-Header-calendar 1.6.5 90
+
+
+/do_header {   % print default simple header
+
+  % Footer
+  gsave
+    d_footer_x d_footer_y HFpt_h 3 div add translate
+    HF setfont
+
+    user_footer_p {
+      d_footer_x  d_footer_y moveto user_footer_left_str show
+
+      d_footer_w user_footer_center_str stringwidth pop sub 2 div
+      0 moveto user_footer_center_str show
+
+      d_footer_x d_footer_w add user_footer_right_str stringwidth pop sub
+      d_footer_y moveto user_footer_right_str show
+    } if
+  grestore
+
+  % Header
+  gsave
+    d_header_x d_header_y HFpt_h 3 div add translate
+    HF setfont
+
+    user_header_p {
+      5 0 moveto user_header_left_str show
+
+      d_header_w user_header_center_str stringwidth pop sub 2 div
+      0 moveto user_header_center_str show
+
+      d_header_w user_header_right_str stringwidth pop sub 5 sub
+      0 moveto user_header_right_str show
+    } {
+      5 0 moveto fname show
+      45 0 rmoveto fmodstr show
+      45 0 rmoveto pagenumstr show
+    } ifelse
+  grestore
+
+} def%%EndResource
+/d_page_w 576 def
+/d_page_h 720 def
+/d_header_x 0 def
+/d_header_y 682 def
+/d_header_w 576 def
+/d_header_h 38 def
+/d_footer_x 0 def
+/d_footer_y 0 def
+/d_footer_w 576 def
+/d_footer_h 20 def
+/d_output_w 576 def
+/d_output_h 662 def
+/cols 1 def
+%%EndSetup
+%%Page: (1) 1
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 1 def
+/fname (calendar.txt) def
+/fdir (.) def
+/ftail (calendar.txt) def
+% User defined strings:
+/fmodstr (Mon Oct 21 11:58:31 2019) def
+/pagenumstr (1) def
+/user_header_p true def
+/user_header_left_str (First Baptist Church Muncie Calendar) def
+/user_header_center_str () def
+/user_header_right_str () def
+/user_footer_p true def
+/user_footer_left_str (Updated: 10/21/19) def
+/user_footer_center_str () def
+/user_footer_right_str (Page 1 of 3) def
+%%EndPageSetup
+do_header
+5 658 M
+(Sat Nov 02  10:00am  Fruit Basket for Shut Ins Preparation) s
+5 636 M
+(Sun Nov 03   9:15am  Early Worship Gathering/Early SS) s
+5 625 M
+(            10:15am  Fellowship Time) s
+5 614 M
+(            10:45am  Late Worship Gathering/Late SS) s
+5 592 M
+(Mon Nov 04   6:00pm  Support Groups) s
+5 570 M
+(Tue Nov 05   7:00pm  Friendship Class at Riverside) s
+5 548 M
+(Wed Nov 06   6:00pm  Praise Team Rehearsal) s
+5 537 M
+(             6:15pm  Handbells) s
+5 526 M
+(             7:30pm  Choir Rehearsal) s
+5 504 M
+(Thu Nov 07   4:00pm  Forward S.T.E.P.S.) s
+5 482 M
+(Sun Nov 10   9:15am  Early Worship Gathering/Early SS) s
+5 471 M
+(            10:15am  Fellowship Time) s
+5 460 M
+(            10:45am  Late Worship Gathering/Late SS) s
+5 438 M
+(Mon Nov 11   6:00pm  Support Groups) s
+5 416 M
+(Tue Nov 12   7:00pm  Friendship Class at Riverside) s
+5 394 M
+(Wed Nov 13   6:00pm  Praise Team Rehearsal) s
+5 383 M
+(             6:15pm  Handbells) s
+5 372 M
+(             7:30pm  Choir Rehearsal) s
+5 350 M
+(Thu Nov 14   4:00pm  Forward S.T.E.P.S.) s
+5 328 M
+(Sat Nov 16  10:00am  Taylor Gospel Choir Breakfast Prep) s
+5 306 M
+(Sun Nov 17   9:15am  Early Worship Gathering/Early SS) s
+5 295 M
+(             9:45am  Taylor Gospel Choir Breakfast) s
+5 284 M
+(            10:15am  Fellowship Time) s
+5 273 M
+(            10:45am  Late Worship Gathering/Late SS) s
+5 251 M
+(Mon Nov 18   6:00pm  Support Groups) s
+5 229 M
+(Tue Nov 19   7:00pm  CCT Meeting) s
+5 218 M
+(             7:00pm  Friendship Class at Riverside) s
+5 196 M
+(Wed Nov 20   6:00pm  Praise Team Rehearsal) s
+5 185 M
+(             6:15pm  Handbells) s
+5 174 M
+(             7:30pm  Choir Rehearsal) s
+5 152 M
+(Thu Nov 21   4:00pm  Forward S.T.E.P.S.) s
+5 130 M
+(Sat Nov 23  10:00am  Harvest Dinner Prep) s
+5 108 M
+(Sun Nov 24   9:15am  Early SS) s
+5 97 M
+(            10:15am  Fellowship Time) s
+5 86 M
+(            10:45am  Combined Worship Gathering) s
+5 75 M
+(            12:00pm  Harvest Dinner) s
+5 53 M
+(Mon Nov 25   6:00pm  Support Groups) s
+5 31 M
+(Tue Nov 26   7:00pm  Friendship Class at Riverside) s
+_R
+S
+%%Page: (2) 2
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 2 def
+/fname (calendar.txt) def
+/fdir (.) def
+/ftail (calendar.txt) def
+% User defined strings:
+/fmodstr (Mon Oct 21 11:58:31 2019) def
+/pagenumstr (2) def
+/user_header_p true def
+/user_header_left_str (First Baptist Church Muncie Calendar) def
+/user_header_center_str () def
+/user_header_right_str () def
+/user_footer_p true def
+/user_footer_left_str (Updated: 10/21/19) def
+/user_footer_center_str () def
+/user_footer_right_str (Page 2 of 3) def
+%%EndPageSetup
+do_header
+5 658 M
+(Wed Nov 27   6:00pm  Praise Team Rehearsal) s
+5 647 M
+(             6:15pm  Handbells) s
+5 636 M
+(             7:30pm  Choir Rehearsal) s
+5 614 M
+(Thu Nov 28   4:00pm  Forward S.T.E.P.S.) s
+5 592 M
+(Sun Dec 01   9:15am  Early Worship Gathering/Early SS) s
+5 581 M
+(            10:15am  Fellowship Time) s
+5 570 M
+(            10:45am  Late Worship Gathering/Late SS) s
+5 548 M
+(Mon Dec 02   6:00pm  Support Groups) s
+5 526 M
+(Tue Dec 03   7:00pm  Friendship Class at Riverside) s
+5 504 M
+(Wed Dec 04   6:00pm  Praise Team Rehearsal) s
+5 493 M
+(             6:15pm  Handbells) s
+5 482 M
+(             7:30pm  Choir Rehearsal) s
+5 460 M
+(Thu Dec 05   4:00pm  Forward S.T.E.P.S.) s
+5 438 M
+(Sun Dec 08   9:15am  Early Worship Gathering/Early SS) s
+5 427 M
+(            10:15am  Fellowship Time) s
+5 416 M
+(            10:45am  Late Worship Gathering/Late SS) s
+5 405 M
+(             3:30pm  Christmas caroling and programming) s
+5 383 M
+(Mon Dec 09   6:00pm  Support Groups) s
+5 361 M
+(Tue Dec 10   7:00pm  Friendship Class at Riverside) s
+5 339 M
+(Wed Dec 11   5:00pm  Church Informational Meeting) s
+5 328 M
+(             6:00pm  Praise Team Rehearsal) s
+5 317 M
+(             6:15pm  Handbells) s
+5 306 M
+(             7:30pm  Choir Rehearsal) s
+5 284 M
+(Thu Dec 12   4:00pm  Forward S.T.E.P.S.) s
+5 262 M
+(Sun Dec 15   9:15am  Early Worship Gathering/Early SS) s
+5 251 M
+(            10:15am  Fellowship Time) s
+5 240 M
+(            10:30am  All Church Business Meeting) s
+5 229 M
+(            10:45am  Late Worship Gathering/Late SS) s
+5 207 M
+(Mon Dec 16   6:00pm  Support Groups) s
+5 185 M
+(Tue Dec 17   7:00pm  CCT Meeting) s
+5 174 M
+(             7:00pm  Friendship Class at Riverside) s
+5 152 M
+(Wed Dec 18   6:00pm  Praise Team Rehearsal) s
+5 141 M
+(             6:15pm  Handbells) s
+5 130 M
+(             7:30pm  Choir Rehearsal) s
+5 108 M
+(Thu Dec 19   4:00pm  Forward S.T.E.P.S.) s
+5 86 M
+(Sun Dec 22   9:15am  Early Worship Gathering/Early SS) s
+5 75 M
+(            10:15am  Fellowship Time) s
+5 64 M
+(            10:45am  Late Worship Gathering/Late SS) s
+5 42 M
+(Mon Dec 23   6:00pm  Support Groups) s
+_R
+S
+%%Page: (3) 3
+%%BeginPageSetup
+_S
+18 36 translate
+/pagenum 3 def
+/fname (calendar.txt) def
+/fdir (.) def
+/ftail (calendar.txt) def
+% User defined strings:
+/fmodstr (Mon Oct 21 11:58:31 2019) def
+/pagenumstr (3) def
+/user_header_p true def
+/user_header_left_str (First Baptist Church Muncie Calendar) def
+/user_header_center_str () def
+/user_header_right_str () def
+/user_footer_p true def
+/user_footer_left_str (Updated: 10/21/19) def
+/user_footer_center_str () def
+/user_footer_right_str (Page 3 of 3) def
+%%EndPageSetup
+do_header
+5 669 M
+(Tue Dec 24   7:00pm  Christmas Eve service) s
+5 647 M
+(Wed Dec 25   6:00pm  Praise Team Rehearsal) s
+5 636 M
+(             6:15pm  Handbells) s
+5 625 M
+(             7:30pm  Choir Rehearsal) s
+5 603 M
+(Thu Dec 26   4:00pm  Forward S.T.E.P.S.) s
+5 581 M
+(Sun Dec 29  10:45am  Combined Worship Gathering) s
+5 559 M
+(Mon Dec 30   6:00pm  Support Groups) s
+_R
+S
+%%Trailer
+%%Pages: 3
+%%DocumentNeededResources: font Courier-Bold Courier 
+%%EOF

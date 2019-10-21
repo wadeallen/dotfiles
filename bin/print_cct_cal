@@ -1,0 +1,13 @@
+#!/bin/bash
+
+NOW=`date +'%Y-%m-%dT%H:%M'`
+FIRST=$(date -d "`date +%y%m01` +1 month" +%Y-%m-%dT%H:%M)
+LAST=$(date -d "`date +%Y%m01` +3  month" +%Y-%m-%dT%H:%M)
+
+gcalcli --nocolor --cal="Church Calendar|Building" agenda $FIRST $LAST  > calendar.txt
+enscript --media=Letter --title 'First Baptist Church Muncie Calendar' --fancy-header=calendar --header="First Baptist Church Muncie Calendar" --footer="Updated: %W||Page $% of $=" -p calendar.ps calendar.txt
+ps2pdf calendar.ps ~/Print/cct_calendar.pdf
+rm calendar*
+
+
+

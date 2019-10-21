@@ -7,7 +7,7 @@ import webbrowser
 import requests
 from datetime import date, timedelta, datetime
 import calendar
-from dateutil.relativedelta import relativedelta 
+from dateutil.relativedelta import relativedelta
 
 date_format = '%Y%m%d'
 today = date.today()
@@ -44,17 +44,19 @@ message = ('Hello Team %0A%0A' \
 
 url = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + email_address + '&su=' + subject + '&body=' + message
 
-print ('Saving ' + n_month + s_month + ' Calendar to Desktop ...')
+# print ('Saving ' + n_month + s_month + ' Calendar to Desktop ...')
 
-cal_url = 'https://www.google.com/calendar/printable?dates={0}%2F{1}&pgsz=letter&ctz=America%2FNew_York&wkst=1&hl=en&mode=AGENDA&secid=BVlLMgjSIrHevrIwLmhBaf_yY-Q&src=ZmJjbXVuY2llLm9yZ19uc201Y2liaGo1dW1lazJzNDQxNDlicmZxb0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZmJjbXVuY2llLm9yZ19vYW1hZmNibm5zZGwzNTYyODhiZDdoa2E4NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&prsd={0}&pred={1}&pfs=NORMAL&po=PORTRAIT&psd=false&pset=true&psa=false&psr=false&psdec=false&pbw=true&pjs=false&rand=1366741702395'.format(begin_date, end_date)
+# cal_url = 'https://www.google.com/calendar/printable?dates={0}%2F{1}&pgsz=letter&ctz=America%2FNew_York&wkst=1&hl=en&mode=AGENDA&secid=BVlLMgjSIrHevrIwLmhBaf_yY-Q&src=ZmJjbXVuY2llLm9yZ19uc201Y2liaGo1dW1lazJzNDQxNDlicmZxb0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZmJjbXVuY2llLm9yZ19vYW1hZmNibm5zZGwzNTYyODhiZDdoa2E4NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&prsd={0}&pred={1}&pfs=NORMAL&po=PORTRAIT&psd=false&pset=true&psa=false&psr=false&psdec=false&pbw=true&pjs=false&rand=1366741702395'.format(begin_date, end_date)
 
 
-r = requests.get(cal_url)
+# r = requests.get(cal_url)
 
-with open("/home/wadeallen/Desktop/" + n_month + "-" + s_month + "-calendar.pdf", "wb") as code:
-    code.write(r.content)
+# with open("/home/wadeallen/Desktop/" + n_month + "-" + s_month + "-calendar.pdf", "wb") as code:
+#     code.write(r.content)
 
-print ('Calendar Saved to Desktop')
+# print ('Calendar Saved to Desktop')
+
+subprocess.call(["print_cct_cal"])
 
 subprocess.call(["xdg-open", url])
 
