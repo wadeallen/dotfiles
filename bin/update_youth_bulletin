@@ -23,13 +23,13 @@ with open('/home/wadeallen/Sites/fbcmuncie_2018/_data/youth.csv') as csvfile:
 		if row['date'] == this_short:
 			thisSunday = row['date']
 			if 'y' in row['fellowship_fifth']:
-				this_fellowship = f"This Sunday is Fellowship of the Fifth. Time: {row['fifth_time']}. Description: {row['fifth_description']}. "
+				this_fellowship = f"Fellowship of the Fifth. Time: {row['fifth_time']}. Description: {row['fifth_description']}. "
 			else:
 				this_fellowship = None
 			if 'y' in row['sunday_school']:
 				this_sunday_school = f"Sunday School will be led by {row['teacher']}. "
 			else:
-				this_sunday_school = None
+				this_sunday_school = "No Sunday School."
 			if 'y' in row['home']:
 				this_home = f"We will meet in the home of {row['location']} at {row['home_time']}. "
 			else:
@@ -37,21 +37,21 @@ with open('/home/wadeallen/Sites/fbcmuncie_2018/_data/youth.csv') as csvfile:
 		if row['date'] == next_short:
 			nextSunday = row['date']
 			if 'y' in row['fellowship_fifth']:
-				next_fellowship = f"This Sunday is Fellowship of the Fifth. Time: {row['fifth_time']}. Description: {row['fifth_description']}. "
+				next_fellowship = f"Fellowship of the Fifth. Time: {row['fifth_time']}. Description: {row['fifth_description']}. "
 			else:
 				next_fellowship = None
 			if 'y' in row['sunday_school']:
 				next_sunday_school = f"Sunday School will be led by {row['teacher']}. "
 			else:
-				next_sunday_school = None
+				next_sunday_school = "No Sunday School."
 			if 'y' in row['home']:
 				next_home = f"We will meet in the home of {row['location']} at {row['home_time']}. "
 			else:
 			    next_home = None	
 csvfile.close()
 
-this_a = f"This Sunday, \\textbf{{{this_long}}}, {this_fellowship or ''}{this_sunday_school or ''}{this_home or ''}"
-next_a = f"Next Sunday, \\textbf{{{next_long}}}, {next_fellowship or ''}{next_sunday_school or ''}{next_home or ''}"
+this_a = f"This Sunday, \\textbf{{{this_long}}}: {this_fellowship or ''}{this_sunday_school or ''}{this_home or ''}"
+next_a = f"Next Sunday, \\textbf{{{next_long}}}: {next_fellowship or ''}{next_sunday_school or ''}{next_home or ''}"
 
 target = open ('/home/wadeallen/Dropbox/Pandoc/Pandoc_Bulletin/includes/youth.tex', 'w')
 target.write('\\subsection{Youth Ministry Update}\n')
