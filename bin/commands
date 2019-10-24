@@ -3,7 +3,7 @@
 [terminal] gnome-terminal
 [calendar] xdg-open https://calendar.google.com/
 [gmail] xdg-open http://gmail.com
-[todo] xdg-open http://todoist.com
+[todo] xdg-open https://todoist.com/app#start
 [gathering] xdg-open https://docs.google.com/spreadsheets/d/1GXm78GK_nEKgrY8hIc96UQsPotpN52ZisOT3-GhQNJs/edit
 [mileage] xdg-open https://docs.google.com/spreadsheets/d/1zzhGL1Uqc_uzDKjJu7BVHUuC5IqQsrXFCTJAsnwrDmk
 [prayer list] xdg-open https://docs.google.com/document/d/1w6z_D6MPedilpVZjoRfkwsbvXmsNSjrHKFDwasE5SeQ/edit
