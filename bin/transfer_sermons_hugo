@@ -1,0 +1,62 @@
+#!/usr/bin/env python3
+
+from os.path import expanduser
+import frontmatter
+import os
+import glob
+import dateutil.parser
+import datetime
+import re
+import config
+
+home = expanduser("~")
+
+sermons_path = (home + '/Sites/fbcmuncie_2018/_posts/201[8-9]*.md')
+sermon_posts = glob.glob(sermons_path)
+
+# Function to check key 
+def field(key):
+	if key in post:
+		return post[key]
+
+for name in sermon_posts:
+	post = frontmatter.load(name)
+	title = field('title')
+	vimeo = field('vimeo')
+	youtube = field('youtube')
+	scripture =	field('scripture')
+	speaker = field('author')
+	duration = field('duration')
+	length = field('length')
+	description = post.content
+	if 'date' in post:
+		if type(post['date']) is datetime.date:
+			date = post['date'].strftime('%Y-%m-%d')
+		else:
+			date = dateutil.parser.parse(post['date']).strftime('%Y-%m-%d')
+	title_sliced = title.split()
+	slug = ("-".join(title_sliced).lower())
+	slug = slug.replace("?", "")
+	slug = slug.replace("'", "")
+	slug = slug.replace(":", "")
+	slug = re.sub("[\(\[].*?[\)\]]", "", slug)
+	filename =(home + '/Sites/hugo_fbcmuncie/content/video/' + date + '-' + slug + '.md')
+	filename = filename.replace("-.", ".")
+	filename = filename.replace("--", "-")
+	filename = filename.replace(":", "-")
+	print(description)
+	target = open (filename, 'w')
+	target.write('---\n')
+	target.write(f'author: "{speaker}"\n')
+	target.write(f'title: "{title}"\n')
+	target.write(f'scripture: "{scripture}"\n')
+	target.write(f'date: {date}\n')
+	target.write(f'duration: {duration}\n')
+	target.write(f'length: {length}\n')
+	target.write(f'vimeo: {vimeo}\n')
+	target.write(f'youtube: {youtube}\n')
+	target.write('---\n')
+	target.write('\n')
+	target.write(description)
+	target.write("\n")
+	target.close()

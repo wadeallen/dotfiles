@@ -1,7 +1,6 @@
 " Wade Allen nvim config file
 
 call plug#begin('~/.config/nvim/plugged')
-Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'ron89/thesaurus_query.vim'
 Plug 'panozzaj/vim-autocorrect'
@@ -10,7 +9,6 @@ Plug 'SirVer/ultisnips'
 Plug 'ledger/vim-ledger'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'thaerkh/vim-workspace'
 call plug#end()
 
 set bg=light
@@ -34,9 +32,6 @@ let g:workspace_autosave_always = 1
 " Enable autocompletion:
 	set wildmode=longest,list,full
 
-" Disables automatic commenting on newline:
-	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
 "spell check in markdown files only
     	autocmd BufRead,BufNewFile *.md,*.markdown setlocal spell spelllang=en_us
 
@@ -50,9 +45,6 @@ hi Normal ctermbg=none
 hi NonText ctermbg=none
 hi LineNr ctermbg=none
 
-" Splits open at the bottom and right, which is non-retarded, unlike vim defaults.
-	set splitbelow splitright
-
 " Replace all is aliased to S.
 	nnoremap S :%s//g<Left><Left>
 
@@ -60,12 +52,8 @@ hi LineNr ctermbg=none
 	autocmd BufNewFile,BufFilePre,BufRead *.md,*.markdown set filetype=markdown.pandoc
 	autocmd BufRead,BufNewFile *.tex set filetype=tex
 
-" Automatically deletes all trailing whitespace on save.
-	autocmd BufWritePre * %s/\s\+$//e
-
 "adding shortcut to make verse slide
         nmap <leader>ms 0di(o<Esc>P0i*<Esc>A*<Esc>k0xxxo<Esc>jj
-
 
 "I am adding the following content to display word count in status bar
 let g:word_count="<unknown>"
