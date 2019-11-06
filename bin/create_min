@@ -27,10 +27,10 @@ month = month[0]
 
 slug = slugify(name)
 
-filename =(home + '/Sites/fbc-wiki/_ministries/' + slug + '.md' )
+filename =(home + '/Sites/fbc-wiki/content/' + slug + '.md' )
 
 target = open (filename, 'w')
-target.write("---\ntitle: {}\narea: {}\nbegin_month: {}\n---\n\n".format(titlecase(name), area, month))
+target.write(f"---\ntitle: {titlecase(name)}\nweight: 1\nareas:\n  - {area}\nmonths: \n  - {month}\n---\n\n")
 target.close()
 subprocess.call(['nvim', '+6', '-c', 'call AutoCorrect()', filename])
 
