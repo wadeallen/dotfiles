@@ -18,4 +18,3 @@ else
   # xdg-open "https://netbible.org/bible/${PASSAGE_REF}"
 fi
 
-# notify-send ${PASSAGE_REF} "${PASSAGE}" --icon=dialog-information

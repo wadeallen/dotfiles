@@ -1,0 +1,6 @@
+#!/bin/bash
+
+filename=$1
+
+pdfbook --short-edge ${filename}
+
