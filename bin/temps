@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+
+from requests import get
+import config
+import json	
+
+church_url = 'https://church.wadeallen.me/api/states/sensor.shelly_temperature'
+church_key = config.ha_api
+headers = {
+    'Authorization': f'Bearer {church_key}',
+    'content-type': 'application/json',
+}
+
+response = get(church_url, headers=headers)
+state_data = json.loads(response.text)
+print(f"Sanctuary: {state_data['state']}")

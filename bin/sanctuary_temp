@@ -1,0 +1,6 @@
+#!/bin/bash
+
+API='eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJmNTk2ZTdhNTM0ZmU0YzkyOGE4ZDVjMDk0YTMxYjRkMyIsImlhdCI6MTU3MzY3MTI0MiwiZXhwIjoxODg5MDMxMjQyfQ.Kq5TgIHiCnCBfk-tds3olSn0rFkwIUPm6zpD-q3wzDM'
+URL='https://church.wadeallen.me/api/states/sensor.shelly_temperature'
+
+curl -X GET -H "Authorization: Bearer ${API}" -H "Content-Type: application/json" ${URL} |  python -mjson.tool | grep state

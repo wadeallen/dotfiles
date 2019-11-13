@@ -156,4 +156,7 @@ ${color0}${execi 60 python3 ~/bin/todoist}
 ${hr}${color}${voffset 4}
 ${font Roboto:pixelsize=13}CALENDAR:
 ${color0}${execi 60 sh ~/bin/list_calendar}
+${hr}${color}${voffset 4}
+${font Roboto:pixelsize=13}TEMPS:
+${color0}${execi 60 python3 ~/bin/temps}
 ]]

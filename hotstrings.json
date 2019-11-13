@@ -10,6 +10,7 @@
     "#target": ["run-replace", "sh", "-c", "echo Target Card `date +%F`"],
     "#newyork": ["run-replace", "sh", "-c", "echo New York and Company`date +%F`"],
     "#maurices": ["run-replace", "sh", "-c", "echo Maurices Statement `date +%F`"],
+    "#pve": ["run-replace", "sh", "-c", "echo Christy PVE Stub `date +%F`"],
     "#cp": ["run-replace", "sh", "-c", "echo Childrens Place Statement `date +%F`"],
     "#tjmaxx": ["run-replace", "sh", "-c", "echo TJ Maxx Statement `date +%F`"],
     "#victoria": ["run-replace", "sh", "-c", "echo Victoria Secret Statement `date +%F`"],

@@ -29,9 +29,9 @@ with open('/home/wadeallen/Sites/fbcmuncie_2018/_data/youth.csv') as csvfile:
 			if 'y' in row['sunday_school']:
 				this_sunday_school = f"Sunday School will be led by {row['teacher']}. "
 			else:
-				this_sunday_school = "No Sunday School."
+				this_sunday_school = "No Sunday School. "
 			if row['service_description']:
-				this_service = row['service_description']
+				this_service = f"{row['service_description']} "
 			else:
 				this_service = None
 			if 'y' in row['home']:
@@ -47,9 +47,9 @@ with open('/home/wadeallen/Sites/fbcmuncie_2018/_data/youth.csv') as csvfile:
 			if 'y' in row['sunday_school']:
 				next_sunday_school = f"Sunday School will be led by {row['teacher']}. "
 			else:
-				next_sunday_school = "No Sunday School."
+				next_sunday_school = "No Sunday School. "
 			if row['service_description']:
-				next_service = row['service_description']
+				next_service = f"{row['service_description']} "
 			else:
 				next_service = None
 			if 'y' in row['home']:

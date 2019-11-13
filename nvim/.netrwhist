@@ -1,16 +1,9 @@
 let g:netrw_dirhistmax  =10
-<<<<<<< HEAD
-let g:netrw_dirhist_cnt =5
-=======
-let g:netrw_dirhist_cnt =6
->>>>>>> 96b32287574293c016ab44a4cc790d4fefdf074b
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/home/wadeallen/dotfiles/pandoc/templates'
 let g:netrw_dirhist_2='/home/wadeallen/dotfiles/pandoc'
 let g:netrw_dirhist_3='/home/wadeallen/dotfiles/pandoc/templates'
 let g:netrw_dirhist_4='/home/wadeallen/bin'
-<<<<<<< HEAD
-let g:netrw_dirhist_5='/home/wadeallen/Dropbox/Sermon_Work/2019'
-=======
 let g:netrw_dirhist_5='/home/wadeallen/dotfiles/nvim/custom'
 let g:netrw_dirhist_6='/home/wadeallen/bin'
->>>>>>> 96b32287574293c016ab44a4cc790d4fefdf074b
+let g:netrw_dirhist_7='/home/wadeallen/.config'
