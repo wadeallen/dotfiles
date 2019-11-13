@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+
+import requests
+import config
+import json	
+
+church_url = 'https://church.wadeallen.me/api/services/switch/toggle'
+church_key = config.ha_api
+church_headers = {
+    'Authorization': f'Bearer {church_key}',
+    'content-type': 'application/json',
+}
+entity = {
+	'entity_id' : 'switch.38486716dc4f22e2b9f8'
+}
+
+church_response = requests.post(church_url, data=json.dumps(entity), headers=church_headers)

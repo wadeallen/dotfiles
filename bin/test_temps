@@ -19,7 +19,7 @@ home_headers = {
 
 church_response = get(church_url, headers=church_headers)
 church_data = json.loads(church_response.text)
-print(church_response.text)
+print(church_data[4]['state'])
 # bedroom_response = get(bedroom_url, headers=home_headers)
 # sanctuary_data = json.loads(church_response.text)
 # bedroom_data = json.loads(bedroom_response.text)
