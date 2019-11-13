@@ -4,13 +4,22 @@ from requests import get
 import config
 import json	
 
+bedroom_url = 'https://home.wadeallen.me/api/states/sensor.dht_sensor_temperature'
 church_url = 'https://church.wadeallen.me/api/states/sensor.shelly_temperature'
 church_key = config.ha_api
-headers = {
+home_key = config.home_ha_api
+church_headers = {
     'Authorization': f'Bearer {church_key}',
     'content-type': 'application/json',
 }
+home_headers = {
+    'Authorization': f'Bearer {home_key}',
+    'content-type': 'application/json',
+}
 
-response = get(church_url, headers=headers)
-state_data = json.loads(response.text)
-print(f"Sanctuary: {state_data['state']}")
+church_response = get(church_url, headers=church_headers)
+bedroom_response = get(bedroom_url, headers=home_headers)
+sanctuary_data = json.loads(church_response.text)
+bedroom_data = json.loads(bedroom_response.text)
+print(f"Sanctuary: {sanctuary_data['state']} \u2109")
+print(f"Bedroom: {bedroom_data['state']} \u2109")
