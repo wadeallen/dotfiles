@@ -150,13 +150,13 @@ ${font Roboto:Light:size=24}${voffset 12}$alignr${color0}${execi 300 LANG=${temp
  ${execi 300 LANG=${template9} LC_TIME=${template9} date +"%d"}\
 ${color0} ${execi 300 LANG=${template9} LC_TIME=${template9} date +"%B"}${font}${voffset 2}
 ${hr}${color}${voffset 4}
-${font Roboto:pixelsize=13}TODO List:
+${font FontAwesome:size=14}  ${font Roboto:pixelsize=13}TODO List:
 ${voffset 2}
 ${color0}${execi 60 python3 ~/bin/todoist}
 ${hr}${color}${voffset 4}
-${font Roboto:pixelsize=13}CALENDAR:
+${font FontAwesome:size=14}  ${font Roboto:pixelsize=13}CALENDAR:
 ${color0}${execi 60 sh ~/bin/list_calendar}
 ${hr}${color}${voffset 4}
-${font Roboto:pixelsize=13}TEMPS:
+${font FontAwesome:size=14}  ${font Roboto:pixelsize=13} TEMPS: ${voffset 4}
 ${font Roboto:pixelsize=15}${color0}${execi 60 python3 ~/bin/temps}
 ]]
