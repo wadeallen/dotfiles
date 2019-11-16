@@ -134,4 +134,6 @@ let g:UltiSnipsSnippetsDir=$HOME."/.config/nvim/Snippets"
 let g:UltiSnipsSnippetDirectories = ['Snippets']
 let g:UltiSnipsEditSplit="vertical"
 
-
+"Move keys inside of paragraphs
+nnoremap j gj
+nnoremap k gk
