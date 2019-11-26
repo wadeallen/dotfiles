@@ -1,0 +1,17 @@
+#! /bin/bash
+
+cd /home/wadeallen/ &
+rm -Rf Documents &
+rm -Rf Music &
+rm -Rf Pictures &
+rm -Rf Public &
+rm -Rf Templates &
+rm -Rf Videos &
+ln -s Dropbox/Editing/ Editing &
+ln -s Dropbox/Music/ Music &
+ln -s Dropbox/Pictures/ Pictures &
+ln -s Dropbox/Print/ Print &
+ln -s Dropbox/Scans/ Scans &
+ln -s Dropbox/Sites/ Sites &
+ln -s Dropbox/Videos/ Videos
+
