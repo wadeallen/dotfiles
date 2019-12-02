@@ -11,7 +11,7 @@ church_headers = {
     'content-type': 'application/json',
 }
 entity = {
-	'entity_id' : 'switch.38486716dc4f22e2b9f8'
+	'entity_id' : 'switch.wade_office_lamp'
 }
 
 church_response = requests.post(church_url, data=json.dumps(entity), headers=church_headers)

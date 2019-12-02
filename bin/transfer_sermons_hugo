@@ -44,7 +44,6 @@ for name in sermon_posts:
 	filename = filename.replace("-.", ".")
 	filename = filename.replace("--", "-")
 	filename = filename.replace(":", "-")
-	print(description)
 	target = open (filename, 'w')
 	target.write('---\n')
 	target.write(f'author: "{speaker}"\n')
