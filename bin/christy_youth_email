@@ -1,50 +1,66 @@
 #!/usr/bin/env python3
 
-import os
 from datetime import date
 from dateutil.relativedelta import relativedelta, SU
-import datetime
 from dateutil import parser
-import csv
-import urllib
 import pyperclip
-
-os.system("wget -O youth.csv https://docs.google.com/spreadsheets/d/17jwnIWmA9zBxBMzG27ISV32_8x3O6ckNQ09XDcKdwCg/export?format=csv")
+import csv
 
 def sunday_date(week):
-    today = date.today()
+    date.today()
     d = date.today() + relativedelta(weekday=SU(+week))
     fd = d.strftime('%Y-%m-%d')
     fw = d.strftime('%b %d')
-    return [fd,fw]
+    return {"short_date": fd, "long_date": fw}
+    
+this_short = sunday_date(1)['short_date']
+this_long = sunday_date(1)['long_date']
+next_short = sunday_date(2)['short_date']
+next_long = sunday_date(2)['long_date']
 
-with open('youth.csv') as csvfile:
-    readCSV = csv.reader(csvfile, delimiter=',')
-    for row in readCSV:
-        if row[0] == sunday_date(1)[0]:
-            thisweek = row
-        if row[0] == sunday_date(2)[0]:
-            nextweek = row
+with open('/home/wadeallen/Sites/fbcmuncie_2018/_data/youth.csv') as csvfile:
+    reader = csv.DictReader(csvfile)
+    for row in reader:
+        if row['date'] == this_short:
+            thisSunday = row['date']
+            if 'y' in row['fellowship_fifth']:
+                this_fellowship = f"Fellowship of the Fifth. Time: {row['fifth_time']}. Description: {row['fifth_description']}. "
+            else:
+                this_fellowship = None
+            if 'y' in row['sunday_school']:
+                this_sunday_school = f"Sunday School will be led by {row['teacher']}. "
+            else:
+                this_sunday_school = "No Sunday School. "
+            if row['service_description']:
+                this_service = f"{row['service_description']} "
+            else:
+                this_service = None
+            if 'y' in row['home']:
+                this_home = f"We will meet in the home of {row['location']} at {row['home_time']}. "
+            else:
+                this_home = None        
+        if row['date'] == next_short:
+            nextSunday = row['date']
+            if 'y' in row['fellowship_fifth']:
+                next_fellowship = f"Fellowship of the Fifth. Time: {row['fifth_time']}. Description: {row['fifth_description']}. "
+            else:
+                next_fellowship = None
+            if 'y' in row['sunday_school']:
+                next_sunday_school = f"Sunday School will be led by {row['teacher']}. "
+            else:
+                next_sunday_school = "No Sunday School. "
+            if row['service_description']:
+                next_service = f"{row['service_description']} "
+            else:
+                next_service = None
+            if 'y' in row['home']:
+                next_home = f"We will meet in the home of {row['location']} at {row['home_time']}. "
+            else:
+                next_home = None    
+csvfile.close()
 
-def announcement(sunday):
-    # fifth sunday event
-    if sunday[1] == 'yes':
-        return f'is Fellowship of the Fifth.\nTime: {sunday[2]}. {sunday[3]}'
-    # sunday school and no afternoon event
-    elif sunday[4] == 'yes' and sunday[6] == 'no':
-        return f'Sunday school will be led by {sunday[5]}.'
-    # sunday school and home group 
-    elif sunday[4] == 'yes' and sunday[6] == 'yes':
-        return f'Sunday school will be led by {sunday[5]}. We will also meet at the home of {sunday[7]}, {sunday[8]}.'
-    # check if not fifth sunday and no sunday school
-    elif sunday[1] == 'no' and sunday[4] == 'no':
-        return f'there is no Sunday School.'
-    # afternoon event and no Sunday school
-    elif sunday[4] == 'yes' and sunday[6] == 'yes':
-        return f'we will meet at the home of {sunday[7]}, {sunday[8]}.'
+this_a = f"This Sunday, {this_long}: {this_fellowship or ''}{this_sunday_school or ''}{this_service or ''}{this_home or ''}"
+next_a = f"Next Sunday, {next_long}: {next_fellowship or ''}{next_sunday_school or ''}{next_service or ''}{next_home or ''}"
 
-text_this_sunday = f'This week, {sunday_date(1)[1]}, {announcement(thisweek)} '
-text_next_sunday = f'Next week, {sunday_date(2)[1]}, {announcement(nextweek)} '
-
-pyperclip.copy(f"Hello everyone. I just wanted to send you a quick email to remind you what is going on with the youth the next two weeks.\n\n{text_this_sunday}\n\n{text_next_sunday}\n\nLet me know if you have any questions.\n\nChristy")
+pyperclip.copy(f"Hello everyone. I just wanted to send you a quick email to remind you what is going on with the youth the next two weeks.\n\n{this_a}\n\n{next_a}\n\nLet me know if you have any questions.\n\nChristy")
 print("Text is copied to the clipboard. Just open your email program and paste.")
