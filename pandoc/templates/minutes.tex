@@ -1,0 +1,42 @@
+\documentclass{article}
+
+\usepackage{hyperref}
+
+\usepackage[english]{babel}
+\usepackage{minutes}
+
+\def\tightlist{}
+
+\decisiontheme{property}{Property Area}
+
+\minutesstyle{
+	header = {list}
+}
+
+
+\title{Church Coorination Team Meeting}
+\date{$date$}
+\author{$clerk$}
+
+\begin{document}
+
+\begin{Minutes}{CCT Meeting}
+\participant{$present$}
+\missing{$absent$}
+\minutesdate{$date$}
+\maketitle
+$body$
+\end{Minutes}
+
+\section{Summary}
+
+\subsection{Tasks}
+
+\listoftasks
+
+\subsection{Decisions}
+
+\listofdecisions
+
+
+\end{document}

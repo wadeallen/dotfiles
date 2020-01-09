@@ -1,0 +1,95 @@
+\documentclass[letterpaper, 12pt]{article}
+
+\usepackage[top=3.1cm,      bottom=15ex,
+                left=2.3cm,     right=2.3cm,
+                headheight=1cm, footskip=2.5ex]{geometry}
+
+% Colors
+\usepackage{xcolor}
+\definecolor{sintefgrey}{HTML}{A19589}
+\colorlet{sintefgray}{sintefgrey}
+\definecolor{sinteflightgrey}{HTML}{D8D0C7}
+
+\usepackage{graphicx}
+
+\newcommand{\separator}{%
+  % To make sure we have spacing on both sides, make an invisible rule, 2X tall
+  \rule{0ex}{2ex}%
+   % Place the dashed rule 1X high
+  \textcolor{sintefgray}{\rule[1ex]{\textwidth}{0.25pt}}%
+}
+
+\title{CCT Meeting}
+\author{Colleen Massoth}
+% \project{SIN\TeX}
+\date{January 21, 2020}
+\newcommand\whenmeeting{7:00 PM}
+
+\newcommand\initiator{James Heimlich}
+
+% Section titles in sans serif
+\usepackage{sectsty}
+\allsectionsfont{\sffamily}
+
+% Setting up header and footer
+\usepackage{nccfancyhdr,lastpage}
+\pagestyle{fancy}
+
+% Header
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[l]{\includegraphics[width=0.25\textwidth]{/home/wadeallen/Dropbox/notes_logo.pdf}}
+
+% Footer
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[c]{%
+  \sffamily%
+  \color{sintefgray}
+  \separator
+  \newline
+  \begin{minipage}[c]{0.5\textwidth}
+    \whenmeeting
+  \end{minipage}
+  \hfill
+  \thepage\ of \pageref{LastPage}
+  \separator
+}
+
+
+% Recipient address and information colophon
+\usepackage{colortbl,tabularx,setspace,rotating}
+\newcommand{\frontmatter}{%
+  \sffamily%
+  \noindent%
+  \begin{minipage}[b]{0.7\textwidth}
+    \setlength{\parskip}{2ex}%
+    \Huge{CCT}
+
+    \huge\textbf{Meeting Minutes}
+    
+  \end{minipage}
+  \hfill
+  \begin{minipage}[b]{0.25\textwidth}
+    % Bring the colophon and address back up a bit
+    \vspace*{-25pt}%
+    
+  \end{minipage}
+
+  \vspace{4ex}%
+  \noindent%
+  \separator\\
+
+
+  \separator\\
+
+  \noindent
+}
+
+
+\begin{document}
+
+\frontmatter
+
+$body$
+
+
+\end{document}

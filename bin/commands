@@ -1,7 +1,7 @@
 [youth] xdg-open https://docs.google.com/spreadsheets/d/17jwnIWmA9zBxBMzG27ISV32_8x3O6ckNQ09XDcKdwCg/edit
 [numbers] xdg-open https://docs.google.com/spreadsheets/d/14TpbSCb71nw9jSrQetPEq1Yi8RvvRcukfnpBwJ4lcJg/edit
 [terminal] gnome-terminal
-[calendar] xdg-open https://calendar.google.com/
+[calendar] xdg-open https://calendar.google.com/calendar/r/week
 [gmail] xdg-open http://gmail.com
 [todo] xdg-open https://todoist.com/app#start
 [gathering] xdg-open https://docs.google.com/spreadsheets/d/1GXm78GK_nEKgrY8hIc96UQsPotpN52ZisOT3-GhQNJs/edit
@@ -17,7 +17,7 @@
 [sermons] xdg-open /home/wadeallen/Dropbox/Sermons
 [slideshow] xdg-open http://wadeallen.github.io/slideshow/#/overview
 [shutdown] /home/wadeallen/bin/shutdownnow
-[housing] xdg-open https://docs.google.com/spreadsheets/d/1-XMr0Ki6JCNRM6VbECqLqNv57cImtd0d71MYyV8X6Lg/edit
+[housing] xdg-open https://docs.google.com/spreadsheets/d/1Dd-7BhtAP1jtlkozQveOXVFD4oPdJaV4dLWkkwuYFpU/edit
 [insert] xdg-open https://docs.google.com/document/d/1WW3XE9y0MW6J_EJKVvJXIu3GRE9uY0ieVorfxDJvy-Q/edit
 [people] xdg-open https://people.planningcenteronline.com/people
 [visitor] xdg-open https://docs.google.com/document/d/1im1OZ0ol56PP9y0uyvq-2ih3W8G5tiHFdaioL-vTlso/edit
