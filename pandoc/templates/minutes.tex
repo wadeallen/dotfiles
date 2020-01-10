@@ -1,18 +1,78 @@
-\documentclass{article}
+\documentclass[12pt]{article}
 
 \usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{xcolor}
+\usepackage{pifont}
 
-\usepackage[english]{babel}
-\usepackage{minutes}
+\usepackage{enumerate} % Custom item numbers for enumerations
+
+\usepackage[margin=1in]{geometry} % Required for adjusting page dimensions and margins
+
+\setlength\parindent{0pt} % no indent for entire document
 
 \def\tightlist{}
 
-\decisiontheme{property}{Property Area}
-
-\minutesstyle{
-	header = {list}
+% For Title
+\renewcommand{\maketitle}{
+	\begin{center}
+	{\Large\bfseries\thetitle} \vspace{1em} \\
+	{\textsl{\thedate}}
+	\end{center}
 }
 
+% For section formats
+
+\titleformat{\section}
+{\normalsize\bfseries\uppercase}
+{}
+{-1em}
+{}[\titlerule]
+
+\titleformat{\subsection}[runin]
+{\bfseries}
+{}
+{-.5em}
+{}[ ---]
+
+\titleformat{\subsubsection}
+{}
+{}
+{0em}
+{}
+
+% For Participants
+\newcommand{\present}{\textbf{Present:} \textsc{$present$} \vspace{1em}}
+\newcommand{\absent}{\textbf{Absent:} \textsc{$absent$}}
+
+% % for private notes
+\usepackage{ifthen}
+\newcommand{\private}[1]
+	{
+	\ifthenelse{\equal{$include_private$}{yes}}{\textcolor{red}{[#1]}}{}
+  	\ifthenelse{\equal{$include_private$}{no}}{\textcolor{red}{}}{}
+	} 
+
+% for motions
+\newcommand{\motion}[4]{
+\vspace{1em}
+\begin{minipage}{.05 \textwidth}
+\hfill \ifthenelse{\equal{#4}{yes}}{\ding{51}}{\ding{53}}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}{.85 \textwidth}
+	A motion was made \textsl{#1} by \textsc{#2}. The motion was seconded by \textsc{#3}. \ifthenelse{\equal{#4}{yes}}{The motion carried.}{The motion failed.}
+\end{minipage}
+\vspace{1em}
+}
+
+%for tasks
+\newcommand{\task}[3]{
+	Task: #1 #2 #3
+}
+
+%for calendar date
 
 \title{Church Coorination Team Meeting}
 \date{$date$}
@@ -20,23 +80,21 @@
 
 \begin{document}
 
-\begin{Minutes}{CCT Meeting}
-\participant{$present$}
-\missing{$absent$}
-\minutesdate{$date$}
 \maketitle
+
+\present
+
+\absent
+
 $body$
-\end{Minutes}
 
-\section{Summary}
+\vspace{1in}
 
-\subsection{Tasks}
+The next meeting is scheduled for \textsl{$next$}
 
-\listoftasks
+\vspace{.25in}
 
-\subsection{Decisions}
-
-\listofdecisions
+Notes submitted by \textsc{\theauthor}
 
 
 \end{document}
