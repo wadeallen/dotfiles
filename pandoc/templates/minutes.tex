@@ -1,10 +1,14 @@
-\documentclass[12pt]{article}
+\documentclass[english,12pt]{article}
 
 \usepackage{hyperref}
 \usepackage{titlesec}
 \usepackage{titling}
 \usepackage{xcolor}
 \usepackage{pifont}
+\usepackage{fontawesome}
+\usepackage{datetime}
+\usepackage{ifthen}
+\usepackage[useregional]{datetime2}
 
 \usepackage{enumerate} % Custom item numbers for enumerations
 
@@ -24,17 +28,19 @@
 
 % For section formats
 
+\newcommand{\wa}{\textsc{Wade Allen}}
+
 \titleformat{\section}
 {\normalsize\bfseries\uppercase}
 {}
 {-1em}
 {}[\titlerule]
 
-\titleformat{\subsection}[runin]
+\titleformat{\subsection}
 {\bfseries}
 {}
 {-.5em}
-{}[ ---]
+{}
 
 \titleformat{\subsubsection}
 {}
@@ -47,18 +53,15 @@
 \newcommand{\absent}{\textbf{Absent:} \textsc{$absent$}}
 
 % % for private notes
-\usepackage{ifthen}
-\newcommand{\private}[1]
-	{
-	\ifthenelse{\equal{$include_private$}{yes}}{\textcolor{red}{[#1]}}{}
-  	\ifthenelse{\equal{$include_private$}{no}}{\textcolor{red}{}}{}
+\newcommand{\private}[1]{
+	\ifthenelse{\equal{$include_private$}{yes}}{\textcolor{red}{[#1]}}{\textcolor{red}{}}
 	} 
 
 % for motions
 \newcommand{\motion}[4]{
 \vspace{1em}
 \begin{minipage}{.05 \textwidth}
-\hfill \ifthenelse{\equal{#4}{yes}}{\ding{51}}{\ding{53}}
+\hfill \ifthenelse{\equal{#4}{yes}}{\faThumbsOUp}{\faThumbsODown}
 \end{minipage}
 \hfill\vline\hfill
 \begin{minipage}{.85 \textwidth}
@@ -69,10 +72,30 @@
 
 %for tasks
 \newcommand{\task}[3]{
-	Task: #1 #2 #3
+\vspace{1em}
+\begin{minipage}{.05 \textwidth}
+\hfill \faCheckSquareO
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}{.85 \textwidth}
+	\textbf{Task: }#1 (#2) by \DTMdate{#3}
+
+\end{minipage}
+\vspace{1em}
 }
 
 %for calendar date
+\newcommand{\event}[2]{
+\vspace{1em}
+\begin{minipage}{.05 \textwidth}
+\hfill \faCalendar
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}{.85 \textwidth}
+	\textbf{Date: } \DTMdate{#2} #1
+\end{minipage}
+\vspace{1em}
+}
 
 \title{Church Coorination Team Meeting}
 \date{$date$}
