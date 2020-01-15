@@ -9,12 +9,18 @@
 \usepackage{datetime}
 \usepackage{ifthen}
 \usepackage[useregional]{datetime2}
+%for including pdf
+\usepackage{pdfpages}
 
 \usepackage{enumerate} % Custom item numbers for enumerations
 
 \usepackage[margin=1in]{geometry} % Required for adjusting page dimensions and margins
 
 \setlength\parindent{0pt} % no indent for entire document
+
+% Load CCT information from csv file
+\usepackage{datatool}
+\DTLloaddb{cct}{cct.csv}
 
 \def\tightlist{}
 
@@ -34,7 +40,7 @@
 \titleformat{\section}
 {\normalsize\bfseries\uppercase}
 {}
-{-1em}
+{0em}
 {}[\titlerule]
 
 \titleformat{\subsection}
@@ -119,6 +125,59 @@ The next meeting is scheduled for \textsl{$next$}
 \vspace{.25in}
 
 Notes submitted by \textsc{\theauthor}
+
+\newpage
+
+\section{CCT Contact Information}
+
+If you have any questions about the meeting please feel free to contact a pastor or one of the Church Coordination Team (CCT) members.
+
+\begin{tabular}{@{}lll}
+\DTLassignfirstmatch{cct}{Position}{Pastor}{\position=Position, \name=Name,\email=Email, \phone=Phone}
+\textsc{\position} \name & \phone & \email \\
+
+\DTLassignfirstmatch{cct}{Position}{Moderator}{\position=Position, \name=Name,\email=Email, \phone=Phone}
+\textsc{\position} \name & \phone & \email \\
+
+\DTLassignfirstmatch{cct}{Position}{Treasurer}{\position=Position, \name=Name,\email=Email, \phone=Phone}
+\textsc{\position} \name & \phone & \email \\
+
+\DTLassignfirstmatch{cct}{Position}{Clerk}{\position=Position, \name=Name,\email=Email, \phone=Phone}
+\textsc{\position} \name & \phone & \email \\
+
+\DTLassignfirstmatch{cct}{Position}{At-Large-Early}{\position=Position, \name=Name,\email=Email, \phone=Phone}
+\textsc{At-Large} \name & \phone & \email \\
+
+\DTLassignfirstmatch{cct}{Position}{At-Large-Late}{\position=Position, \name=Name,\email=Email, \phone=Phone}
+\textsc{At-Large} \name & \phone & \email \\
+
+\DTLassignfirstmatch{cct}{Position}{Adult}{\position=Position, \name=Name,\email=Email, \phone=Phone}
+\textsc{\position} \name & \phone & \email \\
+
+\DTLassignfirstmatch{cct}{Position}{Youth}{\position=Position, \name=Name,\email=Email, \phone=Phone}
+\textsc{\position} \name & \phone & \email \\
+
+\DTLassignfirstmatch{cct}{Position}{Children}{\position=Position, \name=Name,\email=Email, \phone=Phone}
+\textsc{\position} \name & \phone & \email \\
+
+\DTLassignfirstmatch{cct}{Position}{Property}{\position=Position, \name=Name,\email=Email, \phone=Phone}
+\textsc{\position} \name & \phone & \email \\
+
+\DTLassignfirstmatch{cct}{Position}{Outreach}{\position=Position, \name=Name,\email=Email, \phone=Phone}
+\textsc{\position} \name & \phone & \email \\
+
+\DTLassignfirstmatch{cct}{Position}{Care}{\position=Position, \name=Name,\email=Email, \phone=Phone}
+\textsc{\position} \name & \phone & \email \\
+
+\DTLassignfirstmatch{cct}{Position}{Worship}{\position=Position, \name=Name,\email=Email, \phone=Phone}
+\textsc{\position} \name & \phone & \email \\
+\end{tabular}
+
+\newpage
+
+\IfFileExists{../../Budget_Reports/$year$-$monthdigit$_Profit_Loss.pdf}{\includepdf[pages=-]{../../Budget_Reports/$year$-$monthdigit$_Profit_Loss.pdf}}{Profit Loss Report is not yet available}
+
+\IfFileExists{../../Budget_Reports/$year$-$monthdigit$_Balance_Sheet.pdf}{\includepdf[pages=-]{../../Budget_Reports/$year$-$monthdigit$_Balance_Sheet.pdf}}{Balance Sheet is not yet available}
 
 
 \end{document}
