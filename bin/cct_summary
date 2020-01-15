@@ -8,9 +8,7 @@ then
 	exit 0
 fi
 
-wget -O cct.csv https://docs.google.com/spreadsheets/d/1kh_tGFIdmzwqxuNObYjfC3hiUduSKwS60-768Z1BKoo/export?format=csv &&
-
 fileroot=$(echo ${filename%.*})
 
-pandoc $filename -o ${fileroot}_CCT.pdf --template=meeting_summary.tex --variable=month:`date +%B` --variable=year:`date +%Y` --variable=monthdigit:`date +%m`
+pandoc $filename -o ${fileroot}_CCT.pdf --template=minutes.tex --variable=month:`date +%B` --variable=year:`date +%Y` --variable=monthdigit:`date +%m` --variable=cct:true
 cp ${fileroot}_CCT.pdf ~/Print/${fileroot}_CCT.pdf

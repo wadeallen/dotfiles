@@ -13,4 +13,5 @@
     ~/.config/nvim : nvim
     ~/.dmenurc : dmenurc
     ~/.enscript : enscript
+    ~/.config/fish : fish
 

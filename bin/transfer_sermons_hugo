@@ -11,7 +11,7 @@ import config
 
 home = expanduser("~")
 
-sermons_path = (home + '/Sites/fbcmuncie_2018/_posts/201[8-9]*.md')
+sermons_path = (home + '/Sites/fbcmuncie_2018/_posts/2020*.md')
 sermon_posts = glob.glob(sermons_path)
 
 # Function to check key 
