@@ -23,6 +23,7 @@
 	\begin{center}
 	{\Large\bfseries\thetitle} \vspace{1em} \\
 	{\textsl{\thedate}}
+	\ifthenelse{\equal{$cct$}{true}}{\vspace{1em} \\ \textcolor{red}{Confidential}}{}
 	\end{center}
 }
 
@@ -54,7 +55,7 @@
 
 % % for private notes
 \newcommand{\private}[1]{
-	\ifthenelse{\equal{$include_private$}{yes}}{\textcolor{red}{[#1]}}{\textcolor{red}{}}
+	\ifthenelse{\equal{$cct$}{true}}{\textcolor{red}{[#1]}}{\textcolor{red}{}}
 	}
 
 % for motions

@@ -10,9 +10,8 @@ fi
 
 fileroot=$(echo ${filename%.*})
 
-<<<<<<< HEAD
-pandoc $filename -o ${fileroot}_CCT.pdf --template=minutes.tex --variable=month:`date +%B` --variable=year:`date +%Y` --variable=monthdigit:`date +%m` --variable=cct:true
-=======
-pandoc $filename -o ${fileroot}_CCT.pdf --template=minutes.tex --variable=month:`date +%B` --variable=year:`date +%Y` --variable=monthdigit:`date +%m`
->>>>>>> db288004da9d2e97cfe77edc9e350247f442ec81
-cp ${fileroot}_CCT.pdf ~/Print/${fileroot}_CCT.pdf
+
+pandoc $filename -o CCT_Private/${fileroot}_PRIVATE.pdf --template=minutes.tex --variable=month:`date +%B` --variable=year:`date +%Y` --variable=monthdigit:`date +%m` --variable=cct:true
+
+pandoc $filename -o Congregation/${fileroot}_Congregation.pdf --template=minutes.tex --variable=month:`date +%B` --variable=year:`date +%Y` --variable=monthdigit:`date +%m` --variable=cct:false
+
