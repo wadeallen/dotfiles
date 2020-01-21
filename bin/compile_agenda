@@ -1,0 +1,18 @@
+#! /bin/bash
+
+file=$1
+fileroot=$(echo ${file%.*})
+
+
+if [[ -z ${file} ]];
+then
+    echo "to compile agenda, you must include filename as first argument"
+else
+	head -3 ${file} > agenda.md
+	echo -e '---\n' >> agenda.md
+    sed -n '/#/p' ${file} >> agenda.md
+    pandoc agenda.md -o ${fileroot}_agenda.pdf --template agenda.tex
+    rm agenda.md
+    mv ${fileroot}_agenda.pdf ~/Print/
+fi
+

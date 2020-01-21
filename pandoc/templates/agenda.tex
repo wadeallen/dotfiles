@@ -1,0 +1,94 @@
+\documentclass[english,12pt]{article}
+
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{xcolor}
+\usepackage{pifont}
+\usepackage{fontawesome}
+\usepackage{datetime}
+\usepackage{ifthen}
+\usepackage[useregional]{datetime2}
+%for including pdf
+\usepackage{pdfpages}
+
+\usepackage{enumerate} % Custom item numbers for enumerations
+
+\usepackage[margin=1in]{geometry} % Required for adjusting page dimensions and margins
+
+\setlength\parindent{0pt} % no indent for entire document
+
+% Load CCT information from csv file
+\usepackage{datatool}
+\DTLloaddb{cct}{cct.csv}
+
+\def\tightlist{}
+
+% For Title
+\renewcommand{\maketitle}{
+	\begin{center}
+	{\bfseries\thetitle} \vspace{.5em} \\
+	{\textsl{\thedate}} \vspace{.5em} \\
+	{\Large{Agenda} }
+	\end{center}
+}
+
+% For section formats
+
+\newcommand{\wa}{\textsc{Wade Allen}}
+
+\titleformat{\section}
+{\normalsize\bfseries}
+{}
+{0em}
+{}
+
+\titleformat{\subsection}
+{\normalsize}
+{}
+{2em}
+{}
+
+\titleformat{\subsubsection}
+{\normalsize}
+{}
+{4em}
+{}
+
+% For Participants
+\newcommand{\present}{\textbf{Present:} \textsc{$present$} \vspace{1em}}
+\newcommand{\absent}{\textbf{Absent:} \textsc{$absent$}}
+
+% % for private notes
+\newcommand{\private}[1]{
+	\ifthenelse{\equal{$cct$}{true}}{\textcolor{red}{[#1]}}{\textcolor{red}{}}
+	}
+
+% for motions
+\newcommand{\motion}[4]{
+}
+
+%for tasks
+\newcommand{\task}[3]{
+}
+
+%for calendar date
+\newcommand{\event}[2]{
+}
+
+\begin{document}
+
+\begin{center}
+\large{Agenda for CCT Meeting} \\
+\large{$date$}
+\end{center}
+
+$body$
+
+\vspace{.5in}
+
+The next meeting is scheduled for \textsl{$next$}
+
+
+
+\end{document}
