@@ -1,5 +1,8 @@
 #!/bin/bash
 
+
+DIRECTORY=$HOME/Dropbox/Administration/CCT_Summaries/2020
+
 filename=$1
 
 if	[ -z "$filename" ]
@@ -12,8 +15,8 @@ fileroot=$(echo ${filename%.*})
 
 # wget -O cct.csv https://docs.google.com/spreadsheets/d/1kh_tGFIdmzwqxuNObYjfC3hiUduSKwS60-768Z1BKoo/export?format=csv &&
 
-pandoc $filename -o CCT_Private/${fileroot}_PRIVATE.pdf --template=minutes.tex --variable=month:`date +%B` --variable=year:`date +%Y` --variable=monthdigit:`date +%m` --variable=cct:true
+/usr/bin/pandoc $DIRECTORY/$filename -o $DIRECTORY/CCT_Private/${fileroot}_PRIVATE.pdf --template=minutes.tex --variable=month:`date +%B` --variable=year:`date +%Y` --variable=monthdigit:`date +%m` --variable=cct:true
 
-pandoc $filename -o Congregation/${fileroot}_Congregation.pdf --template=minutes.tex --variable=month:`date +%B` --variable=year:`date +%Y` --variable=monthdigit:`date +%m` --variable=cct:false
+/usr/bin/pandoc $DIRECTORY/$filename -o $DIRECTORY/Congregation/${fileroot}_Congregation.pdf --template=minutes.tex --variable=month:`date +%B` --variable=year:`date +%Y` --variable=monthdigit:`date +%m` --variable=cct:false
 
-s3cmd put Congregation/${fileroot}_Congregation.pdf s3://reports.fbcmuncie.org/
+# s3cmd put Congregation/${fileroot}_Congregation.pdf s3://reports.fbcmuncie.org/
