@@ -27,7 +27,7 @@ month = month[0]
 
 slug = slugify(name)
 
-filename =(home + '/Sites/fbc-wiki/content/' + slug + '.md' )
+filename =(home + '/Sites/fbc-wiki/content/docs/' + slug + '.md' )
 
 target = open (filename, 'w')
 target.write(f"---\ntitle: {titlecase(name)}\nweight: 1\nareas:\n  - {area}\nmonths: \n  - {month}\n---\n\n")
