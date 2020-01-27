@@ -32,6 +32,13 @@ def clean_text(text):
     # finds possesive nouns and replaces " with '
     text = re.sub(r'(\w+)\\+\"+s', r"\1's", text)
     text = re.sub(r'(\w+)\\+\"+t', r"\1't", text)
+    text = re.sub(r'I\\"m', 'I\'m', text)
+    text = re.sub(r'you\\"ve', 'you\'ve,', text)
+    text = re.sub(r'you\\"ll', 'you\'ll,', text)
+    text = re.sub(r'you\\"re', 'you\'re,', text)
+    text = re.sub(r'we\\"re', 'we\'re,', text)
+    text = re.sub(r'I\\"ve', 'I\'ve,', text)
+    text = re.sub(r'You\\"ll', 'You\'ll,', text)
     return text
 
 
