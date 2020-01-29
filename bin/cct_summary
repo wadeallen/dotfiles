@@ -1,7 +1,7 @@
 #!/bin/bash
 
-
 filename=$1
+final=$2
 
 year=`date +%Y`
 monthdigit=`date +%m`
@@ -23,5 +23,11 @@ fileroot=$(echo ${filename%.*})
 
 /usr/bin/pandoc $DIRECTORY/$filename -o $DIRECTORY/Congregation/${fileroot}_Congregation.pdf --template=minutes.tex --variable=month:$month --variable=year:$year --variable=monthdigit:$monthdigit --variable=cct:false
 
-s3cmd put $DIRECTORY/Congregation/${fileroot}_Congregation.pdf s3://reports.fbcmuncie.org/
+if	[ $final == "$final" ]
+then
+	s3cmd put $DIRECTORY/Congregation/${fileroot}_Congregation.pdf s3://reports.fbcmuncie.org/
+	exit 0
+fi
+
+
 
