@@ -23,7 +23,7 @@ fileroot=$(echo ${filename%.*})
 
 /usr/bin/pandoc $DIRECTORY/$filename -o $DIRECTORY/Congregation/${fileroot}_Congregation.pdf --template=minutes.tex --variable=month:$month --variable=year:$year --variable=monthdigit:$monthdigit --variable=cct:false
 
-if	[ $final == "$final" ]
+if	[ "$final" = "final" ]
 then
 	s3cmd put $DIRECTORY/Congregation/${fileroot}_Congregation.pdf s3://reports.fbcmuncie.org/
 	exit 0
