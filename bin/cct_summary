@@ -19,4 +19,4 @@ fileroot=$(echo ${filename%.*})
 
 /usr/bin/pandoc $DIRECTORY/$filename -o $DIRECTORY/Congregation/${fileroot}_Congregation.pdf --template=minutes.tex --variable=month:`date +%B` --variable=year:`date +%Y` --variable=monthdigit:`date +%m` --variable=cct:false
 
-# s3cmd put Congregation/${fileroot}_Congregation.pdf s3://reports.fbcmuncie.org/
+s3cmd put Congregation/${fileroot}_Congregation.pdf s3://reports.fbcmuncie.org/

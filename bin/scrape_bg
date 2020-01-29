@@ -39,6 +39,8 @@ def clean_text(text):
     text = re.sub(r'we\\"re', 'we\'re,', text)
     text = re.sub(r'I\\"ve', 'I\'ve,', text)
     text = re.sub(r'You\\"ll', 'You\'ll,', text)
+    text = re.sub(r'I\\"ll', 'I\'ll,', text)
+    text = re.sub(r'What\\"ll', 'What\'ll,', text)
     return text
 
 
