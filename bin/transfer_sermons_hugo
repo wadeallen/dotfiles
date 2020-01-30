@@ -8,6 +8,7 @@ import dateutil.parser
 import datetime
 import re
 import config
+import shutil
 
 home = expanduser("~")
 
@@ -59,3 +60,6 @@ for name in sermon_posts:
 	target.write(description)
 	target.write("\n")
 	target.close()
+
+# copy images over from old site to new
+

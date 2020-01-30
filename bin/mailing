@@ -19,7 +19,7 @@ mixed_zip = total_count - muncie_zip
 # Calculates the postage for out of town Visitors (change the number if the rates change)
 b2_postage = mixed_zip * 0.184
 # Calculates the postage for in town Visitors (change the number if the rates change)
-b5_postage = muncie_zip * 0.146
+b5_postage = muncie_zip * 0.148
 
 partB_total = b2_postage + b5_postage
 total_weight = total_count * .01
