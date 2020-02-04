@@ -14,6 +14,12 @@ home = expanduser("~")
 
 sermons_path = (home + '/Sites/fbcmuncie_2018/_posts/2020*.md')
 sermon_posts = glob.glob(sermons_path)
+vimeo_pic_path = (home + '/Sites/fbcmuncie_2018/images/vimeo/*.jpg')
+vimeo_pics = glob.glob(vimeo_pic_path)
+blog_path = (home + '/Sites/fbcmuncie_2018/_posts/*.markdown')
+blog_posts = glob.glob(blog_path)
+sermon_image_path = (home + '/Sites/fbcmuncie_2018/images/sermon/*.jpg')
+sermon_images = glob.glob(sermon_image_path)
 
 # Function to check key 
 def field(key):
@@ -62,4 +68,45 @@ for name in sermon_posts:
 	target.close()
 
 # copy images over from old site to new
+for image in vimeo_pics:
+	copy_path = (home + '/Sites/hugo_fbcmuncie/static/images/vimeo/')
+	base = os.path.basename(image)
+	shutil.copyfile(image, copy_path + base)
+
+# copy sermon images to new site
+for image in sermon_images:
+	copy_path = (home + '/Sites/hugo_fbcmuncie/static/images/sermon/')
+	base = os.path.basename(image)
+	shutil.copyfile(image, copy_path + base)
+
+# copy blog posts to new site
+for name in blog_posts:
+	post = frontmatter.load(name)
+	author = field('author')
+	title = field('title')
+	date = field('date')
+	if date:
+		datestring = date.strftime('%Y-%m-%d')
+		description = post.content
+		title_sliced = title.split()
+		slug = ("-".join(title_sliced).lower())
+		slug = slug.replace("?", "")
+		slug = slug.replace("'", "")
+		slug = slug.replace(":", "")
+		slug = re.sub("[\(\[].*?[\)\]]", "", slug)
+		filename =(home + '/Sites/hugo_fbcmuncie/content/blog/' + datestring + '-' + slug + '.md')
+		filename = filename.replace("-.", ".")
+		filename = filename.replace("--", "-")
+		filename = filename.replace(":", "-")
+		target = open (filename, 'w')
+		target.write('---\n')
+		target.write(f'author: "{speaker}"\n')
+		target.write(f'title: "{title}"\n')
+		target.write(f'date: {date}\n')
+		target.write('---\n')
+		target.write('\n')
+		target.write(description)
+		target.write("\n")
+		target.close()
+
 

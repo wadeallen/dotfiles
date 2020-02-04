@@ -31,6 +31,8 @@ with open('/home/wadeallen/Sites/fbcmuncie_2018/_data/youth.csv') as csvfile:
 				this_fellowship = None
 			if 'y' in row['sunday_school']:
 				this_sunday_school = f"Sunday School will be led by {row['teacher']}. "
+			elif 'y' in row['third_sun']:
+				this_sunday_school = f"No Sunday School. Youth are serving in various ministries throughout the church on the third Sunday of the month. "
 			else:
 				this_sunday_school = "No Sunday School. Youth may attend the intergenational class with James Heimlech that meets on the basement level. "
 			if row['service_description']:
@@ -49,6 +51,8 @@ with open('/home/wadeallen/Sites/fbcmuncie_2018/_data/youth.csv') as csvfile:
 				next_fellowship = None
 			if 'y' in row['sunday_school']:
 				next_sunday_school = f"Sunday School will be led by {row['teacher']}. "
+			elif 'y' in row['third_sun']:
+				next_sunday_school = f"No Sunday School. Youth are serving in various ministries throughout the church on the third Sunday of the month. "
 			else:
 				next_sunday_school = "No Sunday School. Youth may attend the intergenational class with James Heimlech that meets on the basement level. "
 			if row['service_description']:
