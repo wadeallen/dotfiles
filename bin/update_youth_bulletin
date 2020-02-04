@@ -10,12 +10,15 @@ def sunday_date(week):
     d = date.today() + relativedelta(weekday=SU(+week))
     fd = d.strftime('%Y-%m-%d')
     fw = d.strftime('%b %d')
-    return {"short_date": fd, "long_date": fw}
+    md = d.strftime('%B %d')
+    return {"short_date": fd, "long_date": fw, "medium_date": md}
     
 this_short = sunday_date(1)['short_date']
 this_long = sunday_date(1)['long_date']
 next_short = sunday_date(2)['short_date']
 next_long = sunday_date(2)['long_date']
+this_med = sunday_date(1)['medium_date']
+next_med = sunday_date(2)['medium_date']
 
 with open('/home/wadeallen/Sites/fbcmuncie_2018/_data/youth.csv') as csvfile:
 	reader = csv.DictReader(csvfile)
@@ -59,9 +62,9 @@ with open('/home/wadeallen/Sites/fbcmuncie_2018/_data/youth.csv') as csvfile:
 csvfile.close()
 
 this_a = f"This Sunday, \\textbf{{{this_long}}}: {this_fellowship or ''}{this_sunday_school or ''}{this_service or ''}{this_home or ''}"
-this_w = f"<p>This Sunday, <span class=\"fe fe-calendar\"> {this_long}</span>: {this_fellowship or ''}{this_sunday_school or ''}{this_service or ''}{this_home or ''}</p>"
+this_w = f"{this_fellowship or ''}{this_sunday_school or ''}{this_service or ''}{this_home or ''}"
 next_a = f"Next Sunday, \\textbf{{{next_long}}}: {next_fellowship or ''}{next_sunday_school or ''}{next_service or ''}{next_home or ''}"
-next_w = f"<p>Next Sunday, <span class=\"fe fe-calendar\"> {next_long}</span>: {next_fellowship or ''}{next_sunday_school or ''}{next_service or ''}{next_home or ''}</p>"
+next_w = f"{next_fellowship or ''}{next_sunday_school or ''}{next_service or ''}{next_home or ''}"
 
 target = open ('/home/wadeallen/Dropbox/Pandoc/Pandoc_Bulletin/includes/youth.tex', 'w')
 target.write('\\subsection{Youth Ministry Update}\n')
@@ -72,6 +75,33 @@ target.write('\n\n\\vspace{\\fill}')
 target.close()
 
 target = open ('/home/wadeallen/Sites/hugo_fbcmuncie/layouts/shortcodes/youth-schedule.html', 'w')
+target.write('<div class="card card-border border-success shadow-lg mb-10 mt-10">')
+target.write('<div class="card-body">')
+target.write('<div class="list-group list-group-flush">')
+target.write('<div class="list-group-item d-flex align-items-center">')
+target.write('<div class="mr-auto">')
+target.write('<p class="font-weight-bold mb-1">')
+target.write(this_med)
+target.write('</p>')
+target.write('<p class="font-size-sm text-muted mb-0">')
 target.write(this_w)
+target.write('</p>')
+target.write('</div>')
+target.write('<div class="badge badge-rounded-circle badge-success-soft ml-4">')
+target.write('<i class="fe fe-calendar"></i></div>')
+target.write('</div>')
+target.write('<div class="list-group-item d-flex align-items-center">')
+target.write('<div class="mr-auto">')
+target.write('<p class="font-weight-bold mb-1">')
+target.write(next_med)
+target.write('</p>')
+target.write('<p class="font-size-sm text-muted mb-0">')
 target.write(next_w)
-target.close()
+target.write('</p>')
+target.write('</div>')
+target.write('<div class="badge badge-rounded-circle badge-success-soft ml-4">')
+target.write('<i class="fe fe-calendar"></i></div>')
+target.write('</div>')
+target.write('</div>')
+target.write('</div>')
+target.write('</div>')
