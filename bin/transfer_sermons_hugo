@@ -20,6 +20,8 @@ blog_path = (home + '/Sites/fbcmuncie_2018/_posts/*.markdown')
 blog_posts = glob.glob(blog_path)
 sermon_image_path = (home + '/Sites/fbcmuncie_2018/images/sermon/*.jpg')
 sermon_images = glob.glob(sermon_image_path)
+worship_path = (home + '/Sites/fbcmuncie_2018/_worship/*.md')
+worship_posts = glob.glob(worship_path)
 
 # Function to check key 
 def field(key):
@@ -78,6 +80,12 @@ for image in sermon_images:
 	copy_path = (home + '/Sites/hugo_fbcmuncie/static/images/sermon/')
 	base = os.path.basename(image)
 	shutil.copyfile(image, copy_path + base)
+
+# copy worship entries to new site
+for entry in worship_posts:
+	copy_path = (home + '/Sites/hugo_fbcmuncie/content/worship/')
+	base = os.path.basename(entry)
+	shutil.copyfile(entry, copy_path + base)
 
 # copy blog posts to new site
 for name in blog_posts:
