@@ -35,6 +35,7 @@
     "#housing": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/housing.py"],
     "#mdwise": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/mdwise.py"],
     "#hhw": ["run-replace", "sh", "-c", "echo Levi Hoosier Healthwise Statement `date +%F`"],
+    "#im": ["run-replace", "sh", "-c", "echo Indiaa Michigan Power `date +%F`"],
     "#caresource": ["run-replace", "sh", "-c", "echo CareSource Health Insurance `date +%F`"],
     "#kohls": ["run-replace", "sh", "-c", "echo Kohls Statement `date +%F`"],
     "lfri": ["run-replace", "sh", "-c", "date -dlast-friday +%F"],
