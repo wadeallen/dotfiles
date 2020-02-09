@@ -1,0 +1,115 @@
+\documentclass[english,12pt]{article}
+
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{xcolor}
+\usepackage{pifont}
+\usepackage{fontawesome}
+\usepackage{datetime}
+\usepackage{ifthen}
+\usepackage[useregional]{datetime2}
+%for including pdf
+\usepackage{pdfpages}
+
+\usepackage{enumerate} % Custom item numbers for enumerations
+
+\usepackage[margin=1in]{geometry} % Required for adjusting page dimensions and margins
+
+\setlength\parindent{0pt} % no indent for entire document
+
+\def\tightlist{}
+
+% For Title
+\renewcommand{\maketitle}{
+	\begin{center}
+	{\Large\bfseries\thetitle} \vspace{1em} \\
+	{\textsl{\thedate}}
+	\end{center}
+}
+
+% For section formats
+
+\titleformat{\section}
+{\normalsize\bfseries\uppercase}
+{}
+{0em}
+{}[\titlerule]
+
+\titleformat{\subsection}
+{\bfseries}
+{}
+{.5em}
+{}
+
+\titleformat{\subsubsection}
+{}
+{}
+{1em}
+{}
+
+
+% % for private notes
+\newcommand{\private}[1]{
+	\ifthenelse{\equal{$cct$}{true}}{\textcolor{red}{[#1]}}{\textcolor{red}{}}
+	}
+
+% for motions
+\newcommand{\motion}[4]{
+\vspace{1em}
+\begin{minipage}{.05 \textwidth}
+\hfill \ifthenelse{\equal{#4}{yes}}{\faThumbsOUp}{\faThumbsODown}
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}{.85 \textwidth}
+	A motion was made \textsl{#1} by \textsc{#2}. The motion was seconded by \textsc{#3}. \ifthenelse{\equal{#4}{yes}}{The motion carried.}{The motion failed.}
+\end{minipage}
+\vspace{1em}
+}
+
+%for tasks
+\newcommand{\task}[3]{
+\vspace{1em}
+\begin{minipage}{.05 \textwidth}
+\hfill \faCheckSquareO
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}{.85 \textwidth}
+	\textbf{Task: }#1 (#2) \\ 
+	by \DTMdate{#3}
+
+\end{minipage}
+\vspace{1em}
+}
+
+%for calendar date
+\newcommand{\event}[2]{
+\vspace{1em}
+\begin{minipage}{.05 \textwidth}
+\hfill \faCalendar
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}{.85 \textwidth}
+	\textbf{Date: } \DTMdate{#2} #1
+\end{minipage}
+\vspace{1em}
+}
+
+
+\title{$title$}
+\date{
+	\DTMdate{$date$}
+	}
+\author{$clerk$}
+
+\begin{document}
+
+\maketitle
+
+$body$
+
+\vspace{.25in}
+
+Notes submitted by \textsc{$clerk$}
+
+\end{document}

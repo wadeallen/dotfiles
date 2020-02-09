@@ -1,0 +1,26 @@
+#!/bin/bash
+
+filename=$1
+
+year=`date +%Y`
+monthdigit=`date +%m`
+month=`date +%B`
+
+DIRECTORY=$HOME/Dropbox/Administration/CCT_Summaries/$year
+
+if	[ -z "$filename" ]
+then
+	echo "Please enter the CCT Notes file"
+	exit 0
+fi
+
+fileroot=$(echo ${filename%.*})
+
+# wget -O cct.csv https://docs.google.com/spreadsheets/d/1kh_tGFIdmzwqxuNObYjfC3hiUduSKwS60-768Z1BKoo/export?format=csv &&
+
+/usr/bin/pandoc $DIRECTORY/$filename -o $DIRECTORY/Congregation/${fileroot}.pdf --template=business_meeting.tex 
+
+s3cmd put $DIRECTORY/Congregation/${fileroot}.pdf s3://reports.fbcmuncie.org/
+
+
+
