@@ -6,7 +6,7 @@ WEDDING='/home/wadeallen/Dropbox/Wedding_Work'
 START=2008
 END=$(date +'%Y')
 
-for year in {2008..2019}
+for year in {2008..2020}
 do
 	NWED=`find $WEDDING -type f -name "${year}*" | wc -l`
 	NFUN=`find $FUNERAL -type f -name "${year}*" | wc -l`
