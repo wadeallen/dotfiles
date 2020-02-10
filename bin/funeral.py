@@ -65,8 +65,11 @@ api = todoist.TodoistAPI(config.todoist_api)
 notify_date = today
 item = api.items.add('email congregation about ' + name + ' death and funeral arrangements', project_id=project_id, date_string=notify_date)
 
-# # meet with family
+## meet with family
 item = api.items.add('Set up meeting with ' + name + ' family', project_id=project_id, date_string=notify_date)
+
+## contact Member Care about funeral dinner
+item = api.items.add('Contact Member Care about ' + name + ' funeral meal', project_id=project_id, date_string=notify_date)
 
 # # mark deceased in database
 item = api.items.add('mark ' + name + ' deceased in database', project_id=project_id, date_string=notify_date)
