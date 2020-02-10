@@ -20,7 +20,7 @@ fileroot=$(echo ${filename%.*})
 
 /usr/bin/pandoc $DIRECTORY/$filename -o $DIRECTORY/Congregation/${fileroot}.pdf --template=business_meeting.tex 
 
-s3cmd put $DIRECTORY/Congregation/${fileroot}.pdf s3://reports.fbcmuncie.org/
+# s3cmd put $DIRECTORY/Congregation/${fileroot}.pdf s3://reports.fbcmuncie.org/
 
 
 
