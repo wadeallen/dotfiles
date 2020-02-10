@@ -112,6 +112,12 @@ $body$
 
 Notes submitted by \textsc{$clerk$}
 
-\IfFileExists{/home/wadeallen/Dropbox/Administration/CCT_Summaries/2020/Ballots/$date$_Ballot.pdf}{\includepdf[pages=-]{/home/wadeallen/Dropbox/Administration/CCT_Summaries/2020/Ballots/$date$_Ballot.pdf}}{}
+\IfFileExists{/home/wadeallen/Dropbox/Administration/CCT_Summaries/2020/Ballots/$date$_Ballot.pdf}{
+
+	Attachment: \DMTdate{$date$ Ballot} \\
+	
+\includepdf[pages=-]{/home/wadeallen/Dropbox/Administration/CCT_Summaries/2020/Ballots/$date$_Ballot.pdf
+
+}}{}
 
 \end{document}
