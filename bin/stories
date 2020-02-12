@@ -70,6 +70,27 @@ for story in stories:
 		target.write(post.content)
 		target.close()
 
+# Sort out Stories for 2020 Website
+website_dir = '/home/wadeallen/Sites/hugo_fbcmuncie/content/news/'
+os.system('rm ' + website_dir + '*.md')
+for story in stories:
+	post = frontmatter.load(story)
+	if 'website' in post['publications']:
+		title = post['title']
+		title = titlecase(title)
+		slug = format_slug(title)
+		filename = website_dir + slug + '.md'
+		target = open (filename, 'w')
+		target.write("---\n")
+		target.write("title: {}\n".format(title))
+		target.write("weight: {}\n".format(post['weight']))
+		target.write("---\n")
+		target.write("\n")
+		# replaces content of print with website version of file
+		post.content = re.sub(r'\{\{print:(.*?)\}\}*\{\{website:(.*?)\}\}', r'\2', post.content.rstrip())
+		target.write(post.content)
+		target.close()
+
 # Create LaTeX file for Bulletin
 bulletin_path = '/home/wadeallen/Dropbox/Pandoc/Pandoc_Bulletin/'
 os.system('rm ' + bulletin_path + 'articles.txt')

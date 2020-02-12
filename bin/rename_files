@@ -1,7 +1,7 @@
 #!/bin/bash
 
-for file in Young.*; do
-    mv "$file" "${file/.WEB-DL.x264.AAC/}"
+for file in *.mp4; do
+	mv "$file" "${file/_\(720p_NF_WebRip\)/}"
 done
 
 

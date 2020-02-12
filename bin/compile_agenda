@@ -2,6 +2,7 @@
 
 file=$1
 fileroot=$(echo ${file%.*})
+current_year=`date +'%Y'`
 
 
 if [[ -z ${file} ]];
@@ -14,5 +15,7 @@ else
     pandoc agenda.md -o ${fileroot}_agenda.pdf --template agenda.tex
     rm agenda.md
     mv ${fileroot}_agenda.pdf ~/Print/
+    cp ~/Print/${fileroot}_agenda.pdf /home/wadeallen/Dropbox/Administration/CCT_Summaries/${current_year}/Agendas/
+
 fi
 
