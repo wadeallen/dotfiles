@@ -11,6 +11,7 @@ enscript --media=Letter --title 'First Baptist Church Muncie Calendar' --fancy-h
 ps2pdf calendar.ps ~/Print/cct_calendar-${FIRST_MONTH}-${LAST_MONTH}.pdf
 cp ~/Print/cct_calendar-${FIRST_MONTH}-${LAST_MONTH}.pdf /home/wadeallen/Dropbox/Administration/CCT_Summaries/2020/Calendar/
 rm calendar*
+echo "CCT Calendar Compiled for ${FIRST_MONTH} and ${LAST_MONTH}"
 
 
 
