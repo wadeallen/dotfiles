@@ -3,3 +3,7 @@
 git add . &&
 git commit -m "updated site" &&
 git push
+
+if [[ $PWD/ = /home/* ]]; then
+	echo $PWD
+fi
