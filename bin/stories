@@ -71,7 +71,7 @@ for story in stories:
 		target.close()
 
 # Sort out Stories for 2020 Website
-website_dir = '/home/wadeallen/Sites/hugo_fbcmuncie/content/news/'
+website_dir = '/home/wadeallen/Sites/fbcmuncie_2020/content/news/'
 os.system('rm ' + website_dir + '*.md')
 for story in stories:
 	post = frontmatter.load(story)

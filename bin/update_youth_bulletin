@@ -78,7 +78,7 @@ target.write(next_a)
 target.write('\n\n\\vspace{\\fill}')
 target.close()
 
-target = open ('/home/wadeallen/Sites/hugo_fbcmuncie/layouts/shortcodes/youth-schedule.html', 'w')
+target = open ('/home/wadeallen/Sites/fbcmuncie_2020/layouts/shortcodes/youth-schedule.html', 'w')
 target.write('<div class="card card-border border-success shadow-lg mb-10 mt-10">')
 target.write('<div class="card-body">')
 target.write('<div class="list-group list-group-flush">')
