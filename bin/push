@@ -4,6 +4,9 @@ git add . &&
 git commit -m "updated site" &&
 git push
 
-if [[ $PWD/ = /home/* ]]; then
-	echo $PWD
+if [[ $PWD =~ /home/wadeallen/Sites/fbcmuncie_2020 ]]; then
+	cd /home/wadeallen/fbcmuncie_compiled &&
+	git add . &&
+	git commit -m "updated site" &&
+	git push
 fi
