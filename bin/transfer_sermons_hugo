@@ -49,16 +49,17 @@ for name in sermon_posts:
 	slug = slug.replace("'", "")
 	slug = slug.replace(":", "")
 	slug = re.sub("[\(\[].*?[\)\]]", "", slug)
-	filename =(home + '/Sites/hugo_fbcmuncie/content/video/' + date + '-' + slug + '.md')
+	filename =(home + '/Sites/fbcmuncie_2020/content/video/' + date + '-' + slug + '.md')
 	filename = filename.replace("-.", ".")
 	filename = filename.replace("--", "-")
 	filename = filename.replace(":", "-")
 	target = open (filename, 'w')
 	target.write('---\n')
-	target.write(f'author: "{speaker}"\n')
 	target.write(f'title: "{title}"\n')
 	target.write(f'scripture: "{scripture}"\n')
 	target.write(f'date: {date}\n')
+	target.write('people:\n')
+	target.write(f'   - {speaker}\n')
 	target.write(f'duration: {duration}\n')
 	target.write(f'length: {length}\n')
 	target.write(f'vimeo: {vimeo}\n')
@@ -71,21 +72,48 @@ for name in sermon_posts:
 
 # copy images over from old site to new
 for image in vimeo_pics:
-	copy_path = (home + '/Sites/hugo_fbcmuncie/static/images/vimeo/')
+	copy_path = (home + '/Sites/fbcmuncie_2020/static/images/vimeo/')
 	base = os.path.basename(image)
 	shutil.copyfile(image, copy_path + base)
 
 # copy sermon images to new site
 for image in sermon_images:
-	copy_path = (home + '/Sites/hugo_fbcmuncie/static/images/sermon/')
+	copy_path = (home + '/Sites/fbcmuncie_2020/static/images/sermon/')
 	base = os.path.basename(image)
 	shutil.copyfile(image, copy_path + base)
 
 # copy worship entries to new site
 for entry in worship_posts:
-	copy_path = (home + '/Sites/hugo_fbcmuncie/content/worship/')
-	base = os.path.basename(entry)
-	shutil.copyfile(entry, copy_path + base)
+	post = frontmatter.load(entry)
+	author = field('author')
+	title = field('title')
+	scripture = field('scripture')
+	date = field('date')
+	if date:
+		description = post.content
+		title_sliced = title.split()
+		slug = ("-".join(title_sliced).lower())
+		slug = slug.replace("?", "")
+		slug = slug.replace("'", "")
+		slug = slug.replace(":", "")
+		slug = re.sub("[\(\[].*?[\)\]]", "", slug)
+		filename =(home + '/Sites/fbcmuncie_2020/content/worship/' + date + '-' + slug + '.md')
+		filename = filename.replace("-.", ".")
+		filename = filename.replace("--", "-")
+		filename = filename.replace(":", "-")
+		target = open (filename, 'w')
+		target.write('---\n')
+		target.write(f'title: "{title}"\n')
+		target.write(f'scripture: "{scripture}"\n')
+		target.write(f'date: {date}\n')
+		target.write('people:\n')
+		target.write(f'  - {author}\n')
+		target.write('---\n')
+		target.write('\n')
+		target.write(description)
+		target.write("\n")
+		target.close()
+
 
 # copy blog posts to new site
 for name in blog_posts:
@@ -102,15 +130,16 @@ for name in blog_posts:
 		slug = slug.replace("'", "")
 		slug = slug.replace(":", "")
 		slug = re.sub("[\(\[].*?[\)\]]", "", slug)
-		filename =(home + '/Sites/hugo_fbcmuncie/content/blog/' + datestring + '-' + slug + '.md')
+		filename =(home + '/Sites/fbcmuncie_2020/content/blog/' + datestring + '-' + slug + '.md')
 		filename = filename.replace("-.", ".")
 		filename = filename.replace("--", "-")
 		filename = filename.replace(":", "-")
 		target = open (filename, 'w')
 		target.write('---\n')
-		target.write(f'author: "{speaker}"\n')
 		target.write(f'title: "{title}"\n')
 		target.write(f'date: {date}\n')
+		target.write('people:\n')
+		target.write(f'  - {author}\n')
 		target.write('---\n')
 		target.write('\n')
 		target.write(description)
