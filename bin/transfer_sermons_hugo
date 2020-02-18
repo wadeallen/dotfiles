@@ -16,7 +16,7 @@ sermons_path = (home + '/Sites/fbcmuncie_2018/_posts/2020*.md')
 sermon_posts = glob.glob(sermons_path)
 vimeo_pic_path = (home + '/Sites/fbcmuncie_2018/images/vimeo/*.jpg')
 vimeo_pics = glob.glob(vimeo_pic_path)
-blog_path = (home + '/Sites/fbcmuncie_2018/_posts/*.markdown')
+blog_path = (home + '/Sites/fbcmuncie_2018/_posts/2020*.markdown')
 blog_posts = glob.glob(blog_path)
 sermon_image_path = (home + '/Sites/fbcmuncie_2018/images/sermon/*.jpg')
 sermon_images = glob.glob(sermon_image_path)
@@ -81,6 +81,12 @@ for image in sermon_images:
 	copy_path = (home + '/Sites/fbcmuncie_2020/static/images/sermon/')
 	base = os.path.basename(image)
 	shutil.copyfile(image, copy_path + base)
+
+# remove all files from worship content folder
+worship_folder='/home/wadeallen/Sites/fbcmuncie_2020/content/worship/*'
+new_worship_entries=glob.glob(worship_folder)
+for file in new_worship_entries:
+	os.remove(file)
 
 # copy worship entries to new site
 for entry in worship_posts:
