@@ -72,7 +72,7 @@ item = api.items.add('Set up meeting with ' + name + ' family', project_id=proje
 item = api.items.add('Contact Member Care about ' + name + ' funeral meal', project_id=project_id, date_string=notify_date)
 
 # # mark deceased in database
-item = api.items.add('mark ' + name + ' deceased in database', project_id=project_id, date_string=notify_date)
+item = api.items.add('remove ' + name + ' from prayer list', project_id=project_id, date_string=notify_date)
 
 # # print backup copy of funeral
 print_backup = set_date(-1)
