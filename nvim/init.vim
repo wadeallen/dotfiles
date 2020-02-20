@@ -9,6 +9,7 @@ Plug 'SirVer/ultisnips'
 Plug 'ledger/vim-ledger'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug '907th/vim-auto-save'
 call plug#end()
 
 set bg=light
@@ -18,8 +19,7 @@ set nohlsearch
 set linebreak
 set clipboard=unnamedplus
 
-" autosave
-let g:workspace_autosave_always = 1
+let g:auto_save = 1  " enable AutoSave on Vim startup
 
 " Some basics:
 	nnoremap c "_c
