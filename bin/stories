@@ -7,6 +7,8 @@ import wget
 import re
 from titlecase import titlecase
 import operator
+from datetime import datetime
+
 
 # surpresses the download message of files
 def bar_none(current, total, width=80):
@@ -75,7 +77,7 @@ website_dir = '/home/wadeallen/Sites/fbcmuncie_2020/content/news/'
 os.system('rm ' + website_dir + '*.md')
 for story in stories:
 	post = frontmatter.load(story)
-	if 'website' in post['publications']:
+	if 'website' in post['publications'] and post.get('event') == None:
 		title = post['title']
 		title = titlecase(title)
 		slug = format_slug(title)
@@ -90,6 +92,30 @@ for story in stories:
 		post.content = re.sub(r'\{\{print:(.*?)\}\}*\{\{website:(.*?)\}\}', r'\2', post.content.rstrip())
 		target.write(post.content)
 		target.close()
+
+# events for 2020 website
+website_dir = '/home/wadeallen/Sites/fbcmuncie_2020/content/events/'
+os.system('rm ' + website_dir + '*.md')
+for story in stories:
+	post = frontmatter.load(story)
+	if 'website' in post['publications'] and post.get('event') != None: 
+		if post.get('event') == True:
+			title = post['title']
+			title = titlecase(title)
+			slug = format_slug(title)
+			filename = website_dir + slug + '.md'
+			event_date = datetime.strptime(post['date'], '%Y-%m-%d %H:%M')
+			target = open (filename, 'w')
+			target.write("---\n")
+			target.write("title: {}\n".format(title))
+			target.write("weight: {}\n".format(post['weight']))
+			target.write("date: {}\n".format(event_date))
+			target.write("---\n")
+			target.write("\n")
+			# replaces content of print with website version of file
+			post.content = re.sub(r'\{\{print:(.*?)\}\}*\{\{website:(.*?)\}\}', r'\2', post.content.rstrip())
+			target.write(post.content)
+			target.close()
 
 # Create LaTeX file for Bulletin
 bulletin_path = '/home/wadeallen/Dropbox/Pandoc/Pandoc_Bulletin/'
@@ -159,5 +185,53 @@ for article in article_list:
 
 with open(visitor_path + "articles.txt", "a") as visitor_file:
 	visitor_file.write('\n\input{includes/birthdays.tex}\n')
+
+
+
+# for weekly events
+weekly_events_file = "/home/wadeallen/Sites/fbcmuncie_2020/layouts/partials/weekly-events.html"
+days_of_week = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
+for day in days_of_week:
+	globals()[day]=[]
+for story in stories:
+	post = frontmatter.load(story)
+	if post.get('event') != None and 'weekly' in post['publications']:
+		if post.get('event') == 'weekly':
+			day = post.get('day')
+			time = post.get('time')
+			title = post['title']
+			globals()[day.lower()].append({'title' : title, 'time' : time})
+target = open(weekly_events_file, 'w')
+target.write('<div class="col-12 col-md-6 col-lg-6 offset-lg-1"><div class="card card-border border-success shadow-lg mb-5" data-aos="fade-up"><div class="card-body"><div class="list-group list-group-flush">')
+for d in days_of_week:
+	if globals()[d] != []:
+		target.write('<div class="list-group-item d-flex align-items-center"><div class="mr-auto">')
+		target.write(f'<p class="font-weight-bold mb-1">{d.title()}</p>')
+		for e in globals()[d]:
+			title = e.get('title')
+			time = e.get('time')
+			target.write(f'<p class="font-size-sm text-muted mb-0">{time} {title}</p>')
+		target.write('</div></div>')
+target.write('</div></div><p class="font-size-sm text-center text-gray-500 mb-0">Weekly Events</p></div></div>')
+target.close()
+
+
+
+
+# 				if day == day.title():
+# 					day.append(post['title'])
+# print(sunday)
+				# sunday.append(post['title'])
+
+	
+
+# print("Sunday:")
+# for e in sunday:
+# 	print(f"   {e}")
+		# event_date = datetime.strptime(post['date'], '%Y-%m-%d %H:%M')
+		# day_of_week = event_date.strftime("%a")
+		# print(day_of_week)
+
+
 
 

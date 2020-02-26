@@ -111,6 +111,7 @@ abbrev jesus Jesus
 abbrev paul Paul
 abbrev peter Peter
 abbrev john John
+abbrev sotm Sermon on the Mount
 
 "for Ledger program
 au BufNewFile,BufRead *.ldg,*.ledger setf ledger
