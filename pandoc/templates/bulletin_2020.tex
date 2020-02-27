@@ -1,0 +1,173 @@
+\listfiles
+\errorcontextlines=99
+\documentclass[
+notumble,
+nofoldmark,
+letterpaper,
+]{leaflet}
+
+\usepackage{hyperref}
+
+% to format date
+\usepackage{datetime}
+\def\parsecommitdate#1-#2-#3 \endparse{%
+  \date{\formatdate{#3}{#2}{#1}}%
+}
+
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{mathptmx}
+% added to include graphics
+\usepackage{graphicx}
+% added to float pictures and put border around them
+%package for spreadsheet data
+% \usepackage{csvsimple}
+%package for sorting out data from csv
+\usepackage{datatool}
+% added to float pictures and put border around them
+\usepackage{float}
+\floatstyle{boxed}
+\restylefloat{figure}
+\usepackage{wrapfig}
+
+%define tightlist
+\def\tightlist{}
+
+%for date format
+\usepackage[american]{isodate}
+
+\usepackage[scaled=0.9]{helvet}
+\makeatletter
+\def\ptmTeX{T\kern-.1667em\lower.5ex\hbox{E}\kern-.075emX\@}
+\DeclareRobustCommand{\ptmLaTeX}{L\kern-.3em
+        {\setbox0\hbox{T}%
+         %\vb@xt@ % :-)
+         \vbox to\ht0{\hbox{%
+                            \csname S@\f@size\endcsname
+                            \fontsize\sf@size\z@
+                            \math@fontsfalse\selectfont
+                            A}%
+                      \vss}%
+        }%
+        \kern-.12em
+        \ptmTeX}
+\makeatother
+\let\TeX=\ptmTeX
+\let\LaTeX=\ptmLaTeX
+\usepackage{shortvrb}
+\MakeShortVerb{\|}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage[dvipsnames,usenames]{color}
+\definecolor{LIGHTGRAY}{gray}{.9}
+
+%package for spreadsheet data
+\usepackage{csvsimple}
+
+%%titles of sections
+\usepackage{titlesec}
+
+\titleformat{\section}{\center\large\bfseries}{\thesection}{}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{}{}
+
+%%%%\renewcommand{\descfont}{\normalfont}
+\newcommand\Lpack[1]{\textsf{#1}}
+\newcommand\Lclass[1]{\textsf{#1}}
+\newcommand\Lopt[1]{\texttt{#1}}
+\newcommand\Lprog[1]{\textit{#1}}
+
+\newcommand*\defaultmarker{\textsuperscript\textasteriskcentered}
+
+\input{meta.tex}
+
+% add pdf metadata
+
+\pdfinfo{
+ /Author (First Baptist Church Muncie Indiana)
+ /Title (Bulletin for \sundaydate)
+ /Keywords (First Baptist Muncie, bulletin)
+ }
+
+ % changes font to sans-serif
+
+\renewcommand{\familydefault}{\sfdefault}
+
+% Load CCT information from csv file
+\DTLloaddb{cct}{cct.csv}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vfill
+{\centering
+\includegraphics[height=1.5in]{external/fbc-logo-bw}\par}
+\vfill
+\large A Spirit-led people \\ gathered to discover and \\ join God's presence \\ in our communities
+\vfill
+
+\LARGE\sundaydate\\
+\vfill
+\large Sermon:\\
+\LARGE\sermontitle\\
+\LARGE\scripture\\
+
+\vfill
+\end{titlepage}
+\thispagestyle{empty}
+
+$body$
+
+\vfill
+
+\input{includes/optional.tex}
+
+\vfill
+
+\section{Pastors}
+\begin{tabular}{@{}ll}
+\textsc{Dr.} Wade Allen & \verb|wade@fbcmuncie.org|\\
+ & 765-760-1520 \\
+ \textsc{Dr.} Clifton Davis & \verb|clif@fbcmuncie.org|\\
+ & 203-362-7042 \\
+\end{tabular}
+
+\vfill
+
+\section{Choir Director}
+\begin{tabular}{@{}ll}
+\textsc{Dr.} Bruce McFarland & \verb|bruce.mcfrlnd@gmail.com|\\
+ & 765-374-6011 \\
+\end{tabular}
+
+\vfill
+
+\section{Church Coordination Team}
+
+\begin{tabular}{@{}ll}
+\textsc{Moderator} \DTLfetch{cct}{Position}{Moderator}{Name} & \textsc{Treasurer} \DTLfetch{cct}{Position}{Treasurer}{Name} \\
+\textsc{Clerk} \DTLfetch{cct}{Position}{Clerk}{Name} & \textsc{Worship} \DTLfetch{cct}{Position}{Worship}{Name} \\
+\textsc{Care} \DTLfetch{cct}{Position}{Care}{Name} & \textsc{Adult} \DTLfetch{cct}{Position}{Adult}{Name} \\
+\textsc{Children} \DTLfetch{cct}{Position}{Children}{Name} & \textsc{Youth} \DTLfetch{cct}{Position}{Youth}{Name} \\
+\textsc{Outreach} \DTLfetch{cct}{Position}{Outreach}{Name} & \textsc{Property} \DTLfetch{cct}{Position}{Property}{Name} \\
+\textsc{At-Large} \DTLfetch{cct}{Position}{At-Large-Late}{Name} & \textsc{At-Large} \DTLfetch{cct}{Position}{At-Large-Early}{Name} \\
+\end{tabular}
+
+\medskip
+
+\centering
+\textsc{Church Office Hours} \\
+9:00 AM - Noon, 1:00 PM - 4:00 PM (Monday-Friday)
+
+\medskip
+
+\centering
+309 E. Adams Street, Muncie, IN 47305\\
+\textsc{Phone} 765-284-7749\\
+\texttt{https://fbcmuncie.org}
+
+\loggingall
+\end{document}
+\endinput
+
+\end{document}
