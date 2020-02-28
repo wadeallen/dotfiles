@@ -8,7 +8,12 @@ import re
 from titlecase import titlecase
 import operator
 from datetime import datetime
+from datetime import timedelta
 import csv
+import datetime as DT
+import dateutil.relativedelta as REL
+import pandas as pd
+
 
 
 # surpresses the download message of files
@@ -33,7 +38,7 @@ os.system('rm ' + stories_dir + '*.md')
 # file downloaded from Google Docs and stored as local text file
 # it is worth noting that the Google Doc must be shared with an editable link
 file_name = "stories.txt"
-url = 'https://docs.google.com/document/d/1gKLaR2rWaPUAiBeqDUqhrrEDuw0g11Q9N2mp4GcFSLc/export?format=txt'
+url = 'https://docs.google.com/document/d/1Yq9AF5_T4UwHX2JtzmTX9QfviWBDauqhTRW6498S1mY/export?format=txt'
 wget.download(url, file_name, bar = bar_none)
 
 # The file is then split into multiple files
@@ -52,26 +57,6 @@ path = 'story-[1-9]*.md'
 stories = glob.glob(path)
 stories =  sorted(stories)
 
-# Sort out Stories for Website
-website_dir = '/home/wadeallen/Sites/fbcmuncie_2018/_news/'
-os.system('rm ' + website_dir + '*.md')
-for story in stories:
-	post = frontmatter.load(story)
-	if 'website' in post['publications']:
-		title = post['title']
-		title = titlecase(title)
-		slug = format_slug(title)
-		filename = website_dir + slug + '.md'
-		target = open (filename, 'w')
-		target.write("---\n")
-		target.write("title: {}\n".format(title))
-		target.write("weight: {}\n".format(post['weight']))
-		target.write("---\n")
-		target.write("\n")
-		# replaces content of print with website version of file
-		post.content = re.sub(r'\{\{print:(.*?)\}\}*\{\{website:(.*?)\}\}', r'\2', post.content.rstrip())
-		target.write(post.content)
-		target.close()
 
 # Sort out Stories for 2020 Website
 website_dir = '/home/wadeallen/Sites/fbcmuncie_2020/content/news/'
@@ -118,74 +103,48 @@ for story in stories:
 			target.write(post.content)
 			target.close()
 
-# Create LaTeX file for Bulletin
-bulletin_path = '/home/wadeallen/Dropbox/Pandoc/Pandoc_Bulletin/'
-os.system('rm ' + bulletin_path + 'articles.txt')
-article_list = []
-for story in stories:
-	post = frontmatter.load(story)
-	if 'bulletin' in post['publications']:
-		title = post['title']
-		title = titlecase(title)
-		content = re.sub(r'\{\{print:(.*?)\}\}*\{\{website:(.*?)\}\}', r'\1', post.content.rstrip())
-		content = content.replace(r"\n", r"\n\n")
-		# forms a sublist that includes title[0], content[1], weight[2]
-		article = [title, content, post['weight']]
-		# builds the article list with a sublist of each article
-		article_list.append(article)
 
-# sorts articles by weight[2]
-article_list.sort(key=lambda x: int(x[2]))
+# # Create file for Visitor
+# visitor_path = '/home/wadeallen/Dropbox/Pandoc/Pandoc_Visitor/'
+# os.system('rm ' + visitor_path + 'articles.txt')
+# article_list = []
+# for story in stories:
+# 	post = frontmatter.load(story)
+# 	if 'visitor' in post['publications']:
+# 		title = post['title']
+# 		# makes all of the titles titlecase
+# 		title = titlecase(title)
+# 		if post.get('picture') != None:
+# 			picture = post.get('picture')
+# 		else:
+# 			picture = 'no picture'
+# 		# for these articles, the print section is used and the website section is taken out
+# 		content = re.sub(r'\{\{print:(.*?)\}\}*\{\{website:(.*?)\}\}', r'\1', post.content.rstrip())
+# 		content = content.replace(r"\n", r"\n\n")
+# 		# forms a sublist that includes title[0], content[1], weight[2]
+# 		article = [title, content, post['weight'], picture]
+# 		# builds the article list with a sublist of each article
+# 		article_list.append(article)
 
-# interates through each article (sorted by weight) and places them in the articles.txt file to be compiled by the visitor script
-for article in article_list:
-	with open(bulletin_path + "articles.txt", "a") as bulletin_file:
-		bulletin_file.write('\n\n')
-		bulletin_file.write('## ' + article[0] + '\n\n')
-		bulletin_file.write(article[1] + '\n\n')
-		bulletin_file.write('\\vspace{\\fill}')
+# # sorts articles by weight[2]
+# article_list.sort(key=lambda x: int(x[2]))
 
-# Create file for Visitor
-visitor_path = '/home/wadeallen/Dropbox/Pandoc/Pandoc_Visitor/'
-os.system('rm ' + visitor_path + 'articles.txt')
-article_list = []
-for story in stories:
-	post = frontmatter.load(story)
-	if 'visitor' in post['publications']:
-		title = post['title']
-		# makes all of the titles titlecase
-		title = titlecase(title)
-		if post.get('picture') != None:
-			picture = post.get('picture')
-		else:
-			picture = 'no picture'
-		# for these articles, the print section is used and the website section is taken out
-		content = re.sub(r'\{\{print:(.*?)\}\}*\{\{website:(.*?)\}\}', r'\1', post.content.rstrip())
-		content = content.replace(r"\n", r"\n\n")
-		# forms a sublist that includes title[0], content[1], weight[2]
-		article = [title, content, post['weight'], picture]
-		# builds the article list with a sublist of each article
-		article_list.append(article)
+# # interates through each article (sorted by weight) and places them in the articles.txt file to be compiled by the visitor script
+# for article in article_list:
+# 	with open(visitor_path + "articles.txt", "a") as visitor_file:
+# 			visitor_file.write('\n\n')
+# 			visitor_file.write('# ' + article[0] + '\n\n')
+# 			# if the article has a picture: name then it will place the latex code to generate that picture, if not, it will do nothing.
+# 			if article[3] != 'no picture':
+# 				# visitor_file.write('\\setlength\intextsep{0pt}')
+# 				visitor_file.write('\\begin{wrapfigure}{r}{.20\\textwidth}\n')
+# 				visitor_file.write('\\vspace{-5mm}')
+# 				visitor_file.write('\includegraphics[width=.18\\textwidth]{people/' + article[3] + '}\n')
+# 				visitor_file.write('\end{wrapfigure}\n\n')
+# 			visitor_file.write(article[1] + '\n\n')
 
-# sorts articles by weight[2]
-article_list.sort(key=lambda x: int(x[2]))
-
-# interates through each article (sorted by weight) and places them in the articles.txt file to be compiled by the visitor script
-for article in article_list:
-	with open(visitor_path + "articles.txt", "a") as visitor_file:
-			visitor_file.write('\n\n')
-			visitor_file.write('# ' + article[0] + '\n\n')
-			# if the article has a picture: name then it will place the latex code to generate that picture, if not, it will do nothing.
-			if article[3] != 'no picture':
-				# visitor_file.write('\\setlength\intextsep{0pt}')
-				visitor_file.write('\\begin{wrapfigure}{r}{.20\\textwidth}\n')
-				visitor_file.write('\\vspace{-5mm}')
-				visitor_file.write('\includegraphics[width=.18\\textwidth]{people/' + article[3] + '}\n')
-				visitor_file.write('\end{wrapfigure}\n\n')
-			visitor_file.write(article[1] + '\n\n')
-
-with open(visitor_path + "articles.txt", "a") as visitor_file:
-	visitor_file.write('\n\input{includes/birthdays.tex}\n')
+# with open(visitor_path + "articles.txt", "a") as visitor_file:
+# 	visitor_file.write('\n\input{includes/birthdays.tex}\n')
 
 
 
@@ -221,7 +180,7 @@ with open(visitor_path + "articles.txt", "a") as visitor_file:
 
 
 # Create LaTeX file for Bulletin 2020
-bulletin_path = '/home/wadeallen/Dropbox/Compile/bulletin'
+bulletin_path = '/home/wadeallen/Dropbox/Compile/bulletin/'
 os.system('rm ' + bulletin_path + 'articles.txt')
 article_list = []
 for story in stories:
@@ -247,11 +206,35 @@ for article in article_list:
 		bulletin_file.write(article[1] + '\n\n')
 		bulletin_file.write('\\vspace{\\fill}')
 
-# work with tsv file for 2020 bulletin
-with open("/home/wadeallen/Dropbox/Compile/bulletin/calendar.tsv") as fd:
-	rd = csv.reader(fd, delimiter="\t", quotechar='"')
-	for row in rd:
-		print(row)
+# # work with tsv file for 2020 bulletin
 
+# date_range = []
+# slots = []
+# with open("/home/wadeallen/Dropbox/Compile/bulletin/calendar.tsv") as fd:
+# 	events = csv.reader(fd, delimiter="\t", quotechar='"')
+# 	for row in events:
+# 		date_range.append(datetime.strptime(row[0], "%Y-%m-%d"))
+# 		slots.append({'date' : row[0], 'time' : row[1], 'title' : row[4]})
 
+# date_range = pd.Series(date_range).unique()
+# for day in date_range:
+# 	print(day)
+
+# date_range = set(date_range)
+# for day in date_range:
+# 	print(day)
+	# for e in slots:
+	# 	if e['date'] == day:
+	# 		print(e['title'])
+	
+df = pd.read_csv('/home/wadeallen/Dropbox/Compile/bulletin/calendar.tsv', sep='\t')
+days = df['sdate'].unique().tolist()
+for day in days:
+	weekday = datetime.strptime(day, "%Y-%m-%d")
+	print(weekday.strftime("%a, %b %d"))
+	ev = df.loc[df['sdate'] == day]
+	for e in ev.values:
+		time = datetime.strptime(e[1], "%H:%M")
+		title = e[4]
+		print(f'    {time.strftime("%-I:%M %p")}\t{title}')
 

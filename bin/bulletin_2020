@@ -9,7 +9,8 @@ THIS_WEEK=$(date -d 'sun' +'%Y-%m-%d')
 NEXT_WEEK=$(date -d 'sun 1 week' +'%Y-%m-%d')
 
 cd $DIRECTORY &&
-python3 /home/wadeallen/bin/stories &&
+python3 /home/wadeallen/bin/stories_2020 &&
+bash /home/wadeallen/bin/pull_church_calendar &&
 wget -O /home/wadeallen/Sites/fbcmuncie_2018/_data/youth.csv https://docs.google.com/spreadsheets/d/17jwnIWmA9zBxBMzG27ISV32_8x3O6ckNQ09XDcKdwCg/export?format=csv &&
 python3 /home/wadeallen/bin/update_youth_bulletin &&
 # wget -O Nursery_Volunteers.csv https://docs.google.com/spreadsheets/d/1OUqqFVGzVJwzf4-YOLL05WrKJKTQNIgULMjTKeNRgiY/export?format=csv &&
@@ -24,7 +25,7 @@ wget -O numbers.csv https://docs.google.com/spreadsheets/d/14TpbSCb71nw9jSrQetPE
 # sed -n '1p;2p' youth.csv > this_week.csv
 # sed -n '1pw3p' Nursery_Volunteers.csv > next_week.csv
 # pandoc $DIRECTORY/Bulletin.txt -o $HOME/Desktop/bulletin_$SUNDAY.pdf --template bulletin.tex &&
-pandoc $DIRECTORY/articles.txt -o $HOME/Print/${SUNDAY}_bulletin.pdf --template bulletin_2020.tex 
+pandoc $DIRECTORY/articles.txt -o $HOME/Desktop/${SUNDAY}_bulletin.pdf --template bulletin_2020.tex 
 # mv $DIRECTORY/Bulletin.txt $ARCHIVE/Bulletin_$SUNDAY.txt
 # cp $HOME/Print/${SUNDAY}_bulletin.pdf $ARCHIVE/ &&
 # cp $HOME/Print/${SUNDAY}_bulletin.pdf $EDITING/ &&

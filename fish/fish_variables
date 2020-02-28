@@ -8,6 +8,7 @@ SETUVAR _fish_abbr_2020:cd\x20\x24HOME/Sites/fbcmuncie_2020
 SETUVAR _fish_abbr_add:todoist_add\x2epy\x20\x2dt
 SETUVAR _fish_abbr_aud:cd\x20\x24HOME/Dropbox/Sermon_Audio
 SETUVAR _fish_abbr_bank:ledger\x20\x2df\x20\x24HOME/Dropbox/Ledger/ledger\x2eledger\x20cleared\x20bank
+SETUVAR _fish_abbr_bul:cd\x20\x24HOME/Dropbox/Compile/bulletin
 SETUVAR _fish_abbr_cct:cd\x20\x24HOME/Dropbox/Administration/CCT_Summaries/2020
 SETUVAR _fish_abbr_checking:ledger\x20\x2df\x20\x24HOME/Dropbox/Ledger/ledger\x2eledger\x20cleared\x20checking
 SETUVAR _fish_abbr_clean:maid\x20clean\x20\x2df
