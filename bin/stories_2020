@@ -226,15 +226,23 @@ for article in article_list:
 	# for e in slots:
 	# 	if e['date'] == day:
 	# 		print(e['title'])
+
+includes_dir = '/home/wadeallen/Dropbox/Compile/bulletin/includes/'
+weekly_file = includes_dir + 'weekly_events.tex'
+open(weekly_file,  "w").close()
 	
 df = pd.read_csv('/home/wadeallen/Dropbox/Compile/bulletin/calendar.tsv', sep='\t')
 days = df['sdate'].unique().tolist()
 for day in days:
 	weekday = datetime.strptime(day, "%Y-%m-%d")
-	print(weekday.strftime("%a, %b %d"))
-	ev = df.loc[df['sdate'] == day]
-	for e in ev.values:
-		time = datetime.strptime(e[1], "%H:%M")
-		title = e[4]
-		print(f'    {time.strftime("%-I:%M %p")}\t{title}')
+	with open(weekly_file, "a") as weekly:
+		weekly.write(f'\\bfseries\\scshape {weekday.strftime("%a, %b %d")}\n\n')
+		ev = df.loc[df['sdate'] == day]
+		weekly.write('\\begin{tabular}{r l}\n')
+		for e in ev.values:
+			time = datetime.strptime(e[1], "%H:%M")
+			title = e[4]
+			weekly.write(f'\\normalfont\\scshape {time.strftime("%-I:%M %p")} & \\normalfont {title} \\\\ \n')
+		weekly.write('\\end{tabular}\n')
+		weekly.write('\\normalfont \\vspace{1em} \\\\ \n')
 

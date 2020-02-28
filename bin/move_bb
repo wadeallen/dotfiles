@@ -1,5 +1,5 @@
 #!/bin/bash
 
-  for filename in ./The.Big.Bang.*.mkv; do
-    scp ${filename} pi@192.168.1.128:/home/pi/TV/Big_Bang_Theory/
+  for filename in ./Blue*.mkv; do
+    scp ${filename} root@192.168.1.1:/root/TV/Blue_Bloods/
   done

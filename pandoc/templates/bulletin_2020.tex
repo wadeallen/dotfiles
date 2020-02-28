@@ -14,6 +14,12 @@ letterpaper,
   \date{\formatdate{#3}{#2}{#1}}%
 }
 
+% for fonts
+\usepackage{libertine}
+\usepackage{libertinust1math}
+
+\usepackage{fontawesome}
+
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
 \usepackage{mathptmx}
@@ -36,7 +42,7 @@ letterpaper,
 %for date format
 \usepackage[american]{isodate}
 
-\usepackage[scaled=0.9]{helvet}
+% \usepackage[scaled=0.9]{helvet}
 \makeatletter
 \def\ptmTeX{T\kern-.1667em\lower.5ex\hbox{E}\kern-.075emX\@}
 \DeclareRobustCommand{\ptmLaTeX}{L\kern-.3em
@@ -114,8 +120,10 @@ letterpaper,
 
 \vfill
 \end{titlepage}
+
 \thispagestyle{empty}
 
+\subsection{\faCalendar \hspace{.5em} This Week}
 \input{includes/weekly_events.tex}
 
 $body$
