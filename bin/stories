@@ -8,7 +8,6 @@ import re
 from titlecase import titlecase
 import operator
 from datetime import datetime
-import csv
 
 
 # surpresses the download message of files
@@ -247,11 +246,6 @@ for article in article_list:
 		bulletin_file.write(article[1] + '\n\n')
 		bulletin_file.write('\\vspace{\\fill}')
 
-# work with tsv file for 2020 bulletin
-with open("/home/wadeallen/Dropbox/Compile/bulletin/calendar.tsv") as fd:
-	rd = csv.reader(fd, delimiter="\t", quotechar='"')
-	for row in rd:
-		print(row)
 
 
 

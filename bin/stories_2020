@@ -10,8 +10,6 @@ import operator
 from datetime import datetime
 from datetime import timedelta
 import csv
-import datetime as DT
-import dateutil.relativedelta as REL
 import pandas as pd
 
 
@@ -206,43 +204,40 @@ for article in article_list:
 		bulletin_file.write(article[1] + '\n\n')
 		bulletin_file.write('\\vspace{\\fill}')
 
-# # work with tsv file for 2020 bulletin
-
-# date_range = []
-# slots = []
-# with open("/home/wadeallen/Dropbox/Compile/bulletin/calendar.tsv") as fd:
-# 	events = csv.reader(fd, delimiter="\t", quotechar='"')
-# 	for row in events:
-# 		date_range.append(datetime.strptime(row[0], "%Y-%m-%d"))
-# 		slots.append({'date' : row[0], 'time' : row[1], 'title' : row[4]})
-
-# date_range = pd.Series(date_range).unique()
-# for day in date_range:
-# 	print(day)
-
-# date_range = set(date_range)
-# for day in date_range:
-# 	print(day)
-	# for e in slots:
-	# 	if e['date'] == day:
-	# 		print(e['title'])
-
+# Weekly Calendar in Bulletin
 includes_dir = '/home/wadeallen/Dropbox/Compile/bulletin/includes/'
 weekly_file = includes_dir + 'weekly_events.tex'
 open(weekly_file,  "w").close()
 	
 df = pd.read_csv('/home/wadeallen/Dropbox/Compile/bulletin/calendar.tsv', sep='\t')
 days = df['sdate'].unique().tolist()
+
 for day in days:
 	weekday = datetime.strptime(day, "%Y-%m-%d")
 	with open(weekly_file, "a") as weekly:
 		weekly.write(f'\\bfseries\\scshape {weekday.strftime("%a, %b %d")}\n\n')
 		ev = df.loc[df['sdate'] == day]
-		weekly.write('\\begin{tabular}{r l}\n')
+		weekly.write('\\begin{tabular}{r p{0.7\\textwidth}}\n')
 		for e in ev.values:
 			time = datetime.strptime(e[1], "%H:%M")
 			title = e[4]
 			weekly.write(f'\\normalfont\\scshape {time.strftime("%-I:%M %p")} & \\normalfont {title} \\\\ \n')
 		weekly.write('\\end{tabular}\n')
 		weekly.write('\\normalfont \\vspace{1em} \\\\ \n')
+
+
+# for other events for bulletin
+future_events_file = includes_dir + 'future_events.csv'
+open(future_events_file,  "w").close()
+
+for story in stories:
+	post = frontmatter.load(story)
+	if 'bulletin' in post['publications'] and post.get('event') == True:
+		title = post['title']
+		date = post['date']
+		with open(future_events_file, "a") as events:
+			events.write(date + ',' + title + '\n')
+		
+
+
 

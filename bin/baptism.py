@@ -43,9 +43,9 @@ api = todoist.TodoistAPI(config.todoist_api)
 pc_date = today
 item = api.items.add('Add ' + name + ' baptism to planning center', project_id=project_id, date_string=pc_date.strftime('%Y-%m-%d'))
 
-# contact Larry about filling baptistry
+# contact Brian about filling baptistry
 fill_date = set_date(-6)
-item = api.items.add('Contact Larry to fill baptistry for ' + name + ' baptism', project_id=project_id, date_string=fill_date.strftime('%Y-%m-%d'))
+item = api.items.add('Contact Brian to fill baptistry for ' + name + ' baptism', project_id=project_id, date_string=fill_date.strftime('%Y-%m-%d'))
 
 # double check baptistry
 check_date = set_date(-1)

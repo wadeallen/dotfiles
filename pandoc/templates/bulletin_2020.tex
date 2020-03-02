@@ -16,7 +16,6 @@ letterpaper,
 
 % for fonts
 \usepackage{libertine}
-\usepackage{libertinust1math}
 
 \usepackage{fontawesome}
 
@@ -73,7 +72,7 @@ letterpaper,
 %%titles of sections
 \usepackage{titlesec}
 
-\titleformat{\section}{\center\large\bfseries}{\thesection}{}{}
+\titleformat{\section}{\center\Large\bfseries}{\thesection}{}{}
 \titleformat{\subsection}{\large\bfseries}{\thesubsection}{}{}
 
 %%%%\renewcommand{\descfont}{\normalfont}
@@ -123,10 +122,27 @@ letterpaper,
 
 \thispagestyle{empty}
 
-\subsection{\faCalendar \hspace{.5em} This Week}
+\section{\faCalendar \hspace{.5em} Calendar}
+\subsection{This Week}
 \input{includes/weekly_events.tex}
 
-$body$
+\subsection{Upcoming Events}
+
+Pull in CSV file here formatted by event
+
+\pagebreak
+
+\section{Announcements}
+
+\input{includes/current_visitor.tex}
+
+\pagebreak
+
+\section{People}
+
+List of people serving in various capacitites
+
+\pagebreak
 
 \vfill
 
