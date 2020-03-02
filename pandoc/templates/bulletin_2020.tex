@@ -100,6 +100,23 @@ letterpaper,
 % Load CCT information from csv file
 \DTLloaddb{cct}{cct.csv}
 
+% environments defined
+%for tasks
+\newcommand{\upcomingevent}[3]{
+\vspace{1em}
+\begin{minipage}{.05 \textwidth}
+\hfill \faCalendarPlusO
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}{.85 \textwidth}
+	\textbf{Task: }#1 (#2) \\ 
+	by #3
+
+\end{minipage}
+\vspace{1em}
+}
+
+
 \begin{document}
 
 \begin{titlepage}
@@ -126,9 +143,16 @@ letterpaper,
 \subsection{This Week}
 \input{includes/weekly_events.tex}
 
+\vfill
+
 \subsection{Upcoming Events}
 
 Pull in CSV file here formatted by event
+
+\upcomingevent{test}{test}{2020-03-02}
+
+
+\vfill
 
 \pagebreak
 

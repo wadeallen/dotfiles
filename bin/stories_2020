@@ -227,16 +227,38 @@ for day in days:
 
 
 # for other events for bulletin
-future_events_file = includes_dir + 'future_events.csv'
-open(future_events_file,  "w").close()
+future_csv = bulletin_path + 'future_events.csv'
+future_tex = includes_dir + 'future_events.tex'
+open(future_csv,  "w").close()
+
+with open(future_csv, "a") as events:
+	events.write('date,title,contact\n')
 
 for story in stories:
 	post = frontmatter.load(story)
 	if 'bulletin' in post['publications'] and post.get('event') == True:
 		title = post['title']
+		if post.get('contact'):
+			contact = post.get('contact')
+		else:
+			contact = "Church Office"
+		# date = datetime.strptime(post['date'], "%Y-%m-%d %H:%M")
 		date = post['date']
-		with open(future_events_file, "a") as events:
-			events.write(date + ',' + title + '\n')
+		with open(future_csv, "a") as events:
+			events.write(f'{date},{title},{contact}\n')
+
+events_df = pd.read_csv('/home/wadeallen/Dropbox/Compile/bulletin/future_events.csv', sep=',')
+events_df.sort_values(by=['date'], inplace=True, ascending=True)
+
+for e in events_df.values:
+	day = datetime.strptime(e[0], "%Y-%m-%d %H:%M")
+	date = day.strftime("%a, %b %d")
+	time = day.strftime("%-I:%M %p")
+	title = e[1]
+	contact = e[2]
+	print(title,date,time,contact)
+
+
 		
 
 
