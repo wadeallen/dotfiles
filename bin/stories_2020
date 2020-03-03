@@ -12,8 +12,6 @@ from datetime import timedelta
 import csv
 import pandas as pd
 
-
-
 # surpresses the download message of files
 def bar_none(current, total, width=80):
     return '';
@@ -25,6 +23,7 @@ def format_slug(text):
 	slug = slug.replace("'", "")
 	slug = re.sub("[\(\[].*?[\)\]]", "", slug)
 	return slug
+
 
 # move to directory in Dropbox to do the work
 stories_dir = '/home/wadeallen/Dropbox/Stories/'
@@ -78,28 +77,28 @@ for story in stories:
 		target.close()
 
 # events for 2020 website
-website_dir = '/home/wadeallen/Sites/fbcmuncie_2020/content/events/'
-os.system('rm ' + website_dir + '*.md')
-for story in stories:
-	post = frontmatter.load(story)
-	if 'website' in post['publications'] and post.get('event') != None: 
-		if post.get('event') == True:
-			title = post['title']
-			title = titlecase(title)
-			slug = format_slug(title)
-			filename = website_dir + slug + '.md'
-			event_date = datetime.strptime(post['date'], '%Y-%m-%d %H:%M')
-			target = open (filename, 'w')
-			target.write("---\n")
-			target.write("title: {}\n".format(title))
-			target.write("weight: {}\n".format(post['weight']))
-			target.write("date: {}\n".format(event_date))
-			target.write("---\n")
-			target.write("\n")
-			# replaces content of print with website version of file
-			post.content = re.sub(r'\{\{print:(.*?)\}\}*\{\{website:(.*?)\}\}', r'\2', post.content.rstrip())
-			target.write(post.content)
-			target.close()
+# website_dir = '/home/wadeallen/Sites/fbcmuncie_2020/content/events/'
+# os.system('rm ' + website_dir + '*.md')
+# for story in stories:
+# 	post = frontmatter.load(story)
+# 	if 'website' in post['publications'] and post.get('event') != None: 
+# 		if post.get('event') == True:
+# 			title = post['title']
+# 			title = titlecase(title)
+# 			slug = format_slug(title)
+# 			filename = website_dir + slug + '.md'
+# 			event_date = datetime.strptime(post['date'], '%Y-%m-%d %H:%M')
+# 			target = open (filename, 'w')
+# 			target.write("---\n")
+# 			target.write("title: {}\n".format(title))
+# 			target.write("weight: {}\n".format(post['weight']))
+# 			target.write("date: {}\n".format(event_date))
+# 			target.write("---\n")
+# 			target.write("\n")
+# 			# replaces content of print with website version of file
+# 			post.content = re.sub(r'\{\{print:(.*?)\}\}*\{\{website:(.*?)\}\}', r'\2', post.content.rstrip())
+# 			target.write(post.content)
+# 			target.close()
 
 
 # # Create file for Visitor
@@ -230,9 +229,10 @@ for day in days:
 future_csv = bulletin_path + 'future_events.csv'
 future_tex = includes_dir + 'future_events.tex'
 open(future_csv,  "w").close()
+open(future_tex,  "w").close()
 
 with open(future_csv, "a") as events:
-	events.write('date,title,contact\n')
+	events.write('date,title,contact,where\n')
 
 for story in stories:
 	post = frontmatter.load(story)
@@ -242,24 +242,86 @@ for story in stories:
 			contact = post.get('contact')
 		else:
 			contact = "Church Office"
+		if post.get('where'):
+			where = post.get('where')
+		else:
+			where = "Church"
 		# date = datetime.strptime(post['date'], "%Y-%m-%d %H:%M")
 		date = post['date']
 		with open(future_csv, "a") as events:
-			events.write(f'{date},{title},{contact}\n')
+			events.write(f'{date},{title},{contact},{where}\n')
 
-events_df = pd.read_csv('/home/wadeallen/Dropbox/Compile/bulletin/future_events.csv', sep=',')
+events_df = pd.read_csv(future_csv, sep=',')
 events_df.sort_values(by=['date'], inplace=True, ascending=True)
 
 for e in events_df.values:
 	day = datetime.strptime(e[0], "%Y-%m-%d %H:%M")
-	date = day.strftime("%a, %b %d")
+	date = day.strftime("%A, %B %d")
 	time = day.strftime("%-I:%M %p")
 	title = e[1]
 	contact = e[2]
-	print(title,date,time,contact)
+	where = e[3]
+	with open(future_tex, "a") as future:
+		future.write(f'\\subsubsection{{{date}}} \n')
+		future.write('\\begin{tabular}{r l}')
+		future.write(f'{time} & {title} \\\\ \n')
+		future.write(f' & \\textsc{{Contact:}} {contact} \\\\ \n')
+		future.write(f' & \\textsc{{Location:}} {where} \\\\ \n')
+		future.write('\\end{tabular}')
 
 
-		
+
+
+# get current visitor
+current_visitor = includes_dir + 'current_visitor.tex'
+open(current_visitor,  "w").close()
+
+visitor_df = pd.read_csv('/home/wadeallen/Sites/fbcmuncie_2020/data/visitors.csv', sep=',', nrows=1, header=None)
+
+for m in visitor_df.values:
+	month = m[1]
+	with open(current_visitor, "a") as currentvisitor:
+		currentvisitor.write(f'The {month} Visitor is now available on the church website. You can download it at \\textsl{{fbcmuncie.org/visitor}}')
+
+
+
+# announcements for the bulletin
+active_ann_tsv = bulletin_path + 'active_ann.tsv'
+active_ann_tex = includes_dir + 'active_ann.tex'
+open(active_ann_tsv,  "w").close()
+open(active_ann_tex,  "w").close()
+
+
+with open(active_ann_tsv, "a") as announce:
+	announce.write('title\tdescription\tcontact\n')
+
+for story in stories:
+	post = frontmatter.load(story)
+	if 'bulletin' in post['publications'] and post.get('event') != True:
+		title = post['title']
+		if post.get('contact'):
+			contact = post.get('contact')
+		else:
+			contact = "Church Office"
+		description = post.content
+		with open(active_ann_tsv, "a") as announce:
+			announce.write(f'{title}\t{description}\t{contact}\n')
+
+announce_df = pd.read_csv(active_ann_tsv, sep='\t')
+
+for a in announce_df.values:
+	with open(active_ann_tex, "a") as announce:
+		title = a[0]
+		description = a[1]
+		contact = a[2]
+		announce.write(f'\\vfill {description} \\\\\n \\hspace*{{0pt}}\\hfill \\contact{{{contact}}} \\\\\n')
+
+
+
+
+
+
+
 
 
 

@@ -25,7 +25,7 @@ wget -O numbers.csv https://docs.google.com/spreadsheets/d/14TpbSCb71nw9jSrQetPE
 # sed -n '1p;2p' youth.csv > this_week.csv
 # sed -n '1pw3p' Nursery_Volunteers.csv > next_week.csv
 # pandoc $DIRECTORY/Bulletin.txt -o $HOME/Desktop/bulletin_$SUNDAY.pdf --template bulletin.tex &&
-pandoc $DIRECTORY/articles.txt -o $HOME/Desktop/${SUNDAY}_bulletin.pdf --template bulletin_2020.tex 
+pandoc $DIRECTORY/articles.txt -o $DIRECTORY/${SUNDAY}_bulletin.pdf --template bulletin_2020.tex 
 # mv $DIRECTORY/Bulletin.txt $ARCHIVE/Bulletin_$SUNDAY.txt
 # cp $HOME/Print/${SUNDAY}_bulletin.pdf $ARCHIVE/ &&
 # cp $HOME/Print/${SUNDAY}_bulletin.pdf $EDITING/ &&
