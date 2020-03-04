@@ -109,17 +109,22 @@ letterpaper,
 
 \newcommand{\contact}[1]{Contact: \hspace{.2em} #1}
 \newcommand{\location}[1]{Location: \hspace{.2em} #1}
+\newcommand{\eventdate}[1]{\hspace{.5em} \faCalendarO \hspace{.2em} #1}
+\newcommand{\eventtime}[1]{\hspace{.5em} \faClockO \hspace{.2em} #1}
 \newcommand{\aline}{\begin{center}\line(1,0){100}\end{center}}
 \newcommand{\phone}[1]{\small{\faPhone \hspace{.2em} #1}}
 \newcommand{\email}[1]{\small{\faEnvelopeO \hspace{.2em} #1}}
+\newcommand{\cct}[1]{
+        \textsc{#1} \textbf{\DTLfetch{cct}{Position}{#1}{Name}} \\ 
+        \hspace*{5mm} {\small \faPhone \hspace{.1em} \DTLfetch{cct}{Position}{#1}{Phone} \hspace{.2em} \faEnvelopeO \hspace{.1em} \DTLfetch{cct}{Position}{#1}{Email}} \vspace{.05em}  \\}
 \newcommand{\pastor}[4]{
 \begin{tabular}{r l}
-\multirow[t]{3}{8em}{#1} & \textsc{#2} \\
+\textsc{\multirow[t]{3}{8em}{#1}} & \textbf{#2} \\
  & \phone{#3} \\
  & \email{#4} \\
  \end{tabular}
  \newline
-\vspace*{5mm}
+\vspace*{2mm}
 \newline
 }
 
@@ -129,12 +134,12 @@ letterpaper,
 \centering
 \vfill
 {\centering
-\includegraphics[height=1.5in]{external/fbc-logo-bw}\par}
+\includegraphics[width=\textwidth]{logo.pdf}\par}
+\vfill
+\LARGE\sundaydate\\
 \vfill
 \large A Spirit-led people \\ gathered to discover and \\ join God's presence \\ in our communities
 \vfill
-
-\LARGE\sundaydate\\
 \vfill
 \large Sermon:\\
 \LARGE\sermontitle\\
@@ -147,8 +152,6 @@ letterpaper,
 
 \section{\faCalendar \hspace{.5em} Calendar}
 
-
-
 \subsection{This Week}
 \input{includes/weekly_events.tex}
 
@@ -156,24 +159,14 @@ letterpaper,
 
 \pagebreak
 
-\section{\faCalendarPlusO \hspace{.5em} Events}
+% \section{\faCalendarPlusO \hspace{.5em} Events}
 
-\vfill
-
-\input{includes/future_events.tex}
+$body$
 
 
-\vfill
+% \input{includes/current_visitor.tex}
 
-\pagebreak
-
-\section{\faBullhorn \hspace{.5em} Announcements}
-
-\vfill
-
-\input{includes/current_visitor.tex}
-
-\input{includes/active_ann.tex}
+% \input{includes/active_ann.tex}
 
 \vfill
 
@@ -181,30 +174,32 @@ letterpaper,
 
 \section{\faGroup \hspace{.5em} People}
 
-\pastor{Pastor}{Dr. Wade Allen}{765-760-1520}{wade@fbcmuncie.org}
-\pastor{Worship Arts Pastor}{Dr. Clifton Davis}{203-362-7042}{clif@fbcmuncie.org}
-\pastor{Choir Director}{Bruce McFarland}{765-374-6011}{bruce.mcfrlnd@gmail.com}
 
 The \textbf{Church Coordination Team} is the primary leadership team of the church.
 
-\begin{tabular}{@{}ll}
-\textsc{Moderator} \DTLfetch{cct}{Position}{Moderator}{Name} & \textsc{Treasurer} \DTLfetch{cct}{Position}{Treasurer}{Name} \\
-\textsc{Clerk} \DTLfetch{cct}{Position}{Clerk}{Name} & \textsc{Worship} \DTLfetch{cct}{Position}{Worship}{Name} \\
-\textsc{Care} \DTLfetch{cct}{Position}{Care}{Name} & \textsc{Adult} \DTLfetch{cct}{Position}{Adult}{Name} \\
-\textsc{Children} \DTLfetch{cct}{Position}{Children}{Name} & \textsc{Youth} \DTLfetch{cct}{Position}{Youth}{Name} \\
-\textsc{Outreach} \DTLfetch{cct}{Position}{Outreach}{Name} & \textsc{Property} \DTLfetch{cct}{Position}{Property}{Name} \\
-\textsc{At-Large} \DTLfetch{cct}{Position}{At-Large-Late}{Name} & \textsc{At-Large} \DTLfetch{cct}{Position}{At-Large-Early}{Name} \\
-\end{tabular}
+\cct{Moderator}
+\cct{Treasurer}
+\cct{Clerk}
+\cct{Worship}
+\cct{Care}
+\cct{Adult}
+\cct{Children}
+\cct{Youth}
+\cct{Outreach}
+\cct{At-Large-Late}
+\cct{At-Large-Early}
 
 \vspace{5mm}
 
 \input{includes/diaconate.tex}
 
-\vspace{3cm}
+\pagebreak
+
+\pastor{Pastor}{Dr. Wade Allen}{765-760-1520}{wade@fbcmuncie.org}
+\pastor{Worship Arts Pastor}{Dr. Clifton Davis}{203-362-7042}{clif@fbcmuncie.org}
+\pastor{Choir Director}{Bruce McFarland}{765-374-6011}{bruce.mcfrlnd@gmail.com}
 
 Idea: List those who are scheduled to serve (nursery, security, etc)
-
-\pagebreak
 
 \vfill
 
