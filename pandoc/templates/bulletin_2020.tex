@@ -4,7 +4,7 @@
 notumble,
 nofoldmark,
 letterpaper,
-11pt,
+10pt,
 ]{leaflet}
 
 \usepackage{hyperref}
@@ -20,6 +20,7 @@ letterpaper,
 
 % for fonts
 \usepackage{libertine}
+% \usepackage{bera}
 
 \usepackage{fontawesome}
 
@@ -107,13 +108,15 @@ letterpaper,
 
 % environments and commands defined
 
-\newcommand{\contact}[1]{Contact: \hspace{.2em} #1}
+\newcommand{\contact}[1]{\faPhone \hspace{.2em} #1}
 \newcommand{\location}[1]{Location: \hspace{.2em} #1}
 \newcommand{\eventdate}[1]{\hspace{.5em} \faCalendarO \hspace{.2em} #1}
 \newcommand{\eventtime}[1]{\hspace{.5em} \faClockO \hspace{.2em} #1}
+\newcommand{\eventlocation}[1]{\hspace{.5em} \faMapMarker \hspace{.2em} #1}
 \newcommand{\aline}{\begin{center}\line(1,0){100}\end{center}}
 \newcommand{\phone}[1]{\small{\faPhone \hspace{.2em} #1}}
 \newcommand{\email}[1]{\small{\faEnvelopeO \hspace{.2em} #1}}
+\newcommand{\buffer}{\newline \vspace*{.1mm} \newline}
 \newcommand{\cct}[1]{
         \textsc{#1} \textbf{\DTLfetch{cct}{Position}{#1}{Name}} \\ 
         \hspace*{5mm} {\small \faPhone \hspace{.1em} \DTLfetch{cct}{Position}{#1}{Phone} \hspace{.2em} \faEnvelopeO \hspace{.1em} \DTLfetch{cct}{Position}{#1}{Email}} \vspace{.05em}  \\}
@@ -134,7 +137,8 @@ letterpaper,
 \centering
 \vfill
 {\centering
-\includegraphics[width=\textwidth]{logo.pdf}\par}
+% \includegraphics[width=\textwidth]{logo.pdf}\par}
+\includegraphics[height=1.5in]{external/fbc-logo-bw}\par}
 \vfill
 \LARGE\sundaydate\\
 \vfill
@@ -163,10 +167,6 @@ letterpaper,
 
 $body$
 
-
-% \input{includes/current_visitor.tex}
-
-% \input{includes/active_ann.tex}
 
 \vfill
 

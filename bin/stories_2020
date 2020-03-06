@@ -24,6 +24,19 @@ def format_slug(text):
 	slug = re.sub("[\(\[].*?[\)\]]", "", slug)
 	return slug
 
+includes_dir = '/home/wadeallen/Dropbox/Compile/bulletin/includes/'
+
+# get current visitor
+current_visitor = includes_dir + 'current_visitor.tex'
+open(current_visitor,  "w").close()
+
+visitor_df = pd.read_csv('/home/wadeallen/Sites/fbcmuncie_2020/data/visitors.csv', sep=',', nrows=1, header=None)
+
+for m in visitor_df.values:
+	month = m[1]
+	with open(current_visitor, "a") as currentvisitor:
+		currentvisitor.write(f'\\subsection{{{month} Visitor}} \n\n The {month} Visitor is now available on the church website. You can download it at \\textsl{{fbcmuncie.org/visitor}} \n\n \\vfill \n\n')
+
 
 # move to directory in Dropbox to do the work
 stories_dir = '/home/wadeallen/Dropbox/Stories/'
@@ -198,6 +211,7 @@ article_list.sort(key=lambda x: int(x[2]))
 # add header to articles.txt
 with open(bulletin_path + "articles.txt", "a") as bulletin_file:
 	bulletin_file.write('\\section{\\faBullhorn \\hspace{.5em} Announcements}\n\n')
+	bulletin_file.write('\\input{includes/current_visitor.tex} \n\n')
 
 # interates through each article (sorted by weight) and places them in the articles.txt file to be compiled by the visitor script
 for article in article_list:
@@ -217,38 +231,52 @@ for story in stories:
 		content = re.sub(r'\{\{print:(.*?)\}\}*\{\{website:(.*?)\}\}', r'\1', post.content.rstrip())
 		content = content.replace(r"\n", r"\n\n")
 		date = post.get('date')
+		where = post.get('where')
+		what = post.get('what')
 		# forms a sublist that includes title[0], content[1], weight[2]
-		event = [title, content, post['weight'],date]
+		event = [title, date, where, content, what]
 		# builds the article list with a sublist of each article
 		event_list.append(event)
 
+def takeSecond(elem):
+    return elem[1]
+
+event_list = sorted(event_list, key=takeSecond)
 with open(bulletin_path + "articles.txt", "a") as events_file:
-	events_file.write('\\section{\\faCalendarPlusO  \\hspace{.5em} Events}\n\n')
+	events_file.write('\\pagebreak \\section{\\faCalendarPlusO  \\hspace{.5em} Events}\n\n')
 
 for event in event_list:
 	with open(bulletin_path + "articles.txt", "a") as bulletin_file:
 		title = event[0]
-		date = datetime.strptime(event[3], "%Y-%m-%d %H:%M")
+		date = datetime.strptime(event[1], "%Y-%m-%d %H:%M")
+		where = event[2]
 		day = date.strftime("%A, %B %d")
 		time = date.strftime("%-I:%M %p")
+		content = event[3]
+		what = event[4]
 		bulletin_file.write(f'## {title} \n\n')
+		if what != None:
+			bulletin_file.write(f'\\textsl{{{what}}} \n\n')
 		bulletin_file.write(f'\\eventdate {day}')
-		bulletin_file.write(f'\\eventtime {time} \n\n')
-		bulletin_file.write(event[1] + '\n\n')
+		if time != "12:00 AM":
+			bulletin_file.write(f'\\eventtime {time} \n\n')
+		else:
+			bulletin_file.write('\n\n')
+		bulletin_file.write(f'\\eventlocation {where}\n\n')
+		bulletin_file.write(f'{content}')
 		bulletin_file.write('\\vspace{\\fill}\n\n')
 
 
 # Weekly Calendar in Bulletin
-includes_dir = '/home/wadeallen/Dropbox/Compile/bulletin/includes/'
 weekly_file = includes_dir + 'weekly_events.tex'
 open(weekly_file,  "w").close()
 	
 df = pd.read_csv('/home/wadeallen/Dropbox/Compile/bulletin/calendar.tsv', sep='\t')
 days = df['sdate'].unique().tolist()
 
-for day in days:
-	weekday = datetime.strptime(day, "%Y-%m-%d")
-	with open(weekly_file, "a") as weekly:
+with open(weekly_file, "a") as weekly:
+	for day in days:
+		weekday = datetime.strptime(day, "%Y-%m-%d")
 		weekly.write(f'\\bfseries\\scshape {weekday.strftime("%a, %b %d")}\n\n')
 		ev = df.loc[df['sdate'] == day]
 		weekly.write('\\begin{tabular}{r p{0.7\\textwidth}}\n')
@@ -258,98 +286,10 @@ for day in days:
 			weekly.write(f'\\normalfont\\scshape {time.strftime("%-I:%M %p")} & \\normalfont {title} \\\\ \n')
 		weekly.write('\\end{tabular}\n')
 		weekly.write('\\normalfont \\vspace{1em} \\\\ \n')
-
-
-# for other events for bulletin
-future_csv = bulletin_path + 'future_events.csv'
-future_tex = includes_dir + 'future_events.tex'
-open(future_csv,  "w").close()
-open(future_tex,  "w").close()
-
-with open(future_csv, "a") as events:
-	events.write('date,title,contact,where\n')
-
-for story in stories:
-	post = frontmatter.load(story)
-	if 'bulletin' in post['publications'] and post.get('event') == True:
-		title = post['title']
-		if post.get('contact'):
-			contact = post.get('contact')
-		else:
-			contact = "Church Office"
-		if post.get('where'):
-			where = post.get('where')
-		else:
-			where = "Church"
-		# date = datetime.strptime(post['date'], "%Y-%m-%d %H:%M")
-		date = post['date']
-		with open(future_csv, "a") as events:
-			events.write(f'{date},{title},{contact},{where}\n')
-
-events_df = pd.read_csv(future_csv, sep=',')
-events_df.sort_values(by=['date'], inplace=True, ascending=True)
-
-for e in events_df.values:
-	day = datetime.strptime(e[0], "%Y-%m-%d %H:%M")
-	date = day.strftime("%A, %B %d")
-	time = day.strftime("%-I:%M %p")
-	title = e[1]
-	contact = e[2]
-	where = e[3]
-	with open(future_tex, "a") as future:
-		future.write(f'\\subsubsection{{{date}}} \n')
-		future.write('\\begin{tabular}{r l}')
-		future.write(f'{time} & {title} \\\\ \n')
-		future.write(f' & \\textsc{{Contact:}} {contact} \\\\ \n')
-		future.write(f' & \\textsc{{Location:}} {where} \\\\ \n')
-		future.write('\\end{tabular}')
+	weekly.write('\\input{includes/calendar-extended.tex}\n')
 
 
 
-
-# get current visitor
-current_visitor = includes_dir + 'current_visitor.tex'
-open(current_visitor,  "w").close()
-
-visitor_df = pd.read_csv('/home/wadeallen/Sites/fbcmuncie_2020/data/visitors.csv', sep=',', nrows=1, header=None)
-
-for m in visitor_df.values:
-	month = m[1]
-	with open(current_visitor, "a") as currentvisitor:
-		currentvisitor.write(f'The {month} Visitor is now available on the church website. You can download it at \\textsl{{fbcmuncie.org/visitor}}')
-
-
-
-# announcements for the bulletin
-active_ann_tsv = bulletin_path + 'active_ann.tsv'
-active_ann_tex = includes_dir + 'active_ann.tex'
-open(active_ann_tsv,  "w").close()
-open(active_ann_tex,  "w").close()
-
-
-with open(active_ann_tsv, "a") as announce:
-	announce.write('title\tdescription\tcontact\n')
-
-for story in stories:
-	post = frontmatter.load(story)
-	if 'bulletin' in post['publications'] and post.get('event') != True:
-		title = post['title']
-		if post.get('contact'):
-			contact = post.get('contact')
-		else:
-			contact = "Church Office"
-		description = post.content
-		with open(active_ann_tsv, "a") as announce:
-			announce.write(f'{title}\t{description}\t{contact}\n')
-
-announce_df = pd.read_csv(active_ann_tsv, sep='\t')
-
-for a in announce_df.values:
-	with open(active_ann_tex, "a") as announce:
-		title = a[0]
-		description = a[1]
-		contact = a[2]
-		announce.write(f'\\vfill {description} \\\\\n \\hspace*{{0pt}}\\hfill \\contact{{{contact}}} \\\\\n')
 
 
 
