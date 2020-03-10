@@ -108,7 +108,7 @@ letterpaper,
 
 % environments and commands defined
 
-\newcommand{\contact}[1]{\faPhone \hspace{.2em} #1}
+\newcommand{\contact}[1]{\hspace{.5em} \faPhone \hspace{.2em} #1}
 \newcommand{\location}[1]{Location: \hspace{.2em} #1}
 \newcommand{\eventdate}[1]{\hspace{.5em} \faCalendarO \hspace{.2em} #1}
 \newcommand{\eventtime}[1]{\hspace{.5em} \faClockO \hspace{.2em} #1}
@@ -117,9 +117,13 @@ letterpaper,
 \newcommand{\phone}[1]{\small{\faPhone \hspace{.2em} #1}}
 \newcommand{\email}[1]{\small{\faEnvelopeO \hspace{.2em} #1}}
 \newcommand{\buffer}{\newline \vspace*{.1mm} \newline}
+% includes name and number
+% \newcommand{\cct}[1]{
+%         \textsc{#1} \textbf{\DTLfetch{cct}{Position}{#1}{Name}} \\ 
+%         \hspace*{5mm} {\small \faPhone \hspace{.1em} \DTLfetch{cct}{Position}{#1}{Phone} \hspace{.2em} \faEnvelopeO \hspace{.1em} \DTLfetch{cct}{Position}{#1}{Email}} \vspace{.05em}  \\}
+% without contact info
 \newcommand{\cct}[1]{
-        \textsc{#1} \textbf{\DTLfetch{cct}{Position}{#1}{Name}} \\ 
-        \hspace*{5mm} {\small \faPhone \hspace{.1em} \DTLfetch{cct}{Position}{#1}{Phone} \hspace{.2em} \faEnvelopeO \hspace{.1em} \DTLfetch{cct}{Position}{#1}{Email}} \vspace{.05em}  \\}
+        \textsc{#1} & \textbf{\DTLfetch{cct}{Position}{#1}{Name}} \\}
 \newcommand{\pastor}[4]{
 \begin{tabular}{r l}
 \textsc{\multirow[t]{3}{8em}{#1}} & \textbf{#2} \\
@@ -137,8 +141,8 @@ letterpaper,
 \centering
 \vfill
 {\centering
-% \includegraphics[width=\textwidth]{logo.pdf}\par}
-\includegraphics[height=1.5in]{external/fbc-logo-bw}\par}
+\includegraphics[width=\textwidth]{logo.pdf}\par}
+% \includegraphics[height=1.5in]{external/fbc-logo-bw}\par}
 \vfill
 \LARGE\sundaydate\\
 \vfill
@@ -177,6 +181,7 @@ $body$
 
 The \textbf{Church Coordination Team} is the primary leadership team of the church.
 
+\begin{tabular}{rl}
 \cct{Moderator}
 \cct{Treasurer}
 \cct{Clerk}
@@ -188,18 +193,26 @@ The \textbf{Church Coordination Team} is the primary leadership team of the chur
 \cct{Outreach}
 \cct{At-Large-Late}
 \cct{At-Large-Early}
+\end{tabular}
 
-\vspace{5mm}
+\vfill
 
 \input{includes/diaconate.tex}
 
-\pagebreak
+\vfill
 
 \pastor{Pastor}{Dr. Wade Allen}{765-760-1520}{wade@fbcmuncie.org}
 \pastor{Worship Arts Pastor}{Dr. Clifton Davis}{203-362-7042}{clif@fbcmuncie.org}
 \pastor{Choir Director}{Bruce McFarland}{765-374-6011}{bruce.mcfrlnd@gmail.com}
 
-Idea: List those who are scheduled to serve (nursery, security, etc)
+\pagebreak
+
+\input{includes/giving_update.tex}
+
+\vfill
+
+\input{includes/next_week_worship.tex}
+
 
 \vfill
 

@@ -6,10 +6,7 @@ import glob
 import wget
 import re
 from titlecase import titlecase
-import operator
 from datetime import datetime
-from datetime import timedelta
-import csv
 import pandas as pd
 
 # surpresses the download message of files
@@ -39,7 +36,7 @@ for m in visitor_df.values:
 
 
 # move to directory in Dropbox to do the work
-stories_dir = '/home/wadeallen/Dropbox/Stories/'
+stories_dir = '/home/wadeallen/Dropbox/Compile/stories/'
 os.chdir(stories_dir)
 
 # delete old files
@@ -158,37 +155,6 @@ for story in stories:
 
 
 
-# for weekly events to website
-# weekly_events_file = "/home/wadeallen/Sites/fbcmuncie_2020/layouts/partials/weekly-events.html"
-# days_of_week = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
-# for day in days_of_week:
-# 	globals()[day]=[]
-# for story in stories:
-# 	post = frontmatter.load(story)
-# 	if post.get('event') != None and 'weekly' in post['publications']:
-# 		if post.get('event') == 'weekly':
-# 			day = post.get('day')
-# 			time = post.get('time')
-# 			title = post['title']
-# 			globals()[day.lower()].append({'title' : title, 'time' : time})
-# target = open(weekly_events_file, 'w')
-# target.write('<div class="col-12 col-md-6 col-lg-6 offset-lg-1"><div class="card card-border border-success shadow-lg mb-5" data-aos="fade-up"><div class="card-body"><div class="list-group list-group-flush">')
-# for d in days_of_week:
-# 	if globals()[d] != []:
-# 		target.write('<div class="list-group-item d-flex align-items-center"><div class="mr-auto">')
-# 		target.write(f'<p class="font-weight-bold mb-1">{d.title()}</p>')
-# 		for e in globals()[d]:
-# 			title = e.get('title')
-# 			time = e.get('time')
-# 			target.write(f'<p class="font-size-sm text-muted mb-0">{time} {title}</p>')
-# 		target.write('</div></div>')
-# target.write('</div></div><p class="font-size-sm text-center text-gray-500 mb-0">Weekly Events</p></div></div>')
-# target.close()
-
-# events for website table
-
-
-
 # Create LaTeX file for Bulletin 2020 (non-events)
 bulletin_path = '/home/wadeallen/Dropbox/Compile/bulletin/'
 os.system('rm ' + bulletin_path + 'articles.txt')
@@ -233,8 +199,9 @@ for story in stories:
 		date = post.get('date')
 		where = post.get('where')
 		what = post.get('what')
+		contact = post.get('contact')
 		# forms a sublist that includes title[0], content[1], weight[2]
-		event = [title, date, where, content, what]
+		event = [title, date, where, content, what, contact]
 		# builds the article list with a sublist of each article
 		event_list.append(event)
 
@@ -254,6 +221,7 @@ for event in event_list:
 		time = date.strftime("%-I:%M %p")
 		content = event[3]
 		what = event[4]
+		contact = event[5]
 		bulletin_file.write(f'## {title} \n\n')
 		if what != None:
 			bulletin_file.write(f'\\textsl{{{what}}} \n\n')
@@ -262,7 +230,10 @@ for event in event_list:
 			bulletin_file.write(f'\\eventtime {time} \n\n')
 		else:
 			bulletin_file.write('\n\n')
-		bulletin_file.write(f'\\eventlocation {where}\n\n')
+		if event != None:
+			bulletin_file.write(f'\\eventlocation {where}\n\n')
+		if contact != None:
+			bulletin_file.write(f'\\contact {contact}\n\n')
 		bulletin_file.write(f'{content}')
 		bulletin_file.write('\\vspace{\\fill}\n\n')
 
