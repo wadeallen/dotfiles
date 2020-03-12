@@ -22,6 +22,7 @@ path = (config.sermon_path + '/{}_sermon.md'.format(sunday))
 
 files = glob.glob(path)
 
+# old bulletin
 for name in files:
     post = frontmatter.load(name)
     if type(post['date']) is datetime.date:
@@ -32,3 +33,13 @@ for name in files:
     target.write ('\def\sundaydate{' + postdate.strftime('%b %d, %Y') + '}\n\def\sermontitle{' + post['title'] + '}\n\def\scripture{' + post['scripture'] + '}\n\input{../numbers}\n')
     target.close()
 
+# new bulletin
+for name in files:
+    post = frontmatter.load(name)
+    if type(post['date']) is datetime.date:
+        postdate = post['date']
+    else:
+        postdate = parser.parse(post['date'])
+    target = open (home + '/Dropbox/Compile/bulletin/meta.tex', 'w')
+    target.write ('\def\sundaydate{' + postdate.strftime('%b %d, %Y') + '}\n\def\sermontitle{' + post['title'] + '}\n\def\scripture{' + post['scripture'] + '}\n')
+    target.close()

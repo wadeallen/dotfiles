@@ -31,14 +31,14 @@ open(current_visitor,  "w").close()
 visitor_df = pd.read_csv('/home/wadeallen/Sites/fbcmuncie_2020/data/visitors.csv', sep=',', nrows=1, header=None)
 deadline_file = '/home/wadeallen/Dropbox/Textbits/deadline.txt'
 deadline = open(deadline_file,"r+") 
+deadline_data = deadline.readlines()
+visitor_next_month = (deadline_data[1].rstrip())
+visitor_deadline_date = (deadline_data[0].rstrip())
 
 for m in visitor_df.values:
 	month = m[1]
-	month_date = datetime.strptime(month, "%B")
-	next_month = month_date + relativedelta.relativedelta(months=1)
-	next_month = next_month.strftime("%B")
 	with open(current_visitor, "a") as currentvisitor:
-		currentvisitor.write(f'\\subsection{{{month} Visitor}} \n\n The {month} Visitor is now available on the church website. You can download it at \\textsl{{fbcmuncie.org/visitor}}. \n\n \\vfill \n\n')
+		currentvisitor.write(f'\\subsection{{{month} Visitor}} \n\n The {month} Visitor is now available on the church website. You can download it at \\textsl{{fbcmuncie.org/visitor}}. \n\n\\hspace*{{0pt}}\\hfill \\ovalbox{{\\small \\deadline {visitor_next_month} Visitor deadline: {visitor_deadline_date}}}\n\n \\vfill \n\n')
 
 
 # move to directory in Dropbox to do the work
@@ -106,6 +106,7 @@ for story in stories:
 			contact = post.get('contact')
 			what = post.get('what')
 			where = post.get('where')
+			deadline = post.get('deadline')
 			title = titlecase(title)
 			slug = format_slug(title)
 			filename = website_dir + slug + '.md'
@@ -121,6 +122,8 @@ for story in stories:
 				target.write("what: {}\n".format(what))
 			if where != None:
 				target.write("where: {}\n".format(where))
+			if deadline != None:
+				target.write("deadline: {}\n\n".format(deadline))
 			target.write("---\n")
 			target.write("\n")
 			# replaces content of print with website version of file
@@ -139,10 +142,11 @@ for story in stories:
 	if 'bulletin' in post['publications'] and post.get('event') != True:
 		title = post['title']
 		title = titlecase(title)
+		deadline = post.get('deadline')
 		content = re.sub(r'\{\{print:(.*?)\}\}*\{\{website:(.*?)\}\}', r'\1', post.content.rstrip())
 		content = content.replace(r"\n", r"\n\n")
 		# forms a sublist that includes title[0], content[1], weight[2]
-		article = [title, content, post['weight']]
+		article = [title, content, post['weight'],deadline]
 		# builds the article list with a sublist of each article
 		article_list.append(article)
 
@@ -159,6 +163,10 @@ for article in article_list:
 	with open(bulletin_path + "articles.txt", "a") as bulletin_file:
 		bulletin_file.write('## ' + article[0] + '\n\n')
 		bulletin_file.write(article[1] + '\n\n')
+		deadline = article[3]
+		if deadline != None:
+			deadline = deadline.strftime("%B %d")
+			bulletin_file.write(f'\\hspace*{{0pt}}\\hfill \\ovalbox{{\\small \\deadline Deadline: {deadline}}} \n\n')
 		bulletin_file.write('\\vspace{\\fill}\n\n')
 
 # create LaTeX file for bulletin events
@@ -175,8 +183,10 @@ for story in stories:
 		where = post.get('where')
 		what = post.get('what')
 		contact = post.get('contact')
+		deadline = post.get('deadline')
+		phone = post.get('phone')
 		# forms a sublist that includes title[0], content[1], weight[2]
-		event = [title, date, where, content, what, contact]
+		event = [title, date, where, content, what, contact, deadline, phone]
 		# builds the article list with a sublist of each article
 		event_list.append(event)
 
@@ -197,6 +207,8 @@ for event in event_list:
 		content = event[3]
 		what = event[4]
 		contact = event[5]
+		deadline = event[6]
+		phone = event[7]
 		bulletin_file.write(f'## {title} \n\n')
 		if what != None:
 			bulletin_file.write(f'\\textsl{{{what}}} \n\n')
@@ -205,11 +217,18 @@ for event in event_list:
 			bulletin_file.write(f'\\eventtime {time} \n\n')
 		else:
 			bulletin_file.write('\n\n')
-		if event != None:
+		if where != None:
 			bulletin_file.write(f'\\eventlocation {where}\n\n')
 		if contact != None:
-			bulletin_file.write(f'\\contact {contact}\n\n')
-		bulletin_file.write(f'{content}')
+			if phone != None:
+				phone_number = phone
+			else:
+				phone_number = ''
+			bulletin_file.write(f'\\contact {contact} {phone_number}\n\n')
+		bulletin_file.write(f'{content}\n\n')
+		if deadline != None:
+			deadline = deadline.strftime("%B %d")
+			bulletin_file.write(f'\\hspace*{{0pt}}\\hfill \\ovalbox{{\\small \\deadline Deadline: {deadline}}}\n\n')
 		bulletin_file.write('\\vspace{\\fill}\n\n')
 
 

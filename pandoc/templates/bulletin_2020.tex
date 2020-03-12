@@ -12,6 +12,9 @@ letterpaper,
 % multirow in cells
 \usepackage{multirow}
 
+%for boxes
+\usepackage{fancybox}
+
 % to format date
 \usepackage{datetime}
 \def\parsecommitdate#1-#2-#3 \endparse{%
@@ -29,6 +32,7 @@ letterpaper,
 \usepackage{mathptmx}
 % added to include graphics
 \usepackage{graphicx}
+\usepackage{array}
 % added to float pictures and put border around them
 %package for spreadsheet data
 % \usepackage{csvsimple}
@@ -109,6 +113,8 @@ letterpaper,
 % environments and commands defined
 
 \newcommand{\contact}[1]{\hspace{.5em} \faPhone \hspace{.2em} #1}
+\newcommand{\deadline}[1]{\faCalendarTimesO \hspace{.2em} #1}
+\newcommand{\cost}[1]{\faDollar \hspace{.2em} #1}
 \newcommand{\location}[1]{Location: \hspace{.2em} #1}
 \newcommand{\eventdate}[1]{\hspace{.5em} \faCalendarO \hspace{.2em} #1}
 \newcommand{\eventtime}[1]{\hspace{.5em} \faClockO \hspace{.2em} #1}
@@ -144,6 +150,7 @@ letterpaper,
 \includegraphics[width=\textwidth]{logo.pdf}\par}
 % \includegraphics[height=1.5in]{external/fbc-logo-bw}\par}
 \vfill
+\large Weekly Bulletin\\
 \LARGE\sundaydate\\
 \vfill
 \large A Spirit-led people \\ gathered to discover and \\ join God's presence \\ in our communities
@@ -160,8 +167,8 @@ letterpaper,
 
 \section{\faCalendar \hspace{.5em} Calendar}
 
-\subsection{This Week}
 \input{includes/weekly_events.tex}
+
 
 \vfill
 
@@ -213,6 +220,9 @@ The \textbf{Church Coordination Team} is the primary leadership team of the chur
 
 \input{includes/next_week_worship.tex}
 
+\vfill
+
+\input{includes/next_week_serving.tex}
 
 \vfill
 
