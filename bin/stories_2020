@@ -7,6 +7,7 @@ import wget
 import re
 from titlecase import titlecase
 from datetime import datetime
+from dateutil import relativedelta
 import pandas as pd
 
 # surpresses the download message of files
@@ -28,11 +29,16 @@ current_visitor = includes_dir + 'current_visitor.tex'
 open(current_visitor,  "w").close()
 
 visitor_df = pd.read_csv('/home/wadeallen/Sites/fbcmuncie_2020/data/visitors.csv', sep=',', nrows=1, header=None)
+deadline_file = '/home/wadeallen/Dropbox/Textbits/deadline.txt'
+deadline = open(deadline_file,"r+") 
 
 for m in visitor_df.values:
 	month = m[1]
+	month_date = datetime.strptime(month, "%B")
+	next_month = month_date + relativedelta.relativedelta(months=1)
+	next_month = next_month.strftime("%B")
 	with open(current_visitor, "a") as currentvisitor:
-		currentvisitor.write(f'\\subsection{{{month} Visitor}} \n\n The {month} Visitor is now available on the church website. You can download it at \\textsl{{fbcmuncie.org/visitor}} \n\n \\vfill \n\n')
+		currentvisitor.write(f'\\subsection{{{month} Visitor}} \n\n The {month} Visitor is now available on the church website. You can download it at \\textsl{{fbcmuncie.org/visitor}}. \n\n \\vfill \n\n')
 
 
 # move to directory in Dropbox to do the work
@@ -74,11 +80,14 @@ for story in stories:
 		title = post['title']
 		title = titlecase(title)
 		slug = format_slug(title)
+		contact = post.get('contact')
 		filename = website_dir + slug + '.md'
 		target = open (filename, 'w')
 		target.write("---\n")
 		target.write("title: {}\n".format(title))
 		target.write("weight: {}\n".format(post['weight']))
+		if contact != None:
+			target.write("contact: {}\n".format(contact))
 		target.write("---\n")
 		target.write("\n")
 		# replaces content of print with website version of file
@@ -94,6 +103,9 @@ for story in stories:
 	if 'website' in post['publications'] and post.get('event') != None: 
 		if post.get('event') == True:
 			title = post['title']
+			contact = post.get('contact')
+			what = post.get('what')
+			where = post.get('where')
 			title = titlecase(title)
 			slug = format_slug(title)
 			filename = website_dir + slug + '.md'
@@ -103,55 +115,18 @@ for story in stories:
 			target.write("title: {}\n".format(title))
 			target.write("weight: {}\n".format(post['weight']))
 			target.write("date: {}\n".format(event_date))
+			if contact != None:
+				target.write("contact: {}\n".format(contact))
+			if what != None:
+				target.write("what: {}\n".format(what))
+			if where != None:
+				target.write("where: {}\n".format(where))
 			target.write("---\n")
 			target.write("\n")
 			# replaces content of print with website version of file
 			post.content = re.sub(r'\{\{print:(.*?)\}\}*\{\{website:(.*?)\}\}', r'\2', post.content.rstrip())
 			target.write(post.content)
 			target.close()
-
-
-# # Create file for Visitor
-# visitor_path = '/home/wadeallen/Dropbox/Pandoc/Pandoc_Visitor/'
-# os.system('rm ' + visitor_path + 'articles.txt')
-# article_list = []
-# for story in stories:
-# 	post = frontmatter.load(story)
-# 	if 'visitor' in post['publications']:
-# 		title = post['title']
-# 		# makes all of the titles titlecase
-# 		title = titlecase(title)
-# 		if post.get('picture') != None:
-# 			picture = post.get('picture')
-# 		else:
-# 			picture = 'no picture'
-# 		# for these articles, the print section is used and the website section is taken out
-# 		content = re.sub(r'\{\{print:(.*?)\}\}*\{\{website:(.*?)\}\}', r'\1', post.content.rstrip())
-# 		content = content.replace(r"\n", r"\n\n")
-# 		# forms a sublist that includes title[0], content[1], weight[2]
-# 		article = [title, content, post['weight'], picture]
-# 		# builds the article list with a sublist of each article
-# 		article_list.append(article)
-
-# # sorts articles by weight[2]
-# article_list.sort(key=lambda x: int(x[2]))
-
-# # interates through each article (sorted by weight) and places them in the articles.txt file to be compiled by the visitor script
-# for article in article_list:
-# 	with open(visitor_path + "articles.txt", "a") as visitor_file:
-# 			visitor_file.write('\n\n')
-# 			visitor_file.write('# ' + article[0] + '\n\n')
-# 			# if the article has a picture: name then it will place the latex code to generate that picture, if not, it will do nothing.
-# 			if article[3] != 'no picture':
-# 				# visitor_file.write('\\setlength\intextsep{0pt}')
-# 				visitor_file.write('\\begin{wrapfigure}{r}{.20\\textwidth}\n')
-# 				visitor_file.write('\\vspace{-5mm}')
-# 				visitor_file.write('\includegraphics[width=.18\\textwidth]{people/' + article[3] + '}\n')
-# 				visitor_file.write('\end{wrapfigure}\n\n')
-# 			visitor_file.write(article[1] + '\n\n')
-
-# with open(visitor_path + "articles.txt", "a") as visitor_file:
-# 	visitor_file.write('\n\input{includes/birthdays.tex}\n')
 
 
 
@@ -258,6 +233,50 @@ with open(weekly_file, "a") as weekly:
 		weekly.write('\\end{tabular}\n')
 		weekly.write('\\normalfont \\vspace{1em} \\\\ \n')
 	weekly.write('\\input{includes/calendar-extended.tex}\n')
+
+
+
+# # Create file for Visitor
+# visitor_path = '/home/wadeallen/Dropbox/Pandoc/Pandoc_Visitor/'
+# os.system('rm ' + visitor_path + 'articles.txt')
+# article_list = []
+# for story in stories:
+# 	post = frontmatter.load(story)
+# 	if 'visitor' in post['publications']:
+# 		title = post['title']
+# 		# makes all of the titles titlecase
+# 		title = titlecase(title)
+# 		if post.get('picture') != None:
+# 			picture = post.get('picture')
+# 		else:
+# 			picture = 'no picture'
+# 		# for these articles, the print section is used and the website section is taken out
+# 		content = re.sub(r'\{\{print:(.*?)\}\}*\{\{website:(.*?)\}\}', r'\1', post.content.rstrip())
+# 		content = content.replace(r"\n", r"\n\n")
+# 		# forms a sublist that includes title[0], content[1], weight[2]
+# 		article = [title, content, post['weight'], picture]
+# 		# builds the article list with a sublist of each article
+# 		article_list.append(article)
+
+# # sorts articles by weight[2]
+# article_list.sort(key=lambda x: int(x[2]))
+
+# # interates through each article (sorted by weight) and places them in the articles.txt file to be compiled by the visitor script
+# for article in article_list:
+# 	with open(visitor_path + "articles.txt", "a") as visitor_file:
+# 			visitor_file.write('\n\n')
+# 			visitor_file.write('# ' + article[0] + '\n\n')
+# 			# if the article has a picture: name then it will place the latex code to generate that picture, if not, it will do nothing.
+# 			if article[3] != 'no picture':
+# 				# visitor_file.write('\\setlength\intextsep{0pt}')
+# 				visitor_file.write('\\begin{wrapfigure}{r}{.20\\textwidth}\n')
+# 				visitor_file.write('\\vspace{-5mm}')
+# 				visitor_file.write('\includegraphics[width=.18\\textwidth]{people/' + article[3] + '}\n')
+# 				visitor_file.write('\end{wrapfigure}\n\n')
+# 			visitor_file.write(article[1] + '\n\n')
+
+# with open(visitor_path + "articles.txt", "a") as visitor_file:
+# 	visitor_file.write('\n\input{includes/birthdays.tex}\n')
 
 
 
