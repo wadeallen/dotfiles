@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIRECTORY=$HOME/Sites/fbcmuncie_2018/_data
+DIRECTORY=$HOME/Sites/fbcmuncie_2020/data
 SUNDAY=$(date -d 'sun' +'%Y-%m-%d')
 NUR_THIS_WEEK=$(date -d 'sun' +'%Y-%m-%d')
 NUR_NEXT_WEEK=$(date -d 'sun 1 week' +'%Y-%m-%d')

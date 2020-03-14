@@ -21,13 +21,13 @@ SETUVAR _fish_abbr_led:ledger\x20\x2df\x20\x24HOME/Dropbox/Ledger/ledger\x2eledg
 SETUVAR _fish_abbr_min:cd\x20\x24HOME/Sites/fbc\x2dwiki/_ministries
 SETUVAR _fish_abbr_oled:nvim\x20\x24HOME/Dropbox/Ledger/ledger\x2eledger
 SETUVAR _fish_abbr_open:xdg\x2dopen
-SETUVAR _fish_abbr_ov:cd\x20\x24HOME/Sites/fbcmuncie_2018/_posts
-SETUVAR _fish_abbr_ow:cd\x20\x24HOME/Sites/fbcmuncie_2018/_worship/
+SETUVAR _fish_abbr_ov:cd\x20\x24HOME/Sites/fbcmuncie_2020/content/video
+SETUVAR _fish_abbr_ow:cd\x20\x24HOME/Sites/fbcmuncie_2020/content/worship/
 SETUVAR _fish_abbr_pel:cd\x20\x24HOME/Sites/pelican
 SETUVAR _fish_abbr_pray:nvim\x20\x24HOME/Dropbox/Sermon_Work/Prayer_Requests\x2emd
 SETUVAR _fish_abbr_pub:sudo\x20cp\x20\x2dr\x20/home/wadeallen/Sites/2019_Church/output/\x2a\x20/usr/share/nginx/html/
 SETUVAR _fish_abbr_sa:cd\x20\x24HOME/Dropbox/Sermon_Audio
-SETUVAR _fish_abbr_site:cd\x20\x24HOME/Sites/fbcmuncie_2018
+SETUVAR _fish_abbr_site:cd\x20\x24HOME/Sites/fbcmuncie_2020
 SETUVAR _fish_abbr_speed:speedtest\x2dcli
 SETUVAR _fish_abbr_ss:cd\x20\x24HOME/Sites/slideshow
 SETUVAR _fish_abbr_sw:cd\x20\x24HOME/Dropbox/Sermon_Work/
