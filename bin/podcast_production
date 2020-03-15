@@ -1,0 +1,58 @@
+#! /bin/bash
+
+count=`ls -l *.mkv | wc -l`
+
+for file in $(seq 1 $count); do videos+=(my_video-${file}.mkv); done
+
+printf -- " \+ %s" ${videos[*]}
+  # mkvmerge -o ${date}.mkv 0001.MP4
+
+
+# # convert video using handbrake and place on desktop
+# HandBrakeCLI --preset "H.264 MKV 1080p30" -i ${date}.mkv -o ${date}-upload.mkv
+# # echo "-----"
+# # echo "file compressed with Handbrake"
+
+# # convert sermon into mp3, also create file duration.txt file
+# ~/bin/audio ${date}.mkv
+# echo "-----"
+# echo "mp3 file compiled"
+
+# # upload audio file to amazon
+# cd /home/wadeallen/Music/Sermon_Audio
+# upload ${date}.mp3
+# echo "-----"
+# echo "Uploaded audio file to Amazon"
+
+# # change to post directory
+# ~/bin/insert_data
+# echo "-----"
+# echo "Updated Sermon file with metadata"
+
+# # move file to Dropbox upload folder
+# cd $directory
+# mv ${date}-upload.mkv ~/Dropbox/Uploads/
+
+# # echo "-----"
+# # echo "File will be uploaded to Vimeo"
+
+
+# # upload video file t youtube
+# # cd $directory
+# # ~/bin/upload_video ${date}.mkv
+# # echo "-----"
+# # echo "File upload to youtube complete"
+
+# # upload video file to vimeo
+# # cd $directory
+# # ~/bin/upload_vimeo ${date}-upload.mkv
+# # echo "-----"
+# # echo "File upload to vimeo complete"
+
+# # # update sermon file with vimeo data
+# # ~/bin/insert_vimeo
+# # echo "-----"
+# # echo "Vimeo data added to file"
+
+# # echo "-----"
+# # echo "Process Complete!"

@@ -9,7 +9,7 @@ vimeo_id = input('What is the Vimeo ID? ')
 vimeo_date = input('What is the date for this sermon? ')
 
 # searches for file in _posts folder based on date and filename. There should only be one file with this date
-files = glob.glob(f'/home/wadeallen/Sites/fbcmuncie_2018/_posts/{vimeo_date}*.md')
+files = glob.glob(f'/home/wadeallen/Sites/fbcmuncie_2020/content/video/{vimeo_date}*.md')
 for filename in files:
 	filename = filename
 
@@ -24,7 +24,7 @@ response = urllib.request.urlopen(url).read()
 tree = ET.fromstring(response)
 
 for thumb in tree.iter('thumbnail_large'):
-	urllib.request.urlretrieve(thumb.text, f"/home/wadeallen/Sites/fbcmuncie_2018/images/vimeo/{vimeo_date}.jpg")
+	urllib.request.urlretrieve(thumb.text, f"/home/wadeallen/Sites/fbcmuncie_2020/static/images/vimeo/{vimeo_date}.jpg")
 
 
 

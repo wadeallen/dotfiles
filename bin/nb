@@ -12,7 +12,7 @@ if isfile(filename):
   subprocess.call(['nvim', '-c', '9', filename])
 else:	
     target = open (filename, 'w')
-    target.write("---\nauthor: Wade Allen\ntitle: \ndate: {}\ncategory: blog\nlayout: blog\ncomments: yes\n---\n \n ".format(today))
+    target.write(f'---\ntitle: \ndate: {today}\npeople: \n   - Wade Allen\n---')
     target.close()
 
 subprocess.call(['nvim', '-c', '9', filename])
