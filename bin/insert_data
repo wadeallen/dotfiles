@@ -1,7 +1,7 @@
 #!/bin/bash
 
-date=`date +"%Y-%m-%d"`
+date=$(date -d 'sun' +'%Y-%m-%d')
 
-cd /home/wadeallen/Sites/fbcmuncie_2018/_posts
+cd /home/wadeallen/Sites/fbcmuncie_2020/content/video
 sed -i "/date: \"${date}\"/r /home/wadeallen/Dropbox/Textbits/duration.txt" ${date}*.md
 
