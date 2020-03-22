@@ -4,7 +4,7 @@
 date=$(date -d 'sun' +'%Y-%m-%d')
 
 # change to worship directory and move files to posts directory
-worship_dir=$HOME'/Sites/fbcmuncie_2020/content/worship'
+worship_dir=$HOME/Sites/fbcmuncie_2020/content/worship
 cd $worship_dir
 if [ -f $worship_dir/${date}-*.md ]
 then
@@ -14,6 +14,7 @@ else
   echo "The worship file for ${date} does not exist or has already been moved"
 fi
 
+cd -
 #count the number of files in the folder
 count=`ls -l *.mkv | wc -l`
 
@@ -31,16 +32,20 @@ HandBrakeCLI --preset "H.264 MKV 480p30" -i ${date}.mkv -o ${date}-upload.mkv
 echo "-----"
 echo "file compressed with Handbrake"
 
+HandBrakeCLI --preset "Fast 480p30" -i ${date}-upload.mkv -o ${date}-dvd.mp4
+echo "-----"
+echo "dvd file created with Handbrake"
+
 # # convert sermon into mp3, also create file duration.txt file
 ~/bin/audio ${date}.mkv
 echo "-----"
 echo "mp3 file compiled"
 
-# # # upload audio file to amazon
-# # cd /home/wadeallen/Music/Sermon_Audio
-# # upload ${date}.mp3
-# # echo "-----"
-# # echo "Uploaded audio file to Amazon"
+# upload audio file to amazon
+cd /home/wadeallen/Music/Sermon_Audio
+upload ${date}.mp3
+echo "-----"
+echo "Uploaded audio file to Amazon"
 
 # change to post directory
 ~/bin/insert_data
