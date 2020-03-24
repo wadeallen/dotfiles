@@ -1,0 +1,11 @@
+#!/bin/bash
+
+SUNDAY=$(date -d 'sun' +'%Y-%m-%d')
+THIS_WEEK=$(date -d 'sun' +'%Y-%m-%d')
+NEXT_WEEK=$(date -d 'sun 1 week' +'%Y-%m-%d')
+
+DIRECTORY=$HOME/Desktop/${SUNDAY}
+SERMON_DIR=$HOME/Dropbox/Sermon_Work
+
+mkdir ${DIRECTORY} &&
+pandoc -t beamer ${SERMON_DIR}/${SUNDAY}_slides.md -o ${DIRECTORY}/slides.pdf
