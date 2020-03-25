@@ -15,29 +15,29 @@ else
 fi
 
 cd -
-#count the number of files in the folder
-count=`ls -l *.mkv | wc -l`
+# #count the number of files in the folder
+# count=`ls -l *.mkv | wc -l`
 
-#add each file to an array called videos
-for file in $(seq 1 $count); do videos+=(my_video-${file}.mkv); done
+# #add each file to an array called videos
+# for file in $(seq 1 $count); do videos+=(my_video-${file}.mkv); done
 
-#print the series of videos with a + before each file name
-video=`printf -- " +%s" ${videos[*]}`
+# #print the series of videos with a + before each file name
+# video=`printf -- " +%s" ${videos[*]}`
 
-#merge the videos into one mkv. the ${video:2} takes the + off of the first video file
-mkvmerge -o ${date}.mkv ${video:2}
+# #merge the videos into one mkv. the ${video:2} takes the + off of the first video file
+# mkvmerge -o ${date}.mkv ${video:2}
 
-# # convert video using handbrake and place on desktop
-HandBrakeCLI --preset "H.264 MKV 480p30" -i ${date}.mkv -o ${date}-upload.mkv
-echo "-----"
-echo "file compressed with Handbrake"
+# # # convert video using handbrake and place on desktop
+# HandBrakeCLI --preset "H.264 MKV 480p30" -i ${date}.mkv -o ${date}-upload.mkv
+# echo "-----"
+# echo "file compressed with Handbrake"
 
-HandBrakeCLI --preset "Fast 480p30" -i ${date}-upload.mkv -o ${date}-dvd.mp4
-echo "-----"
-echo "dvd file created with Handbrake"
+# HandBrakeCLI --preset "Fast 480p30" -i ${date}-upload.mkv -o ${date}-dvd.mp4
+# echo "-----"
+# echo "dvd file created with Handbrake"
 
 # # convert sermon into mp3, also create file duration.txt file
-~/bin/audio ${date}.mkv
+~/bin/audio ${date}-upload.mp4
 echo "-----"
 echo "mp3 file compiled"
 

@@ -4,7 +4,7 @@
 
 
 \setbeamertemplate{background}
-{\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{/home/wadeallen/Sites/slideshow/images/lent-slide.jpg}}
+{\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{/home/wadeallen/Dropbox/Video_Production/slide-background.jpg}}
 
 
 \setbeamertemplate{navigation symbols}{}

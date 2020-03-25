@@ -6,6 +6,16 @@ NEXT_WEEK=$(date -d 'sun 1 week' +'%Y-%m-%d')
 
 DIRECTORY=$HOME/Desktop/${SUNDAY}
 SERMON_DIR=$HOME/Dropbox/Sermon_Work
+VID_DIR=$HOME/Dropbox/Video_Production
 
 mkdir ${DIRECTORY} &&
-pandoc -t beamer ${SERMON_DIR}/${SUNDAY}_slides.md -o ${DIRECTORY}/slides.pdf
+pandoc -t beamer ${SERMON_DIR}/${SUNDAY}_slides.md -o ${DIRECTORY}/slides.pdf &&
+mkdir ${DIRECTORY}/slides &&
+cd ${DIRECTORY} &&
+pdftoppm -png slides.pdf slide &&
+mv *.png slides/ &&
+rm slides.pdf &&
+mogrify -format png ${VID_DIR}/slide-title.jpg &&
+mv ${VID_DIR}/slide-title.png ${DIRECTORY}/slides/slide-00.png &&
+mkdir intro_music &&
+cp ${VID_DIR}/webcast_intro.wav ${DIRECTORY}/intro_music/

@@ -1,0 +1,16 @@
+#! /bin/bash
+
+# get date for this coming Sunday
+date=$(date -d 'sun' +'%Y-%m-%d')
+
+#count the number of files in the folder
+count=`ls -l *.mkv | wc -l`
+
+#add each file to an array called videos
+for file in $(seq 1 $count); do videos+=(my_video-${file}.mkv); done
+
+#print the series of videos with a + before each file name
+video=`printf -- " +%s" ${videos[*]}`
+
+#merge the videos into one mkv. the ${video:2} takes the + off of the first video file
+mkvmerge -o ${date}.mkv ${video:2}
