@@ -15,6 +15,6 @@ ln -s Dropbox/Pictures/ Pictures &
 ln -s Dropbox/Print/ Print &
 ln -s Dropbox/Scans/ Scans &
 ln -s Dropbox/Sites/ Sites &
-ln -s Dropbox/Videos/ Videos &
+# ln -s Dropbox/Videos/ Videos &
 ln -s Dropbox/bibles bibles
 

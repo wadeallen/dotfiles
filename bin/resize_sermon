@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 image=$1
-directory=$HOME/Sites/fbcmuncie_2018/images/sermon/
+directory=$HOME/Sites/fbcmuncie_2020/static/images/sermon/
+
 
 mogrify -resize 420 -path ${directory} ${image}
 

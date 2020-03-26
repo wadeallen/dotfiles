@@ -10,6 +10,7 @@ Plug 'ledger/vim-ledger'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug '907th/vim-auto-save'
+Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 set bg=light
@@ -41,6 +42,7 @@ let g:auto_save = 1  " enable AutoSave on Vim startup
 
 " set color scheme
 colorscheme badwolf
+" colorscheme nord
 hi Normal ctermbg=none
 hi NonText ctermbg=none
 hi LineNr ctermbg=none

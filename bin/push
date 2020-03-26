@@ -5,7 +5,7 @@ git commit -m "updated site" &&
 git push
 
 if [[ $PWD =~ /home/wadeallen/Sites/fbcmuncie_2020 ]]; then
-	cd /home/wadeallen/fbcmuncie_compiled &&
+	cd /home/wadeallen/fbcmuncie_published &&
 	git add . &&
 	git commit -m "updated site" &&
 	git push
