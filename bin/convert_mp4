@@ -1,0 +1,7 @@
+#! /bin/bash
+
+filename=$1
+fileroot=$(echo ${filename%.*})
+
+HandBrakeCLI --preset "Vimeo YouTube 720p30" -i ${filename} -o ${fileroot}.mp4
+

@@ -1,0 +1,29 @@
+\documentclass[14pt, aspectratio=169]{beamer} 
+
+\usepackage{xcolor}
+
+
+\setbeamertemplate{background}
+{\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{/home/wadeallen/Dropbox/Video_Production/slide-background.jpg}}
+
+
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamersize{text margin left=30mm,text margin right=30mm}
+
+\renewcommand{\emph}[1]{
+\vspace{5mm}
+\hspace*{\fill}
+\small\texttt{#1}
+}
+
+\begin{document}
+
+\color{white}
+
+\bfseries
+
+$body$
+
+\end{document}
+

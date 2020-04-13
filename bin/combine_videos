@@ -7,7 +7,7 @@ date=$(date -d 'sun' +'%Y-%m-%d')
 count=`ls -l *.mkv | wc -l`
 
 #add each file to an array called videos
-for file in $(seq 1 $count); do videos+=(my_video-${file}.mkv); done
+for file in $(seq 1 $count); do videos+=(file-${file}.mkv); done
 
 #print the series of videos with a + before each file name
 video=`printf -- " +%s" ${videos[*]}`

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ffmpeg -t 60 -f video4linux2 -input_format mjpeg -i /dev/video0 -c:v libx264 out.mkv
