@@ -17,6 +17,10 @@
 \small\texttt{#1}
 }
 
+\renewcommand{\frametitle}[1]{
+	\texttt{#1}
+}
+
 \begin{document}
 
 \color{white}

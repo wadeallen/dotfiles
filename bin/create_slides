@@ -15,7 +15,7 @@ cd ${DIRECTORY} &&
 pdftoppm -jpeg -scale-to-x 1280 -scale-to-y 720 slides.pdf slide &&
 mv *.jpg slides/ &&
 rm slides.pdf &&
-mogrify -format jpeg -resize 1280x720 ${VID_DIR}/slide-title.jpg &&
-mv ${VID_DIR}/slide-title.jpg ${DIRECTORY}/slides/slide-00.jpg &&
+mogrify -format jpg -resize 1280x720 ${VID_DIR}/slide-title.jpg &&
+cp ${VID_DIR}/slide-title.jpg ${DIRECTORY}/slides/slide-00.jpg &&
 mkdir intro_music &&
 cp ${VID_DIR}/webcast_intro.wav ${DIRECTORY}/intro_music/
