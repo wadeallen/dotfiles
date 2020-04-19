@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 
-find . -name "*.mp4" -print | while read file
+find . -name "*.mkv" -print | while read file
 do
   mv "${file}" "${file// /_}"
 done

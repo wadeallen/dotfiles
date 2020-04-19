@@ -64,6 +64,12 @@ def Print_Backup():
   print ("Backup Booklet of " + os.path.basename(vim.current.buffer.name) + " is in the Print Folder of Dropbox")
   return
 
+def Notes():
+  output = os.path.splitext(os.path.basename(vim.current.buffer.name))[0]+'.pdf'
+  subprocess.call("pandoc " + vim.current.buffer.name + " -o " + print_folder + output + " --template notes_template.tex", shell=True)
+  print ("Backup Booklet of " + os.path.basename(vim.current.buffer.name) + " is in the Print Folder")
+  return
+
 PYEND
 endfunction
 call DefPython()
@@ -74,5 +80,6 @@ call DefPython()
 " command! Bi py3 Scripture("NIV")
 command! Kindle py3 Convert_Kindle()
 command! Backup py3 Print_Backup()
+command! Notes py3 Notes()
 
 
