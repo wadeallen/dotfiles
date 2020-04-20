@@ -1,14 +1,13 @@
 #!/bin/bash
 
-filename=$1
+for filename in *.MP4
+do
+	fileroot=$(echo ${filename%.*})
+	HandBrakeCLI --preset "Vimeo YouTube 720p30" -i ${filename} -o ${fileroot}.mp4
+	mv ${fileroot}.mp4 /home/wadeallen/Dropbox/Video_Production/Video/
+done
 
-if	[ -z "$filename" ]
-then
-	echo "Please enter file name"
-	exit 0
-fi
 
 
-fileroot=$(echo ${filename%.*})
 
-HandBrakeCLI -i ${filename} -o ${fileroot}.mp4
+# HandBrakeCLI --preset "Vimeo YouTube 720p30" -i ${filename} -o ${fileroot}.mp4
