@@ -1,0 +1,8 @@
+#!/bin/bash
+
+book=`cat ~/bin/books | rofi -dmenu -i -p "Book"`
+passage=`rofi -dmenu -p "Verse\\Chapter"`
+
+xdg-open https://netbible.org/bible/${book}+${passage}
+
+
