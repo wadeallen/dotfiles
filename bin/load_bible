@@ -1,7 +1,7 @@
 #!/bin/bash
 
-book=`cat ~/bin/books | rofi -dmenu -i -p "Book"`
-passage=`rofi -dmenu -p "Verse\\Chapter"`
+book=`cat ~/bin/books | rofi -dmenu -i -p "Book" | sed 's/ //g'`
+passage=`rofi -dmenu -p "Verse\\Chapter" | sed 's/ //g'`
 
 xdg-open https://netbible.org/bible/${book}+${passage}
 
