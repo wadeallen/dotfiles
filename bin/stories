@@ -51,7 +51,7 @@ os.system('rm ' + stories_dir + '*.md')
 # file downloaded from Google Docs and stored as local text file
 # it is worth noting that the Google Doc must be shared with an editable link
 file_name = "stories.txt"
-url = 'https://docs.google.com/document/d/1Yq9AF5_T4UwHX2JtzmTX9QfviWBDauqhTRW6498S1mY/export?format=txt'
+url = 'https://docs.google.com/document/d/1gKLaR2rWaPUAiBeqDUqhrrEDuw0g11Q9N2mp4GcFSLc/export?format=txt'
 wget.download(url, file_name, bar = bar_none)
 
 # The file is then split into multiple files
@@ -255,47 +255,47 @@ with open(weekly_file, "a") as weekly:
 
 
 
-# # Create file for Visitor
-# visitor_path = '/home/wadeallen/Dropbox/Pandoc/Pandoc_Visitor/'
-# os.system('rm ' + visitor_path + 'articles.txt')
-# article_list = []
-# for story in stories:
-# 	post = frontmatter.load(story)
-# 	if 'visitor' in post['publications']:
-# 		title = post['title']
-# 		# makes all of the titles titlecase
-# 		title = titlecase(title)
-# 		if post.get('picture') != None:
-# 			picture = post.get('picture')
-# 		else:
-# 			picture = 'no picture'
-# 		# for these articles, the print section is used and the website section is taken out
-# 		content = re.sub(r'\{\{print:(.*?)\}\}*\{\{website:(.*?)\}\}', r'\1', post.content.rstrip())
-# 		content = content.replace(r"\n", r"\n\n")
-# 		# forms a sublist that includes title[0], content[1], weight[2]
-# 		article = [title, content, post['weight'], picture]
-# 		# builds the article list with a sublist of each article
-# 		article_list.append(article)
+# Create file for Visitor
+visitor_path = '/home/wadeallen/Dropbox/Pandoc/Pandoc_Visitor/'
+os.system('rm ' + visitor_path + 'articles.txt')
+article_list = []
+for story in stories:
+	post = frontmatter.load(story)
+	if 'visitor' in post['publications']:
+		title = post['title']
+		# makes all of the titles titlecase
+		title = titlecase(title)
+		if post.get('picture') != None:
+			picture = post.get('picture')
+		else:
+			picture = 'no picture'
+		# for these articles, the print section is used and the website section is taken out
+		content = re.sub(r'\{\{print:(.*?)\}\}*\{\{website:(.*?)\}\}', r'\1', post.content.rstrip())
+		content = content.replace(r"\n", r"\n\n")
+		# forms a sublist that includes title[0], content[1], weight[2]
+		article = [title, content, post['weight'], picture]
+		# builds the article list with a sublist of each article
+		article_list.append(article)
 
-# # sorts articles by weight[2]
-# article_list.sort(key=lambda x: int(x[2]))
+# sorts articles by weight[2]
+article_list.sort(key=lambda x: int(x[2]))
 
-# # interates through each article (sorted by weight) and places them in the articles.txt file to be compiled by the visitor script
-# for article in article_list:
-# 	with open(visitor_path + "articles.txt", "a") as visitor_file:
-# 			visitor_file.write('\n\n')
-# 			visitor_file.write('# ' + article[0] + '\n\n')
-# 			# if the article has a picture: name then it will place the latex code to generate that picture, if not, it will do nothing.
-# 			if article[3] != 'no picture':
-# 				# visitor_file.write('\\setlength\intextsep{0pt}')
-# 				visitor_file.write('\\begin{wrapfigure}{r}{.20\\textwidth}\n')
-# 				visitor_file.write('\\vspace{-5mm}')
-# 				visitor_file.write('\includegraphics[width=.18\\textwidth]{people/' + article[3] + '}\n')
-# 				visitor_file.write('\end{wrapfigure}\n\n')
-# 			visitor_file.write(article[1] + '\n\n')
+# interates through each article (sorted by weight) and places them in the articles.txt file to be compiled by the visitor script
+for article in article_list:
+	with open(visitor_path + "articles.txt", "a") as visitor_file:
+			visitor_file.write('\n\n')
+			visitor_file.write('# ' + article[0] + '\n\n')
+			# if the article has a picture: name then it will place the latex code to generate that picture, if not, it will do nothing.
+			if article[3] != 'no picture':
+				# visitor_file.write('\\setlength\intextsep{0pt}')
+				visitor_file.write('\\begin{wrapfigure}{r}{.20\\textwidth}\n')
+				visitor_file.write('\\vspace{-5mm}')
+				visitor_file.write('\includegraphics[width=.18\\textwidth]{people/' + article[3] + '}\n')
+				visitor_file.write('\end{wrapfigure}\n\n')
+			visitor_file.write(article[1] + '\n\n')
 
-# with open(visitor_path + "articles.txt", "a") as visitor_file:
-# 	visitor_file.write('\n\input{includes/birthdays.tex}\n')
+with open(visitor_path + "articles.txt", "a") as visitor_file:
+	visitor_file.write('\n\input{includes/birthdays.tex}\n')
 
 
 

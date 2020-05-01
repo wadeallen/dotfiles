@@ -1,5 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/home/wadeallen/dotfiles'
+let g:netrw_dirhist_9='/home/wadeallen/dotfiles/nvim/spell'
+let g:netrw_dirhist_8='/home/wadeallen/.config/gtk-4.0'
+let g:netrw_dirhist_7='/home/wadeallen/Dropbox/Sites/fbcmuncie_2020/content/video'
 let g:netrw_dirhist_6='/home/wadeallen/dotfiles'
 let g:netrw_dirhist_5='/home/wadeallen/dotfiles/bin'
 let g:netrw_dirhist_4='/home/wadeallen/dotfiles'

@@ -14,5 +14,6 @@
     ~/.dmenurc : dmenurc
     ~/.enscript : enscript
     ~/.config/fish : fish
+    ~/.config/dmenu-extended : dmenu-extended
     ##    ~/.config/gtk-3.0 : gtk-3.0
 
