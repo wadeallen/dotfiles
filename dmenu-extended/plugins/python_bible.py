@@ -19,7 +19,6 @@ class extension(dmenu_extended.dmenu):
     	for b in books_json['sections']:
     		books.append(b['key'])
 
-    	passage = self.menu(books, prompt='Enter book')
+    	passage = self.menu(books, prompt='Enter passage')
     	passage = passage.replace(" ", "+")
-    	verse = self.menu('', prompt='Enter Chapter/Verse')
-    	self.open_url(f"https://netbible.org/bible/{passage}+{verse}")
+    	self.open_url(f"https://netbible.org/bible/{passage}")

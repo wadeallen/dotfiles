@@ -6,7 +6,7 @@
     "fileopener": "xdg-open",
     "filter_binaries": false,
     "follow_symlinks": false,
-    "frequently_used": 0,
+    "frequently_used": 10,
     "global_ignore_folders": [],
     "ignore_folders": [],
     "include_applications": true,
@@ -30,9 +30,9 @@
         "-sb",
         "#1D1F21",
         "-fn",
-        "terminus",
+        "PT Mono:pixelsize=20",
         "-l",
-        "20"
+        "15"
     ],
     "password_helper": [
         "zenity",
