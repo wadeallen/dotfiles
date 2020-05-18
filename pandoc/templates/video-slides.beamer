@@ -2,12 +2,18 @@
 
 \usepackage{xcolor}
 
+%define tightlist
+\def\tightlist{}
 
 \setbeamertemplate{background}
-{\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{/home/wadeallen/Dropbox/Video_Production/slide-background.jpg}}
+{\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{/home/wadeallen/Video/slide-background.jpg}}
 
 
 \setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{itemize item}[square]
+\setbeamercolor*{item}{fg=white}
+\setbeamercolor{itemize/enumerate body}{fg=white}
+
 
 \setbeamersize{text margin left=30mm,text margin right=30mm}
 
@@ -23,7 +29,7 @@
 
 \begin{document}
 
-\color{black}
+\color{white}
 
 \bfseries
 
