@@ -2,5 +2,5 @@
 
 filename=$1
 
-pdfbook --short-edge ${filename}
+pdfbook2 --short-edge ${filename}
 
