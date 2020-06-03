@@ -2,6 +2,8 @@
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 Plug 'ron89/thesaurus_query.vim'
 Plug 'panozzaj/vim-autocorrect'
 Plug 'vim-pandoc/vim-pandoc-syntax'
@@ -140,3 +142,7 @@ let g:UltiSnipsEditSplit="vertical"
 "Move keys inside of paragraphs
 nnoremap j gj
 nnoremap k gk
+
+"bold and italics words in vim
+autocmd FileType markdown,md let b:surround_{char2nr('i')} = "*\r*"
+autocmd FileType markdown,md let b:surround_{char2nr('b')} = "**\r**"
