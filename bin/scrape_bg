@@ -49,7 +49,7 @@ for p in page_content.find_all('p'):
 
     for v in passage:
         number = v.attrs['class'][1].split('-')[2]
-        if len(v.contents) is 2:
+        if len(v.contents) == 2:
             text = v.contents[1]
             text = clean_text(text)
             if number != '1':
