@@ -11,6 +11,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug '907th/vim-auto-save'
 Plug 'SidOfc/mkdx'
+Plug 'vim-scripts/loremipsum'
 call plug#end()
 
 set bg=light
@@ -103,8 +104,8 @@ source $HOME/.config/nvim/custom/python_functions.vim
 source $HOME/.config/nvim/custom/bible.vim
 
 "for thesaurus plugin
-nnoremap <LocalLeader>th :ThesaurusQueryReplaceCurrentWord<CR>
-vnoremap <LocalLeader>th y:Thesaurus <C-r>"<CR>
+nnoremap <LocalLeader>ct :ThesaurusQueryReplaceCurrentWord<CR>
+vnoremap <LocalLeader>ct y:Thesaurus <C-r>"<CR>
 let tq_enabled_backends=["thesaurus_com", "openoffice_en", "datamuse_com", "mthesaur_txt"]
 
 " Auto Capitalize Sentences
