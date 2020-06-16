@@ -2,8 +2,6 @@
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
 Plug 'ron89/thesaurus_query.vim'
 Plug 'panozzaj/vim-autocorrect'
 Plug 'vim-pandoc/vim-pandoc-syntax'
@@ -12,7 +10,7 @@ Plug 'ledger/vim-ledger'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug '907th/vim-auto-save'
-Plug 'arcticicestudio/nord-vim'
+Plug 'SidOfc/mkdx'
 call plug#end()
 
 set bg=light
@@ -21,6 +19,13 @@ set mouse=a
 set nohlsearch
 set linebreak
 set clipboard=unnamedplus
+
+"includes - inside of word
+augroup markdown
+    autocmd!
+    " Include dash in 'word'
+    autocmd FileType markdown setlocal iskeyword+=-
+augroup END
 
 let g:auto_save = 1  " enable AutoSave on Vim startup
 
@@ -143,6 +148,4 @@ let g:UltiSnipsEditSplit="vertical"
 nnoremap j gj
 nnoremap k gk
 
-"bold and italics words in vim
-autocmd FileType markdown,md let b:surround_{char2nr('i')} = "*\r*"
-autocmd FileType markdown,md let b:surround_{char2nr('b')} = "**\r**"
+"Settings for mkdx
