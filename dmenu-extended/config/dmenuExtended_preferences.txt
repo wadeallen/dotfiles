@@ -1,5 +1,5 @@
 {
-    "alias_applications": true,
+    "alias_applications": false,
     "alias_display_format": "{name}",
     "exclude_items": [],
     "filebrowser": "xdg-open",

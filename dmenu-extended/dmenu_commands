@@ -1,4 +1,6 @@
 alias gmail="xdg-open https://mail.google.com"
+alias every dollar="xdg-open https://www.everydollar.com/app/budget"
+alias plex="http://192.168.1.247:32400/"
 alias numbers="xdg-open https://docs.google.com/spreadsheets/d/14TpbSCb71nw9jSrQetPEq1Yi8RvvRcukfnpBwJ4lcJg/edit"
 alias debt="xdg-open https://docs.google.com/spreadsheets/d/1aQXqAAK1so2yIrsu4YS2jGAS2UUcziqG-Y0eVZ9cOXg/edit#gid=0"
 alias weddings="xdg-open https://drive.google.com/drive/u/0/folders/0B8e0Dbi4XduES2FRNmg0SEtMY3c"
@@ -14,5 +16,8 @@ alias shutdown="/home/wadeallen/bin/shutdownnow"
 alias housing="xdg-open https://docs.google.com/spreadsheets/d/1Dd-7BhtAP1jtlkozQveOXVFD4oPdJaV4dLWkkwuYFpU/edit"
 alias stories="xdg-open https://docs.google.com/document/d/1gKLaR2rWaPUAiBeqDUqhrrEDuw0g11Q9N2mp4GcFSLc/edit"
 alias people="xdg-open https://people.planningcenteronline.com/people"
+alias youtube="xdg-open https://www.youtube.com/c/fbcmuncieorg"
+alias fbc="xdg-open https://fbcmuncie.org"
+alias blog="xdg-open https://fbcmuncie.org/blog"
 
 

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+youtube-dl -a urls.txt
+

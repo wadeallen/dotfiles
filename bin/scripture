@@ -256,7 +256,7 @@ else:
 
     with open(path) as f:
         data = json.load(f)
-        print(f'>({reference} {version}) ', end='')
+        print(f'> ({reference} {version}) ', end='')
         for v in verse_range:
             print(data[book][str(chapter)][str(v)], end=' ')
 

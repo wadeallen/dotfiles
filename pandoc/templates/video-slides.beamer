@@ -2,12 +2,20 @@
 
 \usepackage{xcolor}
 
+\definecolor{myblue}{HTML}{074e54}
+
+%define tightlist
+\def\tightlist{}
 
 \setbeamertemplate{background}
 {\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{/home/wadeallen/Dropbox/Video_Production/slide-background.jpg}}
 
 
 \setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{itemize item}[square]
+\setbeamercolor*{item}{fg=black}
+\setbeamercolor{itemize/enumerate body}{fg=black}
+
 
 \setbeamersize{text margin left=30mm,text margin right=30mm}
 
@@ -23,7 +31,7 @@
 
 \begin{document}
 
-\color{white}
+\color{myblue}
 
 \bfseries
 

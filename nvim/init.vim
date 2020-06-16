@@ -10,7 +10,8 @@ Plug 'ledger/vim-ledger'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug '907th/vim-auto-save'
-Plug 'arcticicestudio/nord-vim'
+Plug 'SidOfc/mkdx'
+Plug 'vim-scripts/loremipsum'
 call plug#end()
 
 set bg=light
@@ -19,6 +20,13 @@ set mouse=a
 set nohlsearch
 set linebreak
 set clipboard=unnamedplus
+
+"includes - inside of word
+augroup markdown
+    autocmd!
+    " Include dash in 'word'
+    autocmd FileType markdown setlocal iskeyword+=-
+augroup END
 
 let g:auto_save = 1  " enable AutoSave on Vim startup
 
@@ -96,8 +104,8 @@ source $HOME/.config/nvim/custom/python_functions.vim
 source $HOME/.config/nvim/custom/bible.vim
 
 "for thesaurus plugin
-nnoremap <LocalLeader>th :ThesaurusQueryReplaceCurrentWord<CR>
-vnoremap <LocalLeader>th y:Thesaurus <C-r>"<CR>
+nnoremap <LocalLeader>ct :ThesaurusQueryReplaceCurrentWord<CR>
+vnoremap <LocalLeader>ct y:Thesaurus <C-r>"<CR>
 let tq_enabled_backends=["thesaurus_com", "openoffice_en", "datamuse_com", "mthesaur_txt"]
 
 " Auto Capitalize Sentences
@@ -140,3 +148,5 @@ let g:UltiSnipsEditSplit="vertical"
 "Move keys inside of paragraphs
 nnoremap j gj
 nnoremap k gk
+
+"Settings for mkdx

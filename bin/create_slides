@@ -4,18 +4,15 @@ SUNDAY=$(date -d 'sun' +'%Y-%m-%d')
 THIS_WEEK=$(date -d 'sun' +'%Y-%m-%d')
 NEXT_WEEK=$(date -d 'sun 1 week' +'%Y-%m-%d')
 
-DIRECTORY=$HOME/Dropbox/Video_Production/${SUNDAY}
+DIRECTORY=$HOME/Dropbox/Video_Production/${SUNDAY}_slides
 SERMON_DIR=$HOME/Dropbox/Sermon_Work
 VID_DIR=$HOME/Dropbox/Video_Production
 
 mkdir ${DIRECTORY} &&
 pandoc -t beamer ${SERMON_DIR}/${SUNDAY}_slides.md -o ${DIRECTORY}/slides.pdf --template video-slides &&
-mkdir ${DIRECTORY}/slides &&
 cd ${DIRECTORY} &&
 pdftoppm -jpeg -scale-to-x 1280 -scale-to-y 720 slides.pdf slide &&
-mv *.jpg slides/ &&
 rm slides.pdf &&
 mogrify -format jpg -resize 1280x720 ${VID_DIR}/slide-title.jpg &&
-cp ${VID_DIR}/slide-title.jpg ${DIRECTORY}/slides/slide-00.jpg &&
-mkdir intro_music &&
-cp ${VID_DIR}/webcast_intro.wav ${DIRECTORY}/intro_music/
+cp ${VID_DIR}/slide-title.jpg ${DIRECTORY}/slide-00.jpg &&
+echo "slides created for ${SUNDAY}"
