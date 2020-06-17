@@ -104,8 +104,8 @@ source $HOME/.config/nvim/custom/python_functions.vim
 source $HOME/.config/nvim/custom/bible.vim
 
 "for thesaurus plugin
-nnoremap <LocalLeader>ct :ThesaurusQueryReplaceCurrentWord<CR>
-vnoremap <LocalLeader>ct y:Thesaurus <C-r>"<CR>
+nnoremap <LocalLeader>fw :ThesaurusQueryReplaceCurrentWord<CR>
+vnoremap <LocalLeader>fw y:Thesaurus <C-r>"<CR>
 let tq_enabled_backends=["thesaurus_com", "openoffice_en", "datamuse_com", "mthesaur_txt"]
 
 " Auto Capitalize Sentences

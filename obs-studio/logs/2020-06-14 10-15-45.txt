@@ -1,0 +1,359 @@
+10:15:45 AM.164: CPU Name: Intel(R) Core(TM) i5-7300U CPU @ 2.60GHz
+10:15:45 AM.164: CPU Speed: 3500.144MHz
+10:15:45 AM.164: Physical Cores: 2, Logical Cores: 4
+10:15:45 AM.164: Physical Memory: 15890MB Total, 13303MB Free
+10:15:45 AM.164: Kernel Version: Linux 5.6.16-1-MANJARO
+10:15:45 AM.164: Distribution: "Manjaro Linux" Unknown
+10:15:45 AM.164: Window System: X11.0, Vendor: The X.Org Foundation, Version: 1.20.8
+10:15:45 AM.165: Portable mode: false
+10:15:45 AM.193: OBS 25.0.8-1 (linux)
+10:15:45 AM.193: ---------------------------------
+10:15:45 AM.271: ---------------------------------
+10:15:45 AM.271: audio settings reset:
+10:15:45 AM.271: 	samples per sec: 44100
+10:15:45 AM.271: 	speakers:        2
+10:15:45 AM.276: ---------------------------------
+10:15:45 AM.276: Initializing OpenGL...
+10:15:45 AM.305: Loading up OpenGL on adapter Intel Mesa Intel(R) HD Graphics 620 (KBL GT2)
+10:15:45 AM.305: OpenGL loaded successfully, version 4.6 (Core Profile) Mesa 20.0.7, shading language 4.60
+10:15:45 AM.318: ---------------------------------
+10:15:45 AM.318: video settings reset:
+10:15:45 AM.318: 	base resolution:   1280x720
+10:15:45 AM.318: 	output resolution: 852x480
+10:15:45 AM.318: 	downscale filter:  Bicubic
+10:15:45 AM.318: 	fps:               30/1
+10:15:45 AM.318: 	format:            NV12
+10:15:45 AM.318: 	YUV mode:          601/Partial
+10:15:45 AM.318: NV12 texture support not available
+10:15:45 AM.318: Audio monitoring device:
+10:15:45 AM.318: 	name: Default
+10:15:45 AM.318: 	id: default
+10:15:45 AM.318: ---------------------------------
+10:15:45 AM.320: Failed to load 'en-US' text for module: 'decklink-ouput-ui.so'
+10:15:45 AM.384: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+10:15:45 AM.384: No blackmagic support
+10:15:45 AM.394: os_dlopen(libnvidia-encode.so.1->libnvidia-encode.so.1): libnvidia-encode.so.1: cannot open shared object file: No such file or directory
+10:15:45 AM.394: 
+10:15:45 AM.394: FFMPEG VAAPI supported
+10:15:45 AM.401: os_dlopen(libvlc.so.5->libvlc.so.5): libvlc.so.5: cannot open shared object file: No such file or directory
+10:15:45 AM.401: 
+10:15:45 AM.401: Couldn't find VLC installation, VLC video source disabled
+10:15:45 AM.401: ---------------------------------
+10:15:45 AM.401:   Loaded Modules:
+10:15:45 AM.401:     vlc-video.so
+10:15:45 AM.401:     text-freetype2.so
+10:15:45 AM.401:     rtmp-services.so
+10:15:45 AM.401:     obs-x264.so
+10:15:45 AM.401:     obs-transitions.so
+10:15:45 AM.401:     obs-outputs.so
+10:15:45 AM.401:     obs-libfdk.so
+10:15:45 AM.401:     obs-filters.so
+10:15:45 AM.401:     obs-ffmpeg.so
+10:15:45 AM.401:     linux-v4l2.so
+10:15:45 AM.401:     linux-pulseaudio.so
+10:15:45 AM.401:     linux-jack.so
+10:15:45 AM.401:     linux-decklink.so
+10:15:45 AM.401:     linux-capture.so
+10:15:45 AM.401:     linux-alsa.so
+10:15:45 AM.401:     image-source.so
+10:15:45 AM.401:     frontend-tools.so
+10:15:45 AM.401:     decklink-ouput-ui.so
+10:15:45 AM.401: ---------------------------------
+10:15:45 AM.401: ==== Startup complete ===============================================
+10:15:45 AM.404: All scene data cleared
+10:15:45 AM.404: ------------------------------------------------
+10:15:45 AM.406: pulse-input: Server name: 'pulseaudio 13.0'
+10:15:45 AM.406: pulse-input: Audio format: s16le, 44100 Hz, 2 channels
+10:15:45 AM.407: pulse-input: Started recording from 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+10:15:45 AM.407: [Loaded global audio device]: 'Desktop Audio'
+10:15:45 AM.407: pulse-input: Server name: 'pulseaudio 13.0'
+10:15:45 AM.407: pulse-input: Audio format: s16le, 44100 Hz, 2 channels
+10:15:45 AM.407: pulse-input: Started recording from 'alsa_input.pci-0000_00_1f.3.analog-stereo'
+10:15:45 AM.408: [Loaded global audio device]: 'Mic/Aux'
+10:15:45 AM.408: [Media Source 'He Leadeth Me']: settings:
+10:15:45 AM.408: 	input:                   /home/wadeallen/Dropbox/Live Stream Videos/He Leadeth Me.mp4
+10:15:45 AM.408: 	input_format:            (null)
+10:15:45 AM.408: 	speed:                   100
+10:15:45 AM.408: 	is_looping:              no
+10:15:45 AM.408: 	is_hw_decoding:          no
+10:15:45 AM.408: 	is_clear_on_media_end:   yes
+10:15:45 AM.408: 	restart_on_activate:     yes
+10:15:45 AM.408: 	close_when_inactive:     no
+10:15:45 AM.409: pulse-am: Server name: 'pulseaudio 13.0'
+10:15:45 AM.410: pulse-am: Audio format: s16le, 44100 Hz, 2 channels
+10:15:45 AM.410: pulse-am: Started Monitoring in 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+10:15:45 AM.411: [Media Source 'Blessing']: settings:
+10:15:45 AM.411: 	input:                   /home/wadeallen/Dropbox/Live Stream Videos/blessing_in_the_chaos-HD 720.mp4
+10:15:45 AM.411: 	input_format:            (null)
+10:15:45 AM.411: 	speed:                   100
+10:15:45 AM.411: 	is_looping:              no
+10:15:45 AM.411: 	is_hw_decoding:          no
+10:15:45 AM.411: 	is_clear_on_media_end:   yes
+10:15:45 AM.411: 	restart_on_activate:     yes
+10:15:45 AM.411: 	close_when_inactive:     no
+10:15:45 AM.411: pulse-am: Server name: 'pulseaudio 13.0'
+10:15:45 AM.411: pulse-am: Audio format: s16le, 44100 Hz, 2 channels
+10:15:45 AM.412: pulse-am: Started Monitoring in 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+10:15:45 AM.412: [Media Source 'Who you say']: settings:
+10:15:45 AM.412: 	input:                   /home/wadeallen/Dropbox/Live Stream Videos/Who You Say I Am.mp4
+10:15:45 AM.412: 	input_format:            (null)
+10:15:45 AM.412: 	speed:                   100
+10:15:45 AM.412: 	is_looping:              no
+10:15:45 AM.412: 	is_hw_decoding:          no
+10:15:45 AM.412: 	is_clear_on_media_end:   yes
+10:15:45 AM.412: 	restart_on_activate:     yes
+10:15:45 AM.412: 	close_when_inactive:     no
+10:15:45 AM.412: pulse-am: Server name: 'pulseaudio 13.0'
+10:15:45 AM.413: pulse-am: Audio format: s16le, 44100 Hz, 2 channels
+10:15:45 AM.413: pulse-am: Started Monitoring in 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+10:15:45 AM.500: v4l2-input: Start capture from /dev/video0
+10:15:45 AM.612: v4l2-input: Input: 0
+10:15:45 AM.637: v4l2-input: Resolution: 640x480
+10:15:45 AM.637: v4l2-input: Pixelformat: VYUY
+10:15:45 AM.637: v4l2-input: Linesize: 1280 Bytes
+10:15:45 AM.637: v4l2-input: Framerate: 30.00 fps
+10:15:45 AM.684: [Media Source 'Sermon Video File']: settings:
+10:15:45 AM.684: 	input:                   /home/wadeallen/Dropbox/Live Stream Videos/2020-06-14-upload.mkv
+10:15:45 AM.684: 	input_format:            (null)
+10:15:45 AM.684: 	speed:                   100
+10:15:45 AM.684: 	is_looping:              no
+10:15:45 AM.684: 	is_hw_decoding:          no
+10:15:45 AM.684: 	is_clear_on_media_end:   yes
+10:15:45 AM.684: 	restart_on_activate:     yes
+10:15:45 AM.684: 	close_when_inactive:     no
+10:15:45 AM.684: pulse-am: Server name: 'pulseaudio 13.0'
+10:15:45 AM.684: pulse-am: Audio format: s16le, 44100 Hz, 2 channels
+10:15:45 AM.684: pulse-am: Started Monitoring in 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+10:15:45 AM.685: [Media Source 'We Trust']: settings:
+10:15:45 AM.685: 	input:                   /home/wadeallen/Dropbox/Live Stream Videos/We Trust Seeds.mp4
+10:15:45 AM.685: 	input_format:            (null)
+10:15:45 AM.685: 	speed:                   100
+10:15:45 AM.685: 	is_looping:              no
+10:15:45 AM.685: 	is_hw_decoding:          no
+10:15:45 AM.685: 	is_clear_on_media_end:   yes
+10:15:45 AM.685: 	restart_on_activate:     yes
+10:15:45 AM.685: 	close_when_inactive:     no
+10:15:45 AM.685: pulse-am: Server name: 'pulseaudio 13.0'
+10:15:45 AM.686: pulse-am: Audio format: s16le, 44100 Hz, 2 channels
+10:15:45 AM.686: pulse-am: Started Monitoring in 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+10:15:45 AM.687: [Media Source 'Be Still My Soul']: settings:
+10:15:45 AM.687: 	input:                   /home/wadeallen/Dropbox/Live Stream Videos/Be Still, My Soul (organ for congregational singing).mp4
+10:15:45 AM.687: 	input_format:            (null)
+10:15:45 AM.687: 	speed:                   100
+10:15:45 AM.687: 	is_looping:              no
+10:15:45 AM.687: 	is_hw_decoding:          no
+10:15:45 AM.687: 	is_clear_on_media_end:   yes
+10:15:45 AM.687: 	restart_on_activate:     yes
+10:15:45 AM.687: 	close_when_inactive:     no
+10:15:45 AM.688: pulse-am: Server name: 'pulseaudio 13.0'
+10:15:45 AM.688: pulse-am: Audio format: s16le, 44100 Hz, 2 channels
+10:15:45 AM.689: pulse-am: Started Monitoring in 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+10:15:45 AM.690: Switched to scene 'Intro to Be Still'
+10:15:45 AM.691: ------------------------------------------------
+10:15:45 AM.691: Loaded scenes:
+10:15:45 AM.691: - scene 'Welcome':
+10:15:45 AM.691:     - source: 'church door' (image_source)
+10:15:45 AM.691:     - source: 'Video Capture Device (V4L2)' (v4l2_input)
+10:15:45 AM.691:     - source: 'Welcome Text' (text_ft2_source_v2)
+10:15:45 AM.691:     - source: 'First Baptist Muncie' (text_ft2_source_v2)
+10:15:45 AM.691:     - source: 'todays date' (text_ft2_source_v2)
+10:15:45 AM.691: - scene 'We Trust Song':
+10:15:45 AM.691:     - source: 'We Trust' (ffmpeg_source)
+10:15:45 AM.691:         - monitoring: monitor and output
+10:15:45 AM.691: - scene 'Who You Say I Am Song':
+10:15:45 AM.691:     - source: 'Who you say' (ffmpeg_source)
+10:15:45 AM.691:         - monitoring: monitor and output
+10:15:45 AM.691: - scene 'Full Screen':
+10:15:45 AM.691:     - source: 'church door' (image_source)
+10:15:45 AM.691:     - source: 'Video Capture Device (V4L2)' (v4l2_input)
+10:15:45 AM.691:     - source: 'First Baptist Muncie' (text_ft2_source_v2)
+10:15:45 AM.691:     - source: 'todays date' (text_ft2_source_v2)
+10:15:45 AM.691: - scene 'Blessing in Chaos':
+10:15:45 AM.691:     - source: 'Blessing' (ffmpeg_source)
+10:15:45 AM.691:         - monitoring: monitor and output
+10:15:45 AM.691: - scene 'Intro Music and Sermon':
+10:15:45 AM.691:     - source: 'church door' (image_source)
+10:15:45 AM.691:     - source: 'Video Capture Device (V4L2)' (v4l2_input)
+10:15:45 AM.691:     - source: 'First Baptist Muncie' (text_ft2_source_v2)
+10:15:45 AM.691:     - source: 'todays date' (text_ft2_source_v2)
+10:15:45 AM.691: - scene 'He Leadeth':
+10:15:45 AM.691:     - source: 'He Leadeth Me' (ffmpeg_source)
+10:15:45 AM.691:         - monitoring: monitor and output
+10:15:45 AM.691: - scene 'Sermon Video':
+10:15:45 AM.691:     - source: 'Sermon Video File' (ffmpeg_source)
+10:15:45 AM.691:         - monitoring: monitor and output
+10:15:45 AM.691: - scene 'Intro to Be Still':
+10:15:45 AM.691:     - source: 'church door' (image_source)
+10:15:45 AM.691:     - source: 'Video Capture Device (V4L2)' (v4l2_input)
+10:15:45 AM.691:     - source: 'First Baptist Muncie' (text_ft2_source_v2)
+10:15:45 AM.691:     - source: 'todays date' (text_ft2_source_v2)
+10:15:45 AM.691: - scene 'Be Still':
+10:15:45 AM.691:     - source: 'Be Still My Soul' (ffmpeg_source)
+10:15:45 AM.691:         - monitoring: monitor and output
+10:15:45 AM.691: - scene 'Benediction':
+10:15:45 AM.691:     - source: 'church door' (image_source)
+10:15:45 AM.691:     - source: 'Video Capture Device (V4L2)' (v4l2_input)
+10:15:45 AM.691:     - source: 'Benediction Text' (text_ft2_source_v2)
+10:15:45 AM.691:     - source: 'Welcome Text' (text_ft2_source_v2)
+10:15:45 AM.691:     - source: 'First Baptist Muncie' (text_ft2_source_v2)
+10:15:45 AM.691:     - source: 'todays date' (text_ft2_source_v2)
+10:15:45 AM.691: ------------------------------------------------
+10:15:45 AM.941: adding 46 milliseconds of audio buffering, total audio buffering is now 46 milliseconds (source: Mic/Aux)
+10:15:45 AM.941: 
+10:16:58 AM.995: User switched to scene 'Welcome'
+10:17:08 AM.255: User switched to scene 'Full Screen'
+10:17:11 AM.093: User switched to scene 'Welcome'
+10:42:15 AM.065: ---------------------------------
+10:42:15 AM.065: [x264 encoder: 'simple_h264_stream'] preset: veryfast
+10:42:15 AM.066: [x264 encoder: 'simple_h264_stream'] settings:
+10:42:15 AM.066: 	rate_control: CBR
+10:42:15 AM.066: 	bitrate:      1500
+10:42:15 AM.066: 	buffer size:  1500
+10:42:15 AM.066: 	crf:          0
+10:42:15 AM.066: 	fps_num:      30
+10:42:15 AM.066: 	fps_den:      1
+10:42:15 AM.066: 	width:        852
+10:42:15 AM.066: 	height:       480
+10:42:15 AM.066: 	keyint:       60
+10:42:15 AM.066: 
+10:42:15 AM.071: libfdk_aac encoder created
+10:42:15 AM.071: libfdk_aac bitrate: 160, channels: 2
+10:42:15 AM.073: [rtmp stream: 'simple_stream'] Connecting to RTMP URL rtmp://a.rtmp.youtube.com/live2...
+10:42:15 AM.324: [rtmp stream: 'simple_stream'] Connection to rtmp://a.rtmp.youtube.com/live2 successful
+10:42:15 AM.334: ==== Streaming Start ===============================================
+10:46:31 AM.732: User switched to scene 'We Trust Song'
+10:49:05 AM.250: User switched to scene 'Who You Say I Am Song'
+10:51:52 AM.969: pulse-input: Stopped recording from 'alsa_input.usb-BLUE_MICROPHONE_Blue_Snowball_797_2019_07_29_48475-00.mono-fallback'
+10:51:52 AM.969: pulse-input: Got 219301 packets with 95594493 frames
+10:51:52 AM.969: pulse-input: Server name: 'pulseaudio 13.0'
+10:51:52 AM.970: pulse-input: Audio format: s16le, 44100 Hz, 1 channels
+10:51:52 AM.970: pulse-input: Started recording from 'alsa_input.usb-BLUE_MICROPHONE_Blue_Snowball_797_2019_07_29_48475-00.mono-fallback'
+10:53:33 AM.066: User switched to scene 'Full Screen'
+10:54:08 AM.291: User switched to scene 'Blessing in Chaos'
+10:57:32 AM.488: User switched to scene 'He Leadeth'
+11:00:42 AM.265: User switched to scene 'Sermon Video'
+11:31:52 AM.917: User switched to scene 'Intro to Be Still'
+11:32:06 AM.188: User switched to scene 'Be Still'
+11:34:59 AM.486: User switched to scene 'Benediction'
+11:36:14 AM.055: [rtmp stream: 'simple_stream'] User stopped the stream
+11:36:14 AM.055: Output 'simple_stream': stopping
+11:36:14 AM.055: Output 'simple_stream': Total frames output: 97140
+11:36:14 AM.056: Output 'simple_stream': Total drawn frames: 97166 (97170 attempted)
+11:36:14 AM.056: Output 'simple_stream': Number of lagged frames due to rendering lag/stalls: 4 (0.0%)
+11:36:14 AM.056: [rtmp stream: 'simple_stream'] Freeing 1 remaining packets
+11:36:14 AM.058: ==== Streaming Stop ================================================
+11:36:14 AM.070: libfdk_aac encoder destroyed
+11:58:53 AM.221: ---------------------------------
+11:58:53 AM.221: video settings reset:
+11:58:53 AM.221: 	base resolution:   1280x720
+11:58:53 AM.221: 	output resolution: 1280x720
+11:58:53 AM.221: 	downscale filter:  Bicubic
+11:58:53 AM.221: 	fps:               30/1
+11:58:53 AM.221: 	format:            NV12
+11:58:53 AM.221: 	YUV mode:          601/Partial
+11:58:53 AM.221: NV12 texture support not available
+11:58:53 AM.223: Settings changed (video)
+11:58:53 AM.223: ------------------------------------------------
+11:58:55 AM.778: ==== Shutting down ==================================================
+11:58:55 AM.794: Switched to scene '(null)'
+11:58:55 AM.800: pulse-am: Stopped Monitoring in 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+11:58:55 AM.800: pulse-am: Got 6605 packets with 6763520 frames
+11:58:55 AM.802: pulse-am: Stopped Monitoring in 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+11:58:55 AM.802: pulse-am: Got 11512 packets with 11788288 frames
+11:58:55 AM.803: pulse-am: Stopped Monitoring in 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+11:58:55 AM.804: pulse-am: Got 9588 packets with 9020374 frames
+11:58:55 AM.805: pulse-am: Stopped Monitoring in 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+11:58:55 AM.805: pulse-am: Got 8187 packets with 8383488 frames
+11:58:55 AM.806: pulse-am: Stopped Monitoring in 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+11:58:55 AM.806: pulse-am: Got 87703 packets with 82510967 frames
+11:58:55 AM.809: pulse-am: Stopped Monitoring in 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+11:58:55 AM.809: pulse-am: Got 7405 packets with 7582720 frames
+11:58:55 AM.818: v4l2-input: Stopped capture after 186777 frames
+11:58:56 AM.044: pulse-input: Stopped recording from 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+11:58:56 AM.044: pulse-input: Got 1056546 packets with 272914159 frames
+11:58:56 AM.045: pulse-input: Stopped recording from 'alsa_input.usb-BLUE_MICROPHONE_Blue_Snowball_797_2019_07_29_48475-00.mono-fallback'
+11:58:56 AM.045: pulse-input: Got 404004 packets with 177407946 frames
+11:58:56 AM.046: All scene data cleared
+11:58:56 AM.046: ------------------------------------------------
+11:58:56 AM.056: Failed to fetch parent window geometry!
+11:58:56 AM.059: Failed to fetch parent window geometry!
+11:58:56 AM.059: Failed to fetch parent window geometry!
+11:58:56 AM.060: Failed to fetch parent window geometry!
+11:58:56 AM.139: Freeing OBS context data
+11:58:56 AM.148: [Scripting] Total detached callbacks: 0
+11:58:56 AM.171: == Profiler Results =============================
+11:58:56 AM.171: run_program_init: 780.192 ms
+11:58:56 AM.171:  ┣OBSApp::AppInit: 5.038 ms
+11:58:56 AM.171:  ┃ ┗OBSApp::InitLocale: 0.79 ms
+11:58:56 AM.171:  ┗OBSApp::OBSInit: 630.789 ms
+11:58:56 AM.171:    ┣obs_startup: 15.383 ms
+11:58:56 AM.171:    ┗OBSBasic::OBSInit: 509.396 ms
+11:58:56 AM.171:      ┣OBSBasic::InitBasicConfig: 0.076 ms
+11:58:56 AM.171:      ┣OBSBasic::ResetAudio: 0.121 ms
+11:58:56 AM.171:      ┣OBSBasic::ResetVideo: 47.44 ms
+11:58:56 AM.171:      ┣OBSBasic::InitOBSCallbacks: 0.003 ms
+11:58:56 AM.171:      ┣OBSBasic::InitHotkeys: 0.039 ms
+11:58:56 AM.171:      ┣obs_load_all_modules: 82.408 ms
+11:58:56 AM.171:      ┃ ┣obs_init_module(decklink-ouput-ui.so): 0.487 ms
+11:58:56 AM.171:      ┃ ┣obs_init_module(frontend-tools.so): 56.339 ms
+11:58:56 AM.171:      ┃ ┣obs_init_module(image-source.so): 0.004 ms
+11:58:56 AM.171:      ┃ ┣obs_init_module(linux-alsa.so): 0.001 ms
+11:58:56 AM.171:      ┃ ┣obs_init_module(linux-capture.so): 0.273 ms
+11:58:56 AM.171:      ┃ ┣obs_init_module(linux-decklink.so): 0.107 ms
+11:58:56 AM.171:      ┃ ┣obs_init_module(linux-jack.so): 0.001 ms
+11:58:56 AM.171:      ┃ ┣obs_init_module(linux-pulseaudio.so): 0.001 ms
+11:58:56 AM.171:      ┃ ┣obs_init_module(linux-v4l2.so): 0.001 ms
+11:58:56 AM.171:      ┃ ┣obs_init_module(obs-ffmpeg.so): 0.236 ms
+11:58:56 AM.171:      ┃ ┃ ┗nvenc_check: 0.21 ms
+11:58:56 AM.171:      ┃ ┣obs_init_module(obs-filters.so): 0.01 ms
+11:58:56 AM.171:      ┃ ┣obs_init_module(obs-libfdk.so): 0.001 ms
+11:58:56 AM.171:      ┃ ┣obs_init_module(obs-outputs.so): 0.001 ms
+11:58:56 AM.171:      ┃ ┣obs_init_module(obs-transitions.so): 0.004 ms
+11:58:56 AM.171:      ┃ ┣obs_init_module(obs-x264.so): 0.001 ms
+11:58:56 AM.171:      ┃ ┣obs_init_module(rtmp-services.so): 0.327 ms
+11:58:56 AM.171:      ┃ ┣obs_init_module(text-freetype2.so): 0.006 ms
+11:58:56 AM.171:      ┃ ┗obs_init_module(vlc-video.so): 0.209 ms
+11:58:56 AM.171:      ┣OBSBasic::ResetOutputs: 0.104 ms
+11:58:56 AM.171:      ┣OBSBasic::CreateHotkeys: 0.03 ms
+11:58:56 AM.171:      ┣OBSBasic::InitService: 1.209 ms
+11:58:56 AM.171:      ┣OBSBasic::InitPrimitives: 0.143 ms
+11:58:56 AM.171:      ┗OBSBasic::Load: 300.225 ms
+11:58:56 AM.171: obs_hotkey_thread(25 ms): min=0.07 ms, median=0.531 ms, max=128.101 ms, 99th percentile=2.586 ms, 99.9992% below 25 ms
+11:58:56 AM.171: audio_thread(Audio): min=0 ms, median=0.427 ms, max=30.468 ms, 99th percentile=3.289 ms
+11:58:56 AM.171:  ┗receive_audio: min=0.002 ms, median=0.599 ms, max=20.869 ms, 99th percentile=2.855 ms, 0.535666 calls per parent call
+11:58:56 AM.171:    ┣buffer_audio: min=0 ms, median=0.001 ms, max=1.271 ms, 99th percentile=0.008 ms
+11:58:56 AM.171:    ┗do_encode: min=0.062 ms, median=0.594 ms, max=20.862 ms, 99th percentile=2.843 ms
+11:58:56 AM.171:      ┗encode(simple_aac): min=0.058 ms, median=0.573 ms, max=20.828 ms, 99th percentile=2.709 ms
+11:58:56 AM.171: obs_graphics_thread(33.3333 ms): min=0.038 ms, median=3.524 ms, max=271.965 ms, 99th percentile=10.775 ms, 99.9973% below 33.333 ms
+11:58:56 AM.171:  ┣tick_sources: min=0 ms, median=0.03 ms, max=271.438 ms, 99th percentile=0.11 ms
+11:58:56 AM.172:  ┣output_frame: min=0.016 ms, median=2.303 ms, max=29.438 ms, 99th percentile=7.596 ms
+11:58:56 AM.172:  ┃ ┣gs_context(video->graphics): min=0.015 ms, median=2.18 ms, max=24.872 ms, 99th percentile=7.211 ms
+11:58:56 AM.172:  ┃ ┃ ┣render_video: min=0.011 ms, median=2.142 ms, max=24.588 ms, 99th percentile=7.15 ms
+11:58:56 AM.172:  ┃ ┃ ┃ ┣render_main_texture: min=0.01 ms, median=0.701 ms, max=15.687 ms, 99th percentile=1.573 ms
+11:58:56 AM.172:  ┃ ┃ ┃ ┣render_output_texture: min=0.021 ms, median=0.039 ms, max=5.16 ms, 99th percentile=0.214 ms, 0.523407 calls per parent call
+11:58:56 AM.172:  ┃ ┃ ┃ ┣render_convert_texture: min=0.019 ms, median=0.034 ms, max=6.603 ms, 99th percentile=0.175 ms, 0.523407 calls per parent call
+11:58:56 AM.172:  ┃ ┃ ┃ ┗stage_output_texture: min=0.799 ms, median=4.069 ms, max=16.363 ms, 99th percentile=6.439 ms, 0.523407 calls per parent call
+11:58:56 AM.172:  ┃ ┃ ┣gs_flush: min=0 ms, median=0.004 ms, max=5.675 ms, 99th percentile=0.398 ms
+11:58:56 AM.172:  ┃ ┃ ┗download_frame: min=0 ms, median=0.007 ms, max=6.427 ms, 99th percentile=0.051 ms, 0.523407 calls per parent call
+11:58:56 AM.172:  ┃ ┗output_video_data: min=0.075 ms, median=0.128 ms, max=24.777 ms, 99th percentile=1.426 ms, 0.523402 calls per parent call
+11:58:56 AM.172:  ┗render_displays: min=0.002 ms, median=1.207 ms, max=119.149 ms, 99th percentile=4.567 ms
+11:58:56 AM.172: video_thread(video): min=0.374 ms, median=0.769 ms, max=45.28 ms, 99th percentile=3.445 ms
+11:58:56 AM.172:  ┗receive_video: min=0.373 ms, median=0.764 ms, max=45.278 ms, 99th percentile=3.433 ms
+11:58:56 AM.172:    ┗do_encode: min=0.371 ms, median=0.76 ms, max=45.276 ms, 99th percentile=3.429 ms
+11:58:56 AM.172:      ┗encode(simple_h264_stream): min=0.361 ms, median=0.644 ms, max=45.259 ms, 99th percentile=3.106 ms
+11:58:56 AM.172: obs_graphics_thread(33.3333 ms): min=0.08 ms, median=2.534 ms, max=9.109 ms, 99th percentile=9.109 ms, 100% below 33.333 ms
+11:58:56 AM.172:  ┣tick_sources: min=0.002 ms, median=0.032 ms, max=0.329 ms, 99th percentile=0.329 ms
+11:58:56 AM.172:  ┣output_frame: min=0.045 ms, median=1.083 ms, max=6.206 ms, 99th percentile=6.206 ms
+11:58:56 AM.172:  ┃ ┗gs_context(video->graphics): min=0.045 ms, median=1.083 ms, max=6.205 ms, 99th percentile=6.205 ms
+11:58:56 AM.172:  ┃   ┣render_video: min=0.035 ms, median=0.854 ms, max=1.614 ms, 99th percentile=1.614 ms
+11:58:56 AM.172:  ┃   ┃ ┗render_main_texture: min=0.031 ms, median=0.845 ms, max=1.602 ms, 99th percentile=1.602 ms
+11:58:56 AM.172:  ┃   ┗gs_flush: min=0.001 ms, median=0.247 ms, max=4.54 ms, 99th percentile=4.54 ms
+11:58:56 AM.172:  ┗render_displays: min=0.006 ms, median=1.266 ms, max=4.42 ms, 99th percentile=4.42 ms
+11:58:56 AM.172: OBSBasic::ResetVideo: 39.6 ms
+11:58:56 AM.172: =================================================
+11:58:56 AM.172: == Profiler Time Between Calls ==================
+11:58:56 AM.172: obs_hotkey_thread(25 ms): min=25.115 ms, median=25.661 ms, max=153.177 ms, 34.8361% within ±2% of 25 ms (0% lower, 65.1639% higher)
+11:58:56 AM.172: obs_graphics_thread(33.3333 ms): min=15.676 ms, median=33.333 ms, max=271.971 ms, 99.3864% within ±2% of 33.333 ms (0.307609% lower, 0.305993% higher)
+11:58:56 AM.172: obs_graphics_thread(33.3333 ms): min=33.189 ms, median=33.333 ms, max=33.432 ms, 100% within ±2% of 33.333 ms (0% lower, 0% higher)
+11:58:56 AM.172: =================================================
+11:58:56 AM.329: Number of memory leaks: 0
