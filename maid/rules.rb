@@ -9,6 +9,10 @@ Maid.rules do
     move(dir('~/Scans/Benefit Wallet Receipt*.pdf'), '/home/wadeallen/Dropbox/Receipts/Medical/Benefit_Wallet')
   end
 
+  rule 'move Discover Card Statement files into folder' do
+    move(dir('~/Scans/*Discover Bank Statement.pdf'), '/home/wadeallen/Dropbox/Statements/Discover/Emergency_Fund')
+  end
+
   rule 'move Thrivent Credit Union into folder' do
     move(dir('~/Scans/Thrivent Credit Union*.pdf'), '/home/wadeallen/Dropbox/Statements/Thrivent Credit Union')
   end

@@ -26,6 +26,7 @@
     "#thrivent": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/thrivent.py"],
     "#van": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/anna_vanderbilt.py"],
     "#forum": ["run-replace", "sh", "-c", "echo Forum Credit Union `date +%F`"],
+    "#discover": ["run-replace", "sh", "-c", "echo `date +%F` Discover Bank Statement"],
     "#dcar": ["run-replace", "sh", "-c", "echo Teachers Credit Union `date +%F`"],
     "#acar": ["run-replace", "sh", "-c", "echo Evansville Teachers Credit Union `date +%F`"],
     "#etcu": ["run-replace", "sh", "-c", "echo Evansville Teachers Credit Union `date +%F`"],
