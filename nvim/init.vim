@@ -131,7 +131,7 @@ nnoremap <leader>nt G"=strftime("%Y/%m/%d")<CR>PA<Space><Space>
 
 "for editing sermons files
 noremap 99 i---<Esc>
-noremap <leader>cv 0lv$y
+noremap <leader>cv 0llv$y
 
 "this will add new line without insert mode
 nmap <S-Enter> O<Esc>j

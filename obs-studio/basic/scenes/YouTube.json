@@ -130,10 +130,7 @@
             "name": "Full Screen"
         },
         {
-            "name": "VBS Announcement"
-        },
-        {
-            "name": "Scripture Reading Live"
+            "name": "Scripture Reading"
         },
         {
             "name": "Pre-Sermon Music"
@@ -142,10 +139,7 @@
             "name": "Sermon Video"
         },
         {
-            "name": "Video Intro"
-        },
-        {
-            "name": "Heimlech Video"
+            "name": "Post Sermon Music"
         },
         {
             "name": "Benediction"
@@ -159,21 +153,49 @@
             "enabled": true,
             "flags": 0,
             "hotkeys": {
+                "MediaSource.Pause": [],
+                "MediaSource.Play": [],
+                "MediaSource.Restart": [],
+                "MediaSource.Stop": [],
+                "libobs.mute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "libobs.unmute": []
+            },
+            "id": "ffmpeg_source",
+            "mixers": 255,
+            "monitoring_type": 2,
+            "muted": false,
+            "name": "Post Sermon Music 2020-06-28",
+            "prev_ver": 419430408,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "local_file": "/home/wadeallen/Dropbox/Live Stream Videos/Servant Song (Richard Gillard).mp4"
+            },
+            "sync": 0,
+            "versioned_id": "ffmpeg_source",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
                 "OBSBasic.SelectScene": [],
-                "libobs.hide_scene_item.First Baptist Muncie": [],
-                "libobs.hide_scene_item.Video Capture Device (V4L2)": [],
-                "libobs.hide_scene_item.church door": [],
-                "libobs.hide_scene_item.todays date": [],
-                "libobs.show_scene_item.First Baptist Muncie": [],
-                "libobs.show_scene_item.Video Capture Device (V4L2)": [],
-                "libobs.show_scene_item.church door": [],
-                "libobs.show_scene_item.todays date": []
+                "libobs.hide_scene_item.Post Sermon Music 2020-06-28": [],
+                "libobs.show_scene_item.Post Sermon Music 2020-06-28": []
             },
             "id": "scene",
             "mixers": 0,
             "monitoring_type": 0,
             "muted": false,
-            "name": "Video Intro",
+            "name": "Post Sermon Music",
             "prev_ver": 419430408,
             "private_settings": {},
             "push-to-mute": false,
@@ -182,16 +204,16 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 4,
+                "id_counter": 1,
                 "items": [
                     {
                         "align": 5,
                         "bounds": {
-                            "x": 1280.0,
-                            "y": 720.0
+                            "x": 0.0,
+                            "y": 0.0
                         },
                         "bounds_align": 0,
-                        "bounds_type": 2,
+                        "bounds_type": 0,
                         "crop_bottom": 0,
                         "crop_left": 0,
                         "crop_right": 0,
@@ -199,7 +221,7 @@
                         "group_item_backup": false,
                         "id": 1,
                         "locked": false,
-                        "name": "church door",
+                        "name": "Post Sermon Music 2020-06-28",
                         "pos": {
                             "x": 0.0,
                             "y": 0.0
@@ -212,93 +234,6 @@
                         },
                         "scale_filter": "disable",
                         "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 2,
-                        "locked": false,
-                        "name": "Video Capture Device (V4L2)",
-                        "pos": {
-                            "x": 186.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.4859374761581421,
-                            "y": 1.4854166507720947
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 3,
-                        "locked": false,
-                        "name": "First Baptist Muncie",
-                        "pos": {
-                            "x": 168.0,
-                            "y": 488.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.1163084506988525,
-                            "y": 1.1188118457794189
-                        },
-                        "scale_filter": "disable",
-                        "visible": false
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 4,
-                        "locked": false,
-                        "name": "todays date",
-                        "pos": {
-                            "x": 538.0,
-                            "y": 601.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": false
                     }
                 ]
             },
@@ -326,7 +261,7 @@
             "mixers": 255,
             "monitoring_type": 2,
             "muted": false,
-            "name": "Keep Your Tounge",
+            "name": "Sermon 2020-06-28",
             "prev_ver": 419430408,
             "private_settings": {},
             "push-to-mute": false,
@@ -334,71 +269,10 @@
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "settings": {
-                "local_file": "/home/wadeallen/Dropbox/Live Stream Videos/Keep Your Tongue.mp4"
+                "local_file": "/home/wadeallen/Dropbox/Live Stream Videos/Turn the Other Cheek.mp4"
             },
             "sync": 0,
             "versioned_id": "ffmpeg_source",
-            "volume": 1.0
-        },
-        {
-            "balance": 0.5,
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {
-                "OBSBasic.SelectScene": [],
-                "libobs.hide_scene_item.Keep Your Tounge": [],
-                "libobs.show_scene_item.Keep Your Tounge": []
-            },
-            "id": "scene",
-            "mixers": 0,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "Heimlech Video",
-            "prev_ver": 419430408,
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "custom_size": false,
-                "id_counter": 1,
-                "items": [
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 1280.0,
-                            "y": 720.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 2,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 1,
-                        "locked": false,
-                        "name": "Keep Your Tounge",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    }
-                ]
-            },
-            "sync": 0,
-            "versioned_id": "scene",
             "volume": 1.0
         },
         {
@@ -827,7 +701,7 @@
                     "size": 50,
                     "style": "Regular"
                 },
-                "text": "June 21, 2020"
+                "text": "June 28, 2020"
             },
             "sync": 0,
             "versioned_id": "text_ft2_source_v2",
@@ -1142,8 +1016,8 @@
             "flags": 0,
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
-                "libobs.hide_scene_item.Sermon Video File": [],
-                "libobs.show_scene_item.Sermon Video File": []
+                "libobs.hide_scene_item.Sermon 2020-06-28": [],
+                "libobs.show_scene_item.Sermon 2020-06-28": []
             },
             "id": "scene",
             "mixers": 0,
@@ -1158,7 +1032,7 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 1,
+                "id_counter": 2,
                 "items": [
                     {
                         "align": 5,
@@ -1173,9 +1047,9 @@
                         "crop_right": 0,
                         "crop_top": 0,
                         "group_item_backup": false,
-                        "id": 1,
+                        "id": 2,
                         "locked": false,
-                        "name": "Sermon Video File",
+                        "name": "Sermon 2020-06-28",
                         "pos": {
                             "x": 0.0,
                             "y": 0.0
@@ -1202,40 +1076,6 @@
             "enabled": true,
             "flags": 0,
             "hotkeys": {
-                "MediaSource.Pause": [],
-                "MediaSource.Play": [],
-                "MediaSource.Restart": [],
-                "MediaSource.Stop": [],
-                "libobs.mute": [],
-                "libobs.push-to-mute": [],
-                "libobs.push-to-talk": [],
-                "libobs.unmute": []
-            },
-            "id": "ffmpeg_source",
-            "mixers": 255,
-            "monitoring_type": 2,
-            "muted": false,
-            "name": "Sermon Video File",
-            "prev_ver": 419430408,
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "local_file": "/home/wadeallen/Dropbox/Live Stream Videos/2020-06-21-upload.mkv"
-            },
-            "sync": 0,
-            "versioned_id": "ffmpeg_source",
-            "volume": 1.0
-        },
-        {
-            "balance": 0.5,
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {
                 "OBSBasic.SelectScene": [],
                 "libobs.hide_scene_item.First Baptist Muncie": [],
                 "libobs.hide_scene_item.Video Capture Device (V4L2)": [],
@@ -1250,7 +1090,7 @@
             "mixers": 0,
             "monitoring_type": 0,
             "muted": false,
-            "name": "Scripture Reading Live",
+            "name": "Scripture Reading",
             "prev_ver": 419430408,
             "private_settings": {},
             "push-to-mute": false,
@@ -1391,101 +1231,6 @@
             "flags": 0,
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
-                "libobs.hide_scene_item.Bolt VBS": [],
-                "libobs.show_scene_item.Bolt VBS": []
-            },
-            "id": "scene",
-            "mixers": 0,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "VBS Announcement",
-            "prev_ver": 419430408,
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "custom_size": false,
-                "id_counter": 1,
-                "items": [
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 1280.0,
-                            "y": 720.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 2,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 1,
-                        "locked": false,
-                        "name": "Bolt VBS",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    }
-                ]
-            },
-            "sync": 0,
-            "versioned_id": "scene",
-            "volume": 1.0
-        },
-        {
-            "balance": 0.5,
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {
-                "MediaSource.Pause": [],
-                "MediaSource.Play": [],
-                "MediaSource.Restart": [],
-                "MediaSource.Stop": [],
-                "libobs.mute": [],
-                "libobs.push-to-mute": [],
-                "libobs.push-to-talk": [],
-                "libobs.unmute": []
-            },
-            "id": "ffmpeg_source",
-            "mixers": 255,
-            "monitoring_type": 2,
-            "muted": false,
-            "name": "Bolt VBS",
-            "prev_ver": 419430408,
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "local_file": "/home/wadeallen/Dropbox/Live Stream Videos/BOLT Social Post_Soaked Game Promo.mp4"
-            },
-            "sync": 0,
-            "versioned_id": "ffmpeg_source",
-            "volume": 1.0
-        },
-        {
-            "balance": 0.5,
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {
-                "OBSBasic.SelectScene": [],
                 "libobs.hide_scene_item.Music": [],
                 "libobs.show_scene_item.Music": []
             },
@@ -1502,7 +1247,7 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 1,
+                "id_counter": 2,
                 "items": [
                     {
                         "align": 5,
@@ -1517,7 +1262,7 @@
                         "crop_right": 0,
                         "crop_top": 0,
                         "group_item_backup": false,
-                        "id": 1,
+                        "id": 2,
                         "locked": false,
                         "name": "Music",
                         "pos": {
@@ -1567,7 +1312,7 @@
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "settings": {
-                "local_file": "/home/wadeallen/Dropbox/Live Stream Videos/Pre Sermon Music June 21.mp4"
+                "local_file": "/home/wadeallen/Dropbox/Live Stream Videos/28 June Pre Sermon 1.mp4"
             },
             "sync": 0,
             "versioned_id": "ffmpeg_source",

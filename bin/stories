@@ -280,6 +280,10 @@ for story in stories:
 # sorts articles by weight[2]
 article_list.sort(key=lambda x: int(x[2]))
 
+# # add yaml to article.txt
+# with open(visitor_path + "articles.txt", "a") as visitor_file:
+# 	visitor_file.write('---\nmainfont: Heuristica\nfontsize: 10pt\n---\n\n')
+
 # interates through each article (sorted by weight) and places them in the articles.txt file to be compiled by the visitor script
 for article in article_list:
 	with open(visitor_path + "articles.txt", "a") as visitor_file:
