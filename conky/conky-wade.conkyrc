@@ -152,7 +152,7 @@ ${color0} ${execi 300 LANG=${template9} LC_TIME=${template9} date +"%B"}${font}$
 ${hr}${color}${voffset 4}
 ${font Font Awesome 5 Free:style=Solid:size=12}  ${font Roboto:pixelsize=13}TODO List:
 ${voffset 2}
-${color0}${execi 60 python3 ~/bin/todoist}
+${color0}${execi 60 sh ~/bin/list_todos}
 ${hr}${color}${voffset 4}
 ${font Font Awesome 5 Free:style=Solid:size=12}  ${font Roboto:pixelsize=13}CALENDAR:
 ${color0}${execi 60 sh ~/bin/list_calendar}
