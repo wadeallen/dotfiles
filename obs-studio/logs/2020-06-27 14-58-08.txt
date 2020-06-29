@@ -1,0 +1,202 @@
+02:58:08 PM.029: CPU Name: Intel(R) Core(TM) i5-7300U CPU @ 2.60GHz
+02:58:08 PM.029: CPU Speed: 2500.004MHz
+02:58:08 PM.029: Physical Cores: 2, Logical Cores: 4
+02:58:08 PM.029: Physical Memory: 15890MB Total, 12625MB Free
+02:58:08 PM.030: Kernel Version: Linux 5.6.16-1-MANJARO
+02:58:08 PM.030: Distribution: "Manjaro Linux" Unknown
+02:58:08 PM.031: Window System: X11.0, Vendor: The X.Org Foundation, Version: 1.20.8
+02:58:08 PM.033: Portable mode: false
+02:58:08 PM.138: OBS 25.0.8-1 (linux)
+02:58:08 PM.139: ---------------------------------
+02:58:08 PM.290: ---------------------------------
+02:58:08 PM.290: audio settings reset:
+02:58:08 PM.290: 	samples per sec: 44100
+02:58:08 PM.290: 	speakers:        2
+02:58:08 PM.306: ---------------------------------
+02:58:08 PM.306: Initializing OpenGL...
+02:58:08 PM.350: Loading up OpenGL on adapter Intel Mesa Intel(R) HD Graphics 620 (KBL GT2)
+02:58:08 PM.350: OpenGL loaded successfully, version 4.6 (Core Profile) Mesa 20.0.7, shading language 4.60
+02:58:08 PM.375: ---------------------------------
+02:58:08 PM.375: video settings reset:
+02:58:08 PM.375: 	base resolution:   1280x720
+02:58:08 PM.375: 	output resolution: 1280x720
+02:58:08 PM.375: 	downscale filter:  Bicubic
+02:58:08 PM.375: 	fps:               30/1
+02:58:08 PM.375: 	format:            NV12
+02:58:08 PM.375: 	YUV mode:          601/Partial
+02:58:08 PM.375: NV12 texture support not available
+02:58:08 PM.377: Audio monitoring device:
+02:58:08 PM.377: 	name: Default
+02:58:08 PM.377: 	id: default
+02:58:08 PM.377: ---------------------------------
+02:58:08 PM.381: Failed to load 'en-US' text for module: 'decklink-ouput-ui.so'
+02:58:08 PM.515: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+02:58:08 PM.515: No blackmagic support
+02:58:08 PM.583: os_dlopen(libnvidia-encode.so.1->libnvidia-encode.so.1): libnvidia-encode.so.1: cannot open shared object file: No such file or directory
+02:58:08 PM.583: 
+02:58:08 PM.584: FFMPEG VAAPI supported
+02:58:08 PM.659: VLC found, VLC video source enabled
+02:58:08 PM.660: ---------------------------------
+02:58:08 PM.660:   Loaded Modules:
+02:58:08 PM.660:     vlc-video.so
+02:58:08 PM.660:     text-freetype2.so
+02:58:08 PM.660:     rtmp-services.so
+02:58:08 PM.660:     obs-x264.so
+02:58:08 PM.660:     obs-transitions.so
+02:58:08 PM.660:     obs-outputs.so
+02:58:08 PM.660:     obs-libfdk.so
+02:58:08 PM.660:     obs-filters.so
+02:58:08 PM.661:     obs-ffmpeg.so
+02:58:08 PM.661:     linux-v4l2.so
+02:58:08 PM.661:     linux-pulseaudio.so
+02:58:08 PM.661:     linux-jack.so
+02:58:08 PM.661:     linux-decklink.so
+02:58:08 PM.661:     linux-capture.so
+02:58:08 PM.661:     linux-alsa.so
+02:58:08 PM.661:     image-source.so
+02:58:08 PM.661:     frontend-tools.so
+02:58:08 PM.661:     decklink-ouput-ui.so
+02:58:08 PM.661: ---------------------------------
+02:58:08 PM.661: ==== Startup complete ===============================================
+02:58:08 PM.677: All scene data cleared
+02:58:08 PM.677: ------------------------------------------------
+02:58:08 PM.692: pulse-input: Server name: 'pulseaudio 13.0'
+02:58:08 PM.693: pulse-input: Audio format: s16le, 44100 Hz, 2 channels
+02:58:08 PM.693: pulse-input: Started recording from 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+02:58:08 PM.693: [Loaded global audio device]: 'Desktop Audio'
+02:58:08 PM.791: pulse-input: Server name: 'pulseaudio 13.0'
+02:58:08 PM.791: pulse-input: An error occurred while getting the source info!
+02:58:08 PM.791: [Loaded global audio device]: 'Mic/Aux'
+02:58:08 PM.793: [Media Source 'Music']: settings:
+02:58:08 PM.793: 	input:                   /home/wadeallen/Dropbox/Live Stream Videos/28 June Pre Sermon 1.mp4
+02:58:08 PM.793: 	input_format:            (null)
+02:58:08 PM.793: 	speed:                   100
+02:58:08 PM.793: 	is_looping:              no
+02:58:08 PM.793: 	is_hw_decoding:          no
+02:58:08 PM.793: 	is_clear_on_media_end:   yes
+02:58:08 PM.793: 	restart_on_activate:     yes
+02:58:08 PM.793: 	close_when_inactive:     no
+02:58:08 PM.801: pulse-am: Server name: 'pulseaudio 13.0'
+02:58:08 PM.802: pulse-am: Audio format: s16le, 44100 Hz, 2 channels
+02:58:08 PM.802: pulse-am: Started Monitoring in 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+02:58:08 PM.925: [rtmp-services plugin] Successfully updated file 'services.json' (version 140)
+02:58:08 PM.926: [rtmp-services plugin] Successfully updated package (version 140)
+02:58:08 PM.956: v4l2-input: Start capture from /dev/video0
+02:58:09 PM.091: v4l2-input: Input: 0
+02:58:09 PM.116: v4l2-input: Resolution: 640x480
+02:58:09 PM.116: v4l2-input: Pixelformat: VYUY
+02:58:09 PM.116: v4l2-input: Linesize: 1280 Bytes
+02:58:09 PM.116: v4l2-input: Framerate: 30.00 fps
+02:58:09 PM.331: [Media Source 'Sermon 2020-06-28']: settings:
+02:58:09 PM.331: 	input:                   /home/wadeallen/Dropbox/Live Stream Videos/Turn the Other Cheek.mp4
+02:58:09 PM.331: 	input_format:            (null)
+02:58:09 PM.331: 	speed:                   100
+02:58:09 PM.331: 	is_looping:              no
+02:58:09 PM.331: 	is_hw_decoding:          no
+02:58:09 PM.331: 	is_clear_on_media_end:   yes
+02:58:09 PM.331: 	restart_on_activate:     yes
+02:58:09 PM.331: 	close_when_inactive:     no
+02:58:09 PM.332: pulse-am: Server name: 'pulseaudio 13.0'
+02:58:09 PM.333: pulse-am: Audio format: s16le, 44100 Hz, 2 channels
+02:58:09 PM.334: pulse-am: Started Monitoring in 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+02:58:09 PM.336: [Media Source 'Post Sermon Music 2020-06-28']: settings:
+02:58:09 PM.336: 	input:                   /home/wadeallen/Dropbox/Live Stream Videos/Servant Song (Richard Gillard).mp4
+02:58:09 PM.336: 	input_format:            (null)
+02:58:09 PM.336: 	speed:                   100
+02:58:09 PM.336: 	is_looping:              no
+02:58:09 PM.336: 	is_hw_decoding:          no
+02:58:09 PM.336: 	is_clear_on_media_end:   yes
+02:58:09 PM.336: 	restart_on_activate:     yes
+02:58:09 PM.336: 	close_when_inactive:     no
+02:58:09 PM.345: pulse-am: Server name: 'pulseaudio 13.0'
+02:58:09 PM.352: pulse-am: Audio format: s16le, 44100 Hz, 2 channels
+02:58:09 PM.352: pulse-am: Started Monitoring in 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+02:58:09 PM.354: Switched to scene 'Welcome'
+02:58:09 PM.355: ------------------------------------------------
+02:58:09 PM.355: Loaded scenes:
+02:58:09 PM.355: - scene 'Welcome':
+02:58:09 PM.355:     - source: 'church door' (image_source)
+02:58:09 PM.355:     - source: 'Video Capture Device (V4L2)' (v4l2_input)
+02:58:09 PM.355:     - source: 'Welcome Text' (text_ft2_source_v2)
+02:58:09 PM.355:     - source: 'First Baptist Muncie' (text_ft2_source_v2)
+02:58:09 PM.355:     - source: 'todays date' (text_ft2_source_v2)
+02:58:09 PM.356: - scene 'Full Screen':
+02:58:09 PM.356:     - source: 'church door' (image_source)
+02:58:09 PM.356:     - source: 'Video Capture Device (V4L2)' (v4l2_input)
+02:58:09 PM.356:     - source: 'First Baptist Muncie' (text_ft2_source_v2)
+02:58:09 PM.356:     - source: 'todays date' (text_ft2_source_v2)
+02:58:09 PM.356: - scene 'Scripture Reading':
+02:58:09 PM.356:     - source: 'church door' (image_source)
+02:58:09 PM.356:     - source: 'Video Capture Device (V4L2)' (v4l2_input)
+02:58:09 PM.356:     - source: 'First Baptist Muncie' (text_ft2_source_v2)
+02:58:09 PM.356:     - source: 'todays date' (text_ft2_source_v2)
+02:58:09 PM.356: - scene 'Pre-Sermon Music':
+02:58:09 PM.356:     - source: 'Music' (ffmpeg_source)
+02:58:09 PM.356:         - monitoring: monitor and output
+02:58:09 PM.356: - scene 'Sermon Video':
+02:58:09 PM.356:     - source: 'Sermon 2020-06-28' (ffmpeg_source)
+02:58:09 PM.356:         - monitoring: monitor and output
+02:58:09 PM.356: - scene 'Post Sermon Music':
+02:58:09 PM.357:     - source: 'Post Sermon Music 2020-06-28' (ffmpeg_source)
+02:58:09 PM.357:         - monitoring: monitor and output
+02:58:09 PM.357: - scene 'Benediction':
+02:58:09 PM.357:     - source: 'church door' (image_source)
+02:58:09 PM.357:     - source: 'Video Capture Device (V4L2)' (v4l2_input)
+02:58:09 PM.357:     - source: 'Benediction Text' (text_ft2_source_v2)
+02:58:09 PM.357:     - source: 'Welcome Text' (text_ft2_source_v2)
+02:58:09 PM.357:     - source: 'First Baptist Muncie' (text_ft2_source_v2)
+02:58:09 PM.357:     - source: 'todays date' (text_ft2_source_v2)
+02:58:09 PM.357: ------------------------------------------------
+02:58:11 PM.330: adding 46 milliseconds of audio buffering, total audio buffering is now 46 milliseconds (source: Desktop Audio)
+02:58:11 PM.330: 
+02:58:12 PM.104: User switched to scene 'Scripture Reading'
+02:58:20 PM.569: User switched to scene 'Pre-Sermon Music'
+02:58:20 PM.577: User Removed scene 'Scripture Reading'
+02:58:22 PM.040: User switched to scene 'Full Screen'
+02:58:30 PM.799: User added scene 'Scripture Reading'
+02:58:30 PM.802: User switched to scene 'Scripture Reading'
+02:58:52 PM.600: [Media Source 'Megan colton']: settings:
+02:58:52 PM.600: 	input:                   
+02:58:52 PM.600: 	input_format:            (null)
+02:58:52 PM.600: 	speed:                   100
+02:58:52 PM.600: 	is_looping:              no
+02:58:52 PM.600: 	is_hw_decoding:          no
+02:58:52 PM.600: 	is_clear_on_media_end:   yes
+02:58:52 PM.600: 	restart_on_activate:     yes
+02:58:52 PM.600: 	close_when_inactive:     no
+02:58:52 PM.608: User added source 'Megan colton' (ffmpeg_source) to scene 'Scripture Reading'
+02:59:00 PM.242: [Media Source 'Megan colton']: settings:
+02:59:00 PM.242: 	input:                   /home/wadeallen/Dropbox/Live Stream Videos/June 28 Scripture.mov
+02:59:00 PM.242: 	input_format:            (null)
+02:59:00 PM.242: 	speed:                   100
+02:59:00 PM.242: 	is_looping:              no
+02:59:00 PM.242: 	is_hw_decoding:          no
+02:59:00 PM.242: 	is_clear_on_media_end:   yes
+02:59:00 PM.242: 	restart_on_activate:     yes
+02:59:00 PM.242: 	close_when_inactive:     no
+02:59:29 PM.475: pulse-am: Server name: 'pulseaudio 13.0'
+02:59:29 PM.477: pulse-am: Audio format: s16le, 44100 Hz, 2 channels
+02:59:29 PM.478: pulse-am: Started Monitoring in 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+02:59:29 PM.495: User changed audio monitoring for source 'Megan colton' to: monitor and output
+02:59:34 PM.001: User switched to scene 'Sermon Video'
+02:59:35 PM.068: User switched to scene 'Scripture Reading'
+02:59:41 PM.260: ==== Shutting down ==================================================
+02:59:41 PM.275: Switched to scene '(null)'
+02:59:41 PM.286: pulse-am: Stopped Monitoring in 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+02:59:41 PM.286: pulse-am: Got 80 packets with 81920 frames
+02:59:41 PM.291: pulse-am: Stopped Monitoring in 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+02:59:41 PM.291: pulse-am: Got 63 packets with 64512 frames
+02:59:41 PM.301: pulse-am: Stopped Monitoring in 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+02:59:41 PM.302: pulse-am: Got 0 packets with 0 frames
+02:59:41 PM.326: v4l2-input: Stopped capture after 2775 frames
+02:59:42 PM.222: pulse-am: Stopped Monitoring in 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+02:59:42 PM.222: pulse-am: Got 360 packets with 368640 frames
+02:59:42 PM.225: pulse-input: Stopped recording from 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+02:59:42 PM.225: pulse-input: Got 29664 packets with 4033259 frames
+02:59:42 PM.227: All scene data cleared
+02:59:42 PM.227: ------------------------------------------------
+02:59:42 PM.256: Failed to fetch parent window geometry!
+02:59:42 PM.257: Failed to fetch parent window geometry!
+02:59:42 PM.258: Failed to fetch parent window geometry!
+02:59:42 PM.261: Failed to fetch parent window geometry!
+02:59:42 PM.276: Failed to fetch parent window geometry!

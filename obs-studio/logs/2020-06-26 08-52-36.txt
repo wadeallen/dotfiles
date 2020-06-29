@@ -1,0 +1,215 @@
+08:52:36 AM.171: CPU Name: Intel(R) Core(TM) i5-7300U CPU @ 2.60GHz
+08:52:36 AM.171: CPU Speed: 2795.090MHz
+08:52:36 AM.171: Physical Cores: 2, Logical Cores: 4
+08:52:36 AM.171: Physical Memory: 15890MB Total, 14492MB Free
+08:52:36 AM.171: Kernel Version: Linux 5.6.16-1-MANJARO
+08:52:36 AM.171: Distribution: "Manjaro Linux" Unknown
+08:52:36 AM.187: Window System: X11.0, Vendor: The X.Org Foundation, Version: 1.20.8
+08:52:36 AM.204: Portable mode: false
+08:52:36 AM.464: OBS 25.0.8-1 (linux)
+08:52:36 AM.464: ---------------------------------
+08:52:36 AM.727: ---------------------------------
+08:52:36 AM.727: audio settings reset:
+08:52:36 AM.727: 	samples per sec: 44100
+08:52:36 AM.727: 	speakers:        2
+08:52:36 AM.760: ---------------------------------
+08:52:36 AM.760: Initializing OpenGL...
+08:52:36 AM.921: Loading up OpenGL on adapter Intel Mesa Intel(R) HD Graphics 620 (KBL GT2)
+08:52:36 AM.921: OpenGL loaded successfully, version 4.6 (Core Profile) Mesa 20.0.7, shading language 4.60
+08:52:36 AM.995: ---------------------------------
+08:52:36 AM.995: video settings reset:
+08:52:36 AM.995: 	base resolution:   1280x720
+08:52:36 AM.995: 	output resolution: 1280x720
+08:52:36 AM.995: 	downscale filter:  Bicubic
+08:52:36 AM.995: 	fps:               30/1
+08:52:36 AM.995: 	format:            NV12
+08:52:36 AM.995: 	YUV mode:          601/Partial
+08:52:36 AM.995: NV12 texture support not available
+08:52:37 AM.014: Audio monitoring device:
+08:52:37 AM.014: 	name: Default
+08:52:37 AM.014: 	id: default
+08:52:37 AM.024: ---------------------------------
+08:52:37 AM.034: Failed to load 'en-US' text for module: 'decklink-ouput-ui.so'
+08:52:37 AM.242: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+08:52:37 AM.242: No blackmagic support
+08:52:37 AM.348: os_dlopen(libnvidia-encode.so.1->libnvidia-encode.so.1): libnvidia-encode.so.1: cannot open shared object file: No such file or directory
+08:52:37 AM.348: 
+08:52:37 AM.348: FFMPEG VAAPI supported
+08:52:37 AM.407: VLC found, VLC video source enabled
+08:52:37 AM.407: ---------------------------------
+08:52:37 AM.407:   Loaded Modules:
+08:52:37 AM.407:     vlc-video.so
+08:52:37 AM.407:     text-freetype2.so
+08:52:37 AM.407:     rtmp-services.so
+08:52:37 AM.407:     obs-x264.so
+08:52:37 AM.407:     obs-transitions.so
+08:52:37 AM.407:     obs-outputs.so
+08:52:37 AM.407:     obs-libfdk.so
+08:52:37 AM.407:     obs-filters.so
+08:52:37 AM.407:     obs-ffmpeg.so
+08:52:37 AM.407:     linux-v4l2.so
+08:52:37 AM.408:     linux-pulseaudio.so
+08:52:37 AM.408:     linux-jack.so
+08:52:37 AM.408:     linux-decklink.so
+08:52:37 AM.408:     linux-capture.so
+08:52:37 AM.408:     linux-alsa.so
+08:52:37 AM.408:     image-source.so
+08:52:37 AM.408:     frontend-tools.so
+08:52:37 AM.408:     decklink-ouput-ui.so
+08:52:37 AM.408: ---------------------------------
+08:52:37 AM.408: ==== Startup complete ===============================================
+08:52:37 AM.423: All scene data cleared
+08:52:37 AM.423: ------------------------------------------------
+08:52:37 AM.427: pulse-input: Server name: 'pulseaudio 13.0'
+08:52:37 AM.427: pulse-input: Audio format: s16le, 44100 Hz, 2 channels
+08:52:37 AM.427: pulse-input: Started recording from 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+08:52:37 AM.427: [Loaded global audio device]: 'Desktop Audio'
+08:52:37 AM.431: pulse-input: Server name: 'pulseaudio 13.0'
+08:52:37 AM.431: pulse-input: An error occurred while getting the source info!
+08:52:37 AM.432: [Loaded global audio device]: 'Mic/Aux'
+08:52:37 AM.443: [Media Source 'Post Sermon Music 2020-06-28']: settings:
+08:52:37 AM.443: 	input:                   /home/wadeallen/Dropbox/Live Stream Videos/Servant Song (Richard Gillard).mp4
+08:52:37 AM.443: 	input_format:            (null)
+08:52:37 AM.443: 	speed:                   100
+08:52:37 AM.443: 	is_looping:              no
+08:52:37 AM.443: 	is_hw_decoding:          no
+08:52:37 AM.443: 	is_clear_on_media_end:   yes
+08:52:37 AM.443: 	restart_on_activate:     yes
+08:52:37 AM.443: 	close_when_inactive:     no
+08:52:37 AM.448: pulse-am: Server name: 'pulseaudio 13.0'
+08:52:37 AM.451: pulse-am: Audio format: s16le, 44100 Hz, 2 channels
+08:52:37 AM.452: pulse-am: Started Monitoring in 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+08:52:37 AM.452: [Media Source 'Sermon 2020-06-28']: settings:
+08:52:37 AM.452: 	input:                   /home/wadeallen/Dropbox/Live Stream Videos/Turn the Other Cheek.mp4
+08:52:37 AM.452: 	input_format:            (null)
+08:52:37 AM.452: 	speed:                   100
+08:52:37 AM.452: 	is_looping:              no
+08:52:37 AM.452: 	is_hw_decoding:          no
+08:52:37 AM.452: 	is_clear_on_media_end:   yes
+08:52:37 AM.452: 	restart_on_activate:     yes
+08:52:37 AM.452: 	close_when_inactive:     no
+08:52:37 AM.481: pulse-am: Server name: 'pulseaudio 13.0'
+08:52:37 AM.483: pulse-am: Audio format: s16le, 44100 Hz, 2 channels
+08:52:37 AM.483: pulse-am: Started Monitoring in 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+08:52:37 AM.715: v4l2-input: Start capture from /dev/video0
+08:52:37 AM.720: v4l2-input: Input: 0
+08:52:37 AM.774: v4l2-input: Resolution: 640x480
+08:52:37 AM.774: v4l2-input: Pixelformat: VYUY
+08:52:37 AM.774: v4l2-input: Linesize: 1280 Bytes
+08:52:37 AM.774: v4l2-input: Framerate: 30.00 fps
+08:52:37 AM.859: [Media Source 'Music']: settings:
+08:52:37 AM.859: 	input:                   /home/wadeallen/Dropbox/Live Stream Videos/28 June Pre Sermon 1.mp4
+08:52:37 AM.859: 	input_format:            (null)
+08:52:37 AM.859: 	speed:                   100
+08:52:37 AM.859: 	is_looping:              no
+08:52:37 AM.859: 	is_hw_decoding:          no
+08:52:37 AM.859: 	is_clear_on_media_end:   yes
+08:52:37 AM.859: 	restart_on_activate:     yes
+08:52:37 AM.859: 	close_when_inactive:     no
+08:52:37 AM.859: pulse-am: Server name: 'pulseaudio 13.0'
+08:52:37 AM.859: pulse-am: Audio format: s16le, 44100 Hz, 2 channels
+08:52:37 AM.859: pulse-am: Started Monitoring in 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+08:52:37 AM.860: Switched to scene 'Welcome'
+08:52:37 AM.860: ------------------------------------------------
+08:52:37 AM.860: Loaded scenes:
+08:52:37 AM.860: - scene 'Welcome':
+08:52:37 AM.860:     - source: 'church door' (image_source)
+08:52:37 AM.860:     - source: 'Video Capture Device (V4L2)' (v4l2_input)
+08:52:37 AM.860:     - source: 'Welcome Text' (text_ft2_source_v2)
+08:52:37 AM.860:     - source: 'First Baptist Muncie' (text_ft2_source_v2)
+08:52:37 AM.860:     - source: 'todays date' (text_ft2_source_v2)
+08:52:37 AM.860: - scene 'Full Screen':
+08:52:37 AM.860:     - source: 'church door' (image_source)
+08:52:37 AM.860:     - source: 'Video Capture Device (V4L2)' (v4l2_input)
+08:52:37 AM.860:     - source: 'First Baptist Muncie' (text_ft2_source_v2)
+08:52:37 AM.860:     - source: 'todays date' (text_ft2_source_v2)
+08:52:37 AM.860: - scene 'Scripture Reading':
+08:52:37 AM.860:     - source: 'church door' (image_source)
+08:52:37 AM.860:     - source: 'Video Capture Device (V4L2)' (v4l2_input)
+08:52:37 AM.860:     - source: 'First Baptist Muncie' (text_ft2_source_v2)
+08:52:37 AM.860:     - source: 'todays date' (text_ft2_source_v2)
+08:52:37 AM.860: - scene 'Pre-Sermon Music':
+08:52:37 AM.860:     - source: 'Music' (ffmpeg_source)
+08:52:37 AM.860:         - monitoring: monitor and output
+08:52:37 AM.860: - scene 'Sermon Video':
+08:52:37 AM.860:     - source: 'Sermon 2020-06-28' (ffmpeg_source)
+08:52:37 AM.860:         - monitoring: monitor and output
+08:52:37 AM.860: - scene 'Post Sermon Music':
+08:52:37 AM.860:     - source: 'Post Sermon Music 2020-06-28' (ffmpeg_source)
+08:52:37 AM.860:         - monitoring: monitor and output
+08:52:37 AM.861: - scene 'Benediction':
+08:52:37 AM.861:     - source: 'church door' (image_source)
+08:52:37 AM.861:     - source: 'Video Capture Device (V4L2)' (v4l2_input)
+08:52:37 AM.861:     - source: 'Benediction Text' (text_ft2_source_v2)
+08:52:37 AM.861:     - source: 'Welcome Text' (text_ft2_source_v2)
+08:52:37 AM.861:     - source: 'First Baptist Muncie' (text_ft2_source_v2)
+08:52:37 AM.861:     - source: 'todays date' (text_ft2_source_v2)
+08:52:37 AM.861: ------------------------------------------------
+08:52:44 AM.483: ==== Shutting down ==================================================
+08:52:44 AM.495: Switched to scene '(null)'
+08:52:44 AM.542: pulse-am: Stopped Monitoring in 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+08:52:44 AM.542: pulse-am: Got 0 packets with 0 frames
+08:52:44 AM.554: pulse-am: Stopped Monitoring in 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+08:52:44 AM.554: pulse-am: Got 0 packets with 0 frames
+08:52:44 AM.565: pulse-am: Stopped Monitoring in 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+08:52:44 AM.565: pulse-am: Got 0 packets with 0 frames
+08:52:44 AM.601: v4l2-input: Stopped capture after 198 frames
+08:52:44 AM.785: pulse-input: Stopped recording from 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+08:52:44 AM.785: pulse-input: Got 1722 packets with 236272 frames
+08:52:44 AM.786: All scene data cleared
+08:52:44 AM.786: ------------------------------------------------
+08:52:44 AM.873: Freeing OBS context data
+08:52:44 AM.884: [Scripting] Total detached callbacks: 0
+08:52:44 AM.923: == Profiler Results =============================
+08:52:44 AM.923: run_program_init: 2517.06 ms
+08:52:44 AM.923:  ┣OBSApp::AppInit: 100.392 ms
+08:52:44 AM.923:  ┃ ┗OBSApp::InitLocale: 34.254 ms
+08:52:44 AM.923:  ┗OBSApp::OBSInit: 1968.15 ms
+08:52:44 AM.923:    ┣obs_startup: 33.1 ms
+08:52:44 AM.923:    ┗OBSBasic::OBSInit: 1416.56 ms
+08:52:44 AM.923:      ┣OBSBasic::InitBasicConfig: 4.683 ms
+08:52:44 AM.923:      ┣OBSBasic::ResetAudio: 0.144 ms
+08:52:44 AM.923:      ┣OBSBasic::ResetVideo: 286.989 ms
+08:52:44 AM.923:      ┣OBSBasic::InitOBSCallbacks: 0.004 ms
+08:52:44 AM.923:      ┣OBSBasic::InitHotkeys: 9.834 ms
+08:52:44 AM.924:      ┣obs_load_all_modules: 383.024 ms
+08:52:44 AM.924:      ┃ ┣obs_init_module(decklink-ouput-ui.so): 0.96 ms
+08:52:44 AM.924:      ┃ ┣obs_init_module(frontend-tools.so): 167.81 ms
+08:52:44 AM.924:      ┃ ┣obs_init_module(image-source.so): 0.006 ms
+08:52:44 AM.924:      ┃ ┣obs_init_module(linux-alsa.so): 0.002 ms
+08:52:44 AM.924:      ┃ ┣obs_init_module(linux-capture.so): 0.377 ms
+08:52:44 AM.924:      ┃ ┣obs_init_module(linux-decklink.so): 0.161 ms
+08:52:44 AM.924:      ┃ ┣obs_init_module(linux-jack.so): 0.004 ms
+08:52:44 AM.924:      ┃ ┣obs_init_module(linux-pulseaudio.so): 0.003 ms
+08:52:44 AM.924:      ┃ ┣obs_init_module(linux-v4l2.so): 0.002 ms
+08:52:44 AM.924:      ┃ ┣obs_init_module(obs-ffmpeg.so): 25.202 ms
+08:52:44 AM.924:      ┃ ┃ ┗nvenc_check: 25.154 ms
+08:52:44 AM.924:      ┃ ┣obs_init_module(obs-filters.so): 0.019 ms
+08:52:44 AM.924:      ┃ ┣obs_init_module(obs-libfdk.so): 0.002 ms
+08:52:44 AM.924:      ┃ ┣obs_init_module(obs-outputs.so): 0.003 ms
+08:52:44 AM.924:      ┃ ┣obs_init_module(obs-transitions.so): 0.009 ms
+08:52:44 AM.924:      ┃ ┣obs_init_module(obs-x264.so): 0.002 ms
+08:52:44 AM.924:      ┃ ┣obs_init_module(rtmp-services.so): 0.952 ms
+08:52:44 AM.924:      ┃ ┣obs_init_module(text-freetype2.so): 0.031 ms
+08:52:44 AM.924:      ┃ ┗obs_init_module(vlc-video.so): 21.182 ms
+08:52:44 AM.924:      ┣OBSBasic::ResetOutputs: 0.451 ms
+08:52:44 AM.924:      ┣OBSBasic::CreateHotkeys: 0.047 ms
+08:52:44 AM.924:      ┣OBSBasic::InitService: 4.809 ms
+08:52:44 AM.924:      ┣OBSBasic::InitPrimitives: 0.228 ms
+08:52:44 AM.924:      ┗OBSBasic::Load: 490.588 ms
+08:52:44 AM.924: obs_hotkey_thread(25 ms): min=0.105 ms, median=0.206 ms, max=26.659 ms, 99th percentile=14.999 ms, 99.6914% below 25 ms
+08:52:44 AM.924: audio_thread(Audio): min=0 ms, median=0.048 ms, max=1.562 ms, 99th percentile=0.63 ms
+08:52:44 AM.924: obs_graphics_thread(33.3333 ms): min=0.059 ms, median=1.544 ms, max=435.184 ms, 99th percentile=8.592 ms, 99.5536% below 33.333 ms
+08:52:44 AM.924:  ┣tick_sources: min=0 ms, median=0.018 ms, max=425.376 ms, 99th percentile=0.081 ms
+08:52:44 AM.924:  ┣output_frame: min=0.027 ms, median=0.591 ms, max=9.765 ms, 99th percentile=3.037 ms
+08:52:44 AM.924:  ┃ ┗gs_context(video->graphics): min=0.027 ms, median=0.59 ms, max=9.765 ms, 99th percentile=3.036 ms
+08:52:44 AM.924:  ┃   ┣render_video: min=0.022 ms, median=0.417 ms, max=9.172 ms, 99th percentile=2.811 ms
+08:52:44 AM.924:  ┃   ┃ ┗render_main_texture: min=0.018 ms, median=0.412 ms, max=9.16 ms, 99th percentile=2.806 ms
+08:52:44 AM.924:  ┃   ┗gs_flush: min=0 ms, median=0.156 ms, max=3.268 ms, 99th percentile=0.558 ms
+08:52:44 AM.924:  ┗render_displays: min=0.002 ms, median=0.824 ms, max=9.293 ms, 99th percentile=7.581 ms
+08:52:44 AM.924: =================================================
+08:52:44 AM.924: == Profiler Time Between Calls ==================
+08:52:44 AM.924: obs_hotkey_thread(25 ms): min=25.174 ms, median=25.331 ms, max=53.133 ms, 61.3003% within ±2% of 25 ms (0% lower, 38.6997% higher)
+08:52:44 AM.924: obs_graphics_thread(33.3333 ms): min=25.647 ms, median=33.334 ms, max=435.189 ms, 82.5112% within ±2% of 33.333 ms (8.52018% lower, 8.96861% higher)
+08:52:44 AM.924: =================================================
+08:52:44 AM.933: Number of memory leaks: 0

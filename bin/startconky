@@ -1,4 +1,4 @@
 #!/bin/bash
 sleep 10
-conky -b -c /home/wadeallen/dotfiles/conky/conky-wade-kde.conkyrc &
+conky -b -c /home/wadeallen/dotfiles/conky/conky-wade.conkyrc &
 exit
