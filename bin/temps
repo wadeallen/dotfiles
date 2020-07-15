@@ -18,10 +18,12 @@ home_headers = {
     'content-type': 'application/json',
 }
 
+degree_sign = u"\N{DEGREE SIGN}"
+
 church_response = get(church_url, headers=church_headers)
 bedroom_response = get(bedroom_url, headers=home_headers)
 levi_response = get(levi_url, headers=home_headers)
 sanctuary_data = json.loads(church_response.text)
 bedroom_data = json.loads(bedroom_response.text)
 levi_data = json.loads(levi_response.text)
-print(f"\tSanctuary: {sanctuary_data['state']} \u2109 \n\tBedroom: {bedroom_data['state']} \u2109 \n\tLevi's Room:{levi_data['state']} \u2109")
+print(f"\tSanctuary: {sanctuary_data['state']} {degree_sign}F \n\tBedroom: {bedroom_data['state']} {degree_sign}F \n\tLevi's Room: {levi_data['state']} {degree_sign}F")

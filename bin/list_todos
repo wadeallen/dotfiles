@@ -2,6 +2,10 @@
 
 source /home/wadeallen/Dropbox/Config\ Files/config.sh
 
-curl -s https://api.todoist.com/rest/v1/tasks?filter=today -H "Authorization: Bearer $token" | jq -r ".[] | .content"
+if [[ $(curl -s https://api.todoist.com/rest/v1/tasks?filter=today -H "Authorization: Bearer $token" | jq -r ".[] | .content") ]]; then
+    curl -s https://api.todoist.com/rest/v1/tasks?filter=today -H "Authorization: Bearer $token" | jq -r ".[] | .content"
+else
+    echo "Nothing to do!"
+fi
 
 
