@@ -17,6 +17,7 @@ SETUVAR _fish_abbr_code:code\x2doss
 SETUVAR _fish_abbr_desk:cd\x20\x24HOME/Desktop
 SETUVAR _fish_abbr_dr:\x24HOME/bin/dropbox\x2epy\x20status
 SETUVAR _fish_abbr_fd:fdfind
+SETUVAR _fish_abbr_fr:ssh\x20church\x2ewadeallen\x2eme\x20maid\x20clean\x20\x2df
 SETUVAR _fish_abbr_fw:cd\x20\x24HOME/Dropbox/Funeral_Work/
 SETUVAR _fish_abbr_hu:cd\x20\x24HOME/Sites/hugo_fbcmuncie
 SETUVAR _fish_abbr_led:ledger\x20\x2df\x20\x24HOME/Dropbox/Ledger/ledger\x2eledger

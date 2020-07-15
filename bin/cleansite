@@ -1,0 +1,12 @@
+#!/bin/bash
+
+PUB=$HOME/fbcmuncie_published
+
+cd $PUB &&
+rm -r * &&
+cd
+
+
+
+
+
