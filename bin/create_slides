@@ -4,9 +4,9 @@ SUNDAY=$(date -d 'sun' +'%Y-%m-%d')
 THIS_WEEK=$(date -d 'sun' +'%Y-%m-%d')
 NEXT_WEEK=$(date -d 'sun 1 week' +'%Y-%m-%d')
 
-DIRECTORY=$HOME/Dropbox/Video_Production/${SUNDAY}_slides
+DIRECTORY=$HOME/Dropbox/Slides/${SUNDAY}_slides
 SERMON_DIR=$HOME/Dropbox/Sermon_Work
-VID_DIR=$HOME/Dropbox/Video_Production
+VID_DIR=$HOME/Dropbox/Slides
 
 mkdir ${DIRECTORY} &&
 pandoc -t beamer ${SERMON_DIR}/${SUNDAY}_slides.md -o ${DIRECTORY}/slides.pdf --template video-slides &&
