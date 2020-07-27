@@ -16,5 +16,6 @@
     ~/.config/fish : fish
     ~/.config/dmenu-extended : dmenu-extended
     ~/.config/obs-studio : obs-studio
+    ~/.config/organize : organize
     ##    ~/.config/gtk-3.0 : gtk-3.0
 

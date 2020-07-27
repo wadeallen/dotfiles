@@ -1,0 +1,32 @@
+rules:
+  # sort my invoices and receipts
+  - folders: ~/Dropbox/Scans
+    subfolders: false
+    filters:
+      - extension: pdf
+      - filename:
+          contains:
+            - Benefit Wallet
+          case_sensitive: false
+    actions:
+      - move: ~/Dropbox/Receipts/Medical/Benefit_Wallet/
+  - folders: ~/Dropbox/Scans
+    subfolders: false
+    filters:
+      - extension: pdf
+      - filename:
+          contains:
+            - Target
+          case_sensitive: false
+    actions:
+      - move: /home/wadeallen/Dropbox/Receipts/Target/
+  - folders: ~/Dropbox/Scans
+    subfolders: false
+    filters:
+      - extension: pdf
+      - filename:
+          contains:
+            - Housing
+          case_sensitive: false
+    actions:
+      - move: "/home/wadeallen/Dropbox/Receipts/Housing/Misc Housing/"
