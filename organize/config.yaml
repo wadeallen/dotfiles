@@ -7,7 +7,7 @@ rules:
       - filename:
           contains:
             - Benefit Wallet
-          case_sensitive: false
+          case_sensitive: true
     actions:
       - move: ~/Dropbox/Receipts/Medical/Benefit_Wallet/
   - folders: ~/Dropbox/Scans
@@ -17,7 +17,7 @@ rules:
       - filename:
           contains:
             - Target
-          case_sensitive: false
+          case_sensitive: true
     actions:
       - move: /home/wadeallen/Dropbox/Receipts/Target/
   - folders: ~/Dropbox/Scans
@@ -27,6 +27,16 @@ rules:
       - filename:
           contains:
             - Housing
-          case_sensitive: false
+          case_sensitive: true
     actions:
       - move: "/home/wadeallen/Dropbox/Receipts/Housing/Misc Housing/"
+  - folders: ~/Dropbox/Scans
+    subfolders: false
+    filters:
+      - extension: pdf
+      - filename:
+          contains:
+            - Wedding_Covid_Release
+          case_sensitive: true
+    actions:
+      - move: /home/wadeallen/Dropbox/Wedding_Releases/

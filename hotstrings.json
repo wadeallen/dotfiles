@@ -49,6 +49,7 @@
     ",nm": ["run-replace", "sh", "-c", "date -dnext-month +%Y-%m-"],
     "#pl": ["run-replace", "sh", "-c", "echo `date +%Y-%m`_Profit_Loss"],
     "#bal": ["run-replace", "sh", "-c", "echo `date +%Y-%m`_Balance_Sheet"],
+    "#wr": ["run-replace", "sh", "-c", "echo `date +%Y-%m-%d`_Wedding_Covid_Release"],
     "#pay": ["run-replace", "sh", "-c", "echo `date +%Y-%m`_Paystub"],
     ",sun": ["run-replace", "sh", "-c", "date -dnext-sunday +%F"],
     "#bw": ["run-replace", "sh", "-c", "echo Benefit Wallet Receipt `date +%F`"],
