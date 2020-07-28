@@ -6,9 +6,6 @@ function fish_prompt
     echo -n (set_color blue)(prompt_pwd)' '
 
     set_color -o
-    if test "$hostname" = 'wade-desktop'
-        echo -n (set_color red)'Desktop '
-    end
     echo -n (set_color red)'❯'(set_color yellow)'❯'(set_color green)'❯ '
     set_color normal
 end
