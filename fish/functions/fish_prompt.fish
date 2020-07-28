@@ -1,8 +1,14 @@
 function fish_prompt
-    set_color magenta
-    echo -n (hostname) ' '
-    set_color $fish_color_cwd
-    echo -n (basename $PWD)
+    if test -n "$SSH_TTY"
+        echo -n (set_color brred)"$USER"(set_color white)'@'(set_color yellow)(prompt_hostname)' '
+    end
+
+    echo -n (set_color blue)(prompt_pwd)' '
+
+    set_color -o
+    if test "$hostname" = 'wade-desktop'
+        echo -n (set_color red)'Desktop '
+    end
+    echo -n (set_color red)'❯'(set_color yellow)'❯'(set_color green)'❯ '
     set_color normal
-    echo -n ' ) '
 end
