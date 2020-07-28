@@ -1,10 +1,7 @@
-function fish_prompt
-    set -l textcol  white
-    set -l arrowcol green
-    set -l filebase yellow
-    echo -n "$hostname"
-    set_color $filebase
-    echo -n " "(basename $PWD)" "
-    set_color $arrowcol -b normal
-    echo -n "⮀ "
+function fish_prompt --description 'Screen Savvy prompt'
+    if test -z "$WINDOW"
+        printf '%s%s@%s%s%s%s%s> ' (set_color yellow) $USER (set_color purple) (prompt_hostname) (set_color $fish_color_cwd) (prompt_pwd) (set_color normal)
+    else
+        printf '%s%s@%s%s%s(%s)%s%s%s> ' (set_color yellow) $USER (set_color purple) (prompt_hostname) (set_color white) (echo $WINDOW) (set_color $fish_color_cwd) (prompt_pwd) (set_color normal)
+    end
 end
