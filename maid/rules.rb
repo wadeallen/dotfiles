@@ -104,10 +104,6 @@ Maid.rules do
     move(dir('~/Scans/Maurices*.pdf'), '~/Dropbox/Statements/Maurices')
   end
 
-  rule 'move Target Statement into folder' do
-    move(dir('~/Scans/Target Card*.pdf'), '~/Dropbox/Receipts/Target')
-  end
-
   rule 'move Anna Vanderbilt Health Insurance Statement into folder' do
     move(dir('~/Scans/Anna Vanderbilt Health Insurance*.pdf'), '~/Dropbox/Anna/Anna_Vanderbilt')
   end
@@ -142,10 +138,6 @@ Maid.rules do
 
   rule 'move MD Wise Statement into folder' do
     move(dir('~/Scans/MD Wise*.pdf'), '~/Dropbox/Receipts/Insurance/Health Insurance/MD Wise Wade Christy')
-  end
-
-  rule 'move Vectren Bill into folder' do
-    move(dir('~/Scans/Vectren*.pdf'), '~/Dropbox/Receipts/Housing/Utilities/Gas')
   end
 
   end

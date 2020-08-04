@@ -1,5 +1,5 @@
 rules:
-  # sort my invoices and receipts
+# Benefit Wallet
   - folders: ~/Dropbox/Scans
     subfolders: false
     filters:
@@ -10,6 +10,7 @@ rules:
           case_sensitive: true
     actions:
       - move: ~/Dropbox/Receipts/Medical/Benefit_Wallet/
+# Target Card
   - folders: ~/Dropbox/Scans
     subfolders: false
     filters:
@@ -26,10 +27,11 @@ rules:
       - extension: pdf
       - filename:
           contains:
-            - Housing
+            - Housing Receipt
           case_sensitive: true
     actions:
       - move: "/home/wadeallen/Dropbox/Receipts/Housing/Misc Housing/"
+# Wedding Covid Releases
   - folders: ~/Dropbox/Scans
     subfolders: false
     filters:
@@ -40,3 +42,47 @@ rules:
           case_sensitive: true
     actions:
       - move: /home/wadeallen/Dropbox/Wedding_Releases/
+# Vectren
+  - folders: ~/Dropbox/Scans
+    subfolders: false
+    filters:
+      - extension: pdf
+      - filename:
+          contains:
+            - Vectren Bill
+          case_sensitive: true
+    actions:
+      - move: /home/wadeallen/Dropbox/Receipts/Housing/Utilities/Gas/
+# Three Rivers
+  - folders: ~/Dropbox/Scans
+    subfolders: false
+    filters:
+      - extension: pdf
+      - filename:
+          contains:
+            - Three Rivers Credit Union
+          case_sensitive: true
+    actions:
+      - move: "/home/wadeallen/Dropbox/Statements/Three Rivers Credit Union/"
+# Thrivent Rivers
+  - folders: ~/Dropbox/Scans
+    subfolders: false
+    filters:
+      - extension: pdf
+      - filename:
+          contains:
+            - Thrivent Credit Union
+          case_sensitive: true
+    actions:
+      - move: "/home/wadeallen/Dropbox/Statements/Thrivent Credit Union/"
+# Church Receipts 
+  - folders: ~/Dropbox/Scans
+    subfolders: false
+    filters:
+      - extension: pdf
+      - filename:
+          contains:
+            - Church Receipt
+          case_sensitive: true
+    actions:
+      - move: "/home/wadeallen/Dropbox/Receipts/Church/Current/"
