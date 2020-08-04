@@ -1,7 +1,7 @@
 function Bible(...)
   let translation = exists('a:1') ? a:1 : "NIV"
   let scripture = exists('a:2') && a:2 != "" ? a:2 : input("Scripture: ")
-  let command = '/home/wadeallen/bin/scripture -p ' . scripture . ' -v ' . translation
+  let command = '/home/wadeallen/bin/scripture -p ' . scripture . ' -v ' . translation 
   let text = system(command)
   put = text
   
