@@ -25,25 +25,6 @@ print(f"\"{book}\": {{ \n   \"{chapter}\" : {{")
 
 verses = {}
 
-def clean_text(text):
-    text = text.replace('–', '--')
-    text = text.replace('‘', '\\"')
-    text = text.replace('’', '\\"')
-    # finds possesive nouns and replaces " with '
-    text = re.sub(r'(\w+)\\+\"+s', r"\1's", text)
-    text = re.sub(r'(\w+)\\+\"+t', r"\1't", text)
-    text = re.sub(r'I\\"m', 'I\'m', text)
-    text = re.sub(r'you\\"ve', 'you\'ve,', text)
-    text = re.sub(r'you\\"ll', 'you\'ll,', text)
-    text = re.sub(r'you\\"re', 'you\'re,', text)
-    text = re.sub(r'we\\"re', 'we\'re,', text)
-    text = re.sub(r'I\\"ve', 'I\'ve,', text)
-    text = re.sub(r'You\\"ll', 'You\'ll,', text)
-    text = re.sub(r'I\\"ll', 'I\'ll,', text)
-    text = re.sub(r'What\\"ll', 'What\'ll,', text)
-    return text
-
-
 for p in page_content.find_all('p'):
     passage = p.find_all('span', class_='text')
 
@@ -51,13 +32,11 @@ for p in page_content.find_all('p'):
         number = v.attrs['class'][1].split('-')[2]
         if len(v.contents) == 2:
             text = v.contents[1]
-            text = clean_text(text)
             if number != '1':
                 print('\",\n', end='')
             print(f'      \"{number}\": \"{text}', end='')
         else:
             text = v.contents[0]
-            text = clean_text(text)
             print(f'{text}', end='')
 print('\"\n     },')
         
