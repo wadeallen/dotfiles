@@ -23,22 +23,50 @@ chapter = short_reference.split(".")[1]
 # print(f"book is {book} and chapter is {chapter}. Short reference is {short_reference} and short book is {short_book}")
 print(f"\"{book}\": {{ \n   \"{chapter}\" : {{")
 
-verses = {}
+verses = []
 
 for p in page_content.find_all('p'):
     passage = p.find_all('span', class_='text')
 
     for v in passage:
         number = v.attrs['class'][1].split('-')[2]
-        if len(v.contents) == 2:
-            text = v.contents[1]
-            if number != '1':
-                print('\",\n', end='')
-            print(f'      \"{number}\": \"{text}', end='')
-        else:
-            text = v.contents[0]
-            print(f'{text}', end='')
-print('\"\n     },')
+        text = v.text
+        text = re.sub('^[0-9]{1,2}', '', text)
+        text = re.sub('\([A-Z]{1,2}\)', '', text)
+        text = re.sub('\[[a-z]\]', '', text)
+        verses.append([number, text])
+
+count=0
+for n, v in verses:
+    count = count +1
+    if not re.match(r"\s", v):
+        print(f" {v}", end='')
+    else:
+        if int(n) != 1:
+            print("\",")
+        print(f"    \"{n}\": \"{v}", end='')
+
+    if count == len(verses):
+        print("\"")
+
+print("     },")
+
+# verses = {}
+
+# for p in page_content.find_all('p'):
+#     passage = p.find_all('span', class_='text')
+
+#     for v in passage:
+#         number = v.attrs['class'][1].split('-')[2]
+#         if len(v.contents) == 2:
+#             text = v.contents[1]
+#             if number != '1':
+#                 print('\",\n', end='')
+#             print(f'      \"{number}\": \"{text}', end='')
+#         else:
+#             text = v.contents[0]
+#             print(f'{text}', end='')
+# print('\"\n     },')
         
 
 

@@ -23,62 +23,36 @@ chapter = short_reference.split(".")[1]
 # print(f"book is {book} and chapter is {chapter}. Short reference is {short_reference} and short book is {short_book}")
 print(f"\"{book}\": {{ \n   \"{chapter}\": {{")
 
-verses = {}
-
-def clean_text(text):
-    text = text.replace('–', '--')
-    text = text.replace('‘', '\\"')
-    text = text.replace('’', '\\"')
-    # finds possesive nouns and replaces " with '
-    text = re.sub(r'(\w+)\\+\"+s', r"\1's", text)
-    text = re.sub(r'(\w+)\\+\"+t', r"\1't", text)
-    text = re.sub(r'I\\"m', 'I\'m', text)
-    text = re.sub(r'you\\"ve', 'you\'ve,', text)
-    text = re.sub(r'you\\"ll', 'you\'ll,', text)
-    text = re.sub(r'you\\"re', 'you\'re,', text)
-    text = re.sub(r'we\\"re', 'we\'re,', text)
-    text = re.sub(r'I\\"ve', 'I\'ve,', text)
-    text = re.sub(r'You\\"ll', 'You\'ll,', text)
-    text = re.sub(r'I\\"ll', 'I\'ll,', text)
-    text = re.sub(r'What\\"ll', 'What\'ll,', text)
-    return text
-
+verses = []
 
 for p in page_content.find_all('p'):
     passage = p.find_all('span', class_='text')
 
     for v in passage:
     	number = v.attrs['class'][1].split('-')[2]
-    	intro = v.find('span',class_='chapternum')
-    	intro_verse = v.find_all('sup',class_='versenum')
     	text = v.text
     	text = re.sub('^[0-9]{1,2}', '', text)
     	text = re.sub('\([A-Z]{1,2}\)', '', text)
     	text = re.sub('\[[a-z]\]', '', text)
-    	print(f"     \"{number}\": \"{text}\",")
+    	verses.append([number, text])
+
+count=0
+for n, v in verses:
+	count = count +1
+	if not re.match(r"\s", v):
+		print(f" {v}", end='')
+	else:
+		if int(n) != 1:
+			print("\",")
+		print(f"    \"{n}\": \"{v}", end='')
+
+	if count == len(verses):
+		print("\"")
 
 print("     },")
 
     	
 
-
-
-
-
-
-#     for v in passage:
-#         number = v.attrs['class'][1].split('-')[2]
-#         if len(v.contents) == 2:
-#             text = v.contents[1]
-#             text = clean_text(text)
-#             if number != '1':
-#                 print('\",\n', end='')
-#             print(f'      \"{number}\": \"{text}', end='')
-#         else:
-#             text = v.contents[0]
-#             text = clean_text(text)
-#             print(f'{text}', end='')
-# print('\"\n     },')
         
 
 
