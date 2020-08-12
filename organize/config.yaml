@@ -86,3 +86,25 @@ rules:
           case_sensitive: true
     actions:
       - move: "/home/wadeallen/Dropbox/Receipts/Church/Current/"
+# Yorktown Municipal Utilities
+  - folders: ~/Dropbox/Scans
+    subfolders: false
+    filters:
+      - extension: pdf
+      - filename:
+          contains:
+            - Yorktown Municipal Utilities
+          case_sensitive: true
+    actions:
+      - move: "/home/wadeallen/Dropbox/Receipts/Housing/Utilities/Water/"
+# Indiana Michigan Power 
+  - folders: ~/Dropbox/Scans
+    subfolders: false
+    filters:
+      - extension: pdf
+      - filename:
+          contains:
+            - I&MBill_
+          case_sensitive: true
+    actions:
+      - move: "/home/wadeallen/Dropbox/Receipts/Housing/Utilities/Electric/"
