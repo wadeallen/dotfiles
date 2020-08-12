@@ -6,7 +6,7 @@ import json
 
 bedroom_url = 'https://home.wadeallen.me/api/states/sensor.dht_sensor_temperature'
 levi_url = 'https://home.wadeallen.me/api/states/sensor.levi_room_temperature'
-church_url = 'https://church.wadeallen.me/api/states/sensor.shelly_temperature'
+church_url = 'http://church.wadeallen.me/api/states/sensor.shelly_temperature'
 church_key = config.ha_api
 home_key = config.home_ha_api
 church_headers = {

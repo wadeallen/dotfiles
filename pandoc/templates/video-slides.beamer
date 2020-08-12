@@ -26,7 +26,9 @@
 }
 
 \renewcommand{\frametitle}[1]{
-	\texttt{#1}
+	\begin{center}
+	\Large\texttt{#1}
+	\end{center}
 }
 
 \begin{document}
