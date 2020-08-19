@@ -33,6 +33,7 @@
     "#tcu": ["run-replace", "sh", "-c", "echo Teachers Credit Union `date +%F`"],
     "#trcu": ["run-replace", "sh", "-c", "echo Three Rivers Credit Union `date +%F`"],
     "#bscu": ["run-replace", "sh", "-c", "echo Ball State Credit Union Statement `date +%F`"],
+    "#covid": ["run-replace", "sh", "-c", "echo `date +%F`_Wedding_Covid_Release"],
     "#housing": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/housing.py"],
     "#mdwise": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/mdwise.py"],
     "#hhw": ["run-replace", "sh", "-c", "echo Levi Hoosier Healthwise Statement `date +%F`"],

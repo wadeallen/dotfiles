@@ -21,7 +21,7 @@ with open(sermon_file) as f_in, open(slide_file, "w") as f_out :
         f_out.write(row)
 
 with open(slide_file, "a") as myfile:
-    myfile.write("---\n\n# {#overview .step .first data-x=-4000 data-y=0 data-scale=10}\n\n![](images/file.jpg)\n\n")
+    myfile.write("---\n\n")
 
 
 

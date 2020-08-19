@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+ssh fbcmuncie@church.wadeallen.me -p 27 "rm /Users/fbcmuncie/Desktop/Sermon_Slides/*.jpg"
+echo "Slide Files deleted"
+
+
