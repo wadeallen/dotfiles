@@ -1,3 +1,32 @@
 #!/bin/bash
 
- curl http://192.168.1.248/cm?cmnd=Power%20TOGGLE
+source /home/wadeallen/Dropbox/Config\ Files/config.sh
+
+local_ip=`ip -4 -o addr show dev wlp3s0| awk '{split($4,a,"/");print a[1]}'`
+
+# Check if at church on laptop
+if [ ${local_ip} == "192.168.86.41" ]
+
+then
+
+curl -X POST -H "Authorization: Bearer ${church}" \
+  -H "Content-Type: application/json" \
+  -d '{"entity_id": "switch.pastor_lamp_relay"}' \
+  https://church.wadeallen.me/api/services/switch/toggle
+
+fi
+
+# Check if at church on desktop
+if [ ${local_ip} == "192.168.1.151" ]
+
+then
+
+curl -X POST -H "Authorization: Bearer ${church}" \
+  -H "Content-Type: application/json" \
+  -d '{"entity_id": "switch.pastor_lamp_relay"}' \
+  https://church.wadeallen.me/api/services/switch/toggle
+
+fi
+
+# Check if at home on laptop
+
