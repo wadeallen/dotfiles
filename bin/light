@@ -3,7 +3,6 @@
 source /home/wadeallen/Dropbox/Config\ Files/config.sh
 
 host=`hostname`
-echo ${local_ip}
 
 if [ ${host} == "wade-laptop" ];
 then
@@ -18,16 +17,16 @@ fi
 
 
 # Check if at church on laptop
-# if [ ${local_ip} == "192.168.86.41"];
+if [ ${local_ip} == "192.168.86.41" ];
 
-# then
+then
 
-# curl -X POST -H "Authorization: Bearer ${church}" \
-#   -H "Content-Type: application/json" \
-#   -d '{"entity_id": "switch.pastor_lamp_relay"}' \
-#   https://church.wadeallen.me/api/services/switch/toggle
+curl -X POST -H "Authorization: Bearer ${church}" \
+  -H "Content-Type: application/json" \
+  -d '{"entity_id": "switch.pastor_lamp_relay"}' \
+  https://church.wadeallen.me/api/services/switch/toggle
 
-# fi
+fi
 
 # Check if at church on desktop
 # if [ ${local_ip} == "192.168.1.151" ];
