@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+
+from requests import get
+import config
+import json	
+
+sunrise_url = 'https://home.wadeallen.me/api/states/sensor.nextsunrise'
+sunset_url = 'https://home.wadeallen.me/api/states/sensor.nextsunset'
+home_key = config.home_ha_api
+home_headers = {
+    'Authorization': f'Bearer {home_key}',
+    'content-type': 'application/json',
+}
+
+
+sunrise_response = get(sunrise_url, headers=home_headers)
+sunset_response = get(sunset_url, headers=home_headers)
+sunrise_data = json.loads(sunrise_response.text)
+sunset_data = json.loads(sunset_response.text)
+print(f"\tNext Sunrise:\t{sunrise_data['state']}\n\tNext Sunset:\t{sunset_data['state']}")
