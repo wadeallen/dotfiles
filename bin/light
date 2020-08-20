@@ -28,7 +28,7 @@ curl -X POST -H "Authorization: Bearer ${church}" \
 
 fi
 
-Check if at church on desktop
+# Check if at church on desktop
 if [ ${local_ip} == "192.168.1.151" ];
 
 then
