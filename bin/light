@@ -42,4 +42,14 @@ fi
 
 # Check if at home on laptop
 
-echo "${local_ip} and ${host}" 
+if [ ${local_ip} == "192.168.1.117" ];
+
+then
+
+curl -X POST -H "Authorization: Bearer ${home}" \
+  -H "Content-Type: application/json" \
+  -d '{"entity_id": "switch.sofa_lamp"}' \
+  https://home.wadeallen.me/api/services/switch/toggle
+
+fi
+
