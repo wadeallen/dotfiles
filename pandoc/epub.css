@@ -1,0 +1,24 @@
+/* This defines styles and classes used in the book */
+
+body { text-indent:0; margin: 5%; text-align: justify; font-size: medium; }
+@page { margin: 1.5em;}
+code { font-family: monospace; }
+h1, h2, h3, h4, h5, h6 { text-align: center; margin-bottom:1em;}
+h1.title { }
+h2.author { }
+
+body > p {text-indent: 0; margin-top: 1em; margin-bottom: 1em;}
+
+blockquote{
+	font-style: italic;	margin-top: 1em; margin-left: 1em; text-indent:0;
+}
+.caption{
+	text-align:center;
+	font-style:italic;
+	margin-bottom:1em;
+	margin-top:.2em;
+	font-size:.8em;
+}
+blockquote > p {
+	font-style: italic;	margin-top: 1em; margin-left: 1em; text-indent:0;
+}

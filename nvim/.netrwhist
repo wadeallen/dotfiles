@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/wadeallen/Dropbox/esphome/epaper'
 let g:netrw_dirhist_2='/home/wadeallen/dotfiles/dmenu-extended'
 let g:netrw_dirhist_1='/home/wadeallen/Dropbox/Slides/2020-08-16_slides'
 let g:netrw_dirhist_0='/home/wadeallen/Dropbox/bibles/NIV'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_7='/home/wadeallen/dotfiles/pandoc/templates'
 let g:netrw_dirhist_6='/home/wadeallen/dotfiles/fish/functions'
 let g:netrw_dirhist_5='/home/wadeallen/bin'
 let g:netrw_dirhist_4='/home/wadeallen/dotfiles/conky'
-let g:netrw_dirhist_3='/home/wadeallen/dotfiles/kargos'

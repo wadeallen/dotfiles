@@ -23,4 +23,4 @@ alias youth="xdg-open https://docs.google.com/spreadsheets/d/17jwnIWmA9zBxBMzG27
 alias wedding="xdg-open https://docs.google.com/spreadsheets/d/1ED8gxEMOAii7_TPORejgiAZsEAh44ArlNpFH0mYhA6w/edit#gid=0"
 alias church="xdg-open https://church.wadeallen.me/"
 alias home="xdg-open https://home.wadeallen.me/"
-
+alias live="xdg-open https://studio.youtube.com/channel/UCTm6q6Q7OJ6VrURz3YXVP6A/livestreaming"

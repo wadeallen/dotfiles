@@ -17,10 +17,10 @@ rules:
       - extension: pdf
       - filename:
           contains:
-            - Target
+            - Target Card
           case_sensitive: true
     actions:
-      - move: /home/wadeallen/Dropbox/Receipts/Target/
+      - move: /home/wadeallen/Dropbox/Statements/Target/
   - folders: ~/Dropbox/Scans
     subfolders: false
     filters:
@@ -108,3 +108,14 @@ rules:
           case_sensitive: true
     actions:
       - move: "/home/wadeallen/Dropbox/Receipts/Housing/Utilities/Electric/"
+# Maurices
+  - folders: ~/Dropbox/Scans
+    subfolders: false
+    filters:
+      - extension: pdf
+      - filename:
+          contains:
+            - Maurices Statement
+          case_sensitive: true
+    actions:
+      - move: "/home/wadeallen/Dropbox/Statements/Maurices/"
