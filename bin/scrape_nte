@@ -6,67 +6,62 @@ import re
 import sys
 
 scripture = sys.argv[1]
+last_chapter = int(sys.argv[2])
+chapters = last_chapter + 1
 scripture = scripture.replace(' ', '+')
 
-page_link = f'https://www.biblegateway.com/passage/?search={scripture}&version=NTE&interface=print'
+print(f"\"{scripture}\": {{ ")
 
-page_response = requests.get(page_link, timeout=5)
+for c in range(1,chapters):
 
-page_content = BeautifulSoup(page_response.content, "html.parser")
+	page_link = f'https://www.biblegateway.com/passage/?search={scripture}+{c}&version=NTE&interface=print'
+	page_response = requests.get(page_link, timeout=5)
+	page_content = BeautifulSoup(page_response.content, "html.parser")
 
-# reference = page_content.find("meta",  property="al:ios:url")
-book = page_content.title.string.split("NTE")[0].strip()
-short_reference = page_content.find("meta",  property="al:ios:url")["content"].split("/")[3]
-short_book = short_reference.split(".")[0]
-chapter = short_reference.split(".")[1]
+# # reference = page_content.find("meta",  property="al:ios:url")
+	book = page_content.title.string.split("NIV")[0].strip()
+	short_reference = page_content.find("meta",  property="al:ios:url")["content"].split("/")[3]
+	short_book = short_reference.split(".")[0]
+	chapter = short_reference.split(".")[1]
 
-# print(f"book is {book} and chapter is {chapter}. Short reference is {short_reference} and short book is {short_book}")
-print(f"\"{book}\": {{ \n   \"{chapter}\" : {{")
+# # print(f"book is {book} and chapter is {chapter}. Short reference is {short_reference} and short book is {short_book}")
+	print(f"   \"{chapter}\": {{")
 
-verses = []
+	verses = []
 
-for p in page_content.find_all('p'):
-    passage = p.find_all('span', class_='text')
+	for p in page_content.find_all('p'):
+		passage = p.find_all('span', class_='text')
 
-    for v in passage:
-        number = v.attrs['class'][1].split('-')[2]
-        text = v.text
-        text = re.sub('^[0-9]{1,2}', '', text)
-        text = re.sub('\([A-Z]{1,2}\)', '', text)
-        text = re.sub('\[[a-z]\]', '', text)
-        verses.append([number, text])
+		for v in passage:
+			number = v.attrs['class'][1].split('-')[2]
+			text = v.text
+			text = re.sub('^[0-9]{1,2}', '', text)
+			text = re.sub('\([A-Z]{1,2}\)', '', text)
+			text = re.sub('\[[a-z]\]', '', text)
+			verses.append([number, text])
 
-count=0
-for n, v in verses:
-    count = count +1
-    if not re.match(r"\s", v):
-        print(f" {v}", end='')
-    else:
-        if int(n) != 1:
-            print("\",")
-        print(f"    \"{n}\": \"{v}", end='')
+	count=0
+	for n, v in verses:
+		count = count +1
+		if not re.match(r"\s", v):
+			print(f" {v}", end='')
+		else:
+			if int(n) != 1:
+				print("\",")
+			print(f"    \"{n}\": \"{v}", end='')
 
-    if count == len(verses):
-        print("\"")
+		if count == len(verses):
+			print("\"")
 
-print("     },")
+	if c == last_chapter:
+		print("    }")
+	else:
+		print("     },\n")
 
-# verses = {}
+print(f"}}, ")
 
-# for p in page_content.find_all('p'):
-#     passage = p.find_all('span', class_='text')
+    	
 
-#     for v in passage:
-#         number = v.attrs['class'][1].split('-')[2]
-#         if len(v.contents) == 2:
-#             text = v.contents[1]
-#             if number != '1':
-#                 print('\",\n', end='')
-#             print(f'      \"{number}\": \"{text}', end='')
-#         else:
-#             text = v.contents[0]
-#             print(f'{text}', end='')
-# print('\"\n     },')
         
 
 

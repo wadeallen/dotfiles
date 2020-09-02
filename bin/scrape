@@ -3,11 +3,12 @@
 
 if [ -z "$1" ]
   then
-	  echo "Put translation (lowercase, niv or nte) as first argument, passage as second argument"
+	  echo "Put translation (lowercase, niv or nte) as first argument, passage as second argument, number of chapters as third argument"
   exit 1
 fi
 
 TRANS=$1
 PASSAGE=$2
+CHAP=$3
 
-scrape_${TRANS} "${PASSAGE}" | xclip -selection c
+scrape_${TRANS} "${PASSAGE}" ${CHAP} | xclip -selection c
