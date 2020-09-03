@@ -1,3 +1,0 @@
-#! /bin/bash
-
-ssh wadeallen@church.wadeallen.me -p 2273

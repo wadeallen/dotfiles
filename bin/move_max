@@ -1,5 +1,0 @@
-#!/bin/bash
-
-  for filename in ./s*.mp4; do
-    scp ${filename} root@192.168.1.1:/root/TV/Max_and_Ruby/
-  done

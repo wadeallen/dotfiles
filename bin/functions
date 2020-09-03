@@ -1,7 +1,0 @@
-#!/bin/bash
-
-next_sunday () {
-   echo $(date -dsunday +%Y-%m-%d)
-}
-
-

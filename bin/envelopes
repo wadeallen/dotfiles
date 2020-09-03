@@ -1,3 +1,0 @@
-#!/bin/bash
-
-ledger -f /Users/wade/Dropbox/Ledger/ledger.ledger -p "this month" budget Envelopes 

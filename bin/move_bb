@@ -1,5 +1,0 @@
-#!/bin/bash
-
-  for filename in ./Blue*.mkv; do
-    scp ${filename} root@192.168.1.1:/root/TV/Blue_Bloods/
-  done
