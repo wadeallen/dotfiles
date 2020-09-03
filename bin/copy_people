@@ -1,9 +1,0 @@
-#!/bin/bash
-
-FOLDER=/home/wadeallen/Sites/fbcmuncie_2020/content/people
-
-for filename in *.md; do
-	# mkdir $FOLDER/${filename%.*}
-	mv $filename $FOLDER/${filename%.*}/_index.md
-done
-

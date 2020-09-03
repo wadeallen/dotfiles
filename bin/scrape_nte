@@ -58,7 +58,7 @@ for c in range(1,chapters):
 	else:
 		print("     },\n")
 
-print(f"}}, ")
+print(f"}}, \n")
 
     	
 
