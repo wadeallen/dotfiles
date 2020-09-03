@@ -8,8 +8,8 @@ function Bible(...)
 endfunction
 
 command! NIV call Bible("NIV")
+command! KJV call Bible("KJV")
 command! ESV call Bible("ESV")
 command! MSG call Bible("MSG")
-command! NLT call Bible("NLT")
 command! NTE call Bible("NTE")
 

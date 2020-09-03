@@ -1,0 +1,6 @@
+#! /bin/bash
+
+while IFS=, read -r book chapters
+do
+    scrape_kjv "${book}" ${chapters} >> KJV.json
+done < ~/bin/bible_books
