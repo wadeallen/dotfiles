@@ -58,6 +58,9 @@ hi LineNr ctermbg=none
 " Replace all is aliased to S.
 	nnoremap S :%s//g<Left><Left>
 
+" Replace all is aliased to S.
+	nnoremap <leader>Y :%s*https://youtu.be/**g
+
 "setup markdown files and tex files
 	autocmd BufNewFile,BufFilePre,BufRead *.md,*.markdown set filetype=markdown.pandoc
 	autocmd BufRead,BufNewFile *.tex set filetype=tex

@@ -1,9 +1,0 @@
-#!/bin/bash
-for i in {6..23}
-do
-   # rm NCIS_Season_2_Episode_${i}.m4v
-   # echo ${i}
-   ffmpeg -i NCIS_Season_2_Episode_${i}.m4v -c copy NCIS_S02E${i}.mp4
-done
-
-

@@ -19,7 +19,6 @@
     "#ymu": ["run-replace", "sh", "-c", "echo Yorktown Municipal Utilities `date +%F`"],
     "#meeting": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/cct_review.py"],
     "#visitor": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/email_visitor.py"],
-    "visitordeadline": ["run-replace", "sh", "-c", "/home/wadeallen/bin/visitor_deadline"],
     "#giving": ["run-replace", "sh", "-c", "python3 ~/dotfiles/snippets/giving_report.py"],
     "#comcast": ["run-replace", "sh", "-c", "echo Comcast Bill `date +%F`"],
     "#macys": ["run-replace", "sh", "-c", "echo Macys Statement `date +%F`"],
