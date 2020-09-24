@@ -1,7 +1,7 @@
 #!/bin/bash
 
 NEXT_MONTH=`date +'%B' -d 'next month'`
-DATE=`zenity --calendar --date-format='%A, %B %d' 2>/dev/null`
+DATE=`zenity --calendar --date-format='%A, %B %d'`
 
 echo -e "We will be printing the ${NEXT_MONTH} Visitor on the last week of this month. If you have an article for the Visitor, please email it to me by\n\n${DATE}\n\nThanks so much and have a great week.\n\nWade" | xclip -selection c
 echo "Text copied to clipboard"

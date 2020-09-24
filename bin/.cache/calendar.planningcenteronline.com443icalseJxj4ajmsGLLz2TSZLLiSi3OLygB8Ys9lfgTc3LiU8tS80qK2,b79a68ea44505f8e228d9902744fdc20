@@ -1,0 +1,3864 @@
+status: 200
+date: Mon, 21 Sep 2020 19:16:59 GMT
+content-type: text/calendar; charset=utf-8
+connection: keep-alive
+server: nginx
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+x-download-options: noopen
+x-permitted-cross-domain-policies: none
+referrer-policy: no-referrer-when-downgrade
+cache-control: max-age=7200, private, must-revalidate
+etag: W/"6e4bc11c3a3427949c56549e2cb23d89"
+set-cookie: _account_center_session=SCswOUQ0a09NbUMzMGQzWnhEQmhldWtVSkhoTGE2Ti9IVldVN3ZueFduM0Z1eG16cWg2NDgzbVdleFJSNEZvRUxCeENla2FaR3B5Z0VoOGpUWUN2dlE9PS0tUXJha1ZEMFRpaDliaVBsM202NFAxdz09--0ad4cc65f7c53e2aba87a5abc0c8bcff0999d3a3; domain=.planningcenteronline.com; path=/; expires=Mon, 05 Oct 2020 19:16:59 GMT; secure; HttpOnly
+x-request-id: d9f1cc2f-fd73-4f05-915f-6f66497933fc
+x-runtime: 0.046423
+strict-transport-security: max-age=31536000; includeSubDomains
+content-location: https://calendar.planningcenteronline.com:443/icals/eJxj4ajmsGLLz2TSZLLiSi3OLygB8Ys9lfgTc3LiU8tS80qK2azYXEOs2EozmbbPs2IvK_FUEiwoTcrJTI4vycxNLWaz5gix4i5ILErMLa5mAACTfRf979595f57134bfba4df1d68575e5f050d0a2c75e1
+
+BEGIN:VCALENDAR
+PRODID;X-RICAL-TZSOURCE=TZINFO:Planning Center Calendar
+CALSCALE:GREGORIAN
+VERSION:2.0
+X-WR-CALNAME:First Baptist Muncie
+X-PUBLISHED-TTL:PT1H
+BEGIN:VTIMEZONE
+TZID;X-RICAL-TZSOURCE=TZINFO:America/New_York
+BEGIN:DAYLIGHT
+DTSTART:20200308T020000
+RDATE:20200308T020000
+RDATE:20210314T020000
+RDATE:20220313T020000
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+END:DAYLIGHT
+BEGIN:STANDARD
+DTSTART:20201101T020000
+RDATE:20201101T020000
+RDATE:20211107T020000
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20200909T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20200909T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938737@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20200916T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20200916T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938738@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20200923T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20200923T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938739@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20200930T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20200930T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938740@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201007T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201007T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938741@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201014T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201014T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938742@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201021T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201021T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938743@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201028T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201028T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938744@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201104T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201104T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938745@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201111T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201111T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938746@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201118T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201118T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938747@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201125T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201125T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938748@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201202T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201202T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938749@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201209T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201209T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938750@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201216T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201216T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938751@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201223T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201223T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938752@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201230T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201230T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938753@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210106T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210106T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938754@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210113T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210113T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938755@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210120T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210120T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938756@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210127T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210127T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938757@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210203T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210203T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938758@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210210T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210210T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938759@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210217T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210217T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938760@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210224T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210224T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938761@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210303T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210303T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938762@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210310T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210310T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938763@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210317T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210317T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938764@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210324T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210324T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938765@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210331T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210331T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938766@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210407T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210407T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938767@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210414T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210414T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938768@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210421T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210421T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938769@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210428T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210428T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938770@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210505T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210505T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938771@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210512T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210512T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938772@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210519T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210519T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938773@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210526T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210526T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938774@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210602T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210602T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938775@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210609T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210609T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938776@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210616T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210616T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938777@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210623T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210623T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938778@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210630T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210630T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938779@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210707T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210707T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938780@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210714T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210714T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938781@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210721T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210721T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938782@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210728T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210728T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938783@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210804T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210804T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938784@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210811T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210811T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938785@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210818T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210818T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938786@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210825T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210825T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938787@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210901T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210901T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938788@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210908T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210908T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938789@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210915T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210915T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938790@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210922T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210922T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938791@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210929T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210929T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938792@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211006T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211006T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938793@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211013T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211013T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938794@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211020T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211020T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938795@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211027T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211027T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938796@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211103T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211103T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938797@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211110T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211110T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938798@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211117T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211117T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938799@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211124T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211124T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938800@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211201T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211201T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938801@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211208T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211208T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938802@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211215T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211215T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938803@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211222T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211222T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938804@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211229T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211229T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938805@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220105T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220105T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938806@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220112T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220112T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938807@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220119T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220119T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938808@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220126T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220126T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938809@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220202T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220202T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938810@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220209T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220209T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938811@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220216T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220216T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938812@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220223T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220223T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938813@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220302T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220302T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938814@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220309T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220309T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938815@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220316T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220316T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938816@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220323T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220323T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938817@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220330T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220330T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938818@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220406T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220406T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938819@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220413T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220413T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938820@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220420T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220420T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938821@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220427T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220427T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938822@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220504T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220504T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938823@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220511T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220511T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938824@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220518T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220518T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938825@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220525T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220525T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938826@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220601T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220601T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938827@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220608T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220608T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938828@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220615T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220615T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938829@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220622T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220622T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938830@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220629T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220629T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938831@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220706T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220706T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938832@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220713T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220713T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938833@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220720T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220720T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938834@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220727T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220727T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938835@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220803T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220803T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938836@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220810T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220810T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938837@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220817T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220817T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938838@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220824T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220824T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938839@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220831T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220831T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938840@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220907T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220907T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5995945-68938841@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20200913T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20200913T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972696@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20200920T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20200920T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972697@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20200927T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20200927T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972698@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201004T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201004T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972699@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201011T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201011T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972700@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201018T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201018T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972701@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201025T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201025T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972702@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201101T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201101T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972703@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201108T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201108T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972704@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201115T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201115T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972705@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201122T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201122T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972706@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201129T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201129T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972707@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201206T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201206T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972708@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201213T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201213T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972709@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201220T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201220T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972710@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201227T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201227T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972711@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210103T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210103T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972712@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210110T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210110T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972713@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210117T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210117T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972714@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210124T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210124T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972715@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210131T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210131T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972716@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210207T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210207T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972717@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210214T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210214T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972718@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210221T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210221T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972719@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210228T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210228T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972720@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210307T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210307T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972721@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210314T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210314T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972722@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210321T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210321T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972723@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210328T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210328T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972724@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210404T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210404T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972725@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210411T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210411T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972726@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210418T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210418T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972727@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210425T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210425T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972728@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210502T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210502T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972729@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210509T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210509T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972730@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210516T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210516T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972731@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210523T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210523T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972732@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210530T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210530T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972733@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210606T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210606T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972734@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210613T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210613T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972735@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210620T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210620T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972736@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210627T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210627T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972737@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210704T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210704T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972738@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210711T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210711T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972739@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210718T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210718T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972740@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210725T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210725T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972741@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210801T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210801T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972742@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210808T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210808T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972743@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210815T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210815T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972744@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210822T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210822T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972745@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210829T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210829T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972746@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210905T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210905T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972747@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210912T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210912T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972748@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210919T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210919T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972749@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210926T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210926T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972750@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211003T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211003T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972751@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211010T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211010T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972752@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211017T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211017T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972753@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211024T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211024T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972754@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211031T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211031T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972755@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211107T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211107T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972756@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211114T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211114T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972757@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211121T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211121T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972758@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211128T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211128T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972759@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211205T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211205T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972760@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211212T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211212T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972761@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211219T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211219T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972762@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211226T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211226T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972763@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220102T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220102T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972764@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220109T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220109T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972765@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220116T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220116T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972766@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220123T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220123T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972767@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220130T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220130T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972768@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220206T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220206T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972769@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220213T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220213T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972770@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220220T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220220T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972771@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220227T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220227T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972772@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220306T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220306T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972773@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220313T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220313T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972774@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220320T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220320T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972775@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220327T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220327T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972776@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220403T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220403T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972777@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220410T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220410T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972778@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220417T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220417T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972779@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220424T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220424T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972780@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220501T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220501T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972781@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220508T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220508T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972782@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220515T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220515T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972783@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220522T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220522T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972784@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220529T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220529T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972785@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220605T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220605T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972786@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220612T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220612T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972787@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220619T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220619T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972788@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220626T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220626T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972789@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220703T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220703T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972790@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220710T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220710T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972791@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220717T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220717T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972792@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220724T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220724T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972793@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220731T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220731T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972794@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220807T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220807T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972795@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220814T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220814T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972796@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220821T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220821T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972797@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220828T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220828T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972798@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220904T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220904T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-68972799@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20200915T210000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20200915T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5999159-68973091@resources.planningcenteronline.com
+DESCRIPTION:Monthly leadership team meeting\nLocation: https://us02web.zo
+ om.us/j/97934851827\n\n
+SUMMARY:CCT Meeting
+LOCATION:https://us02web.zoom.us/j/97934851827
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201020T210000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201020T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5999159-68973092@resources.planningcenteronline.com
+DESCRIPTION:Monthly leadership team meeting\nLocation: https://us02web.zo
+ om.us/j/97934851827\n\n
+SUMMARY:CCT Meeting
+LOCATION:https://us02web.zoom.us/j/97934851827
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201117T210000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201117T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5999159-68973093@resources.planningcenteronline.com
+DESCRIPTION:Monthly leadership team meeting\nLocation: https://us02web.zo
+ om.us/j/97934851827\n\n
+SUMMARY:CCT Meeting
+LOCATION:https://us02web.zoom.us/j/97934851827
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201215T210000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201215T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5999159-68973094@resources.planningcenteronline.com
+DESCRIPTION:Monthly leadership team meeting\nLocation: https://us02web.zo
+ om.us/j/97934851827\n\n
+SUMMARY:CCT Meeting
+LOCATION:https://us02web.zoom.us/j/97934851827
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210119T210000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210119T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5999159-68973095@resources.planningcenteronline.com
+DESCRIPTION:Monthly leadership team meeting\nLocation: https://us02web.zo
+ om.us/j/97934851827\n\n
+SUMMARY:CCT Meeting
+LOCATION:https://us02web.zoom.us/j/97934851827
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210216T210000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210216T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5999159-68973096@resources.planningcenteronline.com
+DESCRIPTION:Monthly leadership team meeting\nLocation: https://us02web.zo
+ om.us/j/97934851827\n\n
+SUMMARY:CCT Meeting
+LOCATION:https://us02web.zoom.us/j/97934851827
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210316T210000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210316T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5999159-68973097@resources.planningcenteronline.com
+DESCRIPTION:Monthly leadership team meeting\nLocation: https://us02web.zo
+ om.us/j/97934851827\n\n
+SUMMARY:CCT Meeting
+LOCATION:https://us02web.zoom.us/j/97934851827
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210420T210000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210420T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5999159-68973098@resources.planningcenteronline.com
+DESCRIPTION:Monthly leadership team meeting\nLocation: https://us02web.zo
+ om.us/j/97934851827\n\n
+SUMMARY:CCT Meeting
+LOCATION:https://us02web.zoom.us/j/97934851827
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210518T210000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210518T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5999159-68973099@resources.planningcenteronline.com
+DESCRIPTION:Monthly leadership team meeting\nLocation: https://us02web.zo
+ om.us/j/97934851827\n\n
+SUMMARY:CCT Meeting
+LOCATION:https://us02web.zoom.us/j/97934851827
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210615T210000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210615T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5999159-68973100@resources.planningcenteronline.com
+DESCRIPTION:Monthly leadership team meeting\nLocation: https://us02web.zo
+ om.us/j/97934851827\n\n
+SUMMARY:CCT Meeting
+LOCATION:https://us02web.zoom.us/j/97934851827
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210720T210000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210720T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5999159-68973101@resources.planningcenteronline.com
+DESCRIPTION:Monthly leadership team meeting\nLocation: https://us02web.zo
+ om.us/j/97934851827\n\n
+SUMMARY:CCT Meeting
+LOCATION:https://us02web.zoom.us/j/97934851827
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210817T210000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210817T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5999159-68973102@resources.planningcenteronline.com
+DESCRIPTION:Monthly leadership team meeting\nLocation: https://us02web.zo
+ om.us/j/97934851827\n\n
+SUMMARY:CCT Meeting
+LOCATION:https://us02web.zoom.us/j/97934851827
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210921T210000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210921T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5999159-68973103@resources.planningcenteronline.com
+DESCRIPTION:Monthly leadership team meeting\nLocation: https://us02web.zo
+ om.us/j/97934851827\n\n
+SUMMARY:CCT Meeting
+LOCATION:https://us02web.zoom.us/j/97934851827
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211019T210000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211019T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5999159-68973104@resources.planningcenteronline.com
+DESCRIPTION:Monthly leadership team meeting\nLocation: https://us02web.zo
+ om.us/j/97934851827\n\n
+SUMMARY:CCT Meeting
+LOCATION:https://us02web.zoom.us/j/97934851827
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211116T210000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211116T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5999159-68973105@resources.planningcenteronline.com
+DESCRIPTION:Monthly leadership team meeting\nLocation: https://us02web.zo
+ om.us/j/97934851827\n\n
+SUMMARY:CCT Meeting
+LOCATION:https://us02web.zoom.us/j/97934851827
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211221T210000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211221T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5999159-68973106@resources.planningcenteronline.com
+DESCRIPTION:Monthly leadership team meeting\nLocation: https://us02web.zo
+ om.us/j/97934851827\n\n
+SUMMARY:CCT Meeting
+LOCATION:https://us02web.zoom.us/j/97934851827
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220118T210000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220118T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191605Z
+UID:ET-5999159-68973107@resources.planningcenteronline.com
+DESCRIPTION:Monthly leadership team meeting\nLocation: https://us02web.zo
+ om.us/j/97934851827\n\n
+SUMMARY:CCT Meeting
+LOCATION:https://us02web.zoom.us/j/97934851827
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220215T210000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220215T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+UID:ET-5999159-68973108@resources.planningcenteronline.com
+DESCRIPTION:Monthly leadership team meeting\nLocation: https://us02web.zo
+ om.us/j/97934851827\n\n
+SUMMARY:CCT Meeting
+LOCATION:https://us02web.zoom.us/j/97934851827
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220315T210000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220315T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+UID:ET-5999159-68973109@resources.planningcenteronline.com
+DESCRIPTION:Monthly leadership team meeting\nLocation: https://us02web.zo
+ om.us/j/97934851827\n\n
+SUMMARY:CCT Meeting
+LOCATION:https://us02web.zoom.us/j/97934851827
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220419T210000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220419T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+UID:ET-5999159-68973110@resources.planningcenteronline.com
+DESCRIPTION:Monthly leadership team meeting\nLocation: https://us02web.zo
+ om.us/j/97934851827\n\n
+SUMMARY:CCT Meeting
+LOCATION:https://us02web.zoom.us/j/97934851827
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220517T210000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220517T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+UID:ET-5999159-68973111@resources.planningcenteronline.com
+DESCRIPTION:Monthly leadership team meeting\nLocation: https://us02web.zo
+ om.us/j/97934851827\n\n
+SUMMARY:CCT Meeting
+LOCATION:https://us02web.zoom.us/j/97934851827
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220621T210000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220621T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+UID:ET-5999159-68973112@resources.planningcenteronline.com
+DESCRIPTION:Monthly leadership team meeting\nLocation: https://us02web.zo
+ om.us/j/97934851827\n\n
+SUMMARY:CCT Meeting
+LOCATION:https://us02web.zoom.us/j/97934851827
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220719T210000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220719T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+UID:ET-5999159-68973113@resources.planningcenteronline.com
+DESCRIPTION:Monthly leadership team meeting\nLocation: https://us02web.zo
+ om.us/j/97934851827\n\n
+SUMMARY:CCT Meeting
+LOCATION:https://us02web.zoom.us/j/97934851827
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220816T210000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220816T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+UID:ET-5999159-68973114@resources.planningcenteronline.com
+DESCRIPTION:Monthly leadership team meeting\nLocation: https://us02web.zo
+ om.us/j/97934851827\n\n
+SUMMARY:CCT Meeting
+LOCATION:https://us02web.zoom.us/j/97934851827
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201009T200000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201009T180000
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-5999251-68973724@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Murphy Moore Rehearsal
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201010T180000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201010T153000
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-5999257-68973882@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Murphy Moore Wedding
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201023T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201023T173000
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-5999302-68974037@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Cobb Fisher Rehearsal
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201024T180000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201024T160000
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-5999309-68974042@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Cobb Fisher Wedding
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201107T120000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201107T100000
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6005027-69020672@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Fruit baskets for shut Ins
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201211T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201211T180000
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6005041-69020828@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Mickelini Morency Rehearsal
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201212T160000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201212T130000
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6005054-69020835@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Mickelini Morency Wedding
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201224T200000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201224T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6005067-69020841@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Christmas Eve Candlelight Communion Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210129T200000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210129T180000
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6006740-69043490@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Myers Havens Rehearsal
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210130T192000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210130T172000
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6006747-69043494@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Myers Havens Wedding
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210527T190000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210527T180000
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6006754-69043499@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Davis Hoeksema Rehearsal
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210528T203000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210528T183000
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6006757-69043502@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Davis Hoeksema Wedding
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210806T200000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210806T180000
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6006760-69043505@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Chase Curry Rehearsal
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210807T173000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210807T163000
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6006765-69043613@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Chase Curry Wedding
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20200920T153000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20200920T140000
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011450-69086114@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Anson Tooley Memorial Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20200913T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20200913T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086686@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20200920T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20200920T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086687@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20200927T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20200927T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086688@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201004T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201004T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086689@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201011T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201011T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086690@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201018T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201018T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086691@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201025T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201025T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086692@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201101T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201101T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086693@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201108T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201108T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086694@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201115T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201115T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086695@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201122T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201122T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086696@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201129T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201129T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086697@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201206T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201206T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086698@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201213T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201213T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086699@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201220T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201220T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086700@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20201227T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20201227T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086701@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210103T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210103T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086702@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210110T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210110T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086703@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210117T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210117T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086704@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210124T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210124T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086705@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210131T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210131T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086706@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210207T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210207T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086707@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210214T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210214T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086708@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210221T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210221T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086709@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210228T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210228T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086710@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210307T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210307T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086711@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210314T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210314T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086712@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210321T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210321T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086713@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210328T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210328T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086714@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210404T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210404T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086715@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210411T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210411T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086716@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210418T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210418T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086717@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210425T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210425T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086718@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210502T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210502T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086719@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210509T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210509T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086720@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210516T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210516T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086721@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210523T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210523T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086722@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210530T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210530T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086723@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210606T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210606T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086724@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210613T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210613T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086725@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210620T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210620T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086726@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210627T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210627T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086727@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210704T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210704T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086728@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210711T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210711T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086729@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210718T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210718T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086730@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210725T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210725T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086731@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210801T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210801T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086732@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210808T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210808T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086733@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210815T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210815T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086734@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210822T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210822T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086735@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210829T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210829T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086736@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210905T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210905T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086737@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210912T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210912T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086738@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210919T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210919T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086739@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20210926T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20210926T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086740@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211003T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211003T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086741@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211010T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211010T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086742@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211017T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211017T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086743@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211024T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211024T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086744@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211031T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211031T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086745@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211107T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211107T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086746@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211114T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211114T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086747@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211121T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211121T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086748@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211128T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211128T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086749@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211205T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211205T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086750@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211212T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211212T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086751@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211219T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211219T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086752@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20211226T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20211226T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086753@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220102T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220102T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086754@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220109T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220109T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086755@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220116T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220116T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086756@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220123T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220123T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086757@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220130T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220130T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086758@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220206T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220206T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086759@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220213T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220213T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086760@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220220T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220220T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086761@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220227T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220227T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086762@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220306T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220306T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086763@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220313T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220313T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086764@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220320T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220320T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086765@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220327T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220327T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086766@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220403T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220403T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086767@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220410T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220410T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086768@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220417T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220417T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086769@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220424T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220424T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086770@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220501T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220501T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086771@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220508T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220508T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086772@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220515T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220515T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086773@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220522T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220522T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086774@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220529T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220529T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086775@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220605T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220605T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086776@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220612T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220612T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086777@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220619T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220619T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086778@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220626T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220626T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086779@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220703T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220703T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086780@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220710T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220710T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086781@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220717T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220717T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086782@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220724T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220724T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086783@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220731T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220731T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086784@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220807T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220807T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086785@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220814T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220814T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086786@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220821T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220821T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086787@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220828T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220828T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086788@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220904T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220904T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69086789@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220911T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220911T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69118387@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220911T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220911T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-69118388@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220914T193000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220914T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+UID:ET-5995945-69214839@resources.planningcenteronline.com
+DESCRIPTION:Online Only via Facebook\nLocation: https://www.facebook.com/
+ firstbaptistmuncie/live\n\n
+SUMMARY:Facebook Live Prayer Time
+LOCATION:https://www.facebook.com/firstbaptistmuncie/live
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220918T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220918T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-5999088-69555900@resources.planningcenteronline.com
+DESCRIPTION:Childcare and Children's Sunday School\n
+SUMMARY:Children's Ministry
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220918T114500
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220918T104500
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6011528-69555901@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Worship Service
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20200926T160000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20200926T110000
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+GEO:40.1915847;-85.384056
+UID:ET-6057094-69611144@resources.planningcenteronline.com
+DESCRIPTION:\n
+SUMMARY:Redeemed Quartet Filming: Redeem Quartet Filming
+LOCATION:First Baptist Church Muncie - 309 E Adams St\, Muncie\, IN 47305
+ -2406
+END:VEVENT
+BEGIN:VEVENT
+DTEND;TZID=America/New_York;VALUE=DATE-TIME:20220920T210000
+DTSTART;TZID=America/New_York;VALUE=DATE-TIME:20220920T190000
+DTSTAMP;VALUE=DATE-TIME:20200921T191606Z
+UID:ET-5999159-69639891@resources.planningcenteronline.com
+DESCRIPTION:Monthly leadership team meeting\nLocation: https://us02web.zo
+ om.us/j/97934851827\n\n
+SUMMARY:CCT Meeting
+LOCATION:https://us02web.zoom.us/j/97934851827
+END:VEVENT
+END:VCALENDAR

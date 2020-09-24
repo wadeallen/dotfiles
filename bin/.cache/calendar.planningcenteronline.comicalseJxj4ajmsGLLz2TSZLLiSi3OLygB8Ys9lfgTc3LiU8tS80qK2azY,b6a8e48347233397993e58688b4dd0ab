@@ -1,0 +1,16 @@
+status: 301
+server: awselb/2.0
+date: Mon, 21 Sep 2020 19:16:59 GMT
+content-type: text/html
+content-length: 150
+connection: keep-alive
+location: https://calendar.planningcenteronline.com:443/icals/eJxj4ajmsGLLz2TSZLLiSi3OLygB8Ys9lfgTc3LiU8tS80qK2azYXEOs2EozmbbPs2IvK_FUEiwoTcrJTI4vycxNLWaz5gix4i5ILErMLa5mAACTfRf979595f57134bfba4df1d68575e5f050d0a2c75e1
+-x-permanent-redirect-url: https://calendar.planningcenteronline.com:443/icals/eJxj4ajmsGLLz2TSZLLiSi3OLygB8Ys9lfgTc3LiU8tS80qK2azYXEOs2EozmbbPs2IvK_FUEiwoTcrJTI4vycxNLWaz5gix4i5ILErMLa5mAACTfRf979595f57134bfba4df1d68575e5f050d0a2c75e1
+content-location: http://calendar.planningcenteronline.com/icals/eJxj4ajmsGLLz2TSZLLiSi3OLygB8Ys9lfgTc3LiU8tS80qK2azYXEOs2EozmbbPs2IvK_FUEiwoTcrJTI4vycxNLWaz5gix4i5ILErMLa5mAACTfRf979595f57134bfba4df1d68575e5f050d0a2c75e1
+
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body bgcolor="white">
+<center><h1>301 Moved Permanently</h1></center>
+</body>
+</html>
