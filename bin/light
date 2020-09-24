@@ -4,6 +4,8 @@ source /home/wadeallen/Dropbox/Config\ Files/config.sh
 
 # Get hostname from computer
 host=`hostname`
+home_url="https://home.wadeallen.me/api/services/switch/toggle"
+church_url="https://church.wadeallen.me/api/services/switch/toggle"
 
 # Get internet connection device
 if [ ${host} == "wade-laptop" ];
@@ -24,7 +26,7 @@ then
 curl -X POST -H "Authorization: Bearer ${church}" \
   -H "Content-Type: application/json" \
   -d '{"entity_id": "switch.pastor_lamp_relay"}' \
-  https://church.wadeallen.me/api/services/switch/toggle
+  ${church_url}
 
 fi
 
@@ -36,7 +38,7 @@ then
 curl -X POST -H "Authorization: Bearer ${church}" \
   -H "Content-Type: application/json" \
   -d '{"entity_id": "switch.pastor_lamp_relay"}' \
-  https://church.wadeallen.me/api/services/switch/toggle
+  ${church_url}
 
 fi
 
@@ -49,7 +51,7 @@ then
 curl -X POST -H "Authorization: Bearer ${home}" \
   -H "Content-Type: application/json" \
   -d '{"entity_id": "switch.sofa_lamp"}' \
-  https://home.wadeallen.me/api/services/switch/toggle
+  ${home_url}
 
 fi
 

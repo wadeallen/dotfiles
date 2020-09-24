@@ -1,3 +1,4 @@
+alias find friends="xdg-open https://beta.icloud.com/fmf/"
 alias gmail="xdg-open https://mail.google.com"
 alias every dollar="xdg-open https://www.everydollar.com/app/budget"
 alias plex="http://192.168.1.247:32400/"

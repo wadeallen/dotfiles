@@ -6,9 +6,9 @@ from dateutil import relativedelta
 from pprint import pprint
 
 today = datetime.date.today()
-two_weeks = datetime.date.today() + relativedelta.relativedelta(days=14)
+time = datetime.date.today() + relativedelta.relativedelta(days=8)
 
-es  = events('webcal://calendar.planningcenteronline.com/icals/eJxj4ajmsGLLz2TSZLLiSi3OLygB8Ys9lfgTc3LiU8tS80qK2azYXEOs2EozmbbPs2IvK_FUEiwoTcrJTI4vycxNLWaz5gix4i5ILErMLa5mAACTfRf979595f57134bfba4df1d68575e5f050d0a2c75e1', fix_apple=True, start=today, end=two_weeks)
+es  = events('webcal://calendar.planningcenteronline.com/icals/eJxj4ajmsGLLz2TSZLLiSi3OLygB8Ys9lfgTc3LiU8tS80qK2azYXEOs2EozmbbPs2IvK_FUEiwoTcrJTI4vycxNLWaz5gix4i5ILErMLa5mAACTfRf979595f57134bfba4df1d68575e5f050d0a2c75e1', fix_apple=True, start=today, end=time)
 
 # for e in es:
 # 	pprint(vars(e))
@@ -16,9 +16,28 @@ es  = events('webcal://calendar.planningcenteronline.com/icals/eJxj4ajmsGLLz2TSZ
 events=[]
 
 for e in es:
-	events.append(e.start.strftime("%Y-%m-%d %I:%M %p"))
+	start = e.start
+	end = e.end
+	summary = e.summary
+	events.append([summary,start,end])
 
-print(events)
+events.sort(key=lambda x: x[1])
+
+dates = []
+
+for e in events:
+	date = e[1].strftime("%B %d")
+	if date not in dates:
+		dates.append(date)
+
+for d in dates:
+	print(d)
+	for e in events:
+		date = e[1].strftime("%B %d")
+		time = e[1].strftime("%I:%M %p")
+		summary = e[0]
+		if d == date:
+			print(f"\t{time} - {summary}")
 
 # for e in es:
 # 	print(e)
