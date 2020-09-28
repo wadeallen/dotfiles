@@ -1,0 +1,9 @@
+#!/bin/bash
+
+NEXT_MONTH=`date +'%B' -d 'next month'`
+MONTH_NUMBER=`date +'%Y-%m' -d 'next month'`
+
+echo -e "Dear Church Family,\n\nI wanted to let you know that the ${NEXT_MONTH} Visitor is now available online. You can find it at the link below\n\nhttp://visitor.fbcmuncie.org/visitor_${MONTH_NUMBER}.pdf\n\nA few of you have mentioned that the text on the newsletter is extremely small. You should be able to fix this by clicking on the View Menu and choose Zoom In. You might have to do this several times for your desired size.\n\nIn Christ's Love,\n\nWade" | xclip -selection c
+echo "Text copied to clipboard"
+
+

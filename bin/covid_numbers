@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+
+from requests import get
+import config
+import json	
+import datetime
+
+today = datetime.date.today()
+yesterday = today - datetime.timedelta(days=1)
+yesterday = yesterday.strftime('%Y%m%d')
+
+
+y_covid_in = f"https://api.covidtracking.com/v1/states/in/{yesterday}.json"
+y_covid_response = get(y_covid_in)
+y_covid_data = json.loads(y_covid_response.text)
+
+
+t_covid_in = f"https://api.covidtracking.com/v1/states/in/{yesterday}.json"
+t_covid_response = get(t_covid_in)
+t_covid_data = json.loads(t_covid_response.text)
+
+
+print(f": {y_covid_data['positiveIncrease']}")
+print(f": {t_covid_data['positiveIncrease']}")
+
+# sunrise_response = get(sunrise_url, headers=home_headers)
+# sunset_response = get(sunset_url, headers=home_headers)
+# sunrise_data = json.loads(sunrise_response.text)
+# sunset_data = json.loads(sunset_response.text)
+# print(f"\tNext Sunrise:\t{sunrise_data['state']}\n\tNext Sunset:\t{sunset_data['state']}")
