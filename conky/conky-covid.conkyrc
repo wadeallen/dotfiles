@@ -146,7 +146,7 @@ update_interval = 1,
 
 conky.text = [[
 ## ${font Roboto:Light:size=72}$alignr${time %I}${color0}:${time %M}${font}${color}
-${font Font Awesome 5 Free:style=Solid:size=14} ${font Roboto:pixelsize=18}COVID Indiana:
+${font Font Awesome 5 Free:style=Solid:size=14}${font Roboto:pixelsize=18} COVID Indiana:
 ${voffset 2}
 ${color0}${execi 60 python ~/bin/covid_numbers}
 ]]
