@@ -5,28 +5,31 @@ import config
 import json	
 import datetime
 
-today = datetime.date.today()
-today = today - datetime.timedelta(days=1)
-yesterday = today - datetime.timedelta(days=2)
-yesterday = yesterday.strftime('%Y%m%d')
-today = today.strftime('%Y%m%d')
+day = datetime.date.today()
 
+today = day - datetime.timedelta(days=1)
+yesterday = day - datetime.timedelta(days=2)
+y = yesterday.strftime('%Y%m%d')
+t = today.strftime('%Y%m%d')
 
-y_covid_in = f"https://api.covidtracking.com/v1/states/in/{yesterday}.json"
+y_date = yesterday.strftime('%b %d')
+t_date = today.strftime('%b %d')
+
+y_covid_in = f"https://api.covidtracking.com/v1/states/in/{y}.json"
 y_covid_response = get(y_covid_in)
 y_covid_data = json.loads(y_covid_response.text)
 
 
-t_covid_in = f"https://api.covidtracking.com/v1/states/in/{today}.json"
+t_covid_in = f"https://api.covidtracking.com/v1/states/in/{t}.json"
 t_covid_response = get(t_covid_in)
 t_covid_data = json.loads(t_covid_response.text)
 
+time = datetime.datetime.now().time()
+time_format = int(time.strftime('%H%m'))
 
-print(f"Yesterday: {y_covid_data['positiveIncrease']}")
-print(f"Today: {t_covid_data['positiveIncrease']}")
+if time_format < 1300:
+    print(f"{y_date}:\t{y_covid_data['positiveIncrease']}")
+else:
+    print(f"{y_date}:\t{y_covid_data['positiveIncrease']}")
+    print(f"{t_date}:\t{t_covid_data['positiveIncrease']}")
 
-# sunrise_response = get(sunrise_url, headers=home_headers)
-# sunset_response = get(sunset_url, headers=home_headers)
-# sunrise_data = json.loads(sunrise_response.text)
-# sunset_data = json.loads(sunset_response.text)
-# print(f"\tNext Sunrise:\t{sunrise_data['state']}\n\tNext Sunset:\t{sunset_data['state']}")
