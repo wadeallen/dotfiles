@@ -11,8 +11,6 @@ for d in range(7,0,-1):
     date_display = date.strftime('%b %d')
     url = f"https://api.covidtracking.com/v1/states/in/{date_string}.json"
     number = requests.get(url).json()['positiveIncrease']
-    print(f"{date_display}:\t{number}")
+    print(f"\t{date_display}:\t\t{number}")
 
-time = datetime.datetime.now().time()
-time_format = int(time.strftime('%H%m'))
 

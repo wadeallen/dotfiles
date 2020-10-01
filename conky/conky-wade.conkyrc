@@ -156,10 +156,4 @@ ${color0}${execi 60 sh ~/bin/list_todos}
 ${hr}${color}${voffset 4}
 ${font Font Awesome 5 Free:style=Solid:size=12}  ${font Roboto:pixelsize=13}CALENDAR:
 ${color0}${execi 60 sh ~/bin/list_calendar}
-${hr}${color}${voffset 4}
-${font Font Awesome 5 Free:style=Solid:size=12}  ${font Roboto:pixelsize=13}TEMPS: ${voffset 4}
-${font Roboto:pixelsize=15}${color0}${execi 60 python ~/bin/temps}
-${hr}${color}${voffset 4}
-${font Font Awesome 5 Free:style=Solid:size=12}  ${font Roboto:pixelsize=13}SUN: ${voffset 4}
-${font Roboto:pixelsize=15}${color0}${execi 60 python ~/bin/sun}
 ]]

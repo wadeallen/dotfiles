@@ -12,7 +12,6 @@ home_headers = {
     'content-type': 'application/json',
 }
 
-
 sunrise_response = get(sunrise_url, headers=home_headers)
 sunset_response = get(sunset_url, headers=home_headers)
 sunrise_data = json.loads(sunrise_response.text)
