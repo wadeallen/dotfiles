@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+
+import requests
+import datetime
+import json
+import zulu
+import pytz
+
+utc = pytz.UTC
+local_tz = pytz.timezone('US/Eastern')
+current_time = datetime.datetime.now().replace(tzinfo=pytz.utc).astimezone(local_tz)
+
+r = requests.get('http://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard')
+data = r.json()
+
+for e in data["events"]:
+    game = e["shortName"]
+    game_date = e["date"]
+    dt = zulu.parse(game_date).datetime
+    dt = dt.replace(tzinfo=pytz.utc).astimezone(local_tz)
+    team_home = e["competitions"][0]["competitors"][0]["team"]["shortDisplayName"]
+    team_home = e["competitions"][0]["competitors"][0]["team"]["shortDisplayName"]
+    score_home = int(e["competitions"][0]["competitors"][0]["score"])
+    team_away = e["competitions"][0]["competitors"][1]["team"]["shortDisplayName"]
+    score_away = int(e["competitions"][0]["competitors"][1]["score"])
+    if current_time > dt:
+        print(game)
+    else:
+        print(f"{game} at {dt.strftime('%a %-I:%M %p')}")
+    # if score_home != 0:
+    #     print(f"{team_home} {score_home} v {team_away} {score_away}")
+    # else:
+    #     print(f"{team_home} v {team_away}")
+

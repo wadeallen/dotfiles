@@ -39,24 +39,10 @@ email_address = 'cct@fbcmuncie.org'
 
 subject = 'CCT Calendar for {} and {}'.format(n_month, s_month)
 message = ('Hello Team %0A%0A' \
-	'Here is the church calendar for {} and {}%0A%0AWould you take a few minutes to look over it and let me know if there are mistakes? If you see any potential conflicts on the schedule, I would appreciate you letting me know so that we can work out the conflicts. Also, if you have an article for any of these events, please email it to me as soon as possible. %0A%0AHave a great week, %0A%0AWade'.format(next_month.strftime(format), second_month.strftime(format)) \
+        'Would you please take a few minutes and review the church calendar for {} and {}? You can access the calendar at:%0A%0Ahttps://fbcmuncie.churchcenter.com/calendar%0A%0ALet me know if there are mistakes or additions. If you see any potential conflicts on the schedule, I would appreciate you letting me know so that we can work out the conflicts. Also, if you have a Visitor article for any of these events, please email it to me before the next deadline. %0A%0AHave a great week, %0A%0AWade'.format(next_month.strftime(format), second_month.strftime(format)) \
 	)
 
 url = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + email_address + '&su=' + subject + '&body=' + message
-
-# print ('Saving ' + n_month + s_month + ' Calendar to Desktop ...')
-
-# cal_url = 'https://www.google.com/calendar/printable?dates={0}%2F{1}&pgsz=letter&ctz=America%2FNew_York&wkst=1&hl=en&mode=AGENDA&secid=BVlLMgjSIrHevrIwLmhBaf_yY-Q&src=ZmJjbXVuY2llLm9yZ19uc201Y2liaGo1dW1lazJzNDQxNDlicmZxb0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZmJjbXVuY2llLm9yZ19vYW1hZmNibm5zZGwzNTYyODhiZDdoa2E4NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&prsd={0}&pred={1}&pfs=NORMAL&po=PORTRAIT&psd=false&pset=true&psa=false&psr=false&psdec=false&pbw=true&pjs=false&rand=1366741702395'.format(begin_date, end_date)
-
-
-# r = requests.get(cal_url)
-
-# with open("/home/wadeallen/Desktop/" + n_month + "-" + s_month + "-calendar.pdf", "wb") as code:
-#     code.write(r.content)
-
-# print ('Calendar Saved to Desktop')
-
-subprocess.call(["print_cct_cal"])
 
 subprocess.call(["xdg-open", url])
 

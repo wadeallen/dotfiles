@@ -119,3 +119,41 @@ rules:
           case_sensitive: true
     actions:
       - move: "/home/wadeallen/Dropbox/Statements/Maurices/"
+# Teachers Credit Union
+  - folders: ~/Dropbox/Scans
+    subfolders: false
+    filters:
+      - extension: pdf
+      - filename:
+          startswith:
+            - Teachers Credit Union
+          case_sensitive: true
+    actions:
+      - move: "/home/wadeallen/Dropbox/Statements/Teachers Credit Union/"
+# Evansville Teachers Credit Union
+  - folders: ~/Dropbox/Scans
+    subfolders: false
+    filters:
+      - extension: pdf
+      - filename:
+          startswith:
+            - Evansville Teachers Credit Union
+          case_sensitive: true
+    actions:
+      - move: "/home/wadeallen/Dropbox/Statements/Evansville Teachers Credit Union/"
+# Budget Reports 
+  - folders: ~/Desktop
+    subfolders: false
+    filters:
+      - extension: pdf
+      - regex: '\d\d\d\d-\d\d_Balance_Sheet'
+    actions:
+      - move: "/home/wadeallen/Dropbox/Administration/Budget_Reports/"
+# Budget Reports 
+  - folders: ~/Desktop
+    subfolders: false
+    filters:
+      - extension: pdf
+      - regex: '\d\d\d\d-\d\d_Profit_Loss'
+    actions:
+      - move: "/home/wadeallen/Dropbox/Administration/Budget_Reports/"
