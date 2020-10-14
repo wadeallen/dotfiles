@@ -1,0 +1,28 @@
+#!/usr/bin/env python3
+
+import requests
+import datetime
+import json
+import zulu
+import pytz
+
+utc = pytz.UTC
+local_tz = pytz.timezone('US/Eastern')
+current_time = datetime.datetime.now().replace(tzinfo=pytz.utc).astimezone(local_tz)
+
+r = requests.get('http://site.api.espn.com/apis/site/v2/sports/football/college-football/teams/Georgia')
+data = r.json()
+
+game = data['team']['nextEvent'][0]['shortName']
+when = data['team']['nextEvent'][0]['date']
+when = zulu.parse(when).datetime
+when = when.replace(tzinfo=pytz.utc).astimezone(local_tz)
+broadcast = data['team']['nextEvent'][0]['competitions'][0]['broadcasts'][0]['media']['shortName']
+score_available = data['team']['nextEvent'][0]['competitions'][0]['boxscoreAvailable']
+home_team = data['team']['nextEvent'][0]['competitions'][0]['competitors'][0]['team']['nickname']
+away_team = data['team']['nextEvent'][0]['competitions'][0]['competitors'][1]['team']['nickname']
+
+if score_available is False:
+    print(f"{when.strftime('%a %-I:%M %p')} {game} on {broadcast}")
+
+
