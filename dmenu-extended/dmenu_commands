@@ -26,3 +26,6 @@ alias church="xdg-open https://church.wadeallen.me/"
 alias home="xdg-open https://home.wadeallen.me/"
 alias live="xdg-open https://studio.youtube.com/channel/UCTm6q6Q7OJ6VrURz3YXVP6A/livestreaming"
 alias church calendar="xdg-open https://calendar.planningcenteronline.com/"
+alias live="xdg-open https://studio.youtube.com/channel/UCTm6q6Q7OJ6VrURz3YXVP6A/videos/live"
+alias studio="xdg-open https://studio.youtube.com/channel/UCTm6q6Q7OJ6VrURz3YXVP6A/videos/"
+
