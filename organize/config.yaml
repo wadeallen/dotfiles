@@ -157,3 +157,25 @@ rules:
       - regex: '\d\d\d\d-\d\d_Profit_Loss'
     actions:
       - move: "/home/wadeallen/Dropbox/Administration/Budget_Reports/"
+# Caresource
+  - folders: ~/Dropbox/Scans
+    subfolders: false
+    filters:
+      - extension: pdf
+      - filename:
+          startswith:
+            - CareSource Health Insurance
+          case_sensitive: true
+    actions:
+      - move: "/home/wadeallen/Dropbox/Receipts/Insurance/CareSource/"
+# Anna Vanderbilt Insurance
+  - folders: ~/Dropbox/Scans
+    subfolders: false
+    filters:
+      - extension: pdf
+      - filename:
+          startswith:
+            - Anna Vanderbilt Health Insurance
+          case_sensitive: true
+    actions:
+      - move: "/home/wadeallen/Dropbox/Anna/Anna_Vanderbilt/"
