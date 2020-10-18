@@ -27,8 +27,8 @@ for e in data["events"]:
         print(game)
     else:
         print(f"{game} at {dt.strftime('%a %-I:%M %p')}")
-    # if score_home != 0:
-    #     print(f"{team_home} {score_home} v {team_away} {score_away}")
-    # else:
-    #     print(f"{team_home} v {team_away}")
+    if score_home != 0:
+        print(f"{team_home} {score_home} v {team_away} {score_away}")
+    else:
+        print(f"{team_home} v {team_away}")
 

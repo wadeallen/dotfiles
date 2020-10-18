@@ -1,5 +1,6 @@
 import dmenu_extended
 import sys
+import requests
 
 file = '/home/wadeallen/dotfiles/dmenu-extended/bible_books.json'
 

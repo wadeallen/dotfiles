@@ -21,6 +21,8 @@ broadcast = data['team']['nextEvent'][0]['competitions'][0]['broadcasts'][0]['me
 score_available = data['team']['nextEvent'][0]['competitions'][0]['boxscoreAvailable']
 home_team = data['team']['nextEvent'][0]['competitions'][0]['competitors'][0]['team']['nickname']
 away_team = data['team']['nextEvent'][0]['competitions'][0]['competitors'][1]['team']['nickname']
+home_score = data['team']['nextEvent'][0]['competitions'][0]['competitors'][0]['score']['value']
+away_score = data['team']['nextEvent'][0]['competitions'][0]['competitors'][1]['score']['value']
 rank = data['team']['rank']
 sec_standing = data['team']['standingSummary']
 
@@ -29,6 +31,6 @@ if score_available is False:
     print(f"\t{sec_standing}")
     print(f"\tRank: {rank}")
 else:
-    print(f"{away_team} S {home_team} S")
+    print(f"{away_team} {round(away_score)} {home_team} {round(home_score)}")
 
 
