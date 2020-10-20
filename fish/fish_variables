@@ -22,6 +22,7 @@ SETUVAR _fish_abbr_fw:cd\x20\x24HOME/Dropbox/Funeral_Work/
 SETUVAR _fish_abbr_hu:cd\x20\x24HOME/Sites/hugo_fbcmuncie
 SETUVAR _fish_abbr_led:ledger\x20\x2df\x20\x24HOME/Dropbox/Ledger/ledger\x2eledger
 SETUVAR _fish_abbr_live:nvim\x20/home/wadeallen/Sites/fbcmuncie_2020/data/live\x2ecsv
+SETUVAR _fish_abbr_macmini:ssh\x20fbcmuncie\x40church\x2ewadeallen\x2eme\x20\x2dp\x2027
 SETUVAR _fish_abbr_min:cd\x20\x24HOME/Sites/fbc\x2dwiki/_ministries
 SETUVAR _fish_abbr_oled:nvim\x20\x24HOME/Dropbox/Ledger/ledger\x2eledger
 SETUVAR _fish_abbr_open:xdg\x2dopen
