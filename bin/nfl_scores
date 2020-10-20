@@ -24,11 +24,7 @@ for e in data["events"]:
     team_away = e["competitions"][0]["competitors"][1]["team"]["shortDisplayName"]
     score_away = int(e["competitions"][0]["competitors"][1]["score"])
     if current_time > dt:
-        print(game)
-    else:
-        print(f"{game} at {dt.strftime('%a %-I:%M %p')}")
-    if score_home != 0:
         print(f"{team_home} {score_home} v {team_away} {score_away}")
     else:
-        print(f"{team_home} v {team_away}")
+        print(f"{game} at {dt.strftime('%a %-I:%M %p')}")
 

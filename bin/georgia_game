@@ -30,7 +30,9 @@ if score_available is False:
     print(f"{when.strftime('%a %-I:%M %p')} {game} on {broadcast}")
     print(f"\t{sec_standing}")
     print(f"\tRank: {rank}")
-else:
+elif:
     print(f"{away_team} {round(away_score)} {home_team} {round(home_score)}")
+else:
+    print("No game this week")
 
 
