@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+pattern=$1
+
+scp -P 27 ${pattern} fbcmuncie@church.wadeallen.me:~/Desktop/
+echo "Files moved to Mac Mini"
+
+

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+pattern=$1
+
+scp -P 25 ${pattern} 192.168.1.101:~/Downloads/
+echo "Files moved to Laptop"
+
+
