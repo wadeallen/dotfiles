@@ -1,0 +1,18 @@
+#! /bin/bash
+
+source_file=$1
+final_date=$2
+
+if [ $# -lt 2 ]; then
+	echo "You must be in directory with source file, which should include the date as filename (i.e. 2020-10-20.jpg)"
+	echo "First arg is source file date (i.e. 2020-10-20), Second arg is final date (i.e. 2021-01-03)"
+    exit 1
+fi
+
+for d in `dateseq $1 7d $2`
+do if [ $d != $1 ]
+then
+	cp ${source_file}.jpg ${d}.jpg
+fi
+done
+
