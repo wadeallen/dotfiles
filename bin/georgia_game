@@ -25,7 +25,7 @@ rank = data['team']['rank']
 sec_standing = data['team']['standingSummary']
 
 if score_available is False:
-    print(f"{when.strftime('%a %-I:%M %p')} {game} on {broadcast}")
+    print(f"{when.strftime('%a %b %d %-I:%M %p')} {game} on {broadcast}")
     print(f"\t{sec_standing}")
     print(f"\tRank: {rank}")
 else:
