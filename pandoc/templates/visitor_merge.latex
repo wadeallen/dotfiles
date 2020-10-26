@@ -45,9 +45,9 @@
 
 $body$
 
-% The next two lines need to be commented out if we have an odd number of pages
+% The next two lines need to be commented out if we have an even number of pages
 \newpage
-textcolor{white}{test}
+\textcolor{white}{test}
 
 \pagebreak
 
