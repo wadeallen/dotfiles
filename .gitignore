@@ -6,3 +6,4 @@ nvim/plugged/*
 maid/maid.log
 bin/__pycache__/
 dmenu-extended/plugins/__pycache__/
+dmenu-extended/plugins/__pycache__/*
