@@ -5,3 +5,4 @@ bin/client_secrets.json
 nvim/plugged/*
 maid/maid.log
 bin/__pycache__/
+dmenu-extended/plugins/__pycache__/
