@@ -1,5 +1,7 @@
 bin/config.py
+bin/config.sh
 bin/config.pyc
 bin/client_secrets.json
 nvim/plugged/*
 maid/maid.log
+
