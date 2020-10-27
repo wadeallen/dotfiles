@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/etc/nginx'
 let g:netrw_dirhist_2='/home/wadeallen/Dropbox/Administration/CCT_Summaries/2020/Agendas'
 let g:netrw_dirhist_1='/home/wadeallen/bin'
 let g:netrw_dirhist_0='/home/wadeallen/dotfiles/dmenu-extended/config'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_7='/home/wadeallen/dotfiles/nvim/custom'
 let g:netrw_dirhist_6='/home/wadeallen/Dropbox/bibles/ESV'
 let g:netrw_dirhist_5='/home/wadeallen/Dropbox/bibles/NIV'
 let g:netrw_dirhist_4='/home/wadeallen/Dropbox/Writing'
-let g:netrw_dirhist_3='/home/wadeallen/Dropbox/esphome/epaper'

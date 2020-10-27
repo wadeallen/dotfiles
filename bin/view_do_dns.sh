@@ -1,26 +1,8 @@
 #!/bin/bash
 
-# your domain ID
-domain_name="wadeallen.me"
+# Digital Ocean variables
 
-# subdomain
-subdomain="church"
+domain="wadeallen.me"
+api_key="c2cb52d284747408984ef77366643015dbfff513251cbc36d5cc83c0877a69a1"
 
-# record to update
-record_id="66831085"
-
-#your api key
-api_key="714fdd2f86948d786a3dc670bf6f6ddcbb2bf16df0011cb3dcb622eb3753fdfb"
-
-current_date_time="`date '+%Y-%m-%d %H:%M:%S'`";
-
-ip="$(curl  http://ipecho.net/plain)"
-
-if [ -f "ip" ] && [ "$ip" == "$(cat ip)" ] ;then
-    result=$current_date_time" match"
-else
-    echo content="$(curl -X PUT -H "Content-Type: application/json" -H "Authorization: Bearer $api_key" -d '{"name": "'"$subdomain"'", "data": "'"$ip"'"}' "https://api.digitalocean.com/v2/domains/$domain_name/records/$record_id")"
-    result=$current_date_time" mismatch"
-fi
-
-echo "$result" >> log
+$(which curl) -ks -X GET -H "Content-Type: application/json" -H "Authorization: Bearer ${api_key}" "https://api.digitalocean.com/v2/domains/${domain}/records" | jq -r '.domain_records[] | "\(.id) \(.name) \(.type) \(.data)"' | column -t
