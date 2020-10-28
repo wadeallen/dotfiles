@@ -1,20 +1,17 @@
 #!/bin/bash
 
-source /home/wadeallen/Dropbox/Config\ Files/config.sh
+source ~/bin/config.sh
 
 FAH=$'\xc2\xb0'F
 
-BED="https://home.wadeallen.me/api/states/sensor.dht_sensor_temperature"
-LEVI="https://home.wadeallen.me/api/states/sensor.levi_room_temperature"
-SANC="https://church.wadeallen.me/api/states/sensor.shelly_temperature"
+LEVI="https://home.wadeallen.me/api/states/sensor.levi_temperature"
+SANC="https://church.wadeallen.me/api/states/sensor.sanctuary_temperature"
 # OUTSIDE="https://home.wadeallen.me/api/states/weather.home"
 
-BED_TEMP=$(curl -H "Authorization: Bearer ${home}" -s $BED | jq --raw-output ".state")
 LEVI_TEMP=$(curl -H "Authorization: Bearer ${home}" -s $LEVI | jq --raw-output ".state")
 # OUTSIDE_TEMP=$(curl -H "Authorization: Bearer ${home}" -s $OUTSIDE | jq )
 SANC_TEMP=$(curl -H "Authorization: Bearer ${church}" -s $SANC | jq --raw-output ".state")
 
-echo "Bedroom: ${BED_TEMP}${FAH}"
 echo "Levi: ${LEVI_TEMP}${FAH}"
 echo "Sanctuary: ${SANC_TEMP}${FAH}"
 # echo "Outside: ${OUTSIDE_TEMP}${FAH}"
