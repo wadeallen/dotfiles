@@ -28,4 +28,4 @@ alias live="xdg-open https://studio.youtube.com/channel/UCTm6q6Q7OJ6VrURz3YXVP6A
 alias church calendar="xdg-open https://calendar.planningcenteronline.com/"
 alias live="xdg-open https://studio.youtube.com/channel/UCTm6q6Q7OJ6VrURz3YXVP6A/videos/live"
 alias studio="xdg-open https://studio.youtube.com/channel/UCTm6q6Q7OJ6VrURz3YXVP6A/videos/"
-
+alias app home page="xdg-open https://publishing.planningcenteronline.com/pages/editor/home"

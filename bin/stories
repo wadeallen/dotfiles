@@ -9,6 +9,10 @@ from titlecase import titlecase
 from datetime import datetime
 from dateutil import relativedelta
 import pandas as pd
+import sys
+import subprocess
+from datetime import date
+from dateutil.relativedelta import relativedelta, SU
 
 # surpresses the download message of files
 def bar_none(current, total, width=80):
@@ -21,6 +25,24 @@ def format_slug(text):
 	slug = slug.replace("'", "")
 	slug = re.sub("[\(\[].*?[\)\]]", "", slug)
 	return slug
+
+def grab_sermon(field):
+	format = "%A, %b %-d"
+	path_format = "%Y-%m-%d"
+	today = date.today()
+	target_date = today + relativedelta(weekday=SU(+1))
+	sunday = target_date.strftime(path_format)
+	sunday_long = target_date.strftime(format)
+
+	path = ('/home/wadeallen/Dropbox/Sermon_Work/{}_sermon.md'.format(sunday))
+	files = glob.glob(path)
+	for name in files:
+		post = frontmatter.load(name)
+		field = field
+		output = (post[field])
+		if field == 'date':
+			output = sunday_long
+		return output
 
 includes_dir = '/home/wadeallen/Dropbox/Compile/bulletin/includes/'
 
@@ -94,6 +116,29 @@ for story in stories:
 		post.content = re.sub(r'\{\{print:(.*?)\}\}*\{\{website:(.*?)\}\}', r'\2', post.content.rstrip())
 		target.write(post.content)
 		target.close()
+
+# Sort out Stories for church app
+# app_content_file = '/home/wadeallen/Sites/fbcmuncie_2020/content/app-content.md'
+app_content_file = '/home/wadeallen/Dropbox/Textbits/app-text.md'
+os.system('rm ' + app_content_file)
+
+sunday_date = grab_sermon('date')
+sermon_title = grab_sermon('title')
+sermon_scripture = grab_sermon('scripture')
+
+target = open (app_content_file, 'w')
+target.write(f"**{sunday_date}** at **10:45 AM**\n\n")
+target.write(f"This week's scripture is {sermon_scripture}\n\n")
+target.write("---\n\n")
+target.write("# First Baptist News\n\n")
+for story in stories:
+	post = frontmatter.load(story)
+	if 'app' in post['publications']:
+		title = post['title']
+		title = titlecase(title)
+		slug = format_slug(title)
+		target.write(f"[{title}](https://fbcmuncie.org/news/{slug})\n\n")
+target.close()
 
 # events for 2020 website
 # website_dir = '/home/wadeallen/Sites/fbcmuncie_2020/content/events/'
