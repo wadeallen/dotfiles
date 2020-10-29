@@ -23,6 +23,7 @@ def format_slug(text):
 	slug = ("-".join(title_sliced).lower())
 	slug = slug.replace("?", "")
 	slug = slug.replace("'", "")
+	slug = slug.replace("’", "")
 	slug = re.sub("[\(\[].*?[\)\]]", "", slug)
 	return slug
 
@@ -133,7 +134,7 @@ target.write("---\n\n")
 target.write("# First Baptist News\n\n")
 for story in stories:
 	post = frontmatter.load(story)
-	if 'app' in post['publications']:
+	if 'website' in post['publications']:
 		title = post['title']
 		title = titlecase(title)
 		slug = format_slug(title)
