@@ -1,9 +1,11 @@
 #!/bin/bash
 
+source ~/bin/config.sh
+
 # Digital Ocean variables
 domain="wadeallen.me"
 record_id="66831085"  # Get this value from the view_do_dns.sh script output
-api_key="c2cb52d284747408984ef77366643015dbfff513251cbc36d5cc83c0877a69a1"
+api_key=$doapi
 # -----------------------
 echo "Checking IP for change on: $(date)"
 curip=$(cat /tmp/ip.txt)
