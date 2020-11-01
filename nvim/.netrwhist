@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/wadeallen/dotfiles/.git'
 let g:netrw_dirhist_6='/home/wadeallen/Dropbox/Linux Installs Setup'
 let g:netrw_dirhist_5='/home/wadeallen/bin'
 let g:netrw_dirhist_4='/home/wadeallen/dotfiles/dmenu-extended'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_1='/home/wadeallen/bin'
 let g:netrw_dirhist_0='/home/wadeallen/dotfiles/dmenu-extended/config'
 let g:netrw_dirhist_9='/home/wadeallen/dotfiles/dmenu-extended/plugins'
 let g:netrw_dirhist_8='/home/wadeallen/bin'
-let g:netrw_dirhist_7='/home/wadeallen/dotfiles/nvim/custom'
