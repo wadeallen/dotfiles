@@ -1,5 +1,0 @@
-#! /bin/bash
-
-stories &&
-pandoc -s /home/wadeallen/Dropbox/Textbits/app-text.md --metadata title="Join Us for Worship" | xclip -t text/html -selection clipboard
-echo "Copied App text to clipboard"
