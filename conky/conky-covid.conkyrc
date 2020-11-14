@@ -149,9 +149,9 @@ conky.text = [[
 ${font Font Awesome 5 Free:style=Solid:size=12} ${font Roboto:pixelsize=14}COVID Indiana:${voffset 4}
 ${font Roboto:pixelsize=14}${color0}${execi 60 python ~/bin/covid_numbers}
 ${hr}${color}${voffset 4}
-${font Font Awesome 5 Free:style=Solid:size=12} ${font Roboto:pixelsize=14}Georgia Bulldogs:${voffset 4}
-${font Roboto:pixelsize=14}${color0}${execi 60 python ~/bin/georgia_game}
-${hr}${color}${voffset 4}
+## ${font Font Awesome 5 Free:style=Solid:size=12} ${font Roboto:pixelsize=14}Georgia Bulldogs:${voffset 4}
+## ${font Roboto:pixelsize=14}${color0}${execi 60 python ~/bin/georgia_game}
+## ${hr}${color}${voffset 4}
 ${font Font Awesome 5 Free:style=Solid:size=12} ${font Roboto:pixelsize=14}SUN:${voffset 4}
 ${font Roboto:pixelsize=14}${color0}${execi 60 python ~/bin/sun}
 ${hr}${color}${voffset 4}
