@@ -99,7 +99,7 @@ website_dir = '/home/wadeallen/Sites/fbcmuncie_2020/content/news/'
 os.system('rm ' + website_dir + '*.md')
 for story in stories:
 	post = frontmatter.load(story)
-	if 'website' in post['publications'] and post.get('event') == None:
+	if 'website' in post['publications']:
 		title = post['title']
 		title = titlecase(title)
 		slug = format_slug(title)
