@@ -67,3 +67,4 @@ class extension(dmenu_extended.dmenu):
         selected = self.menu(items, prompt='Select file:')
         if selected in items:
             self.open_file(selected)
+
