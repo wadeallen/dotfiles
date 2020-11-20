@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "Quick Add Task"
+read task
+
+source /home/wadeallen/Dropbox/Config\ Files/config.sh
+
+curl https://api.todoist.com/sync/v8/quick/add \
+    -d token=$token \
+    -d text="$task" \
+    > /dev/null 2>&1
+
+
+
