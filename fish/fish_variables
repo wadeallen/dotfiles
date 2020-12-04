@@ -37,7 +37,7 @@ SETUVAR _fish_abbr_speed:speedtest\x2dcli
 SETUVAR _fish_abbr_ss:cd\x20\x24HOME/Sites/slideshow
 SETUVAR _fish_abbr_sw:cd\x20\x24HOME/Dropbox/Sermon_Work/
 SETUVAR _fish_abbr_uncleared:ledger\x20\x2df\x20\x24HOME/Dropbox/Ledger/ledger\x2eledger\x20register\x20\x2d\x2duncleared
-SETUVAR _fish_abbr_update:sudo\x20pacman\x20\x2dSyyu
+SETUVAR _fish_abbr_update:sudo\x20apt\x20update\x20\x26\x26\x20sudo\x20apt\x20upgrade\x20\x2dy
 SETUVAR _fish_abbr_vim:nvim
 SETUVAR _fish_abbr_wiki:cd\x20\x24HOME/Sites/fbc\x2dwiki
 SETUVAR _fish_abbr_ww:cd\x20\x24HOME/Dropbox/Wedding_Work/

@@ -179,3 +179,14 @@ rules:
           case_sensitive: true
     actions:
       - move: "/home/wadeallen/Dropbox/Anna/Anna_Vanderbilt/"
+# Kohls
+  - folders: ~/Dropbox/Scans
+    subfolders: false
+    filters:
+      - extension: pdf
+      - filename:
+          startswith:
+            - Kohls Statement
+          case_sensitive: true
+    actions:
+      - move: "/home/wadeallen/Dropbox/Statements/Kohls"
