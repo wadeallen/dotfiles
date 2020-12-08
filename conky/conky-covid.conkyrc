@@ -45,7 +45,7 @@ minimum_width = 200,
 minimum_height = 200,
 maximum_width = 600,
 
-gap_x = 100,--## left | right
+gap_x = 150,--## left | right
 gap_y = 100,--## up | down
 
 alignment = 'top_left',
@@ -55,7 +55,7 @@ alignment = 'top_left',
 use_xft = true,
 --# Requires mono font for spacing reasons
 --xftfont Liberation Mono:bold:size=9
-font = 'Roboto:size=10',
+font = 'Roboto:size=14',
 
 
 -- Alpha of Xft font. Must be a value at or between 1 and 0 ###
