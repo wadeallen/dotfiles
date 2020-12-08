@@ -145,14 +145,14 @@ update_interval = 1,
 };
 
 conky.text = [[
-${font Roboto:Light:size=30}${voffset 12}$alignr${color0}${execi 300 LANG=${template9} LC_TIME=${template9} date +"%A"}${color}, \
+${font Roboto:Light:size=25}${voffset 12}$alignr${color0}${execi 300 LANG=${template9} LC_TIME=${template9} date +"%A"}${color}, \
 ${execi 300 LANG=${template9} LC_TIME=${template9} date +"%d"}\
 ${color0} ${execi 300 LANG=${template9} LC_TIME=${template9} date +"%B"}${font}${voffset 2}
 ${hr}${color}${voffset 4}
 ${font FontAwesome:size=20}  ${font Roboto:pixelsize=20}TODO List:
 ${voffset 2}
-${color0}${execi 60 bash ~/bin/list_todos}
+${color0}${font Roboto:pixelsize=16}${execi 60 bash ~/bin/list_todos}
 ${hr}${color}${voffset 4}
 ${font FontAwesome:size=20}  ${font Roboto:pixelsize=20}CALENDAR:
-${color0}${execi 60 bash ~/bin/list_calendar}
+${color0}${font Roboto:pixelsize=16}${execi 60 bash ~/bin/list_calendar}
 ]]
