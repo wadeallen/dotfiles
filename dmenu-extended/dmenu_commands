@@ -6,7 +6,7 @@ alias numbers="xdg-open https://docs.google.com/spreadsheets/d/14TpbSCb71nw9jSrQ
 alias debt="xdg-open https://docs.google.com/spreadsheets/d/1aQXqAAK1so2yIrsu4YS2jGAS2UUcziqG-Y0eVZ9cOXg/edit#gid=0"
 alias weddings="xdg-open https://drive.google.com/drive/u/0/folders/0B8e0Dbi4XduES2FRNmg0SEtMY3c"
 alias calendar="xdg-open https://calendar.google.com/calendar/r/week"
-alias todo="xdg-open https://todoist.com/app#start"
+alias todo="xdg-open https://todoist.com/app"
 alias mileage="xdg-open https://docs.google.com/spreadsheets/d/1zzhGL1Uqc_uzDKjJu7BVHUuC5IqQsrXFCTJAsnwrDmk"
 alias prayer="xdg-open https://docs.google.com/document/d/1w6z_D6MPedilpVZjoRfkwsbvXmsNSjrHKFDwasE5SeQ/edit"
 alias read="xdg-open https://read.amazon.com"
