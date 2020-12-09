@@ -41,11 +41,11 @@ own_window_title = 'ArchMerge Top Conky',
 --## Valid range is 0-255, where 0 is 0% opacity, and 255 is 100% opacity.
 -- own_window_argb_value 50
 
-minimum_width = 200,
+minimum_width = 300,
 minimum_height = 200,
 maximum_width = 600,
 
-gap_x = 150,--## left | right
+gap_x = 100,--## left | right
 gap_y = 100,--## up | down
 
 alignment = 'top_left',
@@ -145,12 +145,13 @@ update_interval = 1,
 };
 
 conky.text = [[
-${font FontAwesome:size=20} ${font Roboto:pixelsize=20}COVID Indiana:${voffset 10}
-${font Roboto:pixelsize=18} ${color0}${execi 60 python3 ~/bin/covid_numbers}${voffset 10}
-${hr}${color}${voffset 4}
-${font FontAwesome:size=20} ${font Roboto:pixelsize=20}SUN:${voffset 10}
+${font FontAwesome:size=20}  ${font Roboto:pixelsize=20} COVID Indiana:${voffset 10}
+${font Roboto:pixelsize=18}${color0}${execi 60 python3 ~/bin/covid_numbers}${voffset 10}
+${hr}${color}${voffset 10}
+${font FontAwesome:size=20}  ${font Roboto:pixelsize=20} SUN:${voffset 10}
 ${font Roboto:pixelsize=18}${color0}${execi 60 python3 ~/bin/sun}
-${hr}${color}${voffset 4}
-${font FontAwesome:size=20} ${font Roboto:pixelsize=20}TEMPS: ${voffset 10}
+${hr}${color}${voffset 10}
+${font FontAwesome:size=20}  ${font Roboto:pixelsize=20} TEMPS: ${voffset 10}
 ${font Roboto:pixelsize=18}${color0}${execi 60 python3 ~/bin/temps}
+${voffset 10}
 ]]
