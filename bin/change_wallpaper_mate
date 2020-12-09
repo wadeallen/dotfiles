@@ -2,4 +2,4 @@
 
 DIR="/home/wadeallen/Pictures/Desktop_Wallpapers"
 PIC=$(ls $DIR/* | shuf -n1)
-gsettings set org.gnome.desktop.background picture-uri "file://$PIC"
+dconf write /org/mate/desktop/background/picture-filename "'$PIC'"
