@@ -30,7 +30,7 @@
         "-sb",
         "#1D1F21",
         "-fn",
-        "PT Mono:pixelsize=20",
+        "PT Mono:pixelsize=25",
         "-l",
         "15"
     ],

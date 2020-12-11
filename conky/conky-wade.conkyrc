@@ -149,12 +149,12 @@ ${font Roboto:Light:size=25}${voffset 12}$alignr${color0}${execi 300 LANG=${temp
 ${execi 300 LANG=${template9} LC_TIME=${template9} date +"%d"}\
 ${color0} ${execi 300 LANG=${template9} LC_TIME=${template9} date +"%B"}  ${font}${voffset 2}
 ${hr}${color}${voffset 10}
-${font FontAwesome:size=20} ${font Roboto:pixelsize=20} TODO List:
+${font FontAwesome:size=25} ${font Roboto:pixelsize=25} TODO List:
 ${voffset 10}
-${color0}${font Roboto:pixelsize=16}${execi 60 bash ~/bin/list_todos}
+${color0}${font Roboto:pixelsize=20}${execi 60 bash ~/bin/list_todos}
 ${voffset 10}
 ${hr}${color}${voffset 10}
-${font FontAwesome:size=20} ${font Roboto:pixelsize=20} CALENDAR:
-${color0}${font Roboto:pixelsize=16}${execi 60 bash ~/bin/list_calendar}
+${font FontAwesome:size=25} ${font Roboto:pixelsize=25} CALENDAR:
+${color0}${font Roboto:pixelsize=18}${execi 60 bash ~/bin/list_calendar}
 ${voffset 10}
 ]]

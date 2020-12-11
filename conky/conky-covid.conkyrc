@@ -145,13 +145,13 @@ update_interval = 1,
 };
 
 conky.text = [[
-${font FontAwesome:size=20}  ${font Roboto:pixelsize=20} COVID Indiana:${voffset 10}
-${font Roboto:pixelsize=18}${color0}${execi 60 python3 ~/bin/covid_numbers}${voffset 10}
+${font FontAwesome:size=25}  ${font Roboto:pixelsize=25} COVID Indiana:${voffset 10}
+${font Roboto:pixelsize=20}${color0}${execi 60 python3 ~/bin/covid_numbers}${voffset 10}
 ${hr}${color}${voffset 10}
-${font FontAwesome:size=20}  ${font Roboto:pixelsize=20} SUN:${voffset 10}
-${font Roboto:pixelsize=18}${color0}${execi 60 python3 ~/bin/sun}
+${font FontAwesome:size=25}  ${font Roboto:pixelsize=25} SUN:${voffset 10}
+${font Roboto:pixelsize=20}${color0}${execi 60 python3 ~/bin/sun}
 ${hr}${color}${voffset 10}
-${font FontAwesome:size=20}  ${font Roboto:pixelsize=20} TEMPS: ${voffset 10}
-${font Roboto:pixelsize=18}${color0}${execi 60 python3 ~/bin/temps}
+${font FontAwesome:size=25}  ${font Roboto:pixelsize=25} TEMPS: ${voffset 10}
+${font Roboto:pixelsize=20}${color0}${execi 60 python3 ~/bin/temps}
 ${voffset 10}
 ]]
