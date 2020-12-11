@@ -22,4 +22,6 @@ class extension(dmenu_extended.dmenu):
 
     	passage = self.menu(books, prompt='Enter passage')
     	passage = passage.replace(" ", "+")
+    	book = passage.split(':')[0]
     	self.open_url(f"https://netbible.org/bible/{passage}")
+    	self.open_url(f"about:reader?url=https://enduringword.com/bible-commentary/{book}")
