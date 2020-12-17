@@ -1,0 +1,3 @@
+#!/bin/bash
+
+i3-msg workspace 3: ❸ Mail; firefox -new-window 'https://mail.google.com'
