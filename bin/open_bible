@@ -1,0 +1,3 @@
+#!/bin/bash
+
+i3-msg workspace 7: ❼ Bible; firefox -new-window 'https://netbible.org/bible/${1}'
