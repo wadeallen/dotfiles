@@ -1,0 +1,5 @@
+#! /bin/bash
+
+DIR="/home/wadeallen/Pictures/Desktop_Wallpapers"
+
+feh --bg-fill --randomize $DIR

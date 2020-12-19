@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for file in *${1}.avi; do
+for file in *${1}.mp4; do
 	mv "$file" "${file/${1}}"
 done
 

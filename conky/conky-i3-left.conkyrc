@@ -1,0 +1,84 @@
+
+conky.config = {
+
+double_buffer = true,
+own_window = true,
+own_window_argb_visual = true,
+own_window_argb_value = 100,
+own_window_transparent = false,
+own_window_class = 'Conky',
+own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+own_window_type = 'override',
+
+own_window_colour = '#000000',
+own_window_title = 'Conky',
+
+minimum_width = 250,
+minimum_height = 200,
+maximum_width = 800,
+
+gap_x = 50,--## left | right
+gap_y = 100,--## up | down
+
+alignment = 'top_left',
+
+
+use_xft = true,
+font = 'Roboto:size=10',
+
+
+xftalpha = 1,
+override_utf8_locale = true,
+
+uppercase = false,
+draw_shades = false,--yes
+default_shade_color = 'black',
+
+draw_outline = false,-- amplifies text if yes
+default_outline_color = 'black',
+
+default_color = '#D8D8D8',-- grey
+color0 = '#ffffff',-- purewhite
+color1 = '#777777',-- Gray
+
+color2 = '#D8BFD8',-- Thistle
+color3 = '#9ACD32',-- YellowGreen
+color4 = '#FFA07A',-- LightSalmon
+color5 = '#FFDEAD',-- NavajoWhite
+color6 = '#00BFFF',-- DeepSkycyan
+color7 = '#5F9EA0',-- Cadetcyan
+color8 = '#BDB76B',-- DarkKhaki
+color9 = '#CD5C5C',-- IndianRed
+draw_borders = false,
+stippled_borders = 5,
+border_inner_margin = 5,
+border_outer_margin = 0,
+border_width = 2,
+draw_graph_borders = true,--no
+background = true,
+use_spacer = 'none',
+
+no_buffers = true,
+
+short_units = true,
+
+pad_percents = 2,
+
+imlib_cache_size = 0,
+
+double_buffer = true,
+
+update_interval = 1,
+
+};
+
+conky.text = [[
+${font FontAwesome:size=25}  ${font Roboto:pixelsize=25} Indiana COVID:
+${voffset 10}
+${color0}${font Roboto:pixelsize=20}${execi 60 python3 ~/bin/covid_numbers}
+${voffset 10}
+${hr}${color}${voffset 10}
+${font FontAwesome:size=25} ${font Roboto:pixelsize=25} SUN:
+${color0}${font Roboto:pixelsize=18}${execi 60 python3 ~/bin/sun}
+${voffset 10}
+]]

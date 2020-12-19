@@ -1,4 +1,5 @@
 #!/bin/bash
 sleep 10
 conky -b -c /home/wadeallen/dotfiles/conky/conky-i3.conkyrc &
+conky -b -c /home/wadeallen/dotfiles/conky/conky-i3-left.conkyrc &
 exit

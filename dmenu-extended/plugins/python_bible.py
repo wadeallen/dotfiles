@@ -1,6 +1,8 @@
 import dmenu_extended
 import sys
 import requests
+import webbrowser
+import i3
 
 file = '/home/wadeallen/dotfiles/dmenu-extended/bible_books.json'
 
@@ -24,5 +26,15 @@ class extension(dmenu_extended.dmenu):
     	passage = passage.replace(" ", "+")
     	book = passage.split(':')[0]
 
-    	self.open_url(f"https://netbible.org/bible/{passage}")
-    	# self.open_url(f"about:reader?url=https://enduringword.com/bible-commentary/{book}")
+    	bible_url=(f"https://netbible.org/bible/{passage}")
+    	ew_url=(f"about:reader?url=https://enduringword.com/bible-commentary/{book}")
+
+    	i3.msg("command", f"workspace 7: ❼ Bible; exec firefox -new-window {bible_url}")
+    	i3.msg("command", f"workspace 7: ❼ Bible; exec firefox {ew_url}")
+
+
+    	# webbrowser.open_new(f"{ew_url}")
+
+
+    	# self.open_url(f"https://netbible.org/bible/{passage}")
+        # self.open_url(f"about:reader?url=https://enduringword.com/bible-commentary/{book}")
