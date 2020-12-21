@@ -30,7 +30,7 @@ class extension(dmenu_extended.dmenu):
     	ew_url=(f"about:reader?url=https://enduringword.com/bible-commentary/{book}")
 
     	i3.msg("command", f"workspace 7: ❼ Bible; exec firefox -new-window {bible_url}")
-    	i3.msg("command", f"workspace 7: ❼ Bible; exec firefox {ew_url}")
+    	# i3.msg("command", f"workspace 7: ❼ Bible; exec firefox {ew_url}")
 
 
     	# webbrowser.open_new(f"{ew_url}")
