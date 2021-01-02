@@ -1,7 +1,8 @@
 #! /bin/bash
 
 # get date for this coming Sunday
-date=$(date -d 'sun' +'%Y-%m-%d')
+# date=$(date -d 'sun' +'%Y-%m-%d')
+date=$(date -d 'last sun' +'%Y-%m-%d')
 
 # change to worship directory and move files to posts directory
 worship_dir=$HOME/Sites/fbcmuncie_2020/content/worship

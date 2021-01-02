@@ -1,7 +1,8 @@
 #!/bin/bash
 
 filename=$1
-sunday=$(date -d 'sun' +'%Y-%m-%d')
+# sunday=$(date -d 'sun' +'%Y-%m-%d')
+sunday=$(date -d 'last sun' +'%Y-%m-%d')
 year=$(date +'%Y')
 
 if	[ -z "$filename" ]

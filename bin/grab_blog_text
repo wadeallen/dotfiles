@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from datetime import date
-from dateutil.relativedelta import relativedelta, MO, TU
+from dateutil.relativedelta import relativedelta, MO, TU, WE
 import glob
 import frontmatter
 import sys
@@ -13,6 +13,7 @@ path_format = "%Y-%m-%d"
 today = date.today()
 last_mon = today + relativedelta(weekday=MO(-1))
 last_tue = today + relativedelta(weekday=TU(-1))
+last_wed = today + relativedelta(weekday=WE(-1))
 
 path = "/home/wadeallen/Sites/fbcmuncie_2020/content/blog/*.md"
 files = (glob.glob(path))
@@ -23,6 +24,8 @@ for name in files:
 	if post_date == last_mon:
 		print(content)
 	elif post_date == last_tue:
+		print(content)
+	elif post_date == last_wed:
 		print(content)
 
 
