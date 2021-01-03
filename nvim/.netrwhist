@@ -1,8 +1,13 @@
 let g:netrw_dirhistmax  =10
+<<<<<<< HEAD
 let g:netrw_dirhistcnt =4
 let g:netrw_dirhist_4='/home/wadeallen/.config/dmenu-extended/config'
 let g:netrw_dirhist_3='/home/wadeallen/.config/dmenu-extended/plugins'
 let g:netrw_dirhist_2='/home/wadeallen/.config/dmenu-extended'
+=======
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/wadeallen/Dropbox/Sermon_Work/2015'
+>>>>>>> 295d84c8e322f19235460d514b261e1b2f5e22ff
 let g:netrw_dirhist_1='/home/wadeallen/dotfiles/dmenu-extended/plugins'
 let g:netrw_dirhist_0='/usr/share/themes/Yaru-dark'
 let g:netrw_dirhist_9='/home/wadeallen/dotfiles/dmenu-extended'
@@ -10,3 +15,8 @@ let g:netrw_dirhist_8='/home/wadeallen/bin'
 let g:netrw_dirhist_7='/home/wadeallen/dotfiles/pandoc'
 let g:netrw_dirhist_6='/home/wadeallen/Dropbox/Linux Installs Setup'
 let g:netrw_dirhist_5='/home/wadeallen/bin'
+<<<<<<< HEAD
+=======
+let g:netrw_dirhist_4='/home/wadeallen/dotfiles/dmenu-extended'
+let g:netrw_dirhist_3='/etc/nginx'
+>>>>>>> 295d84c8e322f19235460d514b261e1b2f5e22ff
