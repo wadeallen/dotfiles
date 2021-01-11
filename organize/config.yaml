@@ -190,3 +190,14 @@ rules:
           case_sensitive: true
     actions:
       - move: "/home/wadeallen/Dropbox/Statements/Kohls"
+# TJ Maxx
+  - folders: ~/Dropbox/Scans
+    subfolders: false
+    filters:
+      - extension: pdf
+      - filename:
+          startswith:
+            - TJ Maxx Statement
+          case_sensitive: true
+    actions:
+      - move: "/home/wadeallen/Dropbox/Receipts/TJ Maxx"

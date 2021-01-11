@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source /home/wadeallen/Dropbox/Config\ Files/config.sh
+source /home/wadeallen/bin/config.sh
 
 if [[ $(curl -s https://api.todoist.com/rest/v1/tasks?filter=today -H "Authorization: Bearer $token" | jq -r ".[] | .content") ]]; then
     curl -s https://api.todoist.com/rest/v1/tasks?filter=today -H "Authorization: Bearer $token" | jq -r ".[] | .content"

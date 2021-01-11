@@ -2,7 +2,7 @@
 
 # get date for this coming Sunday
 # date=$(date -d 'sun' +'%Y-%m-%d')
-date=$(date -d 'last sun' +'%Y-%m-%d')
+date=$(date -d 'sun' +'%Y-%m-%d')
 
 # change to worship directory and move files to posts directory
 worship_dir=$HOME/Sites/fbcmuncie_2020/content/worship
@@ -38,20 +38,20 @@ cd -
 # echo "dvd file created with Handbrake"
 
 # # convert sermon into mp3, also create file duration.txt file
-~/bin/audio ${date}-upload.mp4
-echo "-----"
-echo "mp3 file compiled"
+# ~/bin/audio ${date}-upload.mp4
+# echo "-----"
+# echo "mp3 file compiled"
 
 # upload audio file to amazon
-cd /home/wadeallen/Dropbox/Music/Sermon_Audio
-upload ${date}.mp3
-echo "-----"
-echo "Uploaded audio file to Amazon"
+# cd /home/wadeallen/Dropbox/Music/Sermon_Audio
+# upload ${date}.mp3
+# echo "-----"
+# echo "Uploaded audio file to Amazon"
 
 # change to post directory
-~/bin/insert_data
-echo "-----"
-echo "Updated Sermon file with metadata"
+# ~/bin/insert_data
+# echo "-----"
+# echo "Updated Sermon file with metadata"
 
 # # # move file to Dropbox upload folder
 # # cd $directory
