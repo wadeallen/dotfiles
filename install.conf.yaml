@@ -17,5 +17,6 @@
     ~/.config/dmenu-extended : dmenu-extended
     ~/.config/obs-studio : obs-studio
     ~/.config/organize : organize
+    ~/.local/share/albert/org.albert.extension.python/modules : Albert_Extensions
     ##    ~/.config/gtk-3.0 : gtk-3.0
 
