@@ -201,3 +201,14 @@ rules:
           case_sensitive: true
     actions:
       - move: "/home/wadeallen/Dropbox/Receipts/TJ Maxx"
+# Ball State Credit Union
+  - folders: ~/Dropbox/Scans
+    subfolders: false
+    filters:
+      - extension: pdf
+      - filename:
+          startswith:
+            - Ball State Credit Union
+          case_sensitive: true
+    actions:
+      - move: "/home/wadeallen/Dropbox/Receipts/Ball State Credit Union"
