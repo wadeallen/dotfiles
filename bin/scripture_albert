@@ -1,0 +1,72 @@
+#!/usr/bin/env python3
+
+import frontmatter
+import os
+import glob
+from datetime import date 
+from dateutil.relativedelta import relativedelta, SU
+from os.path import expanduser
+import datetime
+from dateutil import parser
+
+__title__ = "Scripture This Week"
+__version__ = "0.4.2"
+__triggers__ = "cs"
+__authors__ = "Wade Allen"
+
+home = expanduser("~")
+
+sermon_path = f"{home}/Dropbox/Sermon_Work"
+
+today = date.today() 
+format = '%Y-%m-%d'
+
+def path(week):
+	t_date = today + relativedelta(weekday=SU(+week))
+	t_date_formatted = t_date.strftime(format)
+	path = f"{sermon_path}/{t_date_formatted}_sermon.md"
+	return path
+
+results = []
+
+for i in range (1,4):
+	full_path = path(i)
+	files = glob.glob(full_path)
+	for name in files:
+		post = frontmatter.load(name)
+		title = post['title']
+		scripture = post['scripture']
+		if type(post['date']) is datetime.date:
+			postdate = post['date']
+		else:
+			postdate = parser.parse(post['date'])
+		results.append(scripture)
+
+print(results)
+
+
+	
+
+
+
+# target_date_1 = today + relativedelta(weekday=SU(+2))
+# target_date_2 = today + relativedelta(weekday=SU(+3))
+# sunday = target_date.strftime(format)
+# sunday_1 = target_date_1.strftime(format)
+# sunday_2 = target_date_2.strftime(format)
+
+# path = (config.sermon_path + '/{}_sermon.md'.format(sunday))
+# path_1 = (config.sermon_path + '/{}_sermon.md'.format(sunday_1))
+# path_2 = (config.sermon_path + '/{}_sermon.md'.format(sunday_2))
+
+# files = glob.glob(path)
+ 
+# for name in files:
+#     post = frontmatter.load(name)
+    # if type(post['date']) is datetime.date:
+    #     postdate = post['date']
+    # else:
+    #     postdate = parser.parse(post['date'])
+
+
+
