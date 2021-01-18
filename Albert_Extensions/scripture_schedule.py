@@ -31,6 +31,9 @@ def path(week):
 	return path
 
 def handleQuery(query):
+	if not query.isTriggered:
+		return
+
 	results = []
 
 	for i in range (1,5):
@@ -40,6 +43,7 @@ def handleQuery(query):
 			post = frontmatter.load(name)
 			title = post['title']
 			scripture = post['scripture']
+			summary = post['summary']
 			if type(post['date']) is datetime.date:
 				postdate = post['date']
 			else:
@@ -50,8 +54,11 @@ def handleQuery(query):
 				    text=f"{scripture}",
 				    subtext=f"date: {postdate.strftime('%B %d')}",
 				    actions=[
-				    ClipAction(text='Scripture for this Week', clipboardText=scripture)
-				    ])
+				    ClipAction(text=f"Copy Scripture to clipboard", clipboardText=scripture),
+				    ClipAction(text=f"Copy Title to clipboard", clipboardText=title),
+				    ClipAction(text=f"Copy Summary to clipboard", clipboardText=summary)
+				    ]
+				  )
 				)
 
 	return results
