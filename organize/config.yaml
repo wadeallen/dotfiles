@@ -189,7 +189,7 @@ rules:
             - Kohls Statement
           case_sensitive: true
     actions:
-      - move: "/home/wadeallen/Dropbox/Statements/Kohls"
+      - move: "/home/wadeallen/Dropbox/Statements/Kohls/"
 # TJ Maxx
   - folders: ~/Dropbox/Scans
     subfolders: false
@@ -200,7 +200,7 @@ rules:
             - TJ Maxx Statement
           case_sensitive: true
     actions:
-      - move: "/home/wadeallen/Dropbox/Receipts/TJ Maxx"
+      - move: "/home/wadeallen/Dropbox/Receipts/TJ Maxx/"
 # Ball State Credit Union
   - folders: ~/Dropbox/Scans
     subfolders: false
@@ -211,4 +211,15 @@ rules:
             - Ball State Credit Union
           case_sensitive: true
     actions:
-      - move: "/home/wadeallen/Dropbox/Receipts/Ball State Credit Union"
+      - move: "/home/wadeallen/Dropbox/Receipts/Ball_State_Credit_Union/"
+# Verizon Wireless
+  - folders: ~/Dropbox/Scans
+    subfolders: false
+    filters:
+      - extension: pdf
+      - filename:
+          startswith:
+            - Verizon
+          case_sensitive: true
+    actions:
+      - move: "/home/wadeallen/Dropbox/Receipts/Wireless_Phone/Verizon/"
