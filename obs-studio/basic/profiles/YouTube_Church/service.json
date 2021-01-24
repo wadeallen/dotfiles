@@ -1,8 +1,0 @@
-{
-    "settings": {
-        "key": "gfum-6ky1-vxtr-6rj5",
-        "server": "rtmp://a.rtmp.youtube.com/live2",
-        "service": "YouTube / YouTube Gaming"
-    },
-    "type": "rtmp_common"
-}

@@ -7,16 +7,13 @@
 - link:
     ~/bin: bin
     ~/.pandoc: pandoc
-    ~/.maid: maid
     ~/.config/hotstrings.json: hotstrings.json
     ~/.fonts : fonts
     ~/.config/nvim : nvim
-    ~/.dmenurc : dmenurc
     ~/.enscript : enscript
     ~/.config/fish : fish
-    ~/.config/dmenu-extended : dmenu-extended
-    ~/.config/obs-studio : obs-studio
     ~/.config/organize : organize
+    ~/.themes : themes
     ~/.local/share/albert/org.albert.extension.python/modules : Albert_Extensions
     ##    ~/.config/gtk-3.0 : gtk-3.0
 
