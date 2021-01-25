@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Todoist
+Comment=opens todoist 
+Exec=/snap/bin/chromium --force-device-scale-factor=1.5 https://todoist.com
+Icon=/home/wadeallen/Pictures/todoist.png
+Terminal=false
