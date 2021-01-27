@@ -40,6 +40,22 @@ for name in files:
         description = post['summary']
     else:
         description = "No description yet"
+    if post['first_reading']:
+    	first_reading = post['first_reading']
+    else:
+    	first_reading = "No reading chosen"
+    if post['second_reading']:
+    	second_reading = post['second_reading']
+    else:
+    	second_reading = "No reading chosen"
+    if post['communion'] is True:
+    	communion = "yes"
+    elif post['communion'] is False:
+    	communion = 'no'
+    else:
+    	communion = "undecided"
+
+
     title_sliced = title.split()
     slug = ("-".join(title_sliced).lower())
     slug = slug.replace("?", "")
@@ -57,6 +73,9 @@ for name in files:
     target.write('scripture: "{}"\n'.format(scripture))
     target.write('date: "{}"\n'.format(date))
     target.write('author: "{}"\n'.format(speaker))
+    target.write('first_reading: "{}"\n'.format(first_reading))
+    target.write('second_reading: "{}"\n'.format(second_reading))
+    target.write('communion: "{}"\n'.format(communion))    
     target.write('---\n')
     target.write('\n')
     target.write(description)

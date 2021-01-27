@@ -34,9 +34,12 @@ def handleQuery(query):
 	if not query.isTriggered:
 		return
 
+	if query.isTriggered:
+		query.disableSort()
+
 	results = []
 
-	for i in range (1,5):
+	for i in range (1,8):
 		full_path = path(i)
 		files = glob.glob(full_path)
 		for name in files:
