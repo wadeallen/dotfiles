@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Calendar
+Comment=opens Google Calendar
+Exec=/snap/bin/chromium --force-device-scale-factor=1.5 https://calendar.google.com/calendar/u/0/r/week
+Icon=/home/wadeallen/Pictures/calendar.png
+Terminal=false

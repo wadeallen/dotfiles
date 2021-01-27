@@ -11,7 +11,7 @@ import config
 
 home = expanduser("~")
 
-worship_sermons_path = (home + '/Sites/fbcmuncie_2020/content/worship/*.md')
+worship_sermons_path = (home + '/Sites/wadeallen.me/content/posts/*.md')
 worship_posts = glob.glob(worship_sermons_path)
 
 for post in worship_posts:
@@ -46,7 +46,7 @@ for name in files:
     slug = slug.replace("'", "")
     slug = slug.replace(":", "")
     slug = re.sub("[\(\[].*?[\)\]]", "", slug)
-    filename =(home + '/Sites/fbcmuncie_2020/content/worship/' + date + '-' + slug + '.md')
+    filename =(home + '/Sites/wadeallen.me/content/posts/' + date + '-' + slug + '.md')
     filename = filename.replace("-.", ".")
     filename = filename.replace("--", "-")
     filename = filename.replace(":", "-")
@@ -56,7 +56,7 @@ for name in files:
     target.write('title: "{}"\n'.format(title))
     target.write('scripture: "{}"\n'.format(scripture))
     target.write('date: "{}"\n'.format(date))
-    target.write('people:\n   - {}\n'.format(speaker))
+    target.write('author: "{}"\n'.format(speaker))
     target.write('---\n')
     target.write('\n')
     target.write(description)
