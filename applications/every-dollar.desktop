@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Every Dollar
+Comment=opens Every Dollar
+Exec=/snap/bin/chromium --force-device-scale-factor=1.5 https://www.everydollar.com/app/
+Icon=/home/wadeallen/Pictures/everydollar.png
+Terminal=false

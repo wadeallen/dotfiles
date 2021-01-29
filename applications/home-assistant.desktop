@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Home Assistant
+Comment=opens Home Assistant
+Exec=/snap/bin/chromium --force-device-scale-factor=1.5 https://home.wadeallen.me/
+Icon=/home/wadeallen/Pictures/home-assistant.png
+Terminal=false
