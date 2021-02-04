@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =1
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/wadeallen/bin'
+let g:netrw_dirhist_2='/home/wadeallen/Dropbox/Slides/2021-02-07_slides'
 let g:netrw_dirhist_1='/home/wadeallen/dotfiles/themes/myYaru/gnome-shell'
 let g:netrw_dirhist_0='/home/wadeallen/dotfiles/themes/myYaru'
 let g:netrw_dirhist_9='/home/wadeallen/dotfiles/themes'
@@ -8,5 +10,3 @@ let g:netrw_dirhist_7='/home/wadeallen/dotfiles/themes'
 let g:netrw_dirhist_6='/home/wadeallen/bin'
 let g:netrw_dirhist_5='/home/wadeallen/dotfiles/Albert_Extensions'
 let g:netrw_dirhist_4='/home/wadeallen/Dropbox/Sermon_Work/2020'
-let g:netrw_dirhist_3='/home/wadeallen/Dropbox/Sites/fbcmuncie_2020/static'
-let g:netrw_dirhist_2='/home/wadeallen/Dropbox/Sermon_Work/2015'

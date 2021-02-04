@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source /home/wadeallen/Dropbox/Config\ Files/config.sh
+source /home/wadeallen/Dropbox/Config_Files/config.sh
 
 # Get hostname from computer
 host=`hostname`
@@ -44,7 +44,7 @@ fi
 
 # Check if at home on laptop
 
-if [ ${local_ip} == "192.168.1.117" ];
+if [ ${local_ip} == "192.168.1.115" ];
 
 then
 

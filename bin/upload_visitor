@@ -8,5 +8,5 @@ then
 	exit 0
 fi
 
-s3cmd put ${filename} s3://visitor.fbcmuncie.org/
+s3cmd put ${filename} s3://files.fbcmuncie.org/
 
