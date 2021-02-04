@@ -1,6 +1,0 @@
-#!/bin/bash
-
-rsync -aLv --delete ~/Dropbox /media/wadeallen/BACKUP/
-rsync -aLv --delete ~/dotfiles /media/wadeallen/BACKUP/
-rsync -aLv --delete ~/Downloads /media/wadeallen/BACKUP/
-

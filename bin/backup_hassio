@@ -1,3 +1,0 @@
-#!/bin/bash
-
-scp -r root@wade-home.duckdns.org:/backup/* ~/Dropbox/Hassio_Backups/

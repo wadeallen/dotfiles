@@ -1,4 +1,0 @@
-#!/bin/bash
-
-s3cmd sync --no-preserve s3://visitor.fbcmuncie.org/ $HOME/Dropbox/Backup_Visitors/
-s3cmd sync --no-preserve s3://audio.fbcmuncie.org/ $HOME/Music/Backup_Audio_Sermons/

@@ -1,3 +1,0 @@
-#!/bin/bash
-
-/home/wadeallen/rsync-time-backup/rsync_tmbackup.sh --strategy "1:1 30:7 355:30" /home/wadeallen /run/media/wadeallen/Drobo/Backup/

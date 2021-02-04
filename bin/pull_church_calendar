@@ -1,9 +1,0 @@
-#!/bin/bash
-
-SUNDAY=$(date -d "sun" +"%Y-%m-%d")
-MONDAY=$(date -d "${SUNDAY} + 8 day" +"%Y-%m-%d")
-
-echo -e "sdate\tstart_time\tedate\tend_time\ttitle" > /home/wadeallen/Dropbox/Compile/bulletin/calendar.tsv
-gcalcli --nocolor --calendar=church agenda --tsv $SUNDAY $MONDAY >> /home/wadeallen/Dropbox/Compile/bulletin/calendar.tsv
-
-

@@ -1,4 +1,0 @@
-#!/bin/bash
-
-ffmpeg -i "concat:MVI_0024.MP4|MVI_0025.MP4" -c copy merged_output.MP4
-
