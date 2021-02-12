@@ -1,7 +1,0 @@
-#!/bin/bash
-
-
-# cd $PATH
-# ${GIT} add --all .
-# ${GIT} commit -m "updated site"
-# ${GIT} git push

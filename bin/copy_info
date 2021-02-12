@@ -16,16 +16,17 @@ path = ('/home/wadeallen/Dropbox/Sermon_Work/{}_sermon.md'.format(sunday))
 files = glob.glob(path)
 for name in files:
 	post = frontmatter.load(name)
+	date = post['date']
 	scripture = post['scripture']
 	title = post['title']
 	summary = post['summary']
 	first_reading = post['first_reading']
 	second_reading = post['second_reading']
 	communion = post['communion']
-	info = f"**{title}**\n\n{summary}\n\nSermon Scripture: {scripture}\n\nFirst Reading; {first_reading}\n\nSecond Reading: {second_reading}\n\n"
+	info = f"Sermon for {date}\n\n**{title}**\n\n{summary}\n\nSermon Scripture: {scripture}\n\nFirst Reading; {first_reading}\n\nSecond Reading: {second_reading}\n\n"
 
 pyperclip.copy(info)
-print (f"Copied info for {sunday}")
+print (f"Copied info for {date}")
 
 
 

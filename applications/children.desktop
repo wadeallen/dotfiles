@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Children Sermons
+Comment=opens children's sermons
+Exec=/snap/bin/chromium --force-device-scale-factor=1.5 https://sermons4kids.com/ 
+Icon=/home/wadeallen/Pictures/children.png
+Terminal=false

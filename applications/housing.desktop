@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Housing Sheet
+Comment=opens housing sheet
+Exec=/snap/bin/chromium --force-device-scale-factor=1.5 https://docs.google.com/spreadsheets/d/1Hphz8wRUhAqZilQC-Q6O9TU_49_497NBA6nZJzNO7iY/edit 
+Icon=/home/wadeallen/Pictures/house.svg
+Terminal=false

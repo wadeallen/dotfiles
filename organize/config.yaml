@@ -75,17 +75,6 @@ rules:
           case_sensitive: true
     actions:
       - move: "/home/wadeallen/Dropbox/Statements/Thrivent Credit Union/"
-# Church Receipts 
-  - folders: ~/Dropbox/Scans
-    subfolders: false
-    filters:
-      - extension: pdf
-      - filename:
-          contains:
-            - Church Receipt
-          case_sensitive: true
-    actions:
-      - move: "/home/wadeallen/Dropbox/Receipts/Church/Current/"
 # Yorktown Municipal Utilities
   - folders: ~/Dropbox/Scans
     subfolders: false
@@ -223,3 +212,14 @@ rules:
           case_sensitive: true
     actions:
       - move: "/home/wadeallen/Dropbox/Receipts/Wireless_Phone/Verizon/"
+# United Church Receipts
+  - folders: ~/Dropbox/Scans
+    subfolders: false
+    filters:
+      - extension: pdf
+      - filename:
+          contains:
+            - United Church Receipt
+          case_sensitive: true
+    actions:
+      - move: "/home/wadeallen/Dropbox/Receipts/United Church Receipts/"
