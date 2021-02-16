@@ -51,6 +51,7 @@ slug = ("_".join(name_sliced))
 def set_date(number):
     new_date = datetime.datetime.strptime(date, '%Y-%m-%d')
     new_date = new_date + datetime.timedelta(days=number)
+    new_date = new_date.strftime('%Y-%m-%d')
     return new_date
 
 today = today.strftime('%Y-%m-%d')
@@ -61,33 +62,21 @@ project_id=project_id = '162548698'
 
 api = todoist.TodoistAPI(config.todoist_api)
 
-# # sets the notify church about death
-notify_date = today
-item = api.items.add('email congregation about ' + name + ' death and funeral arrangements', project_id=project_id, date_string=notify_date)
+#function to add item
+def addTodo(days,task):
+	if days == 0:
+		notify_date = today
+	else:
+		notify_date = set_date(days)
+	item = api.items.add(f"{task}: {name}", project_id=project_id, date_string=notify_date)
 
-## meet with family
-item = api.items.add('Set up meeting with ' + name + ' family', project_id=project_id, date_string=notify_date)
-
-## contact Member Care about funeral dinner
-item = api.items.add('Contact Member Care about ' + name + ' funeral meal', project_id=project_id, date_string=notify_date)
-
-# # mark deceased in database
-item = api.items.add('remove ' + name + ' from prayer list', project_id=project_id, date_string=notify_date)
-
-# # print backup copy of funeral
-print_backup = set_date(-1)
-item = api.items.add('print backup copy of funeral sermon for ' + name + ' funeral', project_id=project_id, date_string=print_backup.strftime('%Y-%m-%d'))
-
-if church in ['true', '1', 't', 'y', 'yes', 'yeah', 'yup', 'certainly', 'uh-huh']:
-    # check and add to church calendar
-    item = api.items.add('check calendar and add funeral for ' + name + ' to calendar', project_id=project_id, date_string=notify_date)
-#     # line up sound tech
-    item = api.items.add('line up sound tech for ' + name + ' funeral', project_id=project_id, date_string=notify_date)
+addTodo(0,"notify congregation and Carolyn about death")
+addTodo(0,"set up meeting with family")
+addTodo(-1,"print backup copy of funeral")
 
 api.commit()
 
 # Function to Grab lines of text from various subfiles and do replacements
-
 
 def grab_section(file):
 	with open(home + "/Dropbox/Templates/Funeral/" + file) as f:
