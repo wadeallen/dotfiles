@@ -15,8 +15,6 @@ __authors__ = "Wade Allen"
 
 iconPath = os.path.dirname(__file__)+"/todoist.svg"
 
-
-
 def handleQuery(query):
     if not query.isTriggered:
         return

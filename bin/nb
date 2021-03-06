@@ -6,13 +6,13 @@ import subprocess
 
 home = expanduser("~")
 today = datetime.datetime.now().strftime("%Y-%m-%d")
-filename =(home + '/Dropbox/Drafts/' + today + '.markdown')
+filename =(home + '/Dropbox/Blogs/' + today + '.md')
 
 if isfile(filename):
-  subprocess.call(['nvim', '-c', '9', filename])
+  subprocess.call(['nvim', '+4', '-c', 'call AutoCorrect()',  filename])
 else:	
     target = open (filename, 'w')
-    target.write(f'---\ntitle: \ndate: {today}\npeople: \n   - Wade Allen\n---')
+    target.write(f'---\ndate: {today}\n---\n\n')
     target.close()
 
-subprocess.call(['nvim', '-c', '9', filename])
+subprocess.call(['nvim', '+4', '-c', 'call AutoCorrect()',  filename])

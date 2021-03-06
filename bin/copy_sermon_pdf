@@ -1,5 +1,6 @@
 #!/bin/bash
 
-NOW=`date +'%Y-%m-%d'`
+DATE=$(date -d "next Sunday" +"%Y-%m-%d")
 
-cp ~/Dropbox/Sermons/${NOW}_sermon.pdf ~/Print/
+pdfbook2 --short-edge ~/Dropbox/Sermons/${DATE}_sermon.pdf 
+mv ~/Dropbox/Sermons/${DATE}_sermon-book.pdf ~/Print/

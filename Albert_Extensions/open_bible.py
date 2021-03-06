@@ -19,14 +19,16 @@ def handleQuery(query):
     if not query.isTriggered:
         return
 
+    term = query.string.replace(" ", "+")
+
     if query.isTriggered:
         return Item(id=__title__,
                     icon=iconPath,
                     text="Search Bible: " + query.string,
                     subtext="Opens Biblegateway.com to Passage",
                     actions=[
-                    UrlAction(text="Opens Bible",
-          url=f"https://www.biblegateway.com/passage/?search={query.string}&version=NIV&interface=print")
+                        ProcAction(text='Opens Biblegateway',
+                                   commandline=['open_bible', term])      
                     ])
 
 

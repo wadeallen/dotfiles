@@ -1,11 +1,11 @@
 #!/bin/bash
 
-YEAR=$(date +'%Y')
+YEAR=$(date +'%Y' -d "last year")
 
 if [ $# -eq 0 ]
   then
     echo "add category as argument"
     exit
 fi
-ledger -f $HOME/Dropbox/Ledger/ledger.ledger register $1 --begin ${YEAR}-01-01
+ledger -f $HOME/Dropbox/Ledger/ledger.ledger register $1 --begin ${YEAR}-01-01 --end ${YEAR}-12-31
 

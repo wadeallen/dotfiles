@@ -3,19 +3,12 @@
 file=$1
 fileroot=$(echo ${file%.*})
 current_year=`date +'%Y'`
+directory="/home/wadeallen/Dropbox/Staff_Meetings"
 
+tuesday=$(date -d "next Tuesday" +"%Y-%m-%d")
+tuesday_format=$(date -d "next Tuesday" +"%B %d, %Y")
+next_week=$(date -d "next Tuesday + 1 week" +"%B %d, %Y")
 
-if [[ -z ${file} ]];
-then
-    echo "to compile agenda, you must include filename as first argument"
-else
-	head -3 ${file} > agenda.md
-	echo -e '---\n' >> agenda.md
-    sed -n '/#/p' ${file} >> agenda.md
-    pandoc agenda.md -o ${fileroot}_agenda.pdf --template agenda.tex
-    rm agenda.md
-    mv ${fileroot}_agenda.pdf ~/Print/
-    cp ~/Print/${fileroot}_agenda.pdf /home/wadeallen/Dropbox/Administration/CCT_Summaries/${current_year}/Agendas/
+pandoc ${directory}/${tuesday}_staff_meeting.md -o ${directory}/${tuesday}_agenda.pdf --template staff_meeting.tex --metadata date_format="${tuesday_format}" --metadata next_week="${next_week}"
 
-fi
 
