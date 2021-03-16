@@ -2,56 +2,10 @@
 
 source /home/wadeallen/Dropbox/Config_Files/config.sh
 
-# Get hostname from computer
-host=`hostname`
 home_url="https://home.wadeallen.me/api/services/switch/toggle"
-church_url="https://church.wadeallen.me/api/services/switch/toggle"
-
-# Get internet connection device
-if [ ${host} == "wade-laptop" ];
-then
-	local_ip=$(ip -4 -o addr show dev wlp3s0 | awk '{split($4,a,"/");print a[1]}')
-fi
-
-if [ ${host} == "wade-desktop" ];
-then
-	local_ip=$(ip -4 -o addr show dev enp0s25 | awk '{split($4,a,"/");print a[1]}')
-fi
-
-# Check if at church on laptop
-if [ ${local_ip} == "192.168.86.41" ];
-
-then
-
-curl -X POST -H "Authorization: Bearer ${church}" \
-  -H "Content-Type: application/json" \
-  -d '{"entity_id": "switch.pastor_lamp_relay"}' \
-  ${church_url}
-
-fi
-
-# Check if at church on desktop
-if [ ${local_ip} == "192.168.1.151" ];
-
-then
-
-curl -X POST -H "Authorization: Bearer ${church}" \
-  -H "Content-Type: application/json" \
-  -d '{"entity_id": "switch.pastor_lamp_relay"}' \
-  ${church_url}
-
-fi
-
-# Check if at home on laptop
-
-if [ ${local_ip} == "192.168.1.115" ];
-
-then
 
 curl -X POST -H "Authorization: Bearer ${home}" \
   -H "Content-Type: application/json" \
-  -d '{"entity_id": "switch.sofa_lamp"}' \
+  -d '{"entity_id": "switch.wade_lamp"}' \
   ${home_url}
-
-fi
 

@@ -1,0 +1,11 @@
+#! /bin/bash
+
+file=$1
+fileroot=$(echo ${file%.*})
+directory="/home/wadeallen/Dropbox/OB"
+
+month=$(date +"%Y-%m")
+
+pandoc ${directory}/${month}_obm.md -o ${directory}/${month}_ob_agenda.pdf --template ob_agenda.tex
+
+

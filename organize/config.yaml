@@ -223,3 +223,14 @@ rules:
           case_sensitive: true
     actions:
       - move: "/home/wadeallen/Dropbox/Receipts/United Church Receipts/"
+# RG&E Statements
+  - folders: ~/Dropbox/Scans
+    subfolders: false
+    filters:
+      - extension: pdf
+      - filename:
+          contains:
+            - RGEBill
+          case_sensitive: true
+    actions:
+      - move: "/home/wadeallen/Dropbox/Receipts/Housing/Utilities/Electric/"

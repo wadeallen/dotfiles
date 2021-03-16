@@ -12,6 +12,7 @@ Plug 'junegunn/fzf.vim'
 Plug '907th/vim-auto-save'
 Plug 'SidOfc/mkdx'
 Plug 'vim-scripts/loremipsum'
+Plug 'reedes/vim-wordy'
 call plug#end()
 
 set bg=light

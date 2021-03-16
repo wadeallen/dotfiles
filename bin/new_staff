@@ -1,0 +1,19 @@
+#! /bin/bash
+
+directory="/home/wadeallen/Dropbox/Staff_Meetings"
+
+last_tue=$(date -d "last Tuesday" +"%Y-%m-%d")
+today=$(date +"%Y-%m-%d")
+tuesday=$(date -d "next Tuesday" +"%Y-%m-%d")
+
+if [[ $(date +%u) == 2 ]];
+then
+	cp ${directory}/${today}_staff_meeting.md ${directory}/${tuesday}_staff_meeting.md
+else
+	cp ${directory}/${last_tue}_staff_meeting.md ${directory}/${tuesday}_staff_meeting.md
+fi
+
+
+
+
+
