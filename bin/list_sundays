@@ -1,12 +1,11 @@
 #!/bin/bash
 
-SUN=$(date -dsunday +%Y-%m-%d)
-# 365 days/year / 2 ~= 182 days
-ENDSUN=$(date -d "$SUN + 182 days" +"%Y-%m-%d")
+# read -p 'First Sunday: ' first_sunday
+first_sunday=$(zenity --calendar --date-format %Y-%m-%d)
+read -p 'How many weeks?: ' weeks
 
-echo $SUN
 
-until [ "$SUN" == "$ENDSUN" ]; do
-  SUN=$(date -d "$SUN + 7 days" +%Y-%m-%d)
-  echo $SUN
+for i in $(seq 1 $weeks);
+do
+	echo $(date -d "${first_sunday} + $((i*7)) days" +"%Y-%m-%d")
 done

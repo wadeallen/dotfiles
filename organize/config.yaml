@@ -234,3 +234,25 @@ rules:
           case_sensitive: true
     actions:
       - move: "/home/wadeallen/Dropbox/Receipts/Housing/Utilities/Electric/"
+# Offering Count
+  - folders: ~/Dropbox/Scans
+    subfolders: false
+    filters:
+      - extension: pdf
+      - filename:
+          contains:
+            - Offering_Count
+          case_sensitive: true
+    actions:
+      - move: "/home/wadeallen/Dropbox/Offering_Count/"
+# ISOE Grant
+  - folders: ~/Dropbox/Scans
+    subfolders: false
+    filters:
+      - extension: pdf
+      - filename:
+          contains:
+            - Paycheck Stub ISOE Grant
+          case_sensitive: true
+    actions:
+      - move: "/home/wadeallen/Dropbox/ISOE/"

@@ -1,0 +1,16 @@
+#! /bin/bash
+
+tuesday=$(date -d "next Tuesday" +"%Y-%m-%d")
+
+if [[ $(date +%u) == 2 ]];
+then
+	echo -e "last_tue=$(date -d "last Tuesday" +"%Y-%m-%d")
+
+
+else
+fi
+
+
+
+
+
