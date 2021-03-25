@@ -256,3 +256,36 @@ rules:
           case_sensitive: true
     actions:
       - move: "/home/wadeallen/Dropbox/ISOE/"
+# MVP Explanation of Benefits
+  - folders: ~/Dropbox/Scans
+    subfolders: false
+    filters:
+      - extension: pdf
+      - filename:
+          contains:
+            - _mvp_eob
+          case_sensitive: true
+    actions:
+      - move: "/home/wadeallen/Dropbox/Receipts/Insurance/MVP/EOB Statements/"
+# City Mini Storage Receipts
+  - folders: ~/Dropbox/Scans
+    subfolders: false
+    filters:
+      - extension: pdf
+      - filename:
+          contains:
+            - _City_Mini_Storage
+          case_sensitive: true
+    actions:
+      - move: "/home/wadeallen/Dropbox/Housing/City_Storage/"
+# U of R Medicine
+  - folders: ~/Dropbox/Scans
+    subfolders: false
+    filters:
+      - extension: pdf
+      - filename:
+          contains:
+            - _UofR_Medicine
+          case_sensitive: true
+    actions:
+      - move: "/home/wadeallen/Dropbox/Medical/UofR_Medicine/"
