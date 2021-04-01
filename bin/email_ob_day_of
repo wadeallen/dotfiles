@@ -1,0 +1,47 @@
+#!/usr/bin/env python3
+
+import webbrowser
+from datetime import date
+from dateutil.relativedelta import relativedelta, TU
+import urltools
+import subprocess
+import pyperclip
+import sys
+from datetime import datetime, timedelta
+import calendar
+
+dow_format = "%A, %B %-d"
+date_format = "%B %-d"
+
+today = datetime.today()
+year = int(today.strftime("%Y"))
+month = int(today.strftime("%-m"))
+
+first_day_of_month = datetime(year, month, 1)
+first_monday = first_day_of_month + timedelta(days=((0-calendar.monthrange(year,month)[0])+7)%7)
+# 0 is monday of week
+next_wednesday = first_monday + timedelta(days=9)
+third_monday = first_monday + timedelta(days=14)
+
+meeting_date = third_monday.strftime(date_format)
+full_meeting_date = third_monday.strftime(dow_format)
+
+subject = f"OB Meeting Tonight ({meeting_date}) at 7 PM"
+
+message=f"Hello Team!%0a%0a\
+Just a quick reminder of our meeting tonight, {full_meeting_date} at 7 PM.%0a%0a\
+The Zoom link is:%0a%0a\
+https://ministrelife.zoom.us/j/97797546304?pwd=c1NaSllNM2JPUGFzbHZtRHVBMmhKUT09%0a%0a\
+Meeting ID: 977 9754 6304%0a%0a\
+Password: 228%0a%0a\
+The agenda is attached below. See you tonight!%0a%0a\
+Blessings,%0a%0aWade"
+
+
+url = 'https://mail.google.com/mail/?view=cm&fs=1&su=' + subject + '&body=' + message
+
+webbrowser.open(url)
+
+
+
+
