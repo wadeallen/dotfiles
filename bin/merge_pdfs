@@ -2,5 +2,5 @@
 
 LAST_MONTH=`date --date='-1 month' +'%B_%Y'`
 
-gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=../${LAST_MONTH}_Credit_Card_Report.pdf *.pdf
+gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=../Reimbursement_Reports/${LAST_MONTH}_Wade_Reimbursement_Report.pdf *.pdf
 

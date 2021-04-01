@@ -1,11 +1,12 @@
 #!/bin/bash
 
-# read -p 'First Sunday: ' first_sunday
-first_sunday=$(zenity --calendar --date-format %Y-%m-%d)
+read -p 'First Sunday: ' first_sunday
+# first_sunday=$(zenity --calendar --date-format %Y-%m-%d)
 read -p 'How many weeks?: ' weeks
+total=$[weeks -1]
 
-
-for i in $(seq 1 $weeks);
+echo $first_sunday
+for i in $(seq 1 $total);
 do
 	echo $(date -d "${first_sunday} + $((i*7)) days" +"%Y-%m-%d")
 done
