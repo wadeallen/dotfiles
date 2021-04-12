@@ -1,14 +1,40 @@
 #! /bin/bash
 
-file=$1
-fileroot=$(echo ${file%.*})
-current_year=`date +'%Y'`
+# file=$1
+# fileroot=$(echo ${file%.*})
+# current_year=`date +'%Y'`
 directory="/home/wadeallen/Dropbox/Staff_Meetings"
 
 tuesday=$(date -d "next Tuesday" +"%Y-%m-%d")
 tuesday_format=$(date -d "next Tuesday" +"%B %d, %Y")
 next_week=$(date -d "next Tuesday + 1 week" +"%B %d, %Y")
+following_sun=$(date -d "${tuesday} + 5 days" +"%Y-%m-%d" )
+sunday=$(date -d "${tuesday} + 5 days" +"%B %d" )
+sunday_dom=$(date -d "${tuesday} + 5 days" +"%-d" )
+sunday_month=$(date -d "${tuesday} + 5 days" +"%m" )
+sunday_year=$(date -d "${tuesday} + 5 days" +"%Y" )
+days_in_month=$(cal $(date -d "${tuesday} + 5 days" +"%m %Y") | awk 'NF {DAYS = $NF}; END {print DAYS}')
 
-pandoc ${directory}/${tuesday}_staff_meeting.md -o ${directory}/${tuesday}_agenda.pdf --template staff_meeting.tex --metadata date_format="${tuesday_format}" --metadata next_week="${next_week}"
+for s in `seq 1 $days_in_month`
+do
+ su=$(date +%a --date="${sunday_year}-${sunday_month}-$s" )
+ if [ "$su" == "Sun" ];then
+     sunday_of_month[$count]=$s
+     count=$((count+1))
+ fi 
+done
+
+for i in {0..4};
+do
+	if [ "${sunday_of_month[i]}" == "${sunday_dom}" ]; then week=$i; fi
+done
+
+if [ "$week" == "0" ]; then staff="Virginia";fi
+if [ "$week" == "1" ]; then staff="Deb";fi
+if [ "$week" == "2" ]; then staff="Paul";fi
+if [ "$week" == "3" ]; then staff="Chelsea";fi
+if [ "$week" == "4" ]; then staff="Carolyn";fi
+
+pandoc ${directory}/${tuesday}_staff_meeting.md -o ${directory}/${tuesday}_agenda.pdf --template staff_meeting.tex --metadata date_format="${tuesday_format}" --metadata next_week="${next_week}" --metadata sunday="${sunday}" --metadata staff="${staff}"
 
 

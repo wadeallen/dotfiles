@@ -26,6 +26,8 @@ third_monday = first_monday + timedelta(days=14)
 meeting_date = third_monday.strftime(date_format)
 full_meeting_date = third_monday.strftime(dow_format)
 
+email_address = 'officestaff@uccdga.org, officialboard@uccdga.org'
+
 subject = f"OB Meeting Tonight ({meeting_date}) at 7 PM"
 
 message=f"Hello Team!%0a%0a\
@@ -38,7 +40,7 @@ The agenda is attached below. See you tonight!%0a%0a\
 Blessings,%0a%0aWade"
 
 
-url = 'https://mail.google.com/mail/?view=cm&fs=1&su=' + subject + '&body=' + message
+url = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + email_address + '&su=' + subject + '&body=' + message
 
 webbrowser.open(url)
 

@@ -26,16 +26,18 @@ third_monday = first_monday + timedelta(days=14)
 meeting_date = third_monday.strftime(date_format)
 wednesday = next_wednesday.strftime(dow_format)
 
-subject = f"Reports due {wednesday} for {meeting_date} OB Meeting"
+email_address = 'officestaff@uccdga.org, chairs@uccdga.org'
 
-message=f"Hello Team!%0a%0a\
-I wanted to remind you to get your reports to Carolyn (carolyn.russell@uccdga.org) by {wednesday},\
- for the {meeting_date} Offical Board meeting.%0a%0aCarolyn will email you the compiled reports on \
- Frday, so you will have time to read them before the {meeting_date} meeting.%0a%0aAlso, please let \
- Carolyn know if you have an item for the full agenda.\
- %0a%0aBlessings,%0a%0aWade"
+subject = f"Reports due {wednesday} for the {meeting_date} OB Meeting"
 
-url = 'https://mail.google.com/mail/?view=cm&fs=1&su=' + subject + '&body=' + message
+message=f"Hello Staff and Committee Chairs,%0a%0a\
+I wanted to remind you to get your reports to Carolyn (carolyn.russell@uccdga.org) by {wednesday}, \
+for the {meeting_date} Offical Board meeting.%0a%0aCarolyn will email the compiled reports to the Offical Board on \
+Friday, so they will have time to read them before the {meeting_date} meeting.%0a%0aAlso, please let \
+Carolyn know if you have an item for the full agenda.\
+%0a%0aBlessings,%0a%0aWade"
+
+url = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + email_address + '&su=' + subject + '&body=' + message
 
 webbrowser.open(url)
 
