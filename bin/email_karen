@@ -19,22 +19,21 @@ month = int(today.strftime("%-m"))
 
 first_day_of_month = datetime(year, month, 1)
 first_monday = first_day_of_month + timedelta(days=((0-calendar.monthrange(year,month)[0])+7)%7)
-# 0 is monday of week
 next_thursday = first_monday + timedelta(days=10)
 third_monday = first_monday + timedelta(days=14)
 
 meeting_date = third_monday.strftime(date_format)
-thursday = next_thursday.strftime(dow_format)
 
-email_address = 'officestaff@uccdga.org, chairs@uccdga.org'
 
-subject = f"Reports due {thursday} for the {meeting_date} OB Meeting"
 
-message=f"Hello Staff and Committee Chairs,%0a%0a\
-I wanted to remind you to get your reports to Carolyn (carolyn.russell@uccdga.org) by {thursday}, \
-for the {meeting_date} Offical Board meeting.%0a%0aCarolyn will email the compiled reports to the Offical Board on \
-Friday, so they will have time to read them before the {meeting_date} meeting.%0a%0aAlso, please let \
-Carolyn know if you have an item for the full agenda.\
+email_address = 'keavb57@hotmail.com'
+
+subject = f"Draft Agenda for {meeting_date} OB Meeting"
+
+message=f"Hi Karen,%0a%0a\
+I have attached a draft agenda for the {meeting_date} OB meeting. \
+Let me know we need to change anything.  I will send out the agenda on Monday. \
+I appreciate all you do! \
 %0a%0aBlessings,%0a%0aWade"
 
 url = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + email_address + '&su=' + subject + '&body=' + message
