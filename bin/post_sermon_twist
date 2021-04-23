@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+
+import requests
+import glob
+import frontmatter
+import dateutil.parser
+import datetime
+import json
+
+
+sunday = input("Date for Sermon: ")
+
+path = (f"/home/wadeallen/Dropbox/Sermon_Work/{sunday}_sermon.md")
+
+files = glob.glob(path)
+
+for name in files:
+	post = frontmatter.load(name)
+	title = post['title']
+	scripture = (post['scripture'])
+	if type(post['date']) is datetime.date:
+		date = post['date'].strftime('%B %d')
+	else:
+		date = dateutil.parser.parse(post['date']).strftime('%B %d')
+	first_reading = post['first_reading']
+	second_reading = post['second_reading']
+	description = post['summary']
+
+title = date	
+
+content = f"Sermon for {date}\n\n**{title}**\n\n{description}\n\nSermon Scripture: {scripture}\n\nFirst Reading: {first_reading}\n\nSecond Reading: {second_reading}"
+
+data = {'title': date, 'content': content}
+
+url = 'https://twist.com/api/v3/integration_incoming/post_data?install_id=182273&install_token=182273_12f0e1512dee2af4572851d19418a627'
+
+r = requests.post(url = url, data = json.dumps(data))
+
+print(r.text)

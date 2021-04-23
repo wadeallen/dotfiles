@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 
+import requests
 from datetime import date
 from dateutil.relativedelta import relativedelta, TU
-import pyperclip
+import json
 
 today = date.today()
 next_tuesday = today + relativedelta(weekday=TU(+1))
-date = next_tuesday.strftime("%B %d")
+date = next_tuesday.strftime("%B %d")	
 
 text = f"This is a reminder to submit this report by noon on Monday. \
 his will help me form the agenda for Tuesday's meeting. Again, \
@@ -19,10 +20,10 @@ met in your area over the past week?\n\nWhat issues or concerns need to be \
 discussed in the {date} staff meeting?\n\nHow can other staff members \
 help you this week?\n\nWill you be able to attend the {date} meeting?\n\n"
 
+data = {'title': date, 'content': text}
 
-pyperclip.copy(text)
-print (f"Copied info for {date}")
+url = 'https://twist.com/api/v3/integration_incoming/post_data?install_id=182275&install_token=182275_df15c6ad9ce0651a240bbf04f9e96880'
 
+r = requests.post(url = url, data = json.dumps(data))
 
-
-
+print(r.text)

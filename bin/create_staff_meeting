@@ -6,8 +6,11 @@ from dateutil.relativedelta import relativedelta, TU
 today = date.today()
 next_tuesday = today + relativedelta(weekday=TU(+1))
 date = next_tuesday.strftime("%Y-%m-%d")   
+format_date = next_tuesday.strftime("%B %d")   
+
+devos = input(f"Who is leading devotionals on {format_date}")
 
 target = open (f"/home/wadeallen/Downloads/{date}_staff_meeting.md", "w")
-target.write = "This is a test"
+target.write("This is a test")
 target.close ()
 

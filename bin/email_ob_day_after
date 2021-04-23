@@ -26,11 +26,11 @@ third_monday = first_monday + timedelta(days=14)
 meeting_date = third_monday.strftime(date_format)
 thursday = next_thursday.strftime(dow_format)
 
-email_address = 'officestaff@uccdga.org, chairs@uccdga.org'
+email_address = 'officestaff@uccdga.org, officialboard@uccdga.org'
 
 subject = f"Last Night's OB Meeting ({meeting_date})"
 
-message=f"Hello Staff and Committee Chairs,%0a%0a\
+message=f"Hello, Staff and Offical Board members,%0a%0a\
 Thanks for your participation in yesterday's meeting. Karen will compile the minutes for your review \
 in the next few days. For now, I wanted to remind you of a few action items from the meeting.%0a%0a\
 Action Items:%0a%0a\
