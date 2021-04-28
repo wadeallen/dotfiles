@@ -1,0 +1,3 @@
+Firefox | xdg-open firefox
+Todoist | xdg-open https://todoist.com/
+Calendar | xdg-open https://calendar.google.com/
