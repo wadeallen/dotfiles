@@ -4,7 +4,7 @@ filename=$1
 
 fileroot=$(echo ${filename%.*})
 
-$HOME/bin/create_kindle /Users/wadeallen/Dropbox/Preaching/${fileroot}.epub
+$HOME/bin/create_kindle /Users/wadeallen/Documents/Preaching/${fileroot}.epub
 
 echo -n "----- Your sermon (${fileroot} has been moved to your Kindle -----"
 

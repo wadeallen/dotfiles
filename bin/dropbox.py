@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 #
-# Copyright (c) Dropbox, Inc.
+# Copyright (c) Documents, Inc.
 #
 # dropbox
-# Dropbox frontend script
+# Documents frontend script
 # This file is part of nautilus-dropbox 2019.02.14.
 #
 # nautilus-dropbox is free software: you can redistribute it and/or modify
@@ -55,19 +55,19 @@ from operator import methodcaller
 from os.path import relpath
 from posixpath import curdir, sep, pardir, join, abspath, commonprefix
 
-INFO = "Dropbox is the easiest way to share and store your files online. Want to learn more? Head to"
+INFO = "Documents is the easiest way to share and store your files online. Want to learn more? Head to"
 LINK = "https://www.dropbox.com/"
-WARNING = "In order to use Dropbox, you must download the proprietary daemon."
+WARNING = "In order to use Documents, you must download the proprietary daemon."
 GPG_WARNING = "Note: python3-gpg (python3-gpgme for Ubuntu 16.10 and lower) is not installed, we will not be able to verify binary signatures."
-ERROR_CONNECTING = "Trouble connecting to Dropbox servers. Maybe your internet connection is down, or you need to set your http_proxy environment variable."
-ERROR_SIGNATURE = "Downloaded binary does not match Dropbox signature, aborting install."
-ERROR_INVALID_DROPBOX = "Could not start the Dropbox daemon. Make sure your computer meets the minimum requirements:\nhttps://www.dropbox.com/help/desktop-web/system-requirements#desktop"
+ERROR_CONNECTING = "Trouble connecting to Documents servers. Maybe your internet connection is down, or you need to set your http_proxy environment variable."
+ERROR_SIGNATURE = "Downloaded binary does not match Documents signature, aborting install."
+ERROR_INVALID_DROPBOX = "Could not start the Documents daemon. Make sure your computer meets the minimum requirements:\nhttps://www.dropbox.com/help/desktop-web/system-requirements#desktop"
 
 DOWNLOAD_LOCATION_FMT = "https://www.dropbox.com/download?plat=%s"
 SIGNATURE_LOCATION_FMT = "https://www.dropbox.com/download?plat=%s&signature=1"
 
-DOWNLOADING = "Downloading Dropbox... %d%%"
-UNPACKING = "Unpacking Dropbox... %d%%"
+DOWNLOADING = "Downloading Documents... %d%%"
+UNPACKING = "Unpacking Documents... %d%%"
 
 PARENT_DIR = os.path.expanduser("~")
 DROPBOX_DIST_PATH = "%s/.dropbox-dist" % PARENT_DIR
@@ -195,7 +195,7 @@ def verify_signature(key_file, sig_file, plain_file):
 
 def download_file_chunk(url, buf):
     opener = urllib.request.build_opener()
-    opener.addheaders = [('User-Agent', "DropboxLinuxDownloader/2019.02.14")]
+    opener.addheaders = [('User-Agent', "DocumentsLinuxDownloader/2019.02.14")]
 
     with closing(opener.open(url)) as f:
         size = int(f.info()['content-length'])
@@ -253,10 +253,10 @@ class DownloadState(object):
 
     def is_dropbox_valid(self):
         """
-        Validate that Dropbox runs, so we can show an error
+        Validate that Documents runs, so we can show an error
         message to the user if it doesn't work.
 
-        Returns True if Dropbox can run, false otherwise.
+        Returns True if Documents can run, false otherwise.
         """
         f = open("/dev/null", "w")
         try:
@@ -442,7 +442,7 @@ if GUI_AVAILABLE:
 
             def __init__(self):
                 super(DownloadDialog, self).__init__(parent = None,
-                                                     title = "Dropbox Installation")
+                                                     title = "Documents Installation")
 
                 self.download = None
                 self.hovering = False
@@ -622,7 +622,7 @@ class CommandTicker(threading.Thread):
         sys.stderr.flush()
 
 
-class DropboxCommand(object):
+class DocumentsCommand(object):
     class CouldntConnectError(Exception): pass
     class BadConnectionError(Exception): pass
     class EOFError(Exception): pass
@@ -634,7 +634,7 @@ class DropboxCommand(object):
         try:
             self.s.connect(os.path.expanduser('~/.dropbox/command_socket'))
         except socket.error:
-            raise DropboxCommand.CouldntConnectError()
+            raise DocumentsCommand.CouldntConnectError()
         self.f = self.s.makefile("rw", 4096)
 
     def close(self):
@@ -645,9 +645,9 @@ class DropboxCommand(object):
         try:
             toret = self.f.readline().rstrip("\n")
         except socket.error:
-            raise DropboxCommand.BadConnectionError()
+            raise DocumentsCommand.BadConnectionError()
         if toret == '':
-            raise DropboxCommand.EOFError()
+            raise DocumentsCommand.EOFError()
         else:
             return toret
 
@@ -671,7 +671,7 @@ class DropboxCommand(object):
         try:
             ok = self.__readline() == "ok"
         except KeyboardInterrupt:
-            raise DropboxCommand.BadConnectionError("Keyboard interruption detected")
+            raise DocumentsCommand.BadConnectionError("Keyboard interruption detected")
         finally:
             # Tell the ticker to stop.
             ticker_thread.stop()
@@ -703,12 +703,12 @@ class DropboxCommand(object):
 
                 problems.append(line)
 
-            raise DropboxCommand.CommandError("\n".join(problems))
+            raise DocumentsCommand.CommandError("\n".join(problems))
 
     # this is the hotness, auto marshalling
     def __getattr__(self, name):
         try:
-            return super(DropboxCommand, self).__getattr__(name)
+            return super(DocumentsCommand, self).__getattr__(name)
         except:
             def __spec_command(**kw):
                 return self.send_command(str(name), kw)
@@ -742,7 +742,7 @@ def requires_dropbox_running(meth):
         if is_dropbox_running():
             return meth(*n, **kw)
         else:
-            console_print("Dropbox isn't running!")
+            console_print("Documents isn't running!")
     newmeth.__name__ = meth.__name__
     newmeth.__doc__ = meth.__doc__
     return newmeth
@@ -844,11 +844,11 @@ def columnize(list, display_list=None, display_width=None):
 
 @command
 def update(args):
-    """download latest version of Dropbox
+    """download latest version of Documents
 dropbox update
 
-Downloads the latest version of Dropbox. This should not be required
-normally, as Dropbox automatically updates itself.
+Downloads the latest version of Documents. This should not be required
+normally, as Documents automatically updates itself.
     """
     download()
 
@@ -873,7 +873,7 @@ options:
     (options, args) = oparser.parse_args(args)
 
     try:
-        with closing(DropboxCommand()) as dc:
+        with closing(DocumentsCommand()) as dc:
             if options.list:
                 # Listing.
 
@@ -903,7 +903,7 @@ options:
                         return (path, path)
                     try:
                         status = dc.icon_overlay_file_status(path=file_path).get('status', [None])[0]
-                    except DropboxCommand.CommandError as e:
+                    except DocumentsCommand.CommandError as e:
                         path =  "%s (%s)" % (os.path.basename(file_path), e)
                         return (path, path)
 
@@ -982,10 +982,10 @@ options:
                             console_print(name + ":")
                             print_directory(name)
 
-                except DropboxCommand.EOFError:
-                    console_print("Dropbox daemon stopped.")
-                except DropboxCommand.BadConnectionError:
-                    console_print("Dropbox isn't responding!")
+                except DocumentsCommand.EOFError:
+                    console_print("Documents daemon stopped.")
+                except DocumentsCommand.BadConnectionError:
+                    console_print("Documents isn't responding!")
             else:
                 if len(args) == 0:
                     args = [name for name in sorted(os.listdir("."), key=methodcaller('lower')) if type(name) == str]
@@ -1010,10 +1010,10 @@ options:
                     try:
                         status = dc.icon_overlay_file_status(path=fp).get('status', ['unknown'])[0]
                         console_print("%-*s %s" % (indent, file+':', status))
-                    except DropboxCommand.CommandError as e:
+                    except DocumentsCommand.CommandError as e:
                         console_print("%-*s %s" % (indent, file+':', e))
-    except DropboxCommand.CouldntConnectError:
-        console_print("Dropbox isn't running!")
+    except DocumentsCommand.CouldntConnectError:
+        console_print("Documents isn't running!")
 
 @command
 @requires_dropbox_running
@@ -1028,7 +1028,7 @@ This is an alias for filestatus -l
 @command
 @requires_dropbox_running
 def puburl(args):
-    """get public url of a file in your Dropbox's public folder
+    """get public url of a file in your Documents's public folder
 dropbox puburl FILE
 
 Prints out a public url for FILE (which must be in your public folder).
@@ -1038,22 +1038,22 @@ Prints out a public url for FILE (which must be in your public folder).
         return
 
     try:
-        with closing(DropboxCommand()) as dc:
+        with closing(DocumentsCommand()) as dc:
             try:
                 console_print(dc.get_public_link(path=os.path.abspath(args[0])).get('link', ['No Link'])[0])
-            except DropboxCommand.CommandError as e:
+            except DocumentsCommand.CommandError as e:
                 console_print("Couldn't get public url: " + str(e))
-            except DropboxCommand.BadConnectionError:
-                console_print("Dropbox isn't responding!")
-            except DropboxCommand.EOFError:
-                console_print("Dropbox daemon stopped.")
-    except DropboxCommand.CouldntConnectError:
-        console_print("Dropbox isn't running!")
+            except DocumentsCommand.BadConnectionError:
+                console_print("Documents isn't responding!")
+            except DocumentsCommand.EOFError:
+                console_print("Documents daemon stopped.")
+    except DocumentsCommand.CouldntConnectError:
+        console_print("Documents isn't running!")
 
 @command
 @requires_dropbox_running
 def sharelink(args):
-    """get a shared link for a file in your Dropbox
+    """get a shared link for a file in your Documents
 dropbox sharelink FILE
 
 Prints out a shared link for FILE.
@@ -1063,27 +1063,27 @@ Prints out a shared link for FILE.
         return
 
     try:
-        with closing(DropboxCommand()) as dc:
+        with closing(DocumentsCommand()) as dc:
             try:
                 path = os.path.abspath(args[0])
                 link = dc.get_shared_link(path=path).get('link', ['No link'])[0]
                 console_print(link)
-            except DropboxCommand.CommandError as e:
+            except DocumentsCommand.CommandError as e:
                 console_print("Couldn't get shared link: " + str(e))
-            except DropboxCommand.BadConnectionError:
-                console_print("Dropbox isn't responding!")
-            except DropboxCommand.EOFError:
-                console_print("Dropbox daemon stopped.")
-    except DropboxCommand.CouldntConnectError:
-        console_print("Dropbox isn't running!")
+            except DocumentsCommand.BadConnectionError:
+                console_print("Documents isn't responding!")
+            except DocumentsCommand.EOFError:
+                console_print("Documents daemon stopped.")
+    except DocumentsCommand.CouldntConnectError:
+        console_print("Documents isn't running!")
 
 @command
 @requires_dropbox_running
 def proxy(args):
-    """set proxy settings for Dropbox
+    """set proxy settings for Documents
 dropbox proxy MODE [TYPE] [HOST] [PORT] [USERNAME] [PASSWORD]
 
-Set proxy settings for Dropbox.
+Set proxy settings for Documents.
 
 MODE - one of "none", "auto", "manual"
 TYPE - one of "http", "socks4", "socks5" (only valid with "manual" mode)
@@ -1119,23 +1119,23 @@ PASSWORD - (optional) proxy password (only valid with "manual" mode)
         kwargs['type'] = type_
 
     try:
-        with closing(DropboxCommand()) as dc:
+        with closing(DocumentsCommand()) as dc:
             try:
                 dc.set_proxy_settings(**kwargs)
                 console_print('set')
-            except DropboxCommand.CommandError as e:
+            except DocumentsCommand.CommandError as e:
                 console_print("Couldn't set proxy: " + str(e))
-            except DropboxCommand.BadConnectionError:
-                console_print("Dropbox isn't responding!")
-            except DropboxCommand.EOFError:
-                console_print("Dropbox daemon stopped.")
-    except DropboxCommand.CouldntConnectError:
-        console_print("Dropbox isn't running!")
+            except DocumentsCommand.BadConnectionError:
+                console_print("Documents isn't responding!")
+            except DocumentsCommand.EOFError:
+                console_print("Documents daemon stopped.")
+    except DocumentsCommand.CouldntConnectError:
+        console_print("Documents isn't running!")
 
 @command
 @requires_dropbox_running
 def throttle(args):
-    """set bandwidth limits for Dropbox
+    """set bandwidth limits for Documents
 dropbox throttle DOWNLOAD UPLOAD
 
 Set bandwidth limits for file sync.
@@ -1184,18 +1184,18 @@ UPLOAD - one of "unlimited", "auto", or a manual limit in KB/s
         kwargs['upload_limit'] = str(upload_limit)
 
     try:
-        with closing(DropboxCommand()) as dc:
+        with closing(DocumentsCommand()) as dc:
             try:
                 dc.set_bandwidth_limits(**kwargs)
                 console_print('set')
-            except DropboxCommand.CommandError as e:
+            except DocumentsCommand.CommandError as e:
                 console_print("Couldn't set bandwidth limits: " + str(e))
-            except DropboxCommand.BadConnectionError:
-                console_print("Dropbox isn't responding!")
-            except DropboxCommand.EOFError:
-                console_print("Dropbox daemon stopped.")
-    except DropboxCommand.CouldntConnectError:
-        console_print("Dropbox isn't running!")
+            except DocumentsCommand.BadConnectionError:
+                console_print("Documents isn't responding!")
+            except DocumentsCommand.EOFError:
+                console_print("Documents daemon stopped.")
+    except DocumentsCommand.CouldntConnectError:
+        console_print("Documents isn't running!")
 
 @command
 @requires_dropbox_running
@@ -1203,14 +1203,14 @@ def status(args):
     """get current status of the dropboxd
 dropbox status
 
-Prints out the current status of the Dropbox daemon.
+Prints out the current status of the Documents daemon.
     """
     if len(args) != 0:
         console_print(status.__doc__,linebreak=False)
         return
 
     try:
-        with closing(DropboxCommand()) as dc:
+        with closing(DocumentsCommand()) as dc:
             try:
                 lines = dc.get_dropbox_status()['status']
                 if len(lines) == 0:
@@ -1221,18 +1221,18 @@ Prints out the current status of the Dropbox daemon.
                 grab_link_url_if_necessary()
             except KeyError:
                 console_print("Couldn't get status: daemon isn't responding")
-            except DropboxCommand.CommandError as e:
+            except DocumentsCommand.CommandError as e:
                 console_print("Couldn't get status: " + str(e))
-            except DropboxCommand.BadConnectionError:
-                console_print("Dropbox isn't responding!")
-            except DropboxCommand.EOFError:
-                console_print("Dropbox daemon stopped.")
-    except DropboxCommand.CouldntConnectError:
-        console_print("Dropbox isn't running!")
+            except DocumentsCommand.BadConnectionError:
+                console_print("Documents isn't responding!")
+            except DocumentsCommand.EOFError:
+                console_print("Documents daemon stopped.")
+    except DocumentsCommand.CouldntConnectError:
+        console_print("Documents isn't running!")
 
 @command
 def running(argv):
-    """return whether Dropbox is running
+    """return whether Documents is running
 dropbox running
 
 Returns 1 if running, and 0 if not running.
@@ -1245,38 +1245,38 @@ def stop(args):
     """stop dropboxd
 dropbox stop
 
-Stops the Dropbox daemon.
+Stops the Documents daemon.
     """
     try:
-        with closing(DropboxCommand()) as dc:
+        with closing(DocumentsCommand()) as dc:
             try:
                 dc.tray_action_hard_exit()
-            except DropboxCommand.BadConnectionError:
-                console_print("Dropbox isn't responding!")
-            except DropboxCommand.EOFError:
-                console_print("Dropbox daemon stopped.")
-    except DropboxCommand.CouldntConnectError:
-        console_print("Dropbox isn't running!")
+            except DocumentsCommand.BadConnectionError:
+                console_print("Documents isn't responding!")
+            except DocumentsCommand.EOFError:
+                console_print("Documents daemon stopped.")
+    except DocumentsCommand.CouldntConnectError:
+        console_print("Documents isn't running!")
 
 #returns true if link is necessary
 def grab_link_url_if_necessary():
     try:
-        with closing(DropboxCommand()) as dc:
+        with closing(DocumentsCommand()) as dc:
             try:
                 link_url = dc.needs_link().get("link_url", None)
                 if link_url is not None:
-                    console_print("To link this computer to a Dropbox account, visit the following url:\n%s" % link_url[0])
+                    console_print("To link this computer to a Documents account, visit the following url:\n%s" % link_url[0])
                     return True
                 else:
                     return False
-            except DropboxCommand.CommandError:
+            except DocumentsCommand.CommandError:
                 pass
-            except DropboxCommand.BadConnectionError:
-                console_print("Dropbox isn't responding!")
-            except DropboxCommand.EOFError:
-                console_print("Dropbox daemon stopped.")
-    except DropboxCommand.CouldntConnectError:
-        console_print("Dropbox isn't running!")
+            except DocumentsCommand.BadConnectionError:
+                console_print("Documents isn't responding!")
+            except DocumentsCommand.EOFError:
+                console_print("Documents daemon stopped.")
+    except DocumentsCommand.CouldntConnectError:
+        console_print("Documents isn't running!")
 
 @command
 @requires_dropbox_running
@@ -1285,8 +1285,8 @@ def lansync(argv):
 dropbox lansync [y/n]
 
 options:
-  y  Dropbox will use LAN sync (default)
-  n  Dropbox will not use LAN sync
+  y  Documents will use LAN sync (default)
+  n  Documents will not use LAN sync
     """
     if len(argv) != 1:
         console_print(lansync.__doc__, linebreak=False)
@@ -1303,7 +1303,7 @@ options:
     if should_lansync is None:
         console_print(lansync.__doc__,linebreak=False)
     else:
-        with closing(DropboxCommand()) as dc:
+        with closing(DocumentsCommand()) as dc:
             dc.set_lan_sync(lansync='enabled' if should_lansync else 'disabled')
 
 
@@ -1317,17 +1317,17 @@ dropbox exclude remove [DIRECTORY] [DIRECTORY] ...
 
 "list" prints a list of directories currently excluded from syncing.
 "add" adds one or more directories to the exclusion list, then
-resynchronizes Dropbox.
+resynchronizes Documents.
 "remove" removes one or more directories from the exclusion list, then
-resynchronizes Dropbox.
+resynchronizes Documents.
 
 With no arguments, executes "list".
 
-Any specified path must be within Dropbox.
+Any specified path must be within Documents.
     """
     if len(args) == 0:
         try:
-            with closing(DropboxCommand()) as dc:
+            with closing(DocumentsCommand()) as dc:
                 try:
                     lines = [relpath(path) for path in dc.get_ignore_set()['ignore_set']]
                     lines.sort()
@@ -1339,17 +1339,17 @@ Any specified path must be within Dropbox.
                             console_print(str(line))
                 except KeyError:
                     console_print("Couldn't get ignore set: daemon isn't responding")
-                except DropboxCommand.CommandError as e:
+                except DocumentsCommand.CommandError as e:
                     if e.args[0].startswith("No command exists by that name"):
                         console_print("This version of the client does not support this command.")
                     else:
                         console_print("Couldn't get ignore set: " + str(e))
-                except DropboxCommand.BadConnectionError:
-                    console_print("Dropbox isn't responding!")
-                except DropboxCommand.EOFError:
-                    console_print("Dropbox daemon stopped.")
-        except DropboxCommand.CouldntConnectError:
-            console_print("Dropbox isn't running!")
+                except DocumentsCommand.BadConnectionError:
+                    console_print("Documents isn't responding!")
+                except DocumentsCommand.EOFError:
+                    console_print("Documents daemon stopped.")
+        except DocumentsCommand.CouldntConnectError:
+            console_print("Documents isn't running!")
     elif len(args) == 1 and args[0] == "list":
         exclude([])
     elif len(args) >= 2:
@@ -1358,7 +1358,7 @@ Any specified path must be within Dropbox.
         absolute_paths = [os.path.abspath(path) for path in paths]
         if sub_command == "add":
             try:
-                with closing(DropboxCommand(timeout=None)) as dc:
+                with closing(DocumentsCommand(timeout=None)) as dc:
                     try:
                         result = dc.ignore_set_add(paths=absolute_paths)
                         if result["ignored"]:
@@ -1368,20 +1368,20 @@ Any specified path must be within Dropbox.
                                 console_print(str(line))
                     except KeyError:
                         console_print("Couldn't add ignore path: daemon isn't responding")
-                    except DropboxCommand.CommandError as e:
+                    except DocumentsCommand.CommandError as e:
                         if e.args[0].startswith("No command exists by that name"):
                             console_print("This version of the client does not support this command.")
                         else:
                             console_print("Couldn't get ignore set: " + str(e))
-                    except DropboxCommand.BadConnectionError as e:
-                        console_print("Dropbox isn't responding! [%s]" % e)
-                    except DropboxCommand.EOFError:
-                        console_print("Dropbox daemon stopped.")
-            except DropboxCommand.CouldntConnectError:
-                console_print("Dropbox isn't running!")
+                    except DocumentsCommand.BadConnectionError as e:
+                        console_print("Documents isn't responding! [%s]" % e)
+                    except DocumentsCommand.EOFError:
+                        console_print("Documents daemon stopped.")
+            except DocumentsCommand.CouldntConnectError:
+                console_print("Documents isn't running!")
         elif sub_command == "remove":
             try:
-                with closing(DropboxCommand(timeout=None)) as dc:
+                with closing(DocumentsCommand(timeout=None)) as dc:
                     try:
                         result = dc.ignore_set_remove(paths=absolute_paths)
                         if result["removed"]:
@@ -1391,17 +1391,17 @@ Any specified path must be within Dropbox.
                                 console_print(str(line))
                     except KeyError:
                         console_print("Couldn't remove ignore path: daemon isn't responding")
-                    except DropboxCommand.CommandError as e:
+                    except DocumentsCommand.CommandError as e:
                         if e.args[0].startswith("No command exists by that name"):
                             console_print("This version of the client does not support this command.")
                         else:
                             console_print("Couldn't get ignore set: " + str(e))
-                    except DropboxCommand.BadConnectionError as e:
-                        console_print("Dropbox isn't responding! [%s]" % e)
-                    except DropboxCommand.EOFError:
-                        console_print("Dropbox daemon stopped.")
-            except DropboxCommand.CouldntConnectError:
-                console_print("Dropbox isn't running!")
+                    except DocumentsCommand.BadConnectionError as e:
+                        console_print("Documents isn't responding! [%s]" % e)
+                    except DocumentsCommand.EOFError:
+                        console_print("Documents daemon stopped.")
+            except DocumentsCommand.CouldntConnectError:
+                console_print("Documents isn't running!")
         else:
             console_print(exclude.__doc__, linebreak=False)
             return
@@ -1414,7 +1414,7 @@ def start(argv):
     """start dropboxd
 dropbox start [-i]
 
-Starts the Dropbox daemon, dropboxd. If dropboxd is already running,
+Starts the Documents daemon, dropboxd. If dropboxd is already running,
 this will do nothing.
 
 options:
@@ -1426,15 +1426,15 @@ options:
     # first check if dropbox is already running
     if is_dropbox_running():
         if not grab_link_url_if_necessary():
-            console_print("Dropbox is already running!")
+            console_print("Documents is already running!")
         return
 
-    console_print("Starting Dropbox...", linebreak=False)
+    console_print("Starting Documents...", linebreak=False)
     console_flush()
     if not start_dropbox():
         if not should_install:
             console_print()
-            console_print("The Dropbox daemon is not installed!")
+            console_print("The Documents daemon is not installed!")
             console_print("Run \"dropbox start -i\" to install the daemon")
             return
 
@@ -1479,12 +1479,12 @@ def reroll_autostart(should_autostart):
 
 @command
 def autostart(argv):
-    """automatically start Dropbox at login
+    """automatically start Documents at login
 dropbox autostart [y/n]
 
 options:
-  n  Dropbox will not start automatically at login
-  y  Dropbox will start automatically at login (default)
+  n  Documents will not start automatically at login
+  y  Documents will start automatically at login (default)
 
 Note: May only work on current Ubuntu distributions.
     """
@@ -1507,11 +1507,11 @@ Note: May only work on current Ubuntu distributions.
 
 @command
 def version(argv):
-    """print version information for Dropbox
+    """print version information for Documents
 dropbox version
 
-Prints the version information for the Dropbox proprietary daemon, if
-it's installed, and the Dropbox command-line interface.
+Prints the version information for the Documents proprietary daemon, if
+it's installed, and the Documents command-line interface.
     """
     dropbox_daemon_version = "Not installed"
     try:
@@ -1520,8 +1520,8 @@ it's installed, and the Dropbox command-line interface.
     except OSError:
         pass
 
-    console_print("Dropbox daemon version: %s" % dropbox_daemon_version)
-    console_print("Dropbox command-line interface version: 2019.02.14")
+    console_print("Documents daemon version: %s" % dropbox_daemon_version)
+    console_print("Documents command-line interface version: 2019.02.14")
 
 @command
 def help(argv):
@@ -1545,7 +1545,7 @@ command.
     console_print("unknown command '%s'" % argv[0], f=sys.stderr)
 
 def usage():
-    console_print("Dropbox command-line interface\n")
+    console_print("Documents command-line interface\n")
     console_print("commands:\n")
     console_print("Note: use dropbox help <command> to view usage for a specific command.\n")
     out = []

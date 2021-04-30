@@ -47,6 +47,6 @@ uri = client.upload(file_name, data={
 
 print ('Your video URI is: {}'.format(uri))
 
-target = open (home + '/Dropbox/Textbits/vimeo.txt', 'w')
+target = open (home + '/Documents/Textbits/vimeo.txt', 'w')
 target.write ('vimeo: ' + uri[8:100])
 target.close ()

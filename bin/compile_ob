@@ -2,7 +2,7 @@
 
 file=$1
 fileroot=$(echo ${file%.*})
-directory="/home/wadeallen/Dropbox/OB"
+directory="/home/wadeallen/Documents/OB"
 
 month=$(date +"%Y-%m")
 

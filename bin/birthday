@@ -10,5 +10,5 @@ then
 fi
 
 cd $HOME/Desktop/
-cat ${file} | sed 's/.....$//' | sort -t'/' -n -k2 > $HOME/Dropbox/Pandoc/Pandoc_Visitor/Birthdays/${month}_birthdays.csv
+cat ${file} | sed 's/.....$//' | sort -t'/' -n -k2 > $HOME/Documents/Pandoc/Pandoc_Visitor/Birthdays/${month}_birthdays.csv
 echo 'Birthday file has been created file in Pandoc_Visitor/Birthdays directory'

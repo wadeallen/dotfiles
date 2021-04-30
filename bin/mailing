@@ -2,7 +2,7 @@
 
 from re import search
 
-with open('/home/wadeallen/Dropbox/Pandoc/Pandoc_Visitor/visitor.csv') as f:
+with open('/home/wadeallen/Documents/Pandoc/Pandoc_Visitor/visitor.csv') as f:
     # reads the file line by line
     text = f.readlines()
     # counts the total number of lines in the file and subtracts the header

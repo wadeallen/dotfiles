@@ -7,5 +7,5 @@ if [ $# -eq 0 ]
     echo "add category as argument"
     exit
 fi
-ledger -f $HOME/Dropbox/Ledger/ledger.ledger register $1 --begin ${YEAR}-01-01 --end ${YEAR}-12-31
+ledger -f $HOME/Documents/Ledger/ledger.ledger register $1 --begin ${YEAR}-01-01 --end ${YEAR}-12-31
 

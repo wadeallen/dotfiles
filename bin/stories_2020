@@ -22,14 +22,14 @@ def format_slug(text):
 	slug = re.sub("[\(\[].*?[\)\]]", "", slug)
 	return slug
 
-includes_dir = '/home/wadeallen/Dropbox/Compile/bulletin/includes/'
+includes_dir = '/home/wadeallen/Documents/Compile/bulletin/includes/'
 
 # get current visitor
 current_visitor = includes_dir + 'current_visitor.tex'
 open(current_visitor,  "w").close()
 
 visitor_df = pd.read_csv('/home/wadeallen/Sites/fbcmuncie_2020/data/visitors.csv', sep=',', nrows=1, header=None)
-deadline_file = '/home/wadeallen/Dropbox/Textbits/deadline.txt'
+deadline_file = '/home/wadeallen/Documents/Textbits/deadline.txt'
 deadline = open(deadline_file,"r+") 
 deadline_data = deadline.readlines()
 visitor_next_month = (deadline_data[1].rstrip())
@@ -41,8 +41,8 @@ for m in visitor_df.values:
 		currentvisitor.write(f'\\subsection{{{month} Visitor}} \n\n The {month} Visitor is now available on the church website. You can download it at \\textsl{{fbcmuncie.org/visitor}}. \n\n\\hspace*{{0pt}}\\hfill \\ovalbox{{\\small \\deadline {visitor_next_month} Visitor deadline: {visitor_deadline_date}}}\n\n \\vfill \n\n')
 
 
-# move to directory in Dropbox to do the work
-stories_dir = '/home/wadeallen/Dropbox/Compile/stories/'
+# move to directory in Documents to do the work
+stories_dir = '/home/wadeallen/Documents/Compile/stories/'
 os.chdir(stories_dir)
 
 # delete old files
@@ -134,7 +134,7 @@ for story in stories:
 
 
 # Create LaTeX file for Bulletin 2020 (non-events)
-bulletin_path = '/home/wadeallen/Dropbox/Compile/bulletin/'
+bulletin_path = '/home/wadeallen/Documents/Compile/bulletin/'
 os.system('rm ' + bulletin_path + 'articles.txt')
 article_list = []
 for story in stories:
@@ -170,7 +170,7 @@ for article in article_list:
 		bulletin_file.write('\\vspace{\\fill}\n\n')
 
 # create LaTeX file for bulletin events
-bulletin_path = '/home/wadeallen/Dropbox/Compile/bulletin/'
+bulletin_path = '/home/wadeallen/Documents/Compile/bulletin/'
 event_list = []
 for story in stories:
 	post = frontmatter.load(story)
@@ -236,7 +236,7 @@ for event in event_list:
 weekly_file = includes_dir + 'weekly_events.tex'
 open(weekly_file,  "w").close()
 	
-df = pd.read_csv('/home/wadeallen/Dropbox/Compile/bulletin/calendar.tsv', sep='\t')
+df = pd.read_csv('/home/wadeallen/Documents/Compile/bulletin/calendar.tsv', sep='\t')
 days = df['sdate'].unique().tolist()
 
 with open(weekly_file, "a") as weekly:
@@ -256,7 +256,7 @@ with open(weekly_file, "a") as weekly:
 
 
 # # Create file for Visitor
-# visitor_path = '/home/wadeallen/Dropbox/Pandoc/Pandoc_Visitor/'
+# visitor_path = '/home/wadeallen/Documents/Pandoc/Pandoc_Visitor/'
 # os.system('rm ' + visitor_path + 'articles.txt')
 # article_list = []
 # for story in stories:

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SUNDAY=$(date -d 'sun' +'%Y-%m-%d')
-DIRECTORY=$HOME/Dropbox/Slides
+DIRECTORY=$HOME/Documents/Slides
 
 scp -P 27 ${DIRECTORY}/${SUNDAY}_slides/*.jpg fbcmuncie@building.fbcmuncie.org:/Users/fbcmuncie/Desktop/Sermon_Slides/
 echo "Slides moved to Mac Mini for ${SUNDAY}"

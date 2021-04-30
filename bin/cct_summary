@@ -7,7 +7,7 @@ year=`date +%Y`
 monthdigit=`date +%m`
 month=`date +%B`
 
-DIRECTORY=$HOME/Dropbox/Administration/CCT_Summaries/$year
+DIRECTORY=$HOME/Documents/Administration/CCT_Summaries/$year
 
 if	[ -z "$filename" ]
 then

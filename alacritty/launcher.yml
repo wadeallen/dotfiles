@@ -4,7 +4,7 @@ window:
   # (changes require restart)
   dimensions:
     columns: 50
-    lines: 10
+    lines: 11
 
   decorations: none
 
@@ -49,7 +49,7 @@ font:
     style: Regular
 
   # Point size
-  size: 20.0
+  size: 18.0
 
 live_config_reload: true
 

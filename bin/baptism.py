@@ -66,7 +66,7 @@ day = custom_strftime('{S}', baptism_date)
 month = baptism_date.strftime('%B')
 year = baptism_date.strftime('%Y')
 
-filename =(home + '/Dropbox/Administration/Certificates/Baptism/Baptisms/' + date + "_" + slug + '.md')
+filename =(home + '/Documents/Administration/Certificates/Baptism/Baptisms/' + date + "_" + slug + '.md')
 
 if os.path.isfile(filename):
 	print("File already exists")

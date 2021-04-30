@@ -29,7 +29,7 @@ for name in files:
         postdate = post['date']
     else:
         postdate = parser.parse(post['date'])
-    target = open (home + '/Dropbox/Pandoc/Pandoc_Bulletin/meta.tex', 'w')
+    target = open (home + '/Documents/Pandoc/Pandoc_Bulletin/meta.tex', 'w')
     target.write ('\def\sundaydate{' + postdate.strftime('%b %d, %Y') + '}\n\def\sermontitle{' + post['title'] + '}\n\def\scripture{' + post['scripture'] + '}\n\input{../numbers}\n')
     target.close()
 
@@ -40,6 +40,6 @@ for name in files:
         postdate = post['date']
     else:
         postdate = parser.parse(post['date'])
-    target = open (home + '/Dropbox/Compile/bulletin/meta.tex', 'w')
+    target = open (home + '/Documents/Compile/bulletin/meta.tex', 'w')
     target.write ('\def\sundaydate{' + postdate.strftime('%b %d, %Y') + '}\n\def\sermontitle{' + post['title'] + '}\n\def\scripture{' + post['scripture'] + '}\n')
     target.close()

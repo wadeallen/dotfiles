@@ -3,6 +3,6 @@ Type=Application
 Encoding=UTF-8
 Name=Mileage Report
 Comment=opens mileage report
-Exec=/snap/bin/chromium --force-device-scale-factor=1.5 https://docs.google.com/spreadsheets/d/1zzhGL1Uqc_uzDKjJu7BVHUuC5IqQsrXFCTJAsnwrDmk/edit 
+Exec=firefox https://docs.google.com/spreadsheets/d/1zzhGL1Uqc_uzDKjJu7BVHUuC5IqQsrXFCTJAsnwrDmk/edit 
 Icon=/home/wadeallen/Pictures/mileage-report.png
 Terminal=false

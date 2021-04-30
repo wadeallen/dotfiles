@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source /home/wadeallen/Dropbox/Config_Files/config.sh
+source /home/wadeallen/Documents/Config_Files/config.sh
 
 home_url="https://home.wadeallen.me/api/services/switch/toggle"
 

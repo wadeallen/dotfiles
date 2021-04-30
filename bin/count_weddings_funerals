@@ -1,7 +1,7 @@
 #!/bin/bash
 
-FUNERAL='/home/wadeallen/Dropbox/Funeral_Work'
-WEDDING='/home/wadeallen/Dropbox/Wedding_Work'
+FUNERAL='/home/wadeallen/Documents/Funeral_Work'
+WEDDING='/home/wadeallen/Documents/Wedding_Work'
 
 START=2008
 END=$(date +'%Y')

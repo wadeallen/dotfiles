@@ -12,7 +12,7 @@ format = "%B %d"
 path_format = "%Y-%m-%d"
 sunday = sys.argv[1]
 
-path = ('/home/wadeallen/Dropbox/Sermon_Work/{}_sermon.md'.format(sunday))
+path = ('/home/wadeallen/Documents/Sermon_Work/{}_sermon.md'.format(sunday))
 files = glob.glob(path)
 for name in files:
 	post = frontmatter.load(name)

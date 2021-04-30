@@ -2,5 +2,4 @@
 
 passage=$1
 
-/snap/bin/chromium --force-device-scale-factor=1.5 "https://www.biblegateway.com/passage/?search=${passage}&version=NIV&interface=print" &
-# /snap/bin/chromium --force-device-scale-factor=1.5 "https://netbible.org/bible/${passage}"
+firefox "https://www.biblegateway.com/passage/?search=${passage}&version=NIV&interface=print" &

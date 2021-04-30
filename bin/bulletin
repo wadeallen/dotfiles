@@ -1,7 +1,7 @@
 #!/bin/bash
 
-DIRECTORY=$HOME/Dropbox/Compile/bulletin
-ARCHIVE=$HOME/Dropbox/Bulletin_Archives
+DIRECTORY=$HOME/Documents/Compile/bulletin
+ARCHIVE=$HOME/Documents/Bulletin_Archives
 EDITING=$HOME/Editing
 
 SUNDAY=$(date -d 'sun' +'%Y-%m-%d')

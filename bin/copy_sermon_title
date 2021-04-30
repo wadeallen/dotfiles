@@ -17,7 +17,7 @@ def checkKey(dict, key):
 		return key
 
 
-post = frontmatter.load('/home/wadeallen/Dropbox/Textbits/video-data.txt')
+post = frontmatter.load('/home/wadeallen/Documents/Textbits/video-data.txt')
 title = checkKey(post, 'title')
 summary = checkKey(post, 'summary')
 pyperclip.copy(title)

@@ -17,7 +17,7 @@ parser.add_argument("-f", "--filename", help="File name", default=today)
 args = parser.parse_args()
 
 # opens blog post and extracts the title from the Blog
-f = open(home + '/Dropbox/Drafts/' + args.filename + '.markdown')
+f = open(home + '/Documents/Drafts/' + args.filename + '.markdown')
 for line in f.readlines():
 	if 'title:' in line:
 		blog_title = line.strip('title: ')
@@ -30,6 +30,6 @@ for line in f.readlines():
 f.close()
 
 #moves the blog post to the Jekyll site
-shutil.move(home + '/Dropbox/Drafts/' + args.filename + '.markdown', home + '/Sites/fbcmuncie_2020/content/blog/'+ args.filename + '-' + slug + '.md')
+shutil.move(home + '/Documents/Drafts/' + args.filename + '.markdown', home + '/Sites/fbcmuncie_2020/content/blog/'+ args.filename + '-' + slug + '.md')
 #prints a confirmation message
 print( "Success! {}-{}.markdown moved to blog post folder".format(args.filename, slug))

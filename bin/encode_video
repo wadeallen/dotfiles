@@ -4,7 +4,7 @@ for filename in *.MP4
 do
 	fileroot=$(echo ${filename%.*})
 	HandBrakeCLI --preset "Vimeo YouTube 720p30" -i ${filename} -o ${fileroot}.mp4
-	mv ${fileroot}.mp4 /home/wadeallen/Dropbox/Video_Production/Video/
+	mv ${fileroot}.mp4 /home/wadeallen/Documents/Video_Production/Video/
 done
 
 

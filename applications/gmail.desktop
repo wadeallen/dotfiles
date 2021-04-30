@@ -3,6 +3,6 @@ Type=Application
 Encoding=UTF-8
 Name=Gmail
 Comment=opens gmail
-Exec=/snap/bin/chromium --force-device-scale-factor=1.5 https://mail.google.com
+Exec=firefox https://mail.google.com
 Icon=/home/wadeallen/Pictures/gmail.png
 Terminal=false

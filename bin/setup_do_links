@@ -1,10 +1,10 @@
 #! /bin/bash
 
-# Run this script on new Ubuntu installs once Dropbox has been installed and synced
+# Run this script on new Ubuntu installs once Documents has been installed and synced
 
 cd /home/wadeallen/ &
-ln -s Dropbox/Editing/ Editing &
-ln -s Dropbox/Print/ Print &
-ln -s Dropbox/Scans/ Scans &
-ln -s Dropbox/bibles bibles
+ln -s Documents/Editing/ Editing &
+ln -s Documents/Print/ Print &
+ln -s Documents/Scans/ Scans &
+ln -s Documents/bibles bibles
 

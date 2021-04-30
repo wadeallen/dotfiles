@@ -10,7 +10,7 @@ import json
 
 sunday = input("Date for Sermon: ")
 
-path = (f"/home/wadeallen/Dropbox/Sermon_Work/{sunday}_sermon.md")
+path = (f"/home/wadeallen/Documents/Sermon_Work/{sunday}_sermon.md")
 
 files = glob.glob(path)
 

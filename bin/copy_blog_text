@@ -1,4 +1,4 @@
 #! /bin/bash
-grab_blog_text > /home/wadeallen/Dropbox/Textbits/blog_text.md &&
-pandoc -s /home/wadeallen/Dropbox/Textbits/blog_text.md --metadata title="Blog entry this week" | xclip -t text/html -selection clipboard
+grab_blog_text > /home/wadeallen/Documents/Textbits/blog_text.md &&
+pandoc -s /home/wadeallen/Documents/Textbits/blog_text.md --metadata title="Blog entry this week" | xclip -t text/html -selection clipboard
 echo "Copied blog text to clipboard"

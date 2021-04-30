@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DIRECTORY=$HOME/Dropbox/Pandoc/Pandoc_Visitor
+DIRECTORY=$HOME/Documents/Pandoc/Pandoc_Visitor
 NEXT_MONTH=$(date -d '1 month' +'%Y-%m')
 
 cd $DIRECTORY

@@ -3,7 +3,7 @@
 # file=$1
 # fileroot=$(echo ${file%.*})
 # current_year=`date +'%Y'`
-directory="/home/wadeallen/Dropbox/Staff_Meetings"
+directory="/home/wadeallen/Documents/Staff_Meetings"
 
 tuesday=$(date -d "next Tuesday" +"%Y-%m-%d")
 tuesday_format=$(date -d "next Tuesday" +"%B %d, %Y")

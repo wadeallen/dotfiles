@@ -1,6 +1,6 @@
 #! /bin/bash
 
-# Run this script on new Ubuntu installs once Dropbox has been installed and synced
+# Run this script on new Ubuntu installs once Documents has been installed and synced
 
 cd /home/wadeallen/ &
 rm -Rf Documents &
@@ -9,12 +9,12 @@ rm -Rf Pictures &
 rm -Rf Public &
 rm -Rf Templates &
 rm -Rf Videos &
-ln -s Dropbox/Editing/ Editing &
-ln -s Dropbox/Music/ Music &
-ln -s Dropbox/Pictures/ Pictures &
-ln -s Dropbox/Print/ Print &
-ln -s Dropbox/Scans/ Scans &
-ln -s Dropbox/Sites/ Sites &
-ln -s Dropbox/Videos/ Videos &
-ln -s Dropbox/bibles bibles
+ln -s Documents/Editing/ Editing &
+ln -s Documents/Music/ Music &
+ln -s Documents/Pictures/ Pictures &
+ln -s Documents/Print/ Print &
+ln -s Documents/Scans/ Scans &
+ln -s Documents/Sites/ Sites &
+ln -s Documents/Videos/ Videos &
+ln -s Documents/bibles bibles
 

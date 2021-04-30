@@ -1,6 +1,6 @@
 #! /bin/bash
 
-directory="/home/wadeallen/Dropbox/Staff_Meetings"
+directory="/home/wadeallen/Documents/Staff_Meetings"
 
 last_tue=$(date -d "last Tuesday" +"%Y-%m-%d")
 today=$(date +"%Y-%m-%d")

@@ -26,5 +26,5 @@ then
 fi
 
 
-cd /Users/wade/Dropbox/Administration/Donation_Letters
+cd /Users/wade/Documents/Administration/Donation_Letters
 pandoc donation_letter.md -o donation_letter_${TO_DAY}.pdf --template=donation_thank_you.tex --variable=name:"${name}" --variable=address1:"${address1}" --variable=address2:"${address2}"
