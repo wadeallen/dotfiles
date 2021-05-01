@@ -19,7 +19,7 @@ iconPath = os.path.dirname(__file__)+"/bible.svg"
 
 home = expanduser("~")
 
-sermon_path = f"{home}/Dropbox/Sermon_Work"
+sermon_path = f"{home}/Documents/Sermon_Work"
 
 today = date.today() 
 format = '%Y-%m-%d'

@@ -1,8 +1,6 @@
 #!/bin/bash
 
-rsync -aLv --delete ~/Documents /media/wadeallen/Backup/
-rsync -aLv --delete ~/dotfiles /media/wadeallen/Backup/
-rsync -aLv --delete ~/Downloads /media/wadeallen/Backup/
-
+rsync -aLv --delete ~/Documents /media/wadeallen/backup/
+rsync -aLv --delete ~/Pictures /media/wadeallen/backup/
 
 

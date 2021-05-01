@@ -3,6 +3,6 @@ Type=Application
 Encoding=UTF-8
 Name=Notes
 Comment=opens apple notes
-Exec=/snap/bin/chromium --force-device-scale-factor=1.5 https://www.icloud.com/notes/
+Exec=firefox https://www.icloud.com/notes/
 Icon=/home/wadeallen/Pictures/notes.png
 Terminal=false

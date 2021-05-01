@@ -3,6 +3,6 @@ Type=Application
 Encoding=UTF-8
 Name=Church Reimbursements
 Comment=opens church reimbursements sheet
-Exec=/snap/bin/chromium --force-device-scale-factor=1.5 https://docs.google.com/spreadsheets/d/1ghtBI_Fovms4ss6M1XY_eetlzBq5jmHfRcfqfuZ734s/edit 
+Exec=firefox https://docs.google.com/spreadsheets/d/1ghtBI_Fovms4ss6M1XY_eetlzBq5jmHfRcfqfuZ734s/edit 
 Icon=/home/wadeallen/Pictures/receipt.png
 Terminal=false

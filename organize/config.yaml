@@ -20,7 +20,7 @@ rules:
             - Target Card
           case_sensitive: true
     actions:
-      - move: /home/wadeallen/Statements/Target/
+      - move: /home/wadeallen/Documents/Statements/Target/
   - folders: ~/Scans
     subfolders: false
     filters:
@@ -30,7 +30,7 @@ rules:
             - Housing Receipt
           case_sensitive: true
     actions:
-      - move: "/home/wadeallen/Receipts/Housing/Misc Housing/"
+      - move: "/home/wadeallen/Documents/Receipts/Housing/Misc Housing/"
 # Wedding Covid Releases
   - folders: ~/Scans
     subfolders: false
@@ -41,7 +41,7 @@ rules:
             - Wedding_Covid_Release
           case_sensitive: true
     actions:
-      - move: /home/wadeallen/Wedding_Releases/
+      - move: /home/wadeallen/Documents/Wedding_Releases/
 # Vectren
   - folders: ~/Scans
     subfolders: false
@@ -52,7 +52,7 @@ rules:
             - Vectren Bill
           case_sensitive: true
     actions:
-      - move: /home/wadeallen/Receipts/Housing/Utilities/Gas/
+      - move: /home/wadeallen/Documents/Receipts/Housing/Utilities/Gas/
 # Three Rivers
   - folders: ~/Scans
     subfolders: false
@@ -63,7 +63,7 @@ rules:
             - Three Rivers Credit Union
           case_sensitive: true
     actions:
-      - move: "/home/wadeallen/Statements/Three Rivers Credit Union/"
+      - move: "/home/wadeallen/Documents/Statements/Three Rivers Credit Union/"
 # Thrivent Rivers
   - folders: ~/Scans
     subfolders: false
@@ -74,7 +74,7 @@ rules:
             - Thrivent Credit Union
           case_sensitive: true
     actions:
-      - move: "/home/wadeallen/Statements/Thrivent Credit Union/"
+      - move: "/home/wadeallen/Documents/Statements/Thrivent Credit Union/"
 # Yorktown Municipal Utilities
   - folders: ~/Scans
     subfolders: false
@@ -85,7 +85,7 @@ rules:
             - Yorktown Municipal Utilities
           case_sensitive: true
     actions:
-      - move: "/home/wadeallen/Receipts/Housing/Utilities/Water/"
+      - move: "/home/wadeallen/Documents/Receipts/Housing/Utilities/Water/"
 # Indiana Michigan Power 
   - folders: ~/Scans
     subfolders: false
@@ -96,7 +96,7 @@ rules:
             - I&MBill_
           case_sensitive: true
     actions:
-      - move: "/home/wadeallen/Receipts/Housing/Utilities/Electric/"
+      - move: "/home/wadeallen/Documents/Receipts/Housing/Utilities/Electric/"
 # Maurices
   - folders: ~/Scans
     subfolders: false
@@ -107,7 +107,7 @@ rules:
             - Maurices Statement
           case_sensitive: true
     actions:
-      - move: "/home/wadeallen/Statements/Maurices/"
+      - move: "/home/wadeallen/Documents/Statements/Maurices/"
 # Teachers Credit Union
   - folders: ~/Scans
     subfolders: false
@@ -118,7 +118,7 @@ rules:
             - Teachers Credit Union
           case_sensitive: true
     actions:
-      - move: "/home/wadeallen/Statements/Teachers Credit Union/"
+      - move: "/home/wadeallen/Documents/Statements/Teachers Credit Union/"
 # Evansville Teachers Credit Union
   - folders: ~/Scans
     subfolders: false
@@ -129,7 +129,7 @@ rules:
             - Evansville Teachers Credit Union
           case_sensitive: true
     actions:
-      - move: "/home/wadeallen/Statements/Evansville Teachers Credit Union/"
+      - move: "/home/wadeallen/Documents/Statements/Evansville Teachers Credit Union/"
 # Budget Reports 
   - folders: ~/Desktop
     subfolders: false
@@ -137,7 +137,7 @@ rules:
       - extension: pdf
       - regex: '\d\d\d\d-\d\d_Balance_Sheet'
     actions:
-      - move: "/home/wadeallen/Administration/Budget_Reports/"
+      - move: "/home/wadeallen/Documents/Administration/Budget_Reports/"
 # Budget Reports 
   - folders: ~/Desktop
     subfolders: false
@@ -145,7 +145,7 @@ rules:
       - extension: pdf
       - regex: '\d\d\d\d-\d\d_Profit_Loss'
     actions:
-      - move: "/home/wadeallen/Administration/Budget_Reports/"
+      - move: "/home/wadeallen/Documents/Administration/Budget_Reports/"
 # Caresource
   - folders: ~/Scans
     subfolders: false
@@ -156,7 +156,7 @@ rules:
             - CareSource Health Insurance
           case_sensitive: true
     actions:
-      - move: "/home/wadeallen/Receipts/Insurance/CareSource/"
+      - move: "/home/wadeallen/Documents/Receipts/Insurance/CareSource/"
 # Anna Vanderbilt Insurance
   - folders: ~/Scans
     subfolders: false
@@ -167,7 +167,7 @@ rules:
             - Anna Vanderbilt Health Insurance
           case_sensitive: true
     actions:
-      - move: "/home/wadeallen/Anna/Anna_Vanderbilt/"
+      - move: "/home/wadeallen/Documents/Anna/Anna_Vanderbilt/"
 # Kohls
   - folders: ~/Scans
     subfolders: false
@@ -178,7 +178,7 @@ rules:
             - Kohls Statement
           case_sensitive: true
     actions:
-      - move: "/home/wadeallen/Statements/Kohls/"
+      - move: "/home/wadeallen/Documents/Statements/Kohls/"
 # TJ Maxx
   - folders: ~/Scans
     subfolders: false
@@ -189,7 +189,7 @@ rules:
             - TJ Maxx Statement
           case_sensitive: true
     actions:
-      - move: "/home/wadeallen/Receipts/TJ Maxx/"
+      - move: "/home/wadeallen/Documents/Receipts/TJ Maxx/"
 # Ball State Credit Union
   - folders: ~/Scans
     subfolders: false
@@ -200,7 +200,7 @@ rules:
             - Ball State Credit Union
           case_sensitive: true
     actions:
-      - move: "/home/wadeallen/Receipts/Ball_State_Credit_Union/"
+      - move: "/home/wadeallen/Documents/Receipts/Ball_State_Credit_Union/"
 # Verizon Wireless
   - folders: ~/Scans
     subfolders: false
@@ -211,7 +211,7 @@ rules:
             - Verizon
           case_sensitive: true
     actions:
-      - move: "/home/wadeallen/Receipts/Wireless_Phone/Verizon/"
+      - move: "/home/wadeallen/Documents/Receipts/Wireless_Phone/Verizon/"
 # United Church Receipts
   - folders: ~/Scans
     subfolders: false
@@ -222,7 +222,7 @@ rules:
             - United Church Receipt
           case_sensitive: true
     actions:
-      - move: "/home/wadeallen/Receipts/United Church Receipts/"
+      - move: "/home/wadeallen/Documents/Receipts/United Church Receipts/"
 # RG&E Statements
   - folders: ~/Scans
     subfolders: false
@@ -233,7 +233,7 @@ rules:
             - RGEBill
           case_sensitive: true
     actions:
-      - move: "/home/wadeallen/Receipts/Housing/Utilities/Electric/"
+      - move: "/home/wadeallen/Documents/Receipts/Housing/Utilities/Electric/"
 # Offering Count
   - folders: ~/Scans
     subfolders: false
@@ -244,7 +244,7 @@ rules:
             - Offering_Count
           case_sensitive: true
     actions:
-      - move: "/home/wadeallen/Offering_Count/"
+      - move: "/home/wadeallen/Documents/Offering_Count/"
 # ISOE Grant
   - folders: ~/Scans
     subfolders: false
@@ -255,7 +255,7 @@ rules:
             - Paycheck Stub ISOE Grant
           case_sensitive: true
     actions:
-      - move: "/home/wadeallen/ISOE/"
+      - move: "/home/wadeallen/Documents/ISOE/"
 # MVP Explanation of Benefits
   - folders: ~/Scans
     subfolders: false
@@ -266,7 +266,7 @@ rules:
             - _mvp_eob
           case_sensitive: true
     actions:
-      - move: "/home/wadeallen/Receipts/Insurance/MVP/EOB Statements/"
+      - move: "/home/wadeallen/Documents/Receipts/Insurance/MVP/EOB Statements/"
 # City Mini Storage Receipts
   - folders: ~/Scans
     subfolders: false
@@ -277,7 +277,7 @@ rules:
             - _City_Mini_Storage
           case_sensitive: true
     actions:
-      - move: "/home/wadeallen/Housing/City_Storage/"
+      - move: "/home/wadeallen/Documents/Housing/City_Storage/"
 # U of R Medicine
   - folders: ~/Scans
     subfolders: false
@@ -288,4 +288,4 @@ rules:
             - _UofR_Medicine
           case_sensitive: true
     actions:
-      - move: "/home/wadeallen/Medical/UofR_Medicine/"
+      - move: "/home/wadeallen/Documents/Medical/UofR_Medicine/"

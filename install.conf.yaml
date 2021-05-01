@@ -15,7 +15,7 @@
     ~/.config/organize : organize
     ~/.config/alacritty : alacritty
     ## ~/.themes : themes
-    ## ~/.local/share/albert/org.albert.extension.python/modules : Albert_Extensions
-    ## ~/.local/share/applications : applications
+    ~/.local/share/albert/org.albert.extension.python/modules : Albert_Extensions
+    ~/.local/share/applications : applications
     ##    ~/.config/gtk-3.0 : gtk-3.0
 

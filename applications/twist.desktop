@@ -3,6 +3,6 @@ Type=Application
 Encoding=UTF-8
 Name=Twist
 Comment=opens twist
-Exec=/snap/bin/chromium --force-device-scale-factor=1.5 https://twist.com/a/
+Exec=firefox https://twist.com/a/
 Icon=/home/wadeallen/Pictures/twist.png
 Terminal=false
