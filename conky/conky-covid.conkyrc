@@ -145,10 +145,10 @@ update_interval = 1,
 };
 
 conky.text = [[
-${font FontAwesome:size=25}  ${font Roboto:pixelsize=25} SUN:${voffset 10}
-${font Roboto:pixelsize=20}${color0}${execi 60 python3 ~/bin/sun}
+${font FontAwesome:size=16}  ${font Roboto:pixelsize=16} SUN:${voffset 10}
+${font Roboto:pixelsize=16}${color0}${execi 60 python3 ~/bin/sun}
 ${hr}${color}${voffset 10}
-${font FontAwesome:size=25}  ${font Roboto:pixelsize=25} TEMPS: ${voffset 10}
-${font Roboto:pixelsize=20}${color0}${execi 60 python3 ~/bin/temps}
+${font FontAwesome:size=16}  ${font Roboto:pixelsize=16} TEMPS: ${voffset 10}
+${font Roboto:pixelsize=16}${color0}${execi 60 python3 ~/bin/temps}
 ${voffset 10}
 ]]

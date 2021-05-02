@@ -1,1 +1,7 @@
-from datetime import date;format = "%Y-%m-%d";today = date.today();date = today.strftime(format);print(date, end='')
+from datetime import date
+import pyclip
+
+format = "%Y-%m-%d"
+today = date.today()
+date = today.strftime(format)
+pyclip.copy(date)

@@ -1,6 +1,7 @@
 from datetime import date
 from dateutil.relativedelta import relativedelta, SU
+import pyclip
 format = "%Y-%m-%d"
 today = date.today()
 date = today.strftime(format)
-print("Target Card " + date)
+pyclip.copy("Target Card " + date)
