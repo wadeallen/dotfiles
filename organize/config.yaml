@@ -9,7 +9,7 @@ rules:
             - Benefit Wallet
           case_sensitive: true
     actions:
-      - move: ~/Receipts/Medical/Benefit_Wallet/
+      - move: ~/Documents/Receipts/Medical/Benefit_Wallet/
 # Target Card
   - folders: ~/Scans
     subfolders: false

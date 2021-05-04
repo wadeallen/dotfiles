@@ -1,0 +1,5 @@
+#!/bin/bash
+
+rsync -aviuh --progress --stats --delete-after ~/Documents /media/wadeallen/Scans/
+
+
