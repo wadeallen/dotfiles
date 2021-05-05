@@ -15,7 +15,7 @@ from email import encoders
 home = expanduser("~")
 
 curline = vim.current.line
-compile_path = home + '/Dropbox/Preaching/'
+compile_path = home + '/Documents/Preaching/'
 print_folder = home + '/Print/'
 
 def python_input(message = 'input'):
@@ -29,8 +29,8 @@ def Convert_Kindle():
   output = os.path.splitext(os.path.basename(vim.current.buffer.name))[0]+'.epub'
   # Convert to mobi
   kindle_file = os.path.splitext(os.path.basename(vim.current.buffer.name))[0]+'.mobi'
-  subprocess.call("pandoc " + vim.current.buffer.name + " -o " + compile_path + output + " --css=" + home + "/Dropbox/Pandoc/Pandoc_Sermon/epub.css --template sermon_epub.html --filter=abbrevs.py", shell=True)
-  subprocess.call("kindlegen " + compile_path + output + " > " + home + "/Dropbox/Preaching/log.txt", shell=True)
+  subprocess.call("pandoc " + vim.current.buffer.name + " -o " + compile_path + output + " --css=" + home + "/Documents/Pandoc/Pandoc_Sermon/epub.css --template sermon_epub.html --filter=abbrevs.py", shell=True)
+  subprocess.call("kindlegen " + compile_path + output + " > " + home + "/Documents/Preaching/log.txt", shell=True)
   # Email to Kindle
   fromaddr = config.username
   toaddr  = config.kindle
@@ -61,7 +61,7 @@ def Convert_Kindle():
 def Print_Backup():
   output = os.path.splitext(os.path.basename(vim.current.buffer.name))[0]+'.pdf'
   subprocess.call("pandoc " + vim.current.buffer.name + " -o " + print_folder + output + " --template booklet.tex", shell=True)
-  print ("Backup Booklet of " + os.path.basename(vim.current.buffer.name) + " is in the Print Folder of Dropbox")
+  print ("Backup Booklet of " + os.path.basename(vim.current.buffer.name) + " is in the Print Folder of Documents")
   return
 
 def Notes():
