@@ -289,3 +289,14 @@ rules:
           case_sensitive: true
     actions:
       - move: "/home/wadeallen/Documents/Medical/UofR_Medicine/"
+# MVP EOB
+  - folders: ~/Scans
+    subfolders: false
+    filters:
+      - extension: pdf
+      - filename:
+          contains:
+            - _mvp.eob
+          case_sensitive: true
+    actions:
+      - move: "/home/wadeallen/Documents/Receipts/Insurance/MVP/EOB Statements"

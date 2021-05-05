@@ -4,4 +4,4 @@ import pyclip
 format = "%Y-%m-%d"
 today = date.today()
 date = today.strftime(format)
-pyclip.copy(f"Thrivent Credit Union {date}")
+pyclip.copy(f"{date}_mvp.eob")
