@@ -10,7 +10,7 @@ next_tuesday = today + relativedelta(weekday=TU(+1))
 date = next_tuesday.strftime("%B %d")	
 
 text = f"This is a reminder to submit this report by noon on Monday. \
-his will help me form the agenda for Tuesday's meeting. Again, \
+This will help me form the agenda for Tuesday's meeting. Again, \
 you do not have to answer every question. These questions will serve as a \
 prompt to get you thinking about what can be shared ahead of time (in writing) \
 and what needs to be addressed in the meeting.\n\nWhat has happened in your \

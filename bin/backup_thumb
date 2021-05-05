@@ -1,5 +1,4 @@
 #!/bin/bash
 
-rsync -aviuh --progress --stats --delete-after ~/Documents /media/wadeallen/Scans/
-
+rsync -aLv --delete ~/Documents /media/wadeallen/Backup/
 
