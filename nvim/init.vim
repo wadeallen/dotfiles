@@ -154,3 +154,6 @@ nnoremap j gj
 nnoremap k gk
 
 "Settings for mkdx
+"
+"Disable python2 support
+let g:loaded_python_provider = 0

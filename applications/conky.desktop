@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Start Conky
+Comment=Start Conky 
+Exec=/home/wadeallen/bin/startconky
+Icon=/home/wadeallen/Pictures/conky.png
+Terminal=false

@@ -60,7 +60,7 @@ def Convert_Kindle():
 
 def Print_Backup():
   output = os.path.splitext(os.path.basename(vim.current.buffer.name))[0]+'.pdf'
-  subprocess.call("pandoc " + vim.current.buffer.name + " -o " + print_folder + output + " --template booklet.tex", shell=True)
+  subprocess.call("pandoc " + vim.current.buffer.name + " -o " + print_folder + output + " --template booklet.tex --pdf-engine=xelatex", shell=True)
   print ("Backup Booklet of " + os.path.basename(vim.current.buffer.name) + " is in the Print Folder of Documents")
   return
 

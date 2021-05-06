@@ -13,7 +13,7 @@
     ~/.enscript : enscript
     ~/.config/fish : fish
     ~/.config/organize : organize
-    ~/.config/alacritty : alacritty
+    # ~/.config/alacritty : alacritty
     ## ~/.themes : themes
     ~/.local/share/albert/org.albert.extension.python/modules : Albert_Extensions
     ~/.local/share/applications : applications

@@ -1,5 +1,4 @@
 #!/bin/bash
-sleep 10
 conky -b -c /home/wadeallen/dotfiles/conky/conky-wade.conkyrc &
 conky -b -c /home/wadeallen/dotfiles/conky/conky-covid.conkyrc &
 exit

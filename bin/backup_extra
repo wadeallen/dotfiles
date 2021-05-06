@@ -2,5 +2,5 @@
 
 rsync -aLv --delete ~/Documents /media/wadeallen/Backup/
 rsync -aLv --delete ~/Pictures /media/wadeallen/Backup/
-
+rsync -aLv --delete ~/bibles /media/wadeallen/Backup/
 
