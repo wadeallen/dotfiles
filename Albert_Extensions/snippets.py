@@ -13,7 +13,7 @@ __version__ = "0.4.2"
 __triggers__ = "sn "
 __authors__ = "Wade Allen"
 
-iconPath = os.path.dirname(__file__)+"/bible.svg"
+iconPath = os.path.dirname(__file__)+"/copy.svg"
 
 home = expanduser("~")
 

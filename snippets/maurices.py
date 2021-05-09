@@ -3,4 +3,4 @@ from dateutil.relativedelta import relativedelta, SU
 format = "%Y-%m-%d"
 today = date.today()
 date = today.strftime(format)
-print("Maurices Statement " + date)
+print(f"Maurices Statement {date}", end='')
