@@ -2,15 +2,54 @@
 
 from datetime import date
 from dateutil.relativedelta import relativedelta, TU
+import shutil
+import os.path
+
+path = "/home/wadeallen/Documents/Staff_Meetings"
+
+devos = input("Who is leading devotionals: ")
 
 today = date.today()
-next_tuesday = today + relativedelta(weekday=TU(+1))
-date = next_tuesday.strftime("%Y-%m-%d")   
-format_date = next_tuesday.strftime("%B %d")   
+week_from_today = today + relativedelta(days=+7)
+tuesday = today + relativedelta(weekday=TU(+1))
+last_tuesday = today + relativedelta(weekday=TU(-1))
+# date = next_tuesday.strftime("%Y-%m-%d")   
+# format_date = next_tuesday.strftime("%B %d") 
 
-devos = input(f"Who is leading devotionals on {format_date}")
+def archive(tue):
+	original_md = f"{path}/{tue}_staff_meeting.md"
+	target_md = f"{path}/Old_Staff_Meetings/{tue}_staff_meeting.md"
+	original_pdf = f"{path}/{tue}_agenda.pdf"
+	target_pdf = f"{path}/Old_Staff_Meetings/{tue}_agenda.pdf"
+	if os.path.isfile(original_md):
+		shutil.move(original_md,target_md)
+	if os.path.isfile(original_pdf):
+		shutil.move(original_pdf,target_pdf)
 
-target = open (f"/home/wadeallen/Downloads/{date}_staff_meeting.md", "w")
-target.write("This is a test")
-target.close ()
+def create_agenda(tue):
+	filename = f"{path}/{tue}_staff_meeting.md"
+	target = open (filename, 'w')
+	target.write(f"\n# Devotional and Prayer ({devos})")
+	target.write("\n\n# New and Goods\n\n# Agenda Items\n\n## COVID Guideline Updates")
+	target.write("\n\n## Other Items\n\n## Announcements for Sunday\n\n# Adjourn")
+	target.close()
+
+if today.isoweekday() == 2:
+	# if it is Tuesday, look for a week from today
+	archive(last_tuesday)
+	create_agenda(week_from_today)
+else:
+	# if it is past Tuesday, just look for next Tuesday
+	archive(last_tuesday)
+	create_agenda(tuesday)
+
+
+
+
+
+# devos = input(f"Who is leading devotionals on {format_date}")
+
+# target = open (f"/home/wadeallen/Downloads/{date}_staff_meeting.md", "w")
+# target.write("This is a test")
+# target.close ()
 
