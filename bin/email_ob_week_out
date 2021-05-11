@@ -32,9 +32,10 @@ subject = f"Reports due {thursday} for the {meeting_date} OB Meeting"
 
 message=f"Hello Staff and Committee Chairs,%0a%0a\
 I wanted to remind you to get your reports to Carolyn (carolyn.russell@uccdga.org) by {thursday}, \
-for the {meeting_date} Offical Board meeting.%0a%0aCarolyn will email the compiled reports to the Offical Board on \
+for the {meeting_date} Official Board meeting.%0a%0aCarolyn will email the compiled reports to the Official Board on \
 Friday, so they will have time to read them before the {meeting_date} meeting.%0a%0aAlso, please let \
-Carolyn know if you have an item for the full agenda.\
+Carolyn know if you have an item for the full agenda.%0a%0a\
+Finally, this is a reminder that we will be meeting in person next week. Please let Carolyn know if you would like to join via Zoom. \
 %0a%0aBlessings,%0a%0aWade"
 
 url = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + email_address + '&su=' + subject + '&body=' + message

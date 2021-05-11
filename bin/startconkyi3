@@ -1,7 +1,0 @@
-#!/bin/bash
-sleep 10
-conky -b -c /home/wadeallen/dotfiles/conky/conky-i3.conkyrc &
-conky -b -c /home/wadeallen/dotfiles/conky/conky-i3-left.conkyrc &
-sleep 10
-bash ~/bin/change_wallpaper_i3 &
-exit
