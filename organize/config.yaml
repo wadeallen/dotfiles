@@ -300,3 +300,14 @@ rules:
           case_sensitive: true
     actions:
       - move: "/home/wadeallen/Documents/Receipts/Insurance/MVP/EOB Statements"
+# MVP EOB
+  - folders: ~/Scans
+    subfolders: false
+    filters:
+      - extension: pdf
+      - filename:
+          contains:
+            - _Paystub
+          case_sensitive: true
+    actions:
+      - move: "/home/wadeallen/Documents/Paychecks/2021/"
