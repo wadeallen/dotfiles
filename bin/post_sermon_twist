@@ -6,6 +6,7 @@ import frontmatter
 import dateutil.parser
 import datetime
 import json
+import config
 
 
 sunday = input("Date for Sermon: ")
@@ -32,7 +33,7 @@ content = f"Sermon for {date}\n\n**{title}**\n\n{description}\n\nSermon Scriptur
 
 data = {'title': date, 'content': content}
 
-url = 'https://twist.com/api/v3/integration_incoming/post_data?install_id=182273&install_token=182273_12f0e1512dee2af4572851d19418a627'
+url = f"https://twist.com/api/v3/integration_incoming/post_data?install_id=182273&install_token={config.twist_token}"
 
 r = requests.post(url = url, data = json.dumps(data))
 

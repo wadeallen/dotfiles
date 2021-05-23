@@ -1,0 +1,6 @@
+#!/bin/bash
+
+rsync -av --delete -e 'ssh -p 2231' ~/bibles home.wadeallen.me:~/Laptop/
+rsync -av --delete -e 'ssh -p 2231' ~/Documents home.wadeallen.me:~/Laptop/
+# rsync -av --delete -e 'ssh -p 2231' ~/Pictures home.wadeallen.me:~/Laptop/
+

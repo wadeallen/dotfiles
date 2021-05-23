@@ -48,6 +48,7 @@ addTodo(-4, "send agenda to Karen for input", wade_uid)
 addTodo(-3, "email reports for meeting/ask for additional agenda items", carolyn_uid)
 addTodo(0, "email agenda/Zoom Link reminder", wade_uid)
 addTodo(1, "email summmary/action items", wade_uid)
+addTodo(1, "archive agenda and reports (run create_ob_meeting)", wade_uid)
 
 
 api.commit()

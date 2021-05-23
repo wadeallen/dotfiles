@@ -4,6 +4,7 @@ import requests
 from datetime import date
 from dateutil.relativedelta import relativedelta, TU
 import json
+import config
 
 today = date.today()
 next_tuesday = today + relativedelta(weekday=TU(+1))
@@ -22,7 +23,7 @@ help you this week?\n\nWill you be able to attend the {date} meeting?\n\n"
 
 data = {'title': date, 'content': text}
 
-url = 'https://twist.com/api/v3/integration_incoming/post_data?install_id=182275&install_token=182275_df15c6ad9ce0651a240bbf04f9e96880'
+url = f"https://twist.com/api/v3/integration_incoming/post_data?install_id=182275&install_token={config.twist_token}"
 
 r = requests.post(url = url, data = json.dumps(data))
 

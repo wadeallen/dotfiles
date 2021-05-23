@@ -1,0 +1,64 @@
+#!/usr/bin/env python3
+
+from datetime import date
+from dateutil.relativedelta import relativedelta, TU
+import shutil
+import os.path
+from datetime import datetime, timedelta
+import calendar
+
+path = "/home/wadeallen/Documents/OB"
+
+today = date.today()
+first_this_month = date.today().replace(day=1)
+
+# This month
+this_month=first_this_month.month
+this_year=first_this_month.year
+this_first_monday = first_this_month + timedelta(days=((0-calendar.monthrange(this_year,this_month)[0])+7)%7)
+# # 0 is monday of week
+this_second_monday = this_first_monday + timedelta(days=7)
+this_third_monday = this_first_monday + timedelta(days=14)
+
+# Next
+first_next_month = date.today().replace(day=1) + relativedelta(months=1)
+next_month=first_next_month.month
+next_year=first_next_month.year
+next_first_monday = first_next_month + timedelta(days=((0-calendar.monthrange(next_year,next_month)[0])+7)%7)
+# # 0 is monday of week
+next_second_monday = next_first_monday + timedelta(days=7)
+next_third_monday = next_first_monday + timedelta(days=14)
+full_date=next_third_monday.strftime('%B %d, %Y')
+full_month=next_third_monday.strftime('%B %Y')
+
+def archive(day):
+	original_md = f"{path}/{day}_obm.md"
+	target_md = f"{path}/Past_Meetings/{day}_obm.md"
+	original_pdf = f"{path}/{day}_ob_agenda.pdf"
+	target_pdf = f"{path}/Past_Meetings/{day}_ob_agenda.pdf"
+	original_pastor = f"{path}/{day}_pastors_report.md"
+	target_pastor = f"{path}/Past_Meetings/{day}_pastors_report.md"
+	if os.path.isfile(original_md):
+		shutil.move(original_md,target_md)
+	if os.path.isfile(original_pdf):
+		shutil.move(original_pdf,target_pdf)
+	if os.path.isfile(original_pastor):
+		shutil.move(original_pastor,target_pastor)
+
+def create_agenda(day):
+	filename = f"{path}/{day}_obm.md"
+	target = open (filename, 'w')
+	target.write(f"---\ndate: {full_date}\n---")
+	target.write("\n\n# Opening Prayer (Wade)\n\nApproval of Docket\n\n# Correspondence (Karen)\n\n# Youth Reports (Grace and Natalie)\n\n# Consent Agenda (Wade)\n\nApproval of minutes and submitted reports\n\n# Old Business\n\n# New Business\n\n# Prayer Concerns and Adjournment")
+	target.close()
+
+def create_pastor(day):
+	filename = f"{path}/{day}_pastors_report.md"
+	target = open (filename, 'w')
+	target.write(f"Pastor's Report for {full_month}")
+
+archive(this_third_monday)
+create_agenda(next_third_monday)
+create_pastor(next_third_monday)
+
+
