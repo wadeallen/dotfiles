@@ -59,6 +59,9 @@ hi LineNr ctermbg=none
 " Replace all is aliased to S.
 	nnoremap S :%s//g<Left><Left>
 
+" Replace all curly braces
+	nnoremap <leader>C :%s/[“”]/"/g 
+
 " Replace all is aliased to S.
 	nnoremap <leader>Y :%s*https://youtu.be/**g
 

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+list_calendar
+list_todos
+
