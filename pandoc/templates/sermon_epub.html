@@ -27,6 +27,11 @@ $endfor$
 $if(date)$
   <h3 class="date">$date$</h3>
 $endif$
+<div style="page-break-before:always;"></div>
+$for(include-before)$
+<h1>Words of Assurance</h1>
+$include-before$
+$endfor$
 $else$
 $body$
 $endif$

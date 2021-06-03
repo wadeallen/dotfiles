@@ -17,6 +17,12 @@ home = expanduser("~")
 curline = vim.current.line
 compile_path = home + '/Documents/Preaching/'
 print_folder = home + '/Print/'
+woa_folder = "/home/wadeallen/Documents/Sermon_Work/Words_of_Assurance/"
+output_pdf = os.path.splitext(os.path.basename(vim.current.buffer.name))[0]+'.pdf'
+pandoc_print = f"pandoc -s {vim.current.buffer.name} -o {print_folder}{output_pdf} --template booklet.tex --pdf-engine=xelatex --include-before-body={woa_folder}{output_pdf[0:7]}_woa.md"
+output_epub = os.path.splitext(os.path.basename(vim.current.buffer.name))[0]+'.epub'
+kindle_file = os.path.splitext(os.path.basename(vim.current.buffer.name))[0]+'.mobi'
+pandoc_epub = f"pandoc {vim.current.buffer.name} -o {compile_path}{output_epub} --css={home}/Documents/Pandoc/Pandoc_Sermon/epub.css --template sermon_epub.html --include-before-body={woa_folder}{output_pdf[0:7]}_woa.md"
 
 def python_input(message = 'input'):
 
@@ -25,22 +31,18 @@ def python_input(message = 'input'):
   return vim.eval('user_input')
 
 def Convert_Kindle():
-  # Convert file to epub
-  output = os.path.splitext(os.path.basename(vim.current.buffer.name))[0]+'.epub'
-  # Convert to mobi
-  kindle_file = os.path.splitext(os.path.basename(vim.current.buffer.name))[0]+'.mobi'
-  subprocess.call("pandoc " + vim.current.buffer.name + " -o " + compile_path + output + " --css=" + home + "/Documents/Pandoc/Pandoc_Sermon/epub.css --template sermon_epub.html --filter=abbrevs.py", shell=True)
-  subprocess.call("kindlegen " + compile_path + output + " > " + home + "/Documents/Preaching/log.txt", shell=True)
+  subprocess.call(pandoc_epub, shell=True)
+  subprocess.call(f"kindlegen {compile_path}{output_epub} > {home}/Documents/Preaching/log.txt", shell=True)
   # Email to Kindle
   fromaddr = config.username
   toaddr  = config.kindle
   msg = MIMEMultipart()
   msg['From'] = fromaddr
   msg['To'] = toaddr
-  msg['Subject'] = "Emailed " + output
+  msg['Subject'] = "Emailed " + output_epub
   body = "This is a scripted email to send file to kindle"
   msg.attach(MIMEText(body, 'plain'))
-  body = output + " has been emailed to your Kindle"
+  body = output_epub + " has been emailed to your Kindle"
   msg.attach(MIMEText(body, 'plain'))
   filename = (kindle_file)
   attachment = open(compile_path + kindle_file, "rb")
@@ -59,27 +61,17 @@ def Convert_Kindle():
   return
 
 def Print_Backup():
-  output = os.path.splitext(os.path.basename(vim.current.buffer.name))[0]+'.pdf'
-  subprocess.call("pandoc " + vim.current.buffer.name + " -o " + print_folder + output + " --template booklet.tex --pdf-engine=xelatex", shell=True)
+  subprocess.call(pandoc_print, shell=True)
   print ("Backup Booklet of " + os.path.basename(vim.current.buffer.name) + " is in the Print Folder of Documents")
   return
 
-def Notes():
-  output = os.path.splitext(os.path.basename(vim.current.buffer.name))[0]+'.pdf'
-  subprocess.call("pandoc " + vim.current.buffer.name + " -o " + print_folder + output + " --template notes_template.tex", shell=True)
-  print ("Backup Booklet of " + os.path.basename(vim.current.buffer.name) + " is in the Print Folder")
-  return
+def Test():
+  print(pandoc_print)
 
 PYEND
 endfunction
 call DefPython()
 
-" command! NIV py3 Scripture("NIV")
-" command! ESV py3 Scripture("ESV")
-" command! KJV py3 Scripture("KJV")
-" command! Bi py3 Scripture("NIV")
 command! Kindle py3 Convert_Kindle()
 command! Backup py3 Print_Backup()
-command! Notes py3 Notes()
-
-
+command! Test py3 Test()

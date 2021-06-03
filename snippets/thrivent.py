@@ -1,7 +1,6 @@
 from datetime import date
 from dateutil.relativedelta import relativedelta, SU
-import pyclip
 format = "%Y-%m-%d"
 today = date.today()
 date = today.strftime(format)
-pyclip.copy(f"Thrivent Credit Union {date}")
+print(f"Thrivent Credit Union {date}", end='')
