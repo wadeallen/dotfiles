@@ -311,3 +311,14 @@ rules:
           case_sensitive: true
     actions:
       - move: "/home/wadeallen/Documents/Paychecks/2021/"
+# Thompson Bill
+  - folders: ~/Scans
+    subfolders: false
+    filters:
+      - extension: pdf
+      - filename:
+          contains:
+            - Thompson Bill
+          case_sensitive: true
+    actions:
+      - move: "/home/wadeallen/Documents/Medical/Thompson Hospital/"

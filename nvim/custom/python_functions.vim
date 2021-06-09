@@ -17,12 +17,11 @@ home = expanduser("~")
 curline = vim.current.line
 compile_path = home + '/Documents/Preaching/'
 print_folder = home + '/Print/'
-woa_folder = "/home/wadeallen/Documents/Sermon_Work/Words_of_Assurance/"
 output_pdf = os.path.splitext(os.path.basename(vim.current.buffer.name))[0]+'.pdf'
-pandoc_print = f"pandoc -s {vim.current.buffer.name} -o {print_folder}{output_pdf} --template booklet.tex --pdf-engine=xelatex --include-before-body={woa_folder}{output_pdf[0:7]}_woa.md"
+pandoc_print = f"pandoc -s {vim.current.buffer.name} -o {print_folder}{output_pdf} --template booklet.tex --pdf-engine=xelatex"
 output_epub = os.path.splitext(os.path.basename(vim.current.buffer.name))[0]+'.epub'
 kindle_file = os.path.splitext(os.path.basename(vim.current.buffer.name))[0]+'.mobi'
-pandoc_epub = f"pandoc {vim.current.buffer.name} -o {compile_path}{output_epub} --css={home}/Documents/Pandoc/Pandoc_Sermon/epub.css --template sermon_epub.html --include-before-body={woa_folder}{output_pdf[0:7]}_woa.md"
+pandoc_epub = f"pandoc {vim.current.buffer.name} -o {compile_path}{output_epub} --css={home}/Documents/Pandoc/Pandoc_Sermon/epub.css --template sermon_epub.html"
 
 def python_input(message = 'input'):
 
