@@ -4,8 +4,7 @@ file=$1
 fileroot=$(echo ${file%.*})
 directory="/home/wadeallen/Documents/OB"
 
-month=$(date +"%Y-%m")
+meeting_date=$(date -d "Monday" +"%Y-%m-%d")
 
-pandoc ${directory}/${month}_obm.md -o ${directory}/${month}_ob_agenda.pdf --template ob_agenda.tex
-
+pandoc ${directory}/${meeting_date}_obm.md -o ${directory}/${meeting_date}_ob_agenda.pdf --template ob_agenda.tex
 

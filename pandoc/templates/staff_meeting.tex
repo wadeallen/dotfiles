@@ -1,52 +1,8 @@
-%%
-%% This is file `./samples/agenda.tex',
-%% generated with the docstrip utility.
-%%
-%% The original source files were:
-%%
-%% meetingmins.dtx  (with options: `agenda')
-%% ----------------------------------------------------------------------
-%% 
-%% meetingmins - A LaTeX class for formatting minutes of meetings
-%% 
-%% Copyright (C) 2011-2013 by Brian D. Beitzel <brian@beitzel.com>
-%% 
-%% This work may be distributed and/or modified under the
-%% conditions of the LaTeX Project Public License (LPPL), either
-%% version 1.3c of this license or (at your option) any later
-%% version.  The latest version of this license is in the file:
-%% 
-%% http://www.latex-project.org/lppl.txt
-%% 
-%% Users may freely modify these files without permission, as long as the
-%% copyright line and this statement are maintained intact.
-%% 
-%% ----------------------------------------------------------------------
-%% 
 \documentclass[12pt,agenda]{meetingmins}
 
 \usepackage{hyperref}
 
-%% Optionally, the following text could be set in the file
-%% department.min in this folder, then add the option 'department'
-%% in the \documentclass line of this .tex file:
-%%\setcommittee{Department of Instruction}
-%%
-%%\setmembers{
-%%  \chair{B.~Smart},
-%%  B.~Brave,
-%%  D.~Claire,
-%%  B.~Gone
-%%}
-
 \setcommittee{The United Church Staff Meeting}
-
-\setmembers{
-  \chair{B.~Smart},
-  B.~Brave,
-  D.~Claire,
-  B.~Gone
-}
 
 \setdate{$date_format$}
 
@@ -55,42 +11,17 @@
 
 $body$
 
-\vspace{1em}
+% \vspace{1em}
 
-The next meeting will be $next_week$ at 10 AM 
+% The next meeting will be $next_week$ at 10 AM 
 
-\vspace{5mm}
+% \vspace{5mm}
 
-Who is leading devotional next week? \rule{3cm}{0.15mm}
+% Who is leading devotional next week? \rule{3cm}{0.15mm}
 
-\vspace{5mm}
+% \vspace{5mm}
 
-Announcements and staff point person for Sunday, $sunday$? \bf{$staff$}
-
+%% Announcements and staff point person for Sunday, $sunday$? {$staff$}
 
 \end{document}
-%% 
-%% Copyright (C) 2011-2013 by Brian D. Beitzel <brian@beitzel.com>
-%% 
-%% This work may be distributed and/or modified under the
-%% conditions of the LaTeX Project Public License (LPPL), either
-%% version 1.3c of this license or (at your option) any later
-%% version.  The latest version of this license is in the file:
-%% 
-%% http://www.latex-project.org/lppl.txt
-%% 
-%% Users may freely modify these files without permission, as long as the
-%% copyright line and this statement are maintained intact.
-%% 
-%% This work is "maintained" (as per LPPL maintenance status) by
-%% Brian D. Beitzel.
-%% 
-%% This work consists of the file  meetingmins.dtx
-%% and the derived files           meetingmins.cls,
-%%                                 sampleminutes.tex,
-%%                                 department.min,
-%%                                 README.txt, and
-%%                                 meetingmins.pdf.
-%% 
-%%
-%% End of file `./samples/agenda.tex'.
+

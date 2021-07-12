@@ -1,0 +1,7 @@
+#!/bin/bash
+
+rsync -aLv --delete ~/Documents /run/media/wadeallen/Backup/
+rsync -aLv --delete ~/Pictures /run/media/wadeallen/Backup/
+rsync -aLv --delete ~/bibles /run/media/wadeallen/Backup/
+rsync -aLv --delete ~/dotfiles /run/media/wadeallen/Backup/
+

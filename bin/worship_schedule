@@ -15,7 +15,7 @@ next_month = today + relativedelta(months=1)
 next_month_month = next_month.strftime("%m")
 next_month_year = next_month.strftime("%Y")
 
-path = ('/home/wadeallen/Documents/Sermon_Work/' + next_month_year + '-' + next_month_month + '*_sermon.md')
+path = ('/home/wadeallen/Documents/Sermon_Work/' + next_month_year + '-' + next_month_month + '*.md')
 
 files = glob.glob(path)
 files = sorted(files)

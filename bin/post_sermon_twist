@@ -17,7 +17,7 @@ files = glob.glob(path)
 
 for name in files:
 	post = frontmatter.load(name)
-	title = post['title']
+	sermon_title = post['title']
 	scripture = (post['scripture'])
 	if type(post['date']) is datetime.date:
 		date = post['date'].strftime('%B %d')
@@ -29,7 +29,7 @@ for name in files:
 
 title = date	
 
-content = f"Sermon for {date}\n\n**{title}**\n\n{description}\n\nSermon Scripture: {scripture}\n\nFirst Reading: {first_reading}\n\nSecond Reading: {second_reading}"
+content = f"Sermon for {date}\n\n**{sermon_title}**\n\n{description}\n\nSermon Scripture: {scripture}\n\nFirst Reading: {first_reading}\n\nSecond Reading: {second_reading}"
 
 data = {'title': date, 'content': content}
 

@@ -322,3 +322,14 @@ rules:
           case_sensitive: true
     actions:
       - move: "/home/wadeallen/Documents/Medical/Thompson Hospital/"
+# Canandaigua Family Practice Bill
+  - folders: ~/Scans
+    subfolders: false
+    filters:
+      - extension: pdf
+      - filename:
+          contains:
+            - Canandaigua Family Practice
+          case_sensitive: true
+    actions:
+      - move: "/home/wadeallen/Documents/Medical/Canandaigua Family Practice/"

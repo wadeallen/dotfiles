@@ -1,29 +1,31 @@
 #!/usr/bin/env python3
 
-import todoist
 import datetime
-import config
-import argparse
 from os.path import expanduser
 import os
 import os.path
-
-def suffix(d):
-    return 'th' if 11<=d<=13 else {1:'st',2:'nd',3:'rd'}.get(d%10, 'th')
-
-def custom_strftime(format, t):
-    return t.strftime(format).replace('{S}', str(t.day) + suffix(t.day))
+import todoist
+import argparse
+import config
+from titlecase import titlecase
 
 home = expanduser("~")
 
-parser = argparse.ArgumentParser(description='Set up Baptism Template')
+parser = argparse.ArgumentParser(description='Set up Baptism')
 parser.add_argument('-n','--name', nargs='*', help='Name',  required=True)
 parser.add_argument('-d','--date', default="today", help='Date of Baptism')
+parser.add_argument('-i','--immersion', default="yes", help='Is the baptism immersion?')
 args = vars(parser.parse_args())
 
 name = ' '.join(args['name'])
+# name = input("Name: ")
+name = titlecase(name)
 date = args['date']
 today = datetime.date.today()
+# date = input("Date: ")
+full_name = name
+first_name = name.split()[0].capitalize()
+
 
 name_sliced = name.split()
 slug = ("_".join(name_sliced))
@@ -31,54 +33,30 @@ slug = ("_".join(name_sliced))
 def set_date(number):
     new_date = datetime.datetime.strptime(date, '%Y-%m-%d')
     new_date = new_date + datetime.timedelta(days=number)
+    new_date = new_date.strftime('%Y-%m-%d')
     return new_date
 
-project_id=project_id = '155477514'
+today = today.strftime('%Y-%m-%d')
+# add to baptism project
+project_id = '2269381711'
 
 # Now Add tasks to Todoist
 
 api = todoist.TodoistAPI(config.todoist_api)
 
-# add to planning center
-pc_date = today
-item = api.items.add('Add ' + name + ' baptism to planning center', project_id=project_id, date_string=pc_date.strftime('%Y-%m-%d'))
+#function to add item
+def addTodo(days,task):
+	if days == 0:
+		notify_date = today
+	else:
+		notify_date = set_date(days)
+	item = api.items.add(f"{task}: {name} baptism", project_id=project_id, date_string=notify_date)
 
-# contact Brian about filling baptistry
-fill_date = set_date(-6)
-item = api.items.add('Contact Brian to fill baptistry for ' + name + ' baptism', project_id=project_id, date_string=fill_date.strftime('%Y-%m-%d'))
+addTodo(0,"notify Carolyn")
+addTodo(0,"get approval from OB")
+addTodo(-1,"bring clothes")
+addTodo(-5,"contact Ed about filling tank")
+addTodo(-5, "email or text reminder to candidate")
 
-# double check baptistry
-check_date = set_date(-1)
-item = api.items.add('Make sure baptistry is filled for ' + name + ' baptism', project_id=project_id, date_string=check_date.strftime('%Y-%m-%d'))
-
-# make baptism certificate
-certificate_date = set_date(-4)
-item = api.items.add('Make ' + name + ' baptism certificate', project_id=project_id, date_string=certificate_date.strftime('%Y-%m-%d'))
-
-# add baptism date to database
-database_date = set_date(+1)
-item = api.items.add('Add ' + name + ' baptism information to database', project_id=project_id, date_string=database_date.strftime('%Y-%m-%d'))
 api.commit()
-
-baptism_date = datetime.datetime.strptime(date, '%Y-%m-%d')
-day = baptism_date.strftime('%d')
-day = custom_strftime('{S}', baptism_date)
-month = baptism_date.strftime('%B')
-year = baptism_date.strftime('%Y')
-
-filename =(home + '/Documents/Administration/Certificates/Baptism/Baptisms/' + date + "_" + slug + '.md')
-
-if os.path.isfile(filename):
-	print("File already exists")
-else:
-    target = open (filename, 'w')
-    target.write("---\n")
-    target.write("name: " + name + "\n")
-    target.write("day: " + day + "\n")
-    target.write("month: " + month + "\n")
-    target.write("year: " + year + "\n")
-    target.write("---\n")
-    target.close()
-
-os.system('pandoc ' + filename + ' -o ~/Print/' + date + '_' + slug + '.pdf --pdf-engine=xelatex --template=baptism.tex')
 
